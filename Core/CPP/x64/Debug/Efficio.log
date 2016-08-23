@@ -1,0 +1,73 @@
+﻿  Vector3.cpp
+c:\development\efficio\core\cpp\vector3.h(23): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+  c:\development\efficio\core\cpp\lib\vmml\vector.hpp(420): note: see declaration of 'vmml::Vector<3,float>'
+c:\development\efficio\core\cpp\vector3.h(24): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+  PinchEvent.cpp
+c:\development\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\development\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\development\efficio\core\cpp\event.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Event' when no variable is declared
+c:\development\efficio\core\cpp\vector3.h(23): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+  c:\development\efficio\core\cpp\lib\vmml\vector.hpp(420): note: see declaration of 'vmml::Vector<3,float>'
+c:\development\efficio\core\cpp\vector3.h(24): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+c:\development\efficio\core\cpp\pinchevent.h(31): warning C4251: 'Efficio::Body::Hands::PinchEvent::finger1': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Efficio::Body::Hands::PinchEvent'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\development\efficio\core\cpp\pinchevent.h(32): warning C4251: 'Efficio::Body::Hands::PinchEvent::finger2': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Efficio::Body::Hands::PinchEvent'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\development\efficio\core\cpp\pinchevent.h(35): warning C4091: 'extern ': ignored on left of 'Efficio::Body::Hands::PinchEvent' when no variable is declared
+  MainPage.cpp
+  LeapConfiguration.cpp
+c:\development\efficio\core\cpp\leapconfiguration.h(20): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::LeapConfiguration' when no variable is declared
+  Frame.cpp
+c:\development\efficio\core\cpp\frame.h(18): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
+  Event.cpp
+c:\development\efficio\core\cpp\event.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Event' when no variable is declared
+  Engine.cpp
+c:\development\efficio\core\cpp\frame.h(18): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
+c:\development\efficio\core\cpp\event.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Event' when no variable is declared
+c:\development\efficio\core\cpp\efficioframe.h(24): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Event>
+          ]
+  c:\development\efficio\core\cpp\efficioframe.h(21): note: see declaration of 'std::vector<std::shared_ptr<Efficio::Event>,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Event>
+          ]
+c:\development\efficio\core\cpp\efficioframe.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
+c:\development\efficio\core\cpp\leapconfiguration.h(20): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::LeapConfiguration' when no variable is declared
+c:\development\efficio\core\cpp\deviceconfiguration.h(24): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::DeviceConfiguration' when no variable is declared
+c:\development\efficio\core\cpp\engine.h(34): warning C4091: 'extern ': ignored on left of 'Efficio::Engine' when no variable is declared
+c:\development\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\development\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\development\efficio\core\cpp\vector3.h(23): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+  c:\development\efficio\core\cpp\lib\vmml\vector.hpp(420): note: see declaration of 'vmml::Vector<3,float>'
+c:\development\efficio\core\cpp\vector3.h(24): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+c:\development\efficio\core\cpp\pinchevent.h(31): warning C4251: 'Efficio::Body::Hands::PinchEvent::finger1': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Efficio::Body::Hands::PinchEvent'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\development\efficio\core\cpp\pinchevent.h(32): warning C4251: 'Efficio::Body::Hands::PinchEvent::finger2': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Efficio::Body::Hands::PinchEvent'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\development\efficio\core\cpp\pinchevent.h(35): warning C4091: 'extern ': ignored on left of 'Efficio::Body::Hands::PinchEvent' when no variable is declared
+  EfficioFrame.cpp
+c:\development\efficio\core\cpp\frame.h(18): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
+c:\development\efficio\core\cpp\event.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Event' when no variable is declared
+c:\development\efficio\core\cpp\efficioframe.h(24): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Event>
+          ]
+  c:\development\efficio\core\cpp\efficioframe.h(21): note: see declaration of 'std::vector<std::shared_ptr<Efficio::Event>,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Event>
+          ]
+c:\development\efficio\core\cpp\efficioframe.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
+  DeviceConfiguration.cpp
+c:\development\efficio\core\cpp\leapconfiguration.h(20): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::LeapConfiguration' when no variable is declared
+c:\development\efficio\core\cpp\deviceconfiguration.h(24): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::DeviceConfiguration' when no variable is declared
+  Generating Code...
+     Creating library C:\Development\Efficio\Core\CPP\x64\Debug\Efficio.lib and object C:\Development\Efficio\Core\CPP\x64\Debug\Efficio.exp
+  Efficio.vcxproj -> C:\Development\Efficio\Core\CPP\x64\Debug\Efficio.dll
+  Efficio.vcxproj -> C:\Development\Efficio\Core\CPP\x64\Debug\Efficio.pdb (Full PDB)
+  C:\Development\libs\LeapSDK\lib\x64\Leap.dll
+  1 File(s) copied
