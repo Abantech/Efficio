@@ -30,6 +30,7 @@ extern "C" {
 
 		private:
 			bool started;
+
 			Leap::Controller* controller;
 		};
 	}

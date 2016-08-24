@@ -81,5 +81,6 @@
   <ItemGroup>
     <None Include="RuntimeCSharp.i" />
     <None Include="RuntimeJava.i" />
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

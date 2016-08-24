@@ -87,15 +87,15 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIO_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIO_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(LEAP_SDK)\include;$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(LEAP_SDK)\include;$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\x86;$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(Architecture);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /yr "$(LEAP_SDK)\lib\$(Architecture)\Leap.dll" "$(TargetDir)"
@@ -111,15 +111,15 @@ EXIT 0</Command>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIO_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIO_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(LEAP_SDK)\include;$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(LEAP_SDK)\include;$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\x64;$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(Architecture);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /yr "$(LEAP_SDK)\lib\$(Architecture)\Leap.dll" "$(TargetDir)"
@@ -137,17 +137,17 @@ EXIT 0</Command>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EFFICIO_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EFFICIO_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(LEAP_SDK)\include;$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(LEAP_SDK)\include;$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\x86;$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(Architecture);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /yr "$(LEAP_SDK)\lib\$(Architecture)\Leap.dll" "$(TargetDir)"
@@ -165,17 +165,17 @@ EXIT 0</Command>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;EFFICIO_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;EFFICIO_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(LEAP_SDK)\include;$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(LEAP_SDK)\include;$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\x64;$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(Architecture);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /yr "$(LEAP_SDK)\lib\$(Architecture)\Leap.dll" "$(TargetDir)"
@@ -208,6 +208,7 @@ EXIT 0</Command>
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="RuntimeCSharp.i" />
     <None Include="RuntimeJava.i" />
   </ItemGroup>
@@ -219,5 +220,11 @@ EXIT 0</Command>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Platform)' == 'x64'">
     <Architecture>x64</Architecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="Exists('$(LEAP_SDK)')">
+    <LeapEnabled>1</LeapEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="!Exists('$(LEAP_SDK)')">
+    <LeapEnabled>0</LeapEnabled>
   </PropertyGroup>
 </Project>
