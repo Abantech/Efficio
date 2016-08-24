@@ -30,3 +30,11 @@
 *.suo
 *.db
 *.opendb
+
+# Added By James
+*.tlog
+*.log
+*.ilk
+*.idb
+*.pdb
+*.exp
