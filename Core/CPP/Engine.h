@@ -26,6 +26,7 @@ extern "C" {
 			/// @return the current frame.
 			Efficio::EfficioFrame GetFrame();
 
+			/// The device configuration for Efficio.
 			Efficio::Configuration::DeviceConfiguration DeviceConfiguration;
 
 		private:

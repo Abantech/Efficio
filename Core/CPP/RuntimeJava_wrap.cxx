@@ -439,7 +439,23 @@ SWIGEXPORT void JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_delete_1PinchEven
 }
 
 
-SWIGEXPORT jint JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Side(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
+  Efficio::Body::BodySide arg2 ;
+  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Body::Hands::PinchEvent > **)&jarg1;
+  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (Efficio::Body::BodySide)jarg2; 
+  if (arg1) (arg1)->Side = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
   std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
@@ -451,17 +467,16 @@ SWIGEXPORT jint JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Side(
   
   smartarg1 = *(std::shared_ptr<  Efficio::Body::Hands::PinchEvent > **)&jarg1;
   arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::Body::BodySide)(arg1)->Side();
+  result = (Efficio::Body::BodySide) ((arg1)->Side);
   jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT jstring JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Finger1(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jstring jresult = 0 ;
+SWIGEXPORT void JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Finger1_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
+  std::string *arg2 = 0 ;
   std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  std::string result;
   
   (void)jenv;
   (void)jcls;
@@ -469,17 +484,24 @@ SWIGEXPORT jstring JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Fi
   
   smartarg1 = *(std::shared_ptr<  Efficio::Body::Hands::PinchEvent > **)&jarg1;
   arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (arg1)->Finger1();
-  jresult = jenv->NewStringUTF((&result)->c_str()); 
-  return jresult;
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  if (arg1) (arg1)->Finger1 = *arg2;
 }
 
 
-SWIGEXPORT jstring JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Finger2(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Finger1_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
   std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  std::string result;
+  std::string *result = 0 ;
   
   (void)jenv;
   (void)jcls;
@@ -487,17 +509,76 @@ SWIGEXPORT jstring JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Fi
   
   smartarg1 = *(std::shared_ptr<  Efficio::Body::Hands::PinchEvent > **)&jarg1;
   arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (arg1)->Finger2();
-  jresult = jenv->NewStringUTF((&result)->c_str()); 
+  result = (std::string *) & ((arg1)->Finger1);
+  jresult = jenv->NewStringUTF(result->c_str()); 
   return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Position(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Finger2_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
+  std::string *arg2 = 0 ;
+  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Body::Hands::PinchEvent > **)&jarg1;
+  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
+  if(!jarg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null string");
+    return ;
+  }
+  const char *arg2_pstr = (const char *)jenv->GetStringUTFChars(jarg2, 0); 
+  if (!arg2_pstr) return ;
+  std::string arg2_str(arg2_pstr);
+  arg2 = &arg2_str;
+  jenv->ReleaseStringUTFChars(jarg2, arg2_pstr); 
+  if (arg1) (arg1)->Finger2 = *arg2;
+}
+
+
+SWIGEXPORT jstring JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Finger2_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jstring jresult = 0 ;
+  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
+  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
+  std::string *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Body::Hands::PinchEvent > **)&jarg1;
+  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (std::string *) & ((arg1)->Finger2);
+  jresult = jenv->NewStringUTF(result->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Position_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
+  Efficio::Vector3 *arg2 = (Efficio::Vector3 *) 0 ;
+  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Body::Hands::PinchEvent > **)&jarg1;
+  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = *(Efficio::Vector3 **)&jarg2; 
+  if (arg1) (arg1)->Position = *arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Position_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
   std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  SwigValueWrapper< Efficio::Vector3 > result;
+  Efficio::Vector3 *result = 0 ;
   
   (void)jenv;
   (void)jcls;
@@ -505,8 +586,8 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_PinchEvent_1Posi
   
   smartarg1 = *(std::shared_ptr<  Efficio::Body::Hands::PinchEvent > **)&jarg1;
   arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (arg1)->Position();
-  *(Efficio::Vector3 **)&jresult = new Efficio::Vector3((const Efficio::Vector3 &)result); 
+  result = (Efficio::Vector3 *)& ((arg1)->Position);
+  *(Efficio::Vector3 **)&jresult = result; 
   return jresult;
 }
 
@@ -714,38 +795,32 @@ SWIGEXPORT void JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_delete_1DeviceCon
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_DeviceConfiguration_1GetLeapConfiguration(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT void JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_DeviceConfiguration_1LeapConfiguration_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
-  Efficio::Configuration::LeapConfiguration result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(Efficio::Configuration::DeviceConfiguration **)&jarg1; 
-  result = (arg1)->GetLeapConfiguration();
-  *(Efficio::Configuration::LeapConfiguration **)&jresult = new Efficio::Configuration::LeapConfiguration((const Efficio::Configuration::LeapConfiguration &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_DeviceConfiguration_1SetLeapConfiguration(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
-  Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
-  Efficio::Configuration::LeapConfiguration arg2 ;
-  Efficio::Configuration::LeapConfiguration *argp2 ;
+  Efficio::Configuration::LeapConfiguration *arg2 = (Efficio::Configuration::LeapConfiguration *) 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg2_;
   arg1 = *(Efficio::Configuration::DeviceConfiguration **)&jarg1; 
-  argp2 = *(Efficio::Configuration::LeapConfiguration **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Configuration::LeapConfiguration");
-    return ;
-  }
-  arg2 = *argp2; 
-  (arg1)->SetLeapConfiguration(arg2);
+  arg2 = *(Efficio::Configuration::LeapConfiguration **)&jarg2; 
+  if (arg1) (arg1)->LeapConfiguration = *arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Runtime_EfficioRuntimeJNI_DeviceConfiguration_1LeapConfiguration_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
+  Efficio::Configuration::LeapConfiguration *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Configuration::DeviceConfiguration **)&jarg1; 
+  result = (Efficio::Configuration::LeapConfiguration *)& ((arg1)->LeapConfiguration);
+  *(Efficio::Configuration::LeapConfiguration **)&jresult = result; 
+  return jresult;
 }
 
 

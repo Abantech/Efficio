@@ -43,14 +43,15 @@ public class DeviceConfiguration : global::System.IDisposable {
   public DeviceConfiguration() : this(EfficioRuntimePINVOKE.new_DeviceConfiguration(), true) {
   }
 
-  public LeapConfiguration GetLeapConfiguration() {
-    LeapConfiguration ret = new LeapConfiguration(EfficioRuntimePINVOKE.DeviceConfiguration_GetLeapConfiguration(swigCPtr), true);
-    return ret;
-  }
-
-  public void SetLeapConfiguration(LeapConfiguration configuration) {
-    EfficioRuntimePINVOKE.DeviceConfiguration_SetLeapConfiguration(swigCPtr, LeapConfiguration.getCPtr(configuration));
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+  public LeapConfiguration LeapConfiguration {
+    set {
+      EfficioRuntimePINVOKE.DeviceConfiguration_LeapConfiguration_set(swigCPtr, LeapConfiguration.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.DeviceConfiguration_LeapConfiguration_get(swigCPtr);
+      LeapConfiguration ret = (cPtr == global::System.IntPtr.Zero) ? null : new LeapConfiguration(cPtr, false);
+      return ret;
+    } 
   }
 
 }

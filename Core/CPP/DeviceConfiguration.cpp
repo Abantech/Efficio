@@ -12,16 +12,5 @@ namespace Efficio
 		DeviceConfiguration::~DeviceConfiguration()
 		{
 		}
-
-		LeapConfiguration DeviceConfiguration::GetLeapConfiguration()
-		{
-			return leapConfiguration;
-		}
-
-		void DeviceConfiguration::SetLeapConfiguration(LeapConfiguration configuration)
-		{
-			leapConfiguration = configuration;
-		}
-
 	}
 }

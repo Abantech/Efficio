@@ -39,12 +39,13 @@ public class DeviceConfiguration {
     this(EfficioRuntimeJNI.new_DeviceConfiguration(), true);
   }
 
-  public LeapConfiguration GetLeapConfiguration() {
-    return new LeapConfiguration(EfficioRuntimeJNI.DeviceConfiguration_GetLeapConfiguration(swigCPtr, this), true);
+  public void setLeapConfiguration(LeapConfiguration value) {
+    EfficioRuntimeJNI.DeviceConfiguration_LeapConfiguration_set(swigCPtr, this, LeapConfiguration.getCPtr(value), value);
   }
 
-  public void SetLeapConfiguration(LeapConfiguration configuration) {
-    EfficioRuntimeJNI.DeviceConfiguration_SetLeapConfiguration(swigCPtr, this, LeapConfiguration.getCPtr(configuration), configuration);
+  public LeapConfiguration getLeapConfiguration() {
+    long cPtr = EfficioRuntimeJNI.DeviceConfiguration_LeapConfiguration_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new LeapConfiguration(cPtr, false);
   }
 
 }

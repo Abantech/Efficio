@@ -12,15 +12,15 @@ namespace Efficio
 {
 	namespace Configuration
 	{
+		/// The device configuration is used to configure the devices with which Efficio can work.
 		extern class DLLEXPORT DeviceConfiguration
 		{
 		public:
 			DeviceConfiguration();
 			~DeviceConfiguration();
-			LeapConfiguration GetLeapConfiguration();
-			void SetLeapConfiguration(LeapConfiguration configuration);
-		private:
-			LeapConfiguration leapConfiguration;
+
+			/// The configuration for the Leap Motion
+			LeapConfiguration LeapConfiguration;
 		};
 	}
 }

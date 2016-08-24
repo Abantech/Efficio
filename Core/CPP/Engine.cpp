@@ -17,11 +17,9 @@ namespace Efficio {
 
 	void Engine::Start()
 	{
-		if (DeviceConfiguration.GetLeapConfiguration().Enabled)
+		if (DeviceConfiguration.LeapConfiguration.Enabled)
 		{
-#ifdef LeapEnabled
-				controller = new Leap::Controller();
-#endif
+			controller = new Leap::Controller();
 		}
 
 		started = true;

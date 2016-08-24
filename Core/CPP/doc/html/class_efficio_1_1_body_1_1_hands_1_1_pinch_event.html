@@ -90,18 +90,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_efficio_1_1_body_1_1_hands_1_1_pinch_event-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Efficio::Body::Hands::PinchEvent Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The event raised when a pinch is detected from one of the devices tracking hands.  
+ <a href="class_efficio_1_1_body_1_1_hands_1_1_pinch_event.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_pinch_event_8h_source.html">PinchEvent.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Efficio::Body::Hands::PinchEvent:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_efficio_1_1_body_1_1_hands_1_1_pinch_event.png" usemap="#Efficio::Body::Hands::PinchEvent_map" alt=""/>
   <map id="Efficio::Body::Hands::PinchEvent_map" name="Efficio::Body::Hands::PinchEvent_map">
-<area href="class_efficio_1_1_event.html" alt="Efficio::Event" shape="rect" coords="0,0,195,24"/>
+<area href="class_efficio_1_1_event.html" title="The abstract class for all events within the Efficio system. Events are raised when anything notable ..." alt="Efficio::Event" shape="rect" coords="0,0,195,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -110,20 +116,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9343a804d70ebbf9eef81fbaa7bf6e0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9343a804d70ebbf9eef81fbaa7bf6e0f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PinchEvent</b> (BodySide side, <a class="el" href="class_efficio_1_1_vector3.html">Vector3</a> position)</td></tr>
 <tr class="separator:a9343a804d70ebbf9eef81fbaa7bf6e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0893608fbb54aeb771d362a742ac9407"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0893608fbb54aeb771d362a742ac9407"></a>
-BodySide&#160;</td><td class="memItemRight" valign="bottom"><b>Side</b> ()</td></tr>
-<tr class="separator:a0893608fbb54aeb771d362a742ac9407"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a987c01066ba124ac85e980f873221431"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a987c01066ba124ac85e980f873221431"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Finger1</b> ()</td></tr>
-<tr class="separator:a987c01066ba124ac85e980f873221431"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5753885684607d488120bb3dad2a54ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5753885684607d488120bb3dad2a54ac"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Finger2</b> ()</td></tr>
-<tr class="separator:a5753885684607d488120bb3dad2a54ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f7f93b716af33b5554e92ef02645a2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f7f93b716af33b5554e92ef02645a2b"></a>
-<a class="el" href="class_efficio_1_1_vector3.html">Efficio::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b> ()</td></tr>
-<tr class="separator:a3f7f93b716af33b5554e92ef02645a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a6e2960e2c67aab6150daf5545a9d12c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e2960e2c67aab6150daf5545a9d12c0"></a>
+BodySide&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_efficio_1_1_body_1_1_hands_1_1_pinch_event.html#a6e2960e2c67aab6150daf5545a9d12c0">Side</a></td></tr>
+<tr class="memdesc:a6e2960e2c67aab6150daf5545a9d12c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The side of the body on which the pinch occurred. <br /></td></tr>
+<tr class="separator:a6e2960e2c67aab6150daf5545a9d12c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3fe93a1dcdd300a706761151d6c89c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3fe93a1dcdd300a706761151d6c89c0"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_efficio_1_1_body_1_1_hands_1_1_pinch_event.html#ae3fe93a1dcdd300a706761151d6c89c0">Finger1</a></td></tr>
+<tr class="memdesc:ae3fe93a1dcdd300a706761151d6c89c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The finger involved in the pinch. <br /></td></tr>
+<tr class="separator:ae3fe93a1dcdd300a706761151d6c89c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05fa0a0e91737c5666a82c256dc51f17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05fa0a0e91737c5666a82c256dc51f17"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_efficio_1_1_body_1_1_hands_1_1_pinch_event.html#a05fa0a0e91737c5666a82c256dc51f17">Finger2</a></td></tr>
+<tr class="memdesc:a05fa0a0e91737c5666a82c256dc51f17"><td class="mdescLeft">&#160;</td><td class="mdescRight">The other finger involved in the pinch. <br /></td></tr>
+<tr class="separator:a05fa0a0e91737c5666a82c256dc51f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c47fee2527c496adb1f0343edd4033d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c47fee2527c496adb1f0343edd4033d"></a>
+<a class="el" href="class_efficio_1_1_vector3.html">Efficio::Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_efficio_1_1_body_1_1_hands_1_1_pinch_event.html#a8c47fee2527c496adb1f0343edd4033d">Position</a></td></tr>
+<tr class="memdesc:a8c47fee2527c496adb1f0343edd4033d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The location of the pinch. <br /></td></tr>
+<tr class="separator:a8c47fee2527c496adb1f0343edd4033d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The event raised when a pinch is detected from one of the devices tracking hands. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_pinch_event_8h_source.html">PinchEvent.h</a></li>
 <li>PinchEvent.cpp</li>
 </ul>

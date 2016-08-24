@@ -38,3 +38,4 @@
 *.idb
 *.pdb
 *.exp
+/Core/CSharp/obj/Debug

@@ -41,20 +41,37 @@ public class PinchEvent extends Event {
     this(EfficioRuntimeJNI.new_PinchEvent(side.swigValue(), Vector3.getCPtr(position), position), true);
   }
 
-  public BodySide Side() {
-    return BodySide.swigToEnum(EfficioRuntimeJNI.PinchEvent_Side(swigCPtr, this));
+  public void setSide(BodySide value) {
+    EfficioRuntimeJNI.PinchEvent_Side_set(swigCPtr, this, value.swigValue());
   }
 
-  public String Finger1() {
-    return EfficioRuntimeJNI.PinchEvent_Finger1(swigCPtr, this);
+  public BodySide getSide() {
+    return BodySide.swigToEnum(EfficioRuntimeJNI.PinchEvent_Side_get(swigCPtr, this));
   }
 
-  public String Finger2() {
-    return EfficioRuntimeJNI.PinchEvent_Finger2(swigCPtr, this);
+  public void setFinger1(String value) {
+    EfficioRuntimeJNI.PinchEvent_Finger1_set(swigCPtr, this, value);
   }
 
-  public Vector3 Position() {
-    return new Vector3(EfficioRuntimeJNI.PinchEvent_Position(swigCPtr, this), true);
+  public String getFinger1() {
+    return EfficioRuntimeJNI.PinchEvent_Finger1_get(swigCPtr, this);
+  }
+
+  public void setFinger2(String value) {
+    EfficioRuntimeJNI.PinchEvent_Finger2_set(swigCPtr, this, value);
+  }
+
+  public String getFinger2() {
+    return EfficioRuntimeJNI.PinchEvent_Finger2_get(swigCPtr, this);
+  }
+
+  public void setPosition(Vector3 value) {
+    EfficioRuntimeJNI.PinchEvent_Position_set(swigCPtr, this, Vector3.getCPtr(value), value);
+  }
+
+  public Vector3 getPosition() {
+    long cPtr = EfficioRuntimeJNI.PinchEvent_Position_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Vector3(cPtr, false);
   }
 
 }

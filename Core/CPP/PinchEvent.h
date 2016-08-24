@@ -17,21 +17,24 @@ namespace Efficio
 	namespace Body
 	{
 		namespace Hands {
+			/// The event raised when a pinch is detected from one of the devices tracking hands.
 			extern class DLLEXPORT PinchEvent :  public Event
 			{
 			public:
 				PinchEvent(BodySide side, Vector3 position);
 				~PinchEvent();
 
-				BodySide Side();
-				std::string Finger1();
-				std::string Finger2();
-				Efficio::Vector3 Position();
-			private:
-				std::string finger1;
-				std::string finger2;
-				BodySide side;
-				Efficio::Vector3 position;
+				/// The side of the body on which the pinch occurred
+				BodySide Side;
+				
+				/// The finger involved in the pinch.
+				std::string Finger1;
+
+				/// The other finger involved in the pinch.
+				std::string Finger2;
+
+				/// The location of the pinch
+				Efficio::Vector3 Position;
 			};
 		}
 	}

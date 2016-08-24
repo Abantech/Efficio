@@ -45,28 +45,53 @@ public class PinchEvent : Event {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public BodySide Side() {
-    BodySide ret = (BodySide)EfficioRuntimePINVOKE.PinchEvent_Side(swigCPtr);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public BodySide Side {
+    set {
+      EfficioRuntimePINVOKE.PinchEvent_Side_set(swigCPtr, (int)value);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      BodySide ret = (BodySide)EfficioRuntimePINVOKE.PinchEvent_Side_get(swigCPtr);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
   }
 
-  public string Finger1() {
-    string ret = EfficioRuntimePINVOKE.PinchEvent_Finger1(swigCPtr);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public string Finger1 {
+    set {
+      EfficioRuntimePINVOKE.PinchEvent_Finger1_set(swigCPtr, value);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      string ret = EfficioRuntimePINVOKE.PinchEvent_Finger1_get(swigCPtr);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
   }
 
-  public string Finger2() {
-    string ret = EfficioRuntimePINVOKE.PinchEvent_Finger2(swigCPtr);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public string Finger2 {
+    set {
+      EfficioRuntimePINVOKE.PinchEvent_Finger2_set(swigCPtr, value);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      string ret = EfficioRuntimePINVOKE.PinchEvent_Finger2_get(swigCPtr);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
   }
 
-  public Vector3 Position() {
-    Vector3 ret = new Vector3(EfficioRuntimePINVOKE.PinchEvent_Position(swigCPtr), true);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  public Vector3 Position {
+    set {
+      EfficioRuntimePINVOKE.PinchEvent_Position_set(swigCPtr, Vector3.getCPtr(value));
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.PinchEvent_Position_get(swigCPtr);
+      Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
   }
 
 }

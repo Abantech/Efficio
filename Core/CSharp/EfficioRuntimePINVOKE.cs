@@ -221,17 +221,29 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_delete_PinchEvent___")]
   public static extern void delete_PinchEvent(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Side___")]
-  public static extern int PinchEvent_Side(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Side_set___")]
+  public static extern void PinchEvent_Side_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Finger1___")]
-  public static extern string PinchEvent_Finger1(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Side_get___")]
+  public static extern int PinchEvent_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Finger2___")]
-  public static extern string PinchEvent_Finger2(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Finger1_set___")]
+  public static extern void PinchEvent_Finger1_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Position___")]
-  public static extern global::System.IntPtr PinchEvent_Position(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Finger1_get___")]
+  public static extern string PinchEvent_Finger1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Finger2_set___")]
+  public static extern void PinchEvent_Finger2_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Finger2_get___")]
+  public static extern string PinchEvent_Finger2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Position_set___")]
+  public static extern void PinchEvent_Position_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_PinchEvent_Position_get___")]
+  public static extern global::System.IntPtr PinchEvent_Position_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_new_EfficioFrame___")]
   public static extern global::System.IntPtr new_EfficioFrame();
@@ -281,11 +293,11 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_delete_DeviceConfiguration___")]
   public static extern void delete_DeviceConfiguration(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_DeviceConfiguration_GetLeapConfiguration___")]
-  public static extern global::System.IntPtr DeviceConfiguration_GetLeapConfiguration(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_DeviceConfiguration_LeapConfiguration_set___")]
+  public static extern void DeviceConfiguration_LeapConfiguration_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_DeviceConfiguration_SetLeapConfiguration___")]
-  public static extern void DeviceConfiguration_SetLeapConfiguration(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_DeviceConfiguration_LeapConfiguration_get___")]
+  public static extern global::System.IntPtr DeviceConfiguration_LeapConfiguration_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofRuntime_EventCollection_Clear___")]
   public static extern void EventCollection_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
