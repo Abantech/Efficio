@@ -8,12 +8,12 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public class EfficioFrame : Frame {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal EfficioFrame(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioRuntimePINVOKE.EfficioFrame_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal EfficioFrame(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.EfficioFrame_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -30,7 +30,7 @@ public class EfficioFrame : Frame {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioRuntimePINVOKE.delete_EfficioFrame(swigCPtr);
+          EfficioPINVOKE.delete_EfficioFrame(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,17 +39,17 @@ public class EfficioFrame : Frame {
     }
   }
 
-  public EfficioFrame() : this(EfficioRuntimePINVOKE.new_EfficioFrame(), true) {
+  public EfficioFrame() : this(EfficioPINVOKE.new_EfficioFrame(), true) {
   }
 
   public EventCollection GetEvents() {
-    EventCollection ret = new EventCollection(EfficioRuntimePINVOKE.EfficioFrame_GetEvents(swigCPtr), true);
+    EventCollection ret = new EventCollection(EfficioPINVOKE.EfficioFrame_GetEvents(swigCPtr), true);
     return ret;
   }
 
   public void AddEvent(Event eventPtr) {
-    EfficioRuntimePINVOKE.EfficioFrame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EfficioFrame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

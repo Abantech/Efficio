@@ -8,7 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public class Frame : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -32,7 +32,7 @@ public class Frame : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioRuntimePINVOKE.delete_Frame(swigCPtr);
+          EfficioPINVOKE.delete_Frame(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,7 +40,7 @@ public class Frame : global::System.IDisposable {
     }
   }
 
-  public Frame() : this(EfficioRuntimePINVOKE.new_Frame(), true) {
+  public Frame() : this(EfficioPINVOKE.new_Frame(), true) {
   }
 
 }

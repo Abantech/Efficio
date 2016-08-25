@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public class Frame {
   private transient long swigCPtr;
@@ -29,14 +29,14 @@ public class Frame {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        EfficioRuntimeJNI.delete_Frame(swigCPtr);
+        EfficioJNI.delete_Frame(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public Frame() {
-    this(EfficioRuntimeJNI.new_Frame(), true);
+    this(EfficioJNI.new_Frame(), true);
   }
 
 }

@@ -6,13 +6,13 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public class EfficioFrame extends Frame {
   private transient long swigCPtr;
 
   protected EfficioFrame(long cPtr, boolean cMemoryOwn) {
-    super(EfficioRuntimeJNI.EfficioFrame_SWIGUpcast(cPtr), cMemoryOwn);
+    super(EfficioJNI.EfficioFrame_SWIGUpcast(cPtr), cMemoryOwn);
     swigCPtr = cPtr;
   }
 
@@ -28,7 +28,7 @@ public class EfficioFrame extends Frame {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        EfficioRuntimeJNI.delete_EfficioFrame(swigCPtr);
+        EfficioJNI.delete_EfficioFrame(swigCPtr);
       }
       swigCPtr = 0;
     }
@@ -36,15 +36,15 @@ public class EfficioFrame extends Frame {
   }
 
   public EfficioFrame() {
-    this(EfficioRuntimeJNI.new_EfficioFrame(), true);
+    this(EfficioJNI.new_EfficioFrame(), true);
   }
 
   public EventCollection GetEvents() {
-    return new EventCollection(EfficioRuntimeJNI.EfficioFrame_GetEvents(swigCPtr, this), true);
+    return new EventCollection(EfficioJNI.EfficioFrame_GetEvents(swigCPtr, this), true);
   }
 
   public void AddEvent(Event eventPtr) {
-    EfficioRuntimeJNI.EfficioFrame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
+    EfficioJNI.EfficioFrame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
   }
 
 }

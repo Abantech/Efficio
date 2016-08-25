@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public final class BodySide {
   public final static BodySide Right = new BodySide("Right");

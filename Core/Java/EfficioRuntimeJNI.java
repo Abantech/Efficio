@@ -6,10 +6,11 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public class EfficioRuntimeJNI {
-  public final static native long new_Vector3(float jarg1, float jarg2, float jarg3);
+  public final static native long new_Vector3__SWIG_0();
+  public final static native long new_Vector3__SWIG_1(float jarg1, float jarg2, float jarg3);
   public final static native void delete_Vector3(long jarg1);
   public final static native float Vector3_X(long jarg1, Vector3 jarg1_);
   public final static native float Vector3_Y(long jarg1, Vector3 jarg1_);

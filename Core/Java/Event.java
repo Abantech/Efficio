@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public class Event {
   private transient long swigCPtr;
@@ -29,14 +29,14 @@ public class Event {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        EfficioRuntimeJNI.delete_Event(swigCPtr);
+        EfficioJNI.delete_Event(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public Event() {
-    this(EfficioRuntimeJNI.new_Event(), true);
+  public void Eh() {
+    EfficioJNI.Event_Eh(swigCPtr, this);
   }
 
 }

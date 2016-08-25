@@ -11,6 +11,7 @@ namespace Efficio
 {
 	namespace Configuration
 	{
+		/// Configuration for the Leap Motion device
 		extern class DLLEXPORT LeapConfiguration
 		{
 		public:

@@ -8,7 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public enum BodySide {
   Right,

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using Efficio.Runtime;
 using Efficio.Unity.MessageBus.Body.Hands;
+using Efficio.Net;
 
 namespace Efficio.Unity
 {
@@ -13,12 +13,7 @@ namespace Efficio.Unity
         {
             engine = new Engine();
 
-            LeapConfiguration leapConfig = new LeapConfiguration();
-            leapConfig.Enabled = true;
-
-            DeviceConfiguration config = new DeviceConfiguration();
-            config.SetLeapConfiguration(leapConfig);
-            engine.DeviceConfiguration = config;
+            engine.DeviceConfiguration.LeapConfiguration.Enabled = true;
 
             engine.Start();
         }
@@ -32,14 +27,14 @@ namespace Efficio.Unity
             {
                 foreach (var ev in frame.GetEvents())
                 {
-                    if (SWIGHelper.CastTo<PinchEvent>(ev, false) != null)
+                    if (SWIGHelper.CastTo<Pinch>(ev, false) != null)
                     {
-                        var pinch = SWIGHelper.CastTo<PinchEvent>(ev, false);
+                        var pinch = SWIGHelper.CastTo<Pinch>(ev, false);
 
                         PinchMessage pinchMessage = new PinchMessage();
 
-                        pinchMessage.Side = pinch.Side() == BodySide.Left ? Side.Left : Side.Right;
-                        pinchMessage.Position = new UnityEngine.Vector3(pinch.Position().X(), pinch.Position().Y(), pinch.Position().Z());
+                        pinchMessage.Side = pinch.Side == BodySide.Left ? Side.Left : Side.Right;
+                        pinchMessage.Position = new UnityEngine.Vector3(pinch.Position.X(), pinch.Position.Y(), pinch.Position.Z());
 
                         MessageBus.MessageBus.Instance.SendMessage(pinchMessage);
                     }

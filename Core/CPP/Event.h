@@ -6,12 +6,16 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-namespace Efficio {
+namespace Efficio 
+{
 	/// The abstract class for all events within the Efficio system. Events are raised when anything notable happens within the Efficio ecosystem.
 	extern class DLLEXPORT Event
 	{
 	public:
 		Event();
-		virtual ~Event();
+		~Event();
+
+		/// Workaround for abstract class casting for now
+		virtual void Eh() = 0;
 	};
 }

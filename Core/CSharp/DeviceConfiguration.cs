@@ -8,7 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public class DeviceConfiguration : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -32,7 +32,7 @@ public class DeviceConfiguration : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioRuntimePINVOKE.delete_DeviceConfiguration(swigCPtr);
+          EfficioPINVOKE.delete_DeviceConfiguration(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,15 +40,15 @@ public class DeviceConfiguration : global::System.IDisposable {
     }
   }
 
-  public DeviceConfiguration() : this(EfficioRuntimePINVOKE.new_DeviceConfiguration(), true) {
+  public DeviceConfiguration() : this(EfficioPINVOKE.new_DeviceConfiguration(), true) {
   }
 
   public LeapConfiguration LeapConfiguration {
     set {
-      EfficioRuntimePINVOKE.DeviceConfiguration_LeapConfiguration_set(swigCPtr, LeapConfiguration.getCPtr(value));
+      EfficioPINVOKE.DeviceConfiguration_LeapConfiguration_set(swigCPtr, LeapConfiguration.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.DeviceConfiguration_LeapConfiguration_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioPINVOKE.DeviceConfiguration_LeapConfiguration_get(swigCPtr);
       LeapConfiguration ret = (cPtr == global::System.IntPtr.Zero) ? null : new LeapConfiguration(cPtr, false);
       return ret;
     } 

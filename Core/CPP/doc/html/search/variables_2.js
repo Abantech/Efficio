@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['leapconfiguration',['LeapConfiguration',['../class_efficio_1_1_configuration_1_1_device_configuration.html#aa5c43ffa75c5483880a21ef3490b54d6',1,'Efficio::Configuration::DeviceConfiguration']]]
+  ['id',['ID',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hand_1_1_pinch.html#ae1aec081a7d8e9461c4c47fce860e907',1,'Efficio::InputRecognition::Human::Hand::Pinch']]]
 ];

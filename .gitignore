@@ -39,3 +39,9 @@
 *.pdb
 *.exp
 /Core/CSharp/obj/Debug
+/Core/CSharp/bin/x64/Debug
+/Core/CSharp/obj
+/Core/CSharp/TestCSharpApp/bin
+/Core/CSharp/TestCSharpApp/obj
+/Integration/Efficio.Unity/bin/Debug
+/Integration/Efficio.Unity/obj/Debug

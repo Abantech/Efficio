@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public class LeapConfiguration {
   private transient long swigCPtr;
@@ -29,22 +29,22 @@ public class LeapConfiguration {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        EfficioRuntimeJNI.delete_LeapConfiguration(swigCPtr);
+        EfficioJNI.delete_LeapConfiguration(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public LeapConfiguration() {
-    this(EfficioRuntimeJNI.new_LeapConfiguration(), true);
+    this(EfficioJNI.new_LeapConfiguration(), true);
   }
 
   public void setEnabled(boolean value) {
-    EfficioRuntimeJNI.LeapConfiguration_Enabled_set(swigCPtr, this, value);
+    EfficioJNI.LeapConfiguration_Enabled_set(swigCPtr, this, value);
   }
 
   public boolean getEnabled() {
-    return EfficioRuntimeJNI.LeapConfiguration_Enabled_get(swigCPtr, this);
+    return EfficioJNI.LeapConfiguration_Enabled_get(swigCPtr, this);
   }
 
 }

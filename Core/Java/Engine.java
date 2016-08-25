@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public class Engine {
   private transient long swigCPtr;
@@ -29,30 +29,30 @@ public class Engine {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        EfficioRuntimeJNI.delete_Engine(swigCPtr);
+        EfficioJNI.delete_Engine(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public Engine() {
-    this(EfficioRuntimeJNI.new_Engine(), true);
+    this(EfficioJNI.new_Engine(), true);
   }
 
   public void Start() {
-    EfficioRuntimeJNI.Engine_Start(swigCPtr, this);
+    EfficioJNI.Engine_Start(swigCPtr, this);
   }
 
   public EfficioFrame GetFrame() {
-    return new EfficioFrame(EfficioRuntimeJNI.Engine_GetFrame(swigCPtr, this), true);
+    return new EfficioFrame(EfficioJNI.Engine_GetFrame(swigCPtr, this), true);
   }
 
   public void setDeviceConfiguration(DeviceConfiguration value) {
-    EfficioRuntimeJNI.Engine_DeviceConfiguration_set(swigCPtr, this, DeviceConfiguration.getCPtr(value), value);
+    EfficioJNI.Engine_DeviceConfiguration_set(swigCPtr, this, DeviceConfiguration.getCPtr(value), value);
   }
 
   public DeviceConfiguration getDeviceConfiguration() {
-    long cPtr = EfficioRuntimeJNI.Engine_DeviceConfiguration_get(swigCPtr, this);
+    long cPtr = EfficioJNI.Engine_DeviceConfiguration_get(swigCPtr, this);
     return (cPtr == 0) ? null : new DeviceConfiguration(cPtr, false);
   }
 

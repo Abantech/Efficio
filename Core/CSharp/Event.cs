@@ -8,7 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public class Event : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -32,7 +32,7 @@ public class Event : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          EfficioRuntimePINVOKE.delete_Event(swigCPtr);
+          EfficioPINVOKE.delete_Event(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,7 +40,9 @@ public class Event : global::System.IDisposable {
     }
   }
 
-  public Event() : this(EfficioRuntimePINVOKE.new_Event(), true) {
+  public virtual void Eh() {
+    EfficioPINVOKE.Event_Eh(swigCPtr);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

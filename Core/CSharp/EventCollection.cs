@@ -8,7 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public class EventCollection : global::System.IDisposable, global::System.Collections.IEnumerable
     , global::System.Collections.Generic.IEnumerable<Event>
@@ -34,7 +34,7 @@ public class EventCollection : global::System.IDisposable, global::System.Collec
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioRuntimePINVOKE.delete_EventCollection(swigCPtr);
+          EfficioPINVOKE.delete_EventCollection(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -201,109 +201,109 @@ public class EventCollection : global::System.IDisposable, global::System.Collec
   }
 
   public void Clear() {
-    EfficioRuntimePINVOKE.EventCollection_Clear(swigCPtr);
+    EfficioPINVOKE.EventCollection_Clear(swigCPtr);
   }
 
   public void Add(Event x) {
-    EfficioRuntimePINVOKE.EventCollection_Add(swigCPtr, Event.getCPtr(x));
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_Add(swigCPtr, Event.getCPtr(x));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = EfficioRuntimePINVOKE.EventCollection_size(swigCPtr);
+    uint ret = EfficioPINVOKE.EventCollection_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = EfficioRuntimePINVOKE.EventCollection_capacity(swigCPtr);
+    uint ret = EfficioPINVOKE.EventCollection_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    EfficioRuntimePINVOKE.EventCollection_reserve(swigCPtr, n);
+    EfficioPINVOKE.EventCollection_reserve(swigCPtr, n);
   }
 
-  public EventCollection() : this(EfficioRuntimePINVOKE.new_EventCollection__SWIG_0(), true) {
+  public EventCollection() : this(EfficioPINVOKE.new_EventCollection__SWIG_0(), true) {
   }
 
-  public EventCollection(EventCollection other) : this(EfficioRuntimePINVOKE.new_EventCollection__SWIG_1(EventCollection.getCPtr(other)), true) {
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+  public EventCollection(EventCollection other) : this(EfficioPINVOKE.new_EventCollection__SWIG_1(EventCollection.getCPtr(other)), true) {
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public EventCollection(int capacity) : this(EfficioRuntimePINVOKE.new_EventCollection__SWIG_2(capacity), true) {
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+  public EventCollection(int capacity) : this(EfficioPINVOKE.new_EventCollection__SWIG_2(capacity), true) {
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private Event getitemcopy(int index) {
-    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.EventCollection_getitemcopy(swigCPtr, index);
+    global::System.IntPtr cPtr = EfficioPINVOKE.EventCollection_getitemcopy(swigCPtr, index);
     Event ret = (cPtr == global::System.IntPtr.Zero) ? null : new Event(cPtr, true);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private Event getitem(int index) {
-    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.EventCollection_getitem(swigCPtr, index);
+    global::System.IntPtr cPtr = EfficioPINVOKE.EventCollection_getitem(swigCPtr, index);
     Event ret = (cPtr == global::System.IntPtr.Zero) ? null : new Event(cPtr, true);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, Event val) {
-    EfficioRuntimePINVOKE.EventCollection_setitem(swigCPtr, index, Event.getCPtr(val));
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_setitem(swigCPtr, index, Event.getCPtr(val));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(EventCollection values) {
-    EfficioRuntimePINVOKE.EventCollection_AddRange(swigCPtr, EventCollection.getCPtr(values));
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_AddRange(swigCPtr, EventCollection.getCPtr(values));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public EventCollection GetRange(int index, int count) {
-    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.EventCollection_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = EfficioPINVOKE.EventCollection_GetRange(swigCPtr, index, count);
     EventCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new EventCollection(cPtr, true);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, Event x) {
-    EfficioRuntimePINVOKE.EventCollection_Insert(swigCPtr, index, Event.getCPtr(x));
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_Insert(swigCPtr, index, Event.getCPtr(x));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, EventCollection values) {
-    EfficioRuntimePINVOKE.EventCollection_InsertRange(swigCPtr, index, EventCollection.getCPtr(values));
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_InsertRange(swigCPtr, index, EventCollection.getCPtr(values));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    EfficioRuntimePINVOKE.EventCollection_RemoveAt(swigCPtr, index);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_RemoveAt(swigCPtr, index);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    EfficioRuntimePINVOKE.EventCollection_RemoveRange(swigCPtr, index, count);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_RemoveRange(swigCPtr, index, count);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static EventCollection Repeat(Event value, int count) {
-    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.EventCollection_Repeat(Event.getCPtr(value), count);
+    global::System.IntPtr cPtr = EfficioPINVOKE.EventCollection_Repeat(Event.getCPtr(value), count);
     EventCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new EventCollection(cPtr, true);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    EfficioRuntimePINVOKE.EventCollection_Reverse__SWIG_0(swigCPtr);
+    EfficioPINVOKE.EventCollection_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    EfficioRuntimePINVOKE.EventCollection_Reverse__SWIG_1(swigCPtr, index, count);
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_Reverse__SWIG_1(swigCPtr, index, count);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, EventCollection values) {
-    EfficioRuntimePINVOKE.EventCollection_SetRange(swigCPtr, index, EventCollection.getCPtr(values));
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    EfficioPINVOKE.EventCollection_SetRange(swigCPtr, index, EventCollection.getCPtr(values));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

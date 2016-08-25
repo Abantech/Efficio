@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['finger1',['Finger1',['../class_efficio_1_1_body_1_1_hands_1_1_pinch_event.html#ae3fe93a1dcdd300a706761151d6c89c0',1,'Efficio::Body::Hands::PinchEvent']]],
-  ['finger2',['Finger2',['../class_efficio_1_1_body_1_1_hands_1_1_pinch_event.html#a05fa0a0e91737c5666a82c256dc51f17',1,'Efficio::Body::Hands::PinchEvent']]],
+  ['finger1',['Finger1',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hand_1_1_pinch.html#ab7d6592aa402a7245aa3068d8e7bbd6b',1,'Efficio::InputRecognition::Human::Hand::Pinch']]],
+  ['finger2',['Finger2',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hand_1_1_pinch.html#a990552269058c1cfd3e4ebdbb448166f',1,'Efficio::InputRecognition::Human::Hand::Pinch']]],
   ['frame',['Frame',['../class_efficio_1_1_frame.html',1,'Efficio']]]
 ];

@@ -58,14 +58,12 @@
     <Compile Include="MessageBus\MessageType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Abantech\EfficioCPP\EfficioRuntime\Efficio\Efficio.csproj">
-      <Project>{46591d0f-9d87-40da-a58e-8ee25c40f0d7}</Project>
-      <Name>Efficio</Name>
+    <ProjectReference Include="..\..\Core\CSharp\Efficio.Net.csproj">
+      <Project>{a20012af-d566-402f-87b0-27b2ff7effb6}</Project>
+      <Name>Efficio.Net</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IRP\Human\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

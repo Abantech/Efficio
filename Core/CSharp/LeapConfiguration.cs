@@ -8,7 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public class LeapConfiguration : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -32,7 +32,7 @@ public class LeapConfiguration : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioRuntimePINVOKE.delete_LeapConfiguration(swigCPtr);
+          EfficioPINVOKE.delete_LeapConfiguration(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,15 +40,15 @@ public class LeapConfiguration : global::System.IDisposable {
     }
   }
 
-  public LeapConfiguration() : this(EfficioRuntimePINVOKE.new_LeapConfiguration(), true) {
+  public LeapConfiguration() : this(EfficioPINVOKE.new_LeapConfiguration(), true) {
   }
 
   public bool Enabled {
     set {
-      EfficioRuntimePINVOKE.LeapConfiguration_Enabled_set(swigCPtr, value);
+      EfficioPINVOKE.LeapConfiguration_Enabled_set(swigCPtr, value);
     } 
     get {
-      bool ret = EfficioRuntimePINVOKE.LeapConfiguration_Enabled_get(swigCPtr);
+      bool ret = EfficioPINVOKE.LeapConfiguration_Enabled_get(swigCPtr);
       return ret;
     } 
   }

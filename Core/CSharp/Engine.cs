@@ -8,7 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public class Engine : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -32,7 +32,7 @@ public class Engine : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioRuntimePINVOKE.delete_Engine(swigCPtr);
+          EfficioPINVOKE.delete_Engine(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,24 +40,24 @@ public class Engine : global::System.IDisposable {
     }
   }
 
-  public Engine() : this(EfficioRuntimePINVOKE.new_Engine(), true) {
+  public Engine() : this(EfficioPINVOKE.new_Engine(), true) {
   }
 
   public void Start() {
-    EfficioRuntimePINVOKE.Engine_Start(swigCPtr);
+    EfficioPINVOKE.Engine_Start(swigCPtr);
   }
 
   public EfficioFrame GetFrame() {
-    EfficioFrame ret = new EfficioFrame(EfficioRuntimePINVOKE.Engine_GetFrame(swigCPtr), true);
+    EfficioFrame ret = new EfficioFrame(EfficioPINVOKE.Engine_GetFrame(swigCPtr), true);
     return ret;
   }
 
   public DeviceConfiguration DeviceConfiguration {
     set {
-      EfficioRuntimePINVOKE.Engine_DeviceConfiguration_set(swigCPtr, DeviceConfiguration.getCPtr(value));
+      EfficioPINVOKE.Engine_DeviceConfiguration_set(swigCPtr, DeviceConfiguration.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Engine_DeviceConfiguration_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioPINVOKE.Engine_DeviceConfiguration_get(swigCPtr);
       DeviceConfiguration ret = (cPtr == global::System.IntPtr.Zero) ? null : new DeviceConfiguration(cPtr, false);
       return ret;
     } 

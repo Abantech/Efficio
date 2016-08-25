@@ -243,7 +243,7 @@ static void SWIGUNUSED SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpExcepti
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_EfficioRuntime(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_Efficio(
                                                 SWIG_CSharpExceptionCallback_t applicationCallback,
                                                 SWIG_CSharpExceptionCallback_t arithmeticCallback,
                                                 SWIG_CSharpExceptionCallback_t divideByZeroCallback, 
@@ -271,7 +271,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_EfficioRuntime(
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_EfficioRuntime(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_Efficio(
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentNullCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentOutOfRangeCallback) {
@@ -289,7 +289,7 @@ static SWIG_CSharpStringHelperCallback SWIG_csharp_string_callback = NULL;
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_EfficioRuntime(SWIG_CSharpStringHelperCallback callback) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_Efficio(SWIG_CSharpStringHelperCallback callback) {
   SWIG_csharp_string_callback = callback;
 }
 
@@ -299,15 +299,21 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_EfficioRuntime(SWIG_CShar
 #define SWIG_contract_assert(nullreturn, expr, msg) if (!(expr)) {SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, msg, ""); return nullreturn; } else
 
 
+
+ 
+
 	 /* Includes the header in the wrapper code */
 	#include <memory>
 	#include "Event.h"
 	#include "Vector3.h"
 	#include "Frame.h"
 	#include "Enumerations.h"
-	#include "PinchEvent.h"
 	#include "EfficioFrame.h"
 	#include "Engine.h"
+	#include "Gesture.h"
+	#include "DiscreteGesture.h"
+	#include "Pinch.h"
+	#include "RightHandThumbAndIndexPinch.h"
  
 
 #include <string>
@@ -426,7 +432,7 @@ SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Event_Sg__Sg__SetRange(s
 extern "C" {
 #endif
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_Vector3___(float jarg1, float jarg2, float jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Vector3___(float jarg1, float jarg2, float jarg3) {
   void * jresult ;
   float arg1 ;
   float arg2 ;
@@ -442,7 +448,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_Vector3___(float jarg1,
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_Vector3___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Vector3___(void * jarg1) {
   Efficio::Vector3 *arg1 = (Efficio::Vector3 *) 0 ;
   
   arg1 = (Efficio::Vector3 *)jarg1; 
@@ -450,7 +456,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_Vector3___(void * jarg
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofRuntime_Vector3_X___(void * jarg1) {
+SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Vector3_X___(void * jarg1) {
   float jresult ;
   Efficio::Vector3 *arg1 = (Efficio::Vector3 *) 0 ;
   float result;
@@ -462,7 +468,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofRuntime_Vector3_X___(void * jarg1) {
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofRuntime_Vector3_Y___(void * jarg1) {
+SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Vector3_Y___(void * jarg1) {
   float jresult ;
   Efficio::Vector3 *arg1 = (Efficio::Vector3 *) 0 ;
   float result;
@@ -474,7 +480,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofRuntime_Vector3_Y___(void * jarg1) {
 }
 
 
-SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofRuntime_Vector3_Z___(void * jarg1) {
+SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Vector3_Z___(void * jarg1) {
   float jresult ;
   Efficio::Vector3 *arg1 = (Efficio::Vector3 *) 0 ;
   float result;
@@ -486,19 +492,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofRuntime_Vector3_Z___(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_Event___() {
-  void * jresult ;
-  Efficio::Event *result = 0 ;
-  
-  result = (Efficio::Event *)new Efficio::Event();
-  
-  jresult = result ? new std::shared_ptr<  Efficio::Event >(result SWIG_NO_NULL_DELETER_1) : 0;
-  
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_Event___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Event___(void * jarg1) {
   Efficio::Event *arg1 = (Efficio::Event *) 0 ;
   std::shared_ptr< Efficio::Event > *smartarg1 = 0 ;
   
@@ -509,7 +503,18 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_Event___(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_Frame___() {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Event_Eh___(void * jarg1) {
+  Efficio::Event *arg1 = (Efficio::Event *) 0 ;
+  std::shared_ptr< Efficio::Event > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Event > *)jarg1;
+  arg1 = (Efficio::Event *)(smartarg1 ? smartarg1->get() : 0); 
+  (arg1)->Eh();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Frame___() {
   void * jresult ;
   Efficio::Frame *result = 0 ;
   
@@ -519,7 +524,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_Frame___() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_Frame___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Frame___(void * jarg1) {
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
   
   arg1 = (Efficio::Frame *)jarg1; 
@@ -527,162 +532,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_Frame___(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_PinchEvent___(int jarg1, void * jarg2) {
-  void * jresult ;
-  Efficio::Body::BodySide arg1 ;
-  SwigValueWrapper< Efficio::Vector3 > arg2 ;
-  Efficio::Vector3 *argp2 ;
-  Efficio::Body::Hands::PinchEvent *result = 0 ;
-  
-  arg1 = (Efficio::Body::BodySide)jarg1; 
-  argp2 = (Efficio::Vector3 *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Vector3", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (Efficio::Body::Hands::PinchEvent *)new Efficio::Body::Hands::PinchEvent(arg1,arg2);
-  
-  jresult = result ? new std::shared_ptr<  Efficio::Body::Hands::PinchEvent >(result SWIG_NO_NULL_DELETER_1) : 0;
-  
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_PinchEvent___(void * jarg1) {
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  (void)arg1; delete smartarg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_Side_set___(void * jarg1, int jarg2) {
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  Efficio::Body::BodySide arg2 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (Efficio::Body::BodySide)jarg2; 
-  if (arg1) (arg1)->Side = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_Side_get___(void * jarg1) {
-  int jresult ;
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  Efficio::Body::BodySide result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::Body::BodySide) ((arg1)->Side);
-  jresult = (int)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_Finger1_set___(void * jarg1, char * jarg2) {
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  std::string *arg2 = 0 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  if (!jarg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return ;
-  }
-  std::string arg2_str(jarg2);
-  arg2 = &arg2_str; 
-  if (arg1) (arg1)->Finger1 = *arg2;
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_Finger1_get___(void * jarg1) {
-  char * jresult ;
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  std::string *result = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (std::string *) & ((arg1)->Finger1);
-  jresult = SWIG_csharp_string_callback(result->c_str()); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_Finger2_set___(void * jarg1, char * jarg2) {
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  std::string *arg2 = 0 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  if (!jarg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return ;
-  }
-  std::string arg2_str(jarg2);
-  arg2 = &arg2_str; 
-  if (arg1) (arg1)->Finger2 = *arg2;
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_Finger2_get___(void * jarg1) {
-  char * jresult ;
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  std::string *result = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (std::string *) & ((arg1)->Finger2);
-  jresult = SWIG_csharp_string_callback(result->c_str()); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_Position_set___(void * jarg1, void * jarg2) {
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  Efficio::Vector3 *arg2 = (Efficio::Vector3 *) 0 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (Efficio::Vector3 *)jarg2; 
-  if (arg1) (arg1)->Position = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_Position_get___(void * jarg1) {
-  void * jresult ;
-  Efficio::Body::Hands::PinchEvent *arg1 = (Efficio::Body::Hands::PinchEvent *) 0 ;
-  std::shared_ptr< Efficio::Body::Hands::PinchEvent > *smartarg1 = 0 ;
-  Efficio::Vector3 *result = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Body::Hands::PinchEvent > *)jarg1;
-  arg1 = (Efficio::Body::Hands::PinchEvent *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::Vector3 *)& ((arg1)->Position);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_EfficioFrame___() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_EfficioFrame___() {
   void * jresult ;
   Efficio::EfficioFrame *result = 0 ;
   
@@ -692,7 +542,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_EfficioFrame___() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_EfficioFrame___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_EfficioFrame___(void * jarg1) {
   Efficio::EfficioFrame *arg1 = (Efficio::EfficioFrame *) 0 ;
   
   arg1 = (Efficio::EfficioFrame *)jarg1; 
@@ -700,7 +550,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_EfficioFrame___(void *
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EfficioFrame_GetEvents___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_EfficioFrame_GetEvents___(void * jarg1) {
   void * jresult ;
   Efficio::EfficioFrame *arg1 = (Efficio::EfficioFrame *) 0 ;
   std::vector< std::shared_ptr< Efficio::Event > > result;
@@ -712,7 +562,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EfficioFrame_GetEvents___(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EfficioFrame_AddEvent___(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EfficioFrame_AddEvent___(void * jarg1, void * jarg2) {
   Efficio::EfficioFrame *arg1 = (Efficio::EfficioFrame *) 0 ;
   Efficio::Event *arg2 = (Efficio::Event *) 0 ;
   std::shared_ptr< Efficio::Event > *smartarg2 = 0 ;
@@ -725,7 +575,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EfficioFrame_AddEvent___(void
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_Engine___() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Engine___() {
   void * jresult ;
   Efficio::Engine *result = 0 ;
   
@@ -735,7 +585,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_Engine___() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_Engine___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Engine___(void * jarg1) {
   Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
   
   arg1 = (Efficio::Engine *)jarg1; 
@@ -743,7 +593,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_Engine___(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_Engine_Start___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Engine_Start___(void * jarg1) {
   Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
   
   arg1 = (Efficio::Engine *)jarg1; 
@@ -751,7 +601,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_Engine_Start___(void * jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_Engine_GetFrame___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Engine_GetFrame___(void * jarg1) {
   void * jresult ;
   Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
   Efficio::EfficioFrame result;
@@ -763,7 +613,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_Engine_GetFrame___(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_Engine_DeviceConfiguration_set___(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Engine_DeviceConfiguration_set___(void * jarg1, void * jarg2) {
   Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
   Efficio::Configuration::DeviceConfiguration *arg2 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
   
@@ -773,7 +623,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_Engine_DeviceConfiguration_se
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_Engine_DeviceConfiguration_get___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Engine_DeviceConfiguration_get___(void * jarg1) {
   void * jresult ;
   Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
   Efficio::Configuration::DeviceConfiguration *result = 0 ;
@@ -785,7 +635,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_Engine_DeviceConfiguration_
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_LeapConfiguration___() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_LeapConfiguration___() {
   void * jresult ;
   Efficio::Configuration::LeapConfiguration *result = 0 ;
   
@@ -795,7 +645,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_LeapConfiguration___() 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_LeapConfiguration___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_LeapConfiguration___(void * jarg1) {
   Efficio::Configuration::LeapConfiguration *arg1 = (Efficio::Configuration::LeapConfiguration *) 0 ;
   
   arg1 = (Efficio::Configuration::LeapConfiguration *)jarg1; 
@@ -803,7 +653,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_LeapConfiguration___(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_LeapConfiguration_Enabled_set___(void * jarg1, unsigned int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_LeapConfiguration_Enabled_set___(void * jarg1, unsigned int jarg2) {
   Efficio::Configuration::LeapConfiguration *arg1 = (Efficio::Configuration::LeapConfiguration *) 0 ;
   bool arg2 ;
   
@@ -813,7 +663,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_LeapConfiguration_Enabled_set
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofRuntime_LeapConfiguration_Enabled_get___(void * jarg1) {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_LeapConfiguration_Enabled_get___(void * jarg1) {
   unsigned int jresult ;
   Efficio::Configuration::LeapConfiguration *arg1 = (Efficio::Configuration::LeapConfiguration *) 0 ;
   bool result;
@@ -825,7 +675,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofRuntime_LeapConfiguration_Ena
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_DeviceConfiguration___() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DeviceConfiguration___() {
   void * jresult ;
   Efficio::Configuration::DeviceConfiguration *result = 0 ;
   
@@ -835,7 +685,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_DeviceConfiguration___(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_DeviceConfiguration___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_DeviceConfiguration___(void * jarg1) {
   Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
   
   arg1 = (Efficio::Configuration::DeviceConfiguration *)jarg1; 
@@ -843,7 +693,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_DeviceConfiguration___
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_DeviceConfiguration_LeapConfiguration_set___(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceConfiguration_LeapConfiguration_set___(void * jarg1, void * jarg2) {
   Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
   Efficio::Configuration::LeapConfiguration *arg2 = (Efficio::Configuration::LeapConfiguration *) 0 ;
   
@@ -853,7 +703,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_DeviceConfiguration_LeapConfi
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_DeviceConfiguration_LeapConfiguration_get___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceConfiguration_LeapConfiguration_get___(void * jarg1) {
   void * jresult ;
   Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
   Efficio::Configuration::LeapConfiguration *result = 0 ;
@@ -865,7 +715,390 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_DeviceConfiguration_LeapCon
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Clear___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Gesture___(void * jarg1) {
+  Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Gesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Gesture *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Gesture_GetType___(void * jarg1) {
+  int jresult ;
+  Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
+  Efficio::GestureType result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Gesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Gesture *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::GestureType)(arg1)->GetType();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Gesture_GetGestureState___(void * jarg1) {
+  int jresult ;
+  Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
+  Efficio::GestureState result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Gesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Gesture *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::GestureState)(arg1)->GetGestureState();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Gesture_GetStartTime___(void * jarg1) {
+  void * jresult ;
+  Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
+  std::time_t result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Gesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Gesture *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (arg1)->GetStartTime();
+  jresult = new std::time_t((const std::time_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Gesture_GetGestureDuration___(void * jarg1) {
+  void * jresult ;
+  Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
+  std::time_t result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Gesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Gesture *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (arg1)->GetGestureDuration();
+  jresult = new std::time_t((const std::time_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Gesture_Eh___(void * jarg1) {
+  Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Gesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Gesture *)(smartarg1 ? smartarg1->get() : 0); 
+  (arg1)->Eh();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_DiscreteGesture___(void * jarg1) {
+  Efficio::InputRecognition::DiscreteGesture *arg1 = (Efficio::InputRecognition::DiscreteGesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::DiscreteGesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::DiscreteGesture *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_DiscreteGesture_GetType___(void * jarg1) {
+  int jresult ;
+  Efficio::InputRecognition::DiscreteGesture *arg1 = (Efficio::InputRecognition::DiscreteGesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > *smartarg1 = 0 ;
+  Efficio::GestureType result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::DiscreteGesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::DiscreteGesture *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::GestureType)(arg1)->GetType();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_DiscreteGesture_GetGestureState___(void * jarg1) {
+  int jresult ;
+  Efficio::InputRecognition::DiscreteGesture *arg1 = (Efficio::InputRecognition::DiscreteGesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > *smartarg1 = 0 ;
+  Efficio::GestureState result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::DiscreteGesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::DiscreteGesture *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::GestureState)(arg1)->GetGestureState();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DiscreteGesture_Eh___(void * jarg1) {
+  Efficio::InputRecognition::DiscreteGesture *arg1 = (Efficio::InputRecognition::DiscreteGesture *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::DiscreteGesture > *)jarg1;
+  arg1 = (Efficio::InputRecognition::DiscreteGesture *)(smartarg1 ? smartarg1->get() : 0); 
+  (arg1)->Eh();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Pinch___(int jarg1, void * jarg2) {
+  void * jresult ;
+  Efficio::Body::BodySide arg1 ;
+  SwigValueWrapper< Efficio::Vector3 > arg2 ;
+  Efficio::Vector3 *argp2 ;
+  Efficio::InputRecognition::Human::Hand::Pinch *result = 0 ;
+  
+  arg1 = (Efficio::Body::BodySide)jarg1; 
+  argp2 = (Efficio::Vector3 *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Vector3", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (Efficio::InputRecognition::Human::Hand::Pinch *)new Efficio::InputRecognition::Human::Hand::Pinch(arg1,arg2);
+  
+  jresult = result ? new std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Pinch___(void * jarg1) {
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_set___(void * jarg1, int jarg2) {
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  Efficio::Body::BodySide arg2 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (Efficio::Body::BodySide)jarg2; 
+  if (arg1) (arg1)->Side = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_get___(void * jarg1) {
+  int jresult ;
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  Efficio::Body::BodySide result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Body::BodySide) ((arg1)->Side);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_set___(void * jarg1, int jarg2) {
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  Efficio::Body::Finger arg2 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (Efficio::Body::Finger)jarg2; 
+  if (arg1) (arg1)->Finger1 = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_get___(void * jarg1) {
+  int jresult ;
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  Efficio::Body::Finger result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Body::Finger) ((arg1)->Finger1);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_set___(void * jarg1, int jarg2) {
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  Efficio::Body::Finger arg2 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (Efficio::Body::Finger)jarg2; 
+  if (arg1) (arg1)->Finger2 = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_get___(void * jarg1) {
+  int jresult ;
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  Efficio::Body::Finger result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Body::Finger) ((arg1)->Finger2);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_ID_set___(void * jarg1, char * jarg2) {
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  std::string *arg2 = 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  if (!jarg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
+    return ;
+  }
+  std::string arg2_str(jarg2);
+  arg2 = &arg2_str; 
+  if (arg1) (arg1)->ID = *arg2;
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofNet_Pinch_ID_get___(void * jarg1) {
+  char * jresult ;
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  std::string *result = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (std::string *) & ((arg1)->ID);
+  jresult = SWIG_csharp_string_callback(result->c_str()); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_set___(void * jarg1, void * jarg2) {
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  Efficio::Vector3 *arg2 = (Efficio::Vector3 *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (Efficio::Vector3 *)jarg2; 
+  if (arg1) (arg1)->Position = *arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_get___(void * jarg1) {
+  void * jresult ;
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  Efficio::Vector3 *result = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Vector3 *)& ((arg1)->Position);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_Pinch_Detect___(void * jarg1) {
+  unsigned int jresult ;
+  Leap::Hand arg1 ;
+  Leap::Hand *argp1 ;
+  bool result;
+  
+  argp1 = (Leap::Hand *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Leap::Hand", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (bool)Efficio::InputRecognition::Human::Hand::Pinch::Detect(arg1);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Eh___(void * jarg1) {
+  Efficio::InputRecognition::Human::Hand::Pinch *arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  (arg1)->Eh();
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_RightHandThumbAndIndexPinch___(void * jarg1) {
+  void * jresult ;
+  SwigValueWrapper< Efficio::Vector3 > arg1 ;
+  Efficio::Vector3 *argp1 ;
+  Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch *result = 0 ;
+  
+  argp1 = (Efficio::Vector3 *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Vector3", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch *)new Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch(arg1);
+  
+  jresult = result ? new std::shared_ptr<  Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_RightHandThumbAndIndexPinch___(void * jarg1) {
+  Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch *arg1 = (Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_RightHandThumbAndIndexPinch_Eh___(void * jarg1) {
+  Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch *arg1 = (Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch *)(smartarg1 ? smartarg1->get() : 0); 
+  (arg1)->Eh();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_Clear___(void * jarg1) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   
   arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *)jarg1; 
@@ -873,7 +1106,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Clear___(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Add___(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_Add___(void * jarg1, void * jarg2) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   std::shared_ptr< Efficio::Event > *arg2 = 0 ;
   std::shared_ptr< Efficio::Event > tempnull2 ;
@@ -884,7 +1117,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Add___(void *
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_size___(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_EventCollection_size___(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   std::vector< std::shared_ptr< Efficio::Event > >::size_type result;
@@ -896,7 +1129,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_size
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_capacity___(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_EventCollection_capacity___(void * jarg1) {
   unsigned long jresult ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   std::vector< std::shared_ptr< Efficio::Event > >::size_type result;
@@ -908,7 +1141,7 @@ SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_capa
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_reserve___(void * jarg1, unsigned long jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_reserve___(void * jarg1, unsigned long jarg2) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   std::vector< std::shared_ptr< Efficio::Event > >::size_type arg2 ;
   
@@ -918,7 +1151,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_reserve___(vo
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_EventCollection__SWIG_0___() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_EventCollection__SWIG_0___() {
   void * jresult ;
   std::vector< std::shared_ptr< Efficio::Event > > *result = 0 ;
   
@@ -928,7 +1161,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_EventCollection__SWIG_0
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_EventCollection__SWIG_1___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_EventCollection__SWIG_1___(void * jarg1) {
   void * jresult ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = 0 ;
   std::vector< std::shared_ptr< Efficio::Event > > *result = 0 ;
@@ -944,7 +1177,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_EventCollection__SWIG_1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_EventCollection__SWIG_2___(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_EventCollection__SWIG_2___(int jarg1) {
   void * jresult ;
   int arg1 ;
   std::vector< std::shared_ptr< Efficio::Event > > *result = 0 ;
@@ -963,7 +1196,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_new_EventCollection__SWIG_2
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_getitemcopy___(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_EventCollection_getitemcopy___(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
@@ -984,7 +1217,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_getitemcopy
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_getitem___(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_EventCollection_getitem___(void * jarg1, int jarg2) {
   void * jresult ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
@@ -1005,7 +1238,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_getitem___(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_setitem___(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_setitem___(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
   std::shared_ptr< Efficio::Event > *arg3 = 0 ;
@@ -1025,7 +1258,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_setitem___(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_AddRange___(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_AddRange___(void * jarg1, void * jarg2) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg2 = 0 ;
   
@@ -1039,7 +1272,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_AddRange___(v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_GetRange___(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_EventCollection_GetRange___(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
@@ -1066,7 +1299,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_GetRange___
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Insert___(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_Insert___(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
   std::shared_ptr< Efficio::Event > *arg3 = 0 ;
@@ -1086,7 +1319,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Insert___(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_InsertRange___(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_InsertRange___(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg3 = 0 ;
@@ -1109,7 +1342,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_InsertRange__
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_RemoveAt___(void * jarg1, int jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_RemoveAt___(void * jarg1, int jarg2) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
   
@@ -1126,7 +1359,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_RemoveAt___(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_RemoveRange___(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_RemoveRange___(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -1149,7 +1382,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_RemoveRange__
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Repeat___(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_EventCollection_Repeat___(void * jarg1, int jarg2) {
   void * jresult ;
   std::shared_ptr< Efficio::Event > *arg1 = 0 ;
   int arg2 ;
@@ -1171,7 +1404,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Repeat___(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Reverse__SWIG_0___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_Reverse__SWIG_0___(void * jarg1) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   
   arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *)jarg1; 
@@ -1179,7 +1412,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Reverse__SWIG
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -1202,7 +1435,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_Reverse__SWIG
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_SetRange___(void * jarg1, int jarg2, void * jarg3) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_SetRange___(void * jarg1, int jarg2, void * jarg3) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   int arg2 ;
   std::vector< std::shared_ptr< Efficio::Event > > *arg3 = 0 ;
@@ -1225,7 +1458,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_EventCollection_SetRange___(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_EventCollection___(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_EventCollection___(void * jarg1) {
   std::vector< std::shared_ptr< Efficio::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *) 0 ;
   
   arg1 = (std::vector< std::shared_ptr< Efficio::Event > > *)jarg1; 
@@ -1233,12 +1466,24 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofRuntime_delete_EventCollection___(voi
 }
 
 
-SWIGEXPORT std::shared_ptr< Efficio::Event > * SWIGSTDCALL CSharp_EfficiofRuntime_PinchEvent_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::Body::Hands::PinchEvent > *jarg1) {
+SWIGEXPORT Efficio::Frame * SWIGSTDCALL CSharp_EfficiofNet_EfficioFrame_SWIGUpcast___(Efficio::EfficioFrame *jarg1) {
+    return (Efficio::Frame *)jarg1;
+}
+
+SWIGEXPORT std::shared_ptr< Efficio::Event > * SWIGSTDCALL CSharp_EfficiofNet_Gesture_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::InputRecognition::Gesture > *jarg1) {
     return jarg1 ? new std::shared_ptr< Efficio::Event >(*jarg1) : 0;
 }
 
-SWIGEXPORT Efficio::Frame * SWIGSTDCALL CSharp_EfficiofRuntime_EfficioFrame_SWIGUpcast___(Efficio::EfficioFrame *jarg1) {
-    return (Efficio::Frame *)jarg1;
+SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::Gesture > * SWIGSTDCALL CSharp_EfficiofNet_DiscreteGesture_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > *jarg1) {
+    return jarg1 ? new std::shared_ptr< Efficio::InputRecognition::Gesture >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > * SWIGSTDCALL CSharp_EfficiofNet_Pinch_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > *jarg1) {
+    return jarg1 ? new std::shared_ptr< Efficio::InputRecognition::DiscreteGesture >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch > * SWIGSTDCALL CSharp_EfficiofNet_RightHandThumbAndIndexPinch_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch > *jarg1) {
+    return jarg1 ? new std::shared_ptr< Efficio::InputRecognition::Human::Hand::Pinch >(*jarg1) : 0;
 }
 
 #ifdef __cplusplus

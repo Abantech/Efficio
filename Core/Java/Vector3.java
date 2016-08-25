@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public class Vector3 {
   private transient long swigCPtr;
@@ -29,26 +29,26 @@ public class Vector3 {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        EfficioRuntimeJNI.delete_Vector3(swigCPtr);
+        EfficioJNI.delete_Vector3(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public Vector3(float x, float y, float z) {
-    this(EfficioRuntimeJNI.new_Vector3(x, y, z), true);
+    this(EfficioJNI.new_Vector3(x, y, z), true);
   }
 
   public float X() {
-    return EfficioRuntimeJNI.Vector3_X(swigCPtr, this);
+    return EfficioJNI.Vector3_X(swigCPtr, this);
   }
 
   public float Y() {
-    return EfficioRuntimeJNI.Vector3_Y(swigCPtr, this);
+    return EfficioJNI.Vector3_Y(swigCPtr, this);
   }
 
   public float Z() {
-    return EfficioRuntimeJNI.Vector3_Z(swigCPtr, this);
+    return EfficioJNI.Vector3_Z(swigCPtr, this);
   }
 
 }

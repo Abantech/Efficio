@@ -8,9 +8,14 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
-public class EfficioRuntime {
+public enum Finger {
+  Thumb,
+  Index,
+  Middle,
+  Ring,
+  Pinky
 }
 
 }

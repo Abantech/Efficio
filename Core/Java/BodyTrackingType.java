@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public final class BodyTrackingType {
   public final static BodyTrackingType Eye = new BodyTrackingType("Eye");

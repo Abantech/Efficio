@@ -19,6 +19,15 @@
     <Filter Include="Header Files\Events">
       <UniqueIdentifier>{d241b3f1-7deb-4193-b455-ecee96c508e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\IRP">
+      <UniqueIdentifier>{e17f951b-865b-4853-9ba3-321a60f8a977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IRP\Human">
+      <UniqueIdentifier>{9756081e-bd22-46a0-807e-ab3642cf97b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IRP\Human\Hands">
+      <UniqueIdentifier>{905864fb-51b8-4c85-8fa7-586cc1329489}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceConfiguration.cpp">
@@ -39,13 +48,25 @@
     <ClCompile Include="MainPage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PinchEvent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Vector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscreteGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pinch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RightHandThumbAndIndexPinch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RuntimeCSharp_wrap.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,16 +92,29 @@
     <ClInclude Include="Event.h">
       <Filter>Header Files\Events</Filter>
     </ClInclude>
-    <ClInclude Include="PinchEvent.h">
-      <Filter>Header Files\Events</Filter>
-    </ClInclude>
     <ClInclude Include="Frame.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gesture.h">
+      <Filter>Header Files\IRP</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscreteGesture.h">
+      <Filter>Header Files\IRP</Filter>
+    </ClInclude>
+    <ClInclude Include="Pinch.h">
+      <Filter>Header Files\IRP\Human\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="ActiveGestureDictionary.h">
+      <Filter>Header Files\IRP</Filter>
+    </ClInclude>
+    <ClInclude Include="RightHandThumbAndIndexPinch.h">
+      <Filter>Header Files\IRP\Human\Hands</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="RuntimeCSharp.i" />
     <None Include="RuntimeJava.i" />
     <None Include="README.md" />
+    <None Include="Efficio.i" />
   </ItemGroup>
 </Project>

@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package Efficio.Runtime;
+package Efficio.Java;
 
 public class EventCollection {
   private transient long swigCPtr;
@@ -29,51 +29,51 @@ public class EventCollection {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        EfficioRuntimeJNI.delete_EventCollection(swigCPtr);
+        EfficioJNI.delete_EventCollection(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public EventCollection() {
-    this(EfficioRuntimeJNI.new_EventCollection__SWIG_0(), true);
+    this(EfficioJNI.new_EventCollection__SWIG_0(), true);
   }
 
   public EventCollection(long n) {
-    this(EfficioRuntimeJNI.new_EventCollection__SWIG_1(n), true);
+    this(EfficioJNI.new_EventCollection__SWIG_1(n), true);
   }
 
   public long size() {
-    return EfficioRuntimeJNI.EventCollection_size(swigCPtr, this);
+    return EfficioJNI.EventCollection_size(swigCPtr, this);
   }
 
   public long capacity() {
-    return EfficioRuntimeJNI.EventCollection_capacity(swigCPtr, this);
+    return EfficioJNI.EventCollection_capacity(swigCPtr, this);
   }
 
   public void reserve(long n) {
-    EfficioRuntimeJNI.EventCollection_reserve(swigCPtr, this, n);
+    EfficioJNI.EventCollection_reserve(swigCPtr, this, n);
   }
 
   public boolean isEmpty() {
-    return EfficioRuntimeJNI.EventCollection_isEmpty(swigCPtr, this);
+    return EfficioJNI.EventCollection_isEmpty(swigCPtr, this);
   }
 
   public void clear() {
-    EfficioRuntimeJNI.EventCollection_clear(swigCPtr, this);
+    EfficioJNI.EventCollection_clear(swigCPtr, this);
   }
 
   public void add(Event x) {
-    EfficioRuntimeJNI.EventCollection_add(swigCPtr, this, Event.getCPtr(x), x);
+    EfficioJNI.EventCollection_add(swigCPtr, this, Event.getCPtr(x), x);
   }
 
   public Event get(int i) {
-    long cPtr = EfficioRuntimeJNI.EventCollection_get(swigCPtr, this, i);
+    long cPtr = EfficioJNI.EventCollection_get(swigCPtr, this, i);
     return (cPtr == 0) ? null : new Event(cPtr, true);
   }
 
   public void set(int i, Event val) {
-    EfficioRuntimeJNI.EventCollection_set(swigCPtr, this, i, Event.getCPtr(val), val);
+    EfficioJNI.EventCollection_set(swigCPtr, this, i, Event.getCPtr(val), val);
   }
 
 }

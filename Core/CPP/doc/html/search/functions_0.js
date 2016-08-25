@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getframe',['GetFrame',['../class_efficio_1_1_engine.html#a9496aecb7bd8826739fbd5b7d5299ff8',1,'Efficio::Engine']]]
+  ['detect',['Detect',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hand_1_1_pinch.html#acf53bfa1ea2e7763fa98f99ebe0474e5',1,'Efficio::InputRecognition::Human::Hand::Pinch']]]
 ];

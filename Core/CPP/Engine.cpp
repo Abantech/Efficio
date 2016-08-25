@@ -1,7 +1,8 @@
 #include "Engine.h"
 #include <iostream>
-#include "PinchEvent.h"
 #include "Enumerations.h"
+#include "Vector3.h"
+#include "RightHandThumbAndIndexPinch.h"
 
 namespace Efficio {
 	Engine::Engine() : started(false)
@@ -10,9 +11,7 @@ namespace Efficio {
 
 	Engine::~Engine()
 	{
-#ifdef LeapEnabled
 		controller->~Controller();
-#endif
 	}
 
 	void Engine::Start()
@@ -45,14 +44,22 @@ namespace Efficio {
 
 						if (hand.fingers()[0].stabilizedTipPosition().distanceTo(hand.fingers()[1].stabilizedTipPosition()) < 25)
 						{
-							Body::BodySide side = hand.isLeft() ? Body::BodySide::Left : Body::BodySide::Right;
+							// Get Position
 							auto leapPos = hand.fingers()[0].stabilizedTipPosition();
-
 							auto ib = frame.interactionBox();
 							leapPos = ib.normalizePoint(leapPos);
-
 							Vector3 position(leapPos.x, leapPos.y, leapPos.z);
-							auto pinch = new Efficio::Body::Hands::PinchEvent(side, position);
+
+							Efficio::InputRecognition::Human::Hand::Pinch* pinch;
+
+							if (hand.isRight())
+							{
+								pinch = new Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch(position);
+							}
+							else
+							{
+								pinch = new Efficio::InputRecognition::Human::Hand::Pinch(Efficio::Body::BodySide::Left, position);
+							}
 
 							efficioFrame.AddEvent(pinch);
 						}

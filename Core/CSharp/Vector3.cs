@@ -8,7 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace Efficio.Runtime {
+namespace Efficio.Net {
 
 public class Vector3 : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -32,7 +32,7 @@ public class Vector3 : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioRuntimePINVOKE.delete_Vector3(swigCPtr);
+          EfficioPINVOKE.delete_Vector3(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,21 +40,21 @@ public class Vector3 : global::System.IDisposable {
     }
   }
 
-  public Vector3(float x, float y, float z) : this(EfficioRuntimePINVOKE.new_Vector3(x, y, z), true) {
+  public Vector3(float x, float y, float z) : this(EfficioPINVOKE.new_Vector3(x, y, z), true) {
   }
 
   public float X() {
-    float ret = EfficioRuntimePINVOKE.Vector3_X(swigCPtr);
+    float ret = EfficioPINVOKE.Vector3_X(swigCPtr);
     return ret;
   }
 
   public float Y() {
-    float ret = EfficioRuntimePINVOKE.Vector3_Y(swigCPtr);
+    float ret = EfficioPINVOKE.Vector3_Y(swigCPtr);
     return ret;
   }
 
   public float Z() {
-    float ret = EfficioRuntimePINVOKE.Vector3_Z(swigCPtr);
+    float ret = EfficioPINVOKE.Vector3_Z(swigCPtr);
     return ret;
   }
 

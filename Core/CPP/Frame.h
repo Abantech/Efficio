@@ -13,7 +13,5 @@ namespace Efficio
 	public:
 		Frame();
 		~Frame();
-	private:
-
 	};
 }
