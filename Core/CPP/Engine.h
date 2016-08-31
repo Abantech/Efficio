@@ -1,6 +1,7 @@
 #pragma once
 #include "EfficioFrame.h"
 #include "DeviceConfiguration.h"
+#include "Device.h"
 #include "Leap.h"
 #include <memory>
 #include "Event.h"
@@ -37,7 +38,7 @@ extern "C" {
 
 		private:
 			bool started;
-			Leap::Controller* controller;
+			Efficio::Device* device;
 			HistoricalFrameCollection historicalFrames;
 			int frameID;
 		};

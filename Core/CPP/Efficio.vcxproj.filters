@@ -28,6 +28,9 @@
     <Filter Include="Header Files\IRP\Human\Hands">
       <UniqueIdentifier>{905864fb-51b8-4c85-8fa7-586cc1329489}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Devices">
+      <UniqueIdentifier>{8433659b-7c77-4ea5-8798-51768d233db6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceConfiguration.cpp">
@@ -76,6 +79,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RuntimeCSharp_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LeapMotionDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -127,6 +136,18 @@
     </ClInclude>
     <ClInclude Include="EventType.h">
       <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>Header Files\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceStatus.h">
+      <Filter>Header Files\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackingType.h">
+      <Filter>Header Files\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="LeapMotionDevice.h">
+      <Filter>Header Files\Devices</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -27,6 +27,8 @@
  %shared_ptr(Efficio::InputRecognition::Human::Hands::Pinch);
 
  /* Parse the header file to generate wrappers */
+ %include "DeviceStatus.h"
+ %include "TrackingType.h"
  %include "Vector3.h"
  %include "EventType.h"
  %include "Event.h" 
