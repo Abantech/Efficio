@@ -24,9 +24,9 @@ namespace Efficio {
 		started = true;
 	}
 
-	Efficio::EfficioFrame* Engine::GetFrame()
+	std::shared_ptr<Efficio::EfficioFrame> Engine::GetFrame()
 	{
-		Efficio::EfficioFrame* efficioFrame = new EfficioFrame(frameID++);
+		std::shared_ptr<Efficio::EfficioFrame> efficioFrame(new EfficioFrame(frameID++));
 
 		if (started)
 		{
@@ -36,33 +36,19 @@ namespace Efficio {
 
 				if (frame.isValid())
 				{
-					
-					if (frame.id() == controller->frame(1).id())
+					auto hands = frame.hands();
+
+					if (hands.count() > 0)
 					{
-						for (size_t i = 0; i < lastFrameEvents.size(); i++)
+						for (size_t i = 0; i < hands.count(); i++)
 						{
-							efficioFrame->AddEvent(lastFrameEvents[i]);
-						}
-					}
-					else {
+							Efficio::InputRecognition::Human::Hands::PinchDetector detector;
+							detector.Enabled = true;
+							auto pinches = detector.Detect(hands[i]);
 
-						auto hands = frame.hands();
-
-						if (hands.count() > 0)
-						{
-							for (size_t i = 0; i < hands.count(); i++)
+							for (size_t j = 0; j < pinches.size(); j++)
 							{
-								Efficio::InputRecognition::Human::Hands::PinchDetector detector;
-								detector.Enabled = true;
-								auto pinches = detector.Detect(hands[i]);
-
-								lastFrameEvents.clear();
-
-								for (size_t j = 0; j < pinches.size(); j++)
-								{
-									efficioFrame->AddEvent(pinches[j]);
-									lastFrameEvents.push_back(pinches[j]);
-								}
+								efficioFrame->AddEvent(pinches[j]);
 							}
 						}
 					}
@@ -70,18 +56,19 @@ namespace Efficio {
 			}
 		}
 
-		historicalFrames.AddFrame(std::shared_ptr<EfficioFrame>(efficioFrame));
+		historicalFrames.AddFrame(efficioFrame);
 		return efficioFrame;
 	}
-	Efficio::EfficioFrame* Engine::GetFrame(int count)
+
+	std::shared_ptr<Efficio::EfficioFrame> Engine::GetFrame(int count)
 	{
 		auto tempFrame = historicalFrames.GetFrame(count);
 
 		if (tempFrame)
 		{
-			return historicalFrames.GetFrame(count).get();
+			return historicalFrames.GetFrame(count);
 		}
-		
+
 		return NULL;
 	}
 }

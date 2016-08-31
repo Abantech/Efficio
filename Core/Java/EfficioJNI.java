@@ -21,7 +21,7 @@ public class EfficioJNI {
   public final static native long new_EfficioFrame(int jarg1);
   public final static native void delete_EfficioFrame(long jarg1);
   public final static native long EfficioFrame_GetEvents(long jarg1, EfficioFrame jarg1_);
-  public final static native void EfficioFrame_AddEvent(long jarg1, EfficioFrame jarg1_, long jarg2);
+  public final static native void EfficioFrame_AddEvent(long jarg1, EfficioFrame jarg1_, long jarg2, Event jarg2_);
   public final static native void EfficioFrame_ID_set(long jarg1, EfficioFrame jarg1_, int jarg2);
   public final static native int EfficioFrame_ID_get(long jarg1, EfficioFrame jarg1_);
   public final static native long new_Engine();
@@ -39,13 +39,6 @@ public class EfficioJNI {
   public final static native void delete_DeviceConfiguration(long jarg1);
   public final static native void DeviceConfiguration_LeapConfiguration_set(long jarg1, DeviceConfiguration jarg1_, long jarg2, LeapConfiguration jarg2_);
   public final static native long DeviceConfiguration_LeapConfiguration_get(long jarg1, DeviceConfiguration jarg1_);
-  public final static native long SingleHandGestureDetector_Detect(long jarg1, SingleHandGestureDetector jarg1_, long jarg2);
-  public final static native void delete_SingleHandGestureDetector(long jarg1);
-  public final static native long PinchDetector_Detect(long jarg1, PinchDetector jarg1_, long jarg2);
-  public final static native void PinchDetector_Enabled_set(long jarg1, PinchDetector jarg1_, boolean jarg2);
-  public final static native boolean PinchDetector_Enabled_get(long jarg1, PinchDetector jarg1_);
-  public final static native long new_PinchDetector();
-  public final static native void delete_PinchDetector(long jarg1);
   public final static native void delete_Gesture(long jarg1);
   public final static native int Gesture_GetType(long jarg1, Gesture jarg1_);
   public final static native int Gesture_GetGestureState(long jarg1, Gesture jarg1_);
@@ -55,10 +48,6 @@ public class EfficioJNI {
   public final static native void delete_DiscreteGesture(long jarg1);
   public final static native int DiscreteGesture_GetType(long jarg1, DiscreteGesture jarg1_);
   public final static native int DiscreteGesture_GetGestureState(long jarg1, DiscreteGesture jarg1_);
-  public final static native long new_SingleHandGesture(int jarg1);
-  public final static native void delete_SingleHandGesture(long jarg1);
-  public final static native void SingleHandGesture_Side_set(long jarg1, SingleHandGesture jarg1_, int jarg2);
-  public final static native int SingleHandGesture_Side_get(long jarg1, SingleHandGesture jarg1_);
   public final static native long new_Pinch(int jarg1, int jarg2, int jarg3, long jarg4, Vector3 jarg4_);
   public final static native void delete_Pinch(long jarg1);
   public final static native void Pinch_Position_set(long jarg1, Pinch jarg1_, long jarg2, Vector3 jarg2_);
@@ -68,6 +57,8 @@ public class EfficioJNI {
   public final static native void Pinch_Finger2_set(long jarg1, Pinch jarg1_, int jarg2);
   public final static native int Pinch_Finger2_get(long jarg1, Pinch jarg1_);
   public final static native int Pinch_GetEventType(long jarg1, Pinch jarg1_);
+  public final static native void Pinch_Side_set(long jarg1, Pinch jarg1_, int jarg2);
+  public final static native int Pinch_Side_get(long jarg1, Pinch jarg1_);
   public final static native long new_EventCollection__SWIG_0();
   public final static native long new_EventCollection__SWIG_1(long jarg1);
   public final static native long EventCollection_size(long jarg1, EventCollection jarg1_);
@@ -90,9 +81,8 @@ public class EfficioJNI {
   public final static native long GestureCollection_get(long jarg1, GestureCollection jarg1_, int jarg2);
   public final static native void GestureCollection_set(long jarg1, GestureCollection jarg1_, int jarg2, long jarg3, Gesture jarg3_);
   public final static native void delete_GestureCollection(long jarg1);
-  public final static native long EfficioFrame_SWIGUpcast(long jarg1);
-  public final static native long PinchDetector_SWIGUpcast(long jarg1);
-  public final static native long Gesture_SWIGUpcast(long jarg1);
-  public final static native long DiscreteGesture_SWIGUpcast(long jarg1);
-  public final static native long Pinch_SWIGUpcast(long jarg1);
+  public final static native long EfficioFrame_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long Gesture_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long DiscreteGesture_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long Pinch_SWIGSmartPtrUpcast(long jarg1);
 }

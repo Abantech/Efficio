@@ -10,9 +10,11 @@ package Efficio.Java;
 
 public class EfficioFrame extends Frame {
   private transient long swigCPtr;
+  private boolean swigCMemOwnDerived;
 
   protected EfficioFrame(long cPtr, boolean cMemoryOwn) {
-    super(EfficioJNI.EfficioFrame_SWIGUpcast(cPtr), cMemoryOwn);
+    super(EfficioJNI.EfficioFrame_SWIGSmartPtrUpcast(cPtr), true);
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
@@ -26,8 +28,8 @@ public class EfficioFrame extends Frame {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwn) {
-        swigCMemOwn = false;
+      if (swigCMemOwnDerived) {
+        swigCMemOwnDerived = false;
         EfficioJNI.delete_EfficioFrame(swigCPtr);
       }
       swigCPtr = 0;
@@ -43,8 +45,8 @@ public class EfficioFrame extends Frame {
     return new EventCollection(EfficioJNI.EfficioFrame_GetEvents(swigCPtr, this), true);
   }
 
-  public void AddEvent(SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t eventPtr) {
-    EfficioJNI.EfficioFrame_AddEvent(swigCPtr, this, SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t.getCPtr(eventPtr));
+  public void AddEvent(Event eventPtr) {
+    EfficioJNI.EfficioFrame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
   }
 
   public void setID(int value) {

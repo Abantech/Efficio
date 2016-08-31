@@ -8,11 +8,13 @@
 
 package Efficio.Java;
 
-public class Pinch extends SingleHandGesture {
+public class Pinch extends DiscreteGesture {
   private transient long swigCPtr;
+  private boolean swigCMemOwnDerived;
 
   protected Pinch(long cPtr, boolean cMemoryOwn) {
-    super(EfficioJNI.Pinch_SWIGUpcast(cPtr), cMemoryOwn);
+    super(EfficioJNI.Pinch_SWIGSmartPtrUpcast(cPtr), true);
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
@@ -26,8 +28,8 @@ public class Pinch extends SingleHandGesture {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwn) {
-        swigCMemOwn = false;
+      if (swigCMemOwnDerived) {
+        swigCMemOwnDerived = false;
         EfficioJNI.delete_Pinch(swigCPtr);
       }
       swigCPtr = 0;
@@ -66,6 +68,14 @@ public class Pinch extends SingleHandGesture {
 
   public EventType GetEventType() {
     return EventType.swigToEnum(EfficioJNI.Pinch_GetEventType(swigCPtr, this));
+  }
+
+  public void setSide(BodySide value) {
+    EfficioJNI.Pinch_Side_set(swigCPtr, this, value.swigValue());
+  }
+
+  public BodySide getSide() {
+    return BodySide.swigToEnum(EfficioJNI.Pinch_Side_get(swigCPtr, this));
   }
 
 }

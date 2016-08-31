@@ -8,6 +8,8 @@
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
+#else
+#define DLLEXPORT __declspec(dllimport)
 #endif
 
 extern "C" {
@@ -24,11 +26,11 @@ extern "C" {
 
 			/// Gets the current {@link Efficio::EfficioFrame frame} from the runtime.
 			/// @return the current frame.
-			Efficio::EfficioFrame* GetFrame();
+			std::shared_ptr<Efficio::EfficioFrame> GetFrame();
 
 			/// Gets the historical {@link Efficio::EfficioFrame frame} from the runtime.
 			/// @return the current frame.
-			Efficio::EfficioFrame* GetFrame(int count);
+			std::shared_ptr<Efficio::EfficioFrame> GetFrame(int count);
 
 			/// The device configuration for Efficio.
 			Efficio::Configuration::DeviceConfiguration DeviceConfiguration;
@@ -38,7 +40,6 @@ extern "C" {
 			Leap::Controller* controller;
 			HistoricalFrameCollection historicalFrames;
 			int frameID;
-			std::vector<std::shared_ptr<Efficio::Events::Event>> lastFrameEvents;
 		};
 	}
 }

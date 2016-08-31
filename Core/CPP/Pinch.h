@@ -19,7 +19,7 @@ namespace Efficio
 		{
 			namespace Hands
 			{
-				extern class DLLEXPORT Pinch : public SingleHandGesture, public DiscreteGesture
+				extern class DLLEXPORT Pinch : public DiscreteGesture
 				{
 				public:
 					Pinch(Body::BodySide side, Body::Finger finger1, Body::Finger finger2, Vector3 position);
@@ -28,6 +28,7 @@ namespace Efficio
 					Body::Finger Finger1;
 					Body::Finger Finger2;
 					Efficio::Events::EventType GetEventType();
+					Body::BodySide Side;
 				};
 			}
 		}

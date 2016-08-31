@@ -10,7 +10,7 @@ package Efficio.Java;
 
 public class Frame {
   private transient long swigCPtr;
-  protected transient boolean swigCMemOwn;
+  private transient boolean swigCMemOwn;
 
   protected Frame(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;

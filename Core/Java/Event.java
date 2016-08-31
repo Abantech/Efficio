@@ -10,7 +10,7 @@ package Efficio.Java;
 
 public class Event {
   private transient long swigCPtr;
-  protected transient boolean swigCMemOwn;
+  private transient boolean swigCMemOwn;
 
   protected Event(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;

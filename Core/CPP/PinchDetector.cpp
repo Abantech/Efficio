@@ -22,9 +22,13 @@ namespace Efficio
 								if (hand.fingers()[i].stabilizedTipPosition().distanceTo(hand.fingers()[j].stabilizedTipPosition()) < 25)
 								{
 									Body::BodySide side = hand.isLeft() ? Body::BodySide::Left : Body::BodySide::Right;
-									Efficio::Vector3 position(hand.fingers()[i].stabilizedTipPosition().x, hand.fingers()[i].stabilizedTipPosition().y, hand.fingers()[i].stabilizedTipPosition().z);
-									Efficio::InputRecognition::Human::Hands::Pinch pinch(side, FingerNames[i], FingerNames[j], position);
-									gestures.push_back(std::make_shared<Efficio::InputRecognition::Human::Hands::Pinch>(pinch));
+									auto tipPos = hand.fingers()[i].stabilizedTipPosition();
+									float x = tipPos.x;
+									float y = tipPos.y;
+									float z = tipPos.z;
+									Efficio::Vector3 position(x, y, z);
+									auto pinch = new Efficio::InputRecognition::Human::Hands::Pinch(side, FingerNames[i], FingerNames[j], position);
+									gestures.push_back(std::shared_ptr<Efficio::InputRecognition::Human::Hands::Pinch>(pinch));
 								}
 							}
 						}

@@ -12,8 +12,10 @@ namespace Efficio.Net {
 
 public class EfficioFrame : Frame {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  private bool swigCMemOwnDerived;
 
-  internal EfficioFrame(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.EfficioFrame_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal EfficioFrame(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.EfficioFrame_SWIGSmartPtrUpcast(cPtr), true) {
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -28,8 +30,8 @@ public class EfficioFrame : Frame {
   public override void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
+        if (swigCMemOwnDerived) {
+          swigCMemOwnDerived = false;
           EfficioPINVOKE.delete_EfficioFrame(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
@@ -44,20 +46,23 @@ public class EfficioFrame : Frame {
 
   public EventCollection GetEvents() {
     EventCollection ret = new EventCollection(EfficioPINVOKE.EfficioFrame_GetEvents(swigCPtr), true);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void AddEvent(SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t eventPtr) {
-    EfficioPINVOKE.EfficioFrame_AddEvent(swigCPtr, SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t.getCPtr(eventPtr));
+  public void AddEvent(Event eventPtr) {
+    EfficioPINVOKE.EfficioFrame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int ID {
     set {
       EfficioPINVOKE.EfficioFrame_ID_set(swigCPtr, value);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       int ret = EfficioPINVOKE.EfficioFrame_ID_get(swigCPtr);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }

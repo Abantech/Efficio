@@ -113,9 +113,6 @@
     <ClInclude Include="ContinuousGesture.h">
       <Filter>Header Files\IRP</Filter>
     </ClInclude>
-    <ClInclude Include="SingleHandGesture.h">
-      <Filter>Header Files\IRP\Human\Hands</Filter>
-    </ClInclude>
     <ClInclude Include="Pinch.h">
       <Filter>Header Files\IRP\Human\Hands</Filter>
     </ClInclude>

@@ -49,13 +49,13 @@ public class Engine : global::System.IDisposable {
 
   public EfficioFrame GetFrame() {
     global::System.IntPtr cPtr = EfficioPINVOKE.Engine_GetFrame__SWIG_0(swigCPtr);
-    EfficioFrame ret = (cPtr == global::System.IntPtr.Zero) ? null : new EfficioFrame(cPtr, false);
+    EfficioFrame ret = (cPtr == global::System.IntPtr.Zero) ? null : new EfficioFrame(cPtr, true);
     return ret;
   }
 
   public EfficioFrame GetFrame(int count) {
     global::System.IntPtr cPtr = EfficioPINVOKE.Engine_GetFrame__SWIG_1(swigCPtr, count);
-    EfficioFrame ret = (cPtr == global::System.IntPtr.Zero) ? null : new EfficioFrame(cPtr, false);
+    EfficioFrame ret = (cPtr == global::System.IntPtr.Zero) ? null : new EfficioFrame(cPtr, true);
     return ret;
   }
 

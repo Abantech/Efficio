@@ -218,7 +218,6 @@ EXIT 0</Command>
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="Pinch.h" />
     <ClInclude Include="PinchDetector.h" />
-    <ClInclude Include="SingleHandGesture.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>

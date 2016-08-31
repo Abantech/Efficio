@@ -11,14 +11,20 @@
 	#include "Gesture.h"
 	#include "DiscreteGesture.h"
 	#include "Pinch.h"
-    #include "SingleHandGestureDetector.h"
-    #include "PinchDetector.h"
  %}
 
-  %include <windows.i>
+ %include <windows.i>
  %include <std_shared_ptr.i>
  %include <std_string.i>
  %include <std_vector.i>
+
+ %shared_ptr(Efficio::Frame);
+ %shared_ptr(Efficio::EfficioFrame);
+
+ %shared_ptr(Efficio::Events::Event);
+ %shared_ptr(Efficio::InputRecognition::Gesture);
+ %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
+ %shared_ptr(Efficio::InputRecognition::Human::Hands::Pinch);
 
  /* Parse the header file to generate wrappers */
  %include "Vector3.h"
@@ -30,17 +36,9 @@
  %include "Engine.h"
  %include "LeapConfiguration.h"
  %include "DeviceConfiguration.h"
- %include "SingleHandGestureDetector.h"
- %include "PinchDetector.h"
  %include "Gesture.h"
  %include "DiscreteGesture.h"
- %include "SingleHandGesture.h"
  %include "Pinch.h"
-
- %shared_ptr(Efficio::Events::Event);
- %shared_ptr(Efficio::InputRecognition::Gesture);
- %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
- %shared_ptr(Efficio::InputRecognition::Human::Hand::Pinch);
  
  %template(EventCollection) std::vector<std::shared_ptr<Efficio::Events::Event>>;
  %template(GestureCollection) std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>>;

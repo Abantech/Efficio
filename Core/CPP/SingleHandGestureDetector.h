@@ -8,6 +8,8 @@
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
+#else
+#define DLLEXPORT __declspec(dllimport)
 #endif
 
 namespace Efficio {
@@ -21,7 +23,14 @@ namespace Efficio {
 				public:
 					virtual std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>> Detect(Leap::Hand hand) = 0;
 				protected:
-					std::array<Body::Finger, 5> FingerNames = { Body::Finger::Thumb, Body::Finger::Index, Body::Finger::Middle, Body::Finger::Ring, Body::Finger::Pinky };
+					std::array<Body::Finger, 5> FingerNames = 
+					{ 
+						Body::Finger::Thumb,
+						Body::Finger::Index,
+						Body::Finger::Middle, 
+						Body::Finger::Ring,
+						Body::Finger::Pinky
+					};
 				};
 			}
 		}

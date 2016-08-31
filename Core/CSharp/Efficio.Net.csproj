@@ -103,12 +103,8 @@
     <Compile Include="GestureType.cs" />
     <Compile Include="LeapConfiguration.cs" />
     <Compile Include="Pinch.cs" />
-    <Compile Include="PinchDetector.cs" />
-    <Compile Include="SingleHandGesture.cs" />
-    <Compile Include="SingleHandGestureDetector.cs" />
     <Compile Include="SWIGHelper.cs" />
     <Compile Include="SWIGTYPE_p_Leap__Hand.cs" />
-    <Compile Include="SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t.cs" />
     <Compile Include="SWIGTYPE_p_std__time_t.cs" />
     <Compile Include="TestCSharpApp\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="TestCSharpApp\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />

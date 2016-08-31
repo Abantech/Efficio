@@ -45,12 +45,12 @@ public class Engine {
 
   public EfficioFrame GetFrame() {
     long cPtr = EfficioJNI.Engine_GetFrame__SWIG_0(swigCPtr, this);
-    return (cPtr == 0) ? null : new EfficioFrame(cPtr, false);
+    return (cPtr == 0) ? null : new EfficioFrame(cPtr, true);
   }
 
   public EfficioFrame GetFrame(int count) {
     long cPtr = EfficioJNI.Engine_GetFrame__SWIG_1(swigCPtr, this, count);
-    return (cPtr == 0) ? null : new EfficioFrame(cPtr, false);
+    return (cPtr == 0) ? null : new EfficioFrame(cPtr, true);
   }
 
   public void setDeviceConfiguration(DeviceConfiguration value) {

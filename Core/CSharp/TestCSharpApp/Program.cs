@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Efficio.Net;
+using System;
 
 namespace TestCSharpApp
 {
@@ -6,8 +7,7 @@ namespace TestCSharpApp
     {
         static void Main(string[] args)
         {
-            var engine = new Efficio.Net.Engine();
-            int pinchFrames = 0;
+            var engine = new Engine();
             engine.DeviceConfiguration.LeapConfiguration.Enabled = true;
 
             engine.Start();
@@ -19,16 +19,9 @@ namespace TestCSharpApp
 
                 if (frame.GetEvents().Count > 0)
                 {
-                    pinchFrames++;
-                }
-
-                if (frame.ID == 50000)
-                {
-                    TimeSpan executionTime = DateTime.Now - startTime;
-
-                    double fps = 50000 / executionTime.TotalSeconds;
-                    int totalPinchFrames = pinchFrames;
-                    int success = 1;
+                    var ev = SWIGHelper.CastTo<Pinch>(frame.GetEvents()[0], false);
+                    
+                    int i = 0;
                 }
             }
         }
