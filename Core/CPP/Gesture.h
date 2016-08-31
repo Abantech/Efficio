@@ -13,7 +13,7 @@ namespace Efficio {
 	namespace InputRecognition
 	{
 		/// Base class for all gestures that may occur within the Efficio system.
-		extern class DLLEXPORT Gesture : public Event
+		extern class DLLEXPORT Gesture : public Efficio::Events::Event
 		{
 		public:
 			Gesture();
@@ -31,10 +31,7 @@ namespace Efficio {
 			/// Getst the length of the gesture.
 			const std::time_t GetGestureDuration();
 
-			virtual void Eh() = 0;
-		protected:
-			void Detected();
-
+			virtual Efficio::Events::EventType GetEventType() = 0;
 		private:
 			std::time_t startTime;
 		};

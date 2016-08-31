@@ -90,7 +90,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_efficio_1_1_input_recognition_1_1_gesture-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Efficio::InputRecognition::Gesture Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -107,10 +106,10 @@ Inheritance diagram for Efficio::InputRecognition::Gesture:</div>
  <div class="center">
   <img src="class_efficio_1_1_input_recognition_1_1_gesture.png" usemap="#Efficio::InputRecognition::Gesture_map" alt=""/>
   <map id="Efficio::InputRecognition::Gesture_map" name="Efficio::InputRecognition::Gesture_map">
-<area href="class_efficio_1_1_event.html" title="The abstract class for all events within the Efficio system. Events are raised when anything notable ..." alt="Efficio::Event" shape="rect" coords="0,0,414,24"/>
-<area href="class_efficio_1_1_input_recognition_1_1_discrete_gesture.html" title="Discrete gestures are gestures that are always in a completed state. " alt="Efficio::InputRecognition::DiscreteGesture" shape="rect" coords="0,112,414,136"/>
-<area href="class_efficio_1_1_input_recognition_1_1_human_1_1_hand_1_1_pinch.html" title="A gesture that occurs when two finger tips are touching. " alt="Efficio::InputRecognition::Human::Hand::Pinch" shape="rect" coords="0,168,414,192"/>
-<area href="class_efficio_1_1_input_recognition_1_1_human_1_1_hand_1_1_right_hand_thumb_and_index_pinch.html" alt="Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch" shape="rect" coords="0,224,414,248"/>
+<area href="class_efficio_1_1_events_1_1_event.html" title="The abstract class for all events within the Efficio system. Events are raised when anything notable ..." alt="Efficio::Events::Event" shape="rect" coords="141,0,413,24"/>
+<area href="class_efficio_1_1_input_recognition_1_1_continuous_gesture.html" title="Continuous gestures are gestures that are done over time. " alt="Efficio::InputRecognition::ContinuousGesture" shape="rect" coords="0,112,272,136"/>
+<area href="class_efficio_1_1_input_recognition_1_1_discrete_gesture.html" title="Discrete gestures are gestures that are always in a completed state. " alt="Efficio::InputRecognition::DiscreteGesture" shape="rect" coords="282,112,554,136"/>
+<area href="class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_pinch.html" alt="Efficio::InputRecognition::Human::Hands::Pinch" shape="rect" coords="282,168,554,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -132,16 +131,9 @@ const std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 const std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_efficio_1_1_input_recognition_1_1_gesture.html#a018fa00ce8db008e93fb988f649de9a6">GetGestureDuration</a> ()</td></tr>
 <tr class="memdesc:a018fa00ce8db008e93fb988f649de9a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getst the length of the gesture. <br /></td></tr>
 <tr class="separator:a018fa00ce8db008e93fb988f649de9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad77d7933925b1a15ee5fbef5e71ddd49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad77d7933925b1a15ee5fbef5e71ddd49"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_efficio_1_1_input_recognition_1_1_gesture.html#ad77d7933925b1a15ee5fbef5e71ddd49">Eh</a> ()=0</td></tr>
-<tr class="memdesc:ad77d7933925b1a15ee5fbef5e71ddd49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Workaround for abstract class casting for now. <br /></td></tr>
-<tr class="separator:ad77d7933925b1a15ee5fbef5e71ddd49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:abc8a2efea87a2d9f950f6912e78d6910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc8a2efea87a2d9f950f6912e78d6910"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Detected</b> ()</td></tr>
-<tr class="separator:abc8a2efea87a2d9f950f6912e78d6910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2867983230c4bc6382e7b8e7e61215b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2867983230c4bc6382e7b8e7e61215b6"></a>
+virtual Efficio::Events::EventType&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventType</b> ()=0</td></tr>
+<tr class="separator:a2867983230c4bc6382e7b8e7e61215b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for all gestures that may occur within the Efficio system. </p>

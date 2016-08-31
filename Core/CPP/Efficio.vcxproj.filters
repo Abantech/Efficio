@@ -60,10 +60,19 @@
     <ClCompile Include="DiscreteGesture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ContinuousGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleHandGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Pinch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RightHandThumbAndIndexPinch.cpp">
+    <ClCompile Include="PinchDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoricalFrameCollection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RuntimeCSharp_wrap.cxx">
@@ -101,14 +110,26 @@
     <ClInclude Include="DiscreteGesture.h">
       <Filter>Header Files\IRP</Filter>
     </ClInclude>
+    <ClInclude Include="ContinuousGesture.h">
+      <Filter>Header Files\IRP</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleHandGesture.h">
+      <Filter>Header Files\IRP\Human\Hands</Filter>
+    </ClInclude>
     <ClInclude Include="Pinch.h">
       <Filter>Header Files\IRP\Human\Hands</Filter>
     </ClInclude>
-    <ClInclude Include="ActiveGestureDictionary.h">
-      <Filter>Header Files\IRP</Filter>
-    </ClInclude>
-    <ClInclude Include="RightHandThumbAndIndexPinch.h">
+    <ClInclude Include="PinchDetector.h">
       <Filter>Header Files\IRP\Human\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleHandGestureDetector.h">
+      <Filter>Header Files\IRP\Human\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="HistoricalFrameCollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventType.h">
+      <Filter>Header Files\Events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

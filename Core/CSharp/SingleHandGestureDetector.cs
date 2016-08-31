@@ -10,44 +10,40 @@
 
 namespace Efficio.Net {
 
-public class RightHandThumbAndIndexPinch : Pinch {
+public class SingleHandGestureDetector : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  private bool swigCMemOwnDerived;
+  protected bool swigCMemOwn;
 
-  internal RightHandThumbAndIndexPinch(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.RightHandThumbAndIndexPinch_SWIGSmartPtrUpcast(cPtr), true) {
-    swigCMemOwnDerived = cMemoryOwn;
+  internal SingleHandGestureDetector(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(RightHandThumbAndIndexPinch obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SingleHandGestureDetector obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~RightHandThumbAndIndexPinch() {
+  ~SingleHandGestureDetector() {
     Dispose();
   }
 
-  public override void Dispose() {
+  public virtual void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwnDerived) {
-          swigCMemOwnDerived = false;
-          EfficioPINVOKE.delete_RightHandThumbAndIndexPinch(swigCPtr);
+        if (swigCMemOwn) {
+          swigCMemOwn = false;
+          EfficioPINVOKE.delete_SingleHandGestureDetector(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
       global::System.GC.SuppressFinalize(this);
-      base.Dispose();
     }
   }
 
-  public RightHandThumbAndIndexPinch(Vector3 position) : this(EfficioPINVOKE.new_RightHandThumbAndIndexPinch(Vector3.getCPtr(position)), true) {
+  public virtual GestureCollection Detect(SWIGTYPE_p_Leap__Hand hand) {
+    GestureCollection ret = new GestureCollection(EfficioPINVOKE.SingleHandGestureDetector_Detect(swigCPtr, SWIGTYPE_p_Leap__Hand.getCPtr(hand)), true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public override void Eh() {
-    EfficioPINVOKE.RightHandThumbAndIndexPinch_Eh(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
 }

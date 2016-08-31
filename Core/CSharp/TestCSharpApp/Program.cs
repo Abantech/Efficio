@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestCSharpApp
 {
@@ -11,21 +7,28 @@ namespace TestCSharpApp
         static void Main(string[] args)
         {
             var engine = new Efficio.Net.Engine();
+            int pinchFrames = 0;
             engine.DeviceConfiguration.LeapConfiguration.Enabled = true;
 
             engine.Start();
+            DateTime startTime = DateTime.Now;
 
             while (true)
             {
                 var frame = engine.GetFrame();
 
-                foreach (var ev in frame.GetEvents())
+                if (frame.GetEvents().Count > 0)
                 {
-                    if (SWIGHelper.CastTo<Efficio.Net.Pinch>(ev, false) != null)
-                    {
-                        var pinch = SWIGHelper.CastTo<Efficio.Net.Pinch>(ev, false);
-                        int i = 0;
-                    }
+                    pinchFrames++;
+                }
+
+                if (frame.ID == 50000)
+                {
+                    TimeSpan executionTime = DateTime.Now - startTime;
+
+                    double fps = 50000 / executionTime.TotalSeconds;
+                    int totalPinchFrames = pinchFrames;
+                    int success = 1;
                 }
             }
         }

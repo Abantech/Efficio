@@ -44,7 +44,13 @@ public class Engine {
   }
 
   public EfficioFrame GetFrame() {
-    return new EfficioFrame(EfficioJNI.Engine_GetFrame(swigCPtr, this), true);
+    long cPtr = EfficioJNI.Engine_GetFrame__SWIG_0(swigCPtr, this);
+    return (cPtr == 0) ? null : new EfficioFrame(cPtr, false);
+  }
+
+  public EfficioFrame GetFrame(int count) {
+    long cPtr = EfficioJNI.Engine_GetFrame__SWIG_1(swigCPtr, this, count);
+    return (cPtr == 0) ? null : new EfficioFrame(cPtr, false);
   }
 
   public void setDeviceConfiguration(DeviceConfiguration value) {

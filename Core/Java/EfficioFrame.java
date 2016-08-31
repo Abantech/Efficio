@@ -35,16 +35,24 @@ public class EfficioFrame extends Frame {
     super.delete();
   }
 
-  public EfficioFrame() {
-    this(EfficioJNI.new_EfficioFrame(), true);
+  public EfficioFrame(int ID) {
+    this(EfficioJNI.new_EfficioFrame(ID), true);
   }
 
   public EventCollection GetEvents() {
     return new EventCollection(EfficioJNI.EfficioFrame_GetEvents(swigCPtr, this), true);
   }
 
-  public void AddEvent(Event eventPtr) {
-    EfficioJNI.EfficioFrame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
+  public void AddEvent(SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t eventPtr) {
+    EfficioJNI.EfficioFrame_AddEvent(swigCPtr, this, SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t.getCPtr(eventPtr));
+  }
+
+  public void setID(int value) {
+    EfficioJNI.EfficioFrame_ID_set(swigCPtr, this, value);
+  }
+
+  public int getID() {
+    return EfficioJNI.EfficioFrame_ID_get(swigCPtr, this);
   }
 
 }

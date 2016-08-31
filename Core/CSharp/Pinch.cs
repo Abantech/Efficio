@@ -10,12 +10,10 @@
 
 namespace Efficio.Net {
 
-public class Pinch : DiscreteGesture {
+public class Pinch : SingleHandGesture {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  private bool swigCMemOwnDerived;
 
-  internal Pinch(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.Pinch_SWIGSmartPtrUpcast(cPtr), true) {
-    swigCMemOwnDerived = cMemoryOwn;
+  internal Pinch(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.Pinch_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -30,8 +28,8 @@ public class Pinch : DiscreteGesture {
   public override void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwnDerived) {
-          swigCMemOwnDerived = false;
+        if (swigCMemOwn) {
+          swigCMemOwn = false;
           EfficioPINVOKE.delete_Pinch(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
@@ -41,18 +39,17 @@ public class Pinch : DiscreteGesture {
     }
   }
 
-  public Pinch(BodySide side, Vector3 position) : this(EfficioPINVOKE.new_Pinch((int)side, Vector3.getCPtr(position)), true) {
+  public Pinch(BodySide side, Finger finger1, Finger finger2, Vector3 position) : this(EfficioPINVOKE.new_Pinch((int)side, (int)finger1, (int)finger2, Vector3.getCPtr(position)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public BodySide Side {
+  public Vector3 Position {
     set {
-      EfficioPINVOKE.Pinch_Side_set(swigCPtr, (int)value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      EfficioPINVOKE.Pinch_Position_set(swigCPtr, Vector3.getCPtr(value));
     } 
     get {
-      BodySide ret = (BodySide)EfficioPINVOKE.Pinch_Side_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      global::System.IntPtr cPtr = EfficioPINVOKE.Pinch_Position_get(swigCPtr);
+      Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);
       return ret;
     } 
   }
@@ -60,11 +57,9 @@ public class Pinch : DiscreteGesture {
   public Finger Finger1 {
     set {
       EfficioPINVOKE.Pinch_Finger1_set(swigCPtr, (int)value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       Finger ret = (Finger)EfficioPINVOKE.Pinch_Finger1_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
@@ -72,49 +67,16 @@ public class Pinch : DiscreteGesture {
   public Finger Finger2 {
     set {
       EfficioPINVOKE.Pinch_Finger2_set(swigCPtr, (int)value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       Finger ret = (Finger)EfficioPINVOKE.Pinch_Finger2_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public string ID {
-    set {
-      EfficioPINVOKE.Pinch_ID_set(swigCPtr, value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      string ret = EfficioPINVOKE.Pinch_ID_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
-  public Vector3 Position {
-    set {
-      EfficioPINVOKE.Pinch_Position_set(swigCPtr, Vector3.getCPtr(value));
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Pinch_Position_get(swigCPtr);
-      Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
-  public static bool Detect(SWIGTYPE_p_Leap__Hand hand) {
-    bool ret = EfficioPINVOKE.Pinch_Detect(SWIGTYPE_p_Leap__Hand.getCPtr(hand));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public virtual EventType GetEventType() {
+    EventType ret = (EventType)EfficioPINVOKE.Pinch_GetEventType(swigCPtr);
     return ret;
-  }
-
-  public override void Eh() {
-    EfficioPINVOKE.Pinch_Eh(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

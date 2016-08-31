@@ -1,14 +1,15 @@
 #include "Event.h"
-#include "Pinch.h"
 
 namespace Efficio {
-
-	Event::Event()
+	namespace Events
 	{
-	}
+		Event::Event()
+		{
+		}
 
 
-	Event::~Event()
-	{
+		Event::~Event()
+		{
+		}
 	}
 }

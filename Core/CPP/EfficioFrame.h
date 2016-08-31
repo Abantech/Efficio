@@ -14,11 +14,12 @@ namespace Efficio
 	extern class DLLEXPORT EfficioFrame : public Frame
 	{
 	public:
-		EfficioFrame();
+		EfficioFrame(int ID);
 		~EfficioFrame();
-		std::vector<std::shared_ptr<Efficio::Event>> GetEvents();
-		void AddEvent(Efficio::Event* eventPtr);
+		std::vector<std::shared_ptr<Efficio::Events::Event>> GetEvents();
+		void AddEvent(std::shared_ptr<Efficio::Events::Event> eventPtr);
+		int ID;
 	private:
-		std::vector<std::shared_ptr<Efficio::Event>> events;
+		std::vector<std::shared_ptr<Efficio::Events::Event>> events;
 	};
 }

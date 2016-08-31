@@ -10,7 +10,7 @@ package Efficio.Java;
 
 public class Event {
   private transient long swigCPtr;
-  private transient boolean swigCMemOwn;
+  protected transient boolean swigCMemOwn;
 
   protected Event(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
@@ -35,8 +35,8 @@ public class Event {
     }
   }
 
-  public void Eh() {
-    EfficioJNI.Event_Eh(swigCPtr, this);
+  public EventType GetEventType() {
+    return EventType.swigToEnum(EfficioJNI.Event_GetEventType(swigCPtr, this));
   }
 
 }

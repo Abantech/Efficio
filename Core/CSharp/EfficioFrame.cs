@@ -39,7 +39,7 @@ public class EfficioFrame : Frame {
     }
   }
 
-  public EfficioFrame() : this(EfficioPINVOKE.new_EfficioFrame(), true) {
+  public EfficioFrame(int ID) : this(EfficioPINVOKE.new_EfficioFrame(ID), true) {
   }
 
   public EventCollection GetEvents() {
@@ -47,9 +47,19 @@ public class EfficioFrame : Frame {
     return ret;
   }
 
-  public void AddEvent(Event eventPtr) {
-    EfficioPINVOKE.EfficioFrame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
+  public void AddEvent(SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t eventPtr) {
+    EfficioPINVOKE.EfficioFrame_AddEvent(swigCPtr, SWIGTYPE_p_std__shared_ptrT_Efficio__Events__Event_t.getCPtr(eventPtr));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public int ID {
+    set {
+      EfficioPINVOKE.EfficioFrame_ID_set(swigCPtr, value);
+    } 
+    get {
+      int ret = EfficioPINVOKE.EfficioFrame_ID_get(swigCPtr);
+      return ret;
+    } 
   }
 
 }

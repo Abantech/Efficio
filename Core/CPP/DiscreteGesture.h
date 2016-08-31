@@ -18,10 +18,6 @@ namespace Efficio {
 			~DiscreteGesture();
 			GestureType GetType() { return GestureType::Discrete; };
 			GestureState GetGestureState() { return GestureState::Completed; };
-
-			virtual void Eh() = 0;
-		private:
-
 		};
 	}
 }

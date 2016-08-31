@@ -20,10 +20,5 @@ namespace Efficio {
 		{
 			return difftime(time(NULL), startTime);
 		}
-
-		void Gesture::Detected()
-		{
-			startTime = time(NULL);
-		}
 	}
 }

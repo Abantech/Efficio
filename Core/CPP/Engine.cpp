@@ -2,10 +2,10 @@
 #include <iostream>
 #include "Enumerations.h"
 #include "Vector3.h"
-#include "RightHandThumbAndIndexPinch.h"
+#include "PinchDetector.h"
 
 namespace Efficio {
-	Engine::Engine() : started(false)
+	Engine::Engine() : started(false), frameID(1)
 	{
 	}
 
@@ -24,53 +24,64 @@ namespace Efficio {
 		started = true;
 	}
 
-	Efficio::EfficioFrame Engine::GetFrame()
+	Efficio::EfficioFrame* Engine::GetFrame()
 	{
+		Efficio::EfficioFrame* efficioFrame = new EfficioFrame(frameID++);
+
 		if (started)
 		{
-			Efficio::EfficioFrame efficioFrame;
-
 			if (controller != 0)
 			{
 				auto frame = controller->frame();
 
 				if (frame.isValid())
 				{
-					auto hands = frame.hands();
-
-					if (hands.count() > 0)
+					
+					if (frame.id() == controller->frame(1).id())
 					{
-						auto hand = hands.rightmost();
-
-						if (hand.fingers()[0].stabilizedTipPosition().distanceTo(hand.fingers()[1].stabilizedTipPosition()) < 25)
+						for (size_t i = 0; i < lastFrameEvents.size(); i++)
 						{
-							// Get Position
-							auto leapPos = hand.fingers()[0].stabilizedTipPosition();
-							auto ib = frame.interactionBox();
-							leapPos = ib.normalizePoint(leapPos);
-							Vector3 position(leapPos.x, leapPos.y, leapPos.z);
-
-							Efficio::InputRecognition::Human::Hand::Pinch* pinch;
-
-							if (hand.isRight())
-							{
-								pinch = new Efficio::InputRecognition::Human::Hand::RightHandThumbAndIndexPinch(position);
-							}
-							else
-							{
-								pinch = new Efficio::InputRecognition::Human::Hand::Pinch(Efficio::Body::BodySide::Left, position);
-							}
-
-							efficioFrame.AddEvent(pinch);
+							efficioFrame->AddEvent(lastFrameEvents[i]);
 						}
+					}
+					else {
 
-						return efficioFrame;
+						auto hands = frame.hands();
+
+						if (hands.count() > 0)
+						{
+							for (size_t i = 0; i < hands.count(); i++)
+							{
+								Efficio::InputRecognition::Human::Hands::PinchDetector detector;
+								detector.Enabled = true;
+								auto pinches = detector.Detect(hands[i]);
+
+								lastFrameEvents.clear();
+
+								for (size_t j = 0; j < pinches.size(); j++)
+								{
+									efficioFrame->AddEvent(pinches[j]);
+									lastFrameEvents.push_back(pinches[j]);
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 
-		Efficio::EfficioFrame frame;
-		return frame;
+		historicalFrames.AddFrame(std::shared_ptr<EfficioFrame>(efficioFrame));
+		return efficioFrame;
+	}
+	Efficio::EfficioFrame* Engine::GetFrame(int count)
+	{
+		auto tempFrame = historicalFrames.GetFrame(count);
+
+		if (tempFrame)
+		{
+			return historicalFrames.GetFrame(count).get();
+		}
+		
+		return NULL;
 	}
 }

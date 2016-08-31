@@ -1,48 +1,21 @@
 #include "Pinch.h"
-
-namespace Efficio
-{
+namespace Efficio {
 	namespace InputRecognition
 	{
 		namespace Human
 		{
-			namespace Hand {
-
-				Pinch::Pinch(Efficio::Body::BodySide side, Vector3 position) : Side(side), Position(position.X(), position.Y(), position.Z())
+			namespace Hands 
+			{
+				Pinch::Pinch(Body::BodySide side, Body::Finger finger1, Body::Finger finger2, Vector3 position) : Finger1(finger1), Finger2(finger2), Position(position), SingleHandGesture(side)
 				{
 				}
-
 				Pinch::~Pinch()
 				{
 				}
-
-				bool Pinch::Detect(Leap::Hand hand)
+				Efficio::Events::EventType Pinch::GetEventType()
 				{
-					if (hand.fingers()[0].stabilizedTipPosition().distanceTo(hand.fingers()[1].stabilizedTipPosition()) < 25)
-					{
-						Body::BodySide side = hand.isLeft() ? Body::BodySide::Left : Body::BodySide::Right;
-						auto leapPos = hand.fingers()[0].stabilizedTipPosition();
-
-				/*		auto ib = frame.interactionBox();
-						leapPos = ib.normalizePoint(leapPos);*/
-
-						Vector3 position(leapPos.x, leapPos.y, leapPos.z);
-						Pinch* pinch = new Pinch(side, position);
-
-						pinch->Detected();
-
-						return true;
-					}
-
-					return false;
+					return Efficio::Events::EventType::Pinch;
 				}
-				/*bool Pinch::operator==(const Pinch & rhs)
-				{
-					return (this->Finger1 == rhs.Finger1) &&
-						(this->Finger2 == rhs.Finger2) &&
-						(this->ID == rhs.ID) &&
-						(this->Side == rhs.Side);
-				}*/
 			}
 		}
 	}

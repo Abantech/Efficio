@@ -12,10 +12,8 @@ namespace Efficio.Net {
 
 public class DiscreteGesture : Gesture {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  private bool swigCMemOwnDerived;
 
-  internal DiscreteGesture(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.DiscreteGesture_SWIGSmartPtrUpcast(cPtr), true) {
-    swigCMemOwnDerived = cMemoryOwn;
+  internal DiscreteGesture(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.DiscreteGesture_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -30,8 +28,8 @@ public class DiscreteGesture : Gesture {
   public override void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwnDerived) {
-          swigCMemOwnDerived = false;
+        if (swigCMemOwn) {
+          swigCMemOwn = false;
           EfficioPINVOKE.delete_DiscreteGesture(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
@@ -43,19 +41,12 @@ public class DiscreteGesture : Gesture {
 
   public override GestureType GetType() {
     GestureType ret = (GestureType)EfficioPINVOKE.DiscreteGesture_GetType(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public override GestureState GetGestureState() {
     GestureState ret = (GestureState)EfficioPINVOKE.DiscreteGesture_GetGestureState(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
-  }
-
-  public override void Eh() {
-    EfficioPINVOKE.DiscreteGesture_Eh(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

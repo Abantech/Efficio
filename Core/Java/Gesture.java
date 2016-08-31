@@ -10,11 +10,9 @@ package Efficio.Java;
 
 public class Gesture extends Event {
   private transient long swigCPtr;
-  private boolean swigCMemOwnDerived;
 
   protected Gesture(long cPtr, boolean cMemoryOwn) {
-    super(EfficioJNI.Gesture_SWIGSmartPtrUpcast(cPtr), true);
-    swigCMemOwnDerived = cMemoryOwn;
+    super(EfficioJNI.Gesture_SWIGUpcast(cPtr), cMemoryOwn);
     swigCPtr = cPtr;
   }
 
@@ -28,8 +26,8 @@ public class Gesture extends Event {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwnDerived) {
-        swigCMemOwnDerived = false;
+      if (swigCMemOwn) {
+        swigCMemOwn = false;
         EfficioJNI.delete_Gesture(swigCPtr);
       }
       swigCPtr = 0;
@@ -53,8 +51,8 @@ public class Gesture extends Event {
     return new SWIGTYPE_p_std__time_t(EfficioJNI.Gesture_GetGestureDuration(swigCPtr, this), true);
   }
 
-  public void Eh() {
-    EfficioJNI.Gesture_Eh(swigCPtr, this);
+  public EventType GetEventType() {
+    return EventType.swigToEnum(EfficioJNI.Gesture_GetEventType(swigCPtr, this));
   }
 
 }

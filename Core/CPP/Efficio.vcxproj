@@ -186,6 +186,7 @@ EXIT 0</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ContinuousGesture.cpp" />
     <ClCompile Include="DeviceConfiguration.cpp" />
     <ClCompile Include="DiscreteGesture.cpp" />
     <ClCompile Include="EfficioFrame.cpp" />
@@ -193,26 +194,32 @@ EXIT 0</Command>
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Gesture.cpp" />
+    <ClCompile Include="HistoricalFrameCollection.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
-    <ClCompile Include="RightHandThumbAndIndexPinch.cpp" />
+    <ClCompile Include="PinchDetector.cpp" />
     <ClCompile Include="RuntimeCSharp_wrap.cxx" />
+    <ClCompile Include="SingleHandGesture.cpp" />
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ActiveGestureDictionary.h" />
+    <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="DeviceConfiguration.h" />
     <ClInclude Include="DiscreteGesture.h" />
     <ClInclude Include="EfficioFrame.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Enumerations.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="EventType.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
+    <ClInclude Include="HistoricalFrameCollection.h" />
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="Pinch.h" />
-    <ClInclude Include="RightHandThumbAndIndexPinch.h" />
+    <ClInclude Include="PinchDetector.h" />
+    <ClInclude Include="SingleHandGesture.h" />
+    <ClInclude Include="SingleHandGestureDetector.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>

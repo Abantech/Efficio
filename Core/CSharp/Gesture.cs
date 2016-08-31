@@ -12,10 +12,8 @@ namespace Efficio.Net {
 
 public class Gesture : Event {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  private bool swigCMemOwnDerived;
 
-  internal Gesture(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.Gesture_SWIGSmartPtrUpcast(cPtr), true) {
-    swigCMemOwnDerived = cMemoryOwn;
+  internal Gesture(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.Gesture_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -30,8 +28,8 @@ public class Gesture : Event {
   public override void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwnDerived) {
-          swigCMemOwnDerived = false;
+        if (swigCMemOwn) {
+          swigCMemOwn = false;
           EfficioPINVOKE.delete_Gesture(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
@@ -43,31 +41,27 @@ public class Gesture : Event {
 
   public virtual GestureType GetType() {
     GestureType ret = (GestureType)EfficioPINVOKE.Gesture_GetType(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public virtual GestureState GetGestureState() {
     GestureState ret = (GestureState)EfficioPINVOKE.Gesture_GetGestureState(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__time_t GetStartTime() {
     SWIGTYPE_p_std__time_t ret = new SWIGTYPE_p_std__time_t(EfficioPINVOKE.Gesture_GetStartTime(swigCPtr), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public SWIGTYPE_p_std__time_t GetGestureDuration() {
     SWIGTYPE_p_std__time_t ret = new SWIGTYPE_p_std__time_t(EfficioPINVOKE.Gesture_GetGestureDuration(swigCPtr), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public override void Eh() {
-    EfficioPINVOKE.Gesture_Eh(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public override EventType GetEventType() {
+    EventType ret = (EventType)EfficioPINVOKE.Gesture_GetEventType(swigCPtr);
+    return ret;
   }
 
 }

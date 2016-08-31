@@ -10,11 +10,9 @@ package Efficio.Java;
 
 public class DiscreteGesture extends Gesture {
   private transient long swigCPtr;
-  private boolean swigCMemOwnDerived;
 
   protected DiscreteGesture(long cPtr, boolean cMemoryOwn) {
-    super(EfficioJNI.DiscreteGesture_SWIGSmartPtrUpcast(cPtr), true);
-    swigCMemOwnDerived = cMemoryOwn;
+    super(EfficioJNI.DiscreteGesture_SWIGUpcast(cPtr), cMemoryOwn);
     swigCPtr = cPtr;
   }
 
@@ -28,8 +26,8 @@ public class DiscreteGesture extends Gesture {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwnDerived) {
-        swigCMemOwnDerived = false;
+      if (swigCMemOwn) {
+        swigCMemOwn = false;
         EfficioJNI.delete_DiscreteGesture(swigCPtr);
       }
       swigCPtr = 0;
@@ -43,10 +41,6 @@ public class DiscreteGesture extends Gesture {
 
   public GestureState GetGestureState() {
     return GestureState.swigToEnum(EfficioJNI.DiscreteGesture_GetGestureState(swigCPtr, this));
-  }
-
-  public void Eh() {
-    EfficioJNI.DiscreteGesture_Eh(swigCPtr, this);
   }
 
 }

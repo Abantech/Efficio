@@ -1,8 +1,7 @@
 #pragma once
 
-#include "Pinch.h"
+#include "Leap.h"
 #include "Enumerations.h"
-
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -10,21 +9,19 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-namespace Efficio
-{
+namespace Efficio {
 	namespace InputRecognition
 	{
 		namespace Human
 		{
-			namespace Hand {
-				class RightHandThumbAndIndexPinch : public Pinch
+			namespace Hands
+			{
+				extern class DLLEXPORT SingleHandGesture
 				{
 				public:
-					RightHandThumbAndIndexPinch(Vector3 position);
-					~RightHandThumbAndIndexPinch();
-					void Eh();
-				private:
-
+					SingleHandGesture(Body::BodySide side);
+					~SingleHandGesture();
+					Body::BodySide Side;
 				};
 			}
 		}

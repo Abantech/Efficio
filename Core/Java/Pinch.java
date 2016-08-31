@@ -8,13 +8,11 @@
 
 package Efficio.Java;
 
-public class Pinch extends DiscreteGesture {
+public class Pinch extends SingleHandGesture {
   private transient long swigCPtr;
-  private boolean swigCMemOwnDerived;
 
   protected Pinch(long cPtr, boolean cMemoryOwn) {
-    super(EfficioJNI.Pinch_SWIGSmartPtrUpcast(cPtr), true);
-    swigCMemOwnDerived = cMemoryOwn;
+    super(EfficioJNI.Pinch_SWIGUpcast(cPtr), cMemoryOwn);
     swigCPtr = cPtr;
   }
 
@@ -28,8 +26,8 @@ public class Pinch extends DiscreteGesture {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwnDerived) {
-        swigCMemOwnDerived = false;
+      if (swigCMemOwn) {
+        swigCMemOwn = false;
         EfficioJNI.delete_Pinch(swigCPtr);
       }
       swigCPtr = 0;
@@ -37,16 +35,17 @@ public class Pinch extends DiscreteGesture {
     super.delete();
   }
 
-  public Pinch(BodySide side, Vector3 position) {
-    this(EfficioJNI.new_Pinch(side.swigValue(), Vector3.getCPtr(position), position), true);
+  public Pinch(BodySide side, Finger finger1, Finger finger2, Vector3 position) {
+    this(EfficioJNI.new_Pinch(side.swigValue(), finger1.swigValue(), finger2.swigValue(), Vector3.getCPtr(position), position), true);
   }
 
-  public void setSide(BodySide value) {
-    EfficioJNI.Pinch_Side_set(swigCPtr, this, value.swigValue());
+  public void setPosition(Vector3 value) {
+    EfficioJNI.Pinch_Position_set(swigCPtr, this, Vector3.getCPtr(value), value);
   }
 
-  public BodySide getSide() {
-    return BodySide.swigToEnum(EfficioJNI.Pinch_Side_get(swigCPtr, this));
+  public Vector3 getPosition() {
+    long cPtr = EfficioJNI.Pinch_Position_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Vector3(cPtr, false);
   }
 
   public void setFinger1(Finger value) {
@@ -65,29 +64,8 @@ public class Pinch extends DiscreteGesture {
     return Finger.swigToEnum(EfficioJNI.Pinch_Finger2_get(swigCPtr, this));
   }
 
-  public void setID(String value) {
-    EfficioJNI.Pinch_ID_set(swigCPtr, this, value);
-  }
-
-  public String getID() {
-    return EfficioJNI.Pinch_ID_get(swigCPtr, this);
-  }
-
-  public void setPosition(Vector3 value) {
-    EfficioJNI.Pinch_Position_set(swigCPtr, this, Vector3.getCPtr(value), value);
-  }
-
-  public Vector3 getPosition() {
-    long cPtr = EfficioJNI.Pinch_Position_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new Vector3(cPtr, false);
-  }
-
-  public static boolean Detect(SWIGTYPE_p_Leap__Hand hand) {
-    return EfficioJNI.Pinch_Detect(SWIGTYPE_p_Leap__Hand.getCPtr(hand));
-  }
-
-  public void Eh() {
-    EfficioJNI.Pinch_Eh(swigCPtr, this);
+  public EventType GetEventType() {
+    return EventType.swigToEnum(EfficioJNI.Pinch_GetEventType(swigCPtr, this));
   }
 
 }
