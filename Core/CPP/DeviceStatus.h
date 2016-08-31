@@ -8,7 +8,7 @@
 
 namespace Efficio
 {
-	/// Object containing all processed and raw signals
+	/// The device statii
 	extern enum class DLLEXPORT DeviceStatus {
 		Unknown,
 		Disabled,

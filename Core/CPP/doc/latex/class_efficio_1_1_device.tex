@@ -1,5 +1,14 @@
 \hypertarget{class_efficio_1_1_device}{}\section{Efficio\+:\+:Device Class Reference}
 \label{class_efficio_1_1_device}\index{Efficio\+::\+Device@{Efficio\+::\+Device}}
+
+
+Any device which can feel data into Efficio.  
+
+
+
+
+{\ttfamily \#include $<$Device.\+h$>$}
+
 Inheritance diagram for Efficio\+:\+:Device\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,43 +21,46 @@ Inheritance diagram for Efficio\+:\+:Device\+:\begin{figure}[H]
 {\bfseries Device} (bool enabled=true)\hypertarget{class_efficio_1_1_device_a03b5d83501b593eced3d011954ca265f}{}\label{class_efficio_1_1_device_a03b5d83501b593eced3d011954ca265f}
 
 \item 
-bool {\bfseries Connected} ()\hypertarget{class_efficio_1_1_device_a51228fd0878a8514a28844a934a95625}{}\label{class_efficio_1_1_device_a51228fd0878a8514a28844a934a95625}
+bool \hyperlink{class_efficio_1_1_device_a51228fd0878a8514a28844a934a95625}{Connected} ()\hypertarget{class_efficio_1_1_device_a51228fd0878a8514a28844a934a95625}{}\label{class_efficio_1_1_device_a51228fd0878a8514a28844a934a95625}
 
-\item 
-virtual Efficio\+::\+Device\+Status {\bfseries Status} ()=0\hypertarget{class_efficio_1_1_device_a4fc83f754676de245976e1d1bb08b392}{}\label{class_efficio_1_1_device_a4fc83f754676de245976e1d1bb08b392}
+\begin{DoxyCompactList}\small\item\em A Boolean indicating whether or nbot the device is connected and ready to feed data into Efficio. \end{DoxyCompactList}\item 
+virtual Efficio\+::\+Device\+Status \hyperlink{class_efficio_1_1_device_a4fc83f754676de245976e1d1bb08b392}{Status} ()=0\hypertarget{class_efficio_1_1_device_a4fc83f754676de245976e1d1bb08b392}{}\label{class_efficio_1_1_device_a4fc83f754676de245976e1d1bb08b392}
 
-\item 
-virtual Efficio\+::\+Tracking\+Type {\bfseries Tracking\+Types} ()=0\hypertarget{class_efficio_1_1_device_ab655d0b6f140954de99fc4f187aca261}{}\label{class_efficio_1_1_device_ab655d0b6f140954de99fc4f187aca261}
+\begin{DoxyCompactList}\small\item\em The status of the device. \end{DoxyCompactList}\item 
+virtual Efficio\+::\+Tracking\+Type \hyperlink{class_efficio_1_1_device_ab655d0b6f140954de99fc4f187aca261}{Tracking\+Types} ()=0\hypertarget{class_efficio_1_1_device_ab655d0b6f140954de99fc4f187aca261}{}\label{class_efficio_1_1_device_ab655d0b6f140954de99fc4f187aca261}
 
-\item 
-virtual void {\bfseries Connect} ()=0\hypertarget{class_efficio_1_1_device_a852ea0bc779e5ec543b2a1162986ef7c}{}\label{class_efficio_1_1_device_a852ea0bc779e5ec543b2a1162986ef7c}
+\begin{DoxyCompactList}\small\item\em The type of data the device is able to track. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_efficio_1_1_device_a852ea0bc779e5ec543b2a1162986ef7c}{Connect} ()=0\hypertarget{class_efficio_1_1_device_a852ea0bc779e5ec543b2a1162986ef7c}{}\label{class_efficio_1_1_device_a852ea0bc779e5ec543b2a1162986ef7c}
 
-\item 
-virtual void {\bfseries Disconnect} ()=0\hypertarget{class_efficio_1_1_device_a8fb17a0b95255e8947cca9dcddcff26c}{}\label{class_efficio_1_1_device_a8fb17a0b95255e8947cca9dcddcff26c}
+\begin{DoxyCompactList}\small\item\em Connects the device. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_efficio_1_1_device_a8fb17a0b95255e8947cca9dcddcff26c}{Disconnect} ()=0\hypertarget{class_efficio_1_1_device_a8fb17a0b95255e8947cca9dcddcff26c}{}\label{class_efficio_1_1_device_a8fb17a0b95255e8947cca9dcddcff26c}
 
-\item 
-virtual bool {\bfseries Has\+Frame} ()=0\hypertarget{class_efficio_1_1_device_a43eda953d99df9ee4df66df44c205773}{}\label{class_efficio_1_1_device_a43eda953d99df9ee4df66df44c205773}
+\begin{DoxyCompactList}\small\item\em Disconnects the device. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_efficio_1_1_device_a43eda953d99df9ee4df66df44c205773}{Has\+Frame} ()=0\hypertarget{class_efficio_1_1_device_a43eda953d99df9ee4df66df44c205773}{}\label{class_efficio_1_1_device_a43eda953d99df9ee4df66df44c205773}
 
-\item 
-virtual Leap\+::\+Frame {\bfseries Get\+Frame} ()=0\hypertarget{class_efficio_1_1_device_a82a46c74f3f75c9b2b08edbe6d2b5477}{}\label{class_efficio_1_1_device_a82a46c74f3f75c9b2b08edbe6d2b5477}
+\begin{DoxyCompactList}\small\item\em A Boolean indicating whether or not the device has a new frame for Efficio. \end{DoxyCompactList}\item 
+virtual Leap\+::\+Frame \hyperlink{class_efficio_1_1_device_a82a46c74f3f75c9b2b08edbe6d2b5477}{Get\+Frame} ()=0\hypertarget{class_efficio_1_1_device_a82a46c74f3f75c9b2b08edbe6d2b5477}{}\label{class_efficio_1_1_device_a82a46c74f3f75c9b2b08edbe6d2b5477}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the current frame from the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int {\bfseries ID}\hypertarget{class_efficio_1_1_device_a300fff98c6e1aed746ef528cf31da24c}{}\label{class_efficio_1_1_device_a300fff98c6e1aed746ef528cf31da24c}
+std\+::string \hyperlink{class_efficio_1_1_device_ade0a5b10efa326ba8c4fdd9e37d89084}{ID}\hypertarget{class_efficio_1_1_device_ade0a5b10efa326ba8c4fdd9e37d89084}{}\label{class_efficio_1_1_device_ade0a5b10efa326ba8c4fdd9e37d89084}
 
-\item 
-\hyperlink{class_efficio_1_1_vector3}{Vector3} {\bfseries Position}\hypertarget{class_efficio_1_1_device_a21ba05537c6978805f090e13c62ed220}{}\label{class_efficio_1_1_device_a21ba05537c6978805f090e13c62ed220}
+\begin{DoxyCompactList}\small\item\em The unique ID of the device. \end{DoxyCompactList}\item 
+\hyperlink{class_efficio_1_1_vector3}{Vector3} \hyperlink{class_efficio_1_1_device_a21ba05537c6978805f090e13c62ed220}{Position}\hypertarget{class_efficio_1_1_device_a21ba05537c6978805f090e13c62ed220}{}\label{class_efficio_1_1_device_a21ba05537c6978805f090e13c62ed220}
 
-\item 
-\hyperlink{class_efficio_1_1_vector3}{Vector3} {\bfseries Direction}\hypertarget{class_efficio_1_1_device_a4da01030cb4382f23700edce87756b16}{}\label{class_efficio_1_1_device_a4da01030cb4382f23700edce87756b16}
+\begin{DoxyCompactList}\small\item\em The position of the device in the consuming application. \end{DoxyCompactList}\item 
+\hyperlink{class_efficio_1_1_vector3}{Vector3} \hyperlink{class_efficio_1_1_device_a4da01030cb4382f23700edce87756b16}{Direction}\hypertarget{class_efficio_1_1_device_a4da01030cb4382f23700edce87756b16}{}\label{class_efficio_1_1_device_a4da01030cb4382f23700edce87756b16}
 
-\item 
-bool {\bfseries Enabled}\hypertarget{class_efficio_1_1_device_ae724390ac1fadd47e528e0231bacf290}{}\label{class_efficio_1_1_device_ae724390ac1fadd47e528e0231bacf290}
+\begin{DoxyCompactList}\small\item\em The direction of the device in the consuming application. \end{DoxyCompactList}\item 
+bool \hyperlink{class_efficio_1_1_device_ae724390ac1fadd47e528e0231bacf290}{Enabled}\hypertarget{class_efficio_1_1_device_ae724390ac1fadd47e528e0231bacf290}{}\label{class_efficio_1_1_device_ae724390ac1fadd47e528e0231bacf290}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A Boolean indicating whether or not the device is enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Any device which can feel data into Efficio. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

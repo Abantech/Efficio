@@ -8,6 +8,7 @@ namespace Efficio
 		{
 			controller = new Leap::Controller();
 			controller->setPaused(true);
+			ID = controller->devices()[0].serialNumber();
 		}
 	}
 
