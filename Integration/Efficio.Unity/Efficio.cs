@@ -8,7 +8,6 @@ namespace Efficio.Unity
     {
         private Engine engine;
 
-        // Use this for initialization
         void Start()
         {
             engine = new Engine();
@@ -18,7 +17,6 @@ namespace Efficio.Unity
             engine.Start();
         }
 
-        // Update is called once per frame
         void Update()
         {
             var frame = engine.GetFrame();
@@ -27,16 +25,22 @@ namespace Efficio.Unity
             {
                 foreach (var ev in frame.GetEvents())
                 {
-                    if (SWIGHelper.CastTo<Pinch>(ev, false) != null)
+                    switch (ev.GetEventType())
                     {
-                        var pinch = SWIGHelper.CastTo<Pinch>(ev, false);
+                        case Net.EventType.Pinch:
+                            if (SWIGHelper.CastTo<Pinch>(ev, false) != null)
+                            {
+                                var pinch = SWIGHelper.CastTo<Pinch>(ev, false);
 
-                        PinchMessage pinchMessage = new PinchMessage();
+                                PinchMessage pinchMessage = new PinchMessage(pinch);
 
-                        pinchMessage.Side = pinch.Side == BodySide.Left ? Side.Left : Side.Right;
-                        pinchMessage.Position = new UnityEngine.Vector3(pinch.Position.X(), pinch.Position.Y(), pinch.Position.Z());
-
-                        MessageBus.MessageBus.Instance.SendMessage(pinchMessage);
+                                MessageBus.MessageBus.Instance.SendMessage(pinchMessage);
+                            }
+                            break;
+                        case Net.EventType.EfficioStarted:
+                            break;
+                        default:
+                            break;
                     }
                 }
             }

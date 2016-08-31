@@ -2,6 +2,7 @@
 {
     public enum MessageType
     {
+        Unknown,
         RightHandThumbIndexPinch,
         RightHandThumbMiddlePinch,
         RightHandThumbRingPinch,
@@ -21,6 +22,6 @@
         LeftHandIndexPinkyPinch,
         LeftHandMiddleRingPinch,
         LeftHandMiddlePinkyPinch,
-        LeftHandRingPinkyPinch
+        LeftHandRingPinkyPinch,
     }
 }
