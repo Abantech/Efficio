@@ -25,6 +25,7 @@
  %shared_ptr(Efficio::InputRecognition::Gesture);
  %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
  %shared_ptr(Efficio::InputRecognition::Human::Hands::Pinch);
+ %shared_ptr(Efficio::Device);
 
  /* Parse the header file to generate wrappers */
  %include "DeviceStatus.h"
@@ -35,12 +36,15 @@
  %include "Enumerations.h"
  %include "Frame.h"
  %include "EfficioFrame.h "
+ %include "DeviceManager.h"
  %include "Engine.h"
  %include "LeapConfiguration.h"
  %include "DeviceConfiguration.h"
  %include "Gesture.h"
  %include "DiscreteGesture.h"
  %include "Pinch.h"
+ %include "Device.h"
  
  %template(EventCollection) std::vector<std::shared_ptr<Efficio::Events::Event>>;
  %template(GestureCollection) std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>>;
+ %template(DeviceCollection) std::vector<std::shared_ptr<Efficio::Device>>;

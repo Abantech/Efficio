@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['getconnecteddevices',['GetConnectedDevices',['../class_efficio_1_1_device_manager.html#a21da4a9f44bc128e70115de8ab54bc4e',1,'Efficio::DeviceManager']]],
+  ['getdevicebyid',['GetDeviceByID',['../class_efficio_1_1_device_manager.html#aeae743bb7d5d973f3245ae69d468befd',1,'Efficio::DeviceManager']]],
+  ['getdevices',['GetDevices',['../class_efficio_1_1_device_manager.html#abed1c1e08d2fe7defef21fded68782b9',1,'Efficio::DeviceManager']]],
+  ['getdeviceswithstatus',['GetDevicesWithStatus',['../class_efficio_1_1_device_manager.html#a91a1c03cfe7f4268e9ed5ad0350b4a57',1,'Efficio::DeviceManager']]],
   ['getframe',['GetFrame',['../class_efficio_1_1_device.html#a82a46c74f3f75c9b2b08edbe6d2b5477',1,'Efficio::Device::GetFrame()'],['../class_efficio_1_1_engine.html#a4f46a611516d157a32005a860128f9dc',1,'Efficio::Engine::GetFrame()'],['../class_efficio_1_1_engine.html#a9f81b122b1c2f768110675a79a842117',1,'Efficio::Engine::GetFrame(int count)'],['../class_efficio_1_1_historical_frame_collection.html#abe5a246b4249f9596aae3cbcf04953b5',1,'Efficio::HistoricalFrameCollection::GetFrame()'],['../class_efficio_1_1_leap_motion_device.html#ad8069e5e4c4fc0033b0b19c703a89a0d',1,'Efficio::LeapMotionDevice::GetFrame()']]],
   ['getgestureduration',['GetGestureDuration',['../class_efficio_1_1_input_recognition_1_1_gesture.html#a018fa00ce8db008e93fb988f649de9a6',1,'Efficio::InputRecognition::Gesture']]],
   ['getgesturestate',['GetGestureState',['../class_efficio_1_1_input_recognition_1_1_continuous_gesture.html#a29e6beed9d0f1745200412815974db7e',1,'Efficio::InputRecognition::ContinuousGesture::GetGestureState()'],['../class_efficio_1_1_input_recognition_1_1_discrete_gesture.html#a18ff1c5231925c581ac3a6add9edfd67',1,'Efficio::InputRecognition::DiscreteGesture::GetGestureState()'],['../class_efficio_1_1_input_recognition_1_1_gesture.html#a0c607385ed5f969075f2e7a1eb11a85a',1,'Efficio::InputRecognition::Gesture::GetGestureState()']]],

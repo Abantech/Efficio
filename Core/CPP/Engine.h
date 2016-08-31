@@ -6,6 +6,7 @@
 #include <memory>
 #include "Event.h"
 #include "HistoricalFrameCollection.h"
+#include "DeviceManager.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -36,9 +37,11 @@ extern "C" {
 			/// The device configuration for Efficio.
 			Efficio::Configuration::DeviceConfiguration DeviceConfiguration;
 
+			/// The Device Manager
+			Efficio::DeviceManager DeviceManager;
+
 		private:
 			bool started;
-			Efficio::Device* device;
 			HistoricalFrameCollection historicalFrames;
 			int frameID;
 		};

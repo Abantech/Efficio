@@ -70,6 +70,17 @@ public class Engine : global::System.IDisposable {
     } 
   }
 
+  public DeviceManager DeviceManager {
+    set {
+      EfficioPINVOKE.Engine_DeviceManager_set(swigCPtr, DeviceManager.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.Engine_DeviceManager_get(swigCPtr);
+      DeviceManager ret = (cPtr == global::System.IntPtr.Zero) ? null : new DeviceManager(cPtr, false);
+      return ret;
+    } 
+  }
+
 }
 
 }

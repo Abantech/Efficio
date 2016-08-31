@@ -12,15 +12,20 @@ namespace Efficio {
 
 	Engine::~Engine()
 	{
-		device->~Device();
+
 	}
 
 	void Engine::Start()
 	{
 		if (DeviceConfiguration.LeapConfiguration.Enabled)
 		{
-			device = new Efficio::LeapMotionDevice();
-			device->Connect();
+			auto leapMotion = std::shared_ptr<Efficio::Device>(new Efficio::LeapMotionDevice());
+			DeviceManager.AddDevice(leapMotion);
+		}
+
+		for (size_t i = 0; i < DeviceManager.GetDevices().size(); i++)
+		{
+			DeviceManager.GetDevices()[i]->Connect();
 		}
 
 		started = true;
@@ -32,8 +37,11 @@ namespace Efficio {
 
 		if (started)
 		{
-			if (device != 0 && device->Connected())
+			auto connectedDevices = DeviceManager.GetDevicesWithStatus(Efficio::DeviceStatus::Connected);
+			for (size_t i = 0; i < connectedDevices.size(); i++)
 			{
+				auto device = connectedDevices[i];
+
 				if (device->HasFrame())
 				{
 					auto frame = device->GetFrame();

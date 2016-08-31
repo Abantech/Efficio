@@ -189,6 +189,7 @@ EXIT 0</Command>
     <ClCompile Include="ContinuousGesture.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="DeviceConfiguration.cpp" />
+    <ClCompile Include="DeviceManager.cpp" />
     <ClCompile Include="DiscreteGesture.cpp" />
     <ClCompile Include="EfficioFrame.cpp" />
     <ClCompile Include="Engine.cpp" />
@@ -209,6 +210,7 @@ EXIT 0</Command>
     <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="DeviceConfiguration.h" />
+    <ClInclude Include="DeviceManager.h" />
     <ClInclude Include="DeviceStatus.h" />
     <ClInclude Include="DiscreteGesture.h" />
     <ClInclude Include="EfficioFrame.h" />
