@@ -14,20 +14,12 @@ namespace Efficio
 	{
 		namespace Human
 		{
-			extern enum class DLLEXPORT JointName
-			{
-				Distal,
-				Intermediate,
-				Proximal,
-				Metacarpal
-			};
-
 			extern class DLLEXPORT Joint
 			{
 			public:
-				Joint(Efficio::Models::Human::JointName name, Vector3 position);
+				Joint(std::string name, Vector3 position);
 				~Joint();
-				JointName Name;
+				std::string Name;
 				Vector3 Position;
 			private:
 

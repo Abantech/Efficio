@@ -6,7 +6,7 @@ namespace Efficio
 	{
 		namespace Human
 		{
-			Joint::Joint(Efficio::Models::Human::JointName name, Vector3 position) : Name(name), Position(position)
+			Joint::Joint(std::string name, Vector3 position) : Name(name), Position(position)
 			{
 			}
 			Joint::~Joint()

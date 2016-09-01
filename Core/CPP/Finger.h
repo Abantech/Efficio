@@ -29,12 +29,12 @@ namespace Efficio
 			{
 			public:
 				Finger();
-				Finger(FingerName fingerName, std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions);
+				Finger(FingerName fingerName, std::map<std::string, Efficio::Vector3> jointPositions);
 				~Finger();
-				Efficio::Vector3 GetJointPosition(Efficio::Models::Human::JointName jointName);
+				Efficio::Vector3 GetJointPosition(std::string jointName);
 				FingerName Name;
 			private:
-				std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions;
+				std::map<std::string, Efficio::Vector3> jointPositions;
 			};
 		}
 	}

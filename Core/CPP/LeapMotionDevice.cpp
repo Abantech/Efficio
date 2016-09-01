@@ -133,7 +133,7 @@ namespace Efficio
 		auto intermediate = CopyJoint(Leap::Bone::Type::TYPE_INTERMEDIATE, finger);
 		auto distal = CopyJoint(Leap::Bone::Type::TYPE_DISTAL, finger);
 
-		std::map<Efficio::Models::Human::JointName, Efficio::Vector3> joints;
+		std::map<std::string, Efficio::Vector3> joints;
 
 		joints.emplace(metacarpal.Name, metacarpal.Position);
 		joints.emplace(proximal.Name, proximal.Position);
@@ -166,22 +166,22 @@ namespace Efficio
 
 	Efficio::Models::Human::Joint LeapMotionDevice::CopyJoint(Leap::Bone::Type boneType, Leap::Finger finger)
 	{
-		Efficio::Models::Human::JointName jointName;
+		std::string jointName;
 		auto jointPos = finger.bone(boneType).nextJoint();
 
 		switch (boneType)
 		{
 		case Leap::Bone::TYPE_METACARPAL:
-			jointName = Efficio::Models::Human::JointName::Metacarpal;
+			jointName = "Metacarpal";
 			break;
 		case Leap::Bone::TYPE_PROXIMAL:
-			jointName = Efficio::Models::Human::JointName::Proximal;
+			jointName = "Proximal";
 			break;
 		case Leap::Bone::TYPE_INTERMEDIATE:
-			jointName = Efficio::Models::Human::JointName::Intermediate;
+			jointName = "Intermediate";
 			break;
 		case Leap::Bone::TYPE_DISTAL:
-			jointName = Efficio::Models::Human::JointName::Distal;
+			jointName = "Distal";
 			break;
 		default:
 			break;

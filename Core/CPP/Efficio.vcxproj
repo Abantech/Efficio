@@ -195,6 +195,7 @@ EXIT 0</Command>
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="Finger.cpp" />
+    <ClCompile Include="FingerJoint.cpp" />
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Gesture.cpp" />
     <ClCompile Include="Hand.cpp" />
@@ -223,6 +224,7 @@ EXIT 0</Command>
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventType.h" />
     <ClInclude Include="Finger.h" />
+    <ClInclude Include="FingerJoint.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
     <ClInclude Include="Hand.h" />
