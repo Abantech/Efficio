@@ -46,22 +46,19 @@ namespace Efficio {
 				{
 					auto frame = device->GetFrame();
 
-					if (frame.isValid())
+					auto hands = frame.HandData.Hands;
+
+					if (hands.size() > 0)
 					{
-						auto hands = frame.hands();
-
-						if (hands.count() > 0)
+						for (size_t i = 0; i < hands.size(); i++)
 						{
-							for (size_t i = 0; i < hands.count(); i++)
-							{
-								Efficio::InputRecognition::Human::Hands::PinchDetector detector;
-								detector.Enabled = true;
-								auto pinches = detector.Detect(hands[i]);
+							Efficio::InputRecognition::Human::Hands::PinchDetector detector;
+							detector.Enabled = true;
+							auto pinches = detector.Detect(hands[i]);
 
-								for (size_t j = 0; j < pinches.size(); j++)
-								{
-									efficioFrame->AddEvent(pinches[j]);
-								}
+							for (size_t j = 0; j < pinches.size(); j++)
+							{
+								efficioFrame->AddEvent(pinches[j]);
 							}
 						}
 					}

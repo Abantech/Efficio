@@ -124,8 +124,8 @@ public class Device : global::System.IDisposable {
     return ret;
   }
 
-  public virtual SWIGTYPE_p_Leap__Frame GetFrame() {
-    SWIGTYPE_p_Leap__Frame ret = new SWIGTYPE_p_Leap__Frame(EfficioPINVOKE.Device_GetFrame(swigCPtr), true);
+  public virtual Frame GetFrame() {
+    Frame ret = new Frame(EfficioPINVOKE.Device_GetFrame(swigCPtr), true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

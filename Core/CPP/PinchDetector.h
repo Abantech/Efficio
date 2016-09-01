@@ -20,7 +20,7 @@ namespace Efficio
 				extern class DLLEXPORT PinchDetector : public SingleHandGestureDetector
 				{
 				public:
-					std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>> Detect(Leap::Hand hand);
+					std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>> Detect(Efficio::Models::Human::Hand hand);
 					bool Enabled;
 				};
 			}

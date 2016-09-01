@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pinch',['Pinch',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_pinch.html',1,'Efficio::InputRecognition::Human::Hands']]],
-  ['pinchdetector',['PinchDetector',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_pinch_detector.html',1,'Efficio::InputRecognition::Human::Hands']]]
+  ['leapconfiguration',['LeapConfiguration',['../class_efficio_1_1_configuration_1_1_leap_configuration.html',1,'Efficio::Configuration']]],
+  ['leapmotiondevice',['LeapMotionDevice',['../class_efficio_1_1_leap_motion_device.html',1,'Efficio']]]
 ];

@@ -194,9 +194,13 @@ EXIT 0</Command>
     <ClCompile Include="EfficioFrame.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
+    <ClCompile Include="Finger.cpp" />
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Gesture.cpp" />
+    <ClCompile Include="Hand.cpp" />
+    <ClCompile Include="HandData.cpp" />
     <ClCompile Include="HistoricalFrameCollection.cpp" />
+    <ClCompile Include="Joint.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
     <ClCompile Include="LeapMotionDevice.cpp" />
     <ClCompile Include="MainPage.cpp" />
@@ -218,9 +222,13 @@ EXIT 0</Command>
     <ClInclude Include="Enumerations.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventType.h" />
+    <ClInclude Include="Finger.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
+    <ClInclude Include="Hand.h" />
+    <ClInclude Include="HandData.h" />
     <ClInclude Include="HistoricalFrameCollection.h" />
+    <ClInclude Include="Joint.h" />
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="LeapMotionDevice.h" />
     <ClInclude Include="Pinch.h" />

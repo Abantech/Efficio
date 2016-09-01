@@ -23,14 +23,6 @@ namespace Efficio
 			Arm,
 			Body
 		};
-
-		extern enum class DLLEXPORT Finger {
-			Thumb,
-			Index,
-			Middle,
-			Ring,
-			Pinky
-		};
 	}
 
 	extern enum DLLEXPORT GestureType {

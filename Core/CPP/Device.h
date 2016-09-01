@@ -53,6 +53,6 @@ namespace Efficio
 		virtual bool HasFrame() = 0;
 
 		/// Gets the current frame from the device
-		virtual Leap::Frame GetFrame() = 0;
+		virtual Efficio::Frame GetFrame() = 0;
 	};
 }

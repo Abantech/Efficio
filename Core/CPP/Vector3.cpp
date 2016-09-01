@@ -8,6 +8,12 @@ namespace Efficio {
 	{
 	}
 
+	float Vector3::DistanceTo(Efficio::Vector3 vector2) {
+		vmml::Vector3f vector2vmml(vector2.X(), vector2.Y(), vector2.Z());
+
+		return vector2vmml.distance(vector);;
+	}
+
 	float Vector3::X()
 	{
 		return vector.x();

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "HandData.h"
+
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
@@ -13,5 +15,6 @@ namespace Efficio
 	public:
 		Frame();
 		~Frame();
+		Efficio::HandData HandData;
 	};
 }

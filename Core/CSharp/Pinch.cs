@@ -41,7 +41,7 @@ public class Pinch : DiscreteGesture {
     }
   }
 
-  public Pinch(BodySide side, Finger finger1, Finger finger2, Vector3 position) : this(EfficioPINVOKE.new_Pinch((int)side, (int)finger1, (int)finger2, Vector3.getCPtr(position)), true) {
+  public Pinch(BodySide side, FingerName finger1, FingerName finger2, Vector3 position) : this(EfficioPINVOKE.new_Pinch((int)side, (int)finger1, (int)finger2, Vector3.getCPtr(position)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -58,25 +58,25 @@ public class Pinch : DiscreteGesture {
     } 
   }
 
-  public Finger Finger1 {
+  public FingerName Finger1 {
     set {
       EfficioPINVOKE.Pinch_Finger1_set(swigCPtr, (int)value);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      Finger ret = (Finger)EfficioPINVOKE.Pinch_Finger1_get(swigCPtr);
+      FingerName ret = (FingerName)EfficioPINVOKE.Pinch_Finger1_get(swigCPtr);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Finger Finger2 {
+  public FingerName Finger2 {
     set {
       EfficioPINVOKE.Pinch_Finger2_set(swigCPtr, (int)value);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      Finger ret = (Finger)EfficioPINVOKE.Pinch_Finger2_get(swigCPtr);
+      FingerName ret = (FingerName)EfficioPINVOKE.Pinch_Finger2_get(swigCPtr);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

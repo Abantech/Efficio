@@ -93,8 +93,8 @@ public class Device {
     return EfficioJNI.Device_HasFrame(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_Leap__Frame GetFrame() {
-    return new SWIGTYPE_p_Leap__Frame(EfficioJNI.Device_GetFrame(swigCPtr, this), true);
+  public Frame GetFrame() {
+    return new Frame(EfficioJNI.Device_GetFrame(swigCPtr, this), true);
   }
 
 }

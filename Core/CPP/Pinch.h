@@ -4,6 +4,7 @@
 #include "DiscreteGesture.h"
 #include "Vector3.h"
 #include "Enumerations.h"
+#include "Finger.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -22,11 +23,11 @@ namespace Efficio
 				extern class DLLEXPORT Pinch : public DiscreteGesture
 				{
 				public:
-					Pinch(Body::BodySide side, Body::Finger finger1, Body::Finger finger2, Vector3 position);
+					Pinch(Body::BodySide side, Efficio::Models::Human::FingerName finger1, Efficio::Models::Human::FingerName finger2, Vector3 position);
 					~Pinch();
 					Vector3 Position;
-					Body::Finger Finger1;
-					Body::Finger Finger2;
+					Efficio::Models::Human::FingerName Finger1;
+					Efficio::Models::Human::FingerName Finger2;
 					Efficio::Events::EventType GetEventType();
 					Body::BodySide Side;
 				};
