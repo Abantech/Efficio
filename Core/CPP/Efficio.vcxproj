@@ -186,6 +186,7 @@ EXIT 0</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bone2.cpp" />
     <ClCompile Include="ContinuousGesture.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="DeviceConfiguration.cpp" />
@@ -212,6 +213,7 @@ EXIT 0</Command>
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bone2.h" />
     <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="DeviceConfiguration.h" />

@@ -111,6 +111,9 @@
     <ClCompile Include="FingerJoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Bone2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EfficioFrame.h">
@@ -189,6 +192,9 @@
       <Filter>Models\Human</Filter>
     </ClInclude>
     <ClInclude Include="FingerJoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bone2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
