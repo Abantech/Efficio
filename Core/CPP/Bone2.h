@@ -19,18 +19,17 @@ namespace Efficio
 			{
 			public:
 				Bone2(std::string name);
-				Bone2(std::string name, Efficio::Models::Human::Joint StartJoint);
-				Bone2(std::string name, Efficio::Models::Human::Joint StartJoint, Efficio::Models::Human::Joint EndJoint);
-				Bone2(std::string name, Efficio::Models::Human::Joint StartJoint, Vector3 endPosition);
+				Bone2(std::string name, Efficio::Models::Human::Joint* startJoint);
+				Bone2(std::string name, Efficio::Models::Human::Joint* startJoint, Efficio::Models::Human::Joint* endJoint);
 				~Bone2();
 				std::string Name;
-				//Vector3 StartPosition;
-				//Vector3 EndPosition;
-				////bool IsInitialized;
-				//Efficio::Models::Human::Joint StartJoint;
-				//Efficio::Models::Human::Joint EndJoint;
+				Efficio::Vector3 GetStartPosition();
+				Efficio::Vector3 GetEndPosition();
+				bool IsInitialized;
+				Efficio::Models::Human::Joint *StartJoint;
+				Efficio::Models::Human::Joint *EndJoint;
+				Efficio::Models::Human::Joint* GetOppositeJoint(Efficio::Models::Human::Joint *joint);
 			private:
-
 			};
 		}
 	}

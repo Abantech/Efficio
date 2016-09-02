@@ -191,11 +191,11 @@
     <ClInclude Include="Finger.h">
       <Filter>Models\Human</Filter>
     </ClInclude>
-    <ClInclude Include="FingerJoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Bone2.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FingerJoint.h">
+      <Filter>Models\Human</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

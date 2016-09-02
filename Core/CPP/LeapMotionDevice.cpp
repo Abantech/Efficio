@@ -115,19 +115,18 @@ namespace Efficio
 	Efficio::Models::Human::Hand LeapMotionDevice::CopyHand(Leap::Hand hand) {
 		std::array<Efficio::Models::Human::Finger, 5> fingers;
 
-		for (size_t i = 0; i < 5; i++)
-		{
-			auto finger = CopyFinger(hand.fingers()[i]);
-
-			fingers.at(i) = finger;
-		}
-
 		Efficio::Body::BodySide side = hand.isLeft() ? Efficio::Body::BodySide::Left : Efficio::Body::BodySide::Right;
 
+		for (size_t i = 0; i < 5; i++)
+		{
+			auto finger = CopyFinger(side, hand.fingers()[i]);
+			fingers.at(i) = finger;
+			
+		}
 		return Efficio::Models::Human::Hand(fingers, side);
 	}
 
-	Efficio::Models::Human::Finger LeapMotionDevice::CopyFinger(Leap::Finger finger) {
+	Efficio::Models::Human::Finger LeapMotionDevice::CopyFinger(Efficio::Body::BodySide side, Leap::Finger finger) {
 		auto metacarpal = CopyJoint(Leap::Bone::Type::TYPE_METACARPAL, finger);
 		auto proximal = CopyJoint(Leap::Bone::Type::TYPE_PROXIMAL, finger);
 		auto intermediate = CopyJoint(Leap::Bone::Type::TYPE_INTERMEDIATE, finger);
@@ -141,27 +140,55 @@ namespace Efficio
 		joints.emplace(distal.Name, distal.Position);
 
 		Efficio::Models::Human::FingerName fingerName;
+		std::string fingerStringName;
 
 		switch (finger.type())
 		{
 		case Leap::Finger::Type::TYPE_THUMB:
 			fingerName = Efficio::Models::Human::FingerName::Thumb;
+			fingerStringName = "Thumb";
 			break;
 		case Leap::Finger::Type::TYPE_INDEX:
 			fingerName = Efficio::Models::Human::FingerName::Index;
+			fingerStringName = "Index";
 			break;
 		case Leap::Finger::Type::TYPE_MIDDLE:
 			fingerName = Efficio::Models::Human::FingerName::Middle;
+			fingerStringName = "Middle";
 			break;
 		case Leap::Finger::Type::TYPE_RING:
 			fingerName = Efficio::Models::Human::FingerName::Ring;
+			fingerStringName = "Ring";
 			break;
 		case Leap::Finger::Type::TYPE_PINKY:
 			fingerName = Efficio::Models::Human::FingerName::Pinky;
+			fingerStringName = "Pinky";
 			break;
 		}
 
-		return Efficio::Models::Human::Finger(fingerName, joints);
+		Efficio::Models::Human::Finger efficiofinger = Efficio::Models::Human::Finger(fingerName, joints);
+		auto proximalBone = CreateFingerBone(side, fingerStringName, &metacarpal, &proximal);
+		auto intermediateBone = CreateFingerBone(side, fingerStringName, &proximal, &intermediate);
+		auto distalBone = CreateFingerBone(side, fingerStringName, &proximal, &distal);
+
+		efficiofinger.Bones.emplace(proximalBone.Name, proximalBone);
+		efficiofinger.Bones.emplace(intermediateBone.Name, intermediateBone);
+		efficiofinger.Bones.emplace(distalBone.Name, distalBone);
+
+		return efficiofinger;
+	}
+
+	Efficio::Models::Human::Bone2 LeapMotionDevice::CreateFingerBone(Efficio::Body::BodySide bodySide, std::string fingerStringName, Efficio::Models::Human::Joint* startJoint, Efficio::Models::Human::Joint* endJoint)
+	{
+		std::string boneName(bodySide == Efficio::Body::BodySide::Left ? "LeftHand" : "RightHand");
+		boneName.append("-");
+		boneName.append(fingerStringName);
+		boneName.append("-");
+		boneName.append(startJoint->Name);
+		boneName.append("-");
+		boneName.append(endJoint->Name);
+
+		return Efficio::Models::Human::Bone2(boneName, startJoint, endJoint);
 	}
 
 	Efficio::Models::Human::Joint LeapMotionDevice::CopyJoint(Leap::Bone::Type boneType, Leap::Finger finger)

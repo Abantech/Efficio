@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Vector3.h"
-#include "Bone2.h"
+//#include "Bone2.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -22,7 +22,7 @@ namespace Efficio
 				~Joint();
 				std::string Name;
 				Vector3 Position;
-				Efficio::Models::Human::Bone2 Bone;
+				//Efficio::Models::Human::Bone2 Bone;
 			private:
 
 			};

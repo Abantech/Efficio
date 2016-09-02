@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['connect',['Connect',['../class_efficio_1_1_device.html#a852ea0bc779e5ec543b2a1162986ef7c',1,'Efficio::Device::Connect()'],['../class_efficio_1_1_leap_motion_device.html#a72bff092872814da4aec665b1fb09b5f',1,'Efficio::LeapMotionDevice::Connect()']]],
-  ['connected',['Connected',['../class_efficio_1_1_device.html#a51228fd0878a8514a28844a934a95625',1,'Efficio::Device']]]
+  ['bone2',['Bone2',['../class_efficio_1_1_models_1_1_human_1_1_bone2.html#a3958c7a1c4690b707819d58bd096bc42',1,'Efficio::Models::Human::Bone2::Bone2(std::string name)'],['../class_efficio_1_1_models_1_1_human_1_1_bone2.html#a90d21d7d741d0b5046de9f08dd053f75',1,'Efficio::Models::Human::Bone2::Bone2(std::string name, Efficio::Models::Human::Joint *startJoint)'],['../class_efficio_1_1_models_1_1_human_1_1_bone2.html#a0878a112ea7b9754c3d02636a6046ee5',1,'Efficio::Models::Human::Bone2::Bone2(std::string name, Efficio::Models::Human::Joint *startJoint, Efficio::Models::Human::Joint *endJoint)']]]
 ];

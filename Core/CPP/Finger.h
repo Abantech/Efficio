@@ -3,6 +3,7 @@
 #include <map>
 #include "Vector3.h"
 #include "Joint.h"
+#include "Bone2.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -33,6 +34,8 @@ namespace Efficio
 				~Finger();
 				Efficio::Vector3 GetJointPosition(std::string jointName);
 				FingerName Name;
+				std::map<std::string, Efficio::Models::Human::Bone2> Bones;
+				std::string HandSide;
 			private:
 				std::map<std::string, Efficio::Vector3> jointPositions;
 			};

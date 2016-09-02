@@ -27,7 +27,8 @@ namespace Efficio
 		Leap::Frame currentFrame;
 		Leap::Frame lastFrame;
 		Efficio::Models::Human::Hand CopyHand(Leap::Hand hand);
-		Efficio::Models::Human::Finger CopyFinger(Leap::Finger finger);
+		Efficio::Models::Human::Finger CopyFinger(Efficio::Body::BodySide side, Leap::Finger finger);
 		Efficio::Models::Human::Joint CopyJoint(Leap::Bone::Type boneType, Leap::Finger finger);
+		Efficio::Models::Human::Bone2 CreateFingerBone(Efficio::Body::BodySide bodySide, std::string fingerStringName, Efficio::Models::Human::Joint* startJoint, Efficio::Models::Human::Joint* endJoint);
 	};
 }
