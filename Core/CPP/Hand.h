@@ -29,7 +29,7 @@ namespace Efficio
 				std::array<Efficio::Models::Human::Finger, 5> Fingers;
 				Efficio::Body::BodySide Side;
 				//void AddFinger(std::shared_ptr<Efficio::Models::Human::Finger> fingerPtr);
-				std::vector<Efficio::Models::Human::Finger> GetFingers();
+				//std::vector<Efficio::Models::Human::Finger> GetFingers();
 			private:
 			};
 		}

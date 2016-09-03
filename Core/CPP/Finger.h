@@ -34,7 +34,7 @@ namespace Efficio
 				~Finger();
 				Efficio::Vector3 GetJointPosition(std::string jointName);
 				FingerName Name;
-				std::map<std::string, Efficio::Models::Human::Bone2> Bones;
+				//TODO: Check if this is what's causing memory corruption issues std::map<std::string, Efficio::Models::Human::Bone2> Bones;
 				std::string HandSide;
 			private:
 				std::map<std::string, Efficio::Vector3> jointPositions;

@@ -1,5 +1,5 @@
 #include "Joint.h"
-#include "Bone2.h"
+// #include "Bone2.h"
 
 namespace Efficio
 {

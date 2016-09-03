@@ -14,11 +14,11 @@ namespace Efficio
 			{
 			}
 
-			std::vector<Efficio::Models::Human::Finger> Hand::GetFingers()
-			{
-				std::vector<Efficio::Models::Human::Finger> handFingers(std::begin(Fingers), std::end(Fingers));
-				return handFingers;
-			}
+			//std::vector<Efficio::Models::Human::Finger> Hand::GetFingers()
+			//{
+			//	std::vector<Efficio::Models::Human::Finger> handFingers(std::begin(Fingers), std::end(Fingers));
+			//	return handFingers;
+			//}
 
 			Hand::~Hand()
 			{

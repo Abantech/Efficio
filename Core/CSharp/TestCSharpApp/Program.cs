@@ -36,6 +36,10 @@ namespace TestCSharpApp
                         var messageBuilder = new System.Text.StringBuilder();
                         var currentHand = SWIGHelper.CastTo<Hand>(hand, false);
 
+                        var fingerCollection = SWIGHelper.CastTo<Finger[]>(currentHand.Fingers, false); // HELP!!!! THIS DOES NOT WORK
+                        
+                        //foreach(var )
+
                         //var fingerCollection = SWIGHelper.CastTo<Finger[]>(currentHand.Fingers, false) // HELP!!!! THIS DOES NOT WORK
                         //currentHand.GetFingers()
                         //var currentFinger = new Finger();
@@ -45,7 +49,7 @@ namespace TestCSharpApp
                         //    var c
 
                         //}
-                        messageBuilder.AppendFormat("Detected {0} Hand!!!", currentHand.Side.ToString());
+                        messageBuilder.AppendFormat("Detected {0} Hand!!!", currentHand.Side == BodySide.Left ? "LEFT" : "RIGHT");
                         Console.Out.WriteLine(messageBuilder.ToString());
                     }
                 }

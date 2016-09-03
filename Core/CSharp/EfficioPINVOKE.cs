@@ -242,12 +242,6 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_Name_get___")]
   public static extern int Finger_Name_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_Bones_set___")]
-  public static extern void Finger_Bones_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_Bones_get___")]
-  public static extern global::System.IntPtr Finger_Bones_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_HandSide_set___")]
   public static extern void Finger_HandSide_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
@@ -274,9 +268,6 @@ class EfficioPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_Side_get___")]
   public static extern int Hand_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_GetFingers___")]
-  public static extern global::System.IntPtr Hand_GetFingers(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_HandData___")]
   public static extern global::System.IntPtr new_HandData();

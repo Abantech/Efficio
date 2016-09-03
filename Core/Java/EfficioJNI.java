@@ -27,8 +27,6 @@ public class EfficioJNI {
   public final static native long Finger_GetJointPosition(long jarg1, Finger jarg1_, String jarg2);
   public final static native void Finger_Name_set(long jarg1, Finger jarg1_, int jarg2);
   public final static native int Finger_Name_get(long jarg1, Finger jarg1_);
-  public final static native void Finger_Bones_set(long jarg1, Finger jarg1_, long jarg2);
-  public final static native long Finger_Bones_get(long jarg1, Finger jarg1_);
   public final static native void Finger_HandSide_set(long jarg1, Finger jarg1_, String jarg2);
   public final static native String Finger_HandSide_get(long jarg1, Finger jarg1_);
   public final static native long new_Hand__SWIG_0();
@@ -38,7 +36,6 @@ public class EfficioJNI {
   public final static native long Hand_Fingers_get(long jarg1, Hand jarg1_);
   public final static native void Hand_Side_set(long jarg1, Hand jarg1_, int jarg2);
   public final static native int Hand_Side_get(long jarg1, Hand jarg1_);
-  public final static native long Hand_GetFingers(long jarg1, Hand jarg1_);
   public final static native long new_HandData();
   public final static native void delete_HandData(long jarg1);
   public final static native void HandData_Hands_set(long jarg1, HandData jarg1_, long jarg2);

@@ -168,29 +168,31 @@ namespace Efficio
 		}
 
 		Efficio::Models::Human::Finger efficiofinger = Efficio::Models::Human::Finger(fingerName, joints);
-		auto proximalBone = CreateFingerBone(side, fingerStringName, &metacarpal, &proximal);
-		auto intermediateBone = CreateFingerBone(side, fingerStringName, &proximal, &intermediate);
-		auto distalBone = CreateFingerBone(side, fingerStringName, &proximal, &distal);
+		//TODO: Check if this is what's causing memory corruption issues:
+		//auto proximalBone = CreateFingerBone(side, fingerStringName, &metacarpal, &proximal);
+		//auto intermediateBone = CreateFingerBone(side, fingerStringName, &proximal, &intermediate);
+		//auto distalBone = CreateFingerBone(side, fingerStringName, &proximal, &distal);
 
-		efficiofinger.Bones.emplace(proximalBone.Name, proximalBone);
-		efficiofinger.Bones.emplace(intermediateBone.Name, intermediateBone);
-		efficiofinger.Bones.emplace(distalBone.Name, distalBone);
+		//efficiofinger.Bones.emplace(proximalBone.Name, proximalBone);
+		//efficiofinger.Bones.emplace(intermediateBone.Name, intermediateBone);
+		//efficiofinger.Bones.emplace(distalBone.Name, distalBone);
 
 		return efficiofinger;
 	}
 
-	Efficio::Models::Human::Bone2 LeapMotionDevice::CreateFingerBone(Efficio::Body::BodySide bodySide, std::string fingerStringName, Efficio::Models::Human::Joint* startJoint, Efficio::Models::Human::Joint* endJoint)
-	{
-		std::string boneName(bodySide == Efficio::Body::BodySide::Left ? "LeftHand" : "RightHand");
-		boneName.append("-");
-		boneName.append(fingerStringName);
-		boneName.append("-");
-		boneName.append(startJoint->Name);
-		boneName.append("-");
-		boneName.append(endJoint->Name);
+	//TODO: Check if this is what's causing memory corruption issues:
+	//Efficio::Models::Human::Bone2 LeapMotionDevice::CreateFingerBone(Efficio::Body::BodySide bodySide, std::string fingerStringName, Efficio::Models::Human::Joint* startJoint, Efficio::Models::Human::Joint* endJoint)
+	//{
+	//	std::string boneName(bodySide == Efficio::Body::BodySide::Left ? "LeftHand" : "RightHand");
+	//	boneName.append("-");
+	//	boneName.append(fingerStringName);
+	//	boneName.append("-");
+	//	boneName.append(startJoint->Name);
+	//	boneName.append("-");
+	//	boneName.append(endJoint->Name);
 
-		return Efficio::Models::Human::Bone2(boneName, startJoint, endJoint);
-	}
+	//	return Efficio::Models::Human::Bone2(boneName, startJoint, endJoint);
+	//}
 
 	Efficio::Models::Human::Joint LeapMotionDevice::CopyJoint(Leap::Bone::Type boneType, Leap::Finger finger)
 	{

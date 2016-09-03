@@ -945,34 +945,6 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Finger_Name_get___(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Finger_Bones_set___(void * jarg1, void * jarg2) {
-  Efficio::Models::Human::Finger *arg1 = (Efficio::Models::Human::Finger *) 0 ;
-  std::map< std::string,Efficio::Models::Human::Bone2 > arg2 ;
-  std::map< std::string,Efficio::Models::Human::Bone2 > *argp2 ;
-  
-  arg1 = (Efficio::Models::Human::Finger *)jarg1; 
-  argp2 = (std::map< std::string,Efficio::Models::Human::Bone2 > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::map< std::string,Efficio::Models::Human::Bone2 >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->Bones = arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Finger_Bones_get___(void * jarg1) {
-  void * jresult ;
-  Efficio::Models::Human::Finger *arg1 = (Efficio::Models::Human::Finger *) 0 ;
-  std::map< std::string,Efficio::Models::Human::Bone2 > result;
-  
-  arg1 = (Efficio::Models::Human::Finger *)jarg1; 
-  result =  ((arg1)->Bones);
-  jresult = new std::map< std::string,Efficio::Models::Human::Bone2 >((const std::map< std::string,Efficio::Models::Human::Bone2 > &)result); 
-  return jresult;
-}
-
-
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Finger_HandSide_set___(void * jarg1, char * jarg2) {
   Efficio::Models::Human::Finger *arg1 = (Efficio::Models::Human::Finger *) 0 ;
   std::string *arg2 = 0 ;
@@ -1084,18 +1056,6 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Hand_Side_get___(void * jarg1) {
   arg1 = (Efficio::Models::Human::Hand *)jarg1; 
   result = (Efficio::Body::BodySide) ((arg1)->Side);
   jresult = (int)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Hand_GetFingers___(void * jarg1) {
-  void * jresult ;
-  Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
-  SwigValueWrapper< std::vector< Efficio::Models::Human::Finger > > result;
-  
-  arg1 = (Efficio::Models::Human::Hand *)jarg1; 
-  result = (arg1)->GetFingers();
-  jresult = new std::vector< Efficio::Models::Human::Finger >((const std::vector< Efficio::Models::Human::Finger > &)result); 
   return jresult;
 }
 

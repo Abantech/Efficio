@@ -55,14 +55,6 @@ public class Finger {
     return FingerName.swigToEnum(EfficioJNI.Finger_Name_get(swigCPtr, this));
   }
 
-  public void setBones(SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t value) {
-    EfficioJNI.Finger_Bones_set(swigCPtr, this, SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t getBones() {
-    return new SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t(EfficioJNI.Finger_Bones_get(swigCPtr, this), true);
-  }
-
   public void setHandSide(String value) {
     EfficioJNI.Finger_HandSide_set(swigCPtr, this, value);
   }

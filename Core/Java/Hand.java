@@ -59,8 +59,4 @@ public class Hand {
     return BodySide.swigToEnum(EfficioJNI.Hand_Side_get(swigCPtr, this));
   }
 
-  public SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t GetFingers() {
-    return new SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t(EfficioJNI.Hand_GetFingers(swigCPtr, this), true);
-  }
-
 }

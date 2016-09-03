@@ -63,18 +63,6 @@ public class Finger : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t Bones {
-    set {
-      EfficioPINVOKE.Finger_Bones_set(swigCPtr, SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t.getCPtr(value));
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t ret = new SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t(EfficioPINVOKE.Finger_Bones_get(swigCPtr), true);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
   public string HandSide {
     set {
       EfficioPINVOKE.Finger_HandSide_set(swigCPtr, value);
