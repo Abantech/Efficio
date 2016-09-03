@@ -43,13 +43,12 @@ public class Finger : global::System.IDisposable {
   public Finger() : this(EfficioPINVOKE.new_Finger__SWIG_0(), true) {
   }
 
-  public Finger(FingerName fingerName, SWIGTYPE_p_std__mapT_std__string_Efficio__Vector3_t jointPositions) : this(EfficioPINVOKE.new_Finger__SWIG_1((int)fingerName, SWIGTYPE_p_std__mapT_std__string_Efficio__Vector3_t.getCPtr(jointPositions)), true) {
+  public Finger(FingerName fingerName, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t joints) : this(EfficioPINVOKE.new_Finger__SWIG_1((int)fingerName, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t.getCPtr(joints)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public Vector3 GetJointPosition(string jointName) {
-    Vector3 ret = new Vector3(EfficioPINVOKE.Finger_GetJointPosition(swigCPtr, jointName), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public Vector3 GetJointPosition(JointName jointName) {
+    Vector3 ret = new Vector3(EfficioPINVOKE.Finger_GetJointPosition(swigCPtr, (int)jointName), true);
     return ret;
   }
 
@@ -63,16 +62,14 @@ public class Finger : global::System.IDisposable {
     } 
   }
 
-  public string HandSide {
-    set {
-      EfficioPINVOKE.Finger_HandSide_set(swigCPtr, value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      string ret = EfficioPINVOKE.Finger_HandSide_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
+  public string GetFingerNameString() {
+    string ret = EfficioPINVOKE.Finger_GetFingerNameString(swigCPtr);
+    return ret;
+  }
+
+  public string GetJointNameString(JointName jointName) {
+    string ret = EfficioPINVOKE.Finger_GetJointNameString(swigCPtr, (int)jointName);
+    return ret;
   }
 
 }

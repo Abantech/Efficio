@@ -43,18 +43,17 @@ public class Hand : global::System.IDisposable {
   public Hand() : this(EfficioPINVOKE.new_Hand__SWIG_0(), true) {
   }
 
-  public Hand(SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t fingers, BodySide side) : this(EfficioPINVOKE.new_Hand__SWIG_1(SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t.getCPtr(fingers), (int)side), true) {
+  public Hand(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t fingers, BodySide side) : this(EfficioPINVOKE.new_Hand__SWIG_1(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.getCPtr(fingers), (int)side), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t Fingers {
+  public SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t Fingers {
     set {
-      EfficioPINVOKE.Hand_Fingers_set(swigCPtr, SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t.getCPtr(value));
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      EfficioPINVOKE.Hand_Fingers_set(swigCPtr, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.getCPtr(value));
     } 
     get {
-      SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t ret = new SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t(EfficioPINVOKE.Hand_Fingers_get(swigCPtr), true);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      global::System.IntPtr cPtr = EfficioPINVOKE.Hand_Fingers_get(swigCPtr);
+      SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t(cPtr, false);
       return ret;
     } 
   }

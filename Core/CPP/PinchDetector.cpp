@@ -20,8 +20,8 @@ namespace Efficio
 						{
 							for (size_t j = i + 1; j < 5; j++)
 							{
-								auto finger1Distal = hand.Fingers[i].GetJointPosition("Distal");
-								auto finger2Distal = hand.Fingers[j].GetJointPosition("Distal");
+								auto finger1Distal = hand.Fingers[i].GetJointPosition(Efficio::Models::Human::JointName::Distal);
+								auto finger2Distal = hand.Fingers[j].GetJointPosition(Efficio::Models::Human::JointName::Distal);
 								if (finger1Distal.DistanceTo(finger2Distal) < 15)
 								{
 									Efficio::Vector3 position = finger1Distal;

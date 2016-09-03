@@ -90,26 +90,26 @@
     <ClCompile Include="Device.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LeapMotionDevice.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DeviceManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Hand.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Joint.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Finger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HandData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FingerJoint.cpp">
+    <ClCompile Include="Bone2.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hand.cpp">
+      <Filter>Models\Human</Filter>
+    </ClCompile>
+    <ClCompile Include="Finger.cpp">
+      <Filter>Models\Human</Filter>
+    </ClCompile>
+    <ClCompile Include="Joint.cpp">
+      <Filter>Models\Human</Filter>
+    </ClCompile>
+    <ClCompile Include="LeapMotionDevice.cpp">
+      <Filter>Header Files\Devices</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -188,8 +188,8 @@
     <ClInclude Include="Finger.h">
       <Filter>Models\Human</Filter>
     </ClInclude>
-    <ClInclude Include="FingerJoint.h">
-      <Filter>Models\Human</Filter>
+    <ClInclude Include="Bone2.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

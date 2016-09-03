@@ -8,18 +8,18 @@
 
 package Efficio.Java;
 
-public class SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t {
+public class SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t() {
+  protected SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

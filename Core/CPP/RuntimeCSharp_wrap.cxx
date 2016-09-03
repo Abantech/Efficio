@@ -786,18 +786,14 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Vector3_Z___(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint___(char * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint___(int jarg1, void * jarg2) {
   void * jresult ;
-  std::string arg1 ;
+  Efficio::Models::Human::JointName arg1 ;
   SwigValueWrapper< Efficio::Vector3 > arg2 ;
   Efficio::Vector3 *argp2 ;
   Efficio::Models::Human::Joint *result = 0 ;
   
-  if (!jarg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return 0;
-  }
-  (&arg1)->assign(jarg1); 
+  arg1 = (Efficio::Models::Human::JointName)jarg1; 
   argp2 = (Efficio::Vector3 *)jarg2; 
   if (!argp2) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Vector3", 0);
@@ -818,29 +814,36 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Joint___(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Joint_Name_set___(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofNet_Joint_GetJointNameString___(void * jarg1) {
+  char * jresult ;
   Efficio::Models::Human::Joint *arg1 = (Efficio::Models::Human::Joint *) 0 ;
-  std::string *arg2 = 0 ;
+  std::string result;
   
   arg1 = (Efficio::Models::Human::Joint *)jarg1; 
-  if (!jarg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return ;
-  }
-  std::string arg2_str(jarg2);
-  arg2 = &arg2_str; 
-  if (arg1) (arg1)->Name = *arg2;
+  result = (arg1)->GetJointNameString();
+  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
+  return jresult;
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofNet_Joint_Name_get___(void * jarg1) {
-  char * jresult ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Joint_Name_set___(void * jarg1, int jarg2) {
   Efficio::Models::Human::Joint *arg1 = (Efficio::Models::Human::Joint *) 0 ;
-  std::string *result = 0 ;
+  Efficio::Models::Human::JointName arg2 ;
   
   arg1 = (Efficio::Models::Human::Joint *)jarg1; 
-  result = (std::string *) & ((arg1)->Name);
-  jresult = SWIG_csharp_string_callback(result->c_str()); 
+  arg2 = (Efficio::Models::Human::JointName)jarg2; 
+  if (arg1) (arg1)->Name = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Joint_Name_get___(void * jarg1) {
+  int jresult ;
+  Efficio::Models::Human::Joint *arg1 = (Efficio::Models::Human::Joint *) 0 ;
+  Efficio::Models::Human::JointName result;
+  
+  arg1 = (Efficio::Models::Human::Joint *)jarg1; 
+  result = (Efficio::Models::Human::JointName) ((arg1)->Name);
+  jresult = (int)result; 
   return jresult;
 }
 
@@ -880,14 +883,14 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Finger__SWIG_0___() {
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Finger__SWIG_1___(int jarg1, void * jarg2) {
   void * jresult ;
   Efficio::Models::Human::FingerName arg1 ;
-  SwigValueWrapper< std::map< std::string,Efficio::Vector3 > > arg2 ;
-  std::map< std::string,Efficio::Vector3 > *argp2 ;
+  SwigValueWrapper< std::vector< Efficio::Models::Human::Joint > > arg2 ;
+  std::vector< Efficio::Models::Human::Joint > *argp2 ;
   Efficio::Models::Human::Finger *result = 0 ;
   
   arg1 = (Efficio::Models::Human::FingerName)jarg1; 
-  argp2 = (std::map< std::string,Efficio::Vector3 > *)jarg2; 
+  argp2 = (std::vector< Efficio::Models::Human::Joint > *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::map< std::string,Efficio::Vector3 >", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< Efficio::Models::Human::Joint >", 0);
     return 0;
   }
   arg2 = *argp2; 
@@ -905,18 +908,14 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Finger___(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Finger_GetJointPosition___(void * jarg1, char * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Finger_GetJointPosition___(void * jarg1, int jarg2) {
   void * jresult ;
   Efficio::Models::Human::Finger *arg1 = (Efficio::Models::Human::Finger *) 0 ;
-  std::string arg2 ;
+  Efficio::Models::Human::JointName arg2 ;
   SwigValueWrapper< Efficio::Vector3 > result;
   
   arg1 = (Efficio::Models::Human::Finger *)jarg1; 
-  if (!jarg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return 0;
-  }
-  (&arg2)->assign(jarg2); 
+  arg2 = (Efficio::Models::Human::JointName)jarg2; 
   result = (arg1)->GetJointPosition(arg2);
   jresult = new Efficio::Vector3((const Efficio::Vector3 &)result); 
   return jresult;
@@ -945,29 +944,28 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Finger_Name_get___(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Finger_HandSide_set___(void * jarg1, char * jarg2) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofNet_Finger_GetFingerNameString___(void * jarg1) {
+  char * jresult ;
   Efficio::Models::Human::Finger *arg1 = (Efficio::Models::Human::Finger *) 0 ;
-  std::string *arg2 = 0 ;
+  std::string result;
   
   arg1 = (Efficio::Models::Human::Finger *)jarg1; 
-  if (!jarg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return ;
-  }
-  std::string arg2_str(jarg2);
-  arg2 = &arg2_str; 
-  if (arg1) (arg1)->HandSide = *arg2;
+  result = (arg1)->GetFingerNameString();
+  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
+  return jresult;
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofNet_Finger_HandSide_get___(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofNet_Finger_GetJointNameString___(void * jarg1, int jarg2) {
   char * jresult ;
   Efficio::Models::Human::Finger *arg1 = (Efficio::Models::Human::Finger *) 0 ;
-  std::string *result = 0 ;
+  Efficio::Models::Human::JointName arg2 ;
+  std::string result;
   
   arg1 = (Efficio::Models::Human::Finger *)jarg1; 
-  result = (std::string *) & ((arg1)->HandSide);
-  jresult = SWIG_csharp_string_callback(result->c_str()); 
+  arg2 = (Efficio::Models::Human::JointName)jarg2; 
+  result = (arg1)->GetJointNameString(arg2);
+  jresult = SWIG_csharp_string_callback((&result)->c_str()); 
   return jresult;
 }
 
@@ -984,14 +982,14 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Hand__SWIG_0___() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Hand__SWIG_1___(void * jarg1, int jarg2) {
   void * jresult ;
-  std::array< Efficio::Models::Human::Finger,5 > arg1 ;
+  SwigValueWrapper< std::vector< Efficio::Models::Human::Finger > > arg1 ;
   Efficio::Body::BodySide arg2 ;
-  std::array< Efficio::Models::Human::Finger,5 > *argp1 ;
+  std::vector< Efficio::Models::Human::Finger > *argp1 ;
   Efficio::Models::Human::Hand *result = 0 ;
   
-  argp1 = (std::array< Efficio::Models::Human::Finger,5 > *)jarg1; 
+  argp1 = (std::vector< Efficio::Models::Human::Finger > *)jarg1; 
   if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::array< Efficio::Models::Human::Finger,5 >", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< Efficio::Models::Human::Finger >", 0);
     return 0;
   }
   arg1 = *argp1; 
@@ -1012,28 +1010,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Hand___(void * jarg1) {
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Hand_Fingers_set___(void * jarg1, void * jarg2) {
   Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
-  std::array< Efficio::Models::Human::Finger,5 > arg2 ;
-  std::array< Efficio::Models::Human::Finger,5 > *argp2 ;
+  std::vector< Efficio::Models::Human::Finger > *arg2 = (std::vector< Efficio::Models::Human::Finger > *) 0 ;
   
   arg1 = (Efficio::Models::Human::Hand *)jarg1; 
-  argp2 = (std::array< Efficio::Models::Human::Finger,5 > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::array< Efficio::Models::Human::Finger,5 >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->Fingers = arg2;
+  arg2 = (std::vector< Efficio::Models::Human::Finger > *)jarg2; 
+  if (arg1) (arg1)->Fingers = *arg2;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Hand_Fingers_get___(void * jarg1) {
   void * jresult ;
   Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
-  std::array< Efficio::Models::Human::Finger,5 > result;
+  std::vector< Efficio::Models::Human::Finger > *result = 0 ;
   
   arg1 = (Efficio::Models::Human::Hand *)jarg1; 
-  result =  ((arg1)->Fingers);
-  jresult = new std::array< Efficio::Models::Human::Finger,5 >((const std::array< Efficio::Models::Human::Finger,5 > &)result); 
+  result = (std::vector< Efficio::Models::Human::Finger > *)& ((arg1)->Fingers);
+  jresult = (void *)result; 
   return jresult;
 }
 

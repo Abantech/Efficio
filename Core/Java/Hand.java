@@ -39,16 +39,17 @@ public class Hand {
     this(EfficioJNI.new_Hand__SWIG_0(), true);
   }
 
-  public Hand(SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t fingers, BodySide side) {
-    this(EfficioJNI.new_Hand__SWIG_1(SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t.getCPtr(fingers), side.swigValue()), true);
+  public Hand(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t fingers, BodySide side) {
+    this(EfficioJNI.new_Hand__SWIG_1(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.getCPtr(fingers), side.swigValue()), true);
   }
 
-  public void setFingers(SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t value) {
-    EfficioJNI.Hand_Fingers_set(swigCPtr, this, SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t.getCPtr(value));
+  public void setFingers(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t value) {
+    EfficioJNI.Hand_Fingers_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.getCPtr(value));
   }
 
-  public SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t getFingers() {
-    return new SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t(EfficioJNI.Hand_Fingers_get(swigCPtr, this), true);
+  public SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t getFingers() {
+    long cPtr = EfficioJNI.Hand_Fingers_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t(cPtr, false);
   }
 
   public void setSide(BodySide value) {

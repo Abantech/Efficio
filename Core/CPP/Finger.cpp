@@ -1,4 +1,5 @@
 #include "Finger.h"
+#include "Joint.h"
 
 namespace Efficio
 {
@@ -9,15 +10,53 @@ namespace Efficio
 			Finger::Finger()
 			{
 			}
-			Finger::Finger(FingerName fingerName, std::map<std::string, Efficio::Vector3> jointPositions) : Name(fingerName), jointPositions(jointPositions)
+			//Finger::Finger(FingerName fingerName, std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions) : Name(fingerName), jointPositions(jointPositions)
+			//{
+			//}
+			Finger::Finger(FingerName fingerName, std::vector<Efficio::Models::Human::Joint> joints) : Name(fingerName), Joints(joints)
 			{
 			}
 			Finger::~Finger()
 			{
 			}
-			Efficio::Vector3 Finger::GetJointPosition(std::string jointName)
+			Efficio::Vector3 Finger::GetJointPosition(Efficio::Models::Human::JointName jointName)
 			{
-				return jointPositions.at(jointName);
+				for each (Efficio::Models::Human::Joint joint in Joints)
+				{
+					if (joint.Name == jointName)
+					{
+						return joint.Position;
+					}
+				}
+
+				std::string error;
+				error = "EFFICIO: No such joint name ('" + GetJointNameString(jointName) + "') found in finger " + GetFingerNameString();
+				throw std::invalid_argument(error);
+			}
+
+			std::string Finger::GetFingerNameString()
+			{
+				switch (Name)
+				{
+					case FingerName::Thumb	: return "Thumb";
+					case FingerName::Index	: return "Index";
+					case FingerName::Middle	: return "Middle";
+					case FingerName::Ring	: return "Ring";
+					case FingerName::Pinky	: return "Pinky";
+					default:      return "Unknown Finger Type";
+				}
+			}
+
+			std::string Finger::GetJointNameString(Efficio::Models::Human::JointName jointName)
+			{
+				switch (jointName)
+				{
+				case Efficio::Models::Human::JointName::Distal: return "Distal";
+				case Efficio::Models::Human::JointName::Intermediate: return "Intermediate";
+				case Efficio::Models::Human::JointName::Proximal: return "Proximal";
+				case Efficio::Models::Human::JointName::Metacarpal: return "Metacarpal";
+				default:      return "Unknown or non existent Joint Type";
+				}
 			}
 		}
 	}

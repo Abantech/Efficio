@@ -1,5 +1,4 @@
 #include "Joint.h"
-// #include "Bone2.h"
 
 namespace Efficio
 {
@@ -7,19 +6,23 @@ namespace Efficio
 	{
 		namespace Human
 		{
-			Joint::Joint(std::string name, Vector3 position) : Name(name), Position(position)
+			Joint::Joint(Efficio::Models::Human::JointName name, Vector3 position) : Name(name), Position(position)
 			{
-				//if (!Bone.IsInitialized)//HOW TO NULL CHECK!?
-				//{
-				//	Bone = Bone2(name, *this);
-				//}
-				//else
-				//{
-				//	Bone.EndJoint = *this;
-				//}
 			}
 			Joint::~Joint()
 			{
+			}
+
+			std::string Joint::GetJointNameString()
+			{
+				switch (Name)
+				{
+					case JointName::Distal: return "Distal";
+					case JointName::Intermediate: return "Intermediate";
+					case JointName::Proximal: return "Proximal";
+					case JointName::Metacarpal: return "Metacarpal";
+					default:      return "Unknown or non existent Joint Type";
+				}
 			}
 		}
 	}

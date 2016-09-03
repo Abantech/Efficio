@@ -3,7 +3,6 @@
 #include <map>
 #include "Vector3.h"
 #include "Joint.h"
-#include "Bone2.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -30,14 +29,16 @@ namespace Efficio
 			{
 			public:
 				Finger();
-				Finger(FingerName fingerName, std::map<std::string, Efficio::Vector3> jointPositions);
+				//Finger(FingerName fingerName, std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions);
+				Finger(FingerName fingerName, std::vector<Efficio::Models::Human::Joint> joints);
 				~Finger();
-				Efficio::Vector3 GetJointPosition(std::string jointName);
+				Efficio::Vector3 GetJointPosition(Efficio::Models::Human::JointName jointName);
 				FingerName Name;
-				//TODO: Check if this is what's causing memory corruption issues std::map<std::string, Efficio::Models::Human::Bone2> Bones;
-				std::string HandSide;
+				std::string GetFingerNameString();
+				std::string GetJointNameString(Efficio::Models::Human::JointName jointName);
 			private:
-				std::map<std::string, Efficio::Vector3> jointPositions;
+				std::vector<Efficio::Models::Human::Joint> Joints;
+				//std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions;
 			};
 		}
 	}

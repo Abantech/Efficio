@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Vector3.h"
-//#include "Bone2.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -15,14 +14,22 @@ namespace Efficio
 	{
 		namespace Human
 		{
+			extern enum class DLLEXPORT JointName
+			{
+				Distal,
+				Intermediate,
+				Proximal,
+				Metacarpal
+			};
+
 			extern class DLLEXPORT Joint
 			{
 			public:
-				Joint(std::string name, Vector3 position);
+				Joint(Efficio::Models::Human::JointName name, Vector3 position);
 				~Joint();
-				std::string Name;
+				std::string GetJointNameString();
+				JointName Name;
 				Vector3 Position;
-				//Efficio::Models::Human::Bone2 Bone;
 			private:
 
 			};

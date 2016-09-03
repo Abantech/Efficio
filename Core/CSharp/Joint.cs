@@ -40,18 +40,21 @@ public class Joint : global::System.IDisposable {
     }
   }
 
-  public Joint(string name, Vector3 position) : this(EfficioPINVOKE.new_Joint(name, Vector3.getCPtr(position)), true) {
+  public Joint(JointName name, Vector3 position) : this(EfficioPINVOKE.new_Joint((int)name, Vector3.getCPtr(position)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public string Name {
+  public string GetJointNameString() {
+    string ret = EfficioPINVOKE.Joint_GetJointNameString(swigCPtr);
+    return ret;
+  }
+
+  public JointName Name {
     set {
-      EfficioPINVOKE.Joint_Name_set(swigCPtr, value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      EfficioPINVOKE.Joint_Name_set(swigCPtr, (int)value);
     } 
     get {
-      string ret = EfficioPINVOKE.Joint_Name_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      JointName ret = (JointName)EfficioPINVOKE.Joint_Name_get(swigCPtr);
       return ret;
     } 
   }
