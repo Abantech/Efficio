@@ -18,7 +18,7 @@ namespace Efficio
 
 	std::vector<std::shared_ptr<Efficio::Models::Human::Hand>> EfficioFrame::GetHands()
 	{
-		return std::vector<std::shared_ptr<Efficio::Models::Human::Hand>>();
+		return hands;
 	}
 
 	void EfficioFrame::AddEvent(std::shared_ptr<Efficio::Events::Event> eventPtr)

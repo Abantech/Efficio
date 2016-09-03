@@ -98,10 +98,11 @@
       <AdditionalDependencies>Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(LEAP_SDK)\lib\$(PlatformTarget)\Leap.dll" "$(TargetDir)"
+      <Command>
+	  xcopy /yr "$(LEAP_SDK)\lib\$(PlatformTarget)\Leap.dll" "$(TargetDir)"
 doxygen default.doxygen 2&gt;nul 1&gt;nul
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)..\CSharp" RuntimeCSharp.i
-swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)..\Java" RuntimeJava.i
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)\CSharp" RuntimeCSharp.i
+swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)\Java" RuntimeJava.i
 EXIT 0</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -122,10 +123,11 @@ EXIT 0</Command>
       <AdditionalDependencies>Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(LEAP_SDK)\lib\$(PlatformTarget)\Leap.dll" "$(TargetDir)"
+      <Command>
+	  xcopy /yr "$(LEAP_SDK)\lib\$(PlatformTarget)\Leap.dll" "$(TargetDir)"
 doxygen default.doxygen 2&gt;nul 1&gt;nul
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)..\CSharp" RuntimeCSharp.i
-swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)..\Java" RuntimeJava.i
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)\CSharp" RuntimeCSharp.i
+swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)\Java" RuntimeJava.i
 EXIT 0</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -150,10 +152,11 @@ EXIT 0</Command>
       <AdditionalDependencies>Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(LEAP_SDK)\lib\$(PlatformTarget)\Leap.dll" "$(TargetDir)"
+      <Command>
+	  xcopy /yr "$(LEAP_SDK)\lib\$(PlatformTarget)\Leap.dll" "$(TargetDir)"
 doxygen default.doxygen 2&gt;nul 1&gt;nul
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)..\CSharp" RuntimeCSharp.i
-swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)..\Java" RuntimeJava.i
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)\CSharp" RuntimeCSharp.i
+swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)\Java" RuntimeJava.i
 EXIT 0</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -178,10 +181,11 @@ EXIT 0</Command>
       <AdditionalDependencies>Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(LEAP_SDK)\lib\$(PlatformTarget)\Leap.dll" "$(TargetDir)"
+      <Command>
+	  xcopy /yr "$(LEAP_SDK)\lib\$(PlatformTarget)\Leap.dll" "$(TargetDir)"
 doxygen default.doxygen 2&gt;nul 1&gt;nul
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)..\CSharp" RuntimeCSharp.i
-swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)..\Java" RuntimeJava.i
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)\CSharp" RuntimeCSharp.i
+swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)\Java" RuntimeJava.i
 EXIT 0</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

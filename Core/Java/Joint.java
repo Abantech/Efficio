@@ -35,16 +35,16 @@ public class Joint {
     }
   }
 
-  public Joint(JointName name, Vector3 position) {
-    this(EfficioJNI.new_Joint(name.swigValue(), Vector3.getCPtr(position), position), true);
+  public Joint(String name, Vector3 position) {
+    this(EfficioJNI.new_Joint(name, Vector3.getCPtr(position), position), true);
   }
 
-  public void setName(JointName value) {
-    EfficioJNI.Joint_Name_set(swigCPtr, this, value.swigValue());
+  public void setName(String value) {
+    EfficioJNI.Joint_Name_set(swigCPtr, this, value);
   }
 
-  public JointName getName() {
-    return JointName.swigToEnum(EfficioJNI.Joint_Name_get(swigCPtr, this));
+  public String getName() {
+    return EfficioJNI.Joint_Name_get(swigCPtr, this);
   }
 
   public void setPosition(Vector3 value) {

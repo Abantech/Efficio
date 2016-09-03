@@ -2,6 +2,7 @@
 
 #include "Vector3.h"
 #include <array>
+#include <memory>
 #include "Finger.h"
 #include "Enumerations.h"
 
@@ -27,6 +28,8 @@ namespace Efficio
 				~Hand();
 				std::array<Efficio::Models::Human::Finger, 5> Fingers;
 				Efficio::Body::BodySide Side;
+				//void AddFinger(std::shared_ptr<Efficio::Models::Human::Finger> fingerPtr);
+				std::vector<Efficio::Models::Human::Finger> GetFingers();
 			private:
 			};
 		}

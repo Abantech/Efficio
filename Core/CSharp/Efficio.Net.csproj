@@ -93,6 +93,7 @@
     <Compile Include="DeviceStatus.cs" />
     <Compile Include="DiscreteGesture.cs" />
     <Compile Include="Efficio.cs" />
+    <Compile Include="EfficioFrame.cs" />
     <Compile Include="EfficioPINVOKE.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="Event.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="GestureState.cs" />
     <Compile Include="GestureType.cs" />
     <Compile Include="Hand.cs" />
+    <Compile Include="HandCollection.cs" />
     <Compile Include="HandData.cs" />
     <Compile Include="Joint.cs" />
     <Compile Include="JointName.cs" />
@@ -114,7 +116,11 @@
     <Compile Include="SWIGHelper.cs" />
     <Compile Include="SWIGTYPE_p_std__arrayT_Efficio__Models__Human__Finger_5_t.cs" />
     <Compile Include="SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t.cs" />
+    <Compile Include="SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t.cs" />
+    <Compile Include="SWIGTYPE_p_std__mapT_std__string_Efficio__Vector3_t.cs" />
+    <Compile Include="SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Hand_t.cs" />
     <Compile Include="SWIGTYPE_p_std__time_t.cs" />
+    <Compile Include="SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.cs" />
     <Compile Include="SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Hand_t.cs" />
     <Compile Include="TestCSharpApp\Program.cs" />
     <Compile Include="TestCSharpApp\Properties\AssemblyInfo.cs" />

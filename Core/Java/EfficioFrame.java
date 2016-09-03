@@ -43,8 +43,16 @@ public class EfficioFrame {
     return new EventCollection(EfficioJNI.EfficioFrame_GetEvents(swigCPtr, this), true);
   }
 
+  public HandCollection GetHands() {
+    return new HandCollection(EfficioJNI.EfficioFrame_GetHands(swigCPtr, this), true);
+  }
+
   public void AddEvent(Event eventPtr) {
     EfficioJNI.EfficioFrame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
+  }
+
+  public void AddHand(SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Hand_t handPtr) {
+    EfficioJNI.EfficioFrame_AddHand(swigCPtr, this, SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Hand_t.getCPtr(handPtr));
   }
 
   public void setID(int value) {

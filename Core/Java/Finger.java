@@ -39,12 +39,12 @@ public class Finger {
     this(EfficioJNI.new_Finger__SWIG_0(), true);
   }
 
-  public Finger(FingerName fingerName, SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t jointPositions) {
-    this(EfficioJNI.new_Finger__SWIG_1(fingerName.swigValue(), SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t.getCPtr(jointPositions)), true);
+  public Finger(FingerName fingerName, SWIGTYPE_p_std__mapT_std__string_Efficio__Vector3_t jointPositions) {
+    this(EfficioJNI.new_Finger__SWIG_1(fingerName.swigValue(), SWIGTYPE_p_std__mapT_std__string_Efficio__Vector3_t.getCPtr(jointPositions)), true);
   }
 
-  public Vector3 GetJointPosition(JointName jointName) {
-    return new Vector3(EfficioJNI.Finger_GetJointPosition(swigCPtr, this, jointName.swigValue()), true);
+  public Vector3 GetJointPosition(String jointName) {
+    return new Vector3(EfficioJNI.Finger_GetJointPosition(swigCPtr, this, jointName), true);
   }
 
   public void setName(FingerName value) {
@@ -53,6 +53,22 @@ public class Finger {
 
   public FingerName getName() {
     return FingerName.swigToEnum(EfficioJNI.Finger_Name_get(swigCPtr, this));
+  }
+
+  public void setBones(SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t value) {
+    EfficioJNI.Finger_Bones_set(swigCPtr, this, SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t getBones() {
+    return new SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t(EfficioJNI.Finger_Bones_get(swigCPtr, this), true);
+  }
+
+  public void setHandSide(String value) {
+    EfficioJNI.Finger_HandSide_set(swigCPtr, this, value);
+  }
+
+  public String getHandSide() {
+    return EfficioJNI.Finger_HandSide_get(swigCPtr, this);
   }
 
 }

@@ -120,6 +120,7 @@ namespace Efficio
 		for (size_t i = 0; i < 5; i++)
 		{
 			auto finger = CopyFinger(side, hand.fingers()[i]);
+
 			fingers.at(i) = finger;
 			
 		}

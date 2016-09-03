@@ -69,6 +69,11 @@ public class Hand : global::System.IDisposable {
     } 
   }
 
+  public SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t GetFingers() {
+    SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t ret = new SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t(EfficioPINVOKE.Hand_GetFingers(swigCPtr), true);
+    return ret;
+  }
+
 }
 
 }
