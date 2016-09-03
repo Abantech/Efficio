@@ -29,6 +29,8 @@ namespace TestCSharpApp
                     disabledTime = DateTime.Now;
                 }
 
+                
+
                 // Disabled devices for 3 seconds when pinch detected
                 if ((DateTime.Now - disabledTime).Seconds > 3)
                 {

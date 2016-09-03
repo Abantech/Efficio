@@ -60,6 +60,8 @@ namespace Efficio {
 							{
 								efficioFrame->AddEvent(pinches[j]);
 							}
+
+							efficioFrame->AddHand(std::shared_ptr<Efficio::Models::Human::Hand>(&hands[i]));
 						}
 					}
 				}
