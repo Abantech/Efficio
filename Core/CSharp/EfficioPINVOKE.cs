@@ -251,14 +251,35 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_GetJointNameString___")]
   public static extern string Finger_GetJointNameString(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_Joints_set___")]
+  public static extern void Finger_Joints_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_Joints_get___")]
+  public static extern global::System.IntPtr Finger_Joints_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Hand__SWIG_0___")]
   public static extern global::System.IntPtr new_Hand__SWIG_0();
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Hand__SWIG_1___")]
-  public static extern global::System.IntPtr new_Hand__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  public static extern global::System.IntPtr new_Hand__SWIG_1(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Hand__SWIG_2___")]
+  public static extern global::System.IntPtr new_Hand__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_Hand___")]
   public static extern void delete_Hand(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_GetFingers___")]
+  public static extern global::System.IntPtr Hand_GetFingers(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_AddFinger___")]
+  public static extern void Hand_AddFinger(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_Side_set___")]
+  public static extern void Hand_Side_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_Side_get___")]
+  public static extern int Hand_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_Fingers_set___")]
   public static extern void Hand_Fingers_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -266,11 +287,11 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_Fingers_get___")]
   public static extern global::System.IntPtr Hand_Fingers_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_Side_set___")]
-  public static extern void Hand_Side_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_IsLeftHand_set___")]
+  public static extern void Hand_IsLeftHand_set(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_Side_get___")]
-  public static extern int Hand_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Hand_IsLeftHand_get___")]
+  public static extern bool Hand_IsLeftHand_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_HandData___")]
   public static extern global::System.IntPtr new_HandData();
@@ -574,6 +595,138 @@ class EfficioPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_HandCollection___")]
   public static extern void delete_HandCollection(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_Clear___")]
+  public static extern void FingerCollection_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_Add___")]
+  public static extern void FingerCollection_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_size___")]
+  public static extern uint FingerCollection_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_capacity___")]
+  public static extern uint FingerCollection_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_reserve___")]
+  public static extern void FingerCollection_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_FingerCollection__SWIG_0___")]
+  public static extern global::System.IntPtr new_FingerCollection__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_FingerCollection__SWIG_1___")]
+  public static extern global::System.IntPtr new_FingerCollection__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_FingerCollection__SWIG_2___")]
+  public static extern global::System.IntPtr new_FingerCollection__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_getitemcopy___")]
+  public static extern global::System.IntPtr FingerCollection_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_getitem___")]
+  public static extern global::System.IntPtr FingerCollection_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_setitem___")]
+  public static extern void FingerCollection_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_AddRange___")]
+  public static extern void FingerCollection_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_GetRange___")]
+  public static extern global::System.IntPtr FingerCollection_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_Insert___")]
+  public static extern void FingerCollection_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_InsertRange___")]
+  public static extern void FingerCollection_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_RemoveAt___")]
+  public static extern void FingerCollection_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_RemoveRange___")]
+  public static extern void FingerCollection_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_Repeat___")]
+  public static extern global::System.IntPtr FingerCollection_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_Reverse__SWIG_0___")]
+  public static extern void FingerCollection_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_Reverse__SWIG_1___")]
+  public static extern void FingerCollection_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_FingerCollection_SetRange___")]
+  public static extern void FingerCollection_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_FingerCollection___")]
+  public static extern void delete_FingerCollection(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_Clear___")]
+  public static extern void JointCollection_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_Add___")]
+  public static extern void JointCollection_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_size___")]
+  public static extern uint JointCollection_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_capacity___")]
+  public static extern uint JointCollection_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_reserve___")]
+  public static extern void JointCollection_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_JointCollection__SWIG_0___")]
+  public static extern global::System.IntPtr new_JointCollection__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_JointCollection__SWIG_1___")]
+  public static extern global::System.IntPtr new_JointCollection__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_JointCollection__SWIG_2___")]
+  public static extern global::System.IntPtr new_JointCollection__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_getitemcopy___")]
+  public static extern global::System.IntPtr JointCollection_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_getitem___")]
+  public static extern global::System.IntPtr JointCollection_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_setitem___")]
+  public static extern void JointCollection_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_AddRange___")]
+  public static extern void JointCollection_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_GetRange___")]
+  public static extern global::System.IntPtr JointCollection_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_Insert___")]
+  public static extern void JointCollection_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_InsertRange___")]
+  public static extern void JointCollection_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_RemoveAt___")]
+  public static extern void JointCollection_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_RemoveRange___")]
+  public static extern void JointCollection_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_Repeat___")]
+  public static extern global::System.IntPtr JointCollection_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_Reverse__SWIG_0___")]
+  public static extern void JointCollection_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_Reverse__SWIG_1___")]
+  public static extern void JointCollection_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_JointCollection_SetRange___")]
+  public static extern void JointCollection_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_JointCollection___")]
+  public static extern void delete_JointCollection(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EventCollection_Clear___")]
   public static extern void EventCollection_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);

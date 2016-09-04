@@ -281,6 +281,34 @@ SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg
                 else
                     throw std::out_of_range("vector index out of range");
             }
+SWIGINTERN std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::const_reference std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Finger_Sg__Sg__get(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Finger_Sg__Sg__set(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *self,int i,std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::const_reference std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Joint_Sg__Sg__get(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *self,int i){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    return (*self)[i];
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Joint_Sg__Sg__set(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *self,int i,std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type const &val){
+                int size = int(self->size());
+                if (i>=0 && i<size)
+                    (*self)[i] = val;
+                else
+                    throw std::out_of_range("vector index out of range");
+            }
 SWIGINTERN std::vector< std::shared_ptr< Efficio::Events::Event > >::const_reference std_vector_Sl_std_shared_ptr_Sl_Efficio_Events_Event_Sg__Sg__get(std::vector< std::shared_ptr< Efficio::Events::Event > > *self,int i){
                 int size = int(self->size());
                 if (i>=0 && i<size)
@@ -542,19 +570,20 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger_1_1SWIG_10(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   Efficio::Models::Human::FingerName arg1 ;
-  SwigValueWrapper< std::vector< Efficio::Models::Human::Joint > > arg2 ;
-  std::vector< Efficio::Models::Human::Joint > *argp2 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > arg2 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *argp2 ;
   Efficio::Models::Human::Finger *result = 0 ;
   
   (void)jenv;
   (void)jcls;
+  (void)jarg2_;
   arg1 = (Efficio::Models::Human::FingerName)jarg1; 
-  argp2 = *(std::vector< Efficio::Models::Human::Joint > **)&jarg2; 
+  argp2 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg2; 
   if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< Efficio::Models::Human::Joint >");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >");
     return 0;
   }
   arg2 = *argp2; 
@@ -651,6 +680,35 @@ SWIGEXPORT jstring JNICALL Java_Efficio_Java_EfficioJNI_Finger_1GetJointNameStri
 }
 
 
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_Finger_1Joints_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  Efficio::Models::Human::Finger *arg1 = (Efficio::Models::Human::Finger *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg2 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(Efficio::Models::Human::Finger **)&jarg1; 
+  arg2 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg2; 
+  if (arg1) (arg1)->Joints = *arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1Joints_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Models::Human::Finger *arg1 = (Efficio::Models::Human::Finger *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Human::Finger **)&jarg1; 
+  result = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *)& ((arg1)->Joints);
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Efficio::Models::Human::Hand *result = 0 ;
@@ -663,18 +721,33 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand_1_1SWIG_10(JNIEn
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jint jarg1) {
   jlong jresult = 0 ;
-  SwigValueWrapper< std::vector< Efficio::Models::Human::Finger > > arg1 ;
-  Efficio::Body::BodySide arg2 ;
-  std::vector< Efficio::Models::Human::Finger > *argp1 ;
+  Efficio::Body::BodySide arg1 ;
   Efficio::Models::Human::Hand *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  argp1 = *(std::vector< Efficio::Models::Human::Finger > **)&jarg1; 
+  arg1 = (Efficio::Body::BodySide)jarg1; 
+  result = (Efficio::Models::Human::Hand *)new Efficio::Models::Human::Hand(arg1);
+  *(Efficio::Models::Human::Hand **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > arg1 ;
+  Efficio::Body::BodySide arg2 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *argp1 ;
+  Efficio::Models::Human::Hand *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  argp1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
   if (!argp1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< Efficio::Models::Human::Finger >");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >");
     return 0;
   }
   arg1 = *argp1; 
@@ -695,31 +768,37 @@ SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_delete_1Hand(JNIEnv *jenv, 
 }
 
 
-SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Fingers_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Hand_1GetFingers(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
   Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
-  std::vector< Efficio::Models::Human::Finger > *arg2 = (std::vector< Efficio::Models::Human::Finger > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(Efficio::Models::Human::Hand **)&jarg1; 
-  arg2 = *(std::vector< Efficio::Models::Human::Finger > **)&jarg2; 
-  if (arg1) (arg1)->Fingers = *arg2;
+  result = (arg1)->GetFingers();
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jresult = new std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >((const std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > &)result); 
+  return jresult;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Fingers_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_Hand_1AddFinger(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
-  std::vector< Efficio::Models::Human::Finger > *result = 0 ;
+  SwigValueWrapper< std::shared_ptr< Efficio::Models::Human::Finger > > arg2 ;
+  std::shared_ptr< Efficio::Models::Human::Finger > *argp2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(Efficio::Models::Human::Hand **)&jarg1; 
-  result = (std::vector< Efficio::Models::Human::Finger > *)& ((arg1)->Fingers);
-  *(std::vector< Efficio::Models::Human::Finger > **)&jresult = result; 
-  return jresult;
+  argp2 = *(std::shared_ptr< Efficio::Models::Human::Finger > **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::shared_ptr< Efficio::Models::Human::Finger >");
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->AddFinger(arg2);
 }
 
 
@@ -747,6 +826,63 @@ SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Side_1get(JNIEnv *jen
   arg1 = *(Efficio::Models::Human::Hand **)&jarg1; 
   result = (Efficio::Body::BodySide) ((arg1)->Side);
   jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Fingers_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg2 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(Efficio::Models::Human::Hand **)&jarg1; 
+  arg2 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg2; 
+  if (arg1) (arg1)->Fingers = *arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Fingers_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Human::Hand **)&jarg1; 
+  result = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *)& ((arg1)->Fingers);
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_Hand_1IsLeftHand_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+  Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
+  bool arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Human::Hand **)&jarg1; 
+  arg2 = jarg2 ? true : false; 
+  if (arg1) (arg1)->IsLeftHand = arg2;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_Efficio_Java_EfficioJNI_Hand_1IsLeftHand_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  Efficio::Models::Human::Hand *arg1 = (Efficio::Models::Human::Hand *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Human::Hand **)&jarg1; 
+  result = (bool) ((arg1)->IsLeftHand);
+  jresult = (jboolean)result; 
   return jresult;
 }
 
@@ -2181,6 +2317,350 @@ SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_delete_1HandCollection(JNIE
   (void)jenv;
   (void)jcls;
   arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1FingerCollection_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *)new std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >();
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1FingerCollection_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::size_type arg1 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::size_type)jarg1; 
+  result = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *)new std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >(arg1);
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_FingerCollection_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  result = ((std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_FingerCollection_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  result = ((std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_FingerCollection_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  arg2 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_Efficio_Java_EfficioJNI_FingerCollection_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  result = (bool)((std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_FingerCollection_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_FingerCollection_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  arg2 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_FingerCollection_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  int arg2 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type *) &std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Finger_Sg__Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_FingerCollection_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  int arg2 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::shared_ptr< Efficio::Models::Human::Finger > >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Finger_Sg__Sg__set(arg1,arg2,(std::shared_ptr< Efficio::Models::Human::Finger > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_delete_1FingerCollection(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Finger > > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1JointCollection_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *)new std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >();
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1JointCollection_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::size_type arg1 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::size_type)jarg1; 
+  result = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *)new std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >(arg1);
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_JointCollection_1size(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
+  result = ((std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > const *)arg1)->size();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_JointCollection_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::size_type result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
+  result = ((std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > const *)arg1)->capacity();
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_JointCollection_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::size_type arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
+  arg2 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_Efficio_Java_EfficioJNI_JointCollection_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
+  result = (bool)((std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > const *)arg1)->empty();
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_JointCollection_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_JointCollection_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type *arg2 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
+  arg2 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type const & reference is null");
+    return ;
+  } 
+  (arg1)->push_back((std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_JointCollection_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  int arg2 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type *) &std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Joint_Sg__Sg__get(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return 0;
+  }
+  
+  *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_JointCollection_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  int arg2 ;
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type *arg3 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "std::vector< std::shared_ptr< Efficio::Models::Human::Joint > >::value_type const & reference is null");
+    return ;
+  } 
+  try {
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Joint_Sg__Sg__set(arg1,arg2,(std::shared_ptr< Efficio::Models::Human::Joint > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_delete_1JointCollection(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(std::vector< std::shared_ptr< Efficio::Models::Human::Joint > > **)&jarg1; 
   delete arg1;
 }
 

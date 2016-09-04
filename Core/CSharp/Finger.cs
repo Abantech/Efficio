@@ -43,7 +43,7 @@ public class Finger : global::System.IDisposable {
   public Finger() : this(EfficioPINVOKE.new_Finger__SWIG_0(), true) {
   }
 
-  public Finger(FingerName fingerName, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t joints) : this(EfficioPINVOKE.new_Finger__SWIG_1((int)fingerName, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t.getCPtr(joints)), true) {
+  public Finger(FingerName fingerName, JointCollection joints) : this(EfficioPINVOKE.new_Finger__SWIG_1((int)fingerName, JointCollection.getCPtr(joints)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -70,6 +70,17 @@ public class Finger : global::System.IDisposable {
   public string GetJointNameString(JointName jointName) {
     string ret = EfficioPINVOKE.Finger_GetJointNameString(swigCPtr, (int)jointName);
     return ret;
+  }
+
+  public JointCollection Joints {
+    set {
+      EfficioPINVOKE.Finger_Joints_set(swigCPtr, JointCollection.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_Joints_get(swigCPtr);
+      JointCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new JointCollection(cPtr, false);
+      return ret;
+    } 
   }
 
 }

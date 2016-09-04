@@ -10,18 +10,18 @@
 
 namespace Efficio.Net {
 
-public class SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t {
+public class SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Joint_t {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t(global::System.IntPtr cPtr, bool futureUse) {
+  internal SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Joint_t(global::System.IntPtr cPtr, bool futureUse) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  protected SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t() {
+  protected SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Joint_t() {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_std__mapT_std__string_Efficio__Models__Human__Bone2_t obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Joint_t obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 }

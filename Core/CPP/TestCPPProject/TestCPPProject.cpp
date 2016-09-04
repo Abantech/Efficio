@@ -4,6 +4,8 @@
 #include "stdafx.h"
 #include "Engine.h"
 #include "Pinch.h"
+#include <string>
+#include <iostream>
 
 int main()
 {
@@ -16,6 +18,16 @@ int main()
 	while (true)
 	{
 		auto frame = engine.GetFrame();
+		auto realFrame = *engine.GetFrame();
+		
+		auto handsDetected = &realFrame.GetHands();
+		
+		//if (handsDetected.size > 0)
+		//{
+		//	std::string strMessage("Hands Detected! Count = " + handsDetected.size);
+		//	std::cout << strMessage;
+		//}
+		//Efficio::Models::Human::Joint currentJoint = *(Joints.at(i));
 
 		auto frame2 = engine.GetFrame(10);
 

@@ -13,19 +13,22 @@ namespace Efficio
 			//Finger::Finger(FingerName fingerName, std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions) : Name(fingerName), jointPositions(jointPositions)
 			//{
 			//}
-			Finger::Finger(FingerName fingerName, std::vector<Efficio::Models::Human::Joint> joints) : Name(fingerName), Joints(joints)
+			Finger::Finger(FingerName fingerName, std::vector<std::shared_ptr<Efficio::Models::Human::Joint>> joints) : Name(fingerName), Joints(joints)
 			{
 			}
 			Finger::~Finger()
 			{
 			}
+
 			Efficio::Vector3 Finger::GetJointPosition(Efficio::Models::Human::JointName jointName)
 			{
-				for each (Efficio::Models::Human::Joint joint in Joints)
+				for (int i = 0; i <= Joints.size(); i++)
 				{
-					if (joint.Name == jointName)
+					Efficio::Models::Human::Joint currentJoint = *(Joints.at(i));
+
+					if (currentJoint.Name == jointName)
 					{
-						return joint.Position;
+						return currentJoint.Position;
 					}
 				}
 

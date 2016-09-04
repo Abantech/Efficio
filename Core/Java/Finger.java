@@ -39,8 +39,8 @@ public class Finger {
     this(EfficioJNI.new_Finger__SWIG_0(), true);
   }
 
-  public Finger(FingerName fingerName, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t joints) {
-    this(EfficioJNI.new_Finger__SWIG_1(fingerName.swigValue(), SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Joint_t.getCPtr(joints)), true);
+  public Finger(FingerName fingerName, JointCollection joints) {
+    this(EfficioJNI.new_Finger__SWIG_1(fingerName.swigValue(), JointCollection.getCPtr(joints), joints), true);
   }
 
   public Vector3 GetJointPosition(JointName jointName) {
@@ -61,6 +61,15 @@ public class Finger {
 
   public String GetJointNameString(JointName jointName) {
     return EfficioJNI.Finger_GetJointNameString(swigCPtr, this, jointName.swigValue());
+  }
+
+  public void setJoints(JointCollection value) {
+    EfficioJNI.Finger_Joints_set(swigCPtr, this, JointCollection.getCPtr(value), value);
+  }
+
+  public JointCollection getJoints() {
+    long cPtr = EfficioJNI.Finger_Joints_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new JointCollection(cPtr, false);
   }
 
 }

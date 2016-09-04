@@ -1,6 +1,8 @@
 #pragma once
 
 #include <map>
+#include <vector>
+#include <memory>
 #include "Vector3.h"
 #include "Joint.h"
 
@@ -30,14 +32,14 @@ namespace Efficio
 			public:
 				Finger();
 				//Finger(FingerName fingerName, std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions);
-				Finger(FingerName fingerName, std::vector<Efficio::Models::Human::Joint> joints);
+				Finger(FingerName fingerName, std::vector<std::shared_ptr<Efficio::Models::Human::Joint>> joints);
 				~Finger();
 				Efficio::Vector3 GetJointPosition(Efficio::Models::Human::JointName jointName);
 				FingerName Name;
 				std::string GetFingerNameString();
 				std::string GetJointNameString(Efficio::Models::Human::JointName jointName);
+				std::vector<std::shared_ptr<Efficio::Models::Human::Joint>> Joints;
 			private:
-				std::vector<Efficio::Models::Human::Joint> Joints;
 				//std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions;
 			};
 		}

@@ -39,17 +39,20 @@ public class Hand {
     this(EfficioJNI.new_Hand__SWIG_0(), true);
   }
 
-  public Hand(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t fingers, BodySide side) {
-    this(EfficioJNI.new_Hand__SWIG_1(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.getCPtr(fingers), side.swigValue()), true);
+  public Hand(BodySide side) {
+    this(EfficioJNI.new_Hand__SWIG_1(side.swigValue()), true);
   }
 
-  public void setFingers(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t value) {
-    EfficioJNI.Hand_Fingers_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.getCPtr(value));
+  public Hand(FingerCollection fingers, BodySide side) {
+    this(EfficioJNI.new_Hand__SWIG_2(FingerCollection.getCPtr(fingers), fingers, side.swigValue()), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t getFingers() {
-    long cPtr = EfficioJNI.Hand_Fingers_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t(cPtr, false);
+  public FingerCollection GetFingers() {
+    return new FingerCollection(EfficioJNI.Hand_GetFingers(swigCPtr, this), true);
+  }
+
+  public void AddFinger(SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Finger_t fingerPtr) {
+    EfficioJNI.Hand_AddFinger(swigCPtr, this, SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Finger_t.getCPtr(fingerPtr));
   }
 
   public void setSide(BodySide value) {
@@ -58,6 +61,23 @@ public class Hand {
 
   public BodySide getSide() {
     return BodySide.swigToEnum(EfficioJNI.Hand_Side_get(swigCPtr, this));
+  }
+
+  public void setFingers(FingerCollection value) {
+    EfficioJNI.Hand_Fingers_set(swigCPtr, this, FingerCollection.getCPtr(value), value);
+  }
+
+  public FingerCollection getFingers() {
+    long cPtr = EfficioJNI.Hand_Fingers_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new FingerCollection(cPtr, false);
+  }
+
+  public void setIsLeftHand(boolean value) {
+    EfficioJNI.Hand_IsLeftHand_set(swigCPtr, this, value);
+  }
+
+  public boolean getIsLeftHand() {
+    return EfficioJNI.Hand_IsLeftHand_get(swigCPtr, this);
   }
 
 }

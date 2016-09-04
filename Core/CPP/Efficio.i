@@ -57,6 +57,8 @@
  %include "Device.h"
  
  %template(HandCollection) std::vector<std::shared_ptr<Efficio::Models::Human::Hand>>;
+ %template(FingerCollection) std::vector<std::shared_ptr<Efficio::Models::Human::Finger>>;
+ %template(JointCollection) std::vector<std::shared_ptr<Efficio::Models::Human::Joint>>;
  %template(EventCollection) std::vector<std::shared_ptr<Efficio::Events::Event>>;
  %template(GestureCollection) std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>>;
  %template(DeviceCollection) std::vector<std::shared_ptr<Efficio::Device>>;

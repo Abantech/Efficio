@@ -43,19 +43,21 @@ public class Hand : global::System.IDisposable {
   public Hand() : this(EfficioPINVOKE.new_Hand__SWIG_0(), true) {
   }
 
-  public Hand(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t fingers, BodySide side) : this(EfficioPINVOKE.new_Hand__SWIG_1(SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.getCPtr(fingers), (int)side), true) {
+  public Hand(BodySide side) : this(EfficioPINVOKE.new_Hand__SWIG_1((int)side), true) {
+  }
+
+  public Hand(FingerCollection fingers, BodySide side) : this(EfficioPINVOKE.new_Hand__SWIG_2(FingerCollection.getCPtr(fingers), (int)side), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t Fingers {
-    set {
-      EfficioPINVOKE.Hand_Fingers_set(swigCPtr, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Hand_Fingers_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Finger_t(cPtr, false);
-      return ret;
-    } 
+  public FingerCollection GetFingers() {
+    FingerCollection ret = new FingerCollection(EfficioPINVOKE.Hand_GetFingers(swigCPtr), true);
+    return ret;
+  }
+
+  public void AddFinger(SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Finger_t fingerPtr) {
+    EfficioPINVOKE.Hand_AddFinger(swigCPtr, SWIGTYPE_p_std__shared_ptrT_Efficio__Models__Human__Finger_t.getCPtr(fingerPtr));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public BodySide Side {
@@ -64,6 +66,27 @@ public class Hand : global::System.IDisposable {
     } 
     get {
       BodySide ret = (BodySide)EfficioPINVOKE.Hand_Side_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public FingerCollection Fingers {
+    set {
+      EfficioPINVOKE.Hand_Fingers_set(swigCPtr, FingerCollection.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.Hand_Fingers_get(swigCPtr);
+      FingerCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new FingerCollection(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public bool IsLeftHand {
+    set {
+      EfficioPINVOKE.Hand_IsLeftHand_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = EfficioPINVOKE.Hand_IsLeftHand_get(swigCPtr);
       return ret;
     } 
   }

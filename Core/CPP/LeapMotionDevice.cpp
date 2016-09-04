@@ -1,5 +1,7 @@
 #include "LeapMotionDevice.h"
 #include <array>
+#include <memory>
+#include <iostream>
 
 namespace Efficio
 {
@@ -114,18 +116,22 @@ namespace Efficio
 
 	Efficio::Models::Human::Hand LeapMotionDevice::CopyHand(Leap::Hand hand) {
 		//std::array<Efficio::Models::Human::Finger, 5> fingers;
-		std::vector<Efficio::Models::Human::Finger> fingers;
+		std::vector<std::shared_ptr<Efficio::Models::Human::Finger>> fingers;
+		Efficio::Body::BodySide side = hand.isLeft() ? Efficio::Body::BodySide::Left : Efficio::Body::BodySide::Right;
+		
 
 		for (size_t i = 0; i < 5; i++)
 		{
 			auto finger = CopyFinger(hand.fingers()[i]);
 
-			fingers.at(i) = finger;
+			std::shared_ptr<Efficio::Models::Human::Finger> fingerPtr(new Efficio::Models::Human::Finger(finger.Name, finger.Joints));
+			fingers.push_back(fingerPtr);
 		}
 
-		Efficio::Body::BodySide side = hand.isLeft() ? Efficio::Body::BodySide::Left : Efficio::Body::BodySide::Right;
+		Efficio::Models::Human::Hand effiCioHand(fingers, side);
+		effiCioHand.IsLeftHand = hand.isLeft();
 
-		return Efficio::Models::Human::Hand(fingers, side);
+		return effiCioHand;
 	}
 
 	Efficio::Models::Human::Finger LeapMotionDevice::CopyFinger(Leap::Finger finger) {
@@ -141,11 +147,15 @@ namespace Efficio
 		//joints.emplace(intermediate.Name, intermediate.Position);
 		//joints.emplace(distal.Name, distal.Position);
 		
-		std::vector<Efficio::Models::Human::Joint> joints;
-		joints.push_back(metacarpal);
-		joints.push_back(proximal);
-		joints.push_back(intermediate);
-		joints.push_back(distal);
+		std::vector<std::shared_ptr<Efficio::Models::Human::Joint>> joints;
+		std::shared_ptr<Efficio::Models::Human::Joint> metacarpalJointPtr(new Efficio::Models::Human::Joint(metacarpal.Name, metacarpal.Position));
+		std::shared_ptr<Efficio::Models::Human::Joint> proximalJointPtr(new Efficio::Models::Human::Joint(proximal.Name, proximal.Position));
+		std::shared_ptr<Efficio::Models::Human::Joint> intermediateJointPtr(new Efficio::Models::Human::Joint(intermediate.Name, intermediate.Position));
+		std::shared_ptr<Efficio::Models::Human::Joint> distalJointPtr(new Efficio::Models::Human::Joint(distal.Name, distal.Position));
+		joints.push_back(metacarpalJointPtr);
+		joints.push_back(proximalJointPtr);
+		joints.push_back(intermediateJointPtr);
+		joints.push_back(distalJointPtr);
 
 		Efficio::Models::Human::FingerName fingerName;
 
