@@ -78,6 +78,15 @@
     <ClCompile Include="RuntimeCSharp_wrap.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EfficioHand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EfficioFinger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HandJoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EfficioFrame.h">
@@ -127,6 +136,15 @@
     </ClInclude>
     <ClInclude Include="EventType.h">
       <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="EfficioHand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EfficioFinger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HandJoint.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
