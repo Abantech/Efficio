@@ -81,10 +81,10 @@
     <ClCompile Include="EfficioHand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HandJoint.cpp">
+    <ClCompile Include="EfficioFinger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EfficioFinger.cpp">
+    <ClCompile Include="HandJoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
