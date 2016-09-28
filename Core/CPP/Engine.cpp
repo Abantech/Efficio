@@ -3,6 +3,7 @@
 #include "Enumerations.h"
 #include "Vector3.h"
 #include "PinchDetector.h"
+#include "LeapMotionDevice.h"
 
 namespace Efficio {
 	Engine::Engine() : started(false), frameID(1)
@@ -11,14 +12,20 @@ namespace Efficio {
 
 	Engine::~Engine()
 	{
-		controller->~Controller();
+
 	}
 
 	void Engine::Start()
 	{
 		if (DeviceConfiguration.LeapConfiguration.Enabled)
 		{
-			controller = new Leap::Controller();
+			auto leapMotion = std::shared_ptr<Efficio::Device>(new Efficio::LeapMotionDevice());
+			DeviceManager.AddDevice(leapMotion);
+		}
+
+		for (size_t i = 0; i < DeviceManager.GetDevices().size(); i++)
+		{
+			DeviceManager.GetDevices()[i]->Connect();
 		}
 
 		started = true;
@@ -30,17 +37,20 @@ namespace Efficio {
 
 		if (started)
 		{
-			if (controller != 0)
+			auto connectedDevices = DeviceManager.GetDevicesWithStatus(Efficio::DeviceStatus::Connected);
+			for (size_t i = 0; i < connectedDevices.size(); i++)
 			{
-				auto frame = controller->frame();
+				auto device = connectedDevices[i];
 
-				if (frame.isValid())
+				if (device->HasFrame())
 				{
-					auto hands = frame.hands();
+					auto frame = device->GetFrame();
 
-					if (hands.count() > 0)
+					auto hands = frame.HandData.Hands;
+
+					if (hands.size() > 0)
 					{
-						for (size_t i = 0; i < hands.count(); i++)
+						for (size_t i = 0; i < hands.size(); i++)
 						{
 							Efficio::InputRecognition::Human::Hands::PinchDetector detector;
 							detector.Enabled = true;

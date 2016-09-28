@@ -86,7 +86,11 @@
   <ItemGroup>
     <Compile Include="BodySide.cs" />
     <Compile Include="BodyTrackingType.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="DeviceCollection.cs" />
     <Compile Include="DeviceConfiguration.cs" />
+    <Compile Include="DeviceManager.cs" />
+    <Compile Include="DeviceStatus.cs" />
     <Compile Include="DiscreteGesture.cs" />
     <Compile Include="Efficio.cs" />
     <Compile Include="EfficioFrame.cs" />
@@ -96,15 +100,20 @@
     <Compile Include="EventCollection.cs" />
     <Compile Include="EventType.cs" />
     <Compile Include="Finger.cs" />
+    <Compile Include="FingerName.cs" />
     <Compile Include="Frame.cs" />
     <Compile Include="Gesture.cs" />
     <Compile Include="GestureCollection.cs" />
     <Compile Include="GestureState.cs" />
     <Compile Include="GestureType.cs" />
+    <Compile Include="Hand.cs" />
+    <Compile Include="HandData.cs" />
+    <Compile Include="Joint.cs" />
+    <Compile Include="JointName.cs" />
     <Compile Include="LeapConfiguration.cs" />
     <Compile Include="Pinch.cs" />
     <Compile Include="SWIGHelper.cs" />
-    <Compile Include="SWIGTYPE_p_Leap__Hand.cs" />
+    <Compile Include="SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t.cs" />
     <Compile Include="SWIGTYPE_p_std__time_t.cs" />
     <Compile Include="TestCSharpApp\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="TestCSharpApp\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -117,6 +126,7 @@
     <Compile Include="TestCSharpApp\obj\x86\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="TestCSharpApp\Program.cs" />
     <Compile Include="TestCSharpApp\Properties\AssemblyInfo.cs" />
+    <Compile Include="TrackingType.cs" />
     <Compile Include="Vector3.cs" />
   </ItemGroup>
   <ItemGroup>

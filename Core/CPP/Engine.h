@@ -1,10 +1,12 @@
 #pragma once
 #include "EfficioFrame.h"
 #include "DeviceConfiguration.h"
+#include "Device.h"
 #include "Leap.h"
 #include <memory>
 #include "Event.h"
 #include "HistoricalFrameCollection.h"
+#include "DeviceManager.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -35,9 +37,11 @@ extern "C" {
 			/// The device configuration for Efficio.
 			Efficio::Configuration::DeviceConfiguration DeviceConfiguration;
 
+			/// The Device Manager
+			Efficio::DeviceManager DeviceManager;
+
 		private:
 			bool started;
-			Leap::Controller* controller;
 			HistoricalFrameCollection historicalFrames;
 			int frameID;
 		};

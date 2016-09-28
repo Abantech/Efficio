@@ -62,4 +62,13 @@ public class Engine {
     return (cPtr == 0) ? null : new DeviceConfiguration(cPtr, false);
   }
 
+  public void setDeviceManager(DeviceManager value) {
+    EfficioJNI.Engine_DeviceManager_set(swigCPtr, this, DeviceManager.getCPtr(value), value);
+  }
+
+  public DeviceManager getDeviceManager() {
+    long cPtr = EfficioJNI.Engine_DeviceManager_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new DeviceManager(cPtr, false);
+  }
+
 }

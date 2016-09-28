@@ -1,5 +1,6 @@
 #include "PinchDetector.h"
 #include "Pinch.h"
+#include "Hand.h"
 
 namespace Efficio
 {
@@ -9,7 +10,7 @@ namespace Efficio
 		{
 			namespace Hands
 			{
-				std::vector<std::shared_ptr<Gesture>> PinchDetector::Detect(Leap::Hand hand)
+				std::vector<std::shared_ptr<Gesture>> PinchDetector::Detect(Efficio::Models::Human::Hand hand)
 				{
 					std::vector<std::shared_ptr<Gesture>> gestures;
 
@@ -19,15 +20,12 @@ namespace Efficio
 						{
 							for (size_t j = i + 1; j < 5; j++)
 							{
-								if (hand.fingers()[i].stabilizedTipPosition().distanceTo(hand.fingers()[j].stabilizedTipPosition()) < 25)
+								auto finger1Distal = hand.Fingers[i].GetJointPosition(Efficio::Models::Human::JointName::Distal);
+								auto finger2Distal = hand.Fingers[j].GetJointPosition(Efficio::Models::Human::JointName::Distal);
+								if (finger1Distal.DistanceTo(finger2Distal) < 15)
 								{
-									Body::BodySide side = hand.isLeft() ? Body::BodySide::Left : Body::BodySide::Right;
-									auto tipPos = hand.fingers()[i].stabilizedTipPosition();
-									float x = tipPos.x;
-									float y = tipPos.y;
-									float z = tipPos.z;
-									Efficio::Vector3 position(x, y, z);
-									auto pinch = new Efficio::InputRecognition::Human::Hands::Pinch(side, FingerNames[i], FingerNames[j], position);
+									Efficio::Vector3 position = finger1Distal;
+									auto pinch = new Efficio::InputRecognition::Human::Hands::Pinch(hand.Side, hand.Fingers[i].Name, hand.Fingers[j].Name, position);
 									gestures.push_back(std::shared_ptr<Efficio::InputRecognition::Human::Hands::Pinch>(pinch));
 								}
 							}

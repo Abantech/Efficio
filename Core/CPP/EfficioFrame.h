@@ -13,7 +13,7 @@
 namespace Efficio
 {
 	/// Object containing all processed and raw signals
-	extern class DLLEXPORT EfficioFrame : public Frame
+	extern class DLLEXPORT EfficioFrame
 	{
 	public:
 		EfficioFrame(int ID);

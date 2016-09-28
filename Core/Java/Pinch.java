@@ -37,7 +37,7 @@ public class Pinch extends DiscreteGesture {
     super.delete();
   }
 
-  public Pinch(BodySide side, Finger finger1, Finger finger2, Vector3 position) {
+  public Pinch(BodySide side, FingerName finger1, FingerName finger2, Vector3 position) {
     this(EfficioJNI.new_Pinch(side.swigValue(), finger1.swigValue(), finger2.swigValue(), Vector3.getCPtr(position), position), true);
   }
 
@@ -50,20 +50,20 @@ public class Pinch extends DiscreteGesture {
     return (cPtr == 0) ? null : new Vector3(cPtr, false);
   }
 
-  public void setFinger1(Finger value) {
+  public void setFinger1(FingerName value) {
     EfficioJNI.Pinch_Finger1_set(swigCPtr, this, value.swigValue());
   }
 
-  public Finger getFinger1() {
-    return Finger.swigToEnum(EfficioJNI.Pinch_Finger1_get(swigCPtr, this));
+  public FingerName getFinger1() {
+    return FingerName.swigToEnum(EfficioJNI.Pinch_Finger1_get(swigCPtr, this));
   }
 
-  public void setFinger2(Finger value) {
+  public void setFinger2(FingerName value) {
     EfficioJNI.Pinch_Finger2_set(swigCPtr, this, value.swigValue());
   }
 
-  public Finger getFinger2() {
-    return Finger.swigToEnum(EfficioJNI.Pinch_Finger2_get(swigCPtr, this));
+  public FingerName getFinger2() {
+    return FingerName.swigToEnum(EfficioJNI.Pinch_Finger2_get(swigCPtr, this));
   }
 
   public EventType GetEventType() {

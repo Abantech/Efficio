@@ -10,12 +10,58 @@
 
 namespace Efficio.Net {
 
-public enum Finger {
-  Thumb,
-  Index,
-  Middle,
-  Ring,
-  Pinky
+public class Finger : global::System.IDisposable {
+  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  protected bool swigCMemOwn;
+
+  internal Finger(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwn = cMemoryOwn;
+    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+  }
+
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Finger obj) {
+    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+  }
+
+  ~Finger() {
+    Dispose();
+  }
+
+  public virtual void Dispose() {
+    lock(this) {
+      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
+        if (swigCMemOwn) {
+          swigCMemOwn = false;
+          EfficioPINVOKE.delete_Finger(swigCPtr);
+        }
+        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+      }
+      global::System.GC.SuppressFinalize(this);
+    }
+  }
+
+  public Finger() : this(EfficioPINVOKE.new_Finger__SWIG_0(), true) {
+  }
+
+  public Finger(FingerName fingerName, SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t jointPositions) : this(EfficioPINVOKE.new_Finger__SWIG_1((int)fingerName, SWIGTYPE_p_std__mapT_Efficio__Models__Human__JointName_Efficio__Vector3_t.getCPtr(jointPositions)), true) {
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public Vector3 GetJointPosition(JointName jointName) {
+    Vector3 ret = new Vector3(EfficioPINVOKE.Finger_GetJointPosition(swigCPtr, (int)jointName), true);
+    return ret;
+  }
+
+  public FingerName Name {
+    set {
+      EfficioPINVOKE.Finger_Name_set(swigCPtr, (int)value);
+    } 
+    get {
+      FingerName ret = (FingerName)EfficioPINVOKE.Finger_Name_get(swigCPtr);
+      return ret;
+    } 
+  }
+
 }
 
 }

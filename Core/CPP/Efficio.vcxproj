@@ -187,15 +187,22 @@ EXIT 0</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ContinuousGesture.cpp" />
+    <ClCompile Include="Device.cpp" />
     <ClCompile Include="DeviceConfiguration.cpp" />
+    <ClCompile Include="DeviceManager.cpp" />
     <ClCompile Include="DiscreteGesture.cpp" />
     <ClCompile Include="EfficioFrame.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
+    <ClCompile Include="Finger.cpp" />
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Gesture.cpp" />
+    <ClCompile Include="Hand.cpp" />
+    <ClCompile Include="HandData.cpp" />
     <ClCompile Include="HistoricalFrameCollection.cpp" />
+    <ClCompile Include="Joint.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
+    <ClCompile Include="LeapMotionDevice.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
     <ClCompile Include="PinchDetector.cpp" />
@@ -205,20 +212,29 @@ EXIT 0</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContinuousGesture.h" />
+    <ClInclude Include="Device.h" />
     <ClInclude Include="DeviceConfiguration.h" />
+    <ClInclude Include="DeviceManager.h" />
+    <ClInclude Include="DeviceStatus.h" />
     <ClInclude Include="DiscreteGesture.h" />
     <ClInclude Include="EfficioFrame.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Enumerations.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventType.h" />
+    <ClInclude Include="Finger.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
+    <ClInclude Include="Hand.h" />
+    <ClInclude Include="HandData.h" />
     <ClInclude Include="HistoricalFrameCollection.h" />
+    <ClInclude Include="Joint.h" />
     <ClInclude Include="LeapConfiguration.h" />
+    <ClInclude Include="LeapMotionDevice.h" />
     <ClInclude Include="Pinch.h" />
     <ClInclude Include="PinchDetector.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />
+    <ClInclude Include="TrackingType.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>

@@ -8,13 +8,12 @@
 
 package Efficio.Java;
 
-public class EfficioFrame extends Frame {
+public class EfficioFrame {
   private transient long swigCPtr;
-  private boolean swigCMemOwnDerived;
+  private transient boolean swigCMemOwn;
 
   protected EfficioFrame(long cPtr, boolean cMemoryOwn) {
-    super(EfficioJNI.EfficioFrame_SWIGSmartPtrUpcast(cPtr), true);
-    swigCMemOwnDerived = cMemoryOwn;
+    swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
@@ -28,13 +27,12 @@ public class EfficioFrame extends Frame {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwnDerived) {
-        swigCMemOwnDerived = false;
+      if (swigCMemOwn) {
+        swigCMemOwn = false;
         EfficioJNI.delete_EfficioFrame(swigCPtr);
       }
       swigCPtr = 0;
     }
-    super.delete();
   }
 
   public EfficioFrame(int ID) {

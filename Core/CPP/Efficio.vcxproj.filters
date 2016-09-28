@@ -28,6 +28,15 @@
     <Filter Include="Header Files\IRP\Human\Hands">
       <UniqueIdentifier>{905864fb-51b8-4c85-8fa7-586cc1329489}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Devices">
+      <UniqueIdentifier>{8433659b-7c77-4ea5-8798-51768d233db6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{64c95a13-34e7-46eb-9bb8-71fbb7c823f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models\Human">
+      <UniqueIdentifier>{f6405be0-6b5f-484e-a337-32a93ef8606c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceConfiguration.cpp">
@@ -76,6 +85,27 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RuntimeCSharp_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LeapMotionDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Joint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Finger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HandData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -127,6 +157,33 @@
     </ClInclude>
     <ClInclude Include="EventType.h">
       <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>Header Files\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceStatus.h">
+      <Filter>Header Files\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="TrackingType.h">
+      <Filter>Header Files\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="LeapMotionDevice.h">
+      <Filter>Header Files\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceManager.h">
+      <Filter>Header Files\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>Models\Human</Filter>
+    </ClInclude>
+    <ClInclude Include="Joint.h">
+      <Filter>Models\Human</Filter>
+    </ClInclude>
+    <ClInclude Include="HandData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Finger.h">
+      <Filter>Models\Human</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
