@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['id',['ID',['../class_efficio_1_1_device.html#ade0a5b10efa326ba8c4fdd9e37d89084',1,'Efficio::Device']]]
+  ['friendlyname',['FriendlyName',['../class_efficio_1_1_asset.html#abe108e35fcfba515f555136edb3b17a3',1,'Efficio::Asset']]]
 ];

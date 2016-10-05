@@ -48,4 +48,13 @@ public class Frame {
     return (cPtr == 0) ? null : new HandData(cPtr, false);
   }
 
+  public SWIGTYPE_p_Efficio__Data__Datum GetData(SWIGTYPE_p_Efficio__Data__DatumType dataType) {
+    long cPtr = EfficioJNI.Frame_GetData(swigCPtr, this, SWIGTYPE_p_Efficio__Data__DatumType.getCPtr(dataType));
+    return (cPtr == 0) ? null : new SWIGTYPE_p_Efficio__Data__Datum(cPtr, false);
+  }
+
+  public void AddData(SWIGTYPE_p_Efficio__Data__Datum datum) {
+    EfficioJNI.Frame_AddData(swigCPtr, this, SWIGTYPE_p_Efficio__Data__Datum.getCPtr(datum));
+  }
+
 }

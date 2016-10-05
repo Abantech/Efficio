@@ -1,7 +1,8 @@
 #include "Location.h"
 #include <stdexcept>
+#include<stdio.h>
 
-Efficio::Models::Positional::Location::Location(float latitude, float longitude) : latitude(latitude), longitude(longitude)
+Efficio::Data::Positional::Location::Location(float latitude, float longitude) : latitude(latitude), longitude(longitude)
 {
 	if (latitude < -180)
 	{

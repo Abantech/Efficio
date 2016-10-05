@@ -1,6 +1,9 @@
 #pragma once
 
 #include "HandData.h"
+#include <map>
+#include "Datum.h"
+#include "DatumType.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -16,5 +19,13 @@ namespace Efficio
 		Frame();
 		~Frame();
 		Efficio::HandData HandData;
+
+		// TODO make this templated
+		Efficio::Data::Datum* GetData(Efficio::Data::DatumType dataType);
+
+		void AddData(Efficio::Data::Datum* datum);
+
+	private:
+		std::map<Efficio::Data::DatumType, Efficio::Data::Datum*> dataCollection;
 	};
 }

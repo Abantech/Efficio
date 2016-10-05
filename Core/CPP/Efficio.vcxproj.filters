@@ -49,14 +49,23 @@
     <Filter Include="Header Files\Models\NonHuman">
       <UniqueIdentifier>{1e64473d-be7c-4196-8b8d-592d52d8489b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Models\NonHuman\Video">
-      <UniqueIdentifier>{e5d4f468-645a-4580-87e3-b644de01ff77}</UniqueIdentifier>
+    <Filter Include="Header Files\AMI">
+      <UniqueIdentifier>{a6230881-f5f9-4dcc-a7eb-3f395960bfbc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Models\NonHuman\Audio">
+    <Filter Include="Header Files\Sensors">
+      <UniqueIdentifier>{e79ddb59-4313-4d6b-b0b0-e17adf607305}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{b44ffbcc-6bbd-4b17-bf5d-e17da26bd800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Audio">
       <UniqueIdentifier>{487b57e9-aba1-4b2b-a36c-292c2f3cb04d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Models\NonHuman\Positional">
+    <Filter Include="Header Files\Data\Positional">
       <UniqueIdentifier>{829294f6-9efe-471b-85e8-04a648a3ab64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Video">
+      <UniqueIdentifier>{e5d4f468-645a-4580-87e3-b644de01ff77}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +141,15 @@
     <ClCompile Include="SingleHandGesture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Drone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EfficioFrame.h">
@@ -201,7 +219,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Altitude.h">
-      <Filter>Header Files\Models\NonHuman\Positional</Filter>
+      <Filter>Header Files\Data\Positional</Filter>
     </ClInclude>
     <ClInclude Include="Finger.h">
       <Filter>Header Files\Models\Human\Hand</Filter>
@@ -216,7 +234,37 @@
       <Filter>Header Files\IRP\Human\Hands</Filter>
     </ClInclude>
     <ClInclude Include="Location.h">
-      <Filter>Header Files\Models\NonHuman\Positional</Filter>
+      <Filter>Header Files\Data\Positional</Filter>
+    </ClInclude>
+    <ClInclude Include="LocationSensor.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="Sensor.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="Altimeter.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.h">
+      <Filter>Header Files\AMI</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset.h">
+      <Filter>Header Files\AMI</Filter>
+    </ClInclude>
+    <ClInclude Include="Drone.h">
+      <Filter>Header Files\Models\NonHuman</Filter>
+    </ClInclude>
+    <ClInclude Include="Datum.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DatumType.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleAltimeter.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleGPS.h">
+      <Filter>Header Files\Sensors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

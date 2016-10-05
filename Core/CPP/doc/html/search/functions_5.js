@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['latitude',['Latitude',['../class_efficio_1_1_models_1_1_positional_1_1_location.html#a4a26a3886c2089d29ab5ec4a38a17d79',1,'Efficio::Models::Positional::Location']]],
-  ['longitude',['Longitude',['../class_efficio_1_1_models_1_1_positional_1_1_location.html#a8e80c02b65a36109096bd1b3828ab0de',1,'Efficio::Models::Positional::Location']]]
+  ['idonothing',['IDoNothing',['../class_efficio_1_1_sensors_1_1_sample_altimeter.html#acae1463f94dba661e8151060804ff1d1',1,'Efficio::Sensors::SampleAltimeter::IDoNothing()'],['../class_efficio_1_1_sensors_1_1_sample_g_p_s.html#a6df872afc7df060ff99e1a7a53b53750',1,'Efficio::Sensors::SampleGPS::IDoNothing()'],['../class_efficio_1_1_sensors_1_1_sensor.html#a813778c442cce58aa0b839a773e37615',1,'Efficio::Sensors::Sensor::IDoNothing()']]]
 ];
