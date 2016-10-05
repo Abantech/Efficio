@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['status',['Status',['../class_efficio_1_1_device.html#a4fc83f754676de245976e1d1bb08b392',1,'Efficio::Device::Status()'],['../class_efficio_1_1_leap_motion_device.html#aa8da27f1e5cbd65e88534f15df701914',1,'Efficio::LeapMotionDevice::Status()']]]
+  ['removedevice',['RemoveDevice',['../class_efficio_1_1_device_manager.html#adaf266b0b68312621e331f2eb672c9cc',1,'Efficio::DeviceManager']]]
 ];

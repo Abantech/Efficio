@@ -203,6 +203,7 @@ EXIT 0</Command>
     <ClCompile Include="Joint.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
     <ClCompile Include="LeapMotionDevice.cpp" />
+    <ClCompile Include="Location.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
     <ClCompile Include="PinchDetector.cpp" />
@@ -211,6 +212,7 @@ EXIT 0</Command>
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Altitude.h" />
     <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="DeviceConfiguration.h" />
@@ -231,6 +233,8 @@ EXIT 0</Command>
     <ClInclude Include="Joint.h" />
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="LeapMotionDevice.h" />
+    <ClInclude Include="Location.h" />
+    <ClInclude Include="SingleHandGesture.h" />
     <ClInclude Include="Pinch.h" />
     <ClInclude Include="PinchDetector.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />

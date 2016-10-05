@@ -1,6 +1,7 @@
 var searchData=
 [
   ['gesture',['Gesture',['../class_efficio_1_1_input_recognition_1_1_gesture.html',1,'Efficio::InputRecognition']]],
+  ['getaltitude',['GetAltitude',['../class_efficio_1_1_models_1_1_positional_1_1_altitude.html#ad98c2ad63e922011931b90b9bcfa91be',1,'Efficio::Models::Positional::Altitude']]],
   ['getconnecteddevices',['GetConnectedDevices',['../class_efficio_1_1_device_manager.html#a21da4a9f44bc128e70115de8ab54bc4e',1,'Efficio::DeviceManager']]],
   ['getdevicebyid',['GetDeviceByID',['../class_efficio_1_1_device_manager.html#aeae743bb7d5d973f3245ae69d468befd',1,'Efficio::DeviceManager']]],
   ['getdevices',['GetDevices',['../class_efficio_1_1_device_manager.html#abed1c1e08d2fe7defef21fded68782b9',1,'Efficio::DeviceManager']]],

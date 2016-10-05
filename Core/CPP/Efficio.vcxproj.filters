@@ -31,11 +31,32 @@
     <Filter Include="Header Files\Devices">
       <UniqueIdentifier>{8433659b-7c77-4ea5-8798-51768d233db6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Models">
-      <UniqueIdentifier>{64c95a13-34e7-46eb-9bb8-71fbb7c823f8}</UniqueIdentifier>
+    <Filter Include="Header Files\Models">
+      <UniqueIdentifier>{991e613b-ce19-436a-a3d2-e10991e75c21}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Models\Human">
-      <UniqueIdentifier>{f6405be0-6b5f-484e-a337-32a93ef8606c}</UniqueIdentifier>
+    <Filter Include="Header Files\Models\Human">
+      <UniqueIdentifier>{f5adc45c-59f8-4e42-abb3-ed05823cbe6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\Human\Hand">
+      <UniqueIdentifier>{fba21566-5207-4b7f-8896-8deaa3bb01e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\Human\Body">
+      <UniqueIdentifier>{7b73afce-5317-4cdd-801f-4d3c14ac4bcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\Human\Face">
+      <UniqueIdentifier>{cb0e6395-97a9-4336-8f04-bae20255fbd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\NonHuman">
+      <UniqueIdentifier>{1e64473d-be7c-4196-8b8d-592d52d8489b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\NonHuman\Video">
+      <UniqueIdentifier>{e5d4f468-645a-4580-87e3-b644de01ff77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\NonHuman\Audio">
+      <UniqueIdentifier>{487b57e9-aba1-4b2b-a36c-292c2f3cb04d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\NonHuman\Positional">
+      <UniqueIdentifier>{829294f6-9efe-471b-85e8-04a648a3ab64}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -72,9 +93,6 @@
     <ClCompile Include="ContinuousGesture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SingleHandGesture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Pinch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -106,6 +124,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HandData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleHandGesture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -173,17 +197,26 @@
     <ClInclude Include="DeviceManager.h">
       <Filter>Header Files\Devices</Filter>
     </ClInclude>
-    <ClInclude Include="Hand.h">
-      <Filter>Models\Human</Filter>
-    </ClInclude>
-    <ClInclude Include="Joint.h">
-      <Filter>Models\Human</Filter>
-    </ClInclude>
     <ClInclude Include="HandData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Altitude.h">
+      <Filter>Header Files\Models\NonHuman\Positional</Filter>
+    </ClInclude>
     <ClInclude Include="Finger.h">
-      <Filter>Models\Human</Filter>
+      <Filter>Header Files\Models\Human\Hand</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>Header Files\Models\Human\Hand</Filter>
+    </ClInclude>
+    <ClInclude Include="Joint.h">
+      <Filter>Header Files\Models\Human\Hand</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleHandGesture.h">
+      <Filter>Header Files\IRP\Human\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>Header Files\Models\NonHuman\Positional</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
