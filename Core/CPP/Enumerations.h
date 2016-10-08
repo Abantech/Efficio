@@ -24,12 +24,23 @@ namespace Efficio
 			Body
 		};
 
+		extern enum class HandType
+		{
+			LeftHand,
+			RightHand
+		};
 		extern enum class DLLEXPORT Finger {
 			Thumb,
 			Index,
 			Middle,
 			Ring,
 			Pinky
+		};
+
+		extern enum class DLLEXPORT FingerJointType {
+			DIP,
+			PIP,
+			MCP
 		};
 	}
 

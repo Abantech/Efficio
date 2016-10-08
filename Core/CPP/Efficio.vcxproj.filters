@@ -78,12 +78,6 @@
     <ClCompile Include="RuntimeCSharp_wrap.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EfficioHand.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EfficioFinger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HandJoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -144,6 +138,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HandJoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FingerJoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletalData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

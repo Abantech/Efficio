@@ -189,9 +189,7 @@ EXIT 0</Command>
     <ClCompile Include="ContinuousGesture.cpp" />
     <ClCompile Include="DeviceConfiguration.cpp" />
     <ClCompile Include="DiscreteGesture.cpp" />
-    <ClCompile Include="EfficioFinger.cpp" />
     <ClCompile Include="EfficioFrame.cpp" />
-    <ClCompile Include="EfficioHand.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="Frame.cpp" />
@@ -212,11 +210,14 @@ EXIT 0</Command>
     <ClInclude Include="DiscreteGesture.h" />
     <ClInclude Include="EfficioFinger.h" />
     <ClInclude Include="EfficioFrame.h" />
-    <ClInclude Include="EfficioHand.h" />
+    <ClInclude Include="EfficioHand.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Enumerations.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventType.h" />
+    <ClInclude Include="FingerJoint.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
     <ClInclude Include="HandJoint.h" />
@@ -225,6 +226,7 @@ EXIT 0</Command>
     <ClInclude Include="Pinch.h" />
     <ClInclude Include="PinchDetector.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />
+    <ClInclude Include="SkeletalData.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>

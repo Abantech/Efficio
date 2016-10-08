@@ -1,12 +1,14 @@
 #pragma once
 
+#include "vector.hpp"
+
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-#include "vector.hpp"
+
 
 namespace Efficio
 {

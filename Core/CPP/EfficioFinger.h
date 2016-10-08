@@ -1,7 +1,26 @@
 #pragma once
-class EfficioFinger
+#include "Frame.h"
+#include "Event.h"
+#include <vector>
+#include <memory>
+#include "FingerJoint.h"
+
+using namespace std;
+
+#if COMPILING_DLL
+#define DLLEXPORT __declspec(dllexport)
+#else
+#define DLLEXPORT __declspec(dllimport)
+#endif
+
+namespace Efficio
 {
-public:
-	EfficioFinger();
-	virtual ~EfficioFinger();
+	extern class DLLEXPORT EfficioFinger
+	{
+	public:
+		EfficioFinger();
+		virtual ~EfficioFinger();
+
+		vector<shared_ptr<FingerJoint>> FingerJoints;
+	};
 };
