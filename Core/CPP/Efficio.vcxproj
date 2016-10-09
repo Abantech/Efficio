@@ -192,6 +192,7 @@ EXIT 0</Command>
     <ClCompile Include="EfficioFrame.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
+    <ClCompile Include="FingerJoint.cpp" />
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Gesture.cpp" />
     <ClCompile Include="HandJoint.cpp" />

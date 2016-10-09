@@ -33,8 +33,9 @@ namespace Efficio
 	extern class DLLEXPORT FingerJoint
 	{
 	public:
-		FingerJoint(Vector3 position);
+		FingerJoint(Efficio::Body::FingerJointType jointName);
 		Vector3 Position;
+		Efficio::Body::FingerJointType JointName;
 		//P is position
 		~FingerJoint();
 	};
