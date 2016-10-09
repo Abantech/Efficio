@@ -631,6 +631,34 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Frame___(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EfficioFrame_ID_set___(void * jarg1, int jarg2) {
+  Efficio::EfficioFrame *arg1 = (Efficio::EfficioFrame *) 0 ;
+  int arg2 ;
+  std::shared_ptr< Efficio::EfficioFrame > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::EfficioFrame > *)jarg1;
+  arg1 = (Efficio::EfficioFrame *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->ID = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_EfficioFrame_ID_get___(void * jarg1) {
+  int jresult ;
+  Efficio::EfficioFrame *arg1 = (Efficio::EfficioFrame *) 0 ;
+  std::shared_ptr< Efficio::EfficioFrame > *smartarg1 = 0 ;
+  int result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::EfficioFrame > *)jarg1;
+  arg1 = (Efficio::EfficioFrame *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (int) ((arg1)->ID);
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_EfficioFrame___(int jarg1) {
   void * jresult ;
   int arg1 ;
@@ -681,34 +709,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EfficioFrame_AddEvent___(void * j
   arg1 = (Efficio::EfficioFrame *)(smartarg1 ? smartarg1->get() : 0); 
   if (jarg2) arg2 = *(std::shared_ptr< Efficio::Events::Event > *)jarg2; 
   (arg1)->AddEvent(arg2);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EfficioFrame_ID_set___(void * jarg1, int jarg2) {
-  Efficio::EfficioFrame *arg1 = (Efficio::EfficioFrame *) 0 ;
-  int arg2 ;
-  std::shared_ptr< Efficio::EfficioFrame > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::EfficioFrame > *)jarg1;
-  arg1 = (Efficio::EfficioFrame *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->ID = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_EfficioFrame_ID_get___(void * jarg1) {
-  int jresult ;
-  Efficio::EfficioFrame *arg1 = (Efficio::EfficioFrame *) 0 ;
-  std::shared_ptr< Efficio::EfficioFrame > *smartarg1 = 0 ;
-  int result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::EfficioFrame > *)jarg1;
-  arg1 = (Efficio::EfficioFrame *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (int) ((arg1)->ID);
-  jresult = result; 
-  return jresult;
 }
 
 

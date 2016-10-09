@@ -19,7 +19,7 @@ namespace Efficio
 	{
 	public:
 		EfficioFinger();
-		virtual ~EfficioFinger();
+		~EfficioFinger();
 
 		vector<shared_ptr<FingerJoint>> FingerJoints;
 	};

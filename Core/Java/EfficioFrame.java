@@ -37,6 +37,14 @@ public class EfficioFrame extends Frame {
     super.delete();
   }
 
+  public void setID(int value) {
+    EfficioJNI.EfficioFrame_ID_set(swigCPtr, this, value);
+  }
+
+  public int getID() {
+    return EfficioJNI.EfficioFrame_ID_get(swigCPtr, this);
+  }
+
   public EfficioFrame(int ID) {
     this(EfficioJNI.new_EfficioFrame(ID), true);
   }
@@ -47,14 +55,6 @@ public class EfficioFrame extends Frame {
 
   public void AddEvent(Event eventPtr) {
     EfficioJNI.EfficioFrame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
-  }
-
-  public void setID(int value) {
-    EfficioJNI.EfficioFrame_ID_set(swigCPtr, this, value);
-  }
-
-  public int getID() {
-    return EfficioJNI.EfficioFrame_ID_get(swigCPtr, this);
   }
 
 }

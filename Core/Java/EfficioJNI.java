@@ -18,12 +18,12 @@ public class EfficioJNI {
   public final static native int Event_GetEventType(long jarg1, Event jarg1_);
   public final static native long new_Frame();
   public final static native void delete_Frame(long jarg1);
+  public final static native void EfficioFrame_ID_set(long jarg1, EfficioFrame jarg1_, int jarg2);
+  public final static native int EfficioFrame_ID_get(long jarg1, EfficioFrame jarg1_);
   public final static native long new_EfficioFrame(int jarg1);
   public final static native void delete_EfficioFrame(long jarg1);
   public final static native long EfficioFrame_GetEvents(long jarg1, EfficioFrame jarg1_);
   public final static native void EfficioFrame_AddEvent(long jarg1, EfficioFrame jarg1_, long jarg2, Event jarg2_);
-  public final static native void EfficioFrame_ID_set(long jarg1, EfficioFrame jarg1_, int jarg2);
-  public final static native int EfficioFrame_ID_get(long jarg1, EfficioFrame jarg1_);
   public final static native long new_Engine();
   public final static native void delete_Engine(long jarg1);
   public final static native void Engine_Start(long jarg1, Engine jarg1_);

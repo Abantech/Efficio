@@ -2,7 +2,6 @@
 #include "Frame.h"
 #include "Event.h"
 #include "EfficioHand.h"
-#include "EfficioHand.cpp"
 #include <vector>
 #include <memory>
 

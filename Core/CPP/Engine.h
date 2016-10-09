@@ -1,6 +1,7 @@
 #pragma once
 #include "EfficioFrame.h"
 #include "DeviceConfiguration.h"
+#include "Vector3.h"
 #include "Leap.h"
 #include <memory>
 #include "Event.h"
