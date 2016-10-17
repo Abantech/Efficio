@@ -3,7 +3,7 @@
 
 namespace Efficio
 {
-	EfficioFrame::EfficioFrame(int ID) : ID(ID)
+	EfficioFrame::EfficioFrame(int ID) : ID(ID), Hands()
 	{
 	}
 

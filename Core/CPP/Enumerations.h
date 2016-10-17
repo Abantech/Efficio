@@ -29,7 +29,7 @@ namespace Efficio
 			LeftHand,
 			RightHand
 		};
-		extern enum class DLLEXPORT Finger {
+		extern enum class DLLEXPORT FingerType {
 			Thumb,
 			Index,
 			Middle,

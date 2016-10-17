@@ -17,7 +17,6 @@ namespace Efficio
 		EfficioHand();
 		~EfficioHand();
 
-	private:
 		//vector<shared_ptr<EfficioHand>> Hands;
 		vector<shared_ptr<HandJoint>> Joints;
 		vector<shared_ptr<EfficioFinger>> HandFingers;

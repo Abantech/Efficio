@@ -18,9 +18,12 @@ namespace Efficio
 	extern class DLLEXPORT EfficioFinger
 	{
 	public:
-		EfficioFinger();
-		~EfficioFinger();
-
+		EfficioFinger(Efficio::Body::FingerType FingerType);
 		vector<shared_ptr<FingerJoint>> FingerJoints;
+		~EfficioFinger();
+		
 	};
+	//can we specify FingerTypes as derived classes enumerated in Enumerations.h (pinky, ring, middle, index, thumb)?
+	//can we add derived classes of FingerTypes?
+
 };

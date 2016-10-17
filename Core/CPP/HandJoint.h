@@ -33,42 +33,42 @@ namespace Efficio
 	public:
 	//A key portion will be to connect Vector 3 position to device sensor spatial coordinates for each HandJoint and/or FingerJoint
 		HandJoint(Vector3 position);
-		Vector3 Position;
+		shared_ptr <Vector3> p;
 		~HandJoint();
 	};
 	extern class DLLEXPORT DIP : public HandJoint
 	{
 	public:
 		DIP(Vector3 position);
-		Vector3 Position;
+		shared_ptr <Vector3> P;
 		~DIP();
 	};
 	extern class DLLEXPORT PIP : public HandJoint
 	{
 	public:
 		PIP(Vector3 position);
-		Vector3 Position;
+		shared_ptr <Vector3> P;
 		~PIP();
 	};
 	extern class DLLEXPORT MCP : public HandJoint
 	{
 	public:
 		MCP(Vector3 position);
-		Vector3 Position;
+		shared_ptr <Vector3> P;
 		~MCP();
 	};
 	extern class DLLEXPORT IP : public HandJoint
 	{
 	public:
 		IP(Vector3 position);
-		Vector3 Position;
+		shared_ptr <Vector3> P;
 		~IP();
 	};
 	extern class DLLEXPORT CMC : public HandJoint
 	{
 	public:
 		CMC(Vector3 position);
-		Vector3 Position;
+		shared_ptr <Vector3> P;
 		~CMC();
 	};
 
@@ -76,7 +76,7 @@ namespace Efficio
 	{
 	public:
 		IPCMC(Vector3 position);
-		Vector3 Position;
+		shared_ptr <Vector3> P;
 		~IPCMC();
 	};
 	}

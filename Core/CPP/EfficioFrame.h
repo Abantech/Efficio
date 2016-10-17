@@ -18,12 +18,12 @@ namespace Efficio
 	/// Object containing all processed and raw signals
 	extern class DLLEXPORT EfficioFrame : public Frame
 	{
-		std::vector<shared_ptr<Efficio::EfficioHand>> Hands;
+		public:
+			std::vector<shared_ptr<Efficio::EfficioHand>> Hands;
 		std::vector<shared_ptr<Efficio::Events::Event>> events;
-
-	public:
 		int ID;
 		EfficioFrame(int ID);
+		//what is the purpose of ID? Can the EfficioFrame constructor instead receive Hands?
 		~EfficioFrame();
 		std::vector<std::shared_ptr<Efficio::Events::Event>> GetEvents();
 		void AddEvent(std::shared_ptr<Efficio::Events::Event> eventPtr);
