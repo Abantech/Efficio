@@ -20,4 +20,10 @@ namespace Efficio
 	HandJoint::~HandJoint()
 	{
 	}
+	IPCMC::~IPCMC()
+	{
+	}
+	CMC::~CMC()
+	{
+	}
 }

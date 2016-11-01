@@ -1,6 +1,8 @@
  #pragma once
 #include "Vector3.h"
 #include "Enumerations.h"
+#include <vector>;
+
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -68,7 +70,7 @@ namespace Efficio
 	{
 	public:
 		CMC(Vector3 position);
-		shared_ptr <Vector3> P;
+		shared_ptr<Vector3> P;
 		~CMC();
 	};
 

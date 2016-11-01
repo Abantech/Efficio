@@ -206,9 +206,11 @@ EXIT 0</Command>
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Body.h" />
     <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="DeviceConfiguration.h" />
     <ClInclude Include="DiscreteGesture.h" />
+    <ClInclude Include="EfficioBody.h" />
     <ClInclude Include="EfficioFinger.h" />
     <ClInclude Include="EfficioFrame.h" />
     <ClInclude Include="EfficioHand.h">

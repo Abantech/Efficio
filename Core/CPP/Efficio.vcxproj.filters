@@ -149,6 +149,12 @@
     <ClInclude Include="SkeletalData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EfficioBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Body.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="RuntimeCSharp.i" />
