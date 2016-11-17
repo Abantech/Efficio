@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mcp',['MCP',['../class_efficio_1_1_m_c_p.html',1,'Efficio']]]
+  ['leapconfiguration',['LeapConfiguration',['../class_efficio_1_1_configuration_1_1_leap_configuration.html',1,'Efficio::Configuration']]]
 ];

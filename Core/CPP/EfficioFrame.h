@@ -1,7 +1,7 @@
 #pragma once
 #include "Frame.h"
 #include "Event.h"
-#include "EfficioHand.h"
+#include "Hand.h"
 #include <vector>
 #include <memory>
 
@@ -19,7 +19,7 @@ namespace Efficio
 	extern class DLLEXPORT EfficioFrame : public Frame
 	{
 		public:
-			std::vector<shared_ptr<Efficio::EfficioHand>> Hands;
+			std::vector<shared_ptr<Efficio::Body::Hand>> Hands;
 		std::vector<shared_ptr<Efficio::Events::Event>> events;
 		int ID;
 		EfficioFrame(int ID);

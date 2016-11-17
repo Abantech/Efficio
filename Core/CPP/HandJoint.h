@@ -1,7 +1,8 @@
- #pragma once
+#pragma once
 #include "Vector3.h"
 #include "Enumerations.h"
 #include <vector>;
+#include <memory>;
 
 
 #if COMPILING_DLL
@@ -28,49 +29,51 @@
 	//Metacarpophalangeal: MCP
 	//Carpometaparpal: CMC
 
-namespace Efficio 
+namespace Efficio
 {
 	extern class DLLEXPORT HandJoint
 	{
 	public:
-	//A key portion will be to connect Vector 3 position to device sensor spatial coordinates for each HandJoint and/or FingerJoint
+		//A key portion will be to connect Vector 3 position to device sensor spatial coordinates for each HandJoint and/or FingerJoint
 		HandJoint(Vector3 position);
-		shared_ptr <Vector3> p;
+		std::shared_ptr<Vector3> p;
 		~HandJoint();
+	private:
+		Vector3 Position;
 	};
 	extern class DLLEXPORT DIP : public HandJoint
 	{
 	public:
 		DIP(Vector3 position);
-		shared_ptr <Vector3> P;
+		std::shared_ptr <Vector3> P;
 		~DIP();
 	};
 	extern class DLLEXPORT PIP : public HandJoint
 	{
 	public:
 		PIP(Vector3 position);
-		shared_ptr <Vector3> P;
+		std::shared_ptr <Vector3> P;
 		~PIP();
 	};
 	extern class DLLEXPORT MCP : public HandJoint
 	{
 	public:
 		MCP(Vector3 position);
-		shared_ptr <Vector3> P;
+		std::shared_ptr <Vector3> P;
 		~MCP();
 	};
 	extern class DLLEXPORT IP : public HandJoint
 	{
 	public:
 		IP(Vector3 position);
-		shared_ptr <Vector3> P;
+		std::shared_ptr <Vector3> P;
 		~IP();
 	};
 	extern class DLLEXPORT CMC : public HandJoint
 	{
 	public:
 		CMC(Vector3 position);
-		shared_ptr<Vector3> P;
+		std::shared_ptr<Vector3> P;
 		~CMC();
 	};
 
@@ -78,7 +81,7 @@ namespace Efficio
 	{
 	public:
 		IPCMC(Vector3 position);
-		shared_ptr <Vector3> P;
+		std::shared_ptr <Vector3> P;
 		~IPCMC();
 	};
-	}
+}

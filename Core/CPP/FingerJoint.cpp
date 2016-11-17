@@ -2,7 +2,7 @@
 
 #include "Vector3.h"
 #include "Enumerations.h"
-#include "EfficioFinger.h"
+#include "Finger.h"
 #include "FingerJoint.h"
 
 #if COMPILING_DLL
@@ -36,8 +36,9 @@ namespace Efficio
 
 	{
 		JointName = jointName;
-		
-
+	}
+	FingerJoint::~FingerJoint()
+	{
 	}
 }
 

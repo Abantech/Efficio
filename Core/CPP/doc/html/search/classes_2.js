@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['efficiofinger',['EfficioFinger',['../class_efficio_1_1_efficio_finger.html',1,'Efficio']]],
-  ['efficioframe',['EfficioFrame',['../class_efficio_1_1_efficio_frame.html',1,'Efficio']]],
-  ['efficiohand',['EfficioHand',['../class_efficio_1_1_efficio_hand.html',1,'Efficio']]],
-  ['engine',['Engine',['../class_efficio_1_1_engine.html',1,'Efficio']]],
-  ['event',['Event',['../class_efficio_1_1_events_1_1_event.html',1,'Efficio::Events']]]
+  ['deviceconfiguration',['DeviceConfiguration',['../class_efficio_1_1_configuration_1_1_device_configuration.html',1,'Efficio::Configuration']]],
+  ['dip',['DIP',['../class_efficio_1_1_d_i_p.html',1,'Efficio']]],
+  ['discretegesture',['DiscreteGesture',['../class_efficio_1_1_input_recognition_1_1_discrete_gesture.html',1,'Efficio::InputRecognition']]]
 ];

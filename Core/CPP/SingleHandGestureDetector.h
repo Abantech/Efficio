@@ -5,6 +5,7 @@
 #include <memory>
 #include "Gesture.h"
 #include <array>
+#include "Finger.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -23,13 +24,13 @@ namespace Efficio {
 				public:
 					virtual std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>> Detect(Leap::Hand hand) = 0;
 				protected:
-					std::array<Body::Finger, 5> FingerNames = 
+					std::array<Efficio::Body::FingerType, 5> FingerNames = 
 					{ 
-						Body::Finger::Thumb,
-						Body::Finger::Index,
-						Body::Finger::Middle, 
-						Body::Finger::Ring,
-						Body::Finger::Pinky
+						Efficio::Body::FingerType::Thumb,
+						Efficio::Body::FingerType::Index,
+						Efficio::Body::FingerType::Middle,
+						Efficio::Body::FingerType::Ring,
+						Efficio::Body::FingerType::Pinky
 					};
 				};
 			}

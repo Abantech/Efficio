@@ -215,6 +215,18 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_Frame___")]
   public static extern void delete_Frame(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_Hands_set___")]
+  public static extern void EfficioFrame_Hands_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_Hands_get___")]
+  public static extern global::System.IntPtr EfficioFrame_Hands_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_events_set___")]
+  public static extern void EfficioFrame_events_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_events_get___")]
+  public static extern global::System.IntPtr EfficioFrame_events_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_ID_set___")]
   public static extern void EfficioFrame_ID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
@@ -306,7 +318,7 @@ class EfficioPINVOKE {
   public static extern int DiscreteGesture_GetGestureState(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Pinch___")]
-  public static extern global::System.IntPtr new_Pinch(int jarg1, int jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+  public static extern global::System.IntPtr new_Pinch(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_Pinch___")]
   public static extern void delete_Pinch(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -318,16 +330,16 @@ class EfficioPINVOKE {
   public static extern global::System.IntPtr Pinch_Position_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Pinch_Finger1_set___")]
-  public static extern void Pinch_Finger1_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  public static extern void Pinch_Finger1_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Pinch_Finger1_get___")]
-  public static extern int Pinch_Finger1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern global::System.IntPtr Pinch_Finger1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Pinch_Finger2_set___")]
-  public static extern void Pinch_Finger2_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  public static extern void Pinch_Finger2_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Pinch_Finger2_get___")]
-  public static extern int Pinch_Finger2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern global::System.IntPtr Pinch_Finger2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Pinch_GetEventType___")]
   public static extern int Pinch_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);

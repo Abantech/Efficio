@@ -1,4 +1,5 @@
 #include "Pinch.h"
+
 namespace Efficio {
 	namespace InputRecognition
 	{

@@ -41,7 +41,7 @@ public class Pinch : DiscreteGesture {
     }
   }
 
-  public Pinch(BodySide side, Finger finger1, Finger finger2, Vector3 position) : this(EfficioPINVOKE.new_Pinch((int)side, (int)finger1, (int)finger2, Vector3.getCPtr(position)), true) {
+  public Pinch(BodySide side, SWIGTYPE_p_Efficio__Body__Finger finger1, SWIGTYPE_p_Efficio__Body__Finger finger2, Vector3 position) : this(EfficioPINVOKE.new_Pinch((int)side, SWIGTYPE_p_Efficio__Body__Finger.getCPtr(finger1), SWIGTYPE_p_Efficio__Body__Finger.getCPtr(finger2), Vector3.getCPtr(position)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -58,25 +58,25 @@ public class Pinch : DiscreteGesture {
     } 
   }
 
-  public Finger Finger1 {
+  public SWIGTYPE_p_Efficio__Body__Finger Finger1 {
     set {
-      EfficioPINVOKE.Pinch_Finger1_set(swigCPtr, (int)value);
+      EfficioPINVOKE.Pinch_Finger1_set(swigCPtr, SWIGTYPE_p_Efficio__Body__Finger.getCPtr(value));
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      Finger ret = (Finger)EfficioPINVOKE.Pinch_Finger1_get(swigCPtr);
+      SWIGTYPE_p_Efficio__Body__Finger ret = new SWIGTYPE_p_Efficio__Body__Finger(EfficioPINVOKE.Pinch_Finger1_get(swigCPtr), true);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public Finger Finger2 {
+  public SWIGTYPE_p_Efficio__Body__Finger Finger2 {
     set {
-      EfficioPINVOKE.Pinch_Finger2_set(swigCPtr, (int)value);
+      EfficioPINVOKE.Pinch_Finger2_set(swigCPtr, SWIGTYPE_p_Efficio__Body__Finger.getCPtr(value));
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      Finger ret = (Finger)EfficioPINVOKE.Pinch_Finger2_get(swigCPtr);
+      SWIGTYPE_p_Efficio__Body__Finger ret = new SWIGTYPE_p_Efficio__Body__Finger(EfficioPINVOKE.Pinch_Finger2_get(swigCPtr), true);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

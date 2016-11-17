@@ -2,7 +2,6 @@
 #include <iostream>
 #include "Enumerations.h"
 #include "Vector3.h"
-#include "PinchDetector.h"
 #include  "Leap.h"
 
 
@@ -44,14 +43,15 @@ namespace Efficio {
 					{
 						for (size_t i = 0; i < hands.count(); i++)
 						{
-							Efficio::EfficioHand EHand = EfficioHand::EfficioHand();
-							vector<shared_ptr<EfficioFinger>> handFingers = vector<shared_ptr<EfficioFinger>>();
-							for (int f = 0; f < hands[i].fingers().count; f++)
+							Efficio::Body::Hand EHand = Efficio::Body::Hand();
+							vector<shared_ptr<Efficio::Body::Finger>> handFingers = vector<shared_ptr<Efficio::Body::Finger>>();
+							auto hand = hands[i];
+							for (int f = 0; f < hand.fingers().count(); f++)
 							{
-								switch (hands[i].fingers()[f].type) {
-								case Leap::Finger::TYPE_THUMB:
-								
-									EfficioFinger thumb = EfficioFinger(Efficio::Body::FingerType::Thumb);
+								switch (hands[i].fingers()[f].type()) {
+								case Leap::Finger::TYPE_THUMB: {
+
+									Efficio::Body::Finger thumb = Efficio::Body::Finger(Efficio::Body::FingerType::Thumb);
 
 									//shared_ptr purpose is to optimize memory use, non-agenda topping
 
@@ -67,127 +67,118 @@ namespace Efficio {
 									FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
 									DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
 
-									EHand.HandFingers.push_back(thumb);
+									EHand.Fingers.push_back(make_shared<Efficio::Body::Finger>(thumb));
 
 									break;
-								
-						case Leap::Finger::TYPE_INDEX:
-					
-							EfficioFinger index = EfficioFinger(Efficio::Body::FingerType::Index);
-												
-						Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-						FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-						DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
+								}
+								case Leap::Finger::TYPE_INDEX:
+								{
+									Efficio::Body::Finger index = Efficio::Body::Finger(Efficio::Body::FingerType::Index);
 
-						Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-						FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-						DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
+									Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
+									FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
+									DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
 
-						Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-						FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-						DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
+									Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
+									FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
+									DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
 
-						EHand.HandFingers.push_back(index);
+									Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
+									FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
+									DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
 
-						break;
-					
-						case Leap::Finger::TYPE_MIDDLE:
-					
-						EfficioFinger middle = EfficioFinger(Efficio::Body::FingerType::Middle);
-											
-						Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-						FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-						DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
+									EHand.Fingers.push_back(make_shared<Efficio::Body::Finger>(index));
 
-						Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-						FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-						DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
+									break;
+								}
+								case Leap::Finger::TYPE_MIDDLE:
+								{
+									Efficio::Body::Finger middle = Efficio::Body::Finger(Efficio::Body::FingerType::Middle);
 
-						Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-						FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-						DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
-								
-						EHand.HandFingers.push_back(middle);
+									Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
+									FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
+									DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
 
-						break;
-					
-						case Leap::Finger::TYPE_RING:
-					
-						EfficioFinger ring = EfficioFinger(Efficio::Body::FingerType::Ring);
-								
-						Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-						FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-						DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
+									Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
+									FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
+									DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
 
-						Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-						FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-						DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
+									Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
+									FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
+									DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
 
-						Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-						FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-						DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
+									EHand.Fingers.push_back(make_shared<Efficio::Body::Finger>(middle));
 
-						EHand.HandFingers.push_back(ring);
+									break;
+								}
+								case Leap::Finger::TYPE_RING:
+								{
+									Efficio::Body::Finger ring = Efficio::Body::Finger(Efficio::Body::FingerType::Ring);
 
-						break;
-					
-						case Leap::Finger::TYPE_PINKY:
-					
-						EfficioFinger pinky = EfficioFinger(Efficio::Body::FingerType::Pinky);
+									Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
+									FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
+									DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
 
-						Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-						FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-						DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
+									Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
+									FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
+									DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
 
-						Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-						FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-						DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
+									Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
+									FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
+									DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
 
-						Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-						FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-						DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
+									EHand.Fingers.push_back(make_shared<Efficio::Body::Finger>(ring));
 
-						EHand.HandFingers.push_back(pinky);
+									break;
+								}
+								case Leap::Finger::TYPE_PINKY:
+								{
+									Efficio::Body::Finger pinky = Efficio::Body::Finger(Efficio::Body::FingerType::Pinky);
 
-						break;
-					
-						//Put each EHand into EfficioFrame:
-						EfficioFrame EFrame(f);
+									Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
+									FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
+									DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
+
+									Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
+									FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
+									DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
+
+									Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
+									FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
+									DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
+
+									EHand.Fingers.push_back(make_shared<Efficio::Body::Finger>(pinky));
+
+									break;
+								}
+								//Put each EHand into EfficioFrame:
+								EfficioFrame EFrame(f);
+								}
 							}
-						}
-															
-								//To do: add constructor to EfficioFinger that uses FingerType
-									//added - finger types are already specified in enumerations as Finger.
-									//we can rename Finger to FingerType, add Finger Types as derived classes of base class Finger, etc.
-															
-								//find bone to find joint position in leap library or other library
-									//would this resolve overspecification?
-										//strong probably
-								//for Leap, Bone JointPosition gives bone
-								//Note JointPosition does not return a Vector3. I think we need a Vector3 (or an equivalent, such as a multimap 
-								//containing arrays of Vector3 equivalents)
-								/*
 
-						//will build generalizeable model for specific collection utilization
-							//mod multimap first, based on class diagram UML
-							//multimap is below as altnernative. can select among/between options to optimize for diversified utilities
+							//To do: add constructor to EfficioFinger that uses FingerType
+								//added - finger types are already specified in enumerations as Finger.
+								//we can rename Finger to FingerType, add Finger Types as derived classes of base class Finger, etc.
+
+							//find bone to find joint position in leap library or other library
+								//would this resolve overspecification?
+									//strong probably
+							//for Leap, Bone JointPosition gives bone
+							//Note JointPosition does not return a Vector3. I think we need a Vector3 (or an equivalent, such as a multimap 
+							//containing arrays of Vector3 equivalents)
 							/*
-							#include <unordered_multimap>
 
-							unordered_multimap ARmap<int, unordered_multimap<string, unordered_multimap<string, <unordered_multimap<float, unordered_multimap<float, float>>>>>(); //constructor/declaration
-							~unordered_multimap ARmap(); //deconstructor
-							//ARmap(frame, hand, finger, joint x, joint y, joint z)
+					//will build generalizeable model for specific collection utilization
+						//mod multimap first, based on class diagram UML
+						//multimap is below as altnernative. can select among/between options to optimize for diversified utilities
+						/*
+						#include <unordered_multimap>
 
-							*/
+						unordered_multimap ARmap<int, unordered_multimap<string, unordered_multimap<string, <unordered_multimap<float, unordered_multimap<float, float>>>>>(); //constructor/declaration
+						~unordered_multimap ARmap(); //deconstructor
+						//ARmap(frame, hand, finger, joint x, joint y, joint z)
 
-							Efficio::InputRecognition::Human::Hands::PinchDetector detector;
-							detector.Enabled = true;
-							auto pinches = detector.Detect(hands[i]);
-
-							for (size_t j = 0; j < pinches.size(); j++)
-							{
-								efficioFrame->AddEvent(pinches[j]);
-							}
+						*/
 						}
 					}
 				}

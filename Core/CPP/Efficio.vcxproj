@@ -192,15 +192,16 @@ EXIT 0</Command>
     <ClCompile Include="EfficioFrame.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
+    <ClCompile Include="Finger.cpp" />
     <ClCompile Include="FingerJoint.cpp" />
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Gesture.cpp" />
+    <ClCompile Include="Hand.cpp" />
     <ClCompile Include="HandJoint.cpp" />
     <ClCompile Include="HistoricalFrameCollection.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
-    <ClCompile Include="PinchDetector.cpp" />
     <ClCompile Include="RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="SingleHandGesture.cpp" />
     <ClCompile Include="Vector3.cpp" />
@@ -211,9 +212,9 @@ EXIT 0</Command>
     <ClInclude Include="DeviceConfiguration.h" />
     <ClInclude Include="DiscreteGesture.h" />
     <ClInclude Include="EfficioBody.h" />
-    <ClInclude Include="EfficioFinger.h" />
+    <ClInclude Include="Finger.h" />
     <ClInclude Include="EfficioFrame.h" />
-    <ClInclude Include="EfficioHand.h">
+    <ClInclude Include="Hand.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Engine.h" />
@@ -227,7 +228,6 @@ EXIT 0</Command>
     <ClInclude Include="HistoricalFrameCollection.h" />
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="Pinch.h" />
-    <ClInclude Include="PinchDetector.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />
     <ClInclude Include="SkeletalData.h" />
     <ClInclude Include="Vector3.h" />

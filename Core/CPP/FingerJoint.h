@@ -2,7 +2,7 @@
 
 #include "Vector3.h"
 #include "Enumerations.h"
-#include "EfficioFinger.h"
+#include "Finger.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)

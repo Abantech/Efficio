@@ -37,6 +37,24 @@ public class EfficioFrame extends Frame {
     super.delete();
   }
 
+  public void setHands(SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Body__Hand_t_t value) {
+    EfficioJNI.EfficioFrame_Hands_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Body__Hand_t_t.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Body__Hand_t_t getHands() {
+    long cPtr = EfficioJNI.EfficioFrame_Hands_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Body__Hand_t_t(cPtr, false);
+  }
+
+  public void setEvents(EventCollection value) {
+    EfficioJNI.EfficioFrame_events_set(swigCPtr, this, EventCollection.getCPtr(value), value);
+  }
+
+  public EventCollection getEvents() {
+    long cPtr = EfficioJNI.EfficioFrame_events_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new EventCollection(cPtr, false);
+  }
+
   public void setID(int value) {
     EfficioJNI.EfficioFrame_ID_set(swigCPtr, this, value);
   }
