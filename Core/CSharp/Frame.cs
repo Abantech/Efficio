@@ -56,15 +56,15 @@ public class Frame : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_Efficio__Data__Datum GetData(SWIGTYPE_p_Efficio__Data__DatumType dataType) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.Frame_GetData(swigCPtr, SWIGTYPE_p_Efficio__Data__DatumType.getCPtr(dataType));
-    SWIGTYPE_p_Efficio__Data__Datum ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_Efficio__Data__Datum(cPtr, false);
+  public SWIGTYPE_p_Efficio__Data__Data GetData(SWIGTYPE_p_Efficio__Data__DataType dataType) {
+    global::System.IntPtr cPtr = EfficioPINVOKE.Frame_GetData(swigCPtr, SWIGTYPE_p_Efficio__Data__DataType.getCPtr(dataType));
+    SWIGTYPE_p_Efficio__Data__Data ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_Efficio__Data__Data(cPtr, false);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void AddData(SWIGTYPE_p_Efficio__Data__Datum datum) {
-    EfficioPINVOKE.Frame_AddData(swigCPtr, SWIGTYPE_p_Efficio__Data__Datum.getCPtr(datum));
+  public void AddData(SWIGTYPE_p_Efficio__Data__Data data) {
+    EfficioPINVOKE.Frame_AddData(swigCPtr, SWIGTYPE_p_Efficio__Data__Data.getCPtr(data));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 

@@ -2,8 +2,8 @@
 
 #include "HandData.h"
 #include <map>
-#include "Datum.h"
-#include "DatumType.h"
+#include "Data.h"
+#include "DataType.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -21,11 +21,11 @@ namespace Efficio
 		Efficio::HandData HandData;
 
 		// TODO make this templated
-		Efficio::Data::Datum* GetData(Efficio::Data::DatumType dataType);
+		Efficio::Data::Data* GetData(Efficio::Data::DataType dataType);
 
-		void AddData(Efficio::Data::Datum* datum);
+		void AddData(Efficio::Data::Data* data);
 
 	private:
-		std::map<Efficio::Data::DatumType, Efficio::Data::Datum*> dataCollection;
+		std::map<Efficio::Data::DataType, Efficio::Data::Data*> dataCollection;
 	};
 }

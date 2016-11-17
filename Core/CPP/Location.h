@@ -1,7 +1,7 @@
 #pragma once
 
-#include "DatumType.h"
-#include "Datum.h"
+#include "DataType.h"
+#include "Data.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -16,7 +16,7 @@ namespace Efficio
 		namespace Positional
 		{
 			/// Class representing location.
-			extern class DLLEXPORT Location : public Efficio::Data::Datum
+			extern class DLLEXPORT Location : public Efficio::Data::Data
 			{
 			public:
 				Location(float latitude, float longitude);
@@ -28,7 +28,7 @@ namespace Efficio
 				/// The value representing the longitude.  Can be between -90 and 90. 
 				const float Longitude() { return longitude; };
 
-				Efficio::Data::DatumType GetDatumType() { return Efficio::Data::DatumType::Location; }
+				Efficio::Data::DataType GetDataType() { return Efficio::Data::DataType::Location; }
 			private:
 				const float latitude;
 				const float longitude;

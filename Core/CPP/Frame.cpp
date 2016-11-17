@@ -8,12 +8,12 @@ Efficio::Frame::~Frame() {
 
 }
 
-Efficio::Data::Datum* Efficio::Frame::GetData(Efficio::Data::DatumType dataType)
+Efficio::Data::Data* Efficio::Frame::GetData(Efficio::Data::DataType dataType)
 {
 	return dataCollection.at(dataType);
 }
 
-void Efficio::Frame::AddData(Efficio::Data::Datum* datum)
+void Efficio::Frame::AddData(Efficio::Data::Data* data)
 {
-	dataCollection.emplace(datum->GetDatumType(), datum);
+	dataCollection.emplace(data->GetDataType(), data);
 }

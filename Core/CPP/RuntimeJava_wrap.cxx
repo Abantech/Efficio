@@ -856,10 +856,10 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Frame_1HandData_1get(JNIEn
 SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Frame_1GetData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
-  Efficio::Data::DatumType arg2 ;
+  Efficio::Data::DataType arg2 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
-  Efficio::Data::DatumType *argp2 ;
-  Efficio::Data::Datum *result = 0 ;
+  Efficio::Data::DataType *argp2 ;
+  Efficio::Data::Data *result = 0 ;
   
   (void)jenv;
   (void)jcls;
@@ -867,21 +867,21 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Frame_1GetData(JNIEnv *jen
   
   smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
-  argp2 = *(Efficio::Data::DatumType **)&jarg2; 
+  argp2 = *(Efficio::Data::DataType **)&jarg2; 
   if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Data::DatumType");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Data::DataType");
     return 0;
   }
   arg2 = *argp2; 
-  result = (Efficio::Data::Datum *)(arg1)->GetData(arg2);
-  *(Efficio::Data::Datum **)&jresult = result; 
+  result = (Efficio::Data::Data *)(arg1)->GetData(arg2);
+  *(Efficio::Data::Data **)&jresult = result; 
   return jresult;
 }
 
 
 SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_Frame_1AddData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
-  Efficio::Data::Datum *arg2 = (Efficio::Data::Datum *) 0 ;
+  Efficio::Data::Data *arg2 = (Efficio::Data::Data *) 0 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
   
   (void)jenv;
@@ -890,7 +890,7 @@ SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_Frame_1AddData(JNIEnv *jenv
   
   smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = *(Efficio::Data::Datum **)&jarg2; 
+  arg2 = *(Efficio::Data::Data **)&jarg2; 
   (arg1)->AddData(arg2);
 }
 

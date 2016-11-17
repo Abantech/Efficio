@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['datum',['Datum',['../class_efficio_1_1_data_1_1_datum.html',1,'Efficio::Data']]],
+  ['data',['Data',['../class_efficio_1_1_data_1_1_data.html',1,'Efficio::Data']]],
   ['device',['Device',['../class_efficio_1_1_device.html',1,'Efficio']]],
   ['deviceconfiguration',['DeviceConfiguration',['../class_efficio_1_1_configuration_1_1_device_configuration.html',1,'Efficio::Configuration']]],
   ['devicemanager',['DeviceManager',['../class_efficio_1_1_device_manager.html',1,'Efficio']]],

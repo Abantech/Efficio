@@ -1,5 +1,5 @@
 #pragma once
-#include "DatumType.h"
+
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -11,11 +11,9 @@ namespace Efficio
 {
 	namespace Data
 	{
-		extern class DLLEXPORT Datum {
-		public:
-			Datum() {};
-			~Datum() {};
-			virtual Efficio::Data::DatumType GetDatumType() = 0;
+		extern enum class DLLEXPORT DataType {
+			Altitude,
+			Location
 		};
 	}
 }

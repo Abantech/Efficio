@@ -254,17 +254,17 @@
     <ClInclude Include="Drone.h">
       <Filter>Header Files\Models\NonHuman</Filter>
     </ClInclude>
-    <ClInclude Include="Datum.h">
-      <Filter>Header Files\Data</Filter>
-    </ClInclude>
-    <ClInclude Include="DatumType.h">
-      <Filter>Header Files\Data</Filter>
-    </ClInclude>
     <ClInclude Include="SampleAltimeter.h">
       <Filter>Header Files\Sensors</Filter>
     </ClInclude>
     <ClInclude Include="SampleGPS.h">
       <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DataType.h">
+      <Filter>Header Files\Data</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

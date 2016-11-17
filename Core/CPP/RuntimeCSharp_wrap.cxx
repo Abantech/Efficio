@@ -1140,21 +1140,21 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Frame_HandData_get___(void * ja
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Frame_GetData___(void * jarg1, void * jarg2) {
   void * jresult ;
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
-  Efficio::Data::DatumType arg2 ;
+  Efficio::Data::DataType arg2 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
-  Efficio::Data::DatumType *argp2 ;
-  Efficio::Data::Datum *result = 0 ;
+  Efficio::Data::DataType *argp2 ;
+  Efficio::Data::Data *result = 0 ;
   
   
   smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
-  argp2 = (Efficio::Data::DatumType *)jarg2; 
+  argp2 = (Efficio::Data::DataType *)jarg2; 
   if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Data::DatumType", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Data::DataType", 0);
     return 0;
   }
   arg2 = *argp2; 
-  result = (Efficio::Data::Datum *)(arg1)->GetData(arg2);
+  result = (Efficio::Data::Data *)(arg1)->GetData(arg2);
   jresult = (void *)result; 
   return jresult;
 }
@@ -1162,13 +1162,13 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Frame_GetData___(void * jarg1, 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_AddData___(void * jarg1, void * jarg2) {
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
-  Efficio::Data::Datum *arg2 = (Efficio::Data::Datum *) 0 ;
+  Efficio::Data::Data *arg2 = (Efficio::Data::Data *) 0 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
   
   
   smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (Efficio::Data::Datum *)jarg2; 
+  arg2 = (Efficio::Data::Data *)jarg2; 
   (arg1)->AddData(arg2);
 }
 

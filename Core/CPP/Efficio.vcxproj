@@ -220,7 +220,7 @@ EXIT 0</Command>
     <ClInclude Include="Asset.h" />
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="ContinuousGesture.h" />
-    <ClInclude Include="Datum.h" />
+    <ClInclude Include="Data.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="DeviceConfiguration.h" />
     <ClInclude Include="DeviceManager.h" />
@@ -237,7 +237,7 @@ EXIT 0</Command>
     <ClInclude Include="Gesture.h" />
     <ClInclude Include="Hand.h" />
     <ClInclude Include="HandData.h" />
-    <ClInclude Include="DatumType.h" />
+    <ClInclude Include="DataType.h" />
     <ClInclude Include="HistoricalFrameCollection.h" />
     <ClInclude Include="Joint.h" />
     <ClInclude Include="LeapConfiguration.h" />
