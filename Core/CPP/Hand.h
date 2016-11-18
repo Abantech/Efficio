@@ -21,17 +21,17 @@ namespace Efficio
 			{
 
 			public:
-				Hand();
+				Hand(BodySide side, array<shared_ptr<Finger>, 5> fingers, vector<shared_ptr<Joint>> joints);
 				~Hand();
 
 				/// The joints of the hand excluding the joints of the fingers
-				vector<shared_ptr<Joint>> Joints;
+				const vector<shared_ptr<Joint>> Joints;
 
 				/// The fingers of the hand
-				array<shared_ptr<Finger>, 5> Fingers;
+				const array<shared_ptr<Finger>, 5> Fingers;
 
 				/// The side of the body
-				BodySide Side;
+				const BodySide Side;
 			};
 		}
 	}
