@@ -44,6 +44,8 @@ public class EfficioJNI {
   public final static native void delete_Frame(long jarg1);
   public final static native void Frame_HandData_set(long jarg1, Frame jarg1_, long jarg2, HandData jarg2_);
   public final static native long Frame_HandData_get(long jarg1, Frame jarg1_);
+  public final static native long Frame_GetData(long jarg1, Frame jarg1_, long jarg2);
+  public final static native void Frame_AddData(long jarg1, Frame jarg1_, long jarg2);
   public final static native long new_EfficioFrame(int jarg1);
   public final static native void delete_EfficioFrame(long jarg1);
   public final static native long EfficioFrame_GetEvents(long jarg1, EfficioFrame jarg1_);
@@ -111,6 +113,17 @@ public class EfficioJNI {
   public final static native void Device_Disconnect(long jarg1, Device jarg1_);
   public final static native boolean Device_HasFrame(long jarg1, Device jarg1_);
   public final static native long Device_GetFrame(long jarg1, Device jarg1_);
+  public final static native long new_HandCollection__SWIG_0();
+  public final static native long new_HandCollection__SWIG_1(long jarg1);
+  public final static native long HandCollection_size(long jarg1, HandCollection jarg1_);
+  public final static native long HandCollection_capacity(long jarg1, HandCollection jarg1_);
+  public final static native void HandCollection_reserve(long jarg1, HandCollection jarg1_, long jarg2);
+  public final static native boolean HandCollection_isEmpty(long jarg1, HandCollection jarg1_);
+  public final static native void HandCollection_clear(long jarg1, HandCollection jarg1_);
+  public final static native void HandCollection_add(long jarg1, HandCollection jarg1_, long jarg2);
+  public final static native long HandCollection_get(long jarg1, HandCollection jarg1_, int jarg2);
+  public final static native void HandCollection_set(long jarg1, HandCollection jarg1_, int jarg2, long jarg3);
+  public final static native void delete_HandCollection(long jarg1);
   public final static native long new_EventCollection__SWIG_0();
   public final static native long new_EventCollection__SWIG_1(long jarg1);
   public final static native long EventCollection_size(long jarg1, EventCollection jarg1_);

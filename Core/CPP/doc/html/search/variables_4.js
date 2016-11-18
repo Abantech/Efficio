@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['position',['Position',['../class_efficio_1_1_device.html#a21ba05537c6978805f090e13c62ed220',1,'Efficio::Device']]]
+  ['leapconfiguration',['LeapConfiguration',['../class_efficio_1_1_configuration_1_1_device_configuration.html#aa5c43ffa75c5483880a21ef3490b54d6',1,'Efficio::Configuration::DeviceConfiguration']]]
 ];

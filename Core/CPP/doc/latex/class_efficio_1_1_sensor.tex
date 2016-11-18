@@ -1,0 +1,59 @@
+\hypertarget{class_efficio_1_1_sensor}{}\section{Efficio\+:\+:Sensor Class Reference}
+\label{class_efficio_1_1_sensor}\index{Efficio\+::\+Sensor@{Efficio\+::\+Sensor}}
+
+
+Any sensor which can feel data into Efficio.  
+
+
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+Inheritance diagram for Efficio\+:\+:Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_efficio_1_1_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_efficio_1_1_sensor_a465f078de308632e64c8c44781462bc8}{Connected} ()\hypertarget{class_efficio_1_1_sensor_a465f078de308632e64c8c44781462bc8}{}\label{class_efficio_1_1_sensor_a465f078de308632e64c8c44781462bc8}
+
+\begin{DoxyCompactList}\small\item\em A Boolean indicating whether or not the device is connected and ready to feed data into Efficio. \end{DoxyCompactList}\item 
+virtual Efficio\+::\+Device\+Status \hyperlink{class_efficio_1_1_sensor_a32fe6e05b79f0ed8243b2c76fbde43bc}{Status} ()=0\hypertarget{class_efficio_1_1_sensor_a32fe6e05b79f0ed8243b2c76fbde43bc}{}\label{class_efficio_1_1_sensor_a32fe6e05b79f0ed8243b2c76fbde43bc}
+
+\begin{DoxyCompactList}\small\item\em The status of the device. \end{DoxyCompactList}\item 
+virtual Efficio\+::\+Tracking\+Type \hyperlink{class_efficio_1_1_sensor_af1cc5602ed8481c80a1376e1d625b0d6}{Tracking\+Types} ()=0\hypertarget{class_efficio_1_1_sensor_af1cc5602ed8481c80a1376e1d625b0d6}{}\label{class_efficio_1_1_sensor_af1cc5602ed8481c80a1376e1d625b0d6}
+
+\begin{DoxyCompactList}\small\item\em The type of data the device is able to track. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_efficio_1_1_sensor_afb697236bac03d10d5e3b3c686d4fa37}{Connect} ()=0\hypertarget{class_efficio_1_1_sensor_afb697236bac03d10d5e3b3c686d4fa37}{}\label{class_efficio_1_1_sensor_afb697236bac03d10d5e3b3c686d4fa37}
+
+\begin{DoxyCompactList}\small\item\em Connects the device. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_efficio_1_1_sensor_ae8ed640486cb581128cabdee99b082a1}{Disconnect} ()=0\hypertarget{class_efficio_1_1_sensor_ae8ed640486cb581128cabdee99b082a1}{}\label{class_efficio_1_1_sensor_ae8ed640486cb581128cabdee99b082a1}
+
+\begin{DoxyCompactList}\small\item\em Disconnects the device. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_efficio_1_1_sensor_a579b48d76fa6db36f120cc496057643f}{Has\+Frame} ()=0\hypertarget{class_efficio_1_1_sensor_a579b48d76fa6db36f120cc496057643f}{}\label{class_efficio_1_1_sensor_a579b48d76fa6db36f120cc496057643f}
+
+\begin{DoxyCompactList}\small\item\em A Boolean indicating whether or not the device has a new frame for Efficio. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_efficio_1_1_frame}{Efficio\+::\+Frame} \hyperlink{class_efficio_1_1_sensor_a83843b368a6d8bdcff29765640e15d90}{Get\+Frame} ()=0\hypertarget{class_efficio_1_1_sensor_a83843b368a6d8bdcff29765640e15d90}{}\label{class_efficio_1_1_sensor_a83843b368a6d8bdcff29765640e15d90}
+
+\begin{DoxyCompactList}\small\item\em Gets the current frame from the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_efficio_1_1_sensor_a1960849092c76a9ae6fad685712a6941}{ID}\hypertarget{class_efficio_1_1_sensor_a1960849092c76a9ae6fad685712a6941}{}\label{class_efficio_1_1_sensor_a1960849092c76a9ae6fad685712a6941}
+
+\begin{DoxyCompactList}\small\item\em The unique ID of the device. \end{DoxyCompactList}\item 
+bool \hyperlink{class_efficio_1_1_sensor_ad3cd2a20f3fd8b98d9325b0d85c1b589}{Enabled}\hypertarget{class_efficio_1_1_sensor_ad3cd2a20f3fd8b98d9325b0d85c1b589}{}\label{class_efficio_1_1_sensor_ad3cd2a20f3fd8b98d9325b0d85c1b589}
+
+\begin{DoxyCompactList}\small\item\em A Boolean indicating whether or not the device is enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Any sensor which can feel data into Efficio. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sensor.\+h\item 
+Sensor.\+cpp\end{DoxyCompactItemize}
