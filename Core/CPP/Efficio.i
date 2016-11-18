@@ -43,7 +43,6 @@
 		
  %include "Finger.h"
  %include "Hand.h"
- %include "HandData.h"
  %include "Event.h" 
  %include "Frame.h"
  %include "EfficioFrame.h "

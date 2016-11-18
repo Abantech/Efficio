@@ -35,25 +35,17 @@ public class Joint {
     }
   }
 
-  public Joint(JointName name, Vector3 position) {
-    this(EfficioJNI.new_Joint(name.swigValue(), Vector3.getCPtr(position), position), true);
-  }
-
-  public void setName(JointName value) {
-    EfficioJNI.Joint_Name_set(swigCPtr, this, value.swigValue());
-  }
-
-  public JointName getName() {
-    return JointName.swigToEnum(EfficioJNI.Joint_Name_get(swigCPtr, this));
-  }
-
-  public void setPosition(Vector3 value) {
-    EfficioJNI.Joint_Position_set(swigCPtr, this, Vector3.getCPtr(value), value);
+  public Joint(Vector3 position, SWIGTYPE_p_JointType type) {
+    this(EfficioJNI.new_Joint(Vector3.getCPtr(position), position, SWIGTYPE_p_JointType.getCPtr(type)), true);
   }
 
   public Vector3 getPosition() {
     long cPtr = EfficioJNI.Joint_Position_get(swigCPtr, this);
     return (cPtr == 0) ? null : new Vector3(cPtr, false);
+  }
+
+  public SWIGTYPE_p_JointType getType() {
+    return new SWIGTYPE_p_JointType(EfficioJNI.Joint_Type_get(swigCPtr, this), true);
   }
 
 }

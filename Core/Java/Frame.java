@@ -39,15 +39,6 @@ public class Frame {
     this(EfficioJNI.new_Frame(), true);
   }
 
-  public void setHandData(HandData value) {
-    EfficioJNI.Frame_HandData_set(swigCPtr, this, HandData.getCPtr(value), value);
-  }
-
-  public HandData getHandData() {
-    long cPtr = EfficioJNI.Frame_HandData_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new HandData(cPtr, false);
-  }
-
   public SWIGTYPE_p_Efficio__Data__Data GetData(SWIGTYPE_p_Efficio__Data__DataType dataType) {
     long cPtr = EfficioJNI.Frame_GetData(swigCPtr, this, SWIGTYPE_p_Efficio__Data__DataType.getCPtr(dataType));
     return (cPtr == 0) ? null : new SWIGTYPE_p_Efficio__Data__Data(cPtr, false);

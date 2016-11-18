@@ -13,7 +13,8 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-extern "C" {
+extern "C" 
+{
 	namespace Efficio
 	{
 		/// Efficio engine for retrieving processed frames.

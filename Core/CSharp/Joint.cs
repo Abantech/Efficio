@@ -40,27 +40,21 @@ public class Joint : global::System.IDisposable {
     }
   }
 
-  public Joint(JointName name, Vector3 position) : this(EfficioPINVOKE.new_Joint((int)name, Vector3.getCPtr(position)), true) {
+  public Joint(Vector3 position, SWIGTYPE_p_JointType type) : this(EfficioPINVOKE.new_Joint(Vector3.getCPtr(position), SWIGTYPE_p_JointType.getCPtr(type)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public JointName Name {
-    set {
-      EfficioPINVOKE.Joint_Name_set(swigCPtr, (int)value);
-    } 
+  public Vector3 Position {
     get {
-      JointName ret = (JointName)EfficioPINVOKE.Joint_Name_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioPINVOKE.Joint_Position_get(swigCPtr);
+      Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);
       return ret;
     } 
   }
 
-  public Vector3 Position {
-    set {
-      EfficioPINVOKE.Joint_Position_set(swigCPtr, Vector3.getCPtr(value));
-    } 
+  public SWIGTYPE_p_JointType Type {
     get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Joint_Position_get(swigCPtr);
-      Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);
+      SWIGTYPE_p_JointType ret = new SWIGTYPE_p_JointType(EfficioPINVOKE.Joint_Type_get(swigCPtr), true);
       return ret;
     } 
   }

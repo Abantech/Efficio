@@ -188,7 +188,9 @@ EXIT 0</Command>
   <ItemGroup>
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="ContinuousGesture.cpp" />
+    <ClCompile Include="Device.cpp" />
     <ClCompile Include="DeviceConfiguration.cpp" />
+    <ClCompile Include="DeviceManager.cpp" />
     <ClCompile Include="DiscreteGesture.cpp" />
     <ClCompile Include="Drone.cpp" />
     <ClCompile Include="EfficioFrame.cpp" />
@@ -201,38 +203,31 @@ EXIT 0</Command>
     <ClCompile Include="HistoricalFrameCollection.cpp" />
     <ClCompile Include="Joint.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="LeapMotionDevice.cpp" />
     <ClCompile Include="Location.cpp" />
-=======
->>>>>>> origin/master
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
     <ClCompile Include="RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="Sensor.cpp" />
     <ClCompile Include="SingleHandGesture.cpp" />
+    <ClCompile Include="SkeletalData.cpp" />
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ClInclude Include="Altimeter.h" />
     <ClInclude Include="Altitude.h" />
     <ClInclude Include="Asset.h" />
     <ClInclude Include="AssetManager.h" />
-    <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="Device.h" />
-=======
     <ClInclude Include="BodySide.h" />
     <ClInclude Include="ContinuousGesture.h" />
->>>>>>> origin/master
     <ClInclude Include="DeviceConfiguration.h" />
+    <ClInclude Include="DeviceManager.h" />
+    <ClInclude Include="DeviceStatus.h" />
     <ClInclude Include="DiscreteGesture.h" />
-<<<<<<< HEAD
     <ClInclude Include="Drone.h" />
-=======
     <ClInclude Include="Finger.h" />
->>>>>>> origin/master
     <ClInclude Include="EfficioFrame.h" />
     <ClInclude Include="FingerType.h" />
     <ClInclude Include="Hand.h">
@@ -244,30 +239,22 @@ EXIT 0</Command>
     <ClInclude Include="EventType.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
-<<<<<<< HEAD
-    <ClInclude Include="Hand.h" />
-    <ClInclude Include="HandData.h" />
     <ClInclude Include="DataType.h" />
-=======
->>>>>>> origin/master
     <ClInclude Include="HistoricalFrameCollection.h" />
     <ClInclude Include="Joint.h" />
     <ClInclude Include="JointType.h" />
     <ClInclude Include="LeapConfiguration.h" />
-<<<<<<< HEAD
     <ClInclude Include="LeapMotionDevice.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="LocationSensor.h" />
     <ClInclude Include="SampleAltimeter.h" />
     <ClInclude Include="SampleGPS.h" />
     <ClInclude Include="Sensor.h" />
-    <ClInclude Include="SingleHandGesture.h" />
-=======
->>>>>>> origin/master
     <ClInclude Include="Pinch.h" />
     <ClInclude Include="SingleHandGesture.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />
     <ClInclude Include="SkeletalData.h" />
+    <ClInclude Include="TrackingType.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>

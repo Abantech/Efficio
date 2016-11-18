@@ -10,12 +10,54 @@
 
 namespace Efficio.Net {
 
-public enum Finger {
-  Thumb,
-  Index,
-  Middle,
-  Ring,
-  Pinky
+public class Finger : global::System.IDisposable {
+  private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  protected bool swigCMemOwn;
+
+  internal Finger(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwn = cMemoryOwn;
+    swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
+  }
+
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Finger obj) {
+    return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
+  }
+
+  ~Finger() {
+    Dispose();
+  }
+
+  public virtual void Dispose() {
+    lock(this) {
+      if (swigCPtr.Handle != global::System.IntPtr.Zero) {
+        if (swigCMemOwn) {
+          swigCMemOwn = false;
+          EfficioPINVOKE.delete_Finger(swigCPtr);
+        }
+        swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
+      }
+      global::System.GC.SuppressFinalize(this);
+    }
+  }
+
+  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t joints) : this(EfficioPINVOKE.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t.getCPtr(joints)), true) {
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t Joints {
+    get {
+      SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t ret = new SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t(EfficioPINVOKE.Finger_Joints_get(swigCPtr), true);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_FingerType FingerType {
+    get {
+      SWIGTYPE_p_FingerType ret = new SWIGTYPE_p_FingerType(EfficioPINVOKE.Finger_FingerType_get(swigCPtr), true);
+      return ret;
+    } 
+  }
+
 }
 
 }

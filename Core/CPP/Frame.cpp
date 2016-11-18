@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-#include "Frame.h"
-
-Efficio::Frame::Frame() {
-
-}
-
-Efficio::Frame::~Frame() {
-
-}
-
-Efficio::Data::Data* Efficio::Frame::GetData(Efficio::Data::DataType dataType)
-{
-	return dataCollection.at(dataType);
-}
-
-void Efficio::Frame::AddData(Efficio::Data::Data* data)
-{
-	dataCollection.emplace(data->GetDataType(), data);
-}
-=======
 #include "Frame.h"
 //#include "Leap.h"
 #include <vector>
@@ -105,10 +84,18 @@ Efficio::Frame::~Frame() { //destructor
 
 }
 
+Efficio::Data::Data * Efficio::Frame::GetData(Efficio::Data::DataType dataType)
+{
+	return nullptr;
+}
+
+void Efficio::Frame::AddData(Efficio::Data::Data * data)
+{
+}
+
 /*sample main() below - might be pasted into MainPage.cpp
 *ptr1
 //P should be received from Vector3 for each (for_each, for loop, and/or while loop) HandJoint
 
 //To call any member function: ptr1->memberfunction;
 */
->>>>>>> origin/master

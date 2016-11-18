@@ -8,50 +8,43 @@
 
 package Efficio.Java;
 
-public final class Finger {
-  public final static Finger Thumb = new Finger("Thumb");
-  public final static Finger Index = new Finger("Index");
-  public final static Finger Middle = new Finger("Middle");
-  public final static Finger Ring = new Finger("Ring");
-  public final static Finger Pinky = new Finger("Pinky");
+public class Finger {
+  private transient long swigCPtr;
+  protected transient boolean swigCMemOwn;
 
-  public final int swigValue() {
-    return swigValue;
+  protected Finger(long cPtr, boolean cMemoryOwn) {
+    swigCMemOwn = cMemoryOwn;
+    swigCPtr = cPtr;
   }
 
-  public String toString() {
-    return swigName;
+  protected static long getCPtr(Finger obj) {
+    return (obj == null) ? 0 : obj.swigCPtr;
   }
 
-  public static Finger swigToEnum(int swigValue) {
-    if (swigValue < swigValues.length && swigValue >= 0 && swigValues[swigValue].swigValue == swigValue)
-      return swigValues[swigValue];
-    for (int i = 0; i < swigValues.length; i++)
-      if (swigValues[i].swigValue == swigValue)
-        return swigValues[i];
-    throw new IllegalArgumentException("No enum " + Finger.class + " with value " + swigValue);
+  protected void finalize() {
+    delete();
   }
 
-  private Finger(String swigName) {
-    this.swigName = swigName;
-    this.swigValue = swigNext++;
+  public synchronized void delete() {
+    if (swigCPtr != 0) {
+      if (swigCMemOwn) {
+        swigCMemOwn = false;
+        EfficioJNI.delete_Finger(swigCPtr);
+      }
+      swigCPtr = 0;
+    }
   }
 
-  private Finger(String swigName, int swigValue) {
-    this.swigName = swigName;
-    this.swigValue = swigValue;
-    swigNext = swigValue+1;
+  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t joints) {
+    this(EfficioJNI.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t.getCPtr(joints)), true);
   }
 
-  private Finger(String swigName, Finger swigEnum) {
-    this.swigName = swigName;
-    this.swigValue = swigEnum.swigValue;
-    swigNext = this.swigValue+1;
+  public SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t getJoints() {
+    return new SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t(EfficioJNI.Finger_Joints_get(swigCPtr, this), true);
   }
 
-  private static Finger[] swigValues = { Thumb, Index, Middle, Ring, Pinky };
-  private static int swigNext = 0;
-  private final int swigValue;
-  private final String swigName;
+  public SWIGTYPE_p_FingerType getFingerType() {
+    return new SWIGTYPE_p_FingerType(EfficioJNI.Finger_FingerType_get(swigCPtr, this), true);
+  }
+
 }
-

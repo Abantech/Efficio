@@ -26,8 +26,5 @@ namespace Efficio
 		Leap::Controller* controller;
 		Leap::Frame currentFrame;
 		Leap::Frame lastFrame;
-		Efficio::Models::Human::Hand CopyHand(Leap::Hand hand);
-		Efficio::Models::Human::Finger CopyFinger(Leap::Finger finger);
-		Efficio::Models::Human::Joint CopyJoint(Leap::Bone::Type boneType, Leap::Finger finger);
 	};
 }

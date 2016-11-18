@@ -37,8 +37,8 @@ public class Pinch extends DiscreteGesture {
     super.delete();
   }
 
-  public Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide side, SWIGTYPE_p_Efficio__Models__Body__Finger finger1, SWIGTYPE_p_Efficio__Models__Body__Finger finger2, Vector3 position) {
-    this(EfficioJNI.new_Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(side), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger1), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger2), Vector3.getCPtr(position), position), true);
+  public Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide side, Finger finger1, Finger finger2, Vector3 position) {
+    this(EfficioJNI.new_Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(side), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2, Vector3.getCPtr(position), position), true);
   }
 
   public void setPosition(Vector3 value) {
@@ -50,20 +50,22 @@ public class Pinch extends DiscreteGesture {
     return (cPtr == 0) ? null : new Vector3(cPtr, false);
   }
 
-  public void setFinger1(SWIGTYPE_p_Efficio__Models__Body__Finger value) {
-    EfficioJNI.Pinch_Finger1_set(swigCPtr, this, SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(value));
+  public void setFinger1(Finger value) {
+    EfficioJNI.Pinch_Finger1_set(swigCPtr, this, Finger.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_Efficio__Models__Body__Finger getFinger1() {
-    return new SWIGTYPE_p_Efficio__Models__Body__Finger(EfficioJNI.Pinch_Finger1_get(swigCPtr, this), true);
+  public Finger getFinger1() {
+    long cPtr = EfficioJNI.Pinch_Finger1_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Finger(cPtr, false);
   }
 
-  public void setFinger2(SWIGTYPE_p_Efficio__Models__Body__Finger value) {
-    EfficioJNI.Pinch_Finger2_set(swigCPtr, this, SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(value));
+  public void setFinger2(Finger value) {
+    EfficioJNI.Pinch_Finger2_set(swigCPtr, this, Finger.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_Efficio__Models__Body__Finger getFinger2() {
-    return new SWIGTYPE_p_Efficio__Models__Body__Finger(EfficioJNI.Pinch_Finger2_get(swigCPtr, this), true);
+  public Finger getFinger2() {
+    long cPtr = EfficioJNI.Pinch_Finger2_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Finger(cPtr, false);
   }
 
   public EventType GetEventType() {
