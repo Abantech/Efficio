@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['enabled',['Enabled',['../class_efficio_1_1_device.html#ae724390ac1fadd47e528e0231bacf290',1,'Efficio::Device']]]
+  ['fingers',['Fingers',['../class_efficio_1_1_models_1_1_body_1_1_hand.html#a2f8d98a62d1988c1aa7b65588c64952e',1,'Efficio::Models::Body::Hand']]],
+  ['fingertype',['FingerType',['../class_efficio_1_1_models_1_1_body_1_1_finger.html#a463468a5ef7c5023e5bb58fa7a916ad3',1,'Efficio::Models::Body::Finger']]]
 ];

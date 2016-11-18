@@ -39,10 +39,6 @@ public class Vector3 {
     this(EfficioJNI.new_Vector3(x, y, z), true);
   }
 
-  public float DistanceTo(Vector3 vector2) {
-    return EfficioJNI.Vector3_DistanceTo(swigCPtr, this, Vector3.getCPtr(vector2), vector2);
-  }
-
   public float X() {
     return EfficioJNI.Vector3_X(swigCPtr, this);
   }

@@ -1,8 +1,10 @@
 #pragma once
-
-#include <map>
-#include "Vector3.h"
+#include <array>
+#include <memory>
 #include "Joint.h"
+#include "FingerType.h"
+
+using namespace std;
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -14,28 +16,21 @@ namespace Efficio
 {
 	namespace Models
 	{
-		namespace Human
+		namespace Body
 		{
-
-			extern enum class FingerName {
-				Thumb,
-				Index,
-				Middle,
-				Ring,
-				Pinky
-			};
-
+			/// Representation of the human finger
 			extern class DLLEXPORT Finger
 			{
 			public:
-				Finger();
-				Finger(FingerName fingerName, std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions);
+				Finger(Efficio::Models::Body::FingerType fingerType, array<shared_ptr<Joint>, 4> joints);
 				~Finger();
-				Efficio::Vector3 GetJointPosition(Efficio::Models::Human::JointName jointName);
-				FingerName Name;
-			private:
-				std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions;
+
+				/// The joints of the finger
+				const array<shared_ptr<Joint>, 4> Joints;
+
+				/// Which finger the object is representing
+				const FingerType FingerType;
 			};
 		}
 	}
-}
+};

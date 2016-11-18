@@ -43,12 +43,6 @@ public class Vector3 : global::System.IDisposable {
   public Vector3(float x, float y, float z) : this(EfficioPINVOKE.new_Vector3(x, y, z), true) {
   }
 
-  public float DistanceTo(Vector3 vector2) {
-    float ret = EfficioPINVOKE.Vector3_DistanceTo(swigCPtr, Vector3.getCPtr(vector2));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
   public float X() {
     float ret = EfficioPINVOKE.Vector3_X(swigCPtr);
     return ret;

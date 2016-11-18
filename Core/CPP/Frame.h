@@ -1,10 +1,13 @@
 #pragma once
 
+<<<<<<< HEAD
 #include "HandData.h"
 #include <map>
 #include "Data.h"
 #include "DataType.h"
 
+=======
+>>>>>>> origin/master
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
@@ -18,6 +21,7 @@ namespace Efficio
 	public:
 		Frame();
 		~Frame();
+<<<<<<< HEAD
 		Efficio::HandData HandData;
 
 		// TODO make this templated
@@ -27,5 +31,7 @@ namespace Efficio
 
 	private:
 		std::map<Efficio::Data::DataType, Efficio::Data::Data*> dataCollection;
+=======
+>>>>>>> origin/master
 	};
 }

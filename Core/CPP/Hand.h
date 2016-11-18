@@ -1,10 +1,8 @@
 #pragma once
-
-#include "Vector3.h"
-#include <array>
 #include "Finger.h"
-#include "Enumerations.h"
-
+#include "Joint.h"
+#include "BodySide.h"
+#include <array>
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -12,22 +10,28 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-
 namespace Efficio
 {
 	namespace Models
 	{
-		namespace Human
+		namespace Body
 		{
+			/// Representation of the human hand
 			extern class DLLEXPORT Hand
 			{
+
 			public:
-				Hand();
-				Hand(std::array<Efficio::Models::Human::Finger, 5> fingers, Efficio::Body::BodySide side);
+				Hand(BodySide side, array<shared_ptr<Finger>, 5> fingers, vector<shared_ptr<Joint>> joints);
 				~Hand();
-				std::array<Efficio::Models::Human::Finger, 5> Fingers;
-				Efficio::Body::BodySide Side;
-			private:
+
+				/// The joints of the hand excluding the joints of the fingers
+				const vector<shared_ptr<Joint>> Joints;
+
+				/// The fingers of the hand
+				const array<shared_ptr<Finger>, 5> Fingers;
+
+				/// The side of the body
+				const BodySide Side;
 			};
 		}
 	}

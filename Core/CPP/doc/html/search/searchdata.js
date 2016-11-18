@@ -1,9 +1,16 @@
 var indexSectionsWithContent =
 {
+<<<<<<< HEAD
   0: "acdefghijlprstuv",
   1: "acdefghjlpsv",
   2: "acdghilrstu",
   3: "defilps",
+=======
+  0: "abcdefghjlprstv",
+  1: "bcdefghjlpsv",
+  2: "ag",
+  3: "dfjlpst",
+>>>>>>> origin/master
   4: "er"
 };
 

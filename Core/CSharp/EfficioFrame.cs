@@ -10,12 +10,12 @@
 
 namespace Efficio.Net {
 
-public class EfficioFrame : global::System.IDisposable {
+public class EfficioFrame : Frame {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  private bool swigCMemOwnBase;
+  private bool swigCMemOwnDerived;
 
-  internal EfficioFrame(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwnBase = cMemoryOwn;
+  internal EfficioFrame(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.EfficioFrame_SWIGSmartPtrUpcast(cPtr), true) {
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -27,17 +27,56 @@ public class EfficioFrame : global::System.IDisposable {
     Dispose();
   }
 
-  public virtual void Dispose() {
+  public override void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwnBase) {
-          swigCMemOwnBase = false;
+        if (swigCMemOwnDerived) {
+          swigCMemOwnDerived = false;
           EfficioPINVOKE.delete_EfficioFrame(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
       global::System.GC.SuppressFinalize(this);
+      base.Dispose();
     }
+  }
+
+  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Hand_t_t Hands {
+    set {
+      EfficioPINVOKE.EfficioFrame_Hands_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Hand_t_t.getCPtr(value));
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.EfficioFrame_Hands_get(swigCPtr);
+      SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Hand_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Hand_t_t(cPtr, false);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public EventCollection events {
+    set {
+      EfficioPINVOKE.EfficioFrame_events_set(swigCPtr, EventCollection.getCPtr(value));
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.EfficioFrame_events_get(swigCPtr);
+      EventCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new EventCollection(cPtr, false);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public int ID {
+    set {
+      EfficioPINVOKE.EfficioFrame_ID_set(swigCPtr, value);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      int ret = EfficioPINVOKE.EfficioFrame_ID_get(swigCPtr);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
   }
 
   public EfficioFrame(int ID) : this(EfficioPINVOKE.new_EfficioFrame(ID), true) {
@@ -52,18 +91,6 @@ public class EfficioFrame : global::System.IDisposable {
   public void AddEvent(Event eventPtr) {
     EfficioPINVOKE.EfficioFrame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public int ID {
-    set {
-      EfficioPINVOKE.EfficioFrame_ID_set(swigCPtr, value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      int ret = EfficioPINVOKE.EfficioFrame_ID_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
   }
 
 }
