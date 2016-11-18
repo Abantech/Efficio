@@ -23,11 +23,11 @@ namespace Efficio
 				extern class DLLEXPORT Pinch : public DiscreteGesture
 				{
 				public:
-					Pinch(Body::BodySide side, Body::Finger finger1, Body::Finger finger2, Vector3 position);
+					Pinch(Body::BodySide side, Efficio::Models::Body::Finger finger1, Efficio::Models::Body::Finger finger2, Vector3 position);
 					~Pinch();
 					Vector3 Position;
-					Body::Finger Finger1;
-					Body::Finger Finger2;
+					Efficio::Models::Body::Finger Finger1;
+					Efficio::Models::Body::Finger Finger2;
 					Efficio::Events::EventType GetEventType();
 					Body::BodySide Side;
 				};

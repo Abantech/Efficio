@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mcp',['MCP',['../class_efficio_1_1_m_c_p.html',1,'Efficio']]]
+  ['pinch',['Pinch',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_pinch.html',1,'Efficio::InputRecognition::Human::Hands']]],
+  ['position',['Position',['../class_efficio_1_1_models_1_1_body_1_1_joint.html#ac84f303a9a068a3f8965272ebd29a61f',1,'Efficio::Models::Body::Joint']]]
 ];

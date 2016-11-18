@@ -1,5 +1,4 @@
 #include "Frame.h"
-#include "HandJoint.h"
 //#include "Leap.h"
 #include <vector>
 #include "Vector3.h"
@@ -12,39 +11,39 @@ Efficio::Frame::Frame() { //constructor
 	//Leap.h likely needed for input data specific to each HandJoint
 	//option: iterate for P values from array or other input data structure
 
-	DIP lh2DIP();
-	DIP lh3DIP();
-	DIP lh4DIP();
-	DIP lh5DIP();
+	//DIP lh2DIP();
+	//DIP lh3DIP();
+	//DIP lh4DIP();
+	//DIP lh5DIP();
 
-	DIP rh2DIP();
-	DIP rh3DIP();
-	DIP rh4DIP();
-	DIP rh5DIP();
+	//DIP rh2DIP();
+	//DIP rh3DIP();
+	//DIP rh4DIP();
+	//DIP rh5DIP();
 
-	PIP lh2PIP();
-	PIP lh3PIP();
-	PIP lh4PIP();
-	PIP lh5PIP();
+	//PIP lh2PIP();
+	//PIP lh3PIP();
+	//PIP lh4PIP();
+	//PIP lh5PIP();
 
-	PIP rh2PIP();
-	PIP rh3PIP();
-	PIP rh4PIP();
-	PIP rh5PIP();
+	//PIP rh2PIP();
+	//PIP rh3PIP();
+	//PIP rh4PIP();
+	//PIP rh5PIP();
 
-	MCP lh2MCP();
-	MCP lh3MCP();
-	MCP lh4MCP();
-	MCP lh5MCP();
+	//MCP lh2MCP();
+	//MCP lh3MCP();
+	//MCP lh4MCP();
+	//MCP lh5MCP();
 
-	MCP rh2MCP();
-	MCP rh3MCP();
-	MCP rh4MCP();
-	MCP rh5MCP();
+	//MCP rh2MCP();
+	//MCP rh3MCP();
+	//MCP rh4MCP();
+	//MCP rh5MCP();
 
 	//Note single thumb joint design:
-	IPCMC lh1IPCMC();
-	IPCMC rh1MIPCMC();
+	//IPCMC lh1IPCMC();
+	//IPCMC rh1MIPCMC();
 
 
 

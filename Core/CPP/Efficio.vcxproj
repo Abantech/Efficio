@@ -222,8 +222,10 @@ EXIT 0</Command>
     <ClInclude Include="Gesture.h" />
     <ClInclude Include="HistoricalFrameCollection.h" />
     <ClInclude Include="Joint.h" />
+    <ClInclude Include="JointType.h" />
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="Pinch.h" />
+    <ClInclude Include="SingleHandGesture.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />
     <ClInclude Include="SkeletalData.h" />
     <ClInclude Include="Vector3.h" />

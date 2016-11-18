@@ -16,7 +16,7 @@ namespace Efficio {
 
 	std::shared_ptr<Efficio::EfficioFrame> Engine::GetFrame()
 	{
-
+		return std::shared_ptr<Efficio::EfficioFrame>();
 	}
 
 

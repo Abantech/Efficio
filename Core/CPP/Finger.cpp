@@ -1,9 +1,17 @@
 #include "Finger.h"
 
-Efficio::Body::Finger::Finger(Efficio::Body::FingerType FingerType)
+namespace Efficio
 {
-}
-
-Efficio::Body::Finger::~Finger()
-{
+	namespace Models
+	{
+		namespace Body
+		{
+			Finger::Finger(Efficio::Models::Body::FingerType fingerType, array<shared_ptr<Joint>, 4> joints) : FingerType(fingerType), Joints(joints)
+			{
+			}
+			Finger::~Finger()
+			{
+			}
+		}
+	}
 }

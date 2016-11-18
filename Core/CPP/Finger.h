@@ -1,7 +1,7 @@
 #pragma once
 #include "Frame.h"
 #include "Event.h"
-#include <vector>
+#include <array>
 #include <memory>
 #include "Joint.h"
 
@@ -19,23 +19,27 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			extern class DLLEXPORT Finger
-			{
-			public:
-				Finger(FingerType fingerType);
-				~Finger();
-				vector<shared_ptr<Joint>> FingerJoints;
-				const FingerType fingerType;
-			};
-			//can we specify FingerTypes as derived classes enumerated in Enumerations.h (pinky, ring, middle, index, thumb)?
-			//can we add derived classes of FingerTypes?
-
+			/// The different finger types
 			extern enum class DLLEXPORT FingerType {
 				Thumb,
 				Index,
 				Middle,
 				Ring,
 				Pinky
+			};
+
+			/// Representation of the human finger
+			extern class DLLEXPORT Finger
+			{
+			public:
+				Finger(Efficio::Models::Body::FingerType fingerType, array<shared_ptr<Joint>, 4> joints);
+				~Finger();
+
+				/// The joints of the finger
+				const array<shared_ptr<Joint>, 4> Joints;
+
+				/// Which finger
+				const FingerType FingerType;
 			};
 		}
 	}

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "JointType.h"
 #include "Vector3.h"
 
 #if COMPILING_DLL
@@ -19,42 +20,12 @@ namespace Efficio
 			public:
 				Joint(Vector3 position, JointType type);
 				~Joint();
-				const Vector3 Position;
-				const JointType Type;
-			};
 
-			/// Enumeration containing all of the joints of the body
-			extern enum class DLLEXPORT JointType {
-				RightHandThumbInterphalangeal,
-				RightHandThumbMetacarpophalangeal,
-				RightHandThumbCarpometaparpal,
-				RightHandIndexMCP,
-				RightHandIndexPIP,
-				RightHandIndexDIP,
-				RightHandMiddleMCP,
-				RightHandMiddlePIP,
-				RightHandMiddleDIP,
-				RightHandRingMCP,
-				RightHandRingPIP,
-				RightHandRingDIP,
-				RightHandPinkyMCP,
-				RightHandPinkyPIP,
-				RightHandPinkyDIP,
-				LeftHandThumbInterphalangeal,
-				LeftHandThumbMetacarpophalangeal,
-				LeftHandThumbCarpometaparpal,
-				LeftHandIndexMCP,
-				LeftHandIndexPIP,
-				LeftHandIndexDIP,
-				LeftHandMiddleMCP,
-				LeftHandMiddlePIP,
-				LeftHandMiddleDIP,
-				LeftHandRingMCP,
-				LeftHandRingPIP,
-				LeftHandRingDIP,
-				LeftHandPinkyMCP,
-				LeftHandPinkyPIP,
-				LeftHandPinkyDIP,
+				/// The joint's position
+				const Vector3 Position;
+
+				/// The joint's type
+				const JointType Type;
 			};
 		}
 	}

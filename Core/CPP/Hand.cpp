@@ -1,9 +1,18 @@
 #include "Hand.h"
 
-Efficio::Body::Hand::Hand()
+namespace Efficio
 {
-}
+	namespace Models
+	{
+		namespace Body
+		{
+			Hand::Hand()
+			{
+			}
 
-Efficio::Body::Hand::~Hand()
-{
+			Hand::~Hand()
+			{
+			}
+		}
+	}
 }

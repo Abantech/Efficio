@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['id',['ID',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hand_1_1_pinch.html#ae1aec081a7d8e9461c4c47fce860e907',1,'Efficio::InputRecognition::Human::Hand::Pinch']]]
+  ['joints',['Joints',['../class_efficio_1_1_models_1_1_body_1_1_finger.html#a9940e837998e1b042bce464f129e35d6',1,'Efficio::Models::Body::Finger']]]
 ];

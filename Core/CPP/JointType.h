@@ -1,0 +1,60 @@
+#pragma once
+
+#if COMPILING_DLL
+#define DLLEXPORT __declspec(dllexport)
+#else
+#define DLLEXPORT __declspec(dllimport)
+#endif
+
+namespace Efficio
+{
+	namespace Models
+	{
+		namespace Body
+		{
+			/// Enumeration containing all of the joints of the body
+			extern enum class DLLEXPORT JointType {
+				RightHandThumbIP,
+				RightHandThumbMCP,
+				RightHandThumbCMP,
+				RightHandThumbTIP,
+				RightHandIndexMCP,
+				RightHandIndexPIP,
+				RightHandIndexDIP,
+				RightHandIndexTIP,
+				RightHandMiddleMCP,
+				RightHandMiddlePIP,
+				RightHandMiddleDIP,
+				RightHandMiddleTIP,
+				RightHandRingMCP,
+				RightHandRingPIP,
+				RightHandRingDIP,
+				RightHandRingTIP,
+				RightHandPinkyMCP,
+				RightHandPinkyPIP,
+				RightHandPinkyDIP,
+				RightHandPinkyTIP,
+				LeftHandThumbIP,
+				LeftHandThumbMCP,
+				LeftHandThumbCMP,
+				LeftHandThumbTIP,
+				LeftHandIndexMCP,
+				LeftHandIndexPIP,
+				LeftHandIndexDIP,
+				LeftHandIndexTIP,
+				LeftHandMiddleMCP,
+				LeftHandMiddlePIP,
+				LeftHandMiddleDIP,
+				LeftHandMiddleTIP,
+				LeftHandRingMCP,
+				LeftHandRingPIP,
+				LeftHandRingDIP,
+				LeftHandRingTIP,
+				LeftHandPinkyMCP,
+				LeftHandPinkyPIP,
+				LeftHandPinkyDIP,
+				LeftHandPinkyTIP
+			};
+		}
+	}
+}
