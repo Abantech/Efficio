@@ -1,6 +1,4 @@
 #pragma once
-#include "Frame.h"
-#include "Event.h"
 #include <array>
 #include <memory>
 #include "Joint.h"
@@ -30,7 +28,7 @@ namespace Efficio
 				/// The joints of the finger
 				const array<shared_ptr<Joint>, 4> Joints;
 
-				/// Which finger
+				/// Which finger the object is representing
 				const FingerType FingerType;
 			};
 		}
