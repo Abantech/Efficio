@@ -37,8 +37,8 @@ public class Pinch extends DiscreteGesture {
     super.delete();
   }
 
-  public Pinch(BodySide side, SWIGTYPE_p_Efficio__Models__Body__Finger finger1, SWIGTYPE_p_Efficio__Models__Body__Finger finger2, Vector3 position) {
-    this(EfficioJNI.new_Pinch(side.swigValue(), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger1), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger2), Vector3.getCPtr(position), position), true);
+  public Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide side, SWIGTYPE_p_Efficio__Models__Body__Finger finger1, SWIGTYPE_p_Efficio__Models__Body__Finger finger2, Vector3 position) {
+    this(EfficioJNI.new_Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(side), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger1), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger2), Vector3.getCPtr(position), position), true);
   }
 
   public void setPosition(Vector3 value) {
@@ -70,12 +70,12 @@ public class Pinch extends DiscreteGesture {
     return EventType.swigToEnum(EfficioJNI.Pinch_GetEventType(swigCPtr, this));
   }
 
-  public void setSide(BodySide value) {
-    EfficioJNI.Pinch_Side_set(swigCPtr, this, value.swigValue());
+  public void setSide(SWIGTYPE_p_Efficio__Models__Body__BodySide value) {
+    EfficioJNI.Pinch_Side_set(swigCPtr, this, SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(value));
   }
 
-  public BodySide getSide() {
-    return BodySide.swigToEnum(EfficioJNI.Pinch_Side_get(swigCPtr, this));
+  public SWIGTYPE_p_Efficio__Models__Body__BodySide getSide() {
+    return new SWIGTYPE_p_Efficio__Models__Body__BodySide(EfficioJNI.Pinch_Side_get(swigCPtr, this), true);
   }
 
 }

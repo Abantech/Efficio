@@ -52,7 +52,7 @@ public class EfficioJNI {
   public final static native void delete_DiscreteGesture(long jarg1);
   public final static native int DiscreteGesture_GetType(long jarg1, DiscreteGesture jarg1_);
   public final static native int DiscreteGesture_GetGestureState(long jarg1, DiscreteGesture jarg1_);
-  public final static native long new_Pinch(int jarg1, long jarg2, long jarg3, long jarg4, Vector3 jarg4_);
+  public final static native long new_Pinch(long jarg1, long jarg2, long jarg3, long jarg4, Vector3 jarg4_);
   public final static native void delete_Pinch(long jarg1);
   public final static native void Pinch_Position_set(long jarg1, Pinch jarg1_, long jarg2, Vector3 jarg2_);
   public final static native long Pinch_Position_get(long jarg1, Pinch jarg1_);
@@ -61,8 +61,8 @@ public class EfficioJNI {
   public final static native void Pinch_Finger2_set(long jarg1, Pinch jarg1_, long jarg2);
   public final static native long Pinch_Finger2_get(long jarg1, Pinch jarg1_);
   public final static native int Pinch_GetEventType(long jarg1, Pinch jarg1_);
-  public final static native void Pinch_Side_set(long jarg1, Pinch jarg1_, int jarg2);
-  public final static native int Pinch_Side_get(long jarg1, Pinch jarg1_);
+  public final static native void Pinch_Side_set(long jarg1, Pinch jarg1_, long jarg2);
+  public final static native long Pinch_Side_get(long jarg1, Pinch jarg1_);
   public final static native long new_EventCollection__SWIG_0();
   public final static native long new_EventCollection__SWIG_1(long jarg1);
   public final static native long EventCollection_size(long jarg1, EventCollection jarg1_);

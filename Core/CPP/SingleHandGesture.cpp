@@ -1,4 +1,6 @@
 #include "SingleHandGesture.h"
+#include "BodySide.h"
+
 namespace Efficio {
 	namespace InputRecognition
 	{
@@ -6,7 +8,7 @@ namespace Efficio {
 		{
 			namespace Hands
 			{
-				SingleHandGesture::SingleHandGesture(Body::BodySide side) : Side(side)
+				SingleHandGesture::SingleHandGesture(Efficio::Models::Body::BodySide side) : Side(side)
 				{
 				}
 				SingleHandGesture::~SingleHandGesture()

@@ -1,5 +1,6 @@
 #pragma once
 #include "Enumerations.h"
+#include "BodySide.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -17,9 +18,9 @@ namespace Efficio {
 				extern class DLLEXPORT SingleHandGesture
 				{
 				public:
-					SingleHandGesture(Body::BodySide side);
+					SingleHandGesture(Efficio::Models::Body::BodySide side);
 					~SingleHandGesture();
-					Body::BodySide Side;
+					Efficio::Models::Body::BodySide Side;
 				};
 			}
 		}

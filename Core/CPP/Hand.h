@@ -1,6 +1,8 @@
 #pragma once
 #include "Finger.h"
 #include "Joint.h"
+#include "BodySide.h"
+#include <array>
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -14,6 +16,7 @@ namespace Efficio
 	{
 		namespace Body
 		{
+			/// Representation of the human hand
 			extern class DLLEXPORT Hand
 			{
 
@@ -21,12 +24,14 @@ namespace Efficio
 				Hand();
 				~Hand();
 
-				//vector<shared_ptr<EfficioHand>> Hands;
+				/// The joints of the hand excluding the joints of the fingers
 				vector<shared_ptr<Joint>> Joints;
-				vector<shared_ptr<Finger>> Fingers;
-				//HandType GetHandType();
 
-				//Vector3 WristPosition;
+				/// The fingers of the hand
+				array<shared_ptr<Finger>, 5> Fingers;
+
+				/// The side of the body
+				BodySide Side;
 			};
 		}
 	}

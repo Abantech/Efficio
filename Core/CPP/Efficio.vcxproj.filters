@@ -161,6 +161,12 @@
     <ClInclude Include="JointType.h">
       <Filter>Header Files\Models\Body</Filter>
     </ClInclude>
+    <ClInclude Include="BodySide.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="FingerType.h">
+      <Filter>Header Files\Models\Body\Hand</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="RuntimeCSharp.i" />

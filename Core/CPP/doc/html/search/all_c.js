@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['side',['Side',['../class_efficio_1_1_models_1_1_body_1_1_hand.html#af1c8b771ef9cec3af08bbd6ce8f301dc',1,'Efficio::Models::Body::Hand']]],
   ['singlehandgesture',['SingleHandGesture',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture.html',1,'Efficio::InputRecognition::Human::Hands']]],
   ['singlehandgesturedetector',['SingleHandGestureDetector',['../class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector.html',1,'Efficio::InputRecognition::Human::Hands']]],
   ['skeletaldata',['SkeletalData',['../class_efficio_1_1_skeletal_data.html',1,'Efficio']]],

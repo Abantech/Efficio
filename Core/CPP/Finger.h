@@ -4,6 +4,7 @@
 #include <array>
 #include <memory>
 #include "Joint.h"
+#include "FingerType.h"
 
 using namespace std;
 
@@ -19,15 +20,6 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			/// The different finger types
-			extern enum class DLLEXPORT FingerType {
-				Thumb,
-				Index,
-				Middle,
-				Ring,
-				Pinky
-			};
-
 			/// Representation of the human finger
 			extern class DLLEXPORT Finger
 			{

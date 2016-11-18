@@ -206,11 +206,13 @@ EXIT 0</Command>
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BodySide.h" />
     <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="DeviceConfiguration.h" />
     <ClInclude Include="DiscreteGesture.h" />
     <ClInclude Include="Finger.h" />
     <ClInclude Include="EfficioFrame.h" />
+    <ClInclude Include="FingerType.h" />
     <ClInclude Include="Hand.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>

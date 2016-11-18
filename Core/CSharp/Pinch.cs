@@ -41,7 +41,7 @@ public class Pinch : DiscreteGesture {
     }
   }
 
-  public Pinch(BodySide side, SWIGTYPE_p_Efficio__Models__Body__Finger finger1, SWIGTYPE_p_Efficio__Models__Body__Finger finger2, Vector3 position) : this(EfficioPINVOKE.new_Pinch((int)side, SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger1), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger2), Vector3.getCPtr(position)), true) {
+  public Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide side, SWIGTYPE_p_Efficio__Models__Body__Finger finger1, SWIGTYPE_p_Efficio__Models__Body__Finger finger2, Vector3 position) : this(EfficioPINVOKE.new_Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(side), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger1), SWIGTYPE_p_Efficio__Models__Body__Finger.getCPtr(finger2), Vector3.getCPtr(position)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -88,13 +88,13 @@ public class Pinch : DiscreteGesture {
     return ret;
   }
 
-  public BodySide Side {
+  public SWIGTYPE_p_Efficio__Models__Body__BodySide Side {
     set {
-      EfficioPINVOKE.Pinch_Side_set(swigCPtr, (int)value);
+      EfficioPINVOKE.Pinch_Side_set(swigCPtr, SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(value));
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      BodySide ret = (BodySide)EfficioPINVOKE.Pinch_Side_get(swigCPtr);
+      SWIGTYPE_p_Efficio__Models__Body__BodySide ret = new SWIGTYPE_p_Efficio__Models__Body__BodySide(EfficioPINVOKE.Pinch_Side_get(swigCPtr), true);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
