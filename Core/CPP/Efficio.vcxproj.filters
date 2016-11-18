@@ -19,23 +19,26 @@
     <Filter Include="Header Files\Events">
       <UniqueIdentifier>{d241b3f1-7deb-4193-b455-ecee96c508e9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\IRP">
+    <Filter Include="Header Files\Events\IRP">
       <UniqueIdentifier>{e17f951b-865b-4853-9ba3-321a60f8a977}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\IRP\Human">
+    <Filter Include="Header Files\Events\IRP\Human">
       <UniqueIdentifier>{9756081e-bd22-46a0-807e-ab3642cf97b5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\IRP\Human\Hands">
+    <Filter Include="Header Files\Events\IRP\Human\Hands">
       <UniqueIdentifier>{905864fb-51b8-4c85-8fa7-586cc1329489}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Devices">
-      <UniqueIdentifier>{8433659b-7c77-4ea5-8798-51768d233db6}</UniqueIdentifier>
+    <Filter Include="Header Files\Models">
+      <UniqueIdentifier>{8563c7e0-401b-4f63-84d9-6da6b824a912}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Models">
-      <UniqueIdentifier>{64c95a13-34e7-46eb-9bb8-71fbb7c823f8}</UniqueIdentifier>
+    <Filter Include="Header Files\Models\Body">
+      <UniqueIdentifier>{71f84eed-6c1f-4890-b9dd-e027a885f14a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Models\Human">
-      <UniqueIdentifier>{f6405be0-6b5f-484e-a337-32a93ef8606c}</UniqueIdentifier>
+    <Filter Include="Header Files\Models\Body\Face">
+      <UniqueIdentifier>{19cf79ec-2f1d-4c13-8e0f-f9f47bde5204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\Body\Hand">
+      <UniqueIdentifier>{4f1672e3-02bd-45c9-b0e4-77e6552fb579}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -78,34 +81,19 @@
     <ClCompile Include="Pinch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PinchDetector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HistoricalFrameCollection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RuntimeCSharp_wrap.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Device.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LeapMotionDevice.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceManager.cpp">
+    <ClCompile Include="Finger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Hand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Joint.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Finger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HandData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -135,22 +123,19 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Gesture.h">
-      <Filter>Header Files\IRP</Filter>
+      <Filter>Header Files\Events\IRP</Filter>
     </ClInclude>
     <ClInclude Include="DiscreteGesture.h">
-      <Filter>Header Files\IRP</Filter>
+      <Filter>Header Files\Events\IRP</Filter>
     </ClInclude>
     <ClInclude Include="ContinuousGesture.h">
-      <Filter>Header Files\IRP</Filter>
+      <Filter>Header Files\Events\IRP</Filter>
     </ClInclude>
     <ClInclude Include="Pinch.h">
-      <Filter>Header Files\IRP\Human\Hands</Filter>
-    </ClInclude>
-    <ClInclude Include="PinchDetector.h">
-      <Filter>Header Files\IRP\Human\Hands</Filter>
+      <Filter>Header Files\Events\IRP\Human\Hands</Filter>
     </ClInclude>
     <ClInclude Include="SingleHandGestureDetector.h">
-      <Filter>Header Files\IRP\Human\Hands</Filter>
+      <Filter>Header Files\Events\IRP\Human\Hands</Filter>
     </ClInclude>
     <ClInclude Include="HistoricalFrameCollection.h">
       <Filter>Header Files</Filter>
@@ -158,32 +143,29 @@
     <ClInclude Include="EventType.h">
       <Filter>Header Files\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Device.h">
-      <Filter>Header Files\Devices</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceStatus.h">
-      <Filter>Header Files\Devices</Filter>
-    </ClInclude>
-    <ClInclude Include="TrackingType.h">
-      <Filter>Header Files\Devices</Filter>
-    </ClInclude>
-    <ClInclude Include="LeapMotionDevice.h">
-      <Filter>Header Files\Devices</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceManager.h">
-      <Filter>Header Files\Devices</Filter>
-    </ClInclude>
-    <ClInclude Include="Hand.h">
-      <Filter>Models\Human</Filter>
-    </ClInclude>
-    <ClInclude Include="Joint.h">
-      <Filter>Models\Human</Filter>
-    </ClInclude>
-    <ClInclude Include="HandData.h">
+    <ClInclude Include="SkeletalData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Joint.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
     <ClInclude Include="Finger.h">
-      <Filter>Models\Human</Filter>
+      <Filter>Header Files\Models\Body\Hand</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>Header Files\Models\Body\Hand</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleHandGesture.h">
+      <Filter>Header Files\Events\IRP\Human</Filter>
+    </ClInclude>
+    <ClInclude Include="JointType.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="BodySide.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="FingerType.h">
+      <Filter>Header Files\Models\Body\Hand</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

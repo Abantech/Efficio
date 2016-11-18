@@ -8,7 +8,8 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-namespace Efficio {
+namespace Efficio 
+{
 	namespace InputRecognition
 	{
 		/// Continuous gestures are gestures that are done over time

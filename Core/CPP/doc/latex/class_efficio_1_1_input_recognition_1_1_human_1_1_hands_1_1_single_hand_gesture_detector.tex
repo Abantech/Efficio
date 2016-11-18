@@ -1,17 +1,33 @@
 \hypertarget{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector}{}\section{Efficio\+:\+:Input\+Recognition\+:\+:Human\+:\+:Hands\+:\+:Single\+Hand\+Gesture\+Detector Class Reference}
 \label{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector}\index{Efficio\+::\+Input\+Recognition\+::\+Human\+::\+Hands\+::\+Single\+Hand\+Gesture\+Detector@{Efficio\+::\+Input\+Recognition\+::\+Human\+::\+Hands\+::\+Single\+Hand\+Gesture\+Detector}}
-Inheritance diagram for Efficio\+:\+:Input\+Recognition\+:\+:Human\+:\+:Hands\+:\+:Single\+Hand\+Gesture\+Detector\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector}
-\end{center}
-\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_efficio_1_1_input_recognition_1_1_gesture}{Efficio\+::\+Input\+Recognition\+::\+Gesture} $>$ $>$ {\bfseries Detect} (\hyperlink{class_efficio_1_1_models_1_1_human_1_1_hand}{Efficio\+::\+Models\+::\+Human\+::\+Hand} hand)=0\hypertarget{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector_ae5b183eb42d9d17792d73cd34b5c50c3}{}\label{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector_ae5b183eb42d9d17792d73cd34b5c50c3}
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_efficio_1_1_input_recognition_1_1_gesture}{Efficio\+::\+Input\+Recognition\+::\+Gesture} $>$ $>$ {\bfseries Detect} (Leap\+::\+Hand hand)=0\hypertarget{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector_a6fb83b598c1f11539f6c49495c987994}{}\label{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector_a6fb83b598c1f11539f6c49495c987994}
 
 \end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ Efficio\+::\+Body\+::\+Finger\+Type, 5 $>$ {\bfseries Finger\+Names}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\index{Efficio\+::\+Input\+Recognition\+::\+Human\+::\+Hands\+::\+Single\+Hand\+Gesture\+Detector@{Efficio\+::\+Input\+Recognition\+::\+Human\+::\+Hands\+::\+Single\+Hand\+Gesture\+Detector}!Finger\+Names@{Finger\+Names}}
+\index{Finger\+Names@{Finger\+Names}!Efficio\+::\+Input\+Recognition\+::\+Human\+::\+Hands\+::\+Single\+Hand\+Gesture\+Detector@{Efficio\+::\+Input\+Recognition\+::\+Human\+::\+Hands\+::\+Single\+Hand\+Gesture\+Detector}}
+\subsubsection[{\texorpdfstring{Finger\+Names}{FingerNames}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<$Efficio\+::\+Body\+::\+Finger\+Type, 5$>$ Efficio\+::\+Input\+Recognition\+::\+Human\+::\+Hands\+::\+Single\+Hand\+Gesture\+Detector\+::\+Finger\+Names\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector_a500f4eb83fd6ba19b35622f4c510cb4a}{}\label{class_efficio_1_1_input_recognition_1_1_human_1_1_hands_1_1_single_hand_gesture_detector_a500f4eb83fd6ba19b35622f4c510cb4a}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= 
+                    \{ 
+                        Efficio::Body::FingerType::Thumb,
+                        Efficio::Body::FingerType::Index,
+                        Efficio::Body::FingerType::Middle,
+                        Efficio::Body::FingerType::Ring,
+                        Efficio::Body::FingerType::Pinky
+                    \}
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "JointType.h"
 #include "Vector3.h"
 
 #if COMPILING_DLL
@@ -12,25 +13,19 @@ namespace Efficio
 {
 	namespace Models
 	{
-		namespace Human
+		namespace Body
 		{
-			extern enum class DLLEXPORT JointName
-			{
-				Distal,
-				Intermediate,
-				Proximal,
-				Metacarpal
-			};
-
-			extern class DLLEXPORT Joint
-			{
+			/// A body joint
+			extern class DLLEXPORT Joint {
 			public:
-				Joint(Efficio::Models::Human::JointName name, Vector3 position);
+				Joint(Vector3 position, JointType type);
 				~Joint();
-				JointName Name;
-				Vector3 Position;
-			private:
 
+				/// The joint's position
+				const Vector3 Position;
+
+				/// The joint's type
+				const JointType Type;
 			};
 		}
 	}

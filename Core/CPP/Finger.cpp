@@ -4,20 +4,13 @@ namespace Efficio
 {
 	namespace Models
 	{
-		namespace Human
+		namespace Body
 		{
-			Finger::Finger()
-			{
-			}
-			Finger::Finger(FingerName fingerName, std::map<Efficio::Models::Human::JointName, Efficio::Vector3> jointPositions) : Name(fingerName), jointPositions(jointPositions)
+			Finger::Finger(Efficio::Models::Body::FingerType fingerType, array<shared_ptr<Joint>, 4> joints) : FingerType(fingerType), Joints(joints)
 			{
 			}
 			Finger::~Finger()
 			{
-			}
-			Efficio::Vector3 Finger::GetJointPosition(Efficio::Models::Human::JointName jointName)
-			{
-				return jointPositions.at(jointName);
 			}
 		}
 	}

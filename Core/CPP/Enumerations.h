@@ -9,11 +9,6 @@
 namespace Efficio
 {
 	namespace Body {
-		extern enum class DLLEXPORT BodySide
-		{
-			Right,
-			Left
-		};
 
 		extern enum class DLLEXPORT BodyTrackingType
 		{

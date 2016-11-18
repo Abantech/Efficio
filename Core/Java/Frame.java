@@ -39,13 +39,4 @@ public class Frame {
     this(EfficioJNI.new_Frame(), true);
   }
 
-  public void setHandData(HandData value) {
-    EfficioJNI.Frame_HandData_set(swigCPtr, this, HandData.getCPtr(value), value);
-  }
-
-  public HandData getHandData() {
-    long cPtr = EfficioJNI.Frame_HandData_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new HandData(cPtr, false);
-  }
-
 }

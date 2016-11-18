@@ -3,7 +3,7 @@
 
 namespace Efficio
 {
-	EfficioFrame::EfficioFrame(int ID) : ID(ID)
+	EfficioFrame::EfficioFrame(int ID) : ID(ID), Hands()
 	{
 	}
 
@@ -11,6 +11,7 @@ namespace Efficio
 	{
 		
 	}
+
 	std::vector<std::shared_ptr<Efficio::Events::Event>> EfficioFrame::GetEvents()
 	{
 		return events;

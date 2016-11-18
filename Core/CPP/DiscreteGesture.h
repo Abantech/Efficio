@@ -7,7 +7,8 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-namespace Efficio {
+namespace Efficio 
+{
 	namespace InputRecognition
 	{
 		/// Discrete gestures are gestures that are always in a completed state.

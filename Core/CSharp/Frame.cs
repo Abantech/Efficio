@@ -43,19 +43,6 @@ public class Frame : global::System.IDisposable {
   public Frame() : this(EfficioPINVOKE.new_Frame(), true) {
   }
 
-  public HandData HandData {
-    set {
-      EfficioPINVOKE.Frame_HandData_set(swigCPtr, HandData.getCPtr(value));
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Frame_HandData_get(swigCPtr);
-      HandData ret = (cPtr == global::System.IntPtr.Zero) ? null : new HandData(cPtr, false);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
 }
 
 }
