@@ -2,8 +2,8 @@
 
 #include "Frame.h"
 #include "Event.h"
-#include "EfficioHand.h"
-#include "EfficioFinger.h"
+#include "Hand.h"
+#include "Finger.h"
 #include <vector>
 #include <memory>
 
@@ -20,8 +20,8 @@ namespace Efficio
 	{
 	public:
 		
-		vector<shared_ptr<EfficioFinger>> Finger;
-		vector<shared_ptr<Efficio::EfficioHand>> Hands;
+		vector<shared_ptr<Efficio::Body::Finger>> Finger;
+		vector<shared_ptr<Efficio::Body::Hand>> Hands;
 		vector<shared_ptr<Efficio::Events::Event>> events;
 		int ID;
 		Body(int ID)

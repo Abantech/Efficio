@@ -193,12 +193,11 @@ EXIT 0</Command>
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="Finger.cpp" />
-    <ClCompile Include="FingerJoint.cpp" />
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Gesture.cpp" />
     <ClCompile Include="Hand.cpp" />
-    <ClCompile Include="HandJoint.cpp" />
     <ClCompile Include="HistoricalFrameCollection.cpp" />
+    <ClCompile Include="Joint.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
@@ -207,11 +206,9 @@ EXIT 0</Command>
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Body.h" />
     <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="DeviceConfiguration.h" />
     <ClInclude Include="DiscreteGesture.h" />
-    <ClInclude Include="EfficioBody.h" />
     <ClInclude Include="Finger.h" />
     <ClInclude Include="EfficioFrame.h" />
     <ClInclude Include="Hand.h">
@@ -221,11 +218,10 @@ EXIT 0</Command>
     <ClInclude Include="Enumerations.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventType.h" />
-    <ClInclude Include="FingerJoint.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
-    <ClInclude Include="HandJoint.h" />
     <ClInclude Include="HistoricalFrameCollection.h" />
+    <ClInclude Include="Joint.h" />
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="Pinch.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />

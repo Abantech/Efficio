@@ -1,10 +1,13 @@
 #include "ContinuousGesture.h"
-namespace Efficio {
+
+namespace Efficio 
+{
 	namespace InputRecognition
 	{
 		ContinuousGesture::ContinuousGesture()
 		{
 		}
+
 		ContinuousGesture::~ContinuousGesture()
 		{
 		}

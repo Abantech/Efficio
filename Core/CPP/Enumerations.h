@@ -29,19 +29,6 @@ namespace Efficio
 			LeftHand,
 			RightHand
 		};
-		extern enum class DLLEXPORT FingerType {
-			Thumb,
-			Index,
-			Middle,
-			Ring,
-			Pinky
-		};
-
-		extern enum class DLLEXPORT FingerJointType {
-			DIP,
-			PIP,
-			MCP
-		};
 	}
 
 	extern enum DLLEXPORT GestureType {

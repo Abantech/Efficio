@@ -1,6 +1,6 @@
 #pragma once
 
-#include "EfficioHand.h"
+#include "Hand.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -17,7 +17,7 @@ namespace Efficio
 		~SkeletalData();
 
 		//Hands vector of shared_pointers
-		vector<shared_ptr <EfficioHand>> HumanHand;
+		vector<shared_ptr <Efficio::Models::Body::Hand>> HumanHand;
 		//BVHData GetBVHData()
 		//BVHData bvhData
 

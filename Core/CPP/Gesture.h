@@ -9,7 +9,8 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-namespace Efficio {
+namespace Efficio 
+{
 	namespace InputRecognition
 	{
 		/// Base class for all gestures that may occur within the Efficio system.

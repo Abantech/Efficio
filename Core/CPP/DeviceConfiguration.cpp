@@ -8,7 +8,6 @@ namespace Efficio
 		{
 		}
 
-
 		DeviceConfiguration::~DeviceConfiguration()
 		{
 		}

@@ -19,7 +19,7 @@ namespace Efficio
 	extern class DLLEXPORT EfficioFrame : public Frame
 	{
 		public:
-			std::vector<shared_ptr<Efficio::Body::Hand>> Hands;
+			std::vector<shared_ptr<Efficio::Models::Body::Hand>> Hands;
 		std::vector<shared_ptr<Efficio::Events::Event>> events;
 		int ID;
 		EfficioFrame(int ID);

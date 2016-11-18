@@ -1,6 +1,6 @@
 #pragma once
 #include "Finger.h"
-#include "HandJoint.h"
+#include "Joint.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -10,21 +10,24 @@
 
 namespace Efficio
 {
-	namespace Body
+	namespace Models
 	{
-		extern class DLLEXPORT Hand
+		namespace Body
 		{
+			extern class DLLEXPORT Hand
+			{
 
-		public:
-			Hand();
-			~Hand();
+			public:
+				Hand();
+				~Hand();
 
-			//vector<shared_ptr<EfficioHand>> Hands;
-			vector<shared_ptr<HandJoint>> Joints;
-			vector<shared_ptr<Finger>> Fingers;
-			//HandType GetHandType();
+				//vector<shared_ptr<EfficioHand>> Hands;
+				vector<shared_ptr<Joint>> Joints;
+				vector<shared_ptr<Finger>> Fingers;
+				//HandType GetHandType();
 
-			//Vector3 WristPosition;
-		};
+				//Vector3 WristPosition;
+			};
+		}
 	}
 }

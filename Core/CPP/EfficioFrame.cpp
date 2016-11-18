@@ -11,6 +11,7 @@ namespace Efficio
 	{
 		
 	}
+
 	std::vector<std::shared_ptr<Efficio::Events::Event>> EfficioFrame::GetEvents()
 	{
 		return events;
