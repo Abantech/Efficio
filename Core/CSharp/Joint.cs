@@ -10,20 +10,20 @@
 
 namespace Efficio.Net {
 
-public class SingleHandGestureDetector : global::System.IDisposable {
+public class Joint : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal SingleHandGestureDetector(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal Joint(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SingleHandGestureDetector obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Joint obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~SingleHandGestureDetector() {
+  ~Joint() {
     Dispose();
   }
 
@@ -32,7 +32,7 @@ public class SingleHandGestureDetector : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioPINVOKE.delete_SingleHandGestureDetector(swigCPtr);
+          EfficioPINVOKE.delete_Joint(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,10 +40,29 @@ public class SingleHandGestureDetector : global::System.IDisposable {
     }
   }
 
-  public virtual GestureCollection Detect(SWIGTYPE_p_Leap__Hand hand) {
-    GestureCollection ret = new GestureCollection(EfficioPINVOKE.SingleHandGestureDetector_Detect(swigCPtr, SWIGTYPE_p_Leap__Hand.getCPtr(hand)), true);
+  public Joint(JointName name, Vector3 position) : this(EfficioPINVOKE.new_Joint((int)name, Vector3.getCPtr(position)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
+  }
+
+  public JointName Name {
+    set {
+      EfficioPINVOKE.Joint_Name_set(swigCPtr, (int)value);
+    } 
+    get {
+      JointName ret = (JointName)EfficioPINVOKE.Joint_Name_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public Vector3 Position {
+    set {
+      EfficioPINVOKE.Joint_Position_set(swigCPtr, Vector3.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.Joint_Position_get(swigCPtr);
+      Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);
+      return ret;
+    } 
   }
 
 }
