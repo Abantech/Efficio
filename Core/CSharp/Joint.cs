@@ -82,6 +82,12 @@ public class Joint : global::System.IDisposable {
     return ret;
   }
 
+  public float DistanceTo(Joint joint) {
+    float ret = EfficioPINVOKE.Joint_DistanceTo(swigCPtr, Joint.getCPtr(joint));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }
 
 }

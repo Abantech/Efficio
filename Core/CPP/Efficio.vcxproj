@@ -221,6 +221,8 @@ EXIT 0</Command>
     <ClInclude Include="Asset.h" />
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="Body.h" />
+    <ClInclude Include="Bone.h" />
+    <ClInclude Include="BoneTypes.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="BodySide.h" />

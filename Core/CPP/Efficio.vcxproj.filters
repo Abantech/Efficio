@@ -269,6 +269,12 @@
     <ClInclude Include="Face.h">
       <Filter>Header Files\Models\Body\Face</Filter>
     </ClInclude>
+    <ClInclude Include="Bone.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="BoneTypes.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="RuntimeCSharp.i" />

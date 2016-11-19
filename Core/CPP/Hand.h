@@ -21,7 +21,7 @@ namespace Efficio
 			{
 
 			public:
-				Hand(BodySide side, array<Finger, 5> fingers, );
+				Hand(BodySide side, array<Finger, 5> fingers);
 				~Hand();
 
 				/// The side of the body

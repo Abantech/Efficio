@@ -64,4 +64,8 @@ public class Joint {
     return new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioJNI.Joint_DistalJoints(swigCPtr, this, Joint.getCPtr(joint), joint), true);
   }
 
+  public float DistanceTo(Joint joint) {
+    return EfficioJNI.Joint_DistanceTo(swigCPtr, this, Joint.getCPtr(joint), joint);
+  }
+
 }

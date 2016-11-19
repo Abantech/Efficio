@@ -23,15 +23,15 @@ public class EfficioJNI {
   public final static native float Joint_Confidence_get(long jarg1, Joint jarg1_);
   public final static native long Joint_ProximalJoints(long jarg1, Joint jarg1_, long jarg2, Joint jarg2_);
   public final static native long Joint_DistalJoints(long jarg1, Joint jarg1_, long jarg2, Joint jarg2_);
+  public final static native float Joint_DistanceTo(long jarg1, Joint jarg1_, long jarg2, Joint jarg2_);
   public final static native long new_Finger(long jarg1, long jarg2);
   public final static native void delete_Finger(long jarg1);
   public final static native long Finger_Joints_get(long jarg1, Finger jarg1_);
   public final static native long Finger_FingerType_get(long jarg1, Finger jarg1_);
-  public final static native long new_Hand(long jarg1, long jarg2, long jarg3);
+  public final static native long new_Hand(long jarg1, long jarg2);
   public final static native void delete_Hand(long jarg1);
-  public final static native long Hand_Joints_get(long jarg1, Hand jarg1_);
-  public final static native long Hand_Fingers_get(long jarg1, Hand jarg1_);
   public final static native long Hand_Side_get(long jarg1, Hand jarg1_);
+  public final static native long Hand_Fingers_get(long jarg1, Hand jarg1_);
   public final static native void delete_Event(long jarg1);
   public final static native int Event_GetEventType(long jarg1, Event jarg1_);
   public final static native long new_Frame();

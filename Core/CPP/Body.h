@@ -4,6 +4,8 @@
 #include "Arm.h"
 #include "Leg.h"
 #include "Joint.h"
+#include "Bone.h"
+#include "BoneTypes.h"
 #include <array>
 #include <vector>
 
@@ -44,11 +46,19 @@ namespace Efficio
 				/// The center hip joint
 				const Joint HipCenter;
 
+				const Bone Neck();
+
+				const Bone UpperSpine();
+
+				const Bone LowerSpine();
+
 				/// Gets a joint by jointType
 				const Joint GetJoint(JointType jointType);
 
 				/// Gets a collection of joints by joint type
 				const std::vector<Joint> GetJoints(std::vector<JointType> jointTypes);
+
+				const Bone GetBone( BoneType boneType);
 			};
 		}
 	}

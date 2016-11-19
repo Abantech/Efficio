@@ -40,28 +40,20 @@ public class Hand : global::System.IDisposable {
     }
   }
 
-  public Hand(SWIGTYPE_p_BodySide side, SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Finger_t_5_t fingers, SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Joint_t_t joints) : this(EfficioPINVOKE.new_Hand(SWIGTYPE_p_BodySide.getCPtr(side), SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Finger_t_5_t.getCPtr(fingers), SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Joint_t_t.getCPtr(joints)), true) {
+  public Hand(SWIGTYPE_p_BodySide side, SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t fingers) : this(EfficioPINVOKE.new_Hand(SWIGTYPE_p_BodySide.getCPtr(side), SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t.getCPtr(fingers)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Joint_t_t Joints {
-    get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Hand_Joints_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Joint_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Joint_t_t(cPtr, false);
-      return ret;
-    } 
-  }
-
-  public SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Finger_t_5_t Fingers {
-    get {
-      SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Finger_t_5_t ret = new SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Finger_t_5_t(EfficioPINVOKE.Hand_Fingers_get(swigCPtr), true);
-      return ret;
-    } 
   }
 
   public SWIGTYPE_p_BodySide Side {
     get {
       SWIGTYPE_p_BodySide ret = new SWIGTYPE_p_BodySide(EfficioPINVOKE.Hand_Side_get(swigCPtr), true);
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t Fingers {
+    get {
+      SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t ret = new SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t(EfficioPINVOKE.Hand_Fingers_get(swigCPtr), true);
       return ret;
     } 
   }
