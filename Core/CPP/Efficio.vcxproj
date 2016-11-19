@@ -204,11 +204,14 @@ EXIT 0</Command>
     <ClCompile Include="HistoricalFrameCollection.cpp" />
     <ClCompile Include="Joint.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
+    <ClCompile Include="LeapMotion.cpp" />
     <ClCompile Include="LeapMotionDevice.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
     <ClCompile Include="RuntimeCSharp_wrap.cxx" />
+    <ClCompile Include="SampleAltimeter.cpp" />
+    <ClCompile Include="SampleGPS.cpp" />
     <ClCompile Include="Sensor.cpp" />
     <ClCompile Include="SingleHandGesture.cpp" />
     <ClCompile Include="SkeletalData.cpp" />
@@ -252,6 +255,7 @@ EXIT 0</Command>
     <ClInclude Include="Joint.h" />
     <ClInclude Include="JointType.h" />
     <ClInclude Include="LeapConfiguration.h" />
+    <ClInclude Include="LeapMotion.h" />
     <ClInclude Include="LeapMotionDevice.h" />
     <ClInclude Include="Leg.h" />
     <ClInclude Include="Location.h" />

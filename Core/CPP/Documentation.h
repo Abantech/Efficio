@@ -58,5 +58,14 @@ namespace Efficio
 	/// <summary>
 	/// Data collection devices
 	/// </summary>
-	namespace Sensors {}
+	namespace Sensors
+	{
+		/// <summary>
+		/// Sensors for measuring human input
+		/// </summary>
+		namespace Body
+		{
+
+		}
+	}
 }

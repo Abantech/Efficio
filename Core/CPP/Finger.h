@@ -1,10 +1,6 @@
 #pragma once
-#include <array>
-#include <memory>
 #include "Joint.h"
 #include "FingerType.h"
-
-using namespace std;
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -22,11 +18,13 @@ namespace Efficio
 			extern class DLLEXPORT Finger
 			{
 			public:
-				Finger(Efficio::Models::Body::FingerType fingerType, array<shared_ptr<Joint>, 4> joints);
+				Finger(Efficio::Models::Body::FingerType fingerType, Joint tip, Joint dip, Joint mcp, Joint pip);
 				~Finger();
 
-				/// The joints of the finger
-				const array<shared_ptr<Joint>, 4> Joints;
+				const Joint Tip;
+				const Joint DIP;
+				const Joint MCP;
+				const Joint PIP;
 
 				/// Which finger the object is representing
 				const FingerType FingerType;

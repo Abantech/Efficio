@@ -16,7 +16,7 @@
 namespace Efficio
 {
 	namespace Sensors {
-		/// Any sensor which can feel data into Efficio
+		/// Any sensor which can feed data into Efficio
 		extern class DLLEXPORT Sensor
 		{
 		public:
@@ -26,8 +26,29 @@ namespace Efficio
 			/// The unique ID of the device
 			std::string ID;
 
-			/// Workaround for necessity of abstract class for dynamic casts
-			virtual void IDoNothing() = 0;
+			/// A Boolean indicating whether or not the device is enabled
+			bool Enabled;
+
+			/// A Boolean indicating whether or not the device is connected and ready to feed data into Efficio
+			bool Connected();
+
+			/// The status of the device
+			virtual Efficio::DeviceStatus Status() = 0;
+
+			/// The type of data the device is able to track
+			virtual Efficio::TrackingType TrackingTypes() = 0;
+
+			/// Connects the device
+			virtual void Connect() = 0;
+
+			/// Disconnects the device
+			virtual void Disconnect() = 0;
+
+			/// A Boolean indicating whether or not the device has a new frame for Efficio
+			virtual bool HasFrame() = 0;
+
+			/// Gets the current frame from the device
+			virtual Efficio::Frame GetFrame() = 0;
 		};
 	}
 }

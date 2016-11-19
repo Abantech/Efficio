@@ -49,6 +49,9 @@
     <Filter Include="Header Files\Models\Body\Face">
       <UniqueIdentifier>{52163919-0af7-45ed-9f35-b67fb2218279}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sensors\Body">
+      <UniqueIdentifier>{4ca33899-d9ce-4d8e-8977-ba1e59b54edb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceConfiguration.cpp">
@@ -130,6 +133,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Body.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LeapMotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleAltimeter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleGPS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -277,6 +289,9 @@
     </ClInclude>
     <ClInclude Include="Documentation.h">
       <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LeapMotion.h">
+      <Filter>Header Files\Sensors\Body</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

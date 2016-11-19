@@ -24,6 +24,14 @@ namespace Efficio
 			Efficio::Data::Positional::Altitude GetAltitude() { return Efficio::Data::Positional::Altitude(3); }
 
 			void IDoNothing() {};
+
+			// Inherited via Altimeter
+			virtual Efficio::DeviceStatus Status() override;
+			virtual Efficio::TrackingType TrackingTypes() override;
+			virtual void Connect() override;
+			virtual void Disconnect() override;
+			virtual bool HasFrame() override;
+			virtual Efficio::Frame GetFrame() override;
 		};
 	}
 }

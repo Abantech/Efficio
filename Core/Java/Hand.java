@@ -35,16 +35,16 @@ public class Hand {
     }
   }
 
-  public Hand(SWIGTYPE_p_BodySide side, SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t fingers) {
-    this(EfficioJNI.new_Hand(SWIGTYPE_p_BodySide.getCPtr(side), SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t.getCPtr(fingers)), true);
+  public Hand(SWIGTYPE_p_BodySide side, SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t fingers) {
+    this(EfficioJNI.new_Hand(SWIGTYPE_p_BodySide.getCPtr(side), SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t.getCPtr(fingers)), true);
   }
 
   public SWIGTYPE_p_BodySide getSide() {
     return new SWIGTYPE_p_BodySide(EfficioJNI.Hand_Side_get(swigCPtr, this), true);
   }
 
-  public SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t getFingers() {
-    return new SWIGTYPE_p_arrayT_Efficio__Models__Body__Finger_5_t(EfficioJNI.Hand_Fingers_get(swigCPtr, this), true);
+  public SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t getFingers() {
+    return new SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t(EfficioJNI.Hand_Fingers_get(swigCPtr, this), true);
   }
 
 }

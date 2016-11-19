@@ -40,13 +40,38 @@ public class Finger : global::System.IDisposable {
     }
   }
 
-  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t joints) : this(EfficioPINVOKE.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t.getCPtr(joints)), true) {
+  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, Joint tip, Joint dip, Joint mcp, Joint pip) : this(EfficioPINVOKE.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), Joint.getCPtr(tip), Joint.getCPtr(dip), Joint.getCPtr(mcp), Joint.getCPtr(pip)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t Joints {
+  public Joint Tip {
     get {
-      SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t ret = new SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t(EfficioPINVOKE.Finger_Joints_get(swigCPtr), true);
+      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_Tip_get(swigCPtr);
+      Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Joint DIP {
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_DIP_get(swigCPtr);
+      Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Joint MCP {
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_MCP_get(swigCPtr);
+      Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
+      return ret;
+    } 
+  }
+
+  public Joint PIP {
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_PIP_get(swigCPtr);
+      Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
       return ret;
     } 
   }

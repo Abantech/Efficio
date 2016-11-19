@@ -23,6 +23,14 @@ namespace Efficio
 			Efficio::Data::Positional::Location GetLocation() { return Efficio::Data::Positional::Location(3, 3); }
 
 			void IDoNothing() {};
+
+			// Inherited via LocationSensor
+			virtual Efficio::DeviceStatus Status() override;
+			virtual Efficio::TrackingType TrackingTypes() override;
+			virtual void Connect() override;
+			virtual void Disconnect() override;
+			virtual bool HasFrame() override;
+			virtual Efficio::Frame GetFrame() override;
 		};
 	}
 }

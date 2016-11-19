@@ -35,12 +35,28 @@ public class Finger {
     }
   }
 
-  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t joints) {
-    this(EfficioJNI.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t.getCPtr(joints)), true);
+  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, Joint tip, Joint dip, Joint mcp, Joint pip) {
+    this(EfficioJNI.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), Joint.getCPtr(tip), tip, Joint.getCPtr(dip), dip, Joint.getCPtr(mcp), mcp, Joint.getCPtr(pip), pip), true);
   }
 
-  public SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t getJoints() {
-    return new SWIGTYPE_p_arrayT_std__shared_ptrT_Efficio__Models__Body__Joint_t_4_t(EfficioJNI.Finger_Joints_get(swigCPtr, this), true);
+  public Joint getTip() {
+    long cPtr = EfficioJNI.Finger_Tip_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Joint(cPtr, false);
+  }
+
+  public Joint getDIP() {
+    long cPtr = EfficioJNI.Finger_DIP_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Joint(cPtr, false);
+  }
+
+  public Joint getMCP() {
+    long cPtr = EfficioJNI.Finger_MCP_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Joint(cPtr, false);
+  }
+
+  public Joint getPIP() {
+    long cPtr = EfficioJNI.Finger_PIP_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Joint(cPtr, false);
   }
 
   public SWIGTYPE_p_FingerType getFingerType() {

@@ -21,14 +21,14 @@ namespace Efficio
 			{
 
 			public:
-				Hand(BodySide side, array<Finger, 5> fingers);
+				Hand(BodySide side, std::array<Finger, 5> fingers);
 				~Hand();
 
 				/// The side of the body
 				const BodySide Side;
 
 				/// The fingers of the hand
-				const array<Finger, 5> Fingers;
+				const std::array<Finger, 5> Fingers;
 
 
 			};

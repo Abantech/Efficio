@@ -612,29 +612,57 @@ SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioJNI_Joint_1DistanceTo(JNIEnv 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jobject jarg5_) {
   jlong jresult = 0 ;
   Efficio::Models::Body::FingerType arg1 ;
-  array< std::shared_ptr< Efficio::Models::Body::Joint >,4 > arg2 ;
+  SwigValueWrapper< Efficio::Models::Body::Joint > arg2 ;
+  SwigValueWrapper< Efficio::Models::Body::Joint > arg3 ;
+  SwigValueWrapper< Efficio::Models::Body::Joint > arg4 ;
+  SwigValueWrapper< Efficio::Models::Body::Joint > arg5 ;
   Efficio::Models::Body::FingerType *argp1 ;
-  array< std::shared_ptr< Efficio::Models::Body::Joint >,4 > *argp2 ;
+  Efficio::Models::Body::Joint *argp2 ;
+  Efficio::Models::Body::Joint *argp3 ;
+  Efficio::Models::Body::Joint *argp4 ;
+  Efficio::Models::Body::Joint *argp5 ;
   Efficio::Models::Body::Finger *result = 0 ;
   
   (void)jenv;
   (void)jcls;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  (void)jarg5_;
   argp1 = *(Efficio::Models::Body::FingerType **)&jarg1; 
   if (!argp1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::FingerType");
     return 0;
   }
   arg1 = *argp1; 
-  argp2 = *(array< std::shared_ptr< Efficio::Models::Body::Joint >,4 > **)&jarg2; 
+  argp2 = *(Efficio::Models::Body::Joint **)&jarg2; 
   if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null array< std::shared_ptr< Efficio::Models::Body::Joint >,4 >");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
     return 0;
   }
   arg2 = *argp2; 
-  result = (Efficio::Models::Body::Finger *)new Efficio::Models::Body::Finger(arg1,arg2);
+  argp3 = *(Efficio::Models::Body::Joint **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
+    return 0;
+  }
+  arg3 = *argp3; 
+  argp4 = *(Efficio::Models::Body::Joint **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
+    return 0;
+  }
+  arg4 = *argp4; 
+  argp5 = *(Efficio::Models::Body::Joint **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
+    return 0;
+  }
+  arg5 = *argp5; 
+  result = (Efficio::Models::Body::Finger *)new Efficio::Models::Body::Finger(arg1,arg2,arg3,arg4,arg5);
   *(Efficio::Models::Body::Finger **)&jresult = result; 
   return jresult;
 }
@@ -650,17 +678,62 @@ SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_delete_1Finger(JNIEnv *jenv
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1Joints_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1Tip_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
-  array< std::shared_ptr< Efficio::Models::Body::Joint >,4 > result;
+  Efficio::Models::Body::Joint *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
-  result = (array< std::shared_ptr< Efficio::Models::Body::Joint >,4 >) ((arg1)->Joints);
-  *(array< std::shared_ptr< Efficio::Models::Body::Joint >,4 > **)&jresult = new array< std::shared_ptr< Efficio::Models::Body::Joint >,4 >((const array< std::shared_ptr< Efficio::Models::Body::Joint >,4 > &)result); 
+  result = (Efficio::Models::Body::Joint *)& ((arg1)->Tip);
+  *(Efficio::Models::Body::Joint **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1DIP_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  Efficio::Models::Body::Joint *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
+  result = (Efficio::Models::Body::Joint *)& ((arg1)->DIP);
+  *(Efficio::Models::Body::Joint **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1MCP_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  Efficio::Models::Body::Joint *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
+  result = (Efficio::Models::Body::Joint *)& ((arg1)->MCP);
+  *(Efficio::Models::Body::Joint **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1PIP_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  Efficio::Models::Body::Joint *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
+  result = (Efficio::Models::Body::Joint *)& ((arg1)->PIP);
+  *(Efficio::Models::Body::Joint **)&jresult = result; 
   return jresult;
 }
 
@@ -683,9 +756,9 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1FingerType_1get(JN
 SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   BodySide arg1 ;
-  array< Efficio::Models::Body::Finger,5 > arg2 ;
+  std::array< Efficio::Models::Body::Finger,5 > arg2 ;
   BodySide *argp1 ;
-  array< Efficio::Models::Body::Finger,5 > *argp2 ;
+  std::array< Efficio::Models::Body::Finger,5 > *argp2 ;
   Efficio::Models::Body::Hand *result = 0 ;
   
   (void)jenv;
@@ -696,9 +769,9 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand(JNIEnv *jenv, jc
     return 0;
   }
   arg1 = *argp1; 
-  argp2 = *(array< Efficio::Models::Body::Finger,5 > **)&jarg2; 
+  argp2 = *(std::array< Efficio::Models::Body::Finger,5 > **)&jarg2; 
   if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null array< Efficio::Models::Body::Finger,5 >");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::array< Efficio::Models::Body::Finger,5 >");
     return 0;
   }
   arg2 = *argp2; 
@@ -736,14 +809,14 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Side_1get(JNIEnv *je
 SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Fingers_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
-  array< Efficio::Models::Body::Finger,5 > result;
+  std::array< Efficio::Models::Body::Finger,5 > result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(Efficio::Models::Body::Hand **)&jarg1; 
-  result = (array< Efficio::Models::Body::Finger,5 >) ((arg1)->Fingers);
-  *(array< Efficio::Models::Body::Finger,5 > **)&jresult = new array< Efficio::Models::Body::Finger,5 >((const array< Efficio::Models::Body::Finger,5 > &)result); 
+  result = (std::array< Efficio::Models::Body::Finger,5 >) ((arg1)->Fingers);
+  *(std::array< Efficio::Models::Body::Finger,5 > **)&jresult = new std::array< Efficio::Models::Body::Finger,5 >((const std::array< Efficio::Models::Body::Finger,5 > &)result); 
   return jresult;
 }
 
