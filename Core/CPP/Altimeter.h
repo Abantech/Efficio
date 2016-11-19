@@ -13,7 +13,8 @@ namespace Efficio
 {
 	namespace Sensors {
 		/// The sensor responsible for reading the asset's altitude.
-		extern class DLLEXPORT Altimeter : public Efficio::Sensors::Sensor{
+		extern class DLLEXPORT Altimeter : public Efficio::Sensors::Sensor
+		{
 		public:
 			Altimeter() {};
 			~Altimeter() {};

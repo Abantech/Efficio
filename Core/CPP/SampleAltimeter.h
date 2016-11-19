@@ -14,7 +14,8 @@ namespace Efficio
 {
 	namespace Sensors {
 		/// A sample Altimeter
-		extern class DLLEXPORT SampleAltimeter : public Efficio::Sensors::Altimeter {
+		extern class DLLEXPORT SampleAltimeter : public Efficio::Sensors::Altimeter 
+		{
 		public:
 			SampleAltimeter() {};
 			~SampleAltimeter() {};

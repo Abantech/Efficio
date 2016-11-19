@@ -5,7 +5,10 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			Joint::Joint(Vector3 position, JointType type) : Position(position), Type(type)
+			Joint::Joint(Vector3 position, JointType type) : Joint(position, type, -1)
+			{
+			}
+			Joint::Joint(Vector3 position, JointType type, float confidence) : Position(position), Type(type), Confidence(confidence)
 			{
 			}
 			Joint::~Joint()

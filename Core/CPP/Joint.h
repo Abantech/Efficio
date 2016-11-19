@@ -16,9 +16,11 @@ namespace Efficio
 		namespace Body
 		{
 			/// A body joint
-			extern class DLLEXPORT Joint {
+			extern class DLLEXPORT Joint 
+			{
 			public:
 				Joint(Vector3 position, JointType type);
+				Joint(Vector3 position, JointType type, float confidence);
 				~Joint();
 
 				/// The joint's position
@@ -26,6 +28,9 @@ namespace Efficio
 
 				/// The joint's type
 				const JointType Type;
+
+				/// The confidence of the joint. A valie of -1 indicates that no confidence data was provided
+				const float Confidence;
 			};
 		}
 	}
