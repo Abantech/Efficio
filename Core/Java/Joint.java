@@ -56,4 +56,12 @@ public class Joint {
     return EfficioJNI.Joint_Confidence_get(swigCPtr, this);
   }
 
+  public SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t ProximalJoints(Joint joint) {
+    return new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioJNI.Joint_ProximalJoints(swigCPtr, this, Joint.getCPtr(joint), joint), true);
+  }
+
+  public SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t DistalJoints(Joint joint) {
+    return new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioJNI.Joint_DistalJoints(swigCPtr, this, Joint.getCPtr(joint), joint), true);
+  }
+
 }

@@ -21,6 +21,8 @@ public class EfficioJNI {
   public final static native long Joint_Position_get(long jarg1, Joint jarg1_);
   public final static native long Joint_Type_get(long jarg1, Joint jarg1_);
   public final static native float Joint_Confidence_get(long jarg1, Joint jarg1_);
+  public final static native long Joint_ProximalJoints(long jarg1, Joint jarg1_, long jarg2, Joint jarg2_);
+  public final static native long Joint_DistalJoints(long jarg1, Joint jarg1_, long jarg2, Joint jarg2_);
   public final static native long new_Finger(long jarg1, long jarg2);
   public final static native void delete_Finger(long jarg1);
   public final static native long Finger_Joints_get(long jarg1, Finger jarg1_);

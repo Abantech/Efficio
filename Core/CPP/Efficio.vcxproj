@@ -187,6 +187,7 @@ EXIT 0</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AssetManager.cpp" />
+    <ClCompile Include="Body.cpp" />
     <ClCompile Include="ContinuousGesture.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="DeviceConfiguration.cpp" />
@@ -216,8 +217,10 @@ EXIT 0</Command>
   <ItemGroup>
     <ClInclude Include="Altimeter.h" />
     <ClInclude Include="Altitude.h" />
+    <ClInclude Include="Arm.h" />
     <ClInclude Include="Asset.h" />
     <ClInclude Include="AssetManager.h" />
+    <ClInclude Include="Body.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="BodySide.h" />
@@ -227,6 +230,7 @@ EXIT 0</Command>
     <ClInclude Include="DeviceStatus.h" />
     <ClInclude Include="DiscreteGesture.h" />
     <ClInclude Include="Drone.h" />
+    <ClInclude Include="Face.h" />
     <ClInclude Include="Finger.h" />
     <ClInclude Include="EfficioFrame.h" />
     <ClInclude Include="FingerType.h" />
@@ -240,11 +244,13 @@ EXIT 0</Command>
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
     <ClInclude Include="DataType.h" />
+    <ClInclude Include="Head.h" />
     <ClInclude Include="HistoricalFrameCollection.h" />
     <ClInclude Include="Joint.h" />
     <ClInclude Include="JointType.h" />
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="LeapMotionDevice.h" />
+    <ClInclude Include="Leg.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="LocationSensor.h" />
     <ClInclude Include="SampleAltimeter.h" />

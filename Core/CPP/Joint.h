@@ -2,6 +2,7 @@
 
 #include "JointType.h"
 #include "Vector3.h"
+#include <vector>
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -32,6 +33,15 @@ namespace Efficio
 
 				/// The confidence of the joint. A valie of -1 indicates that no confidence data was provided
 				const float Confidence;
+
+				/// Gets the proximal joints of a joint, treating spine as origin. If joint is spine, spine is returned;
+				const std::vector<Joint> ProximalJoints(Joint joint);
+
+				/// Gets the distal joints of a joint, treating spine as origin. If joint is most distal, joint is returned;
+				const std::vector<Joint> DistalJoints(Joint joint);
+
+				/// The distance between two joints
+				const float DistanceTo(Joint joint);
 			};
 		}
 	}

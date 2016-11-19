@@ -12,10 +12,12 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			/// Enumeration containing the sides of the body
-			extern enum class DLLEXPORT BodySide {
-				Left,
-				Right
+			/// Representation of a human face
+			extern class DLLEXPORT Face
+			{
+			public:
+				Face();
+				~Face();
 			};
 		}
 	}

@@ -70,6 +70,18 @@ public class Joint : global::System.IDisposable {
     } 
   }
 
+  public SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t ProximalJoints(Joint joint) {
+    SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t ret = new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioPINVOKE.Joint_ProximalJoints(swigCPtr, Joint.getCPtr(joint)), true);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t DistalJoints(Joint joint) {
+    SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t ret = new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioPINVOKE.Joint_DistalJoints(swigCPtr, Joint.getCPtr(joint)), true);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }
 
 }

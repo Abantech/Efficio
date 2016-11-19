@@ -34,9 +34,6 @@
     <Filter Include="Header Files\Models\Body">
       <UniqueIdentifier>{71f84eed-6c1f-4890-b9dd-e027a885f14a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Models\Body\Face">
-      <UniqueIdentifier>{19cf79ec-2f1d-4c13-8e0f-f9f47bde5204}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Models\Body\Hand">
       <UniqueIdentifier>{4f1672e3-02bd-45c9-b0e4-77e6552fb579}</UniqueIdentifier>
     </Filter>
@@ -48,6 +45,9 @@
     </Filter>
     <Filter Include="Header Files\Data\Positional">
       <UniqueIdentifier>{a7d70a7d-948e-4131-8a98-b18ef3579352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\Body\Face">
+      <UniqueIdentifier>{52163919-0af7-45ed-9f35-b67fb2218279}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +127,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SkeletalData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Body.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -250,6 +253,21 @@
     </ClInclude>
     <ClInclude Include="Altitude.h">
       <Filter>Header Files\Data\Positional</Filter>
+    </ClInclude>
+    <ClInclude Include="Body.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="Arm.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="Leg.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="Head.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="Face.h">
+      <Filter>Header Files\Models\Body\Face</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

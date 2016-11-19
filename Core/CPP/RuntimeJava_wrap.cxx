@@ -540,6 +540,54 @@ SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioJNI_Joint_1Confidence_1get(JN
 }
 
 
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Joint_1ProximalJoints(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jlong jresult = 0 ;
+  Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
+  SwigValueWrapper< Efficio::Models::Body::Joint > arg2 ;
+  Efficio::Models::Body::Joint *argp2 ;
+  SwigValueWrapper< std::vector< Efficio::Models::Body::Joint > > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(Efficio::Models::Body::Joint **)&jarg1; 
+  argp2 = *(Efficio::Models::Body::Joint **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (arg1)->ProximalJoints(arg2);
+  *(std::vector< Efficio::Models::Body::Joint > **)&jresult = new std::vector< Efficio::Models::Body::Joint >((const std::vector< Efficio::Models::Body::Joint > &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Joint_1DistalJoints(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jlong jresult = 0 ;
+  Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
+  SwigValueWrapper< Efficio::Models::Body::Joint > arg2 ;
+  Efficio::Models::Body::Joint *argp2 ;
+  SwigValueWrapper< std::vector< Efficio::Models::Body::Joint > > result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(Efficio::Models::Body::Joint **)&jarg1; 
+  argp2 = *(Efficio::Models::Body::Joint **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (arg1)->DistalJoints(arg2);
+  *(std::vector< Efficio::Models::Body::Joint > **)&jresult = new std::vector< Efficio::Models::Body::Joint >((const std::vector< Efficio::Models::Body::Joint > &)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   Efficio::Models::Body::FingerType arg1 ;

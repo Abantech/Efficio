@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Face.h"
+
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
@@ -12,10 +14,14 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			/// Enumeration containing the sides of the body
-			extern enum class DLLEXPORT BodySide {
-				Left,
-				Right
+			/// Representation of the human head
+			extern class DLLEXPORT Head
+			{
+			public:
+				Head();
+				~Head();
+
+				const Face GetFace();
 			};
 		}
 	}
