@@ -425,7 +425,7 @@ SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioJNI_Vector3_1Z(JNIEnv *jenv, 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Joint(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Joint_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   jlong jresult = 0 ;
   SwigValueWrapper< Efficio::Vector3 > arg1 ;
   JointType arg2 ;
@@ -449,6 +449,37 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Joint(JNIEnv *jenv, j
   }
   arg2 = *argp2; 
   result = (Efficio::Models::Body::Joint *)new Efficio::Models::Body::Joint(arg1,arg2);
+  *(Efficio::Models::Body::Joint **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Joint_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jfloat jarg3) {
+  jlong jresult = 0 ;
+  SwigValueWrapper< Efficio::Vector3 > arg1 ;
+  JointType arg2 ;
+  float arg3 ;
+  Efficio::Vector3 *argp1 ;
+  JointType *argp2 ;
+  Efficio::Models::Body::Joint *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  argp1 = *(Efficio::Vector3 **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Vector3");
+    return 0;
+  }
+  arg1 = *argp1; 
+  argp2 = *(JointType **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null JointType");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = (float)jarg3; 
+  result = (Efficio::Models::Body::Joint *)new Efficio::Models::Body::Joint(arg1,arg2,arg3);
   *(Efficio::Models::Body::Joint **)&jresult = result; 
   return jresult;
 }
@@ -490,6 +521,21 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Joint_1Type_1get(JNIEnv *j
   arg1 = *(Efficio::Models::Body::Joint **)&jarg1; 
   result = (JointType) ((arg1)->Type);
   *(JointType **)&jresult = new JointType((const JointType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioJNI_Joint_1Confidence_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jfloat jresult = 0 ;
+  Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
+  float result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Body::Joint **)&jarg1; 
+  result = (float)(float) ((arg1)->Confidence);
+  jresult = (jfloat)result; 
   return jresult;
 }
 

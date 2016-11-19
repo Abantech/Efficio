@@ -36,7 +36,11 @@ public class Joint {
   }
 
   public Joint(Vector3 position, SWIGTYPE_p_JointType type) {
-    this(EfficioJNI.new_Joint(Vector3.getCPtr(position), position, SWIGTYPE_p_JointType.getCPtr(type)), true);
+    this(EfficioJNI.new_Joint__SWIG_0(Vector3.getCPtr(position), position, SWIGTYPE_p_JointType.getCPtr(type)), true);
+  }
+
+  public Joint(Vector3 position, SWIGTYPE_p_JointType type, float confidence) {
+    this(EfficioJNI.new_Joint__SWIG_1(Vector3.getCPtr(position), position, SWIGTYPE_p_JointType.getCPtr(type), confidence), true);
   }
 
   public Vector3 getPosition() {
@@ -46,6 +50,10 @@ public class Joint {
 
   public SWIGTYPE_p_JointType getType() {
     return new SWIGTYPE_p_JointType(EfficioJNI.Joint_Type_get(swigCPtr, this), true);
+  }
+
+  public float getConfidence() {
+    return EfficioJNI.Joint_Confidence_get(swigCPtr, this);
   }
 
 }

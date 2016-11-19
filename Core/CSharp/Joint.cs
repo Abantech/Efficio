@@ -40,7 +40,11 @@ public class Joint : global::System.IDisposable {
     }
   }
 
-  public Joint(Vector3 position, SWIGTYPE_p_JointType type) : this(EfficioPINVOKE.new_Joint(Vector3.getCPtr(position), SWIGTYPE_p_JointType.getCPtr(type)), true) {
+  public Joint(Vector3 position, SWIGTYPE_p_JointType type) : this(EfficioPINVOKE.new_Joint__SWIG_0(Vector3.getCPtr(position), SWIGTYPE_p_JointType.getCPtr(type)), true) {
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public Joint(Vector3 position, SWIGTYPE_p_JointType type, float confidence) : this(EfficioPINVOKE.new_Joint__SWIG_1(Vector3.getCPtr(position), SWIGTYPE_p_JointType.getCPtr(type), confidence), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -55,6 +59,13 @@ public class Joint : global::System.IDisposable {
   public SWIGTYPE_p_JointType Type {
     get {
       SWIGTYPE_p_JointType ret = new SWIGTYPE_p_JointType(EfficioPINVOKE.Joint_Type_get(swigCPtr), true);
+      return ret;
+    } 
+  }
+
+  public float Confidence {
+    get {
+      float ret = EfficioPINVOKE.Joint_Confidence_get(swigCPtr);
       return ret;
     } 
   }

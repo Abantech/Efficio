@@ -15,10 +15,12 @@ public class EfficioJNI {
   public final static native float Vector3_X(long jarg1, Vector3 jarg1_);
   public final static native float Vector3_Y(long jarg1, Vector3 jarg1_);
   public final static native float Vector3_Z(long jarg1, Vector3 jarg1_);
-  public final static native long new_Joint(long jarg1, Vector3 jarg1_, long jarg2);
+  public final static native long new_Joint__SWIG_0(long jarg1, Vector3 jarg1_, long jarg2);
+  public final static native long new_Joint__SWIG_1(long jarg1, Vector3 jarg1_, long jarg2, float jarg3);
   public final static native void delete_Joint(long jarg1);
   public final static native long Joint_Position_get(long jarg1, Joint jarg1_);
   public final static native long Joint_Type_get(long jarg1, Joint jarg1_);
+  public final static native float Joint_Confidence_get(long jarg1, Joint jarg1_);
   public final static native long new_Finger(long jarg1, long jarg2);
   public final static native void delete_Finger(long jarg1);
   public final static native long Finger_Joints_get(long jarg1, Finger jarg1_);

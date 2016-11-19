@@ -19,6 +19,7 @@ namespace Efficio
 			extern class DLLEXPORT Joint 
 			{
 			public:
+				/// Constructor for when confidence values are not available. Sets the confidence property to -1.
 				Joint(Vector3 position, JointType type);
 				Joint(Vector3 position, JointType type, float confidence);
 				~Joint();
