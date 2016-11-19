@@ -231,6 +231,7 @@ EXIT 0</Command>
     <ClInclude Include="DeviceManager.h" />
     <ClInclude Include="DeviceStatus.h" />
     <ClInclude Include="DiscreteGesture.h" />
+    <ClInclude Include="Documentation.h" />
     <ClInclude Include="Drone.h" />
     <ClInclude Include="Face.h" />
     <ClInclude Include="Finger.h" />

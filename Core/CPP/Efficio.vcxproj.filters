@@ -275,6 +275,9 @@
     <ClInclude Include="BoneTypes.h">
       <Filter>Header Files\Models\Body</Filter>
     </ClInclude>
+    <ClInclude Include="Documentation.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="RuntimeCSharp.i" />
