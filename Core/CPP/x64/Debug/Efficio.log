@@ -1,328 +1,481 @@
-﻿  EfficioFrame.cpp
-d:\dev-workspace\abantechprojects\efficio\core\cpp\frame.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\lib\vmml\vector.hpp(420): note: see declaration of 'vmml::Vector<3,float>'
-d:\dev-workspace\abantechprojects\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::Finger' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\fingerjoint.h(40): warning C4091: 'extern ': ignored on left of 'Efficio::FingerJoint' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(24): warning C4251: 'Efficio::EfficioFinger::FingerJoints': class 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFinger'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::FingerJoint>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(24): note: see declaration of 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::FingerJoint>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFinger' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(45): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(52): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(59): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(66): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(73): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(81): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(22): warning C4251: 'Efficio::EfficioHand::Joints': class 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::HandJoint>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(22): note: see declaration of 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::HandJoint>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(23): warning C4251: 'Efficio::EfficioHand::HandFingers': class 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::EfficioFinger>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(23): note: see declaration of 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::EfficioFinger>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(27): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioHand' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(21): warning C4251: 'Efficio::EfficioFrame::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::EfficioHand>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(21): note: see declaration of 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::EfficioHand>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(22): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::Events::Event>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(22): note: see declaration of 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::Events::Event>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(30): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
-  Generating Code...
-  Compiling...
-  RuntimeCSharp_wrap.cxx
-d:\dev-workspace\abantechprojects\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\lib\vmml\vector.hpp(420): note: see declaration of 'vmml::Vector<3,float>'
-d:\dev-workspace\abantechprojects\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\frame.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::Finger' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\fingerjoint.h(40): warning C4091: 'extern ': ignored on left of 'Efficio::FingerJoint' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(24): warning C4251: 'Efficio::EfficioFinger::FingerJoints': class 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFinger'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::FingerJoint>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(24): note: see declaration of 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::FingerJoint>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFinger' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(45): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(52): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(59): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(66): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(73): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(81): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(22): warning C4251: 'Efficio::EfficioHand::Joints': class 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::HandJoint>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(22): note: see declaration of 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::HandJoint>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(23): warning C4251: 'Efficio::EfficioHand::HandFingers': class 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::EfficioFinger>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(23): note: see declaration of 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::EfficioFinger>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(27): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioHand' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(21): warning C4251: 'Efficio::EfficioFrame::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::EfficioHand>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(21): note: see declaration of 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::EfficioHand>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(22): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::Events::Event>
-          ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(22): note: see declaration of 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::Events::Event>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(30): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\leapconfiguration.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::LeapConfiguration' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\deviceconfiguration.h(24): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::DeviceConfiguration' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\historicalframecollection.h(29): warning C4091: 'extern ': ignored on left of 'Efficio::HistoricalFrameCollection' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\engine.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Engine' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\gesture.h(37): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Gesture' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\discretegesture.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::DiscreteGesture' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\singlehandgesture.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Human::Hands::SingleHandGesture' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\pinch.h(32): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Human::Hands::Pinch' when no variable is declared
+﻿  PinchDetector.cpp
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\gesture.h(37): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Gesture' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2039: 'Finger': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2065: 'Finger': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2923: 'std::array': 'Finger' is not a valid template type argument for parameter '_Ty'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(36): warning C4251: 'Efficio::InputRecognition::Human::Hands::SingleHandGestureDetector::FingerNames': class 'std::array' needs to have dll-interface to be used by clients of class 'Efficio::InputRecognition::Human::Hands::SingleHandGestureDetector'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\array(22): note: see declaration of 'std::array'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(37): warning C4624: 'Efficio::InputRecognition::Human::Hands::SingleHandGestureDetector': destructor was implicitly defined as deleted
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2039: 'Thumb': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2065: 'Thumb': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(29): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(29): error C2039: 'Index': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(29): error C2065: 'Index': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(30): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(30): error C2039: 'Middle': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(30): error C2065: 'Middle': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(31): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(31): error C2039: 'Ring': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(31): error C2065: 'Ring': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(32): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(32): error C2039: 'Pinky': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(36): error C2065: 'Pinky': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(36): fatal error C1903: unable to recover from previous error(s); stopping compilation
+  Pinch.cpp
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesture.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Human::Hands::SingleHandGesture' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\gesture.h(37): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Gesture' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\discretegesture.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::DiscreteGesture' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(25): error C2039: 'Finger': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(25): error C2061: syntax error: identifier 'Finger'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(28): error C2039: 'Finger': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(28): error C2061: syntax error: identifier 'index'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(28): warning C4183: 'Finger': missing return type; assumed to be a member function returning 'int'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(29): error C2039: 'Finger': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(29): error C3646: 'Finger2': unknown override specifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.h(32): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Human::Hands::Pinch' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(10): error C2039: 'Finger': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(10): error C2061: syntax error: identifier 'Finger'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(10): error C2065: 'finger1': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(10): error C2065: 'finger2': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(10): error C2065: 'position': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(11): error C2614: 'Efficio::InputRecognition::Human::Hands::Pinch': illegal member initialization: 'Finger1' is not a base or member
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(11): error C2614: 'Efficio::InputRecognition::Human::Hands::Pinch': illegal member initialization: 'Finger2' is not a base or member
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(12): error C2275: 'Efficio::Vector3': illegal use of this type as an expression
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(16): note: see declaration of 'Efficio::Vector3'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\pinch.cpp(12): error C3861: 'GetLocation': identifier not found
   HistoricalFrameCollection.cpp
-d:\dev-workspace\abantechprojects\efficio\core\cpp\frame.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\lib\vmml\vector.hpp(420): note: see declaration of 'vmml::Vector<3,float>'
-d:\dev-workspace\abantechprojects\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::Finger' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\fingerjoint.h(40): warning C4091: 'extern ': ignored on left of 'Efficio::FingerJoint' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(24): warning C4251: 'Efficio::EfficioFinger::FingerJoints': class 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFinger'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\frame.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\fingerjoint.h(41): warning C4091: 'extern ': ignored on left of 'Efficio::FingerJoint' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiofinger.h(22): warning C4251: 'Efficio::EfficioFinger::FingerJoints': class 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFinger'
           with
           [
               _Ty=std::shared_ptr<Efficio::FingerJoint>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(24): note: see declaration of 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiofinger.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFinger' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): warning C4251: 'Efficio::HandJoint::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::HandJoint'
           with
           [
-              _Ty=std::shared_ptr<Efficio::FingerJoint>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFinger' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(45): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(52): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(59): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(66): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(73): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(81): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(22): warning C4251: 'Efficio::EfficioHand::Joints': class 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(41): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): warning C4251: 'Efficio::DIP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::DIP'
           with
           [
-              _Ty=std::shared_ptr<Efficio::HandJoint>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(22): note: see declaration of 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(48): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): warning C4251: 'Efficio::PIP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::PIP'
           with
           [
-              _Ty=std::shared_ptr<Efficio::HandJoint>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(23): warning C4251: 'Efficio::EfficioHand::HandFingers': class 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): warning C4251: 'Efficio::MCP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::MCP'
           with
           [
-              _Ty=std::shared_ptr<Efficio::EfficioFinger>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(23): note: see declaration of 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(62): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): warning C4251: 'Efficio::IP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::IP'
           with
           [
-              _Ty=std::shared_ptr<Efficio::EfficioFinger>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(27): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioHand' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(21): warning C4251: 'Efficio::EfficioFrame::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(69): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): warning C4251: 'Efficio::CMC::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::CMC'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(76): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): warning C4251: 'Efficio::IPCMC::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::IPCMC'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(84): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(20): warning C4251: 'Efficio::EfficioHand::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
           with
           [
               _Ty=std::shared_ptr<Efficio::EfficioHand>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(21): note: see declaration of 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(21): warning C4251: 'Efficio::EfficioHand::Joints': class 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::HandJoint>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(22): warning C4251: 'Efficio::EfficioHand::HandFingers': class 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::EfficioFinger>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3927: '->': trailing return type is not allowed after a non-function declarator
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3484: syntax error: expected '->' before the return type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3613: missing return type after '->' ('int' assumed)
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3646: 'add': unknown override specifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C2059: syntax error: '('
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(25): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioHand' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(22): warning C4251: 'Efficio::EfficioFrame::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
           with
           [
               _Ty=std::shared_ptr<Efficio::EfficioHand>
           ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(22): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(23): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
           with
           [
               _Ty=std::shared_ptr<Efficio::Events::Event>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(22): note: see declaration of 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::Events::Event>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(30): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\historicalframecollection.h(29): warning C4091: 'extern ': ignored on left of 'Efficio::HistoricalFrameCollection' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(30): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\historicalframecollection.h(29): warning C4091: 'extern ': ignored on left of 'Efficio::HistoricalFrameCollection' when no variable is declared
+  HandJoint.cpp
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(41): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(48): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(62): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(69): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(76): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(84): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.cpp(16): error C2614: 'Efficio::HandJoint': illegal member initialization: 'Position' is not a base or member
+  Frame.cpp
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\frame.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(41): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(48): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(62): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(69): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(76): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): error C2143: syntax error: missing ';' before '<'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(84): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
   Engine.cpp
-d:\dev-workspace\abantechprojects\efficio\core\cpp\frame.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\lib\vmml\vector.hpp(420): note: see declaration of 'vmml::Vector<3,float>'
-d:\dev-workspace\abantechprojects\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::Finger' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\fingerjoint.h(40): warning C4091: 'extern ': ignored on left of 'Efficio::FingerJoint' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(24): warning C4251: 'Efficio::EfficioFinger::FingerJoints': class 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFinger'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\frame.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\fingerjoint.h(41): warning C4091: 'extern ': ignored on left of 'Efficio::FingerJoint' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiofinger.h(22): warning C4251: 'Efficio::EfficioFinger::FingerJoints': class 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFinger'
           with
           [
               _Ty=std::shared_ptr<Efficio::FingerJoint>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(24): note: see declaration of 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiofinger.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFinger' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): warning C4251: 'Efficio::HandJoint::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::HandJoint'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(41): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): warning C4251: 'Efficio::DIP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::DIP'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(48): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): warning C4251: 'Efficio::PIP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::PIP'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): warning C4251: 'Efficio::MCP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::MCP'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(62): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): warning C4251: 'Efficio::IP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::IP'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(69): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): warning C4251: 'Efficio::CMC::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::CMC'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(76): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): warning C4251: 'Efficio::IPCMC::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::IPCMC'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(84): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(20): warning C4251: 'Efficio::EfficioHand::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::EfficioHand>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(21): warning C4251: 'Efficio::EfficioHand::Joints': class 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::HandJoint>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(22): warning C4251: 'Efficio::EfficioHand::HandFingers': class 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::EfficioFinger>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3927: '->': trailing return type is not allowed after a non-function declarator
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3484: syntax error: expected '->' before the return type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3613: missing return type after '->' ('int' assumed)
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3646: 'add': unknown override specifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C2059: syntax error: '('
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(25): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioHand' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(22): warning C4251: 'Efficio::EfficioFrame::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::EfficioHand>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(23): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Events::Event>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(30): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\leapconfiguration.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::LeapConfiguration' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\deviceconfiguration.h(24): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::DeviceConfiguration' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\historicalframecollection.h(29): warning C4091: 'extern ': ignored on left of 'Efficio::HistoricalFrameCollection' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\engine.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Engine' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\gesture.h(37): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Gesture' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2039: 'Finger': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2065: 'Finger': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2923: 'std::array': 'Finger' is not a valid template type argument for parameter '_Ty'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(36): warning C4251: 'Efficio::InputRecognition::Human::Hands::SingleHandGestureDetector::FingerNames': class 'std::array' needs to have dll-interface to be used by clients of class 'Efficio::InputRecognition::Human::Hands::SingleHandGestureDetector'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\array(22): note: see declaration of 'std::array'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(37): warning C4624: 'Efficio::InputRecognition::Human::Hands::SingleHandGestureDetector': destructor was implicitly defined as deleted
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2039: 'Thumb': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(26): error C2065: 'Thumb': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(29): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(29): error C2039: 'Index': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(29): error C2065: 'Index': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(30): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(30): error C2039: 'Middle': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(30): error C2065: 'Middle': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(31): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(31): error C2039: 'Ring': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(31): error C2065: 'Ring': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(32): error C3083: 'Finger': the symbol to the left of a '::' must be a type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(32): error C2039: 'Pinky': is not a member of 'Efficio::Body'
+  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(11): note: see declaration of 'Efficio::Body'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(36): error C2065: 'Pinky': undeclared identifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\singlehandgesturedetector.h(36): fatal error C1903: unable to recover from previous error(s); stopping compilation
+  EfficioFrame.cpp
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\frame.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Frame' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\eventtype.h(17): warning C4091: 'extern ': ignored on left of 'Efficio::Events::EventType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\event.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Events::Event' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(16): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodySide' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::Body::BodyTrackingType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(31): warning C4091: 'extern ': ignored on left of 'Efficio::Body::HandType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Body::FingerJointType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(50): warning C4091: 'extern ': ignored on left of 'Efficio::GestureType' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\enumerations.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::GestureState' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\fingerjoint.h(41): warning C4091: 'extern ': ignored on left of 'Efficio::FingerJoint' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiofinger.h(22): warning C4251: 'Efficio::EfficioFinger::FingerJoints': class 'std::vector<std::shared_ptr<Efficio::FingerJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFinger'
           with
           [
               _Ty=std::shared_ptr<Efficio::FingerJoint>
           ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiofinger.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFinger' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(38): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(45): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(52): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(59): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(66): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(73): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\handjoint.h(81): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(22): warning C4251: 'Efficio::EfficioHand::Joints': class 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiofinger.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFinger' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(39): warning C4251: 'Efficio::HandJoint::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::HandJoint'
           with
           [
-              _Ty=std::shared_ptr<Efficio::HandJoint>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(22): note: see declaration of 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(41): warning C4091: 'extern ': ignored on left of 'Efficio::HandJoint' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(46): warning C4251: 'Efficio::DIP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::DIP'
           with
           [
-              _Ty=std::shared_ptr<Efficio::HandJoint>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(23): warning C4251: 'Efficio::EfficioHand::HandFingers': class 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(48): warning C4091: 'extern ': ignored on left of 'Efficio::DIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(53): warning C4251: 'Efficio::PIP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::PIP'
           with
           [
-              _Ty=std::shared_ptr<Efficio::EfficioFinger>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(23): note: see declaration of 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(55): warning C4091: 'extern ': ignored on left of 'Efficio::PIP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(60): warning C4251: 'Efficio::MCP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::MCP'
           with
           [
-              _Ty=std::shared_ptr<Efficio::EfficioFinger>
+              _Ty=std::shared_ptr<Efficio::Vector3>
           ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficiohand.h(27): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioHand' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(21): warning C4251: 'Efficio::EfficioFrame::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(62): warning C4091: 'extern ': ignored on left of 'Efficio::MCP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(67): warning C4251: 'Efficio::IP::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::IP'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(69): warning C4091: 'extern ': ignored on left of 'Efficio::IP' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(74): warning C4251: 'Efficio::CMC::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::CMC'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(76): warning C4091: 'extern ': ignored on left of 'Efficio::CMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(82): warning C4251: 'Efficio::IPCMC::p': class 'std::vector<std::shared_ptr<Efficio::Vector3>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::IPCMC'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::Vector3>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\handjoint.h(84): warning C4091: 'extern ': ignored on left of 'Efficio::IPCMC' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(20): warning C4251: 'Efficio::EfficioHand::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
           with
           [
               _Ty=std::shared_ptr<Efficio::EfficioHand>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(21): note: see declaration of 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(21): warning C4251: 'Efficio::EfficioHand::Joints': class 'std::vector<std::shared_ptr<Efficio::HandJoint>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::HandJoint>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(22): warning C4251: 'Efficio::EfficioHand::HandFingers': class 'std::vector<std::shared_ptr<Efficio::EfficioFinger>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioHand'
+          with
+          [
+              _Ty=std::shared_ptr<Efficio::EfficioFinger>
+          ]
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3927: '->': trailing return type is not allowed after a non-function declarator
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3484: syntax error: expected '->' before the return type
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3613: missing return type after '->' ('int' assumed)
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C3646: 'add': unknown override specifier
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(23): error C2059: syntax error: '('
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(25): error C2238: unexpected token(s) preceding ';'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficiohand.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioHand' when no variable is declared
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(22): warning C4251: 'Efficio::EfficioFrame::Hands': class 'std::vector<std::shared_ptr<Efficio::EfficioHand>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
           with
           [
               _Ty=std::shared_ptr<Efficio::EfficioHand>
           ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(22): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(23): warning C4251: 'Efficio::EfficioFrame::events': class 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Efficio::EfficioFrame'
           with
           [
               _Ty=std::shared_ptr<Efficio::Events::Event>
           ]
-  d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(22): note: see declaration of 'std::vector<std::shared_ptr<Efficio::Events::Event>,std::allocator<_Ty>>'
-          with
-          [
-              _Ty=std::shared_ptr<Efficio::Events::Event>
-          ]
-d:\dev-workspace\abantechprojects\efficio\core\cpp\efficioframe.h(30): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\leapconfiguration.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::LeapConfiguration' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\deviceconfiguration.h(24): warning C4091: 'extern ': ignored on left of 'Efficio::Configuration::DeviceConfiguration' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\historicalframecollection.h(29): warning C4091: 'extern ': ignored on left of 'Efficio::HistoricalFrameCollection' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\engine.h(44): warning C4091: 'extern ': ignored on left of 'Efficio::Engine' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\gesture.h(37): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Gesture' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\singlehandgesturedetector.h(34): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Human::Hands::SingleHandGestureDetector' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\singlehandgesture.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Human::Hands::SingleHandGesture' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\discretegesture.h(21): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::DiscreteGesture' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\pinch.h(32): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Human::Hands::Pinch' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\pinchdetector.h(25): warning C4091: 'extern ': ignored on left of 'Efficio::InputRecognition::Human::Hands::PinchDetector' when no variable is declared
-d:\dev-workspace\abantechprojects\efficio\core\cpp\engine.cpp(47): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\efficioframe.h(30): warning C4091: 'extern ': ignored on left of 'Efficio::EfficioFrame' when no variable is declared
   Generating Code...
-     Creating library D:\Dev-Workspace\AbantechProjects\Efficio\Core\CPP\x64\Debug\Efficio.lib and object D:\Dev-Workspace\AbantechProjects\Efficio\Core\CPP\x64\Debug\Efficio.exp
-  Efficio.vcxproj -> D:\Dev-Workspace\AbantechProjects\Efficio\Core\CPP\x64\Debug\Efficio.dll
-  Efficio.vcxproj -> D:\Dev-Workspace\AbantechProjects\Efficio\Core\CPP\x64\Debug\Efficio.pdb (Full PDB)
-  C:\Leap_Motion_SDK_Win_3.1.3\LeapSDK\lib\x64\Leap.dll
-  1 File(s) copied
