@@ -30,6 +30,9 @@ namespace Efficio {
 						Body::Finger::Middle, 
 						Body::Finger::Ring,
 						Body::Finger::Pinky
+
+						//why are these fingers being enumerated here? they have already been enumerated in Enumerations.h
+						//to utilize functions only available through Body?
 					};
 				};
 			}

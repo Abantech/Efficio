@@ -201,7 +201,6 @@ EXIT 0</Command>
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
     <ClCompile Include="PinchDetector.cpp" />
-    <ClCompile Include="RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="SingleHandGesture.cpp" />
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>

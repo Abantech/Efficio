@@ -51,7 +51,7 @@ namespace Efficio {
 								switch (hands[i].fingers()[f].type) {
 								case Leap::Finger::TYPE_THUMB:
 								
-									EfficioFinger thumb = EfficioFinger(Efficio::Body::FingerType::Thumb);
+									//EfficioFinger thumb = EfficioFinger(Efficio::Body::FingerType::Thumb);
 
 									//shared_ptr purpose is to optimize memory use, non-agenda topping
 
@@ -177,7 +177,35 @@ namespace Efficio {
 							unordered_multimap ARmap<int, unordered_multimap<string, unordered_multimap<string, <unordered_multimap<float, unordered_multimap<float, float>>>>>(); //constructor/declaration
 							~unordered_multimap ARmap(); //deconstructor
 							//ARmap(frame, hand, finger, joint x, joint y, joint z)
+							To populate: iterate through each part adding keys and container values in the engine
+							for frame
+							add frame number
+							for hand
+							add "left" or "right"
+							for finger
+							add finger name
+							for joint x, add point value
+							for joint y, add point value
+							for joint z, add add point value
 
+							Then we can design a user function to study hand movements, such as remote surgery or surgical training paths
+							e.g.,
+							void chartpath(startframe, endframe, hand, finger, joint, z)
+							{
+							intakeData
+							{
+							}
+							chartPath
+							{
+							}
+							}
+
+							We might also be able to do this without all the classes, as a performance alternative
+							for utilities in which hand movements are simply tracked, by subtracting special funcitons like
+							pinching from non-entertainment endeavors
+
+							Basically, just Vector3, the wrap, and the Engine, or even without Vector3 as a class
+		
 							*/
 
 							Efficio::InputRecognition::Human::Hands::PinchDetector detector;

@@ -75,9 +75,6 @@
     <ClCompile Include="HistoricalFrameCollection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RuntimeCSharp_wrap.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HandJoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

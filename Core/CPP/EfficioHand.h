@@ -17,11 +17,11 @@ namespace Efficio
 		EfficioHand();
 		~EfficioHand();
 
-		//vector<shared_ptr<EfficioHand>> Hands;
+		vector<shared_ptr<EfficioHand>> Hands;
 		vector<shared_ptr<HandJoint>> Joints;
 		vector<shared_ptr<EfficioFinger>> HandFingers;
-		//HandType GetHandType();
-
-		//Vector3 WristPosition;
+		HandFingers.add(Efficio::Body::FingerType FingerType)
+		//HandType = GetHandType();
+		Vector3 WristPosition;
 	};
 }

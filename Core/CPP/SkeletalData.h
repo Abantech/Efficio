@@ -18,7 +18,14 @@ namespace Efficio
 
 		//Hands vector of shared_pointers
 		vector<shared_ptr <EfficioHand>> HumanHand;
-		//BVHData GetBVHData()
+		/*
+		lambda expression concept line for GetBVHData function
+		(will be a function of BVH needs and parameters)
+		BVHData GetBVHData(param1, param2)
+		{
+		auto lambdaBVH = [](param1, param2) {return param1 + param2};
+		}
+		*/
 		//BVHData bvhData
 
 	};
