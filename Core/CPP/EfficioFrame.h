@@ -18,8 +18,7 @@ namespace Efficio
 	/// Object containing all processed and raw signals
 	extern class DLLEXPORT EfficioFrame : public Frame
 	{
-		public:
-			std::vector<std::shared_ptr<Efficio::Models::Body::Hand>> Hands;
+	public:
 		std::vector<std::shared_ptr<Efficio::Events::Event>> events;
 		int ID;
 		EfficioFrame(int ID);
