@@ -26,7 +26,7 @@ namespace Efficio
 				~Joint();
 
 				/// The joint's position
-				const Vector3 Position;
+				Vector3 Position;
 
 				/// The joint's type
 				const JointType Type;
@@ -41,7 +41,7 @@ namespace Efficio
 				const std::vector<Joint> DistalJoints(Joint joint);
 
 				/// The distance between two joints
-				const float DistanceTo(Joint joint);
+				float DistanceTo(Joint joint);
 			};
 		}
 	}

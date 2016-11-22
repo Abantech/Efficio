@@ -14,6 +14,11 @@ namespace Efficio
 			Joint::~Joint()
 			{
 			}
+
+			float Joint::DistanceTo(Joint joint)
+			{
+				return Position.DistanceTo(joint.Position);
+			}
 		}
 	}
 }

@@ -21,10 +21,10 @@ namespace Efficio
 				Finger(Efficio::Models::Body::FingerType fingerType, Joint tip, Joint dip, Joint mcp, Joint pip);
 				~Finger();
 
-				const Joint Tip;
-				const Joint DIP;
-				const Joint MCP;
-				const Joint PIP;
+				Joint Tip;
+				Joint DIP;
+				Joint MCP;
+				Joint PIP;
 
 				/// Which finger the object is representing
 				const FingerType FingerType;
