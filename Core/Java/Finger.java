@@ -35,8 +35,8 @@ public class Finger {
     }
   }
 
-  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, Joint tip, Joint dip, Joint mcp, Joint pip) {
-    this(EfficioJNI.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), Joint.getCPtr(tip), tip, Joint.getCPtr(dip), dip, Joint.getCPtr(mcp), mcp, Joint.getCPtr(pip), pip), true);
+  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, boolean isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip) {
+    this(EfficioJNI.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), isExtended, length, Joint.getCPtr(tip), tip, Joint.getCPtr(dip), dip, Joint.getCPtr(mcp), mcp, Joint.getCPtr(pip), pip), true);
   }
 
   public void setTip(Joint value) {
@@ -77,6 +77,14 @@ public class Finger {
 
   public SWIGTYPE_p_FingerType getFingerType() {
     return new SWIGTYPE_p_FingerType(EfficioJNI.Finger_FingerType_get(swigCPtr, this), true);
+  }
+
+  public boolean getIsExtended() {
+    return EfficioJNI.Finger_IsExtended_get(swigCPtr, this);
+  }
+
+  public float getLength() {
+    return EfficioJNI.Finger_Length_get(swigCPtr, this);
   }
 
 }

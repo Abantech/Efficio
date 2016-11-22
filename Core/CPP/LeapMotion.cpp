@@ -203,7 +203,7 @@ namespace Efficio
 				auto mcpJoint = Efficio::Models::Body::Joint(Vector3(mcpPosition.x, mcpPosition.y, mcpPosition.z), mcpType);
 				auto pipJoint = Efficio::Models::Body::Joint(Vector3(pipPosition.x, pipPosition.y, pipPosition.z), pipType);
 
-				return Efficio::Models::Body::Finger(fingerType, tipJoint, dipJoint, mcpJoint, pipJoint);
+				return Efficio::Models::Body::Finger(fingerType, finger.isExtended(), finger.length(), tipJoint, dipJoint, mcpJoint, pipJoint);
 			}
 		}
 	}

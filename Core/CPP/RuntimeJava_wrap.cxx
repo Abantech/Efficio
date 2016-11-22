@@ -626,44 +626,36 @@ SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioJNI_Joint_1DistanceTo(JNIEnv 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jobject jarg5_) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger(JNIEnv *jenv, jclass jcls, jlong jarg1, jboolean jarg2, jfloat jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jobject jarg5_, jlong jarg6, jobject jarg6_, jlong jarg7, jobject jarg7_) {
   jlong jresult = 0 ;
   Efficio::Models::Body::FingerType arg1 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg2 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg3 ;
+  bool arg2 ;
+  float arg3 ;
   SwigValueWrapper< Efficio::Models::Body::Joint > arg4 ;
   SwigValueWrapper< Efficio::Models::Body::Joint > arg5 ;
+  SwigValueWrapper< Efficio::Models::Body::Joint > arg6 ;
+  SwigValueWrapper< Efficio::Models::Body::Joint > arg7 ;
   Efficio::Models::Body::FingerType *argp1 ;
-  Efficio::Models::Body::Joint *argp2 ;
-  Efficio::Models::Body::Joint *argp3 ;
   Efficio::Models::Body::Joint *argp4 ;
   Efficio::Models::Body::Joint *argp5 ;
+  Efficio::Models::Body::Joint *argp6 ;
+  Efficio::Models::Body::Joint *argp7 ;
   Efficio::Models::Body::Finger *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  (void)jarg2_;
-  (void)jarg3_;
   (void)jarg4_;
   (void)jarg5_;
+  (void)jarg6_;
+  (void)jarg7_;
   argp1 = *(Efficio::Models::Body::FingerType **)&jarg1; 
   if (!argp1) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::FingerType");
     return 0;
   }
   arg1 = *argp1; 
-  argp2 = *(Efficio::Models::Body::Joint **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
-    return 0;
-  }
-  arg2 = *argp2; 
-  argp3 = *(Efficio::Models::Body::Joint **)&jarg3; 
-  if (!argp3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
-    return 0;
-  }
-  arg3 = *argp3; 
+  arg2 = jarg2 ? true : false; 
+  arg3 = (float)jarg3; 
   argp4 = *(Efficio::Models::Body::Joint **)&jarg4; 
   if (!argp4) {
     SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
@@ -676,7 +668,19 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Finger(JNIEnv *jenv, 
     return 0;
   }
   arg5 = *argp5; 
-  result = (Efficio::Models::Body::Finger *)new Efficio::Models::Body::Finger(arg1,arg2,arg3,arg4,arg5);
+  argp6 = *(Efficio::Models::Body::Joint **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
+    return 0;
+  }
+  arg6 = *argp6; 
+  argp7 = *(Efficio::Models::Body::Joint **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null Efficio::Models::Body::Joint");
+    return 0;
+  }
+  arg7 = *argp7; 
+  result = (Efficio::Models::Body::Finger *)new Efficio::Models::Body::Finger(arg1,arg2,arg3,arg4,arg5,arg6,arg7);
   *(Efficio::Models::Body::Finger **)&jresult = result; 
   return jresult;
 }
@@ -819,6 +823,36 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1FingerType_1get(JN
   arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
   result = (FingerType) ((arg1)->FingerType);
   *(FingerType **)&jresult = new FingerType((const FingerType &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_Efficio_Java_EfficioJNI_Finger_1IsExtended_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jboolean jresult = 0 ;
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
+  result = (bool)(bool) ((arg1)->IsExtended);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioJNI_Finger_1Length_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jfloat jresult = 0 ;
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  float result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
+  result = (float)(float) ((arg1)->Length);
+  jresult = (jfloat)result; 
   return jresult;
 }
 

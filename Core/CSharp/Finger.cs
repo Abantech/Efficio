@@ -40,7 +40,7 @@ public class Finger : global::System.IDisposable {
     }
   }
 
-  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, Joint tip, Joint dip, Joint mcp, Joint pip) : this(EfficioPINVOKE.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), Joint.getCPtr(tip), Joint.getCPtr(dip), Joint.getCPtr(mcp), Joint.getCPtr(pip)), true) {
+  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, bool isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip) : this(EfficioPINVOKE.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), isExtended, length, Joint.getCPtr(tip), Joint.getCPtr(dip), Joint.getCPtr(mcp), Joint.getCPtr(pip)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -91,6 +91,20 @@ public class Finger : global::System.IDisposable {
   public SWIGTYPE_p_FingerType FingerType {
     get {
       SWIGTYPE_p_FingerType ret = new SWIGTYPE_p_FingerType(EfficioPINVOKE.Finger_FingerType_get(swigCPtr), true);
+      return ret;
+    } 
+  }
+
+  public bool IsExtended {
+    get {
+      bool ret = EfficioPINVOKE.Finger_IsExtended_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public float Length {
+    get {
+      float ret = EfficioPINVOKE.Finger_Length_get(swigCPtr);
       return ret;
     } 
   }

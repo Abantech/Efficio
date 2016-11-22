@@ -18,7 +18,7 @@ namespace Efficio
 			extern class DLLEXPORT Finger
 			{
 			public:
-				Finger(Efficio::Models::Body::FingerType fingerType, Joint tip, Joint dip, Joint mcp, Joint pip);
+				Finger(Efficio::Models::Body::FingerType fingerType, bool isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip);
 				~Finger();
 
 				Joint Tip;
@@ -28,6 +28,10 @@ namespace Efficio
 
 				/// Which finger the object is representing
 				const FingerType FingerType;
+
+				const bool IsExtended;
+
+				const float Length;
 			};
 		}
 	}

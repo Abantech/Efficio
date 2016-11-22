@@ -25,7 +25,7 @@ public class EfficioJNI {
   public final static native long Joint_ProximalJoints(long jarg1, Joint jarg1_, long jarg2, Joint jarg2_);
   public final static native long Joint_DistalJoints(long jarg1, Joint jarg1_, long jarg2, Joint jarg2_);
   public final static native float Joint_DistanceTo(long jarg1, Joint jarg1_, long jarg2, Joint jarg2_);
-  public final static native long new_Finger(long jarg1, long jarg2, Joint jarg2_, long jarg3, Joint jarg3_, long jarg4, Joint jarg4_, long jarg5, Joint jarg5_);
+  public final static native long new_Finger(long jarg1, boolean jarg2, float jarg3, long jarg4, Joint jarg4_, long jarg5, Joint jarg5_, long jarg6, Joint jarg6_, long jarg7, Joint jarg7_);
   public final static native void delete_Finger(long jarg1);
   public final static native void Finger_Tip_set(long jarg1, Finger jarg1_, long jarg2, Joint jarg2_);
   public final static native long Finger_Tip_get(long jarg1, Finger jarg1_);
@@ -36,6 +36,8 @@ public class EfficioJNI {
   public final static native void Finger_PIP_set(long jarg1, Finger jarg1_, long jarg2, Joint jarg2_);
   public final static native long Finger_PIP_get(long jarg1, Finger jarg1_);
   public final static native long Finger_FingerType_get(long jarg1, Finger jarg1_);
+  public final static native boolean Finger_IsExtended_get(long jarg1, Finger jarg1_);
+  public final static native float Finger_Length_get(long jarg1, Finger jarg1_);
   public final static native long new_Hand(long jarg1, long jarg2);
   public final static native void delete_Hand(long jarg1);
   public final static native long Hand_Side_get(long jarg1, Hand jarg1_);
