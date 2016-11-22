@@ -1,8 +1,10 @@
 #include "Engine.h"
+#include "LeapMotion.h"
 
 namespace Efficio {
 	Engine::Engine() : started(false), frameID(1)
 	{
+		sensors.push_back(new Efficio::Sensors::Body::LeapMotion());
 	}
 
 	Engine::~Engine()
@@ -11,12 +13,25 @@ namespace Efficio {
 
 	void Engine::Start()
 	{
-
+		for (size_t i = 0; i < sensors.size(); i++)
+		{
+			sensors[i]->Connect();
+		}
 	}
 
 	std::shared_ptr<Efficio::EfficioFrame> Engine::GetFrame()
 	{
-		return std::shared_ptr<Efficio::EfficioFrame>();
+		std::shared_ptr<Efficio::EfficioFrame> frame(new Efficio::EfficioFrame(frameID++));
+
+		for (size_t i = 0; i < sensors.size(); i++)
+		{
+			if (sensors[i]->HasFrame())
+			{
+				frame->AddFrame(sensors[i]->GetFrame());
+			}
+		}
+
+		return frame;
 	}
 
 

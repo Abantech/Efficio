@@ -1,8 +1,10 @@
 #include "LeapMotion.h"
 #include "Finger.h"
 #include "Joint.h"
+#include "HandData.h"
 #include <vector>
 #include <array>
+#include <memory>
 
 namespace Efficio
 {
@@ -66,8 +68,17 @@ namespace Efficio
 					convertedHands.push_back(convertToEfficioHand(hands[i]));
 				}
 
-				// TODO: Convert Leap Frame to Efficio Frame
-				return Efficio::Frame();
+				std::vector<std::shared_ptr<Efficio::Data::Data>> data;
+				
+				std::shared_ptr<Efficio::Data::Data> dataSharedPtr(new Efficio::Data::Body::HandData(convertedHands));
+
+				data.push_back(dataSharedPtr);
+
+				Efficio::Frame frame;
+
+				frame.AddData(data);
+
+				return frame;
 			}
 
 	
