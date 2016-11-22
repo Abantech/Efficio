@@ -857,7 +857,37 @@ SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioJNI_Finger_1Length_1get(JNIEn
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jfloat jarg3) {
+  jlong jresult = 0 ;
+  BodySide arg1 ;
+  std::array< Efficio::Models::Body::Finger,5 > arg2 ;
+  float arg3 ;
+  BodySide *argp1 ;
+  std::array< Efficio::Models::Body::Finger,5 > *argp2 ;
+  Efficio::Models::Body::Hand *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  argp1 = *(BodySide **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null BodySide");
+    return 0;
+  }
+  arg1 = *argp1; 
+  argp2 = *(std::array< Efficio::Models::Body::Finger,5 > **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null std::array< Efficio::Models::Body::Finger,5 >");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = (float)jarg3; 
+  result = (Efficio::Models::Body::Hand *)new Efficio::Models::Body::Hand(arg1,arg2,arg3);
+  *(Efficio::Models::Body::Hand **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_new_1Hand_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
   jlong jresult = 0 ;
   BodySide arg1 ;
   std::array< Efficio::Models::Body::Finger,5 > arg2 ;
@@ -906,6 +936,21 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Side_1get(JNIEnv *je
   arg1 = *(Efficio::Models::Body::Hand **)&jarg1; 
   result = (BodySide) ((arg1)->Side);
   *(BodySide **)&jresult = new BodySide((const BodySide &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioJNI_Hand_1Confidence_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jfloat jresult = 0 ;
+  Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
+  float result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Body::Hand **)&jarg1; 
+  result = (float)(float) ((arg1)->Confidence);
+  jresult = (jfloat)result; 
   return jresult;
 }
 

@@ -38,9 +38,11 @@ public class EfficioJNI {
   public final static native long Finger_FingerType_get(long jarg1, Finger jarg1_);
   public final static native boolean Finger_IsExtended_get(long jarg1, Finger jarg1_);
   public final static native float Finger_Length_get(long jarg1, Finger jarg1_);
-  public final static native long new_Hand(long jarg1, long jarg2);
+  public final static native long new_Hand__SWIG_0(long jarg1, long jarg2, float jarg3);
+  public final static native long new_Hand__SWIG_1(long jarg1, long jarg2);
   public final static native void delete_Hand(long jarg1);
   public final static native long Hand_Side_get(long jarg1, Hand jarg1_);
+  public final static native float Hand_Confidence_get(long jarg1, Hand jarg1_);
   public final static native void Hand_Fingers_set(long jarg1, Hand jarg1_, long jarg2);
   public final static native long Hand_Fingers_get(long jarg1, Hand jarg1_);
   public final static native void delete_Event(long jarg1);

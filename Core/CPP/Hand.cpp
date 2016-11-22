@@ -6,7 +6,7 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			Hand::Hand(BodySide side, std::array<Finger, 5> fingers) : Side(side), Fingers(fingers)
+			Hand::Hand(BodySide side, std::array<Finger, 5> fingers, float confidence) : Side(side), Fingers(fingers), Confidence(confidence)
 			{
 			}
 			Hand::~Hand()

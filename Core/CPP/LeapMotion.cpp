@@ -97,7 +97,7 @@ namespace Efficio
 
 				auto side = hand.isLeft() ? Efficio::Models::Body::BodySide::Left : Efficio::Models::Body::BodySide::Right;
 
-				return Efficio::Models::Body::Hand(side, efficioFingers);
+				return Efficio::Models::Body::Hand(side, efficioFingers, hand.confidence());
 			}
 
 			Efficio::Models::Body::Finger LeapMotion::convertToEfficioFinger(Leap::Finger finger)

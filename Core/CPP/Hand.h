@@ -21,11 +21,17 @@ namespace Efficio
 			{
 
 			public:
-				Hand(BodySide side, std::array<Finger, 5> fingers);
+				Hand(BodySide side, std::array<Finger, 5> fingers, float confidence = -1);
 				~Hand();
 
 				/// The side of the body
 				const BodySide Side;
+
+				/// <summary>
+				/// How confident we are with a given hand pose.
+				/// The confidence level ranges between 0.0 and 1.0 inclusive. -1 indicates that no confidence value was supplied.
+				/// </summary>
+				const float Confidence;
 
 				/// The fingers of the hand
 				std::array<Finger, 5> Fingers;
