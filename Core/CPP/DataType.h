@@ -13,7 +13,8 @@ namespace Efficio
 	{
 		extern enum class DLLEXPORT DataType {
 			Altitude,
-			Location
+			Location,
+			Hand
 		};
 	}
 }
