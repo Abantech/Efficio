@@ -21,11 +21,11 @@ Efficio::Frame Efficio::Models::Drone::GetFrame()
 	{
 		if (Efficio::Sensors::Altimeter* j = dynamic_cast<Efficio::Sensors::Altimeter*>(sensor)) {
 			auto altData = j->GetAltitude();
-			frame.AddData(&altData);
+			//frame.AddData(altData);
 		}
 		else if (Efficio::Sensors::LocationSensor* j = dynamic_cast<Efficio::Sensors::LocationSensor*>(sensor)) {
 			auto locData = j->GetLocation();
-			frame.AddData(&locData);
+			//frame.AddData(&locData);
 		}
 	}
 
