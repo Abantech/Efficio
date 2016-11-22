@@ -28,9 +28,7 @@ namespace Efficio
 				const BodySide Side;
 
 				/// The fingers of the hand
-				const std::array<Finger, 5> Fingers;
-
-
+				std::array<Finger, 5> Fingers;
 			};
 		}
 	}
