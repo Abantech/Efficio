@@ -41,19 +41,6 @@ public class EfficioFrame : Frame {
     }
   }
 
-  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Hand_t_t Hands {
-    set {
-      EfficioPINVOKE.EfficioFrame_Hands_set(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Hand_t_t.getCPtr(value));
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.EfficioFrame_Hands_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Hand_t_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Models__Body__Hand_t_t(cPtr, false);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
-  }
-
   public EventCollection events {
     set {
       EfficioPINVOKE.EfficioFrame_events_set(swigCPtr, EventCollection.getCPtr(value));

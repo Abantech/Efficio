@@ -39,9 +39,17 @@ public class Finger {
     this(EfficioJNI.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), Joint.getCPtr(tip), tip, Joint.getCPtr(dip), dip, Joint.getCPtr(mcp), mcp, Joint.getCPtr(pip), pip), true);
   }
 
+  public void setTip(Joint value) {
+    EfficioJNI.Finger_Tip_set(swigCPtr, this, Joint.getCPtr(value), value);
+  }
+
   public Joint getTip() {
     long cPtr = EfficioJNI.Finger_Tip_get(swigCPtr, this);
     return (cPtr == 0) ? null : new Joint(cPtr, false);
+  }
+
+  public void setDIP(Joint value) {
+    EfficioJNI.Finger_DIP_set(swigCPtr, this, Joint.getCPtr(value), value);
   }
 
   public Joint getDIP() {
@@ -49,9 +57,17 @@ public class Finger {
     return (cPtr == 0) ? null : new Joint(cPtr, false);
   }
 
+  public void setMCP(Joint value) {
+    EfficioJNI.Finger_MCP_set(swigCPtr, this, Joint.getCPtr(value), value);
+  }
+
   public Joint getMCP() {
     long cPtr = EfficioJNI.Finger_MCP_get(swigCPtr, this);
     return (cPtr == 0) ? null : new Joint(cPtr, false);
+  }
+
+  public void setPIP(Joint value) {
+    EfficioJNI.Finger_PIP_set(swigCPtr, this, Joint.getCPtr(value), value);
   }
 
   public Joint getPIP() {

@@ -43,6 +43,10 @@ public class Hand {
     return new SWIGTYPE_p_BodySide(EfficioJNI.Hand_Side_get(swigCPtr, this), true);
   }
 
+  public void setFingers(SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t value) {
+    EfficioJNI.Hand_Fingers_set(swigCPtr, this, SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t.getCPtr(value));
+  }
+
   public SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t getFingers() {
     return new SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t(EfficioJNI.Hand_Fingers_get(swigCPtr, this), true);
   }

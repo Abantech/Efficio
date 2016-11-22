@@ -39,13 +39,20 @@ public class Frame {
     this(EfficioJNI.new_Frame(), true);
   }
 
-  public SWIGTYPE_p_Efficio__Data__Data GetData(SWIGTYPE_p_Efficio__Data__DataType dataType) {
-    long cPtr = EfficioJNI.Frame_GetData(swigCPtr, this, SWIGTYPE_p_Efficio__Data__DataType.getCPtr(dataType));
-    return (cPtr == 0) ? null : new SWIGTYPE_p_Efficio__Data__Data(cPtr, false);
+  public SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t GetData() {
+    return new SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t(EfficioJNI.Frame_GetData(swigCPtr, this), true);
   }
 
-  public void AddData(SWIGTYPE_p_Efficio__Data__Data data) {
-    EfficioJNI.Frame_AddData(swigCPtr, this, SWIGTYPE_p_Efficio__Data__Data.getCPtr(data));
+  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t GetDataOfType(SWIGTYPE_p_Efficio__Data__DataType dataType) {
+    return new SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t(EfficioJNI.Frame_GetDataOfType(swigCPtr, this, SWIGTYPE_p_Efficio__Data__DataType.getCPtr(dataType)), true);
+  }
+
+  public void AddData(SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t data) {
+    EfficioJNI.Frame_AddData(swigCPtr, this, SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t.getCPtr(data));
+  }
+
+  public void AddFrame(Frame frame) {
+    EfficioJNI.Frame_AddFrame(swigCPtr, this, Frame.getCPtr(frame), frame);
   }
 
 }

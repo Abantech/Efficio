@@ -43,6 +43,10 @@ public class Joint {
     this(EfficioJNI.new_Joint__SWIG_1(Vector3.getCPtr(position), position, SWIGTYPE_p_JointType.getCPtr(type), confidence), true);
   }
 
+  public void setPosition(Vector3 value) {
+    EfficioJNI.Joint_Position_set(swigCPtr, this, Vector3.getCPtr(value), value);
+  }
+
   public Vector3 getPosition() {
     long cPtr = EfficioJNI.Joint_Position_get(swigCPtr, this);
     return (cPtr == 0) ? null : new Vector3(cPtr, false);

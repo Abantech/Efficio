@@ -49,6 +49,9 @@ public class Joint : global::System.IDisposable {
   }
 
   public Vector3 Position {
+    set {
+      EfficioPINVOKE.Joint_Position_set(swigCPtr, Vector3.getCPtr(value));
+    } 
     get {
       global::System.IntPtr cPtr = EfficioPINVOKE.Joint_Position_get(swigCPtr);
       Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);

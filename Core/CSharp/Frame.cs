@@ -43,15 +43,25 @@ public class Frame : global::System.IDisposable {
   public Frame() : this(EfficioPINVOKE.new_Frame(), true) {
   }
 
-  public SWIGTYPE_p_Efficio__Data__Data GetData(SWIGTYPE_p_Efficio__Data__DataType dataType) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.Frame_GetData(swigCPtr, SWIGTYPE_p_Efficio__Data__DataType.getCPtr(dataType));
-    SWIGTYPE_p_Efficio__Data__Data ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_Efficio__Data__Data(cPtr, false);
+  public SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t GetData() {
+    SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t ret = new SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t(EfficioPINVOKE.Frame_GetData(swigCPtr), true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void AddData(SWIGTYPE_p_Efficio__Data__Data data) {
-    EfficioPINVOKE.Frame_AddData(swigCPtr, SWIGTYPE_p_Efficio__Data__Data.getCPtr(data));
+  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t GetDataOfType(SWIGTYPE_p_Efficio__Data__DataType dataType) {
+    SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t(EfficioPINVOKE.Frame_GetDataOfType(swigCPtr, SWIGTYPE_p_Efficio__Data__DataType.getCPtr(dataType)), true);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void AddData(SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t data) {
+    EfficioPINVOKE.Frame_AddData(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t.getCPtr(data));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void AddFrame(Frame frame) {
+    EfficioPINVOKE.Frame_AddFrame(swigCPtr, Frame.getCPtr(frame));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 

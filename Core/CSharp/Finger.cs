@@ -45,6 +45,9 @@ public class Finger : global::System.IDisposable {
   }
 
   public Joint Tip {
+    set {
+      EfficioPINVOKE.Finger_Tip_set(swigCPtr, Joint.getCPtr(value));
+    } 
     get {
       global::System.IntPtr cPtr = EfficioPINVOKE.Finger_Tip_get(swigCPtr);
       Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
@@ -53,6 +56,9 @@ public class Finger : global::System.IDisposable {
   }
 
   public Joint DIP {
+    set {
+      EfficioPINVOKE.Finger_DIP_set(swigCPtr, Joint.getCPtr(value));
+    } 
     get {
       global::System.IntPtr cPtr = EfficioPINVOKE.Finger_DIP_get(swigCPtr);
       Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
@@ -61,6 +67,9 @@ public class Finger : global::System.IDisposable {
   }
 
   public Joint MCP {
+    set {
+      EfficioPINVOKE.Finger_MCP_set(swigCPtr, Joint.getCPtr(value));
+    } 
     get {
       global::System.IntPtr cPtr = EfficioPINVOKE.Finger_MCP_get(swigCPtr);
       Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
@@ -69,6 +78,9 @@ public class Finger : global::System.IDisposable {
   }
 
   public Joint PIP {
+    set {
+      EfficioPINVOKE.Finger_PIP_set(swigCPtr, Joint.getCPtr(value));
+    } 
     get {
       global::System.IntPtr cPtr = EfficioPINVOKE.Finger_PIP_get(swigCPtr);
       Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);

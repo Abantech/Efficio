@@ -52,6 +52,9 @@
     <Filter Include="Header Files\Sensors\Body">
       <UniqueIdentifier>{4ca33899-d9ce-4d8e-8977-ba1e59b54edb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Data\Body">
+      <UniqueIdentifier>{a3690739-1894-4a6c-9994-b910331f896b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceConfiguration.cpp">
@@ -142,6 +145,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SampleGPS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HandData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -292,6 +298,9 @@
     </ClInclude>
     <ClInclude Include="LeapMotion.h">
       <Filter>Header Files\Sensors\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="HandData.h">
+      <Filter>Header Files\Data\Body</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

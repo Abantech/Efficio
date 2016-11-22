@@ -52,8 +52,13 @@ public class Hand : global::System.IDisposable {
   }
 
   public SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t Fingers {
+    set {
+      EfficioPINVOKE.Hand_Fingers_set(swigCPtr, SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t.getCPtr(value));
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    } 
     get {
       SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t ret = new SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t(EfficioPINVOKE.Hand_Fingers_get(swigCPtr), true);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
