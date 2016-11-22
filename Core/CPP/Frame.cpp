@@ -6,7 +6,8 @@
 using namespace std;
 
 
-Efficio::Frame::Frame() { //constructor
+Efficio::Frame::Frame() : dataCollection()
+{ //constructor
 	//There seem to be several options depending on the mechanics and preferences of generating variables from sensor input data
 	//Leap.h likely needed for input data specific to each HandJoint
 	//option: iterate for P values from array or other input data structure
@@ -84,13 +85,52 @@ Efficio::Frame::~Frame() { //destructor
 
 }
 
-Efficio::Data::Data * Efficio::Frame::GetData(Efficio::Data::DataType dataType)
+std::map<Efficio::Data::DataType, std::vector<std::shared_ptr<Efficio::Data::Data>>> Efficio::Frame::GetData()
 {
-	return nullptr;
+	return dataCollection;
 }
 
-void Efficio::Frame::AddData(Efficio::Data::Data * data)
+std::vector<std::shared_ptr<Efficio::Data::Data>> Efficio::Frame::GetDataOfType(Efficio::Data::DataType dataType)
 {
+	std::vector<std::shared_ptr<Efficio::Data::Data>> data;
+
+	if (dataCollection.count(dataType) > 0)
+	{
+		data = dataCollection.at(dataType);
+	}
+
+	return data;
+}
+
+void Efficio::Frame::AddData(std::vector<std::shared_ptr<Efficio::Data::Data>> data)
+{
+	if (data.size() < 1)
+	{
+		return;
+	}
+
+	for (size_t i = 0; i < data.size(); i++)
+	{
+		auto type = data[i]->GetDataType();
+
+		if (!dataCollection.count(type))
+		{
+			std::vector<std::shared_ptr<Efficio::Data::Data>> vec;
+			dataCollection.emplace(type, vec);
+		}
+
+		dataCollection.at(type).push_back(data[i]);
+	}
+}
+
+void Efficio::Frame::AddFrame(Efficio::Frame frame)
+{
+	auto data = frame.GetData();
+
+	for (std::map<Efficio::Data::DataType, std::vector<std::shared_ptr<Efficio::Data::Data>>>::iterator it = data.begin(); it != data.end(); ++it)
+	{
+		AddData(it->second);
+	}
 }
 
 /*sample main() below - might be pasted into MainPage.cpp

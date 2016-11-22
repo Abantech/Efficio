@@ -4,6 +4,9 @@
 #include "Data.h"
 #include "DataType.h"
 
+#include <memory>
+#include <vector>
+
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
@@ -18,12 +21,16 @@ namespace Efficio
 		Frame();
 		~Frame();
 
-		// TODO make this templated
-		Efficio::Data::Data* GetData(Efficio::Data::DataType dataType);
+		std::map<Efficio::Data::DataType, std::vector<std::shared_ptr<Efficio::Data::Data>>> GetData();
 
-		void AddData(Efficio::Data::Data* data);
+		// TODO make this templated
+		std::vector<std::shared_ptr<Efficio::Data::Data>> GetDataOfType(Efficio::Data::DataType dataType);
+
+		void AddData(std::vector<std::shared_ptr<Efficio::Data::Data>> data);
+
+		void AddFrame(Efficio::Frame frame);
 
 	private:
-		std::map<Efficio::Data::DataType, Efficio::Data::Data*> dataCollection;
+		std::map<Efficio::Data::DataType, std::vector<std::shared_ptr<Efficio::Data::Data>>> dataCollection;
 	};
 }
