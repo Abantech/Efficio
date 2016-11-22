@@ -14,6 +14,9 @@ namespace Efficio
 	{
 		namespace Body
 		{
+			// Forward delcaration to avoid circular references
+			class Hand;
+
 			/// Representation of the human finger
 			extern class DLLEXPORT Finger
 			{
@@ -25,6 +28,8 @@ namespace Efficio
 				Joint DIP;
 				Joint MCP;
 				Joint PIP;
+
+				Hand* Hand;
 
 				/// Which finger the object is representing
 				const FingerType FingerType;

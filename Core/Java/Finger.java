@@ -75,6 +75,15 @@ public class Finger {
     return (cPtr == 0) ? null : new Joint(cPtr, false);
   }
 
+  public void setHand(Hand value) {
+    EfficioJNI.Finger_Hand_set(swigCPtr, this, Hand.getCPtr(value), value);
+  }
+
+  public Hand getHand() {
+    long cPtr = EfficioJNI.Finger_Hand_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new Hand(cPtr, false);
+  }
+
   public SWIGTYPE_p_FingerType getFingerType() {
     return new SWIGTYPE_p_FingerType(EfficioJNI.Finger_FingerType_get(swigCPtr, this), true);
   }

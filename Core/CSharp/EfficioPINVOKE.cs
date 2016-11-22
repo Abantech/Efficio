@@ -266,6 +266,12 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_PIP_get___")]
   public static extern global::System.IntPtr Finger_PIP_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_Hand_set___")]
+  public static extern void Finger_Hand_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_Hand_get___")]
+  public static extern global::System.IntPtr Finger_Hand_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Finger_FingerType_get___")]
   public static extern global::System.IntPtr Finger_FingerType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 

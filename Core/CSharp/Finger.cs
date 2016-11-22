@@ -88,6 +88,17 @@ public class Finger : global::System.IDisposable {
     } 
   }
 
+  public Hand Hand {
+    set {
+      EfficioPINVOKE.Finger_Hand_set(swigCPtr, Hand.getCPtr(value));
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_Hand_get(swigCPtr);
+      Hand ret = (cPtr == global::System.IntPtr.Zero) ? null : new Hand(cPtr, false);
+      return ret;
+    } 
+  }
+
   public SWIGTYPE_p_FingerType FingerType {
     get {
       SWIGTYPE_p_FingerType ret = new SWIGTYPE_p_FingerType(EfficioPINVOKE.Finger_FingerType_get(swigCPtr), true);

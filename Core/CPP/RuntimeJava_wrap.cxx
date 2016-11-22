@@ -812,6 +812,35 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1PIP_1get(JNIEnv *j
 }
 
 
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioJNI_Finger_1Hand_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  Efficio::Models::Body::Hand *arg2 = (Efficio::Models::Body::Hand *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
+  arg2 = *(Efficio::Models::Body::Hand **)&jarg2; 
+  if (arg1) (arg1)->Hand = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1Hand_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  Efficio::Models::Body::Hand *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Models::Body::Finger **)&jarg1; 
+  result = (Efficio::Models::Body::Hand *) ((arg1)->Hand);
+  *(Efficio::Models::Body::Hand **)&jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioJNI_Finger_1FingerType_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;

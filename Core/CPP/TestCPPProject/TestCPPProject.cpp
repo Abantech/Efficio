@@ -33,6 +33,9 @@ int main()
 						auto side = (hand.Side == Efficio::Models::Body::BodySide::Left ? "left" : "right");
 						std::cout << side;
 						std::cout << +" pinch\r\n";
+
+						auto test = hand.Fingers[0].Hand->Fingers[0].Hand;
+						auto testFingers = test->Fingers;
 					}
 				}
 			}
