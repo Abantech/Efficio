@@ -159,9 +159,6 @@
     <ClCompile Include="HandData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BodyPart.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="OnStart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -316,9 +313,6 @@
     </ClInclude>
     <ClInclude Include="HandData.h">
       <Filter>Header Files\Data\Body</Filter>
-    </ClInclude>
-    <ClInclude Include="BodyPart.h">
-      <Filter>Header Files\Models\Body</Filter>
     </ClInclude>
     <ClInclude Include="OnStart.h">
       <Filter>Header Files\Events\Internal</Filter>

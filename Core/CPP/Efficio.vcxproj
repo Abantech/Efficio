@@ -188,7 +188,6 @@ EXIT 0</Command>
   <ItemGroup>
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="Body.cpp" />
-    <ClCompile Include="BodyPart.cpp" />
     <ClCompile Include="ContinuousGesture.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="DeviceConfiguration.cpp" />
@@ -227,7 +226,6 @@ EXIT 0</Command>
     <ClInclude Include="Asset.h" />
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="Body.h" />
-    <ClInclude Include="BodyPart.h" />
     <ClInclude Include="Bone.h" />
     <ClInclude Include="BoneTypes.h" />
     <ClInclude Include="Data.h" />
