@@ -11,15 +11,15 @@ namespace Efficio
 	{
 	}
 
-	void HistoricalFrameCollection::AddFrame(std::shared_ptr<EfficioFrame> frame)
+	void HistoricalFrameCollection::AddFrame(std::shared_ptr<Frame> frame)
 	{
 		std::rotate(historicalFrames.rbegin(), historicalFrames.rbegin() + 1, historicalFrames.rend());
 		historicalFrames.at(0) = frame;
 	}
 
-	std::shared_ptr<EfficioFrame> HistoricalFrameCollection::GetFrame(int countBack)
+	std::shared_ptr<Frame> HistoricalFrameCollection::GetFrame(int countBack)
 	{
-		std::shared_ptr<EfficioFrame> frame = NULL;
+		std::shared_ptr<Frame> frame = NULL;
 
 		if (countBack > 0)
 		{

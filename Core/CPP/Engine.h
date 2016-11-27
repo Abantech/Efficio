@@ -1,5 +1,5 @@
 #pragma once
-#include "EfficioFrame.h"
+#include "Frame.h"
 #include "DeviceConfiguration.h"
 #include "Vector3.h"
 #include "Leap.h"
@@ -7,6 +7,7 @@
 #include <memory>
 #include "Event.h"
 #include "HistoricalFrameCollection.h"
+#include "InputRecognitionEngine.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -29,11 +30,11 @@ extern "C"
 
 			/// Gets the current {@link Efficio::EfficioFrame frame} from the runtime.
 			/// @return the current frame.
-			std::shared_ptr<Efficio::EfficioFrame> GetFrame();
+			std::shared_ptr<Efficio::Frame> GetFrame();
 
 			/// Gets the historical {@link Efficio::EfficioFrame frame} from the runtime.
 			/// @return the current frame.
-			std::shared_ptr<Efficio::EfficioFrame> GetFrame(int count);
+			std::shared_ptr<Efficio::Frame> GetFrame(int count);
 
 			/// The device configuration for Efficio.
 			Efficio::Configuration::DeviceConfiguration DeviceConfiguration;
@@ -41,6 +42,7 @@ extern "C"
 		private:
 			bool started;
 			std::vector<Efficio::Sensors::Sensor*> sensors;
+			InputRecognition::InputRecognitionEngine ire;
 			HistoricalFrameCollection historicalFrames;
 			int frameID;
 		};

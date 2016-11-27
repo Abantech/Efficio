@@ -194,7 +194,6 @@ EXIT 0</Command>
     <ClCompile Include="DeviceManager.cpp" />
     <ClCompile Include="DiscreteGesture.cpp" />
     <ClCompile Include="Drone.cpp" />
-    <ClCompile Include="EfficioFrame.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="Finger.cpp" />
@@ -202,7 +201,9 @@ EXIT 0</Command>
     <ClCompile Include="Gesture.cpp" />
     <ClCompile Include="Hand.cpp" />
     <ClCompile Include="HandData.cpp" />
+    <ClCompile Include="HandRecognitionProcessor.cpp" />
     <ClCompile Include="HistoricalFrameCollection.cpp" />
+    <ClCompile Include="InputRecognitionEngine.cpp" />
     <ClCompile Include="Joint.cpp" />
     <ClCompile Include="LeapConfiguration.cpp" />
     <ClCompile Include="LeapMotion.cpp" />
@@ -210,6 +211,7 @@ EXIT 0</Command>
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Pinch.cpp" />
+    <ClCompile Include="RecognitionProcessor.cpp" />
     <ClCompile Include="RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="SampleAltimeter.cpp" />
     <ClCompile Include="SampleGPS.cpp" />
@@ -239,7 +241,6 @@ EXIT 0</Command>
     <ClInclude Include="Drone.h" />
     <ClInclude Include="Face.h" />
     <ClInclude Include="Finger.h" />
-    <ClInclude Include="EfficioFrame.h" />
     <ClInclude Include="FingerType.h" />
     <ClInclude Include="Hand.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -252,8 +253,10 @@ EXIT 0</Command>
     <ClInclude Include="Gesture.h" />
     <ClInclude Include="DataType.h" />
     <ClInclude Include="HandData.h" />
+    <ClInclude Include="HandRecognitionProcessor.h" />
     <ClInclude Include="Head.h" />
     <ClInclude Include="HistoricalFrameCollection.h" />
+    <ClInclude Include="InputRecognitionEngine.h" />
     <ClInclude Include="Joint.h" />
     <ClInclude Include="JointType.h" />
     <ClInclude Include="LeapConfiguration.h" />
@@ -262,6 +265,7 @@ EXIT 0</Command>
     <ClInclude Include="Leg.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="LocationSensor.h" />
+    <ClInclude Include="RecognitionProcessor.h" />
     <ClInclude Include="SampleAltimeter.h" />
     <ClInclude Include="SampleGPS.h" />
     <ClInclude Include="Sensor.h" />

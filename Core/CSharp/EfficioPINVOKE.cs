@@ -308,8 +308,11 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Event_GetEventType___")]
   public static extern int Event_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Frame___")]
-  public static extern global::System.IntPtr new_Frame();
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Frame__SWIG_0___")]
+  public static extern global::System.IntPtr new_Frame__SWIG_0(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Frame__SWIG_1___")]
+  public static extern global::System.IntPtr new_Frame__SWIG_1();
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_Frame___")]
   public static extern void delete_Frame(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -326,29 +329,14 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Frame_AddFrame___")]
   public static extern void Frame_AddFrame(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_events_set___")]
-  public static extern void EfficioFrame_events_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Frame_GetEvents___")]
+  public static extern global::System.IntPtr Frame_GetEvents(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_events_get___")]
-  public static extern global::System.IntPtr EfficioFrame_events_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Frame_AddEvent___")]
+  public static extern void Frame_AddEvent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_ID_set___")]
-  public static extern void EfficioFrame_ID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_ID_get___")]
-  public static extern int EfficioFrame_ID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_EfficioFrame___")]
-  public static extern global::System.IntPtr new_EfficioFrame(int jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_EfficioFrame___")]
-  public static extern void delete_EfficioFrame(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_GetEvents___")]
-  public static extern global::System.IntPtr EfficioFrame_GetEvents(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_AddEvent___")]
-  public static extern void EfficioFrame_AddEvent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Frame_ID_get___")]
+  public static extern int Frame_ID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_DeviceManager___")]
   public static extern global::System.IntPtr new_DeviceManager();
@@ -790,9 +778,6 @@ class EfficioPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_DeviceCollection___")]
   public static extern void delete_DeviceCollection(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_EfficioFrame_SWIGSmartPtrUpcast___")]
-  public static extern global::System.IntPtr EfficioFrame_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Gesture_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr Gesture_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);

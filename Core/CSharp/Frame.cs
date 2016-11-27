@@ -40,7 +40,10 @@ public class Frame : global::System.IDisposable {
     }
   }
 
-  public Frame() : this(EfficioPINVOKE.new_Frame(), true) {
+  public Frame(int ID) : this(EfficioPINVOKE.new_Frame__SWIG_0(ID), true) {
+  }
+
+  public Frame() : this(EfficioPINVOKE.new_Frame__SWIG_1(), true) {
   }
 
   public SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t GetData() {
@@ -63,6 +66,25 @@ public class Frame : global::System.IDisposable {
   public void AddFrame(Frame frame) {
     EfficioPINVOKE.Frame_AddFrame(swigCPtr, Frame.getCPtr(frame));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public EventCollection GetEvents() {
+    EventCollection ret = new EventCollection(EfficioPINVOKE.Frame_GetEvents(swigCPtr), true);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void AddEvent(Event eventPtr) {
+    EfficioPINVOKE.Frame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public int ID {
+    get {
+      int ret = EfficioPINVOKE.Frame_ID_get(swigCPtr);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
   }
 
 }

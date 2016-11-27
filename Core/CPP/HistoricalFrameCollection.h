@@ -1,6 +1,6 @@
 #pragma once
 
-#include "EfficioFrame.h"
+#include "Frame.h"
 #include <array>
 #include <memory>
 
@@ -20,11 +20,11 @@ namespace Efficio
 		~HistoricalFrameCollection();
 
 		/// Adds an Efficio frame to the history
-		void AddFrame(std::shared_ptr<Efficio::EfficioFrame> frame);
+		void AddFrame(std::shared_ptr<Efficio::Frame> frame);
 
 		/// Gets a historical Efficio frame
-		std::shared_ptr<Efficio::EfficioFrame> GetFrame(int countBack);
+		std::shared_ptr<Efficio::Frame> GetFrame(int countBack);
 	
-		std::array<std::shared_ptr<Efficio::EfficioFrame>, 59> historicalFrames;
+		std::array<std::shared_ptr<Efficio::Frame>, 59> historicalFrames;
 	};
 }

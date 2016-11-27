@@ -55,12 +55,15 @@
     <Filter Include="Header Files\Data\Body">
       <UniqueIdentifier>{a3690739-1894-4a6c-9994-b910331f896b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\IRP">
+      <UniqueIdentifier>{125b19a8-4227-45b1-83ad-a45716dfee88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IRP\Body">
+      <UniqueIdentifier>{a4b3e1c6-0330-400b-9222-d7240b856740}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceConfiguration.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EfficioFrame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
@@ -150,11 +153,17 @@
     <ClCompile Include="HandData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RecognitionProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HandRecognitionProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputRecognitionEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EfficioFrame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -301,6 +310,15 @@
     </ClInclude>
     <ClInclude Include="HandData.h">
       <Filter>Header Files\Data\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="RecognitionProcessor.h">
+      <Filter>Header Files\IRP</Filter>
+    </ClInclude>
+    <ClInclude Include="HandRecognitionProcessor.h">
+      <Filter>Header Files\IRP\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="InputRecognitionEngine.h">
+      <Filter>Header Files\IRP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

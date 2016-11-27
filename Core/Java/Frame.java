@@ -35,8 +35,12 @@ public class Frame {
     }
   }
 
+  public Frame(int ID) {
+    this(EfficioJNI.new_Frame__SWIG_0(ID), true);
+  }
+
   public Frame() {
-    this(EfficioJNI.new_Frame(), true);
+    this(EfficioJNI.new_Frame__SWIG_1(), true);
   }
 
   public SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t GetData() {
@@ -53,6 +57,18 @@ public class Frame {
 
   public void AddFrame(Frame frame) {
     EfficioJNI.Frame_AddFrame(swigCPtr, this, Frame.getCPtr(frame), frame);
+  }
+
+  public EventCollection GetEvents() {
+    return new EventCollection(EfficioJNI.Frame_GetEvents(swigCPtr, this), true);
+  }
+
+  public void AddEvent(Event eventPtr) {
+    EfficioJNI.Frame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
+  }
+
+  public int getID() {
+    return EfficioJNI.Frame_ID_get(swigCPtr, this);
   }
 
 }

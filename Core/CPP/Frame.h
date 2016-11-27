@@ -3,6 +3,7 @@
 #include <map>
 #include "Data.h"
 #include "DataType.h"
+#include "Event.h"
 
 #include <memory>
 #include <vector>
@@ -18,7 +19,7 @@ namespace Efficio
 	extern class DLLEXPORT Frame
 	{
 	public:
-		Frame();
+		Frame(int ID = 0);
 		~Frame();
 
 		std::map<Efficio::Data::DataType, std::vector<std::shared_ptr<Efficio::Data::Data>>> GetData();
@@ -30,7 +31,14 @@ namespace Efficio
 
 		void AddFrame(Efficio::Frame frame);
 
+		std::vector<std::shared_ptr<Efficio::Events::Event>> GetEvents();
+
+		void AddEvent(std::shared_ptr<Efficio::Events::Event> eventPtr);
+
+		const int ID;
+
 	private:
 		std::map<Efficio::Data::DataType, std::vector<std::shared_ptr<Efficio::Data::Data>>> dataCollection;
+		std::vector<std::shared_ptr<Efficio::Events::Event>> events;
 	};
 }
