@@ -9,6 +9,8 @@
 namespace Efficio
 {
 	namespace Body {
+
+		//define the below enumerations to James' wrappers
 		extern enum class DLLEXPORT BodySide
 		{
 			Right,
@@ -42,6 +44,7 @@ namespace Efficio
 			PIP,
 			MCP
 		};
+
 	}
 
 	extern enum DLLEXPORT GestureType {

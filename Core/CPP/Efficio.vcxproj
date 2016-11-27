@@ -202,6 +202,7 @@ EXIT 0</Command>
     <ClCompile Include="Pinch.cpp" />
     <ClCompile Include="PinchDetector.cpp" />
     <ClCompile Include="SingleHandGesture.cpp" />
+    <ClCompile Include="Source.cpp" />
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +228,7 @@ EXIT 0</Command>
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="Pinch.h" />
     <ClInclude Include="PinchDetector.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />
     <ClInclude Include="SkeletalData.h" />
     <ClInclude Include="Vector3.h" />
@@ -236,6 +238,12 @@ EXIT 0</Command>
     <None Include="README.md" />
     <None Include="RuntimeCSharp.i" />
     <None Include="RuntimeJava.i" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Efficio.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bitmap1.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

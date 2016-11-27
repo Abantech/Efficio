@@ -20,7 +20,7 @@ namespace Efficio
 		vector<shared_ptr<EfficioHand>> Hands;
 		vector<shared_ptr<HandJoint>> Joints;
 		vector<shared_ptr<EfficioFinger>> HandFingers;
-		HandFingers.add(Efficio::Body::FingerType FingerType)
+		HandFingers.add(Efficio::Body::FingerType FingerType);
 		//HandType = GetHandType();
 		Vector3 WristPosition;
 	};
