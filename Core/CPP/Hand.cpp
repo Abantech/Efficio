@@ -10,6 +10,7 @@ namespace Efficio
 			{
 				for (size_t i = 0; i < Fingers.size(); i++)
 				{
+					// Add reference to parent hand
 					Fingers[i].Hand = this;
 				}
 			}

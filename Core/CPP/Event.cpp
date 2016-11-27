@@ -3,7 +3,7 @@
 namespace Efficio {
 	namespace Events
 	{
-		Event::Event()
+		Event::Event() : Time(NULL)
 		{
 		}
 

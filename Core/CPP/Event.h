@@ -2,6 +2,8 @@
 
 #include "EventType.h"
 
+#include <time.h>
+
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
@@ -10,13 +12,17 @@
 
 namespace Efficio 
 {
-	namespace Events {
+	namespace Events 
+	{
 		/// The abstract class for all events within the Efficio system. Events are raised when anything notable happens within the Efficio ecosystem.
 		extern class DLLEXPORT Event
 		{
 		public:
 			Event();
 			~Event();
+
+			const time_t Time;
+
 			virtual Efficio::Events::EventType GetEventType() = 0;
 		};
 	}
