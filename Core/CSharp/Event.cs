@@ -40,6 +40,14 @@ public class Event : global::System.IDisposable {
     }
   }
 
+  public SWIGTYPE_p_time_t Time {
+    get {
+      SWIGTYPE_p_time_t ret = new SWIGTYPE_p_time_t(EfficioPINVOKE.Event_Time_get(swigCPtr), true);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
   public virtual EventType GetEventType() {
     EventType ret = (EventType)EfficioPINVOKE.Event_GetEventType(swigCPtr);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();

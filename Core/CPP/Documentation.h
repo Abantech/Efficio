@@ -27,20 +27,28 @@ namespace Efficio
 	namespace Events
 	{
 		/// <summary>
-		/// Events related to input recognition and processing
+		/// All events that occur within the Efficio system
 		/// </summary>
-		namespace InputRecognition
+		namespace Internal
+		{
+
+		}
+	}
+
+	/// <summary>
+	/// Events related to input recognition and processing
+	/// </summary>
+	namespace InputRecognition
+	{
+		/// <summary>
+		/// Events related to human-related input recognition and processing
+		/// </summary>
+		namespace Human
 		{
 			/// <summary>
-			/// Events related to human-related input recognition and processing
+			/// Events related to human hand related input recognition and processing
 			/// </summary>
-			namespace Human
-			{
-				/// <summary>
-				/// Events related to human hand related input recognition and processing
-				/// </summary>
-				namespace Hands {}
-			}
+			namespace Hands {}
 		}
 	}
 

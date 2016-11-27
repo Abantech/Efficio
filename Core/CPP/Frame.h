@@ -1,12 +1,12 @@
 #pragma once
 
-#include <map>
 #include "Data.h"
 #include "DataType.h"
 #include "Event.h"
 
 #include <memory>
 #include <vector>
+#include <map>
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -27,6 +27,7 @@ namespace Efficio
 		// TODO make this templated
 		std::vector<std::shared_ptr<Efficio::Data::Data>> GetDataOfType(Efficio::Data::DataType dataType);
 
+		// TODO make this friendly 
 		void AddData(std::vector<std::shared_ptr<Efficio::Data::Data>> data);
 
 		void AddFrame(Efficio::Frame frame);

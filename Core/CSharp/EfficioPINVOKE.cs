@@ -305,6 +305,9 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_Event___")]
   public static extern void delete_Event(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Event_Time_get___")]
+  public static extern global::System.IntPtr Event_Time_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Event_GetEventType___")]
   public static extern int Event_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
 

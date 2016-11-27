@@ -55,6 +55,15 @@
     <Filter Include="Header Files\Data\Body">
       <UniqueIdentifier>{a3690739-1894-4a6c-9994-b910331f896b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Assets">
+      <UniqueIdentifier>{be089a2a-29f9-4918-bb7b-49effbf48ff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Assets\Body">
+      <UniqueIdentifier>{64e66477-fff0-4b37-a589-efbed01f9319}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Events\Internal">
+      <UniqueIdentifier>{2f535cde-6f2a-4930-9a04-956f72286660}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files\IRP">
       <UniqueIdentifier>{125b19a8-4227-45b1-83ad-a45716dfee88}</UniqueIdentifier>
     </Filter>
@@ -160,6 +169,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InputRecognitionEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OnStart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -310,6 +322,9 @@
     </ClInclude>
     <ClInclude Include="HandData.h">
       <Filter>Header Files\Data\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="OnStart.h">
+      <Filter>Header Files\Events\Internal</Filter>
     </ClInclude>
     <ClInclude Include="RecognitionProcessor.h">
       <Filter>Header Files\IRP</Filter>

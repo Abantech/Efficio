@@ -48,6 +48,7 @@ public class EfficioJNI {
   public final static native void Hand_Fingers_set(long jarg1, Hand jarg1_, long jarg2);
   public final static native long Hand_Fingers_get(long jarg1, Hand jarg1_);
   public final static native void delete_Event(long jarg1);
+  public final static native long Event_Time_get(long jarg1, Event jarg1_);
   public final static native int Event_GetEventType(long jarg1, Event jarg1_);
   public final static native long new_Frame__SWIG_0(int jarg1);
   public final static native long new_Frame__SWIG_1();

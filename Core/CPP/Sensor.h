@@ -15,7 +15,8 @@
 
 namespace Efficio
 {
-	namespace Sensors {
+	namespace Sensors 
+	{
 		/// Any sensor which can feed data into Efficio
 		extern class DLLEXPORT Sensor
 		{
