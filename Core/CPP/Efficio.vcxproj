@@ -209,6 +209,7 @@ EXIT 0</Command>
     <ClCompile Include="LeapMotionDevice.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="MainPage.cpp" />
+    <ClCompile Include="OnStart.cpp" />
     <ClCompile Include="Pinch.cpp" />
     <ClCompile Include="RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="SampleAltimeter.cpp" />
@@ -262,6 +263,7 @@ EXIT 0</Command>
     <ClInclude Include="Leg.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="LocationSensor.h" />
+    <ClInclude Include="OnStart.h" />
     <ClInclude Include="SampleAltimeter.h" />
     <ClInclude Include="SampleGPS.h" />
     <ClInclude Include="Sensor.h" />

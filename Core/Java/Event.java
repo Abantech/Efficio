@@ -35,6 +35,10 @@ public class Event {
     }
   }
 
+  public SWIGTYPE_p_time_t getTime() {
+    return new SWIGTYPE_p_time_t(EfficioJNI.Event_Time_get(swigCPtr, this), true);
+  }
+
   public EventType GetEventType() {
     return EventType.swigToEnum(EfficioJNI.Event_GetEventType(swigCPtr, this));
   }
