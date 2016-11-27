@@ -14,7 +14,7 @@ namespace Efficio
 	{
 		namespace Internal
 		{
-			/// The abstract class for all events within the Efficio system. Events are raised when anything notable happens within the Efficio ecosystem.
+			/// Event that is raised when the Efficio system starts.
 			extern class DLLEXPORT OnStart : public Event
 			{
 			public:
