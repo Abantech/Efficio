@@ -35,8 +35,12 @@ public class Finger {
     }
   }
 
-  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, boolean isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip) {
-    this(EfficioJNI.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), isExtended, length, Joint.getCPtr(tip), tip, Joint.getCPtr(dip), dip, Joint.getCPtr(mcp), mcp, Joint.getCPtr(pip), pip), true);
+  public Finger() {
+    this(EfficioJNI.new_Finger__SWIG_0(), true);
+  }
+
+  public Finger(FingerType fingerType, boolean isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip) {
+    this(EfficioJNI.new_Finger__SWIG_1(fingerType.swigValue(), isExtended, length, Joint.getCPtr(tip), tip, Joint.getCPtr(dip), dip, Joint.getCPtr(mcp), mcp, Joint.getCPtr(pip), pip), true);
   }
 
   public void setTip(Joint value) {
@@ -75,21 +79,32 @@ public class Finger {
     return (cPtr == 0) ? null : new Joint(cPtr, false);
   }
 
-  public void setHand(Hand value) {
-    EfficioJNI.Finger_Hand_set(swigCPtr, this, Hand.getCPtr(value), value);
+  public void setValid(boolean value) {
+    EfficioJNI.Finger_Valid_set(swigCPtr, this, value);
   }
 
-  public Hand getHand() {
-    long cPtr = EfficioJNI.Finger_Hand_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new Hand(cPtr, false);
+  public boolean getValid() {
+    return EfficioJNI.Finger_Valid_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_FingerType getFingerType() {
-    return new SWIGTYPE_p_FingerType(EfficioJNI.Finger_FingerType_get(swigCPtr, this), true);
+  public void setFingerType(FingerType value) {
+    EfficioJNI.Finger_FingerType_set(swigCPtr, this, value.swigValue());
+  }
+
+  public FingerType getFingerType() {
+    return FingerType.swigToEnum(EfficioJNI.Finger_FingerType_get(swigCPtr, this));
+  }
+
+  public void setIsExtended(boolean value) {
+    EfficioJNI.Finger_IsExtended_set(swigCPtr, this, value);
   }
 
   public boolean getIsExtended() {
     return EfficioJNI.Finger_IsExtended_get(swigCPtr, this);
+  }
+
+  public void setLength(float value) {
+    EfficioJNI.Finger_Length_set(swigCPtr, this, value);
   }
 
   public float getLength() {

@@ -124,6 +124,7 @@ namespace Efficio
 						mcpType = Efficio::Models::Body::JointType::LeftHandThumbMCP;
 						pipType = Efficio::Models::Body::JointType::LeftHandThumbCMP;
 						fingerType = Efficio::Models::Body::FingerType::Thumb;
+						break;
 					}
 					case Leap::Finger::Type::TYPE_INDEX: {
 						tipType = Efficio::Models::Body::JointType::LeftHandIndexTIP;
@@ -131,6 +132,7 @@ namespace Efficio
 						mcpType = Efficio::Models::Body::JointType::LeftHandIndexMCP;
 						pipType = Efficio::Models::Body::JointType::LeftHandIndexPIP;
 						fingerType = Efficio::Models::Body::FingerType::Index;
+						break;
 					}
 					case Leap::Finger::Type::TYPE_MIDDLE: {
 						tipType = Efficio::Models::Body::JointType::LeftHandMiddleTIP;
@@ -138,6 +140,7 @@ namespace Efficio
 						mcpType = Efficio::Models::Body::JointType::LeftHandMiddleMCP;
 						pipType = Efficio::Models::Body::JointType::LeftHandMiddlePIP;
 						fingerType = Efficio::Models::Body::FingerType::Middle;
+						break;
 					}
 					case Leap::Finger::Type::TYPE_RING: {
 						tipType = Efficio::Models::Body::JointType::LeftHandRingTIP;
@@ -145,6 +148,7 @@ namespace Efficio
 						mcpType = Efficio::Models::Body::JointType::LeftHandRingMCP;
 						pipType = Efficio::Models::Body::JointType::LeftHandRingPIP;
 						fingerType = Efficio::Models::Body::FingerType::Ring;
+						break;
 					}
 					case Leap::Finger::Type::TYPE_PINKY: {
 						tipType = Efficio::Models::Body::JointType::LeftHandPinkyTIP;
@@ -152,6 +156,7 @@ namespace Efficio
 						mcpType = Efficio::Models::Body::JointType::LeftHandPinkyMCP;
 						pipType = Efficio::Models::Body::JointType::LeftHandPinkyPIP;
 						fingerType = Efficio::Models::Body::FingerType::Pinky;
+						break;
 					}
 					}
 				}
@@ -160,40 +165,44 @@ namespace Efficio
 					switch (finger.type())
 					{
 					case Leap::Finger::Type::TYPE_THUMB: {
-						//TOD Correct this mapping
-						tipType = Efficio::Models::Body::JointType::LeftHandThumbTIP;
-						dipType = Efficio::Models::Body::JointType::LeftHandThumbIP;
-						mcpType = Efficio::Models::Body::JointType::LeftHandThumbMCP;
-						pipType = Efficio::Models::Body::JointType::LeftHandThumbCMP;
+						tipType = Efficio::Models::Body::JointType::RightHandThumbTIP;
+						dipType = Efficio::Models::Body::JointType::RightHandThumbIP;
+						mcpType = Efficio::Models::Body::JointType::RightHandThumbMCP;
+						pipType = Efficio::Models::Body::JointType::RightHandThumbCMP;
 						fingerType = Efficio::Models::Body::FingerType::Thumb;
+						break;
 					}
 					case Leap::Finger::Type::TYPE_INDEX: {
-						tipType = Efficio::Models::Body::JointType::LeftHandIndexTIP;
-						dipType = Efficio::Models::Body::JointType::LeftHandIndexDIP;
-						mcpType = Efficio::Models::Body::JointType::LeftHandIndexMCP;
-						pipType = Efficio::Models::Body::JointType::LeftHandIndexPIP;
+						tipType = Efficio::Models::Body::JointType::RightHandIndexTIP;
+						dipType = Efficio::Models::Body::JointType::RightHandIndexDIP;
+						mcpType = Efficio::Models::Body::JointType::RightHandIndexMCP;
+						pipType = Efficio::Models::Body::JointType::RightHandIndexPIP;
 						fingerType = Efficio::Models::Body::FingerType::Index;
+						break;
 					}
 					case Leap::Finger::Type::TYPE_MIDDLE: {
-						tipType = Efficio::Models::Body::JointType::LeftHandMiddleTIP;
-						dipType = Efficio::Models::Body::JointType::LeftHandMiddleDIP;
-						mcpType = Efficio::Models::Body::JointType::LeftHandMiddleMCP;
-						pipType = Efficio::Models::Body::JointType::LeftHandMiddlePIP;
+						tipType = Efficio::Models::Body::JointType::RightHandMiddleTIP;
+						dipType = Efficio::Models::Body::JointType::RightHandMiddleDIP;
+						mcpType = Efficio::Models::Body::JointType::RightHandMiddleMCP;
+						pipType = Efficio::Models::Body::JointType::RightHandMiddlePIP;
 						fingerType = Efficio::Models::Body::FingerType::Middle;
+						break;
 					}
 					case Leap::Finger::Type::TYPE_RING: {
-						tipType = Efficio::Models::Body::JointType::LeftHandRingTIP;
-						dipType = Efficio::Models::Body::JointType::LeftHandRingDIP;
-						mcpType = Efficio::Models::Body::JointType::LeftHandRingMCP;
-						pipType = Efficio::Models::Body::JointType::LeftHandRingPIP;
+						tipType = Efficio::Models::Body::JointType::RightHandRingTIP;
+						dipType = Efficio::Models::Body::JointType::RightHandRingDIP;
+						mcpType = Efficio::Models::Body::JointType::RightHandRingMCP;
+						pipType = Efficio::Models::Body::JointType::RightHandRingPIP;
 						fingerType = Efficio::Models::Body::FingerType::Ring;
+						break;
 					}
 					case Leap::Finger::Type::TYPE_PINKY: {
-						tipType = Efficio::Models::Body::JointType::LeftHandPinkyTIP;
-						dipType = Efficio::Models::Body::JointType::LeftHandPinkyDIP;
-						mcpType = Efficio::Models::Body::JointType::LeftHandPinkyMCP;
-						pipType = Efficio::Models::Body::JointType::LeftHandPinkyPIP;
+						tipType = Efficio::Models::Body::JointType::RightHandPinkyTIP;
+						dipType = Efficio::Models::Body::JointType::RightHandPinkyDIP;
+						mcpType = Efficio::Models::Body::JointType::RightHandPinkyMCP;
+						pipType = Efficio::Models::Body::JointType::RightHandPinkyPIP;
 						fingerType = Efficio::Models::Body::FingerType::Pinky;
+						break;
 					}
 					}
 				}

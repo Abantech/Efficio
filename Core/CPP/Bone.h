@@ -37,44 +37,44 @@ namespace Efficio
 				/// <summary>
 				/// The proximal joint
 				/// </summary>
-				const Joint ProximalJoint;
+				Joint ProximalJoint;
 
 				/// <summary>
 				/// The distal joint
 				/// </summary>
-				const Joint DistalJoint;
+				Joint DistalJoint;
 
 				/// <summary>
 				/// The bone type
 				/// </summary>
-				const BoneType Type;
+				BoneType Type;
 
 				/// <summary>
 				/// Calculates length of the bone from joint to joint
 				/// </summary>
 				/// <returns>A float representing the length of the bone</returns>
-				const float Length();
+				float Length();
 
 				/// <summary>
 				/// The width of the bone
 				/// </summary>
 				/// <returns></returns>
-				const float Width();
+				float Width();
 
 				// TODO change to quaternion
-				const int Rotation();
+				int Rotation();
 
 				// TODO figure out what this is. Leap uses it
-				const int Basis();
+				int Basis();
 
 				/// <summary>
 				/// Calculates the center of the bone
 				/// </summary>
 				/// <returns>A vector representing the center of the bone</returns>
-				const Vector3 Center();
+				Vector3 Center();
 
 
-				const Vector3 Direction();
+				Vector3 Direction();
 
 			};
 		}

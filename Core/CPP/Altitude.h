@@ -38,13 +38,13 @@ namespace Efficio
 				/// <summary>
 				/// Gets the altitude. This measurement is unitless.
 				/// </summary>
-				const float Measure;
+				float Measure;
 
 
 				/// <summary>
 				/// Units of measurement
 				/// </summary>
-				const std::string Unit;
+				std::string Unit;
 
 				/// <summary>
 				/// Gets the type of the data.

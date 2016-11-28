@@ -11,6 +11,7 @@
 namespace Efficio.Net {
 
 public enum FingerType {
+  Unknown,
   Thumb,
   Index,
   Middle,

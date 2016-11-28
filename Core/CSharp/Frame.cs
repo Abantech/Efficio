@@ -46,20 +46,14 @@ public class Frame : global::System.IDisposable {
   public Frame() : this(EfficioPINVOKE.new_Frame__SWIG_1(), true) {
   }
 
-  public SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t GetData() {
-    SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t ret = new SWIGTYPE_p_std__mapT_Efficio__Data__DataType_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t_t(EfficioPINVOKE.Frame_GetData(swigCPtr), true);
+  public DataCollection GetData() {
+    DataCollection ret = new DataCollection(EfficioPINVOKE.Frame_GetData(swigCPtr), true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t GetDataOfType(SWIGTYPE_p_Efficio__Data__DataType dataType) {
-    SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t ret = new SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t(EfficioPINVOKE.Frame_GetDataOfType(swigCPtr, SWIGTYPE_p_Efficio__Data__DataType.getCPtr(dataType)), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  public void AddData(SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t data) {
-    EfficioPINVOKE.Frame_AddData(swigCPtr, SWIGTYPE_p_std__vectorT_std__shared_ptrT_Efficio__Data__Data_t_t.getCPtr(data));
+  public void AddData(DataCollection data) {
+    EfficioPINVOKE.Frame_AddData(swigCPtr, DataCollection.getCPtr(data));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -80,6 +74,10 @@ public class Frame : global::System.IDisposable {
   }
 
   public int ID {
+    set {
+      EfficioPINVOKE.Frame_ID_set(swigCPtr, value);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    } 
     get {
       int ret = EfficioPINVOKE.Frame_ID_get(swigCPtr);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();

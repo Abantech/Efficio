@@ -2,6 +2,8 @@
 #include <ctime>
 #include "Enumerations.h"
 #include "Event.h"
+#include "GestureType.h"
+#include "GestureState.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -27,10 +29,10 @@ namespace Efficio
 			virtual GestureState GetGestureState() = 0;
 
 			/// Gets the start time of the gesture
-			const std::time_t GetStartTime();
+			std::time_t GetStartTime();
 
 			/// Getst the length of the gesture.
-			const std::time_t GetGestureDuration();
+			std::time_t GetGestureDuration();
 
 			virtual Efficio::Events::EventType GetEventType() = 0;
 		private:

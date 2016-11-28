@@ -40,12 +40,25 @@ public class Joint : global::System.IDisposable {
     }
   }
 
-  public Joint(Vector3 position, SWIGTYPE_p_JointType type) : this(EfficioPINVOKE.new_Joint__SWIG_0(Vector3.getCPtr(position), SWIGTYPE_p_JointType.getCPtr(type)), true) {
+  public Joint() : this(EfficioPINVOKE.new_Joint__SWIG_0(), true) {
+  }
+
+  public Joint(Vector3 position, JointType type) : this(EfficioPINVOKE.new_Joint__SWIG_1(Vector3.getCPtr(position), (int)type), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public Joint(Vector3 position, SWIGTYPE_p_JointType type, float confidence) : this(EfficioPINVOKE.new_Joint__SWIG_1(Vector3.getCPtr(position), SWIGTYPE_p_JointType.getCPtr(type), confidence), true) {
+  public Joint(Vector3 position, JointType type, float confidence) : this(EfficioPINVOKE.new_Joint__SWIG_2(Vector3.getCPtr(position), (int)type, confidence), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public bool Valid {
+    set {
+      EfficioPINVOKE.Joint_Valid_set(swigCPtr, value);
+    } 
+    get {
+      bool ret = EfficioPINVOKE.Joint_Valid_get(swigCPtr);
+      return ret;
+    } 
   }
 
   public Vector3 Position {
@@ -59,28 +72,34 @@ public class Joint : global::System.IDisposable {
     } 
   }
 
-  public SWIGTYPE_p_JointType Type {
+  public JointType Type {
+    set {
+      EfficioPINVOKE.Joint_Type_set(swigCPtr, (int)value);
+    } 
     get {
-      SWIGTYPE_p_JointType ret = new SWIGTYPE_p_JointType(EfficioPINVOKE.Joint_Type_get(swigCPtr), true);
+      JointType ret = (JointType)EfficioPINVOKE.Joint_Type_get(swigCPtr);
       return ret;
     } 
   }
 
   public float Confidence {
+    set {
+      EfficioPINVOKE.Joint_Confidence_set(swigCPtr, value);
+    } 
     get {
       float ret = EfficioPINVOKE.Joint_Confidence_get(swigCPtr);
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t ProximalJoints(Joint joint) {
-    SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t ret = new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioPINVOKE.Joint_ProximalJoints(swigCPtr, Joint.getCPtr(joint)), true);
+  public JointCollection ProximalJoints(Joint joint) {
+    JointCollection ret = new JointCollection(EfficioPINVOKE.Joint_ProximalJoints(swigCPtr, Joint.getCPtr(joint)), true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t DistalJoints(Joint joint) {
-    SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t ret = new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioPINVOKE.Joint_DistalJoints(swigCPtr, Joint.getCPtr(joint)), true);
+  public JointCollection DistalJoints(Joint joint) {
+    JointCollection ret = new JointCollection(EfficioPINVOKE.Joint_DistalJoints(swigCPtr, Joint.getCPtr(joint)), true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

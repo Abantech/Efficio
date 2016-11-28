@@ -12,8 +12,10 @@ namespace Efficio.Net {
 
 public class Pinch : DiscreteGesture {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  private bool swigCMemOwnDerived;
 
-  internal Pinch(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.Pinch_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal Pinch(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioPINVOKE.Pinch_SWIGSmartPtrUpcast(cPtr), true) {
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
@@ -28,8 +30,8 @@ public class Pinch : DiscreteGesture {
   public override void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
+        if (swigCMemOwnDerived) {
+          swigCMemOwnDerived = false;
           EfficioPINVOKE.delete_Pinch(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
@@ -39,17 +41,19 @@ public class Pinch : DiscreteGesture {
     }
   }
 
-  public Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide side, Finger finger1, Finger finger2) : this(EfficioPINVOKE.new_Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(side), Finger.getCPtr(finger1), Finger.getCPtr(finger2)), true) {
+  public Pinch(BodySide side, Finger finger1, Finger finger2) : this(EfficioPINVOKE.new_Pinch((int)side, Finger.getCPtr(finger1), Finger.getCPtr(finger2)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public Vector3 Position {
     set {
       EfficioPINVOKE.Pinch_Position_set(swigCPtr, Vector3.getCPtr(value));
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       global::System.IntPtr cPtr = EfficioPINVOKE.Pinch_Position_get(swigCPtr);
       Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
@@ -57,10 +61,12 @@ public class Pinch : DiscreteGesture {
   public Finger Finger1 {
     set {
       EfficioPINVOKE.Pinch_Finger1_set(swigCPtr, Finger.getCPtr(value));
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       global::System.IntPtr cPtr = EfficioPINVOKE.Pinch_Finger1_get(swigCPtr);
       Finger ret = (cPtr == global::System.IntPtr.Zero) ? null : new Finger(cPtr, false);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
@@ -68,26 +74,29 @@ public class Pinch : DiscreteGesture {
   public Finger Finger2 {
     set {
       EfficioPINVOKE.Pinch_Finger2_set(swigCPtr, Finger.getCPtr(value));
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
       global::System.IntPtr cPtr = EfficioPINVOKE.Pinch_Finger2_get(swigCPtr);
       Finger ret = (cPtr == global::System.IntPtr.Zero) ? null : new Finger(cPtr, false);
+      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public override EventType GetEventType() {
     EventType ret = (EventType)EfficioPINVOKE.Pinch_GetEventType(swigCPtr);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public SWIGTYPE_p_Efficio__Models__Body__BodySide Side {
+  public BodySide Side {
     set {
-      EfficioPINVOKE.Pinch_Side_set(swigCPtr, SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(value));
+      EfficioPINVOKE.Pinch_Side_set(swigCPtr, (int)value);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_Efficio__Models__Body__BodySide ret = new SWIGTYPE_p_Efficio__Models__Body__BodySide(EfficioPINVOKE.Pinch_Side_get(swigCPtr), true);
+      BodySide ret = (BodySide)EfficioPINVOKE.Pinch_Side_get(swigCPtr);
       if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

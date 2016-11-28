@@ -10,9 +10,11 @@ package Efficio.Java;
 
 public class Pinch extends DiscreteGesture {
   private transient long swigCPtr;
+  private boolean swigCMemOwnDerived;
 
   protected Pinch(long cPtr, boolean cMemoryOwn) {
-    super(EfficioJNI.Pinch_SWIGUpcast(cPtr), cMemoryOwn);
+    super(EfficioJNI.Pinch_SWIGSmartPtrUpcast(cPtr), true);
+    swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
@@ -26,8 +28,8 @@ public class Pinch extends DiscreteGesture {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwn) {
-        swigCMemOwn = false;
+      if (swigCMemOwnDerived) {
+        swigCMemOwnDerived = false;
         EfficioJNI.delete_Pinch(swigCPtr);
       }
       swigCPtr = 0;
@@ -35,8 +37,8 @@ public class Pinch extends DiscreteGesture {
     super.delete();
   }
 
-  public Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide side, Finger finger1, Finger finger2) {
-    this(EfficioJNI.new_Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(side), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2), true);
+  public Pinch(BodySide side, Finger finger1, Finger finger2) {
+    this(EfficioJNI.new_Pinch(side.swigValue(), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2), true);
   }
 
   public void setPosition(Vector3 value) {
@@ -70,12 +72,12 @@ public class Pinch extends DiscreteGesture {
     return EventType.swigToEnum(EfficioJNI.Pinch_GetEventType(swigCPtr, this));
   }
 
-  public void setSide(SWIGTYPE_p_Efficio__Models__Body__BodySide value) {
-    EfficioJNI.Pinch_Side_set(swigCPtr, this, SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(value));
+  public void setSide(BodySide value) {
+    EfficioJNI.Pinch_Side_set(swigCPtr, this, value.swigValue());
   }
 
-  public SWIGTYPE_p_Efficio__Models__Body__BodySide getSide() {
-    return new SWIGTYPE_p_Efficio__Models__Body__BodySide(EfficioJNI.Pinch_Side_get(swigCPtr, this), true);
+  public BodySide getSide() {
+    return BodySide.swigToEnum(EfficioJNI.Pinch_Side_get(swigCPtr, this));
   }
 
 }

@@ -341,6 +341,12 @@
     <ClInclude Include="PinchDetector.h">
       <Filter>Header Files\Events\IRP\Body\Hands</Filter>
     </ClInclude>
+    <ClInclude Include="GestureType.h">
+      <Filter>Header Files\Events\IRP</Filter>
+    </ClInclude>
+    <ClInclude Include="GestureState.h">
+      <Filter>Header Files\Events\IRP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="RuntimeCSharp.i" />

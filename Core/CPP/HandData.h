@@ -23,7 +23,7 @@ namespace Efficio
 				HandData(std::vector<Efficio::Models::Body::Hand> hands);
 				~HandData();
 
-				const std::vector<Efficio::Models::Body::Hand> Hands;
+				std::vector<Efficio::Models::Body::Hand> Hands;
 
 				/// <summary>
 				/// Gets the type of the data.

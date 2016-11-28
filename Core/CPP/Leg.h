@@ -22,12 +22,12 @@ namespace Efficio
 				Leg();
 				~Leg();
 
-				const BodySide Side;
+				BodySide Side;
 
-				const Joint Hip;
-				const Joint Knee;
-				const Joint Ankle;
-				const Joint Foot;
+				Joint Hip;
+				Joint Knee;
+				Joint Ankle;
+				Joint Foot;
 			};
 		}
 	}

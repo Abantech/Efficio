@@ -8,15 +8,11 @@
 
 namespace Efficio
 {
-	namespace Body {
-
-		extern enum class DLLEXPORT BodyTrackingType
-		{
-			Eye,
-			Face,
-			Hand,
-			Arm,
-			Body
+	namespace InputRecognition
+	{
+		extern enum DLLEXPORT GestureState {
+			InProgress,
+			Completed
 		};
 	}
 }

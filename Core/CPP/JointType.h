@@ -14,6 +14,7 @@ namespace Efficio
 		{
 			/// Enumeration containing all of the joints of the body
 			extern enum class DLLEXPORT JointType {
+				None,
 				Head,
 				ShoulderCenter,
 				ShoulderRight,

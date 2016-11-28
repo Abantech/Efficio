@@ -10,29 +10,29 @@
 
 namespace Efficio.Net {
 
-public class HandData : global::System.IDisposable {
+public class Data : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
-  protected bool swigCMemOwn;
+  private bool swigCMemOwnBase;
 
-  internal HandData(global::System.IntPtr cPtr, bool cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
+  internal Data(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwnBase = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(HandData obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Data obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~HandData() {
+  ~Data() {
     Dispose();
   }
 
   public virtual void Dispose() {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
-        if (swigCMemOwn) {
-          swigCMemOwn = false;
-          EfficioPINVOKE.delete_HandData(swigCPtr);
+        if (swigCMemOwnBase) {
+          swigCMemOwnBase = false;
+          EfficioPINVOKE.delete_Data(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,18 +40,10 @@ public class HandData : global::System.IDisposable {
     }
   }
 
-  public HandData() : this(EfficioPINVOKE.new_HandData(), true) {
-  }
-
-  public SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Hand_t Hands {
-    set {
-      EfficioPINVOKE.HandData_Hands_set(swigCPtr, SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Hand_t.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.HandData_Hands_get(swigCPtr);
-      SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Hand_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_std__vectorT_Efficio__Models__Human__Hand_t(cPtr, false);
-      return ret;
-    } 
+  public virtual DataType GetDataType() {
+    DataType ret = (DataType)EfficioPINVOKE.Data_GetDataType(swigCPtr);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
   }
 
 }

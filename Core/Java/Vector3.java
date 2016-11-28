@@ -35,8 +35,12 @@ public class Vector3 {
     }
   }
 
+  public Vector3() {
+    this(EfficioJNI.new_Vector3__SWIG_0(), true);
+  }
+
   public Vector3(float x, float y, float z) {
-    this(EfficioJNI.new_Vector3(x, y, z), true);
+    this(EfficioJNI.new_Vector3__SWIG_1(x, y, z), true);
   }
 
   public float DistanceTo(Vector3 vector2) {

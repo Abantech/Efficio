@@ -10,22 +10,22 @@
 
 namespace Efficio.Net {
 
-public class DeviceCollection : global::System.IDisposable, global::System.Collections.IEnumerable
-    , global::System.Collections.Generic.IEnumerable<Device>
+public class DataCollection : global::System.IDisposable, global::System.Collections.IEnumerable
+    , global::System.Collections.Generic.IEnumerable<Data>
  {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal DeviceCollection(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal DataCollection(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(DeviceCollection obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(DataCollection obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~DeviceCollection() {
+  ~DataCollection() {
     Dispose();
   }
 
@@ -34,7 +34,7 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioPINVOKE.delete_DeviceCollection(swigCPtr);
+          EfficioPINVOKE.delete_DataCollection(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -42,10 +42,10 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
     }
   }
 
-  public DeviceCollection(global::System.Collections.ICollection c) : this() {
+  public DataCollection(global::System.Collections.ICollection c) : this() {
     if (c == null)
       throw new global::System.ArgumentNullException("c");
-    foreach (Device element in c) {
+    foreach (Data element in c) {
       this.Add(element);
     }
   }
@@ -62,7 +62,7 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
     }
   }
 
-  public Device this[int index]  {
+  public Data this[int index]  {
     get {
       return getitem(index);
     }
@@ -94,17 +94,17 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
     }
   }
 
-  public void CopyTo(Device[] array)
+  public void CopyTo(Data[] array)
   {
     CopyTo(0, array, 0, this.Count);
   }
 
-  public void CopyTo(Device[] array, int arrayIndex)
+  public void CopyTo(Data[] array, int arrayIndex)
   {
     CopyTo(0, array, arrayIndex, this.Count);
   }
 
-  public void CopyTo(int index, Device[] array, int arrayIndex, int count)
+  public void CopyTo(int index, Data[] array, int arrayIndex, int count)
   {
     if (array == null)
       throw new global::System.ArgumentNullException("array");
@@ -122,16 +122,16 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
       array.SetValue(getitemcopy(index+i), arrayIndex+i);
   }
 
-  global::System.Collections.Generic.IEnumerator<Device> global::System.Collections.Generic.IEnumerable<Device>.GetEnumerator() {
-    return new DeviceCollectionEnumerator(this);
+  global::System.Collections.Generic.IEnumerator<Data> global::System.Collections.Generic.IEnumerable<Data>.GetEnumerator() {
+    return new DataCollectionEnumerator(this);
   }
 
   global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator() {
-    return new DeviceCollectionEnumerator(this);
+    return new DataCollectionEnumerator(this);
   }
 
-  public DeviceCollectionEnumerator GetEnumerator() {
-    return new DeviceCollectionEnumerator(this);
+  public DataCollectionEnumerator GetEnumerator() {
+    return new DataCollectionEnumerator(this);
   }
 
   // Type-safe enumerator
@@ -139,15 +139,15 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
   /// whenever the collection is modified. This has been done for changes in the size of the
   /// collection but not when one of the elements of the collection is modified as it is a bit
   /// tricky to detect unmanaged code that modifies the collection under our feet.
-  public sealed class DeviceCollectionEnumerator : global::System.Collections.IEnumerator
-    , global::System.Collections.Generic.IEnumerator<Device>
+  public sealed class DataCollectionEnumerator : global::System.Collections.IEnumerator
+    , global::System.Collections.Generic.IEnumerator<Data>
   {
-    private DeviceCollection collectionRef;
+    private DataCollection collectionRef;
     private int currentIndex;
     private object currentObject;
     private int currentSize;
 
-    public DeviceCollectionEnumerator(DeviceCollection collection) {
+    public DataCollectionEnumerator(DataCollection collection) {
       collectionRef = collection;
       currentIndex = -1;
       currentObject = null;
@@ -155,7 +155,7 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
     }
 
     // Type-safe iterator Current
-    public Device Current {
+    public Data Current {
       get {
         if (currentIndex == -1)
           throw new global::System.InvalidOperationException("Enumeration not started.");
@@ -163,7 +163,7 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
           throw new global::System.InvalidOperationException("Enumeration finished.");
         if (currentObject == null)
           throw new global::System.InvalidOperationException("Collection modified.");
-        return (Device)currentObject;
+        return (Data)currentObject;
       }
     }
 
@@ -201,108 +201,108 @@ public class DeviceCollection : global::System.IDisposable, global::System.Colle
   }
 
   public void Clear() {
-    EfficioPINVOKE.DeviceCollection_Clear(swigCPtr);
+    EfficioPINVOKE.DataCollection_Clear(swigCPtr);
   }
 
-  public void Add(Device x) {
-    EfficioPINVOKE.DeviceCollection_Add(swigCPtr, Device.getCPtr(x));
+  public void Add(Data x) {
+    EfficioPINVOKE.DataCollection_Add(swigCPtr, Data.getCPtr(x));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = EfficioPINVOKE.DeviceCollection_size(swigCPtr);
+    uint ret = EfficioPINVOKE.DataCollection_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = EfficioPINVOKE.DeviceCollection_capacity(swigCPtr);
+    uint ret = EfficioPINVOKE.DataCollection_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    EfficioPINVOKE.DeviceCollection_reserve(swigCPtr, n);
+    EfficioPINVOKE.DataCollection_reserve(swigCPtr, n);
   }
 
-  public DeviceCollection() : this(EfficioPINVOKE.new_DeviceCollection__SWIG_0(), true) {
+  public DataCollection() : this(EfficioPINVOKE.new_DataCollection__SWIG_0(), true) {
   }
 
-  public DeviceCollection(DeviceCollection other) : this(EfficioPINVOKE.new_DeviceCollection__SWIG_1(DeviceCollection.getCPtr(other)), true) {
+  public DataCollection(DataCollection other) : this(EfficioPINVOKE.new_DataCollection__SWIG_1(DataCollection.getCPtr(other)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public DeviceCollection(int capacity) : this(EfficioPINVOKE.new_DeviceCollection__SWIG_2(capacity), true) {
+  public DataCollection(int capacity) : this(EfficioPINVOKE.new_DataCollection__SWIG_2(capacity), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  private Device getitemcopy(int index) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.DeviceCollection_getitemcopy(swigCPtr, index);
-    Device ret = (cPtr == global::System.IntPtr.Zero) ? null : new Device(cPtr, true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-    return ret;
-  }
-
-  private Device getitem(int index) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.DeviceCollection_getitem(swigCPtr, index);
-    Device ret = (cPtr == global::System.IntPtr.Zero) ? null : new Device(cPtr, true);
+  private Data getitemcopy(int index) {
+    global::System.IntPtr cPtr = EfficioPINVOKE.DataCollection_getitemcopy(swigCPtr, index);
+    Data ret = (cPtr == global::System.IntPtr.Zero) ? null : new Data(cPtr, true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  private void setitem(int index, Device val) {
-    EfficioPINVOKE.DeviceCollection_setitem(swigCPtr, index, Device.getCPtr(val));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public void AddRange(DeviceCollection values) {
-    EfficioPINVOKE.DeviceCollection_AddRange(swigCPtr, DeviceCollection.getCPtr(values));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public DeviceCollection GetRange(int index, int count) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.DeviceCollection_GetRange(swigCPtr, index, count);
-    DeviceCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new DeviceCollection(cPtr, true);
+  private Data getitem(int index) {
+    global::System.IntPtr cPtr = EfficioPINVOKE.DataCollection_getitem(swigCPtr, index);
+    Data ret = (cPtr == global::System.IntPtr.Zero) ? null : new Data(cPtr, true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public void Insert(int index, Device x) {
-    EfficioPINVOKE.DeviceCollection_Insert(swigCPtr, index, Device.getCPtr(x));
+  private void setitem(int index, Data val) {
+    EfficioPINVOKE.DataCollection_setitem(swigCPtr, index, Data.getCPtr(val));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void InsertRange(int index, DeviceCollection values) {
-    EfficioPINVOKE.DeviceCollection_InsertRange(swigCPtr, index, DeviceCollection.getCPtr(values));
+  public void AddRange(DataCollection values) {
+    EfficioPINVOKE.DataCollection_AddRange(swigCPtr, DataCollection.getCPtr(values));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public DataCollection GetRange(int index, int count) {
+    global::System.IntPtr cPtr = EfficioPINVOKE.DataCollection_GetRange(swigCPtr, index, count);
+    DataCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new DataCollection(cPtr, true);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
+  public void Insert(int index, Data x) {
+    EfficioPINVOKE.DataCollection_Insert(swigCPtr, index, Data.getCPtr(x));
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public void InsertRange(int index, DataCollection values) {
+    EfficioPINVOKE.DataCollection_InsertRange(swigCPtr, index, DataCollection.getCPtr(values));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    EfficioPINVOKE.DeviceCollection_RemoveAt(swigCPtr, index);
+    EfficioPINVOKE.DataCollection_RemoveAt(swigCPtr, index);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    EfficioPINVOKE.DeviceCollection_RemoveRange(swigCPtr, index, count);
+    EfficioPINVOKE.DataCollection_RemoveRange(swigCPtr, index, count);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public static DeviceCollection Repeat(Device value, int count) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.DeviceCollection_Repeat(Device.getCPtr(value), count);
-    DeviceCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new DeviceCollection(cPtr, true);
+  public static DataCollection Repeat(Data value, int count) {
+    global::System.IntPtr cPtr = EfficioPINVOKE.DataCollection_Repeat(Data.getCPtr(value), count);
+    DataCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new DataCollection(cPtr, true);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    EfficioPINVOKE.DeviceCollection_Reverse__SWIG_0(swigCPtr);
+    EfficioPINVOKE.DataCollection_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    EfficioPINVOKE.DeviceCollection_Reverse__SWIG_1(swigCPtr, index, count);
+    EfficioPINVOKE.DataCollection_Reverse__SWIG_1(swigCPtr, index, count);
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public void SetRange(int index, DeviceCollection values) {
-    EfficioPINVOKE.DeviceCollection_SetRange(swigCPtr, index, DeviceCollection.getCPtr(values));
+  public void SetRange(int index, DataCollection values) {
+    EfficioPINVOKE.DataCollection_SetRange(swigCPtr, index, DataCollection.getCPtr(values));
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 

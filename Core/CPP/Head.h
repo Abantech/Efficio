@@ -21,7 +21,7 @@ namespace Efficio
 				Head();
 				~Head();
 
-				const Face GetFace();
+				Face GetFace();
 			};
 		}
 	}

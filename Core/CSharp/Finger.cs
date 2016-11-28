@@ -40,7 +40,10 @@ public class Finger : global::System.IDisposable {
     }
   }
 
-  public Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType fingerType, bool isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip) : this(EfficioPINVOKE.new_Finger(SWIGTYPE_p_Efficio__Models__Body__FingerType.getCPtr(fingerType), isExtended, length, Joint.getCPtr(tip), Joint.getCPtr(dip), Joint.getCPtr(mcp), Joint.getCPtr(pip)), true) {
+  public Finger() : this(EfficioPINVOKE.new_Finger__SWIG_0(), true) {
+  }
+
+  public Finger(FingerType fingerType, bool isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip) : this(EfficioPINVOKE.new_Finger__SWIG_1((int)fingerType, isExtended, length, Joint.getCPtr(tip), Joint.getCPtr(dip), Joint.getCPtr(mcp), Joint.getCPtr(pip)), true) {
     if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -88,25 +91,30 @@ public class Finger : global::System.IDisposable {
     } 
   }
 
-  public Hand Hand {
+  public bool Valid {
     set {
-      EfficioPINVOKE.Finger_Hand_set(swigCPtr, Hand.getCPtr(value));
+      EfficioPINVOKE.Finger_Valid_set(swigCPtr, value);
     } 
     get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_Hand_get(swigCPtr);
-      Hand ret = (cPtr == global::System.IntPtr.Zero) ? null : new Hand(cPtr, false);
+      bool ret = EfficioPINVOKE.Finger_Valid_get(swigCPtr);
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_FingerType FingerType {
+  public FingerType FingerType {
+    set {
+      EfficioPINVOKE.Finger_FingerType_set(swigCPtr, (int)value);
+    } 
     get {
-      SWIGTYPE_p_FingerType ret = new SWIGTYPE_p_FingerType(EfficioPINVOKE.Finger_FingerType_get(swigCPtr), true);
+      FingerType ret = (FingerType)EfficioPINVOKE.Finger_FingerType_get(swigCPtr);
       return ret;
     } 
   }
 
   public bool IsExtended {
+    set {
+      EfficioPINVOKE.Finger_IsExtended_set(swigCPtr, value);
+    } 
     get {
       bool ret = EfficioPINVOKE.Finger_IsExtended_get(swigCPtr);
       return ret;
@@ -114,6 +122,9 @@ public class Finger : global::System.IDisposable {
   }
 
   public float Length {
+    set {
+      EfficioPINVOKE.Finger_Length_set(swigCPtr, value);
+    } 
     get {
       float ret = EfficioPINVOKE.Finger_Length_get(swigCPtr);
       return ret;

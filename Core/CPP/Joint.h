@@ -20,25 +20,28 @@ namespace Efficio
 			extern class DLLEXPORT Joint 
 			{
 			public:
+				Joint();
 				/// Constructor for when confidence values are not available. Sets the confidence property to -1.
 				Joint(Vector3 position, JointType type);
 				Joint(Vector3 position, JointType type, float confidence);
 				~Joint();
 
+				bool Valid;
+
 				/// The joint's position
 				Vector3 Position;
 
 				/// The joint's type
-				const JointType Type;
+				JointType Type;
 
 				/// The confidence of the joint. A valie of -1 indicates that no confidence data was provided
-				const float Confidence;
+				float Confidence;
 
 				/// Gets the proximal joints of a joint, treating spine as origin. If joint is spine, spine is returned;
-				const std::vector<Joint> ProximalJoints(Joint joint);
+				std::vector<Joint> ProximalJoints(Joint joint);
 
 				/// Gets the distal joints of a joint, treating spine as origin. If joint is most distal, joint is returned;
-				const std::vector<Joint> DistalJoints(Joint joint);
+				std::vector<Joint> DistalJoints(Joint joint);
 
 				/// The distance between two joints
 				float DistanceTo(Joint joint);

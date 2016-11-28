@@ -21,7 +21,7 @@ namespace Efficio
 			Event();
 			~Event();
 
-			const time_t Time;
+			time_t Time;
 
 			virtual Efficio::Events::EventType GetEventType() = 0;
 		};

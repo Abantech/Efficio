@@ -14,6 +14,7 @@ namespace Efficio
 		{
 			/// The different finger types
 			extern enum class DLLEXPORT FingerType {
+				Unknown,
 				Thumb,
 				Index,
 				Middle,

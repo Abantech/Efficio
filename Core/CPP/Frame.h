@@ -22,24 +22,21 @@ namespace Efficio
 		Frame(int ID = 0);
 		~Frame();
 
-		std::map<Efficio::Data::DataType, std::vector<std::shared_ptr<Efficio::Data::Data>>> GetData();
-
-		// TODO make this templated
-		std::vector<std::shared_ptr<Efficio::Data::Data>> GetDataOfType(Efficio::Data::DataType dataType);
+		std::vector<std::shared_ptr<Data::Data>> GetData();
 
 		// TODO make this friendly 
-		void AddData(std::vector<std::shared_ptr<Efficio::Data::Data>> data);
+		void AddData(std::vector<std::shared_ptr<Data::Data>> data);
 
-		void AddFrame(Efficio::Frame frame);
+		void AddFrame(Frame frame);
 
-		std::vector<std::shared_ptr<Efficio::Events::Event>> GetEvents();
+		std::vector<std::shared_ptr<Events::Event>> GetEvents();
 
-		void AddEvent(std::shared_ptr<Efficio::Events::Event> eventPtr);
+		void AddEvent(std::shared_ptr<Events::Event> eventPtr);
 
-		const int ID;
+		int ID;
 
 	private:
-		std::map<Efficio::Data::DataType, std::vector<std::shared_ptr<Efficio::Data::Data>>> dataCollection;
-		std::vector<std::shared_ptr<Efficio::Events::Event>> events;
+		std::vector<std::shared_ptr<Data::Data>> dataCollection;
+		std::vector<std::shared_ptr<Events::Event>> events;
 	};
 }

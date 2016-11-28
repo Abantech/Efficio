@@ -244,6 +244,8 @@ EXIT 0</Command>
     <ClInclude Include="Face.h" />
     <ClInclude Include="Finger.h" />
     <ClInclude Include="FingerType.h" />
+    <ClInclude Include="GestureState.h" />
+    <ClInclude Include="GestureType.h" />
     <ClInclude Include="Hand.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>

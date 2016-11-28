@@ -9,8 +9,8 @@
 package Efficio.Java;
 
 public final class BodySide {
-  public final static BodySide Right = new BodySide("Right");
   public final static BodySide Left = new BodySide("Left");
+  public final static BodySide Right = new BodySide("Right");
 
   public final int swigValue() {
     return swigValue;
@@ -46,7 +46,7 @@ public final class BodySide {
     swigNext = this.swigValue+1;
   }
 
-  private static BodySide[] swigValues = { Right, Left };
+  private static BodySide[] swigValues = { Left, Right };
   private static int swigNext = 0;
   private final int swigValue;
   private final String swigName;

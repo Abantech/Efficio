@@ -305,15 +305,17 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_Efficio(SWIG_CSharpString
 	 /* Includes the header in the wrapper code */
 	#include <memory>
 	#include "Event.h"
-	#include "Vector3.h"
-	#include "Frame.h"
-	#include "Enumerations.h"
-	#include "Engine.h"
 	#include "Gesture.h"
+	#include "Vector3.h"
+	#include "Joint.h"
+	#include "Finger.h"
+	#include "BodySide.h"
+	#include "Frame.h"
+	#include "Engine.h"
 	#include "DiscreteGesture.h"
 	#include "Pinch.h"
-	#include "Joint.h"
-	#include "Vector3.h"
+	#include "Hand.h"
+	#include "DataType.h"
  
 
 #include <string>
@@ -327,6 +329,16 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_Efficio(SWIG_CSharpString
 #include <stdexcept>
 
 
+#include <algorithm>
+#include <array>
+#include <stdexcept>
+
+
+#include <map>
+#include <algorithm>
+#include <stdexcept>
+
+
 struct SWIG_null_deleter {
   void operator() (void const *) const {
   }
@@ -336,97 +348,6 @@ struct SWIG_null_deleter {
 #define SWIG_NO_NULL_DELETER_SWIG_POINTER_NEW
 #define SWIG_NO_NULL_DELETER_SWIG_POINTER_OWN
 
-SWIGINTERN std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *new_std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg___SWIG_2(int capacity){
-        std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >* pv = 0;
-        if (capacity >= 0) {
-          pv = new std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >();
-          pv->reserve(capacity);
-       } else {
-          throw std::out_of_range("capacity");
-       }
-       return pv;
-      }
-SWIGINTERN std::shared_ptr< Efficio::Models::Human::Hand > std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__getitemcopy(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          return (*self)[index];
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN std::shared_ptr< Efficio::Models::Human::Hand > const &std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__getitem(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          return (*self)[index];
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__setitem(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index,std::shared_ptr< Efficio::Models::Human::Hand > const &val){
-        if (index>=0 && index<(int)self->size())
-          (*self)[index] = val;
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__AddRange(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const &values){
-        self->insert(self->end(), values.begin(), values.end());
-      }
-SWIGINTERN std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__GetRange(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        return new std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__Insert(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index,std::shared_ptr< Efficio::Models::Human::Hand > const &x){
-        if (index>=0 && index<(int)self->size()+1)
-          self->insert(self->begin()+index, x);
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__InsertRange(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index,std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const &values){
-        if (index>=0 && index<(int)self->size()+1)
-          self->insert(self->begin()+index, values.begin(), values.end());
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__RemoveAt(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index){
-        if (index>=0 && index<(int)self->size())
-          self->erase(self->begin() + index);
-        else
-          throw std::out_of_range("index");
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__RemoveRange(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        self->erase(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__Repeat(std::shared_ptr< Efficio::Models::Human::Hand > const &value,int count){
-        if (count < 0)
-          throw std::out_of_range("count");
-        return new std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >(count, value);
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__Reverse__SWIG_0(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self){
-        std::reverse(self->begin(), self->end());
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__Reverse__SWIG_1(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index,int count){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (count < 0)
-          throw std::out_of_range("count");
-        if (index >= (int)self->size()+1 || index+count > (int)self->size())
-          throw std::invalid_argument("invalid range");
-        std::reverse(self->begin()+index, self->begin()+index+count);
-      }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__SetRange(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *self,int index,std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const &values){
-        if (index < 0)
-          throw std::out_of_range("index");
-        if (index+values.size() > self->size())
-          throw std::out_of_range("index");
-        std::copy(values.begin(), values.end(), self->begin()+index);
-      }
 SWIGINTERN std::vector< std::shared_ptr< Efficio::Events::Event > > *new_std_vector_Sl_std_shared_ptr_Sl_Efficio_Events_Event_Sg__Sg___SWIG_2(int capacity){
         std::vector< std::shared_ptr< Efficio::Events::Event > >* pv = 0;
         if (capacity >= 0) {
@@ -609,65 +530,65 @@ SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_InputRecognition_Gesture
           throw std::out_of_range("index");
         std::copy(values.begin(), values.end(), self->begin()+index);
       }
-SWIGINTERN std::vector< std::shared_ptr< Efficio::Device > > *new_std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg___SWIG_2(int capacity){
-        std::vector< std::shared_ptr< Efficio::Device > >* pv = 0;
+SWIGINTERN std::vector< std::shared_ptr< Efficio::Data::Data > > *new_std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg___SWIG_2(int capacity){
+        std::vector< std::shared_ptr< Efficio::Data::Data > >* pv = 0;
         if (capacity >= 0) {
-          pv = new std::vector< std::shared_ptr< Efficio::Device > >();
+          pv = new std::vector< std::shared_ptr< Efficio::Data::Data > >();
           pv->reserve(capacity);
        } else {
           throw std::out_of_range("capacity");
        }
        return pv;
       }
-SWIGINTERN std::shared_ptr< Efficio::Device > std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__getitemcopy(std::vector< std::shared_ptr< Efficio::Device > > *self,int index){
+SWIGINTERN std::shared_ptr< Efficio::Data::Data > std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__getitemcopy(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN std::shared_ptr< Efficio::Device > const &std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__getitem(std::vector< std::shared_ptr< Efficio::Device > > *self,int index){
+SWIGINTERN std::shared_ptr< Efficio::Data::Data > const &std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__getitem(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index){
         if (index>=0 && index<(int)self->size())
           return (*self)[index];
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__setitem(std::vector< std::shared_ptr< Efficio::Device > > *self,int index,std::shared_ptr< Efficio::Device > const &val){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__setitem(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index,std::shared_ptr< Efficio::Data::Data > const &val){
         if (index>=0 && index<(int)self->size())
           (*self)[index] = val;
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__AddRange(std::vector< std::shared_ptr< Efficio::Device > > *self,std::vector< std::shared_ptr< Efficio::Device > > const &values){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__AddRange(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,std::vector< std::shared_ptr< Efficio::Data::Data > > const &values){
         self->insert(self->end(), values.begin(), values.end());
       }
-SWIGINTERN std::vector< std::shared_ptr< Efficio::Device > > *std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__GetRange(std::vector< std::shared_ptr< Efficio::Device > > *self,int index,int count){
+SWIGINTERN std::vector< std::shared_ptr< Efficio::Data::Data > > *std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__GetRange(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
           throw std::out_of_range("count");
         if (index >= (int)self->size()+1 || index+count > (int)self->size())
           throw std::invalid_argument("invalid range");
-        return new std::vector< std::shared_ptr< Efficio::Device > >(self->begin()+index, self->begin()+index+count);
+        return new std::vector< std::shared_ptr< Efficio::Data::Data > >(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Insert(std::vector< std::shared_ptr< Efficio::Device > > *self,int index,std::shared_ptr< Efficio::Device > const &x){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__Insert(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index,std::shared_ptr< Efficio::Data::Data > const &x){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, x);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__InsertRange(std::vector< std::shared_ptr< Efficio::Device > > *self,int index,std::vector< std::shared_ptr< Efficio::Device > > const &values){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__InsertRange(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index,std::vector< std::shared_ptr< Efficio::Data::Data > > const &values){
         if (index>=0 && index<(int)self->size()+1)
           self->insert(self->begin()+index, values.begin(), values.end());
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__RemoveAt(std::vector< std::shared_ptr< Efficio::Device > > *self,int index){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__RemoveAt(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index){
         if (index>=0 && index<(int)self->size())
           self->erase(self->begin() + index);
         else
           throw std::out_of_range("index");
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__RemoveRange(std::vector< std::shared_ptr< Efficio::Device > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__RemoveRange(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -676,15 +597,15 @@ SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__RemoveRan
           throw std::invalid_argument("invalid range");
         self->erase(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN std::vector< std::shared_ptr< Efficio::Device > > *std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Repeat(std::shared_ptr< Efficio::Device > const &value,int count){
+SWIGINTERN std::vector< std::shared_ptr< Efficio::Data::Data > > *std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__Repeat(std::shared_ptr< Efficio::Data::Data > const &value,int count){
         if (count < 0)
           throw std::out_of_range("count");
-        return new std::vector< std::shared_ptr< Efficio::Device > >(count, value);
+        return new std::vector< std::shared_ptr< Efficio::Data::Data > >(count, value);
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Reverse__SWIG_0(std::vector< std::shared_ptr< Efficio::Device > > *self){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__Reverse__SWIG_0(std::vector< std::shared_ptr< Efficio::Data::Data > > *self){
         std::reverse(self->begin(), self->end());
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Reverse__SWIG_1(std::vector< std::shared_ptr< Efficio::Device > > *self,int index,int count){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__Reverse__SWIG_1(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index,int count){
         if (index < 0)
           throw std::out_of_range("index");
         if (count < 0)
@@ -693,19 +614,150 @@ SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Reverse__
           throw std::invalid_argument("invalid range");
         std::reverse(self->begin()+index, self->begin()+index+count);
       }
-SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__SetRange(std::vector< std::shared_ptr< Efficio::Device > > *self,int index,std::vector< std::shared_ptr< Efficio::Device > > const &values){
+SWIGINTERN void std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__SetRange(std::vector< std::shared_ptr< Efficio::Data::Data > > *self,int index,std::vector< std::shared_ptr< Efficio::Data::Data > > const &values){
         if (index < 0)
           throw std::out_of_range("index");
         if (index+values.size() > self->size())
           throw std::out_of_range("index");
         std::copy(values.begin(), values.end(), self->begin()+index);
       }
+SWIGINTERN std::vector< Efficio::Models::Body::Joint > *new_std_vector_Sl_Efficio_Models_Body_Joint_Sg___SWIG_2(int capacity){
+        std::vector< Efficio::Models::Body::Joint >* pv = 0;
+        if (capacity >= 0) {
+          pv = new std::vector< Efficio::Models::Body::Joint >();
+          pv->reserve(capacity);
+       } else {
+          throw std::out_of_range("capacity");
+       }
+       return pv;
+      }
+SWIGINTERN Efficio::Models::Body::Joint std_vector_Sl_Efficio_Models_Body_Joint_Sg__getitemcopy(std::vector< Efficio::Models::Body::Joint > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN Efficio::Models::Body::Joint const &std_vector_Sl_Efficio_Models_Body_Joint_Sg__getitem(std::vector< Efficio::Models::Body::Joint > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__setitem(std::vector< Efficio::Models::Body::Joint > *self,int index,Efficio::Models::Body::Joint const &val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__AddRange(std::vector< Efficio::Models::Body::Joint > *self,std::vector< Efficio::Models::Body::Joint > const &values){
+        self->insert(self->end(), values.begin(), values.end());
+      }
+SWIGINTERN std::vector< Efficio::Models::Body::Joint > *std_vector_Sl_Efficio_Models_Body_Joint_Sg__GetRange(std::vector< Efficio::Models::Body::Joint > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        return new std::vector< Efficio::Models::Body::Joint >(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__Insert(std::vector< Efficio::Models::Body::Joint > *self,int index,Efficio::Models::Body::Joint const &x){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, x);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__InsertRange(std::vector< Efficio::Models::Body::Joint > *self,int index,std::vector< Efficio::Models::Body::Joint > const &values){
+        if (index>=0 && index<(int)self->size()+1)
+          self->insert(self->begin()+index, values.begin(), values.end());
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__RemoveAt(std::vector< Efficio::Models::Body::Joint > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          self->erase(self->begin() + index);
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__RemoveRange(std::vector< Efficio::Models::Body::Joint > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        self->erase(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN std::vector< Efficio::Models::Body::Joint > *std_vector_Sl_Efficio_Models_Body_Joint_Sg__Repeat(Efficio::Models::Body::Joint const &value,int count){
+        if (count < 0)
+          throw std::out_of_range("count");
+        return new std::vector< Efficio::Models::Body::Joint >(count, value);
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__Reverse__SWIG_0(std::vector< Efficio::Models::Body::Joint > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__Reverse__SWIG_1(std::vector< Efficio::Models::Body::Joint > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
+SWIGINTERN void std_vector_Sl_Efficio_Models_Body_Joint_Sg__SetRange(std::vector< Efficio::Models::Body::Joint > *self,int index,std::vector< Efficio::Models::Body::Joint > const &values){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (index+values.size() > self->size())
+          throw std::out_of_range("index");
+        std::copy(values.begin(), values.end(), self->begin()+index);
+      }
+SWIGINTERN Efficio::Models::Body::Finger std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__getitemcopy(std::array< Efficio::Models::Body::Finger,5 > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN std::array< Efficio::Models::Body::Finger,5 >::const_reference std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__getitem(std::array< Efficio::Models::Body::Finger,5 > *self,int index){
+        if (index>=0 && index<(int)self->size())
+          return (*self)[index];
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__setitem(std::array< Efficio::Models::Body::Finger,5 > *self,int index,std::array< Efficio::Models::Body::Finger,5 >::const_reference val){
+        if (index>=0 && index<(int)self->size())
+          (*self)[index] = val;
+        else
+          throw std::out_of_range("index");
+      }
+SWIGINTERN void std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__Reverse__SWIG_0(std::array< Efficio::Models::Body::Finger,5 > *self){
+        std::reverse(self->begin(), self->end());
+      }
+SWIGINTERN void std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__Reverse__SWIG_1(std::array< Efficio::Models::Body::Finger,5 > *self,int index,int count){
+        if (index < 0)
+          throw std::out_of_range("index");
+        if (count < 0)
+          throw std::out_of_range("count");
+        if (index >= (int)self->size()+1 || index+count > (int)self->size())
+          throw std::invalid_argument("invalid range");
+        std::reverse(self->begin()+index, self->begin()+index+count);
+      }
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Vector3___(float jarg1, float jarg2, float jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Vector3__SWIG_0___() {
+  void * jresult ;
+  Efficio::Vector3 *result = 0 ;
+  
+  result = (Efficio::Vector3 *)new Efficio::Vector3();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Vector3__SWIG_1___(float jarg1, float jarg2, float jarg3) {
   void * jresult ;
   float arg1 ;
   float arg2 ;
@@ -732,7 +784,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Vector3___(void * jarg1) {
 SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Vector3_DistanceTo___(void * jarg1, void * jarg2) {
   float jresult ;
   Efficio::Vector3 *arg1 = (Efficio::Vector3 *) 0 ;
-  SwigValueWrapper< Efficio::Vector3 > arg2 ;
+  Efficio::Vector3 arg2 ;
   Efficio::Vector3 *argp2 ;
   float result;
   
@@ -787,11 +839,11 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Vector3_Z___(void * jarg1) {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Vector3_Midpoint___(void * jarg1, void * jarg2) {
   void * jresult ;
-  SwigValueWrapper< Efficio::Vector3 > arg1 ;
-  SwigValueWrapper< Efficio::Vector3 > arg2 ;
+  Efficio::Vector3 arg1 ;
+  Efficio::Vector3 arg2 ;
   Efficio::Vector3 *argp1 ;
   Efficio::Vector3 *argp2 ;
-  SwigValueWrapper< Efficio::Vector3 > result;
+  Efficio::Vector3 result;
   
   argp1 = (Efficio::Vector3 *)jarg1; 
   if (!argp1) {
@@ -811,12 +863,47 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Vector3_Midpoint___(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint__SWIG_0___(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Data___(void * jarg1) {
+  Efficio::Data::Data *arg1 = (Efficio::Data::Data *) 0 ;
+  std::shared_ptr< Efficio::Data::Data > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Data::Data > *)jarg1;
+  arg1 = (Efficio::Data::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Data_GetDataType___(void * jarg1) {
+  int jresult ;
+  Efficio::Data::Data *arg1 = (Efficio::Data::Data *) 0 ;
+  std::shared_ptr< Efficio::Data::Data > *smartarg1 = 0 ;
+  Efficio::Data::DataType result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Data::Data > *)jarg1;
+  arg1 = (Efficio::Data::Data *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Data::DataType)(arg1)->GetDataType();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint__SWIG_0___() {
   void * jresult ;
-  SwigValueWrapper< Efficio::Vector3 > arg1 ;
-  JointType arg2 ;
+  Efficio::Models::Body::Joint *result = 0 ;
+  
+  result = (Efficio::Models::Body::Joint *)new Efficio::Models::Body::Joint();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint__SWIG_1___(void * jarg1, int jarg2) {
+  void * jresult ;
+  Efficio::Vector3 arg1 ;
+  Efficio::Models::Body::JointType arg2 ;
   Efficio::Vector3 *argp1 ;
-  JointType *argp2 ;
   Efficio::Models::Body::Joint *result = 0 ;
   
   argp1 = (Efficio::Vector3 *)jarg1; 
@@ -825,25 +912,19 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint__SWIG_0___(void * jar
     return 0;
   }
   arg1 = *argp1; 
-  argp2 = (JointType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null JointType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
+  arg2 = (Efficio::Models::Body::JointType)jarg2; 
   result = (Efficio::Models::Body::Joint *)new Efficio::Models::Body::Joint(arg1,arg2);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint__SWIG_1___(void * jarg1, void * jarg2, float jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint__SWIG_2___(void * jarg1, int jarg2, float jarg3) {
   void * jresult ;
-  SwigValueWrapper< Efficio::Vector3 > arg1 ;
-  JointType arg2 ;
+  Efficio::Vector3 arg1 ;
+  Efficio::Models::Body::JointType arg2 ;
   float arg3 ;
   Efficio::Vector3 *argp1 ;
-  JointType *argp2 ;
   Efficio::Models::Body::Joint *result = 0 ;
   
   argp1 = (Efficio::Vector3 *)jarg1; 
@@ -852,12 +933,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint__SWIG_1___(void * jar
     return 0;
   }
   arg1 = *argp1; 
-  argp2 = (JointType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null JointType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
+  arg2 = (Efficio::Models::Body::JointType)jarg2; 
   arg3 = (float)jarg3; 
   result = (Efficio::Models::Body::Joint *)new Efficio::Models::Body::Joint(arg1,arg2,arg3);
   jresult = (void *)result; 
@@ -870,6 +946,28 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Joint___(void * jarg1) {
   
   arg1 = (Efficio::Models::Body::Joint *)jarg1; 
   delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Joint_Valid_set___(void * jarg1, unsigned int jarg2) {
+  Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (Efficio::Models::Body::Joint *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  if (arg1) (arg1)->Valid = arg2;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_Joint_Valid_get___(void * jarg1) {
+  unsigned int jresult ;
+  Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
+  bool result;
+  
+  arg1 = (Efficio::Models::Body::Joint *)jarg1; 
+  result = (bool) ((arg1)->Valid);
+  jresult = result; 
+  return jresult;
 }
 
 
@@ -895,15 +993,35 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Joint_Position_get___(void * ja
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Joint_Type_get___(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Joint_Type_set___(void * jarg1, int jarg2) {
   Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
-  JointType result;
+  Efficio::Models::Body::JointType arg2 ;
   
   arg1 = (Efficio::Models::Body::Joint *)jarg1; 
-  result = (JointType) ((arg1)->Type);
-  jresult = new JointType((const JointType &)result); 
+  arg2 = (Efficio::Models::Body::JointType)jarg2; 
+  if (arg1) (arg1)->Type = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Joint_Type_get___(void * jarg1) {
+  int jresult ;
+  Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
+  Efficio::Models::Body::JointType result;
+  
+  arg1 = (Efficio::Models::Body::Joint *)jarg1; 
+  result = (Efficio::Models::Body::JointType) ((arg1)->Type);
+  jresult = (int)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Joint_Confidence_set___(void * jarg1, float jarg2) {
+  Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
+  float arg2 ;
+  
+  arg1 = (Efficio::Models::Body::Joint *)jarg1; 
+  arg2 = (float)jarg2; 
+  if (arg1) (arg1)->Confidence = arg2;
 }
 
 
@@ -913,7 +1031,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Joint_Confidence_get___(void * j
   float result;
   
   arg1 = (Efficio::Models::Body::Joint *)jarg1; 
-  result = (float)(float) ((arg1)->Confidence);
+  result = (float) ((arg1)->Confidence);
   jresult = result; 
   return jresult;
 }
@@ -922,9 +1040,9 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Joint_Confidence_get___(void * j
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Joint_ProximalJoints___(void * jarg1, void * jarg2) {
   void * jresult ;
   Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg2 ;
+  Efficio::Models::Body::Joint arg2 ;
   Efficio::Models::Body::Joint *argp2 ;
-  SwigValueWrapper< std::vector< Efficio::Models::Body::Joint > > result;
+  std::vector< Efficio::Models::Body::Joint > result;
   
   arg1 = (Efficio::Models::Body::Joint *)jarg1; 
   argp2 = (Efficio::Models::Body::Joint *)jarg2; 
@@ -942,9 +1060,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Joint_ProximalJoints___(void * 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Joint_DistalJoints___(void * jarg1, void * jarg2) {
   void * jresult ;
   Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg2 ;
+  Efficio::Models::Body::Joint arg2 ;
   Efficio::Models::Body::Joint *argp2 ;
-  SwigValueWrapper< std::vector< Efficio::Models::Body::Joint > > result;
+  std::vector< Efficio::Models::Body::Joint > result;
   
   arg1 = (Efficio::Models::Body::Joint *)jarg1; 
   argp2 = (Efficio::Models::Body::Joint *)jarg2; 
@@ -962,7 +1080,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Joint_DistalJoints___(void * ja
 SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Joint_DistanceTo___(void * jarg1, void * jarg2) {
   float jresult ;
   Efficio::Models::Body::Joint *arg1 = (Efficio::Models::Body::Joint *) 0 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg2 ;
+  Efficio::Models::Body::Joint arg2 ;
   Efficio::Models::Body::Joint *argp2 ;
   float result;
   
@@ -979,28 +1097,32 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Joint_DistanceTo___(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Finger___(void * jarg1, unsigned int jarg2, float jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Finger__SWIG_0___() {
+  void * jresult ;
+  Efficio::Models::Body::Finger *result = 0 ;
+  
+  result = (Efficio::Models::Body::Finger *)new Efficio::Models::Body::Finger();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Finger__SWIG_1___(int jarg1, unsigned int jarg2, float jarg3, void * jarg4, void * jarg5, void * jarg6, void * jarg7) {
   void * jresult ;
   Efficio::Models::Body::FingerType arg1 ;
   bool arg2 ;
   float arg3 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg4 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg5 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg6 ;
-  SwigValueWrapper< Efficio::Models::Body::Joint > arg7 ;
-  Efficio::Models::Body::FingerType *argp1 ;
+  Efficio::Models::Body::Joint arg4 ;
+  Efficio::Models::Body::Joint arg5 ;
+  Efficio::Models::Body::Joint arg6 ;
+  Efficio::Models::Body::Joint arg7 ;
   Efficio::Models::Body::Joint *argp4 ;
   Efficio::Models::Body::Joint *argp5 ;
   Efficio::Models::Body::Joint *argp6 ;
   Efficio::Models::Body::Joint *argp7 ;
   Efficio::Models::Body::Finger *result = 0 ;
   
-  argp1 = (Efficio::Models::Body::FingerType *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Models::Body::FingerType", 0);
-    return 0;
-  }
-  arg1 = *argp1; 
+  arg1 = (Efficio::Models::Body::FingerType)jarg1; 
   arg2 = jarg2 ? true : false; 
   arg3 = (float)jarg3; 
   argp4 = (Efficio::Models::Body::Joint *)jarg4; 
@@ -1129,37 +1251,57 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Finger_PIP_get___(void * jarg1)
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Finger_Hand_set___(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Finger_Valid_set___(void * jarg1, unsigned int jarg2) {
   Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
-  Efficio::Models::Body::Hand *arg2 = (Efficio::Models::Body::Hand *) 0 ;
+  bool arg2 ;
   
   arg1 = (Efficio::Models::Body::Finger *)jarg1; 
-  arg2 = (Efficio::Models::Body::Hand *)jarg2; 
-  if (arg1) (arg1)->Hand = arg2;
+  arg2 = jarg2 ? true : false; 
+  if (arg1) (arg1)->Valid = arg2;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Finger_Hand_get___(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_Finger_Valid_get___(void * jarg1) {
+  unsigned int jresult ;
   Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
-  Efficio::Models::Body::Hand *result = 0 ;
+  bool result;
   
   arg1 = (Efficio::Models::Body::Finger *)jarg1; 
-  result = (Efficio::Models::Body::Hand *) ((arg1)->Hand);
-  jresult = (void *)result; 
+  result = (bool) ((arg1)->Valid);
+  jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Finger_FingerType_get___(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Finger_FingerType_set___(void * jarg1, int jarg2) {
   Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
-  FingerType result;
+  Efficio::Models::Body::FingerType arg2 ;
   
   arg1 = (Efficio::Models::Body::Finger *)jarg1; 
-  result = (FingerType) ((arg1)->FingerType);
-  jresult = new FingerType((const FingerType &)result); 
+  arg2 = (Efficio::Models::Body::FingerType)jarg2; 
+  if (arg1) (arg1)->FingerType = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Finger_FingerType_get___(void * jarg1) {
+  int jresult ;
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  Efficio::Models::Body::FingerType result;
+  
+  arg1 = (Efficio::Models::Body::Finger *)jarg1; 
+  result = (Efficio::Models::Body::FingerType) ((arg1)->FingerType);
+  jresult = (int)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Finger_IsExtended_set___(void * jarg1, unsigned int jarg2) {
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  bool arg2 ;
+  
+  arg1 = (Efficio::Models::Body::Finger *)jarg1; 
+  arg2 = jarg2 ? true : false; 
+  if (arg1) (arg1)->IsExtended = arg2;
 }
 
 
@@ -1169,9 +1311,19 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_Finger_IsExtended_get___(
   bool result;
   
   arg1 = (Efficio::Models::Body::Finger *)jarg1; 
-  result = (bool)(bool) ((arg1)->IsExtended);
+  result = (bool) ((arg1)->IsExtended);
   jresult = result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Finger_Length_set___(void * jarg1, float jarg2) {
+  Efficio::Models::Body::Finger *arg1 = (Efficio::Models::Body::Finger *) 0 ;
+  float arg2 ;
+  
+  arg1 = (Efficio::Models::Body::Finger *)jarg1; 
+  arg2 = (float)jarg2; 
+  if (arg1) (arg1)->Length = arg2;
 }
 
 
@@ -1181,27 +1333,21 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Finger_Length_get___(void * jarg
   float result;
   
   arg1 = (Efficio::Models::Body::Finger *)jarg1; 
-  result = (float)(float) ((arg1)->Length);
+  result = (float) ((arg1)->Length);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Hand__SWIG_0___(void * jarg1, void * jarg2, float jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Hand__SWIG_0___(int jarg1, void * jarg2, float jarg3) {
   void * jresult ;
-  BodySide arg1 ;
+  Efficio::Models::Body::BodySide arg1 ;
   std::array< Efficio::Models::Body::Finger,5 > arg2 ;
   float arg3 ;
-  BodySide *argp1 ;
   std::array< Efficio::Models::Body::Finger,5 > *argp2 ;
   Efficio::Models::Body::Hand *result = 0 ;
   
-  argp1 = (BodySide *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BodySide", 0);
-    return 0;
-  }
-  arg1 = *argp1; 
+  arg1 = (Efficio::Models::Body::BodySide)jarg1; 
   argp2 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg2; 
   if (!argp2) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::array< Efficio::Models::Body::Finger,5 >", 0);
@@ -1215,20 +1361,14 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Hand__SWIG_0___(void * jarg
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Hand__SWIG_1___(void * jarg1, void * jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Hand__SWIG_1___(int jarg1, void * jarg2) {
   void * jresult ;
-  BodySide arg1 ;
+  Efficio::Models::Body::BodySide arg1 ;
   std::array< Efficio::Models::Body::Finger,5 > arg2 ;
-  BodySide *argp1 ;
   std::array< Efficio::Models::Body::Finger,5 > *argp2 ;
   Efficio::Models::Body::Hand *result = 0 ;
   
-  argp1 = (BodySide *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null BodySide", 0);
-    return 0;
-  }
-  arg1 = *argp1; 
+  arg1 = (Efficio::Models::Body::BodySide)jarg1; 
   argp2 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg2; 
   if (!argp2) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::array< Efficio::Models::Body::Finger,5 >", 0);
@@ -1249,15 +1389,35 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Hand___(void * jarg1) {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Hand_Side_get___(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Hand_Side_set___(void * jarg1, int jarg2) {
   Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
-  BodySide result;
+  Efficio::Models::Body::BodySide arg2 ;
   
   arg1 = (Efficio::Models::Body::Hand *)jarg1; 
-  result = (BodySide) ((arg1)->Side);
-  jresult = new BodySide((const BodySide &)result); 
+  arg2 = (Efficio::Models::Body::BodySide)jarg2; 
+  if (arg1) (arg1)->Side = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Hand_Side_get___(void * jarg1) {
+  int jresult ;
+  Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
+  Efficio::Models::Body::BodySide result;
+  
+  arg1 = (Efficio::Models::Body::Hand *)jarg1; 
+  result = (Efficio::Models::Body::BodySide) ((arg1)->Side);
+  jresult = (int)result; 
   return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Hand_Confidence_set___(void * jarg1, float jarg2) {
+  Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
+  float arg2 ;
+  
+  arg1 = (Efficio::Models::Body::Hand *)jarg1; 
+  arg2 = (float)jarg2; 
+  if (arg1) (arg1)->Confidence = arg2;
 }
 
 
@@ -1267,7 +1427,7 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Hand_Confidence_get___(void * ja
   float result;
   
   arg1 = (Efficio::Models::Body::Hand *)jarg1; 
-  result = (float)(float) ((arg1)->Confidence);
+  result = (float) ((arg1)->Confidence);
   jresult = result; 
   return jresult;
 }
@@ -1275,28 +1435,22 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Hand_Confidence_get___(void * ja
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Hand_Fingers_set___(void * jarg1, void * jarg2) {
   Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
-  std::array< Efficio::Models::Body::Finger,5 > arg2 ;
-  std::array< Efficio::Models::Body::Finger,5 > *argp2 ;
+  std::array< Efficio::Models::Body::Finger,5 > *arg2 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
   
   arg1 = (Efficio::Models::Body::Hand *)jarg1; 
-  argp2 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::array< Efficio::Models::Body::Finger,5 >", 0);
-    return ;
-  }
-  arg2 = *argp2; 
-  if (arg1) (arg1)->Fingers = arg2;
+  arg2 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg2; 
+  if (arg1) (arg1)->Fingers = *arg2;
 }
 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Hand_Fingers_get___(void * jarg1) {
   void * jresult ;
   Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
-  std::array< Efficio::Models::Body::Finger,5 > result;
+  std::array< Efficio::Models::Body::Finger,5 > *result = 0 ;
   
   arg1 = (Efficio::Models::Body::Hand *)jarg1; 
-  result =  ((arg1)->Fingers);
-  jresult = new std::array< Efficio::Models::Body::Finger,5 >((const std::array< Efficio::Models::Body::Finger,5 > &)result); 
+  result = (std::array< Efficio::Models::Body::Finger,5 > *)& ((arg1)->Fingers);
+  jresult = (void *)result; 
   return jresult;
 }
 
@@ -1312,6 +1466,25 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Event___(void * jarg1) {
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Event_Time_set___(void * jarg1, void * jarg2) {
+  Efficio::Events::Event *arg1 = (Efficio::Events::Event *) 0 ;
+  time_t arg2 ;
+  std::shared_ptr< Efficio::Events::Event > *smartarg1 = 0 ;
+  time_t *argp2 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Events::Event > *)jarg1;
+  arg1 = (Efficio::Events::Event *)(smartarg1 ? smartarg1->get() : 0); 
+  argp2 = (time_t *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null time_t", 0);
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->Time = arg2;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Event_Time_get___(void * jarg1) {
   void * jresult ;
   Efficio::Events::Event *arg1 = (Efficio::Events::Event *) 0 ;
@@ -1321,7 +1494,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Event_Time_get___(void * jarg1)
   
   smartarg1 = (std::shared_ptr<  Efficio::Events::Event > *)jarg1;
   arg1 = (Efficio::Events::Event *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (time_t) ((arg1)->Time);
+  result =  ((arg1)->Time);
   jresult = new time_t((const time_t &)result); 
   return jresult;
 }
@@ -1383,35 +1556,12 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Frame_GetData___(void * jarg1) 
   void * jresult ;
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
-  std::map< Efficio::Data::DataType,std::vector< std::shared_ptr< Efficio::Data::Data > > > result;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > result;
   
   
   smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
   result = (arg1)->GetData();
-  jresult = new std::map< Efficio::Data::DataType,std::vector< std::shared_ptr< Efficio::Data::Data > > >((const std::map< Efficio::Data::DataType,std::vector< std::shared_ptr< Efficio::Data::Data > > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Frame_GetDataOfType___(void * jarg1, void * jarg2) {
-  void * jresult ;
-  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
-  Efficio::Data::DataType arg2 ;
-  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
-  Efficio::Data::DataType *argp2 ;
-  SwigValueWrapper< std::vector< std::shared_ptr< Efficio::Data::Data > > > result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
-  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
-  argp2 = (Efficio::Data::DataType *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Data::DataType", 0);
-    return 0;
-  }
-  arg2 = *argp2; 
-  result = (arg1)->GetDataOfType(arg2);
   jresult = new std::vector< std::shared_ptr< Efficio::Data::Data > >((const std::vector< std::shared_ptr< Efficio::Data::Data > > &)result); 
   return jresult;
 }
@@ -1419,7 +1569,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Frame_GetDataOfType___(void * j
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_AddData___(void * jarg1, void * jarg2) {
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
-  SwigValueWrapper< std::vector< std::shared_ptr< Efficio::Data::Data > > > arg2 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > arg2 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
   std::vector< std::shared_ptr< Efficio::Data::Data > > *argp2 ;
   
@@ -1484,6 +1634,19 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_AddEvent___(void * jarg1, v
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_ID_set___(void * jarg1, int jarg2) {
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  int arg2 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (int)jarg2; 
+  if (arg1) (arg1)->ID = arg2;
+}
+
+
 SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Frame_ID_get___(void * jarg1) {
   int jresult ;
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
@@ -1493,107 +1656,9 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Frame_ID_get___(void * jarg1) {
   
   smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (int)(int) ((arg1)->ID);
+  result = (int) ((arg1)->ID);
   jresult = result; 
   return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DeviceManager___() {
-  void * jresult ;
-  Efficio::DeviceManager *result = 0 ;
-  
-  result = (Efficio::DeviceManager *)new Efficio::DeviceManager();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_DeviceManager___(void * jarg1) {
-  Efficio::DeviceManager *arg1 = (Efficio::DeviceManager *) 0 ;
-  
-  arg1 = (Efficio::DeviceManager *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceManager_AddDevice___(void * jarg1, void * jarg2) {
-  Efficio::DeviceManager *arg1 = (Efficio::DeviceManager *) 0 ;
-  std::shared_ptr< Efficio::Device > arg2 ;
-  
-  arg1 = (Efficio::DeviceManager *)jarg1; 
-  if (jarg2) arg2 = *(std::shared_ptr< Efficio::Device > *)jarg2; 
-  (arg1)->AddDevice(arg2);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceManager_GetDevices___(void * jarg1) {
-  void * jresult ;
-  Efficio::DeviceManager *arg1 = (Efficio::DeviceManager *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Device > > result;
-  
-  arg1 = (Efficio::DeviceManager *)jarg1; 
-  result = (arg1)->GetDevices();
-  jresult = new std::vector< std::shared_ptr< Efficio::Device > >((const std::vector< std::shared_ptr< Efficio::Device > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceManager_GetConnectedDevices___(void * jarg1) {
-  void * jresult ;
-  Efficio::DeviceManager *arg1 = (Efficio::DeviceManager *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Device > > result;
-  
-  arg1 = (Efficio::DeviceManager *)jarg1; 
-  result = (arg1)->GetConnectedDevices();
-  jresult = new std::vector< std::shared_ptr< Efficio::Device > >((const std::vector< std::shared_ptr< Efficio::Device > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceManager_GetDevicesWithStatus___(void * jarg1, int jarg2) {
-  void * jresult ;
-  Efficio::DeviceManager *arg1 = (Efficio::DeviceManager *) 0 ;
-  Efficio::DeviceStatus arg2 ;
-  std::vector< std::shared_ptr< Efficio::Device > > result;
-  
-  arg1 = (Efficio::DeviceManager *)jarg1; 
-  arg2 = (Efficio::DeviceStatus)jarg2; 
-  result = (arg1)->GetDevicesWithStatus(arg2);
-  jresult = new std::vector< std::shared_ptr< Efficio::Device > >((const std::vector< std::shared_ptr< Efficio::Device > > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceManager_GetDeviceByID___(void * jarg1, char * jarg2) {
-  void * jresult ;
-  Efficio::DeviceManager *arg1 = (Efficio::DeviceManager *) 0 ;
-  std::string arg2 ;
-  std::shared_ptr< Efficio::Device > result;
-  
-  arg1 = (Efficio::DeviceManager *)jarg1; 
-  if (!jarg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return 0;
-  }
-  (&arg2)->assign(jarg2); 
-  result = (arg1)->GetDeviceByID(arg2);
-  jresult = result ? new std::shared_ptr< Efficio::Device >(result) : 0; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceManager_RemoveDevice___(void * jarg1, char * jarg2) {
-  Efficio::DeviceManager *arg1 = (Efficio::DeviceManager *) 0 ;
-  std::string arg2 ;
-  
-  arg1 = (Efficio::DeviceManager *)jarg1; 
-  if (!jarg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return ;
-  }
-  (&arg2)->assign(jarg2); 
-  (arg1)->RemoveDevice(arg2);
 }
 
 
@@ -1649,108 +1714,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Engine_GetFrame__SWIG_1___(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Engine_DeviceConfiguration_set___(void * jarg1, void * jarg2) {
-  Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
-  Efficio::Configuration::DeviceConfiguration *arg2 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
-  
-  arg1 = (Efficio::Engine *)jarg1; 
-  arg2 = (Efficio::Configuration::DeviceConfiguration *)jarg2; 
-  if (arg1) (arg1)->DeviceConfiguration = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Engine_DeviceConfiguration_get___(void * jarg1) {
-  void * jresult ;
-  Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
-  Efficio::Configuration::DeviceConfiguration *result = 0 ;
-  
-  arg1 = (Efficio::Engine *)jarg1; 
-  result = (Efficio::Configuration::DeviceConfiguration *)& ((arg1)->DeviceConfiguration);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_LeapConfiguration___() {
-  void * jresult ;
-  Efficio::Configuration::LeapConfiguration *result = 0 ;
-  
-  result = (Efficio::Configuration::LeapConfiguration *)new Efficio::Configuration::LeapConfiguration();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_LeapConfiguration___(void * jarg1) {
-  Efficio::Configuration::LeapConfiguration *arg1 = (Efficio::Configuration::LeapConfiguration *) 0 ;
-  
-  arg1 = (Efficio::Configuration::LeapConfiguration *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_LeapConfiguration_Enabled_set___(void * jarg1, unsigned int jarg2) {
-  Efficio::Configuration::LeapConfiguration *arg1 = (Efficio::Configuration::LeapConfiguration *) 0 ;
-  bool arg2 ;
-  
-  arg1 = (Efficio::Configuration::LeapConfiguration *)jarg1; 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->Enabled = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_LeapConfiguration_Enabled_get___(void * jarg1) {
-  unsigned int jresult ;
-  Efficio::Configuration::LeapConfiguration *arg1 = (Efficio::Configuration::LeapConfiguration *) 0 ;
-  bool result;
-  
-  arg1 = (Efficio::Configuration::LeapConfiguration *)jarg1; 
-  result = (bool) ((arg1)->Enabled);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DeviceConfiguration___() {
-  void * jresult ;
-  Efficio::Configuration::DeviceConfiguration *result = 0 ;
-  
-  result = (Efficio::Configuration::DeviceConfiguration *)new Efficio::Configuration::DeviceConfiguration();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_DeviceConfiguration___(void * jarg1) {
-  Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
-  
-  arg1 = (Efficio::Configuration::DeviceConfiguration *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceConfiguration_LeapConfiguration_set___(void * jarg1, void * jarg2) {
-  Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
-  Efficio::Configuration::LeapConfiguration *arg2 = (Efficio::Configuration::LeapConfiguration *) 0 ;
-  
-  arg1 = (Efficio::Configuration::DeviceConfiguration *)jarg1; 
-  arg2 = (Efficio::Configuration::LeapConfiguration *)jarg2; 
-  if (arg1) (arg1)->LeapConfiguration = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceConfiguration_LeapConfiguration_get___(void * jarg1) {
-  void * jresult ;
-  Efficio::Configuration::DeviceConfiguration *arg1 = (Efficio::Configuration::DeviceConfiguration *) 0 ;
-  Efficio::Configuration::LeapConfiguration *result = 0 ;
-  
-  arg1 = (Efficio::Configuration::DeviceConfiguration *)jarg1; 
-  result = (Efficio::Configuration::LeapConfiguration *)& ((arg1)->LeapConfiguration);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Gesture___(void * jarg1) {
   Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
   std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
@@ -1766,12 +1729,12 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Gesture_GetType___(void * jarg1) {
   int jresult ;
   Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
   std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
-  Efficio::GestureType result;
+  Efficio::InputRecognition::GestureType result;
   
   
   smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Gesture > *)jarg1;
   arg1 = (Efficio::InputRecognition::Gesture *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::GestureType)(arg1)->GetType();
+  result = (Efficio::InputRecognition::GestureType)(arg1)->GetType();
   jresult = (int)result; 
   return jresult;
 }
@@ -1781,12 +1744,12 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Gesture_GetGestureState___(void * 
   int jresult ;
   Efficio::InputRecognition::Gesture *arg1 = (Efficio::InputRecognition::Gesture *) 0 ;
   std::shared_ptr< Efficio::InputRecognition::Gesture > *smartarg1 = 0 ;
-  Efficio::GestureState result;
+  Efficio::InputRecognition::GestureState result;
   
   
   smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Gesture > *)jarg1;
   arg1 = (Efficio::InputRecognition::Gesture *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::GestureState)(arg1)->GetGestureState();
+  result = (Efficio::InputRecognition::GestureState)(arg1)->GetGestureState();
   jresult = (int)result; 
   return jresult;
 }
@@ -1852,12 +1815,12 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_DiscreteGesture_GetType___(void * 
   int jresult ;
   Efficio::InputRecognition::DiscreteGesture *arg1 = (Efficio::InputRecognition::DiscreteGesture *) 0 ;
   std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > *smartarg1 = 0 ;
-  Efficio::GestureType result;
+  Efficio::InputRecognition::GestureType result;
   
   
   smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::DiscreteGesture > *)jarg1;
   arg1 = (Efficio::InputRecognition::DiscreteGesture *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::GestureType)(arg1)->GetType();
+  result = (Efficio::InputRecognition::GestureType)(arg1)->GetType();
   jresult = (int)result; 
   return jresult;
 }
@@ -1867,33 +1830,27 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_DiscreteGesture_GetGestureState___
   int jresult ;
   Efficio::InputRecognition::DiscreteGesture *arg1 = (Efficio::InputRecognition::DiscreteGesture *) 0 ;
   std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > *smartarg1 = 0 ;
-  Efficio::GestureState result;
+  Efficio::InputRecognition::GestureState result;
   
   
   smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::DiscreteGesture > *)jarg1;
   arg1 = (Efficio::InputRecognition::DiscreteGesture *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::GestureState)(arg1)->GetGestureState();
+  result = (Efficio::InputRecognition::GestureState)(arg1)->GetGestureState();
   jresult = (int)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Pinch___(void * jarg1, void * jarg2, void * jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Pinch___(int jarg1, void * jarg2, void * jarg3) {
   void * jresult ;
   Efficio::Models::Body::BodySide arg1 ;
-  SwigValueWrapper< Efficio::Models::Body::Finger > arg2 ;
-  SwigValueWrapper< Efficio::Models::Body::Finger > arg3 ;
-  Efficio::Models::Body::BodySide *argp1 ;
+  Efficio::Models::Body::Finger arg2 ;
+  Efficio::Models::Body::Finger arg3 ;
   Efficio::Models::Body::Finger *argp2 ;
   Efficio::Models::Body::Finger *argp3 ;
   Efficio::InputRecognition::Body::Hands::Pinch *result = 0 ;
   
-  argp1 = (Efficio::Models::Body::BodySide *)jarg1; 
-  if (!argp1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Models::Body::BodySide", 0);
-    return 0;
-  }
-  arg1 = *argp1; 
+  arg1 = (Efficio::Models::Body::BodySide)jarg1; 
   argp2 = (Efficio::Models::Body::Finger *)jarg2; 
   if (!argp2) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Models::Body::Finger", 0);
@@ -1907,15 +1864,20 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Pinch___(void * jarg1, void
   }
   arg3 = *argp3; 
   result = (Efficio::InputRecognition::Body::Hands::Pinch *)new Efficio::InputRecognition::Body::Hands::Pinch(arg1,arg2,arg3);
-  jresult = (void *)result; 
+  
+  jresult = result ? new std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Pinch___(void * jarg1) {
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
   (void)arg1; delete smartarg1;
 }
 
@@ -1923,8 +1885,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Pinch___(void * jarg1) {
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_set___(void * jarg1, void * jarg2) {
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Vector3 *arg2 = (Efficio::Vector3 *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (Efficio::Vector3 *)jarg2; 
   if (arg1) (arg1)->Position = *arg2;
 }
@@ -1933,9 +1898,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_set___(void * jarg
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_get___(void * jarg1) {
   void * jresult ;
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   Efficio::Vector3 *result = 0 ;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
   result = (Efficio::Vector3 *)& ((arg1)->Position);
   jresult = (void *)result; 
   return jresult;
@@ -1945,8 +1913,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_get___(void * ja
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_set___(void * jarg1, void * jarg2) {
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::Finger *arg2 = (Efficio::Models::Body::Finger *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (Efficio::Models::Body::Finger *)jarg2; 
   if (arg1) (arg1)->Finger1 = *arg2;
 }
@@ -1955,9 +1926,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_set___(void * jarg1
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_get___(void * jarg1) {
   void * jresult ;
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   Efficio::Models::Body::Finger *result = 0 ;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
   result = (Efficio::Models::Body::Finger *)& ((arg1)->Finger1);
   jresult = (void *)result; 
   return jresult;
@@ -1967,8 +1941,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_get___(void * jar
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_set___(void * jarg1, void * jarg2) {
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::Finger *arg2 = (Efficio::Models::Body::Finger *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (Efficio::Models::Body::Finger *)jarg2; 
   if (arg1) (arg1)->Finger2 = *arg2;
 }
@@ -1977,9 +1954,12 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_set___(void * jarg1
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_get___(void * jarg1) {
   void * jresult ;
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   Efficio::Models::Body::Finger *result = 0 ;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
   result = (Efficio::Models::Body::Finger *)& ((arg1)->Finger2);
   jresult = (void *)result; 
   return jresult;
@@ -1989,645 +1969,43 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_get___(void * jar
 SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Pinch_GetEventType___(void * jarg1) {
   int jresult ;
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   Efficio::Events::EventType result;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
   result = (Efficio::Events::EventType)(arg1)->GetEventType();
   jresult = (int)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_set___(void * jarg1, void * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_set___(void * jarg1, int jarg2) {
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::BodySide arg2 ;
-  Efficio::Models::Body::BodySide *argp2 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
-  argp2 = (Efficio::Models::Body::BodySide *)jarg2; 
-  if (!argp2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Models::Body::BodySide", 0);
-    return ;
-  }
-  arg2 = *argp2; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (Efficio::Models::Body::BodySide)jarg2; 
   if (arg1) (arg1)->Side = arg2;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_get___(void * jarg1) {
-  void * jresult ;
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_get___(void * jarg1) {
+  int jresult ;
   Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
+  std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *smartarg1 = 0 ;
   Efficio::Models::Body::BodySide result;
   
-  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
-  result =  ((arg1)->Side);
-  jresult = new Efficio::Models::Body::BodySide((const Efficio::Models::Body::BodySide &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Device___(void * jarg1) {
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  (void)arg1; delete smartarg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Device_ID_set___(void * jarg1, char * jarg2) {
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::string *arg2 = 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  if (!jarg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null string", 0);
-    return ;
-  }
-  std::string arg2_str(jarg2);
-  arg2 = &arg2_str; 
-  if (arg1) (arg1)->ID = *arg2;
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_EfficiofNet_Device_ID_get___(void * jarg1) {
-  char * jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  std::string *result = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (std::string *) & ((arg1)->ID);
-  jresult = SWIG_csharp_string_callback(result->c_str()); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Device_Position_set___(void * jarg1, void * jarg2) {
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  Efficio::Vector3 *arg2 = (Efficio::Vector3 *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (Efficio::Vector3 *)jarg2; 
-  if (arg1) (arg1)->Position = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Device_Position_get___(void * jarg1) {
-  void * jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  Efficio::Vector3 *result = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::Vector3 *)& ((arg1)->Position);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Device_Direction_set___(void * jarg1, void * jarg2) {
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  Efficio::Vector3 *arg2 = (Efficio::Vector3 *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = (Efficio::Vector3 *)jarg2; 
-  if (arg1) (arg1)->Direction = *arg2;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Device_Direction_get___(void * jarg1) {
-  void * jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  Efficio::Vector3 *result = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::Vector3 *)& ((arg1)->Direction);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Device_Enabled_set___(void * jarg1, unsigned int jarg2) {
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  bool arg2 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  arg2 = jarg2 ? true : false; 
-  if (arg1) (arg1)->Enabled = arg2;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_Device_Enabled_get___(void * jarg1) {
-  unsigned int jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  bool result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (bool) ((arg1)->Enabled);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_Device_Connected___(void * jarg1) {
-  unsigned int jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  bool result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (bool)(arg1)->Connected();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Device_Status___(void * jarg1) {
-  int jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  Efficio::DeviceStatus result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::DeviceStatus)(arg1)->Status();
+  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Body::Hands::Pinch > *)jarg1;
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Models::Body::BodySide) ((arg1)->Side);
   jresult = (int)result; 
   return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Device_TrackingTypes___(void * jarg1) {
-  int jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  Efficio::TrackingType result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (Efficio::TrackingType)(arg1)->TrackingTypes();
-  jresult = (int)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Device_Connect___(void * jarg1) {
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  (arg1)->Connect();
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Device_Disconnect___(void * jarg1) {
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  (arg1)->Disconnect();
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_Device_HasFrame___(void * jarg1) {
-  unsigned int jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  bool result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (bool)(arg1)->HasFrame();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Device_GetFrame___(void * jarg1) {
-  void * jresult ;
-  Efficio::Device *arg1 = (Efficio::Device *) 0 ;
-  std::shared_ptr< Efficio::Device > *smartarg1 = 0 ;
-  Efficio::Frame result;
-  
-  
-  smartarg1 = (std::shared_ptr<  Efficio::Device > *)jarg1;
-  arg1 = (Efficio::Device *)(smartarg1 ? smartarg1->get() : 0); 
-  result = (arg1)->GetFrame();
-  jresult = new std::shared_ptr<  Efficio::Frame >(new Efficio::Frame((Efficio::Frame &)result)); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_Clear___(void * jarg1) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  (arg1)->clear();
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_Add___(void * jarg1, void * jarg2) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  std::shared_ptr< Efficio::Models::Human::Hand > *arg2 = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (std::shared_ptr< Efficio::Models::Human::Hand > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::shared_ptr< Efficio::Models::Human::Hand > const & type is null", 0);
-    return ;
-  } 
-  (arg1)->push_back((std::shared_ptr< Efficio::Models::Human::Hand > const &)*arg2);
-}
-
-
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_HandCollection_size___(void * jarg1) {
-  unsigned long jresult ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >::size_type result;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  result = ((std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const *)arg1)->size();
-  jresult = (unsigned long)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_HandCollection_capacity___(void * jarg1) {
-  unsigned long jresult ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >::size_type result;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  result = ((std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const *)arg1)->capacity();
-  jresult = (unsigned long)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_reserve___(void * jarg1, unsigned long jarg2) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >::size_type arg2 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >::size_type)jarg2; 
-  (arg1)->reserve(arg2);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_HandCollection__SWIG_0___() {
-  void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *result = 0 ;
-  
-  result = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)new std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_HandCollection__SWIG_1___(void * jarg1) {
-  void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = 0 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *result = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const & type is null", 0);
-    return 0;
-  } 
-  result = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)new std::vector< std::shared_ptr< Efficio::Models::Human::Hand > >((std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const &)*arg1);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_HandCollection__SWIG_2___(int jarg1) {
-  void * jresult ;
-  int arg1 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *result = 0 ;
-  
-  arg1 = (int)jarg1; 
-  try {
-    result = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)new_std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg___SWIG_2(arg1);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_HandCollection_getitemcopy___(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  SwigValueWrapper< std::shared_ptr< Efficio::Models::Human::Hand > > result;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    result = std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__getitemcopy(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = new std::shared_ptr< Efficio::Models::Human::Hand >((const std::shared_ptr< Efficio::Models::Human::Hand > &)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_HandCollection_getitem___(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  std::shared_ptr< Efficio::Models::Human::Hand > *result = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    result = (std::shared_ptr< Efficio::Models::Human::Hand > *) &std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__getitem(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_setitem___(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  std::shared_ptr< Efficio::Models::Human::Hand > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::shared_ptr< Efficio::Models::Human::Hand > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::shared_ptr< Efficio::Models::Human::Hand > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__setitem(arg1,arg2,(std::shared_ptr< Efficio::Models::Human::Hand > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_AddRange___(void * jarg1, void * jarg2) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg2 = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg2;
-  if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const & type is null", 0);
-    return ;
-  } 
-  std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__AddRange(arg1,(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const &)*arg2);
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_HandCollection_GetRange___(void * jarg1, int jarg2, int jarg3) {
-  void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *result = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    result = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__GetRange(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_Insert___(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  std::shared_ptr< Efficio::Models::Human::Hand > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::shared_ptr< Efficio::Models::Human::Hand > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::shared_ptr< Efficio::Models::Human::Hand > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__Insert(arg1,arg2,(std::shared_ptr< Efficio::Models::Human::Hand > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_InsertRange___(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_RemoveAt___(void * jarg1, int jarg2) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__RemoveAt(arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_RemoveRange___(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__RemoveRange(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_HandCollection_Repeat___(void * jarg1, int jarg2) {
-  void * jresult ;
-  std::shared_ptr< Efficio::Models::Human::Hand > *arg1 = 0 ;
-  int arg2 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *result = 0 ;
-  
-  arg1 = (std::shared_ptr< Efficio::Models::Human::Hand > *)jarg1;
-  if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::shared_ptr< Efficio::Models::Human::Hand > const & type is null", 0);
-    return 0;
-  } 
-  arg2 = (int)jarg2; 
-  try {
-    result = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__Repeat((std::shared_ptr< Efficio::Models::Human::Hand > const &)*arg1,arg2);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return 0;
-  }
-  
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_Reverse__SWIG_0___(void * jarg1) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__Reverse__SWIG_0(arg1);
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (int)jarg3; 
-  try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  catch(std::invalid_argument &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_HandCollection_SetRange___(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  int arg2 ;
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg3 = 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg3;
-  if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const & type is null", 0);
-    return ;
-  } 
-  try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Models_Human_Hand_Sg__Sg__SetRange(arg1,arg2,(std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > const &)*arg3);
-  }
-  catch(std::out_of_range &_e) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
-    return ;
-  }
-  
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_HandCollection___(void * jarg1) {
-  std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *) 0 ;
-  
-  arg1 = (std::vector< std::shared_ptr< Efficio::Models::Human::Hand > > *)jarg1; 
-  delete arg1;
 }
 
 
@@ -3367,93 +2745,93 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_GestureCollection___(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Clear___(void * jarg1) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_Clear___(void * jarg1) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   (arg1)->clear();
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Add___(void * jarg1, void * jarg2) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
-  std::shared_ptr< Efficio::Device > *arg2 = 0 ;
-  std::shared_ptr< Efficio::Device > tempnull2 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_Add___(void * jarg1, void * jarg2) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
+  std::shared_ptr< Efficio::Data::Data > *arg2 = 0 ;
+  std::shared_ptr< Efficio::Data::Data > tempnull2 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
-  arg2 = jarg2 ? (std::shared_ptr< Efficio::Device > *)jarg2 : &tempnull2; 
-  (arg1)->push_back((std::shared_ptr< Efficio::Device > const &)*arg2);
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
+  arg2 = jarg2 ? (std::shared_ptr< Efficio::Data::Data > *)jarg2 : &tempnull2; 
+  (arg1)->push_back((std::shared_ptr< Efficio::Data::Data > const &)*arg2);
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_size___(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_DataCollection_size___(void * jarg1) {
   unsigned long jresult ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Device > >::size_type result;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > >::size_type result;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
-  result = ((std::vector< std::shared_ptr< Efficio::Device > > const *)arg1)->size();
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
+  result = ((std::vector< std::shared_ptr< Efficio::Data::Data > > const *)arg1)->size();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_capacity___(void * jarg1) {
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_DataCollection_capacity___(void * jarg1) {
   unsigned long jresult ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Device > >::size_type result;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > >::size_type result;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
-  result = ((std::vector< std::shared_ptr< Efficio::Device > > const *)arg1)->capacity();
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
+  result = ((std::vector< std::shared_ptr< Efficio::Data::Data > > const *)arg1)->capacity();
   jresult = (unsigned long)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_reserve___(void * jarg1, unsigned long jarg2) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Device > >::size_type arg2 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_reserve___(void * jarg1, unsigned long jarg2) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > >::size_type arg2 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
-  arg2 = (std::vector< std::shared_ptr< Efficio::Device > >::size_type)jarg2; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
+  arg2 = (std::vector< std::shared_ptr< Efficio::Data::Data > >::size_type)jarg2; 
   (arg1)->reserve(arg2);
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DeviceCollection__SWIG_0___() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DataCollection__SWIG_0___() {
   void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Device > > *result = 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *result = 0 ;
   
-  result = (std::vector< std::shared_ptr< Efficio::Device > > *)new std::vector< std::shared_ptr< Efficio::Device > >();
+  result = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)new std::vector< std::shared_ptr< Efficio::Data::Data > >();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DeviceCollection__SWIG_1___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DataCollection__SWIG_1___(void * jarg1) {
   void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = 0 ;
-  std::vector< std::shared_ptr< Efficio::Device > > *result = 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *result = 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1;
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1;
   if (!arg1) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Device > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Data::Data > > const & type is null", 0);
     return 0;
   } 
-  result = (std::vector< std::shared_ptr< Efficio::Device > > *)new std::vector< std::shared_ptr< Efficio::Device > >((std::vector< std::shared_ptr< Efficio::Device > > const &)*arg1);
+  result = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)new std::vector< std::shared_ptr< Efficio::Data::Data > >((std::vector< std::shared_ptr< Efficio::Data::Data > > const &)*arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DeviceCollection__SWIG_2___(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DataCollection__SWIG_2___(int jarg1) {
   void * jresult ;
   int arg1 ;
-  std::vector< std::shared_ptr< Efficio::Device > > *result = 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *result = 0 ;
   
   arg1 = (int)jarg1; 
   try {
-    result = (std::vector< std::shared_ptr< Efficio::Device > > *)new_std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg___SWIG_2(arg1);
+    result = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)new_std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg___SWIG_2(arg1);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3465,59 +2843,59 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_DeviceCollection__SWIG_2___
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_getitemcopy___(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DataCollection_getitemcopy___(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
-  std::shared_ptr< Efficio::Device > result;
+  std::shared_ptr< Efficio::Data::Data > result;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__getitemcopy(arg1,arg2);
+    result = std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__getitemcopy(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
   
-  jresult = result ? new std::shared_ptr< Efficio::Device >(result) : 0; 
+  jresult = result ? new std::shared_ptr< Efficio::Data::Data >(result) : 0; 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_getitem___(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DataCollection_getitem___(void * jarg1, int jarg2) {
   void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
-  std::shared_ptr< Efficio::Device > *result = 0 ;
+  std::shared_ptr< Efficio::Data::Data > *result = 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    result = (std::shared_ptr< Efficio::Device > *) &std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__getitem(arg1,arg2);
+    result = (std::shared_ptr< Efficio::Data::Data > *) &std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__getitem(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
     return 0;
   }
   
-  jresult = *result ? new std::shared_ptr< Efficio::Device >(*result) : 0; 
+  jresult = *result ? new std::shared_ptr< Efficio::Data::Data >(*result) : 0; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_setitem___(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_setitem___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
-  std::shared_ptr< Efficio::Device > *arg3 = 0 ;
-  std::shared_ptr< Efficio::Device > tempnull3 ;
+  std::shared_ptr< Efficio::Data::Data > *arg3 = 0 ;
+  std::shared_ptr< Efficio::Data::Data > tempnull3 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = jarg3 ? (std::shared_ptr< Efficio::Device > *)jarg3 : &tempnull3; 
+  arg3 = jarg3 ? (std::shared_ptr< Efficio::Data::Data > *)jarg3 : &tempnull3; 
   try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__setitem(arg1,arg2,(std::shared_ptr< Efficio::Device > const &)*arg3);
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__setitem(arg1,arg2,(std::shared_ptr< Efficio::Data::Data > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3527,32 +2905,32 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_setitem___(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_AddRange___(void * jarg1, void * jarg2) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg2 = 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_AddRange___(void * jarg1, void * jarg2) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg2 = 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
-  arg2 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg2;
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
+  arg2 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg2;
   if (!arg2) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Device > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Data::Data > > const & type is null", 0);
     return ;
   } 
-  std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__AddRange(arg1,(std::vector< std::shared_ptr< Efficio::Device > > const &)*arg2);
+  std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__AddRange(arg1,(std::vector< std::shared_ptr< Efficio::Data::Data > > const &)*arg2);
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_GetRange___(void * jarg1, int jarg2, int jarg3) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DataCollection_GetRange___(void * jarg1, int jarg2, int jarg3) {
   void * jresult ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
   int arg3 ;
-  std::vector< std::shared_ptr< Efficio::Device > > *result = 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *result = 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    result = (std::vector< std::shared_ptr< Efficio::Device > > *)std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__GetRange(arg1,arg2,arg3);
+    result = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__GetRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3568,17 +2946,17 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_GetRange___(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Insert___(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_Insert___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
-  std::shared_ptr< Efficio::Device > *arg3 = 0 ;
-  std::shared_ptr< Efficio::Device > tempnull3 ;
+  std::shared_ptr< Efficio::Data::Data > *arg3 = 0 ;
+  std::shared_ptr< Efficio::Data::Data > tempnull3 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = jarg3 ? (std::shared_ptr< Efficio::Device > *)jarg3 : &tempnull3; 
+  arg3 = jarg3 ? (std::shared_ptr< Efficio::Data::Data > *)jarg3 : &tempnull3; 
   try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Insert(arg1,arg2,(std::shared_ptr< Efficio::Device > const &)*arg3);
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__Insert(arg1,arg2,(std::shared_ptr< Efficio::Data::Data > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3588,20 +2966,20 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Insert___(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_InsertRange___(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_InsertRange___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg3 = 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg3;
+  arg3 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Device > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Data::Data > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::shared_ptr< Efficio::Device > > const &)*arg3);
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__InsertRange(arg1,arg2,(std::vector< std::shared_ptr< Efficio::Data::Data > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3611,14 +2989,14 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_InsertRange___(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_RemoveAt___(void * jarg1, int jarg2) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_RemoveAt___(void * jarg1, int jarg2) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
   try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__RemoveAt(arg1,arg2);
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__RemoveAt(arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3628,16 +3006,16 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_RemoveAt___(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_RemoveRange___(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_RemoveRange___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__RemoveRange(arg1,arg2,arg3);
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__RemoveRange(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3651,17 +3029,17 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_RemoveRange___(v
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Repeat___(void * jarg1, int jarg2) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DataCollection_Repeat___(void * jarg1, int jarg2) {
   void * jresult ;
-  std::shared_ptr< Efficio::Device > *arg1 = 0 ;
+  std::shared_ptr< Efficio::Data::Data > *arg1 = 0 ;
   int arg2 ;
-  std::shared_ptr< Efficio::Device > tempnull1 ;
-  std::vector< std::shared_ptr< Efficio::Device > > *result = 0 ;
+  std::shared_ptr< Efficio::Data::Data > tempnull1 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *result = 0 ;
   
-  arg1 = jarg1 ? (std::shared_ptr< Efficio::Device > *)jarg1 : &tempnull1; 
+  arg1 = jarg1 ? (std::shared_ptr< Efficio::Data::Data > *)jarg1 : &tempnull1; 
   arg2 = (int)jarg2; 
   try {
-    result = (std::vector< std::shared_ptr< Efficio::Device > > *)std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Repeat((std::shared_ptr< Efficio::Device > const &)*arg1,arg2);
+    result = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__Repeat((std::shared_ptr< Efficio::Data::Data > const &)*arg1,arg2);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3673,24 +3051,24 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Repeat___(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Reverse__SWIG_0___(void * jarg1) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_Reverse__SWIG_0___(void * jarg1) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
-  std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Reverse__SWIG_0(arg1);
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
+  std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__Reverse__SWIG_0(arg1);
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
   int arg3 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__Reverse__SWIG_1(arg1,arg2,arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3704,20 +3082,20 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_Reverse__SWIG_1_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_SetRange___(void * jarg1, int jarg2, void * jarg3) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DataCollection_SetRange___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   int arg2 ;
-  std::vector< std::shared_ptr< Efficio::Device > > *arg3 = 0 ;
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg3 = 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
   arg2 = (int)jarg2; 
-  arg3 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg3;
+  arg3 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg3;
   if (!arg3) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Device > > const & type is null", 0);
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< std::shared_ptr< Efficio::Data::Data > > const & type is null", 0);
     return ;
   } 
   try {
-    std_vector_Sl_std_shared_ptr_Sl_Efficio_Device_Sg__Sg__SetRange(arg1,arg2,(std::vector< std::shared_ptr< Efficio::Device > > const &)*arg3);
+    std_vector_Sl_std_shared_ptr_Sl_Efficio_Data_Data_Sg__Sg__SetRange(arg1,arg2,(std::vector< std::shared_ptr< Efficio::Data::Data > > const &)*arg3);
   }
   catch(std::out_of_range &_e) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
@@ -3727,10 +3105,572 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_DeviceCollection_SetRange___(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_DeviceCollection___(void * jarg1) {
-  std::vector< std::shared_ptr< Efficio::Device > > *arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_DataCollection___(void * jarg1) {
+  std::vector< std::shared_ptr< Efficio::Data::Data > > *arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *) 0 ;
   
-  arg1 = (std::vector< std::shared_ptr< Efficio::Device > > *)jarg1; 
+  arg1 = (std::vector< std::shared_ptr< Efficio::Data::Data > > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_Clear___(void * jarg1) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  (arg1)->clear();
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_Add___(void * jarg1, void * jarg2) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  Efficio::Models::Body::Joint *arg2 = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (Efficio::Models::Body::Joint *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Efficio::Models::Body::Joint const & type is null", 0);
+    return ;
+  } 
+  (arg1)->push_back((Efficio::Models::Body::Joint const &)*arg2);
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_JointCollection_size___(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  std::vector< Efficio::Models::Body::Joint >::size_type result;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  result = ((std::vector< Efficio::Models::Body::Joint > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_JointCollection_capacity___(void * jarg1) {
+  unsigned long jresult ;
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  std::vector< Efficio::Models::Body::Joint >::size_type result;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  result = ((std::vector< Efficio::Models::Body::Joint > const *)arg1)->capacity();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_reserve___(void * jarg1, unsigned long jarg2) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  std::vector< Efficio::Models::Body::Joint >::size_type arg2 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (std::vector< Efficio::Models::Body::Joint >::size_type)jarg2; 
+  (arg1)->reserve(arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_JointCollection__SWIG_0___() {
+  void * jresult ;
+  std::vector< Efficio::Models::Body::Joint > *result = 0 ;
+  
+  result = (std::vector< Efficio::Models::Body::Joint > *)new std::vector< Efficio::Models::Body::Joint >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_JointCollection__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  std::vector< Efficio::Models::Body::Joint > *arg1 = 0 ;
+  std::vector< Efficio::Models::Body::Joint > *result = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< Efficio::Models::Body::Joint > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::vector< Efficio::Models::Body::Joint > *)new std::vector< Efficio::Models::Body::Joint >((std::vector< Efficio::Models::Body::Joint > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_JointCollection__SWIG_2___(int jarg1) {
+  void * jresult ;
+  int arg1 ;
+  std::vector< Efficio::Models::Body::Joint > *result = 0 ;
+  
+  arg1 = (int)jarg1; 
+  try {
+    result = (std::vector< Efficio::Models::Body::Joint > *)new_std_vector_Sl_Efficio_Models_Body_Joint_Sg___SWIG_2(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_JointCollection_getitemcopy___(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  Efficio::Models::Body::Joint result;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = std_vector_Sl_Efficio_Models_Body_Joint_Sg__getitemcopy(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = new Efficio::Models::Body::Joint((const Efficio::Models::Body::Joint &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_JointCollection_getitem___(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  Efficio::Models::Body::Joint *result = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (Efficio::Models::Body::Joint *) &std_vector_Sl_Efficio_Models_Body_Joint_Sg__getitem(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_setitem___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  Efficio::Models::Body::Joint *arg3 = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (Efficio::Models::Body::Joint *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Efficio::Models::Body::Joint const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_Efficio_Models_Body_Joint_Sg__setitem(arg1,arg2,(Efficio::Models::Body::Joint const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_AddRange___(void * jarg1, void * jarg2) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  std::vector< Efficio::Models::Body::Joint > *arg2 = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (std::vector< Efficio::Models::Body::Joint > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< Efficio::Models::Body::Joint > const & type is null", 0);
+    return ;
+  } 
+  std_vector_Sl_Efficio_Models_Body_Joint_Sg__AddRange(arg1,(std::vector< Efficio::Models::Body::Joint > const &)*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_JointCollection_GetRange___(void * jarg1, int jarg2, int jarg3) {
+  void * jresult ;
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  std::vector< Efficio::Models::Body::Joint > *result = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    result = (std::vector< Efficio::Models::Body::Joint > *)std_vector_Sl_Efficio_Models_Body_Joint_Sg__GetRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_Insert___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  Efficio::Models::Body::Joint *arg3 = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (Efficio::Models::Body::Joint *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Efficio::Models::Body::Joint const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_Efficio_Models_Body_Joint_Sg__Insert(arg1,arg2,(Efficio::Models::Body::Joint const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_InsertRange___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  std::vector< Efficio::Models::Body::Joint > *arg3 = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< Efficio::Models::Body::Joint > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< Efficio::Models::Body::Joint > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_Efficio_Models_Body_Joint_Sg__InsertRange(arg1,arg2,(std::vector< Efficio::Models::Body::Joint > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_RemoveAt___(void * jarg1, int jarg2) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    std_vector_Sl_Efficio_Models_Body_Joint_Sg__RemoveAt(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_RemoveRange___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_Efficio_Models_Body_Joint_Sg__RemoveRange(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_JointCollection_Repeat___(void * jarg1, int jarg2) {
+  void * jresult ;
+  Efficio::Models::Body::Joint *arg1 = 0 ;
+  int arg2 ;
+  std::vector< Efficio::Models::Body::Joint > *result = 0 ;
+  
+  arg1 = (Efficio::Models::Body::Joint *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Efficio::Models::Body::Joint const & type is null", 0);
+    return 0;
+  } 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::vector< Efficio::Models::Body::Joint > *)std_vector_Sl_Efficio_Models_Body_Joint_Sg__Repeat((Efficio::Models::Body::Joint const &)*arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_Reverse__SWIG_0___(void * jarg1) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  std_vector_Sl_Efficio_Models_Body_Joint_Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_vector_Sl_Efficio_Models_Body_Joint_Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_JointCollection_SetRange___(void * jarg1, int jarg2, void * jarg3) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  int arg2 ;
+  std::vector< Efficio::Models::Body::Joint > *arg3 = 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::vector< Efficio::Models::Body::Joint > *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::vector< Efficio::Models::Body::Joint > const & type is null", 0);
+    return ;
+  } 
+  try {
+    std_vector_Sl_Efficio_Models_Body_Joint_Sg__SetRange(arg1,arg2,(std::vector< Efficio::Models::Body::Joint > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_JointCollection___(void * jarg1) {
+  std::vector< Efficio::Models::Body::Joint > *arg1 = (std::vector< Efficio::Models::Body::Joint > *) 0 ;
+  
+  arg1 = (std::vector< Efficio::Models::Body::Joint > *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_FingerCollection__SWIG_0___() {
+  void * jresult ;
+  std::array< Efficio::Models::Body::Finger,5 > *result = 0 ;
+  
+  result = (std::array< Efficio::Models::Body::Finger,5 > *)new std::array< Efficio::Models::Body::Finger,5 >();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_FingerCollection__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = 0 ;
+  std::array< Efficio::Models::Body::Finger,5 > *result = 0 ;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1;
+  if (!arg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::array< Efficio::Models::Body::Finger,5 > const & type is null", 0);
+    return 0;
+  } 
+  result = (std::array< Efficio::Models::Body::Finger,5 > *)new std::array< Efficio::Models::Body::Finger,5 >((std::array< Efficio::Models::Body::Finger,5 > const &)*arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_size___(void * jarg1) {
+  unsigned long jresult ;
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  std::array< Efficio::Models::Body::Finger,5 >::size_type result;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  result = ((std::array< Efficio::Models::Body::Finger,5 > const *)arg1)->size();
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_empty___(void * jarg1) {
+  unsigned int jresult ;
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  bool result;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  result = (bool)((std::array< Efficio::Models::Body::Finger,5 > const *)arg1)->empty();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_Fill___(void * jarg1, void * jarg2) {
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  std::array< Efficio::Models::Body::Finger,5 >::value_type *arg2 = 0 ;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  arg2 = (std::array< Efficio::Models::Body::Finger,5 >::value_type *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::array< Efficio::Models::Body::Finger,5 >::value_type const & type is null", 0);
+    return ;
+  } 
+  (arg1)->fill((std::array< Efficio::Models::Body::Finger,5 >::value_type const &)*arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_Swap___(void * jarg1, void * jarg2) {
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  std::array< Efficio::Models::Body::Finger,5 > *arg2 = 0 ;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  arg2 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg2;
+  if (!arg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::array< Efficio::Models::Body::Finger,5 > & type is null", 0);
+    return ;
+  } 
+  (arg1)->swap(*arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_getitemcopy___(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  int arg2 ;
+  Efficio::Models::Body::Finger result;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__getitemcopy(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = new Efficio::Models::Body::Finger((const Efficio::Models::Body::Finger &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_getitem___(void * jarg1, int jarg2) {
+  void * jresult ;
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  int arg2 ;
+  std::array< Efficio::Models::Body::Finger,5 >::value_type *result = 0 ;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  arg2 = (int)jarg2; 
+  try {
+    result = (std::array< Efficio::Models::Body::Finger,5 >::value_type *) &std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__getitem(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return 0;
+  }
+  
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_setitem___(void * jarg1, int jarg2, void * jarg3) {
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  int arg2 ;
+  std::array< Efficio::Models::Body::Finger,5 >::value_type *arg3 = 0 ;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (std::array< Efficio::Models::Body::Finger,5 >::value_type *)jarg3;
+  if (!arg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "std::array< Efficio::Models::Body::Finger,5 >::const_reference type is null", 0);
+    return ;
+  } 
+  try {
+    std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__setitem(arg1,arg2,(Efficio::Models::Body::Finger const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_Reverse__SWIG_0___(void * jarg1) {
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__Reverse__SWIG_0(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_FingerCollection_Reverse__SWIG_1___(void * jarg1, int jarg2, int jarg3) {
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  try {
+    std_array_Sl_Efficio_Models_Body_Finger_Sc_5_Sg__Reverse__SWIG_1(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, 0, (&_e)->what());
+    return ;
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentException, (&_e)->what(), "");
+    return ;
+  }
+  
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_FingerCollection___(void * jarg1) {
+  std::array< Efficio::Models::Body::Finger,5 > *arg1 = (std::array< Efficio::Models::Body::Finger,5 > *) 0 ;
+  
+  arg1 = (std::array< Efficio::Models::Body::Finger,5 > *)jarg1; 
   delete arg1;
 }
 
@@ -3743,8 +3683,8 @@ SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::Gesture > * SWIGSTDCALL C
     return jarg1 ? new std::shared_ptr< Efficio::InputRecognition::Gesture >(*jarg1) : 0;
 }
 
-SWIGEXPORT Efficio::InputRecognition::DiscreteGesture * SWIGSTDCALL CSharp_EfficiofNet_Pinch_SWIGUpcast___(Efficio::InputRecognition::Body::Hands::Pinch *jarg1) {
-    return (Efficio::InputRecognition::DiscreteGesture *)jarg1;
+SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > * SWIGSTDCALL CSharp_EfficiofNet_Pinch_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *jarg1) {
+    return jarg1 ? new std::shared_ptr< Efficio::InputRecognition::DiscreteGesture >(*jarg1) : 0;
 }
 
 #ifdef __cplusplus

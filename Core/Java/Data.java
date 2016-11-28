@@ -8,16 +8,16 @@
 
 package Efficio.Java;
 
-public class Engine {
+public class Data {
   private transient long swigCPtr;
-  protected transient boolean swigCMemOwn;
+  private transient boolean swigCMemOwn;
 
-  protected Engine(long cPtr, boolean cMemoryOwn) {
+  protected Data(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(Engine obj) {
+  protected static long getCPtr(Data obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -29,28 +29,14 @@ public class Engine {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        EfficioJNI.delete_Engine(swigCPtr);
+        EfficioJNI.delete_Data(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public Engine() {
-    this(EfficioJNI.new_Engine(), true);
-  }
-
-  public void Start() {
-    EfficioJNI.Engine_Start(swigCPtr, this);
-  }
-
-  public Frame GetFrame() {
-    long cPtr = EfficioJNI.Engine_GetFrame__SWIG_0(swigCPtr, this);
-    return (cPtr == 0) ? null : new Frame(cPtr, true);
-  }
-
-  public Frame GetFrame(int count) {
-    long cPtr = EfficioJNI.Engine_GetFrame__SWIG_1(swigCPtr, this, count);
-    return (cPtr == 0) ? null : new Frame(cPtr, true);
+  public DataType GetDataType() {
+    return DataType.swigToEnum(EfficioJNI.Data_GetDataType(swigCPtr, this));
   }
 
 }

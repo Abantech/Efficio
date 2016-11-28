@@ -14,13 +14,11 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			// Forward delcaration to avoid circular references
-			class Hand;
-
 			/// Representation of the human finger
 			extern class DLLEXPORT Finger
 			{
 			public:
+				Finger();
 				Finger(Efficio::Models::Body::FingerType fingerType, bool isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip);
 				~Finger();
 
@@ -29,14 +27,14 @@ namespace Efficio
 				Joint MCP;
 				Joint PIP;
 
-				Hand* Hand;
+				bool Valid;
 
 				/// Which finger the object is representing
-				const FingerType FingerType;
+				FingerType FingerType;
 
-				const bool IsExtended;
+				bool IsExtended;
 
-				const float Length;
+				float Length;
 			};
 		}
 	}

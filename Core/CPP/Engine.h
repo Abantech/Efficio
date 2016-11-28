@@ -1,6 +1,5 @@
 #pragma once
 #include "Frame.h"
-#include "DeviceConfiguration.h"
 #include "Vector3.h"
 #include "Leap.h"
 #include "Sensor.h"
@@ -37,9 +36,6 @@ extern "C"
 			/// Gets the historical {@link Efficio::EfficioFrame frame} from the runtime.
 			/// @return the current frame.
 			std::shared_ptr<Efficio::Frame> GetFrame(int count);
-
-			/// The device configuration for Efficio.
-			Efficio::Configuration::DeviceConfiguration DeviceConfiguration;
 
 		private:
 			bool started;

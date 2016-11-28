@@ -35,28 +35,37 @@ public class Hand {
     }
   }
 
-  public Hand(SWIGTYPE_p_BodySide side, SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t fingers, float confidence) {
-    this(EfficioJNI.new_Hand__SWIG_0(SWIGTYPE_p_BodySide.getCPtr(side), SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t.getCPtr(fingers), confidence), true);
+  public Hand(BodySide side, FingerCollection fingers, float confidence) {
+    this(EfficioJNI.new_Hand__SWIG_0(side.swigValue(), FingerCollection.getCPtr(fingers), fingers, confidence), true);
   }
 
-  public Hand(SWIGTYPE_p_BodySide side, SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t fingers) {
-    this(EfficioJNI.new_Hand__SWIG_1(SWIGTYPE_p_BodySide.getCPtr(side), SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t.getCPtr(fingers)), true);
+  public Hand(BodySide side, FingerCollection fingers) {
+    this(EfficioJNI.new_Hand__SWIG_1(side.swigValue(), FingerCollection.getCPtr(fingers), fingers), true);
   }
 
-  public SWIGTYPE_p_BodySide getSide() {
-    return new SWIGTYPE_p_BodySide(EfficioJNI.Hand_Side_get(swigCPtr, this), true);
+  public void setSide(BodySide value) {
+    EfficioJNI.Hand_Side_set(swigCPtr, this, value.swigValue());
+  }
+
+  public BodySide getSide() {
+    return BodySide.swigToEnum(EfficioJNI.Hand_Side_get(swigCPtr, this));
+  }
+
+  public void setConfidence(float value) {
+    EfficioJNI.Hand_Confidence_set(swigCPtr, this, value);
   }
 
   public float getConfidence() {
     return EfficioJNI.Hand_Confidence_get(swigCPtr, this);
   }
 
-  public void setFingers(SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t value) {
-    EfficioJNI.Hand_Fingers_set(swigCPtr, this, SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t.getCPtr(value));
+  public void setFingers(FingerCollection value) {
+    EfficioJNI.Hand_Fingers_set(swigCPtr, this, FingerCollection.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t getFingers() {
-    return new SWIGTYPE_p_std__arrayT_Efficio__Models__Body__Finger_5_t(EfficioJNI.Hand_Fingers_get(swigCPtr, this), true);
+  public FingerCollection getFingers() {
+    long cPtr = EfficioJNI.Hand_Fingers_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new FingerCollection(cPtr, false);
   }
 
 }

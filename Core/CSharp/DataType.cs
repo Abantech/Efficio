@@ -10,11 +10,10 @@
 
 namespace Efficio.Net {
 
-public enum JointName {
-  Distal,
-  Intermediate,
-  Proximal,
-  Metacarpal
+public enum DataType {
+  Altitude,
+  Location,
+  Hand
 }
 
 }

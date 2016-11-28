@@ -11,12 +11,12 @@ namespace Efficio {
 		{
 		}
 
-		const std::time_t Gesture::GetStartTime()
+		std::time_t Gesture::GetStartTime()
 		{
 			return startTime;
 		}
 
-		const std::time_t Gesture::GetGestureDuration()
+		std::time_t Gesture::GetGestureDuration()
 		{
 			return difftime(time(NULL), startTime);
 		}

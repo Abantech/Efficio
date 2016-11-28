@@ -23,13 +23,13 @@ namespace Efficio
 				Arm();
 				~Arm();
 
-				const BodySide Side;
-				const Joint Shoulder;
-				const Joint Elbow;
-				const Joint Wrist;
-				const Joint Hand;
+				BodySide Side;
+				Joint Shoulder;
+				Joint Elbow;
+				Joint Wrist;
+				Joint Hand;
 
-				const Efficio::Models::Body::Hand GetHand();
+				Efficio::Models::Body::Hand GetHand();
 			};
 		}
 	}

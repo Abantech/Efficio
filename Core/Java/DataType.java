@@ -8,13 +8,10 @@
 
 package Efficio.Java;
 
-public final class FingerType {
-  public final static FingerType Unknown = new FingerType("Unknown");
-  public final static FingerType Thumb = new FingerType("Thumb");
-  public final static FingerType Index = new FingerType("Index");
-  public final static FingerType Middle = new FingerType("Middle");
-  public final static FingerType Ring = new FingerType("Ring");
-  public final static FingerType Pinky = new FingerType("Pinky");
+public final class DataType {
+  public final static DataType Altitude = new DataType("Altitude");
+  public final static DataType Location = new DataType("Location");
+  public final static DataType Hand = new DataType("Hand");
 
   public final int swigValue() {
     return swigValue;
@@ -24,33 +21,33 @@ public final class FingerType {
     return swigName;
   }
 
-  public static FingerType swigToEnum(int swigValue) {
+  public static DataType swigToEnum(int swigValue) {
     if (swigValue < swigValues.length && swigValue >= 0 && swigValues[swigValue].swigValue == swigValue)
       return swigValues[swigValue];
     for (int i = 0; i < swigValues.length; i++)
       if (swigValues[i].swigValue == swigValue)
         return swigValues[i];
-    throw new IllegalArgumentException("No enum " + FingerType.class + " with value " + swigValue);
+    throw new IllegalArgumentException("No enum " + DataType.class + " with value " + swigValue);
   }
 
-  private FingerType(String swigName) {
+  private DataType(String swigName) {
     this.swigName = swigName;
     this.swigValue = swigNext++;
   }
 
-  private FingerType(String swigName, int swigValue) {
+  private DataType(String swigName, int swigValue) {
     this.swigName = swigName;
     this.swigValue = swigValue;
     swigNext = swigValue+1;
   }
 
-  private FingerType(String swigName, FingerType swigEnum) {
+  private DataType(String swigName, DataType swigEnum) {
     this.swigName = swigName;
     this.swigValue = swigEnum.swigValue;
     swigNext = this.swigValue+1;
   }
 
-  private static FingerType[] swigValues = { Unknown, Thumb, Index, Middle, Ring, Pinky };
+  private static DataType[] swigValues = { Altitude, Location, Hand };
   private static int swigNext = 0;
   private final int swigValue;
   private final String swigName;

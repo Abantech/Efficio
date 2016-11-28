@@ -21,7 +21,7 @@ namespace Efficio
 				std::vector<std::shared_ptr<Events::Event>> events;
 
 				// TODO detect events
-				auto data = frame.GetDataOfType(Data::DataType::Hand);
+				auto data = frame.GetData();
 
 				if (data.size() > 0)
 				{

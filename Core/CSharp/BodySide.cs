@@ -11,8 +11,8 @@
 namespace Efficio.Net {
 
 public enum BodySide {
-  Right,
-  Left
+  Left,
+  Right
 }
 
 }

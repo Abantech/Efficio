@@ -23,15 +23,15 @@ namespace Efficio
 				~Location() {};
 
 				/// The value representing the latitude.  Can be between -180 and 180. 
-				const float Latitude() { return latitude; };
+				float Latitude() { return latitude; };
 
 				/// The value representing the longitude.  Can be between -90 and 90. 
-				const float Longitude() { return longitude; };
+				float Longitude() { return longitude; };
 
 				Efficio::Data::DataType GetDataType() { return Efficio::Data::DataType::Location; }
 			private:
-				const float latitude;
-				const float longitude;
+				float latitude;
+				float longitude;
 			};
 		}
 	}

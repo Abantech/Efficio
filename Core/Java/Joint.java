@@ -35,12 +35,24 @@ public class Joint {
     }
   }
 
-  public Joint(Vector3 position, SWIGTYPE_p_JointType type) {
-    this(EfficioJNI.new_Joint__SWIG_0(Vector3.getCPtr(position), position, SWIGTYPE_p_JointType.getCPtr(type)), true);
+  public Joint() {
+    this(EfficioJNI.new_Joint__SWIG_0(), true);
   }
 
-  public Joint(Vector3 position, SWIGTYPE_p_JointType type, float confidence) {
-    this(EfficioJNI.new_Joint__SWIG_1(Vector3.getCPtr(position), position, SWIGTYPE_p_JointType.getCPtr(type), confidence), true);
+  public Joint(Vector3 position, JointType type) {
+    this(EfficioJNI.new_Joint__SWIG_1(Vector3.getCPtr(position), position, type.swigValue()), true);
+  }
+
+  public Joint(Vector3 position, JointType type, float confidence) {
+    this(EfficioJNI.new_Joint__SWIG_2(Vector3.getCPtr(position), position, type.swigValue(), confidence), true);
+  }
+
+  public void setValid(boolean value) {
+    EfficioJNI.Joint_Valid_set(swigCPtr, this, value);
+  }
+
+  public boolean getValid() {
+    return EfficioJNI.Joint_Valid_get(swigCPtr, this);
   }
 
   public void setPosition(Vector3 value) {
@@ -52,20 +64,28 @@ public class Joint {
     return (cPtr == 0) ? null : new Vector3(cPtr, false);
   }
 
-  public SWIGTYPE_p_JointType getType() {
-    return new SWIGTYPE_p_JointType(EfficioJNI.Joint_Type_get(swigCPtr, this), true);
+  public void setType(JointType value) {
+    EfficioJNI.Joint_Type_set(swigCPtr, this, value.swigValue());
+  }
+
+  public JointType getType() {
+    return JointType.swigToEnum(EfficioJNI.Joint_Type_get(swigCPtr, this));
+  }
+
+  public void setConfidence(float value) {
+    EfficioJNI.Joint_Confidence_set(swigCPtr, this, value);
   }
 
   public float getConfidence() {
     return EfficioJNI.Joint_Confidence_get(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t ProximalJoints(Joint joint) {
-    return new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioJNI.Joint_ProximalJoints(swigCPtr, this, Joint.getCPtr(joint), joint), true);
+  public JointCollection ProximalJoints(Joint joint) {
+    return new JointCollection(EfficioJNI.Joint_ProximalJoints(swigCPtr, this, Joint.getCPtr(joint), joint), true);
   }
 
-  public SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t DistalJoints(Joint joint) {
-    return new SWIGTYPE_p_std__vectorT_Efficio__Models__Body__Joint_t(EfficioJNI.Joint_DistalJoints(swigCPtr, this, Joint.getCPtr(joint), joint), true);
+  public JointCollection DistalJoints(Joint joint) {
+    return new JointCollection(EfficioJNI.Joint_DistalJoints(swigCPtr, this, Joint.getCPtr(joint), joint), true);
   }
 
   public float DistanceTo(Joint joint) {

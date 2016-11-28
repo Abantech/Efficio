@@ -1,5 +1,8 @@
 #include "Vector3.h"
 namespace Efficio {
+	Vector3::Vector3() : Vector3(0,0,0)
+	{
+	}
 	Vector3::Vector3(float x, float y, float z) : vector(x, y, z)
 	{
 	}

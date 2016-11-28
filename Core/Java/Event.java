@@ -35,6 +35,10 @@ public class Event {
     }
   }
 
+  public void setTime(SWIGTYPE_p_time_t value) {
+    EfficioJNI.Event_Time_set(swigCPtr, this, SWIGTYPE_p_time_t.getCPtr(value));
+  }
+
   public SWIGTYPE_p_time_t getTime() {
     return new SWIGTYPE_p_time_t(EfficioJNI.Event_Time_get(swigCPtr, this), true);
   }

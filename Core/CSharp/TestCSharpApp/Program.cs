@@ -10,10 +10,8 @@ namespace TestCSharpApp
             DateTime disabledTime = DateTime.Now;
 
             var engine = new Engine();
-            engine.DeviceConfiguration.LeapConfiguration.Enabled = true;
 
             engine.Start();
-            DateTime startTime = DateTime.Now;
 
             while (true)
             {
@@ -21,37 +19,13 @@ namespace TestCSharpApp
 
                 if (frame.GetEvents().Count > 0)
                 {
-                    var ev = SWIGHelper.CastTo<Pinch>(frame.GetEvents()[0], false);
-                    
-                    int i = 0;
+                    foreach (var ev in frame.GetEvents())
+                    {
+                        var pinch = SWIGHelper.CastTo<Pinch>(ev, false);
 
-                    DisableAllDevices(engine.DeviceManager);
-                    disabledTime = DateTime.Now;
+                        Console.WriteLine($"{pinch.Side} hand {pinch.Finger1.FingerType} and {pinch.Finger2.FingerType}");
+                    }
                 }
-
-                // Disabled devices for 3 seconds when pinch detected
-                if ((DateTime.Now - disabledTime).Seconds > 3)
-                {
-                    EnableAllDevices(engine.DeviceManager);
-                }
-            }
-        }
-
-        private static void DisableAllDevices(DeviceManager manager)
-        {
-            var devices = manager.GetDevicesWithStatus(DeviceStatus.Connected);
-
-            foreach (var device in devices)
-            {
-                device.Enabled = false;
-            }
-        }
-
-        private static void EnableAllDevices(DeviceManager manager)
-        {
-            foreach (var device in manager.GetDevices())
-            {
-                device.Enabled = true;
             }
         }
     }

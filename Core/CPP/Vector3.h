@@ -15,6 +15,7 @@ namespace Efficio
 	extern class DLLEXPORT Vector3
 	{
 	public:
+		Vector3();
 		Vector3(float x, float y, float z);
 		~Vector3();
 		float DistanceTo(Vector3 vector2);

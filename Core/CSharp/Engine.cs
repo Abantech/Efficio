@@ -59,17 +59,6 @@ public class Engine : global::System.IDisposable {
     return ret;
   }
 
-  public DeviceConfiguration DeviceConfiguration {
-    set {
-      EfficioPINVOKE.Engine_DeviceConfiguration_set(swigCPtr, DeviceConfiguration.getCPtr(value));
-    } 
-    get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Engine_DeviceConfiguration_get(swigCPtr);
-      DeviceConfiguration ret = (cPtr == global::System.IntPtr.Zero) ? null : new DeviceConfiguration(cPtr, false);
-      return ret;
-    } 
-  }
-
 }
 
 }

@@ -29,36 +29,36 @@ namespace Efficio
 				~Body();
 
 				/// The head of the body
-				const Head Head;
+				Head Head;
 
 				/// The arms of the body
-				const std::array<Arm, 2> Arms;
+				std::array<Arm, 2> Arms;
 
 				/// The legs of the body
-				const std::array<Leg, 2> Legs;
+				std::array<Leg, 2> Legs;
 
 				/// The shoulder joint
-				const Joint ShoulderCenter;
+				Joint ShoulderCenter;
 
 				/// The spine joint
-				const Joint Spine;
+				Joint Spine;
 
 				/// The center hip joint
-				const Joint HipCenter;
+				Joint HipCenter;
 
-				const Bone Neck();
+				Bone Neck();
 
-				const Bone UpperSpine();
+				Bone UpperSpine();
 
-				const Bone LowerSpine();
+				Bone LowerSpine();
 
 				/// Gets a joint by jointType
-				const Joint GetJoint(JointType jointType);
+				Joint GetJoint(JointType jointType);
 
 				/// Gets a collection of joints by joint type
-				const std::vector<Joint> GetJoints(std::vector<JointType> jointTypes);
+				std::vector<Joint> GetJoints(std::vector<JointType> jointTypes);
 
-				const Bone GetBone( BoneType boneType);
+				Bone GetBone( BoneType boneType);
 			};
 		}
 	}
