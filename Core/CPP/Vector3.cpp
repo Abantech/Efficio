@@ -26,4 +26,9 @@ namespace Efficio {
 	float Vector3::Z() {
 		return vector.z();
 	}
+
+	Vector3 Vector3::Midpoint(Vector3 v1, Vector3 v2)
+	{
+		return Vector3((v1.X() + v2.X()) / 2, (v1.Y() + v2.Y()) / 2, (v1.Z() + v2.Z()) / 2);
+	}
 }

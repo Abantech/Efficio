@@ -1,10 +1,11 @@
 #include "SingleHandGesture.h"
 #include "BodySide.h"
 
-namespace Efficio {
+namespace Efficio 
+{
 	namespace InputRecognition
 	{
-		namespace Human
+		namespace Body
 		{
 			namespace Hands
 			{

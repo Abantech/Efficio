@@ -55,4 +55,8 @@ public class Vector3 {
     return EfficioJNI.Vector3_Z(swigCPtr, this);
   }
 
+  public static Vector3 Midpoint(Vector3 v1, Vector3 v2) {
+    return new Vector3(EfficioJNI.Vector3_Midpoint(Vector3.getCPtr(v1), v1, Vector3.getCPtr(v2), v2), true);
+  }
+
 }

@@ -212,6 +212,7 @@ EXIT 0</Command>
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="OnStart.cpp" />
     <ClCompile Include="Pinch.cpp" />
+    <ClCompile Include="PinchDetector.cpp" />
     <ClCompile Include="RecognitionProcessor.cpp" />
     <ClCompile Include="RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="SampleAltimeter.cpp" />
@@ -267,6 +268,7 @@ EXIT 0</Command>
     <ClInclude Include="Location.h" />
     <ClInclude Include="LocationSensor.h" />
     <ClInclude Include="OnStart.h" />
+    <ClInclude Include="PinchDetector.h" />
     <ClInclude Include="RecognitionProcessor.h" />
     <ClInclude Include="SampleAltimeter.h" />
     <ClInclude Include="SampleGPS.h" />

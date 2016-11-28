@@ -10,11 +10,9 @@ package Efficio.Java;
 
 public class Pinch extends DiscreteGesture {
   private transient long swigCPtr;
-  private boolean swigCMemOwnDerived;
 
   protected Pinch(long cPtr, boolean cMemoryOwn) {
-    super(EfficioJNI.Pinch_SWIGSmartPtrUpcast(cPtr), true);
-    swigCMemOwnDerived = cMemoryOwn;
+    super(EfficioJNI.Pinch_SWIGUpcast(cPtr), cMemoryOwn);
     swigCPtr = cPtr;
   }
 
@@ -28,8 +26,8 @@ public class Pinch extends DiscreteGesture {
 
   public synchronized void delete() {
     if (swigCPtr != 0) {
-      if (swigCMemOwnDerived) {
-        swigCMemOwnDerived = false;
+      if (swigCMemOwn) {
+        swigCMemOwn = false;
         EfficioJNI.delete_Pinch(swigCPtr);
       }
       swigCPtr = 0;
@@ -37,8 +35,8 @@ public class Pinch extends DiscreteGesture {
     super.delete();
   }
 
-  public Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide side, Finger finger1, Finger finger2, Vector3 position) {
-    this(EfficioJNI.new_Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(side), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2, Vector3.getCPtr(position), position), true);
+  public Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide side, Finger finger1, Finger finger2) {
+    this(EfficioJNI.new_Pinch(SWIGTYPE_p_Efficio__Models__Body__BodySide.getCPtr(side), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2), true);
   }
 
   public void setPosition(Vector3 value) {

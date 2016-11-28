@@ -64,6 +64,12 @@ public class Vector3 : global::System.IDisposable {
     return ret;
   }
 
+  public static Vector3 Midpoint(Vector3 v1, Vector3 v2) {
+    Vector3 ret = new Vector3(EfficioPINVOKE.Vector3_Midpoint(Vector3.getCPtr(v1), Vector3.getCPtr(v2)), true);
+    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }
 
 }

@@ -206,6 +206,9 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Vector3_Z___")]
   public static extern float Vector3_Z(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Vector3_Midpoint___")]
+  public static extern global::System.IntPtr Vector3_Midpoint(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Joint__SWIG_0___")]
   public static extern global::System.IntPtr new_Joint__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
@@ -438,7 +441,7 @@ class EfficioPINVOKE {
   public static extern int DiscreteGesture_GetGestureState(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_new_Pinch___")]
-  public static extern global::System.IntPtr new_Pinch(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+  public static extern global::System.IntPtr new_Pinch(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_delete_Pinch___")]
   public static extern void delete_Pinch(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -788,8 +791,8 @@ class EfficioPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_DiscreteGesture_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr DiscreteGesture_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Pinch_SWIGSmartPtrUpcast___")]
-  public static extern global::System.IntPtr Pinch_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("Efficio", EntryPoint="CSharp_EfficiofNet_Pinch_SWIGUpcast___")]
+  public static extern global::System.IntPtr Pinch_SWIGUpcast(global::System.IntPtr jarg1);
 }
 
 }

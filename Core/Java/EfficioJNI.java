@@ -15,6 +15,7 @@ public class EfficioJNI {
   public final static native float Vector3_X(long jarg1, Vector3 jarg1_);
   public final static native float Vector3_Y(long jarg1, Vector3 jarg1_);
   public final static native float Vector3_Z(long jarg1, Vector3 jarg1_);
+  public final static native long Vector3_Midpoint(long jarg1, Vector3 jarg1_, long jarg2, Vector3 jarg2_);
   public final static native long new_Joint__SWIG_0(long jarg1, Vector3 jarg1_, long jarg2);
   public final static native long new_Joint__SWIG_1(long jarg1, Vector3 jarg1_, long jarg2, float jarg3);
   public final static native void delete_Joint(long jarg1);
@@ -92,7 +93,7 @@ public class EfficioJNI {
   public final static native void delete_DiscreteGesture(long jarg1);
   public final static native int DiscreteGesture_GetType(long jarg1, DiscreteGesture jarg1_);
   public final static native int DiscreteGesture_GetGestureState(long jarg1, DiscreteGesture jarg1_);
-  public final static native long new_Pinch(long jarg1, long jarg2, Finger jarg2_, long jarg3, Finger jarg3_, long jarg4, Vector3 jarg4_);
+  public final static native long new_Pinch(long jarg1, long jarg2, Finger jarg2_, long jarg3, Finger jarg3_);
   public final static native void delete_Pinch(long jarg1);
   public final static native void Pinch_Position_set(long jarg1, Pinch jarg1_, long jarg2, Vector3 jarg2_);
   public final static native long Pinch_Position_get(long jarg1, Pinch jarg1_);
@@ -165,5 +166,5 @@ public class EfficioJNI {
   public final static native void delete_DeviceCollection(long jarg1);
   public final static native long Gesture_SWIGSmartPtrUpcast(long jarg1);
   public final static native long DiscreteGesture_SWIGSmartPtrUpcast(long jarg1);
-  public final static native long Pinch_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long Pinch_SWIGUpcast(long jarg1);
 }

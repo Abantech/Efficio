@@ -15,6 +15,8 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
+using namespace std;
+
 extern "C" 
 {
 	namespace Efficio

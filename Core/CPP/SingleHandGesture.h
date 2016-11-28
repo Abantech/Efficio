@@ -1,5 +1,5 @@
 #pragma once
-#include "Enumerations.h"
+
 #include "BodySide.h"
 
 #if COMPILING_DLL
@@ -8,10 +8,11 @@
 #define DLLEXPORT __declspec(dllimport)
 #endif
 
-namespace Efficio {
+namespace Efficio 
+{
 	namespace InputRecognition
 	{
-		namespace Human
+		namespace Body
 		{
 			namespace Hands
 			{

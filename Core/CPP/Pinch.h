@@ -17,14 +17,14 @@ namespace Efficio
 {
 	namespace InputRecognition
 	{
-		namespace Human
+		namespace Body
 		{
 			namespace Hands
 			{
 				extern class DLLEXPORT Pinch : public DiscreteGesture
 				{
 				public:
-					Pinch(Efficio::Models::Body::BodySide side, Efficio::Models::Body::Finger finger1, Efficio::Models::Body::Finger finger2, Vector3 position);
+					Pinch(Efficio::Models::Body::BodySide side, Efficio::Models::Body::Finger finger1, Efficio::Models::Body::Finger finger2);
 					~Pinch();
 					Vector3 Position;
 					Efficio::Models::Body::Finger Finger1;

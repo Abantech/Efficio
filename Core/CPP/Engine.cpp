@@ -45,7 +45,11 @@ namespace Efficio {
 
 		// TODO execute BeforeFrameProcess actions
 
-		ire.ProcessFrame(frame);
+		 auto detectedEvents = ire.ProcessFrame(frame);
+		 for (size_t i = 0; i < detectedEvents.size(); i++)
+		 {
+			 frame->AddEvent(detectedEvents[i]);
+		 }
 
 		// TODO execute AfterFrameProcess actions
 

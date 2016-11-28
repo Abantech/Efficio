@@ -785,6 +785,32 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Vector3_Z___(void * jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Vector3_Midpoint___(void * jarg1, void * jarg2) {
+  void * jresult ;
+  SwigValueWrapper< Efficio::Vector3 > arg1 ;
+  SwigValueWrapper< Efficio::Vector3 > arg2 ;
+  Efficio::Vector3 *argp1 ;
+  Efficio::Vector3 *argp2 ;
+  SwigValueWrapper< Efficio::Vector3 > result;
+  
+  argp1 = (Efficio::Vector3 *)jarg1; 
+  if (!argp1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Vector3", 0);
+    return 0;
+  }
+  arg1 = *argp1; 
+  argp2 = (Efficio::Vector3 *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Vector3", 0);
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = Efficio::Vector3::Midpoint(arg1,arg2);
+  jresult = new Efficio::Vector3((const Efficio::Vector3 &)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Joint__SWIG_0___(void * jarg1, void * jarg2) {
   void * jresult ;
   SwigValueWrapper< Efficio::Vector3 > arg1 ;
@@ -1283,6 +1309,21 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Event___(void * jarg1) {
   smartarg1 = (std::shared_ptr<  Efficio::Events::Event > *)jarg1;
   arg1 = (Efficio::Events::Event *)(smartarg1 ? smartarg1->get() : 0); 
   (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Event_Time_get___(void * jarg1) {
+  void * jresult ;
+  Efficio::Events::Event *arg1 = (Efficio::Events::Event *) 0 ;
+  std::shared_ptr< Efficio::Events::Event > *smartarg1 = 0 ;
+  time_t result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Events::Event > *)jarg1;
+  arg1 = (Efficio::Events::Event *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (time_t) ((arg1)->Time);
+  jresult = new time_t((const time_t &)result); 
+  return jresult;
 }
 
 
@@ -1837,17 +1878,15 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_DiscreteGesture_GetGestureState___
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Pinch___(void * jarg1, void * jarg2, void * jarg3, void * jarg4) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Pinch___(void * jarg1, void * jarg2, void * jarg3) {
   void * jresult ;
   Efficio::Models::Body::BodySide arg1 ;
   SwigValueWrapper< Efficio::Models::Body::Finger > arg2 ;
   SwigValueWrapper< Efficio::Models::Body::Finger > arg3 ;
-  SwigValueWrapper< Efficio::Vector3 > arg4 ;
   Efficio::Models::Body::BodySide *argp1 ;
   Efficio::Models::Body::Finger *argp2 ;
   Efficio::Models::Body::Finger *argp3 ;
-  Efficio::Vector3 *argp4 ;
-  Efficio::InputRecognition::Human::Hands::Pinch *result = 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *result = 0 ;
   
   argp1 = (Efficio::Models::Body::BodySide *)jarg1; 
   if (!argp1) {
@@ -1867,39 +1906,25 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Pinch___(void * jarg1, void
     return 0;
   }
   arg3 = *argp3; 
-  argp4 = (Efficio::Vector3 *)jarg4; 
-  if (!argp4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Vector3", 0);
-    return 0;
-  }
-  arg4 = *argp4; 
-  result = (Efficio::InputRecognition::Human::Hands::Pinch *)new Efficio::InputRecognition::Human::Hands::Pinch(arg1,arg2,arg3,arg4);
-  
-  jresult = result ? new std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch >(result SWIG_NO_NULL_DELETER_1) : 0;
-  
+  result = (Efficio::InputRecognition::Body::Hands::Pinch *)new Efficio::InputRecognition::Body::Hands::Pinch(arg1,arg2,arg3);
+  jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Pinch___(void * jarg1) {
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   (void)arg1; delete smartarg1;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_set___(void * jarg1, void * jarg2) {
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Vector3 *arg2 = (Efficio::Vector3 *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   arg2 = (Efficio::Vector3 *)jarg2; 
   if (arg1) (arg1)->Position = *arg2;
 }
@@ -1907,13 +1932,10 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_set___(void * jarg
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_get___(void * jarg1) {
   void * jresult ;
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Vector3 *result = 0 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   result = (Efficio::Vector3 *)& ((arg1)->Position);
   jresult = (void *)result; 
   return jresult;
@@ -1921,13 +1943,10 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Position_get___(void * ja
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_set___(void * jarg1, void * jarg2) {
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::Finger *arg2 = (Efficio::Models::Body::Finger *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   arg2 = (Efficio::Models::Body::Finger *)jarg2; 
   if (arg1) (arg1)->Finger1 = *arg2;
 }
@@ -1935,13 +1954,10 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_set___(void * jarg1
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_get___(void * jarg1) {
   void * jresult ;
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::Finger *result = 0 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   result = (Efficio::Models::Body::Finger *)& ((arg1)->Finger1);
   jresult = (void *)result; 
   return jresult;
@@ -1949,13 +1965,10 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger1_get___(void * jar
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_set___(void * jarg1, void * jarg2) {
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::Finger *arg2 = (Efficio::Models::Body::Finger *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   arg2 = (Efficio::Models::Body::Finger *)jarg2; 
   if (arg1) (arg1)->Finger2 = *arg2;
 }
@@ -1963,13 +1976,10 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_set___(void * jarg1
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_get___(void * jarg1) {
   void * jresult ;
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::Finger *result = 0 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   result = (Efficio::Models::Body::Finger *)& ((arg1)->Finger2);
   jresult = (void *)result; 
   return jresult;
@@ -1978,13 +1988,10 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Finger2_get___(void * jar
 
 SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Pinch_GetEventType___(void * jarg1) {
   int jresult ;
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Events::EventType result;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   result = (Efficio::Events::EventType)(arg1)->GetEventType();
   jresult = (int)result; 
   return jresult;
@@ -1992,14 +1999,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Pinch_GetEventType___(void * jarg1
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_set___(void * jarg1, void * jarg2) {
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::BodySide arg2 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
   Efficio::Models::Body::BodySide *argp2 ;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   argp2 = (Efficio::Models::Body::BodySide *)jarg2; 
   if (!argp2) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null Efficio::Models::Body::BodySide", 0);
@@ -2012,13 +2016,10 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_set___(void * jarg1, v
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_get___(void * jarg1) {
   void * jresult ;
-  Efficio::InputRecognition::Human::Hands::Pinch *arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *) 0 ;
-  std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *smartarg1 = 0 ;
+  Efficio::InputRecognition::Body::Hands::Pinch *arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *) 0 ;
   Efficio::Models::Body::BodySide result;
   
-  
-  smartarg1 = (std::shared_ptr<  Efficio::InputRecognition::Human::Hands::Pinch > *)jarg1;
-  arg1 = (Efficio::InputRecognition::Human::Hands::Pinch *)(smartarg1 ? smartarg1->get() : 0); 
+  arg1 = (Efficio::InputRecognition::Body::Hands::Pinch *)jarg1; 
   result =  ((arg1)->Side);
   jresult = new Efficio::Models::Body::BodySide((const Efficio::Models::Body::BodySide &)result); 
   return jresult;
@@ -3742,8 +3743,8 @@ SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::Gesture > * SWIGSTDCALL C
     return jarg1 ? new std::shared_ptr< Efficio::InputRecognition::Gesture >(*jarg1) : 0;
 }
 
-SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > * SWIGSTDCALL CSharp_EfficiofNet_Pinch_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::InputRecognition::Human::Hands::Pinch > *jarg1) {
-    return jarg1 ? new std::shared_ptr< Efficio::InputRecognition::DiscreteGesture >(*jarg1) : 0;
+SWIGEXPORT Efficio::InputRecognition::DiscreteGesture * SWIGSTDCALL CSharp_EfficiofNet_Pinch_SWIGUpcast___(Efficio::InputRecognition::Body::Hands::Pinch *jarg1) {
+    return (Efficio::InputRecognition::DiscreteGesture *)jarg1;
 }
 
 #ifdef __cplusplus

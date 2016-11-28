@@ -17,11 +17,11 @@ namespace Efficio
 	public:
 		Vector3(float x, float y, float z);
 		~Vector3();
-		float DistanceTo(Efficio::Vector3 vector2);
+		float DistanceTo(Vector3 vector2);
 		float X();
 		float Y();
 		float Z();
-
+		static Vector3 Midpoint(Vector3 v1, Vector3 v2);
 	private:
 		vmml::Vector3f vector;
 	};
