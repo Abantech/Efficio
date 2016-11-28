@@ -13,7 +13,7 @@ namespace Efficio.Unity.MessageBus.Body.Hands
             this.Type = type;
         }
 
-        public PinchMessage(Pinch pinch) : this(pinch.Position, pinch.Side, pinch.Finger1, pinch.Finger2, (MessageType)System.Enum.Parse(typeof(MessageType), pinch.Side.ToString() + "Hand" + pinch.Finger1.ToString() + pinch.Finger2.ToString() + "Pinch"))
+        public PinchMessage(Pinch pinch) : this(pinch.Position, pinch.Side, pinch.Finger1, pinch.Finger2, (MessageType)System.Enum.Parse(typeof(MessageType), pinch.Side.ToString() + "Hand" + pinch.Finger1.FingerType.ToString() + pinch.Finger2.FingerType.ToString() + "Pinch"))
         {
         }
 

@@ -12,8 +12,6 @@ namespace Efficio.Unity
         {
             engine = new Engine();
 
-            engine.DeviceConfiguration.LeapConfiguration.Enabled = true;
-
             engine.Start();
         }
 
