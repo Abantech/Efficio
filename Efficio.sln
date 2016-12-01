@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Efficio.Core", "Core\Efficio.Core.vcxproj", "{A450FDCA-E9F3-4B2B-985A-EF6F79864240}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Efficio.LeapMotion", "Plugins\Sensors\LeapMotion\Efficio.LeapMotion.vcxproj", "{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Efficio.Runtime", "Runtime\Efficio.Runtime.vcxproj", "{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Efficio.RealSense", "Plugins\Sensors\RealSense\Efficio.RealSense.vcxproj", "{F52BA6E1-3468-49EA-B54B-872877C67624}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A450FDCA-E9F3-4B2B-985A-EF6F79864240}.Debug|x64.ActiveCfg = Debug|x64
+		{A450FDCA-E9F3-4B2B-985A-EF6F79864240}.Debug|x64.Build.0 = Debug|x64
+		{A450FDCA-E9F3-4B2B-985A-EF6F79864240}.Debug|x86.ActiveCfg = Debug|Win32
+		{A450FDCA-E9F3-4B2B-985A-EF6F79864240}.Debug|x86.Build.0 = Debug|Win32
+		{A450FDCA-E9F3-4B2B-985A-EF6F79864240}.Release|x64.ActiveCfg = Release|x64
+		{A450FDCA-E9F3-4B2B-985A-EF6F79864240}.Release|x64.Build.0 = Release|x64
+		{A450FDCA-E9F3-4B2B-985A-EF6F79864240}.Release|x86.ActiveCfg = Release|Win32
+		{A450FDCA-E9F3-4B2B-985A-EF6F79864240}.Release|x86.Build.0 = Release|Win32
+		{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}.Debug|x64.ActiveCfg = Debug|x64
+		{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}.Debug|x64.Build.0 = Debug|x64
+		{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}.Debug|x86.ActiveCfg = Debug|Win32
+		{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}.Debug|x86.Build.0 = Debug|Win32
+		{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}.Release|x64.ActiveCfg = Release|x64
+		{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}.Release|x64.Build.0 = Release|x64
+		{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}.Release|x86.ActiveCfg = Release|Win32
+		{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}.Release|x86.Build.0 = Release|Win32
+		{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}.Debug|x64.ActiveCfg = Debug|x64
+		{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}.Debug|x64.Build.0 = Debug|x64
+		{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}.Debug|x86.ActiveCfg = Debug|Win32
+		{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}.Debug|x86.Build.0 = Debug|Win32
+		{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}.Release|x64.ActiveCfg = Release|x64
+		{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}.Release|x64.Build.0 = Release|x64
+		{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}.Release|x86.ActiveCfg = Release|Win32
+		{2DB73CD4-AEEA-4DFE-90B2-FFB932D50D3B}.Release|x86.Build.0 = Release|Win32
+		{F52BA6E1-3468-49EA-B54B-872877C67624}.Debug|x64.ActiveCfg = Debug|x64
+		{F52BA6E1-3468-49EA-B54B-872877C67624}.Debug|x64.Build.0 = Debug|x64
+		{F52BA6E1-3468-49EA-B54B-872877C67624}.Debug|x86.ActiveCfg = Debug|Win32
+		{F52BA6E1-3468-49EA-B54B-872877C67624}.Debug|x86.Build.0 = Debug|Win32
+		{F52BA6E1-3468-49EA-B54B-872877C67624}.Release|x64.ActiveCfg = Release|x64
+		{F52BA6E1-3468-49EA-B54B-872877C67624}.Release|x64.Build.0 = Release|x64
+		{F52BA6E1-3468-49EA-B54B-872877C67624}.Release|x86.ActiveCfg = Release|Win32
+		{F52BA6E1-3468-49EA-B54B-872877C67624}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

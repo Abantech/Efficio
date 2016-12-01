@@ -48,3 +48,9 @@
 /Core/CSharp/bin/Debug
 /Core/CPP/TestCPPProject/x64/Debug
 /Core/CPP/doc
+/Core/doc
+/Integration/Efficio.Net/obj/Debug
+/Plugins/Sensors/LeapMotion/doc/html
+/Plugins/Sensors/RealSense/doc/html
+/Runtime/Debug
+/Runtime/doc/html

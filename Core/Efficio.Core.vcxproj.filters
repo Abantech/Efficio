@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Events">
+      <UniqueIdentifier>{d4222975-3c79-4bb8-b6eb-0003ce1b3d60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{e2796818-d145-455a-94f3-003670040c63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Positional">
+      <UniqueIdentifier>{42476e74-84f8-497a-9f0d-8672d3a79739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models">
+      <UniqueIdentifier>{cfb1883d-0989-4529-94dd-3e200e48f56f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\Body">
+      <UniqueIdentifier>{562d5f1b-97af-4fa3-a17d-60bfc324a2ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InputRecognition">
+      <UniqueIdentifier>{808e2241-c85c-4f03-a3cb-4af530c9b120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InputRecognition\Body">
+      <UniqueIdentifier>{d735f0a5-9725-4ae2-b180-8bda2a99a498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InputRecognition\Body\Hands">
+      <UniqueIdentifier>{3a6a9aa2-7fcf-484b-b8dc-144d95b22171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sensors">
+      <UniqueIdentifier>{08cb2ed2-0d7e-414f-a6bc-3f6829ef68bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data\Body">
+      <UniqueIdentifier>{2a5d5a11-bff5-4652-878b-0174f4d1d96a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Documentation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HandData.h">
+      <Filter>Header Files\Data\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkeletalData.h">
+      <Filter>Header Files\Data\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Altitude.h">
+      <Filter>Header Files\Data\Positional</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Location.h">
+      <Filter>Header Files\Data\Positional</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Data.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataType.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventType.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OnStart.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HandRecognitionProcessor.h">
+      <Filter>Header Files\InputRecognition\Body\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pinch.h">
+      <Filter>Header Files\InputRecognition\Body\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PinchDetector.h">
+      <Filter>Header Files\InputRecognition\Body\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SingleHandGesture.h">
+      <Filter>Header Files\InputRecognition\Body\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SingleHandGestureDetector.h">
+      <Filter>Header Files\InputRecognition\Body\Hands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ContinuousGesture.h">
+      <Filter>Header Files\InputRecognition</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DiscreteGesture.h">
+      <Filter>Header Files\InputRecognition</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Gesture.h">
+      <Filter>Header Files\InputRecognition</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GestureState.h">
+      <Filter>Header Files\InputRecognition</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GestureType.h">
+      <Filter>Header Files\InputRecognition</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InputRecognitionEngine.h">
+      <Filter>Header Files\InputRecognition</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RecognitionProcessor.h">
+      <Filter>Header Files\InputRecognition</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Arm.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Body.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BodySide.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bone.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoneTypes.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Face.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Finger.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FingerType.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hand.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Head.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Joint.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JointType.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Leg.h">
+      <Filter>Header Files\Models\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sensor.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SensorStatus.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrackingType.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\README.md" />
+    <None Include="src\RuntimeCSharp.i" />
+    <None Include="src\RuntimeJava.i" />
+    <None Include="src\Efficio.i" />
+    <None Include="resources\default.doxygen">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ContinuousGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SingleHandGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HandRecognitionProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InputRecognitionEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SkeletalData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PinchDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pinch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Finger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DiscreteGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Joint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Gesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OnStart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RecognitionProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HandData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Location.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
