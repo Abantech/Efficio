@@ -31,6 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="default.doxygen" />
+    <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}</ProjectGuid>

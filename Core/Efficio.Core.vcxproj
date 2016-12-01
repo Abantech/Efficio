@@ -190,9 +190,6 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="src\Altitude.h" />
     <ClInclude Include="src\Arm.h" />
     <ClInclude Include="src\Body.h" />
@@ -236,10 +233,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\default.doxygen" />
-    <None Include="src\Efficio.i" />
     <None Include="src\README.md" />
-    <None Include="src\RuntimeCSharp.i" />
-    <None Include="src\RuntimeJava.i" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ContinuousGesture.cpp" />

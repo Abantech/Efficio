@@ -45,9 +45,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="src\Frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -170,11 +167,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\README.md" />
-    <None Include="src\RuntimeCSharp.i" />
-    <None Include="src\RuntimeJava.i" />
-    <None Include="src\Efficio.i" />
     <None Include="resources\default.doxygen">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="src\README.md">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

@@ -213,7 +213,7 @@ EXIT 0</Command>
     <ProjectReference Include="..\Core\Efficio.Core.vcxproj">
       <Project>{a450fdca-e9f3-4b2b-985a-ef6f79864240}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Plugins\Sensors\Kinect\Efficio.Kinect\Efficio.Kinect.vcxproj">
+    <ProjectReference Include="..\Plugins\Sensors\Kinect\Efficio.Kinect.vcxproj">
       <Project>{34c7fd5e-08f0-4877-be74-7f789014bfba}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Plugins\Sensors\LeapMotion\Efficio.LeapMotion.vcxproj">
@@ -224,6 +224,7 @@ EXIT 0</Command>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="resources\default.doxygen" />
     <None Include="resources\Efficio.i" />
     <None Include="resources\RuntimeCSharp.i" />

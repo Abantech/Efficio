@@ -184,6 +184,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="resources\default.doxygen" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

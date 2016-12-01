@@ -54,3 +54,5 @@
 /Plugins/Sensors/RealSense/doc/html
 /Runtime/Debug
 /Runtime/doc/html
+/Plugins/Sensors/Kinect/doc/html
+/Plugins/Sensors/Kinect/x64/Debug
