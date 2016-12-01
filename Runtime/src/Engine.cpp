@@ -1,12 +1,14 @@
 #include "Engine.h"
 #include "LeapMotion.h"
 #include "RealSense.h"
+#include "Kinect.h"
 
 namespace Efficio {
 	Engine::Engine() : started(false), frameID(1)
 	{
 		sensors.push_back(new Sensors::RealSense());
 		sensors.push_back(new Sensors::Body::LeapMotion());
+		sensors.push_back(new Sensors::Body::Kinect());
 	}
 
 	Engine::~Engine()
