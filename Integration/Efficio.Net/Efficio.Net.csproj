@@ -74,32 +74,41 @@
   <ItemGroup>
     <Content Include="..\..\Debug\Efficio.Core.dll">
       <Link>dependencies\Efficio.Core.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\Debug\Efficio.LeapMotion.dll">
       <Link>Dependencies\Efficio.LeapMotion.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\Debug\Efficio.RealSense.dll">
       <Link>Dependencies\Efficio.RealSense.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\Debug\Efficio.Runtime.dll">
       <Link>dependencies\Efficio.Runtime.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\Debug\Leap.dll">
       <Link>Dependencies\Leap.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Debug\libpxc.lib">
       <Link>Dependencies\libpxc.lib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\..\Debug\libpxcmd.lib">
       <Link>Dependencies\libpxcmd.lib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\..\Debug\libpxcmd_d.lib">
       <Link>Dependencies\libpxcmd_d.lib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\..\Debug\libpxc_d.lib">
       <Link>Dependencies\libpxc_d.lib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
