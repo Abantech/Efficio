@@ -14,15 +14,15 @@ namespace Efficio
 	{
 		namespace Internal
 		{
-			/// Event that is raised when the Efficio system starts.
-			extern class DLLEXPORT OnStart : public Event
+			extern class DLLEXPORT EfficioStarted : public Events::Event
 			{
 			public:
-				OnStart();
-				~OnStart();
+				EfficioStarted();
+				~EfficioStarted();
 
 				// Inherited via Event
-				virtual Efficio::Events::EventType GetEventType() override;
+				virtual Events::EventType GetEventType() override;
+
 			};
 		}
 	}

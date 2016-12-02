@@ -21,6 +21,9 @@
     <ClInclude Include="src\HistoricalFrameCollection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\EfficioStarted.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Engine.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\RuntimeJava_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EfficioStarted.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

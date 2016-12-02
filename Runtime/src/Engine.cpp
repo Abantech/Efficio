@@ -3,6 +3,9 @@
 #include "RealSense.h"
 #include "Kinect.h"
 
+// Events
+#include "EfficioStarted.h"
+
 namespace Efficio {
 	Engine::Engine() : started(false), frameID(1)
 	{
@@ -15,9 +18,11 @@ namespace Efficio {
 	{
 	}
 
-	void Engine::Start()
+	Frame Engine::Start()
 	{
-		// TODO add OnStarted event
+		Frame startFrame;
+
+		startFrame.AddEvent(std::shared_ptr<Events::Event>(new Events::Internal::EfficioStarted()));
 
 		// TODO execute OnStart actions
 
@@ -27,6 +32,10 @@ namespace Efficio {
 			sensors[i]->Connect();
 			// TODO add Device Connected event
 		}
+
+		historicalFrames.AddFrame(std::make_shared<Frame>(startFrame));
+
+		return startFrame;
 	}
 
 	std::shared_ptr<Efficio::Frame> Engine::GetFrame()
@@ -58,6 +67,9 @@ namespace Efficio {
 		}
 
 		// TODO execute AfterFrameProcess actions
+
+		// Save frame
+		historicalFrames.AddFrame(std::make_shared<Frame>(frame));
 
 		return frame;
 	}

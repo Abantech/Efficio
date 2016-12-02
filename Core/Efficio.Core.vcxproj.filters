@@ -78,9 +78,6 @@
     <ClInclude Include="src\EventType.h">
       <Filter>Header Files\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\OnStart.h">
-      <Filter>Header Files\Events</Filter>
-    </ClInclude>
     <ClInclude Include="src\HandRecognitionProcessor.h">
       <Filter>Header Files\InputRecognition\Body\Hands</Filter>
     </ClInclude>
@@ -223,9 +220,6 @@
     <ClCompile Include="src\Vector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\OnStart.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\RecognitionProcessor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -233,9 +227,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Location.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MainPage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

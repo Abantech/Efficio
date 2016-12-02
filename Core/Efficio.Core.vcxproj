@@ -219,7 +219,6 @@
     <ClInclude Include="src\JointType.h" />
     <ClInclude Include="src\Leg.h" />
     <ClInclude Include="src\Location.h" />
-    <ClInclude Include="src\OnStart.h" />
     <ClInclude Include="src\Pinch.h" />
     <ClInclude Include="src\PinchDetector.h" />
     <ClInclude Include="src\RecognitionProcessor.h" />
@@ -248,8 +247,6 @@
     <ClCompile Include="src\InputRecognitionEngine.cpp" />
     <ClCompile Include="src\Joint.cpp" />
     <ClCompile Include="src\Location.cpp" />
-    <ClCompile Include="src\MainPage.cpp" />
-    <ClCompile Include="src\OnStart.cpp" />
     <ClCompile Include="src\Pinch.cpp" />
     <ClCompile Include="src\PinchDetector.cpp" />
     <ClCompile Include="src\RecognitionProcessor.cpp" />

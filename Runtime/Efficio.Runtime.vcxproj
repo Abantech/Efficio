@@ -223,10 +223,12 @@ EXIT 0</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\EfficioStarted.h" />
     <ClInclude Include="src\Engine.h" />
     <ClInclude Include="src\HistoricalFrameCollection.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\EfficioStarted.cpp" />
     <ClCompile Include="src\Engine.cpp" />
     <ClCompile Include="src\HistoricalFrameCollection.cpp" />
     <ClCompile Include="src\RuntimeCSharp_wrap.cxx" />

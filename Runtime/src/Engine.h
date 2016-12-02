@@ -26,19 +26,19 @@ extern "C"
 			Engine();
 			~Engine();
 
-			void Start();
+			Frame Start();
 
 			/// Gets the current {@link Efficio::EfficioFrame frame} from the runtime.
 			/// @return the current frame.
-			std::shared_ptr<Efficio::Frame> GetFrame();
+			std::shared_ptr<Frame> GetFrame();
 
 			/// Gets the historical {@link Efficio::EfficioFrame frame} from the runtime.
 			/// @return the current frame.
-			std::shared_ptr<Efficio::Frame> GetFrame(int count);
+			std::shared_ptr<Frame> GetFrame(int count);
 
 		private:
 			bool started;
-			std::vector<Efficio::Sensors::Sensor*> sensors;
+			std::vector<Sensors::Sensor*> sensors;
 			InputRecognition::InputRecognitionEngine ire;
 			HistoricalFrameCollection historicalFrames;
 			int frameID;
