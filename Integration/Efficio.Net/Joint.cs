@@ -32,7 +32,7 @@ public class Joint : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioPINVOKE.delete_Joint(swigCPtr);
+          EfficioRuntimePINVOKE.delete_Joint(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,33 +40,33 @@ public class Joint : global::System.IDisposable {
     }
   }
 
-  public Joint() : this(EfficioPINVOKE.new_Joint__SWIG_0(), true) {
+  public Joint() : this(EfficioRuntimePINVOKE.new_Joint__SWIG_0(), true) {
   }
 
-  public Joint(Vector3 position, JointType type) : this(EfficioPINVOKE.new_Joint__SWIG_1(Vector3.getCPtr(position), (int)type), true) {
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public Joint(Vector3 position, JointType type) : this(EfficioRuntimePINVOKE.new_Joint__SWIG_1(Vector3.getCPtr(position), (int)type), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public Joint(Vector3 position, JointType type, float confidence) : this(EfficioPINVOKE.new_Joint__SWIG_2(Vector3.getCPtr(position), (int)type, confidence), true) {
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public Joint(Vector3 position, JointType type, float confidence) : this(EfficioRuntimePINVOKE.new_Joint__SWIG_2(Vector3.getCPtr(position), (int)type, confidence), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public bool Valid {
     set {
-      EfficioPINVOKE.Joint_Valid_set(swigCPtr, value);
+      EfficioRuntimePINVOKE.Joint_Valid_set(swigCPtr, value);
     } 
     get {
-      bool ret = EfficioPINVOKE.Joint_Valid_get(swigCPtr);
+      bool ret = EfficioRuntimePINVOKE.Joint_Valid_get(swigCPtr);
       return ret;
     } 
   }
 
   public Vector3 Position {
     set {
-      EfficioPINVOKE.Joint_Position_set(swigCPtr, Vector3.getCPtr(value));
+      EfficioRuntimePINVOKE.Joint_Position_set(swigCPtr, Vector3.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Joint_Position_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Joint_Position_get(swigCPtr);
       Vector3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new Vector3(cPtr, false);
       return ret;
     } 
@@ -74,39 +74,39 @@ public class Joint : global::System.IDisposable {
 
   public JointType Type {
     set {
-      EfficioPINVOKE.Joint_Type_set(swigCPtr, (int)value);
+      EfficioRuntimePINVOKE.Joint_Type_set(swigCPtr, (int)value);
     } 
     get {
-      JointType ret = (JointType)EfficioPINVOKE.Joint_Type_get(swigCPtr);
+      JointType ret = (JointType)EfficioRuntimePINVOKE.Joint_Type_get(swigCPtr);
       return ret;
     } 
   }
 
   public float Confidence {
     set {
-      EfficioPINVOKE.Joint_Confidence_set(swigCPtr, value);
+      EfficioRuntimePINVOKE.Joint_Confidence_set(swigCPtr, value);
     } 
     get {
-      float ret = EfficioPINVOKE.Joint_Confidence_get(swigCPtr);
+      float ret = EfficioRuntimePINVOKE.Joint_Confidence_get(swigCPtr);
       return ret;
     } 
   }
 
   public JointCollection ProximalJoints(Joint joint) {
-    JointCollection ret = new JointCollection(EfficioPINVOKE.Joint_ProximalJoints(swigCPtr, Joint.getCPtr(joint)), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    JointCollection ret = new JointCollection(EfficioRuntimePINVOKE.Joint_ProximalJoints(swigCPtr, Joint.getCPtr(joint)), true);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public JointCollection DistalJoints(Joint joint) {
-    JointCollection ret = new JointCollection(EfficioPINVOKE.Joint_DistalJoints(swigCPtr, Joint.getCPtr(joint)), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    JointCollection ret = new JointCollection(EfficioRuntimePINVOKE.Joint_DistalJoints(swigCPtr, Joint.getCPtr(joint)), true);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public float DistanceTo(Joint joint) {
-    float ret = EfficioPINVOKE.Joint_DistanceTo(swigCPtr, Joint.getCPtr(joint));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    float ret = EfficioRuntimePINVOKE.Joint_DistanceTo(swigCPtr, Joint.getCPtr(joint));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

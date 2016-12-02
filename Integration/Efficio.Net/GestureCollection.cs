@@ -34,7 +34,7 @@ public class GestureCollection : global::System.IDisposable, global::System.Coll
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioPINVOKE.delete_GestureCollection(swigCPtr);
+          EfficioRuntimePINVOKE.delete_GestureCollection(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -201,109 +201,109 @@ public class GestureCollection : global::System.IDisposable, global::System.Coll
   }
 
   public void Clear() {
-    EfficioPINVOKE.GestureCollection_Clear(swigCPtr);
+    EfficioRuntimePINVOKE.GestureCollection_Clear(swigCPtr);
   }
 
   public void Add(Gesture x) {
-    EfficioPINVOKE.GestureCollection_Add(swigCPtr, Gesture.getCPtr(x));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_Add(swigCPtr, Gesture.getCPtr(x));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = EfficioPINVOKE.GestureCollection_size(swigCPtr);
+    uint ret = EfficioRuntimePINVOKE.GestureCollection_size(swigCPtr);
     return ret;
   }
 
   private uint capacity() {
-    uint ret = EfficioPINVOKE.GestureCollection_capacity(swigCPtr);
+    uint ret = EfficioRuntimePINVOKE.GestureCollection_capacity(swigCPtr);
     return ret;
   }
 
   private void reserve(uint n) {
-    EfficioPINVOKE.GestureCollection_reserve(swigCPtr, n);
+    EfficioRuntimePINVOKE.GestureCollection_reserve(swigCPtr, n);
   }
 
-  public GestureCollection() : this(EfficioPINVOKE.new_GestureCollection__SWIG_0(), true) {
+  public GestureCollection() : this(EfficioRuntimePINVOKE.new_GestureCollection__SWIG_0(), true) {
   }
 
-  public GestureCollection(GestureCollection other) : this(EfficioPINVOKE.new_GestureCollection__SWIG_1(GestureCollection.getCPtr(other)), true) {
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public GestureCollection(GestureCollection other) : this(EfficioRuntimePINVOKE.new_GestureCollection__SWIG_1(GestureCollection.getCPtr(other)), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public GestureCollection(int capacity) : this(EfficioPINVOKE.new_GestureCollection__SWIG_2(capacity), true) {
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public GestureCollection(int capacity) : this(EfficioRuntimePINVOKE.new_GestureCollection__SWIG_2(capacity), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private Gesture getitemcopy(int index) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.GestureCollection_getitemcopy(swigCPtr, index);
+    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.GestureCollection_getitemcopy(swigCPtr, index);
     Gesture ret = (cPtr == global::System.IntPtr.Zero) ? null : new Gesture(cPtr, true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private Gesture getitem(int index) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.GestureCollection_getitem(swigCPtr, index);
+    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.GestureCollection_getitem(swigCPtr, index);
     Gesture ret = (cPtr == global::System.IntPtr.Zero) ? null : new Gesture(cPtr, true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, Gesture val) {
-    EfficioPINVOKE.GestureCollection_setitem(swigCPtr, index, Gesture.getCPtr(val));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_setitem(swigCPtr, index, Gesture.getCPtr(val));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddRange(GestureCollection values) {
-    EfficioPINVOKE.GestureCollection_AddRange(swigCPtr, GestureCollection.getCPtr(values));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_AddRange(swigCPtr, GestureCollection.getCPtr(values));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public GestureCollection GetRange(int index, int count) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.GestureCollection_GetRange(swigCPtr, index, count);
+    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.GestureCollection_GetRange(swigCPtr, index, count);
     GestureCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new GestureCollection(cPtr, true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Insert(int index, Gesture x) {
-    EfficioPINVOKE.GestureCollection_Insert(swigCPtr, index, Gesture.getCPtr(x));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_Insert(swigCPtr, index, Gesture.getCPtr(x));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void InsertRange(int index, GestureCollection values) {
-    EfficioPINVOKE.GestureCollection_InsertRange(swigCPtr, index, GestureCollection.getCPtr(values));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_InsertRange(swigCPtr, index, GestureCollection.getCPtr(values));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveAt(int index) {
-    EfficioPINVOKE.GestureCollection_RemoveAt(swigCPtr, index);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_RemoveAt(swigCPtr, index);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void RemoveRange(int index, int count) {
-    EfficioPINVOKE.GestureCollection_RemoveRange(swigCPtr, index, count);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_RemoveRange(swigCPtr, index, count);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public static GestureCollection Repeat(Gesture value, int count) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.GestureCollection_Repeat(Gesture.getCPtr(value), count);
+    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.GestureCollection_Repeat(Gesture.getCPtr(value), count);
     GestureCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new GestureCollection(cPtr, true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void Reverse() {
-    EfficioPINVOKE.GestureCollection_Reverse__SWIG_0(swigCPtr);
+    EfficioRuntimePINVOKE.GestureCollection_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    EfficioPINVOKE.GestureCollection_Reverse__SWIG_1(swigCPtr, index, count);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_Reverse__SWIG_1(swigCPtr, index, count);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void SetRange(int index, GestureCollection values) {
-    EfficioPINVOKE.GestureCollection_SetRange(swigCPtr, index, GestureCollection.getCPtr(values));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.GestureCollection_SetRange(swigCPtr, index, GestureCollection.getCPtr(values));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }

@@ -32,7 +32,7 @@ public class Finger : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioPINVOKE.delete_Finger(swigCPtr);
+          EfficioRuntimePINVOKE.delete_Finger(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,19 +40,19 @@ public class Finger : global::System.IDisposable {
     }
   }
 
-  public Finger() : this(EfficioPINVOKE.new_Finger__SWIG_0(), true) {
+  public Finger() : this(EfficioRuntimePINVOKE.new_Finger__SWIG_0(), true) {
   }
 
-  public Finger(FingerType fingerType, bool isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip) : this(EfficioPINVOKE.new_Finger__SWIG_1((int)fingerType, isExtended, length, Joint.getCPtr(tip), Joint.getCPtr(dip), Joint.getCPtr(mcp), Joint.getCPtr(pip)), true) {
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public Finger(FingerType fingerType, bool isExtended, float length, Joint tip, Joint dip, Joint mcp, Joint pip) : this(EfficioRuntimePINVOKE.new_Finger__SWIG_1((int)fingerType, isExtended, length, Joint.getCPtr(tip), Joint.getCPtr(dip), Joint.getCPtr(mcp), Joint.getCPtr(pip)), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public Joint Tip {
     set {
-      EfficioPINVOKE.Finger_Tip_set(swigCPtr, Joint.getCPtr(value));
+      EfficioRuntimePINVOKE.Finger_Tip_set(swigCPtr, Joint.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_Tip_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Finger_Tip_get(swigCPtr);
       Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
       return ret;
     } 
@@ -60,10 +60,10 @@ public class Finger : global::System.IDisposable {
 
   public Joint DIP {
     set {
-      EfficioPINVOKE.Finger_DIP_set(swigCPtr, Joint.getCPtr(value));
+      EfficioRuntimePINVOKE.Finger_DIP_set(swigCPtr, Joint.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_DIP_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Finger_DIP_get(swigCPtr);
       Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
       return ret;
     } 
@@ -71,10 +71,10 @@ public class Finger : global::System.IDisposable {
 
   public Joint MCP {
     set {
-      EfficioPINVOKE.Finger_MCP_set(swigCPtr, Joint.getCPtr(value));
+      EfficioRuntimePINVOKE.Finger_MCP_set(swigCPtr, Joint.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_MCP_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Finger_MCP_get(swigCPtr);
       Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
       return ret;
     } 
@@ -82,10 +82,10 @@ public class Finger : global::System.IDisposable {
 
   public Joint PIP {
     set {
-      EfficioPINVOKE.Finger_PIP_set(swigCPtr, Joint.getCPtr(value));
+      EfficioRuntimePINVOKE.Finger_PIP_set(swigCPtr, Joint.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Finger_PIP_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Finger_PIP_get(swigCPtr);
       Joint ret = (cPtr == global::System.IntPtr.Zero) ? null : new Joint(cPtr, false);
       return ret;
     } 
@@ -93,40 +93,40 @@ public class Finger : global::System.IDisposable {
 
   public bool Valid {
     set {
-      EfficioPINVOKE.Finger_Valid_set(swigCPtr, value);
+      EfficioRuntimePINVOKE.Finger_Valid_set(swigCPtr, value);
     } 
     get {
-      bool ret = EfficioPINVOKE.Finger_Valid_get(swigCPtr);
+      bool ret = EfficioRuntimePINVOKE.Finger_Valid_get(swigCPtr);
       return ret;
     } 
   }
 
   public FingerType FingerType {
     set {
-      EfficioPINVOKE.Finger_FingerType_set(swigCPtr, (int)value);
+      EfficioRuntimePINVOKE.Finger_FingerType_set(swigCPtr, (int)value);
     } 
     get {
-      FingerType ret = (FingerType)EfficioPINVOKE.Finger_FingerType_get(swigCPtr);
+      FingerType ret = (FingerType)EfficioRuntimePINVOKE.Finger_FingerType_get(swigCPtr);
       return ret;
     } 
   }
 
   public bool IsExtended {
     set {
-      EfficioPINVOKE.Finger_IsExtended_set(swigCPtr, value);
+      EfficioRuntimePINVOKE.Finger_IsExtended_set(swigCPtr, value);
     } 
     get {
-      bool ret = EfficioPINVOKE.Finger_IsExtended_get(swigCPtr);
+      bool ret = EfficioRuntimePINVOKE.Finger_IsExtended_get(swigCPtr);
       return ret;
     } 
   }
 
   public float Length {
     set {
-      EfficioPINVOKE.Finger_Length_set(swigCPtr, value);
+      EfficioRuntimePINVOKE.Finger_Length_set(swigCPtr, value);
     } 
     get {
-      float ret = EfficioPINVOKE.Finger_Length_get(swigCPtr);
+      float ret = EfficioRuntimePINVOKE.Finger_Length_get(swigCPtr);
       return ret;
     } 
   }

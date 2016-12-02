@@ -32,7 +32,7 @@ public class Engine : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioPINVOKE.delete_Engine(swigCPtr);
+          EfficioRuntimePINVOKE.delete_Engine(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,21 +40,21 @@ public class Engine : global::System.IDisposable {
     }
   }
 
-  public Engine() : this(EfficioPINVOKE.new_Engine(), true) {
+  public Engine() : this(EfficioRuntimePINVOKE.new_Engine(), true) {
   }
 
   public void Start() {
-    EfficioPINVOKE.Engine_Start(swigCPtr);
+    EfficioRuntimePINVOKE.Engine_Start(swigCPtr);
   }
 
   public Frame GetFrame() {
-    global::System.IntPtr cPtr = EfficioPINVOKE.Engine_GetFrame__SWIG_0(swigCPtr);
+    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Engine_GetFrame__SWIG_0(swigCPtr);
     Frame ret = (cPtr == global::System.IntPtr.Zero) ? null : new Frame(cPtr, true);
     return ret;
   }
 
   public Frame GetFrame(int count) {
-    global::System.IntPtr cPtr = EfficioPINVOKE.Engine_GetFrame__SWIG_1(swigCPtr, count);
+    global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Engine_GetFrame__SWIG_1(swigCPtr, count);
     Frame ret = (cPtr == global::System.IntPtr.Zero) ? null : new Frame(cPtr, true);
     return ret;
   }

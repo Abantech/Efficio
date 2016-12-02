@@ -1,4 +1,4 @@
-%module Efficio
+%module EfficioRuntime
  %{
 
  %}

@@ -56,3 +56,6 @@
 /Runtime/doc/html
 /Plugins/Sensors/Kinect/doc/html
 /Plugins/Sensors/Kinect/x64/Debug
+/Integration/Efficio.Net/Efficio.Net.Experimentation/bin/x64/Debug
+/Integration/Efficio.Net/Efficio.Net.Experimentation/obj
+/Integration/Efficio.Net/obj/x64/Debug

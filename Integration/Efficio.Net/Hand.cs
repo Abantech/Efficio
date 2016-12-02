@@ -32,7 +32,7 @@ public class Hand : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioPINVOKE.delete_Hand(swigCPtr);
+          EfficioRuntimePINVOKE.delete_Hand(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,52 +40,52 @@ public class Hand : global::System.IDisposable {
     }
   }
 
-  public Hand(BodySide side, FingerCollection fingers, float confidence) : this(EfficioPINVOKE.new_Hand__SWIG_0((int)side, FingerCollection.getCPtr(fingers), confidence), true) {
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public Hand(BodySide side, FingerCollection fingers, float confidence) : this(EfficioRuntimePINVOKE.new_Hand__SWIG_0((int)side, FingerCollection.getCPtr(fingers), confidence), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public Hand(BodySide side, FingerCollection fingers) : this(EfficioPINVOKE.new_Hand__SWIG_1((int)side, FingerCollection.getCPtr(fingers)), true) {
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public Hand(BodySide side, FingerCollection fingers) : this(EfficioRuntimePINVOKE.new_Hand__SWIG_1((int)side, FingerCollection.getCPtr(fingers)), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public BodySide Side {
     set {
-      EfficioPINVOKE.Hand_Side_set(swigCPtr, (int)value);
+      EfficioRuntimePINVOKE.Hand_Side_set(swigCPtr, (int)value);
     } 
     get {
-      BodySide ret = (BodySide)EfficioPINVOKE.Hand_Side_get(swigCPtr);
+      BodySide ret = (BodySide)EfficioRuntimePINVOKE.Hand_Side_get(swigCPtr);
       return ret;
     } 
   }
 
   public float Confidence {
     set {
-      EfficioPINVOKE.Hand_Confidence_set(swigCPtr, value);
+      EfficioRuntimePINVOKE.Hand_Confidence_set(swigCPtr, value);
     } 
     get {
-      float ret = EfficioPINVOKE.Hand_Confidence_get(swigCPtr);
+      float ret = EfficioRuntimePINVOKE.Hand_Confidence_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Source {
     set {
-      EfficioPINVOKE.Hand_Source_set(swigCPtr, value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      EfficioRuntimePINVOKE.Hand_Source_set(swigCPtr, value);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      string ret = EfficioPINVOKE.Hand_Source_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      string ret = EfficioRuntimePINVOKE.Hand_Source_get(swigCPtr);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public FingerCollection Fingers {
     set {
-      EfficioPINVOKE.Hand_Fingers_set(swigCPtr, FingerCollection.getCPtr(value));
+      EfficioRuntimePINVOKE.Hand_Fingers_set(swigCPtr, FingerCollection.getCPtr(value));
     } 
     get {
-      global::System.IntPtr cPtr = EfficioPINVOKE.Hand_Fingers_get(swigCPtr);
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Hand_Fingers_get(swigCPtr);
       FingerCollection ret = (cPtr == global::System.IntPtr.Zero) ? null : new FingerCollection(cPtr, false);
       return ret;
     } 

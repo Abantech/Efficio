@@ -32,7 +32,7 @@ public class Data : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          EfficioPINVOKE.delete_Data(swigCPtr);
+          EfficioRuntimePINVOKE.delete_Data(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,8 +41,8 @@ public class Data : global::System.IDisposable {
   }
 
   public virtual DataType GetDataType() {
-    DataType ret = (DataType)EfficioPINVOKE.Data_GetDataType(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    DataType ret = (DataType)EfficioRuntimePINVOKE.Data_GetDataType(swigCPtr);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

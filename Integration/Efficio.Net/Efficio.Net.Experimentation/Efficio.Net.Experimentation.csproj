@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{373DBE4B-55E5-4319-8A2C-7B296EACC940}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{72B0EA95-43F9-4580-BA2E-10045D61E676}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Efficio.Net</RootNamespace>
-    <AssemblyName>Efficio.Net</AssemblyName>
+    <RootNamespace>Efficio.Net.Experimentation</RootNamespace>
+    <AssemblyName>Efficio.Net.Experimentation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -37,6 +40,7 @@
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -46,6 +50,7 @@
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -58,73 +63,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BodySide.cs" />
-    <Compile Include="Data.cs" />
-    <Compile Include="DataCollection.cs" />
-    <Compile Include="DataType.cs" />
-    <Compile Include="DiscreteGesture.cs" />
-    <Compile Include="Efficio.cs" />
-    <Compile Include="EfficioRuntime.cs" />
-    <Compile Include="EfficioRuntimePINVOKE.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="Event.cs" />
-    <Compile Include="EventCollection.cs" />
-    <Compile Include="EventType.cs" />
-    <Compile Include="Finger.cs" />
-    <Compile Include="FingerCollection.cs" />
-    <Compile Include="FingerType.cs" />
-    <Compile Include="Frame.cs" />
-    <Compile Include="Gesture.cs" />
-    <Compile Include="GestureCollection.cs" />
-    <Compile Include="GestureState.cs" />
-    <Compile Include="GestureType.cs" />
-    <Compile Include="Hand.cs" />
-    <Compile Include="Joint.cs" />
-    <Compile Include="JointCollection.cs" />
-    <Compile Include="JointType.cs" />
-    <Compile Include="Pinch.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Status.cs" />
-    <Compile Include="SWIGTYPE_p_std__time_t.cs" />
-    <Compile Include="SWIGTYPE_p_time_t.cs" />
-    <Compile Include="TrackingType.cs" />
-    <Compile Include="Vector3.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\x64\Debug\Efficio.Core.dll">
-      <Link>Efficio.Core.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Efficio.Kinect.dll">
-      <Link>Efficio.Kinect.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Efficio.LeapMotion.dll">
-      <Link>Efficio.LeapMotion.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Efficio.RealSense.dll">
-      <Link>Efficio.RealSense.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\EfficioRuntime.dll">
-      <Link>EfficioRuntime.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Leap.dll">
-      <Link>Leap.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\x64\Debug\libpxcutils_d.lib">
-      <Link>libpxcutils_d.lib</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\x64\Debug\libpxc_d.lib">
-      <Link>libpxc_d.lib</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\Efficio.Net.csproj">
+      <Project>{373dbe4b-55e5-4319-8a2c-7b296eacc940}</Project>
+      <Name>Efficio.Net</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

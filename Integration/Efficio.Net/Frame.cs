@@ -32,7 +32,7 @@ public class Frame : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          EfficioPINVOKE.delete_Frame(swigCPtr);
+          EfficioRuntimePINVOKE.delete_Frame(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,47 +40,47 @@ public class Frame : global::System.IDisposable {
     }
   }
 
-  public Frame(int ID) : this(EfficioPINVOKE.new_Frame__SWIG_0(ID), true) {
+  public Frame(int ID) : this(EfficioRuntimePINVOKE.new_Frame__SWIG_0(ID), true) {
   }
 
-  public Frame() : this(EfficioPINVOKE.new_Frame__SWIG_1(), true) {
+  public Frame() : this(EfficioRuntimePINVOKE.new_Frame__SWIG_1(), true) {
   }
 
   public DataCollection GetData() {
-    DataCollection ret = new DataCollection(EfficioPINVOKE.Frame_GetData(swigCPtr), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    DataCollection ret = new DataCollection(EfficioRuntimePINVOKE.Frame_GetData(swigCPtr), true);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void AddData(DataCollection data) {
-    EfficioPINVOKE.Frame_AddData(swigCPtr, DataCollection.getCPtr(data));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.Frame_AddData(swigCPtr, DataCollection.getCPtr(data));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void AddFrame(Frame frame) {
-    EfficioPINVOKE.Frame_AddFrame(swigCPtr, Frame.getCPtr(frame));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.Frame_AddFrame(swigCPtr, Frame.getCPtr(frame));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public EventCollection GetEvents() {
-    EventCollection ret = new EventCollection(EfficioPINVOKE.Frame_GetEvents(swigCPtr), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EventCollection ret = new EventCollection(EfficioRuntimePINVOKE.Frame_GetEvents(swigCPtr), true);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   public void AddEvent(Event eventPtr) {
-    EfficioPINVOKE.Frame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.Frame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public int ID {
     set {
-      EfficioPINVOKE.Frame_ID_set(swigCPtr, value);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      EfficioRuntimePINVOKE.Frame_ID_set(swigCPtr, value);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      int ret = EfficioPINVOKE.Frame_ID_get(swigCPtr);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      int ret = EfficioRuntimePINVOKE.Frame_ID_get(swigCPtr);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }

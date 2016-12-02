@@ -1,4 +1,4 @@
-%module Efficio
+%module EfficioRuntime
  %{
 	 /* Includes the header in the wrapper code */
 	#include <memory>
@@ -28,7 +28,7 @@
  %shared_ptr(Efficio::InputRecognition::Gesture);
  %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
  %shared_ptr(Efficio::InputRecognition::Body::Hands::Pinch);
- %shared_ptr( Efficio::Data::Data);
+ %shared_ptr(Efficio::Data::Data);
 
 
  /* Parse the header file to generate wrappers */

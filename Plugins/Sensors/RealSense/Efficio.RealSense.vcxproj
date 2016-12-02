@@ -98,7 +98,8 @@
       <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\*.lib" "$(TargetDir)"</Command>
+      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\libpxc_d.lib" "$(TargetDir)"
+xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\libpxcutils_d.lib" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -118,7 +119,8 @@
       <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\*.lib" "$(TargetDir)"</Command>
+      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\libpxc_d.lib" "$(TargetDir)"
+xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\libpxcutils_d.lib" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,7 +144,8 @@
       <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\*.lib" "$(TargetDir)"</Command>
+      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\libpxc_d.lib" "$(TargetDir)"
+xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\libpxcutils_d.lib" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -166,7 +169,8 @@
       <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\*.lib" "$(TargetDir)"</Command>
+      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\libpxc_d.lib" "$(TargetDir)"
+xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\libpxcutils_d.lib" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

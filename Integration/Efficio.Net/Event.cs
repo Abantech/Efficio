@@ -32,7 +32,7 @@ public class Event : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnBase) {
           swigCMemOwnBase = false;
-          EfficioPINVOKE.delete_Event(swigCPtr);
+          EfficioRuntimePINVOKE.delete_Event(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -42,19 +42,19 @@ public class Event : global::System.IDisposable {
 
   public SWIGTYPE_p_time_t Time {
     set {
-      EfficioPINVOKE.Event_Time_set(swigCPtr, SWIGTYPE_p_time_t.getCPtr(value));
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      EfficioRuntimePINVOKE.Event_Time_set(swigCPtr, SWIGTYPE_p_time_t.getCPtr(value));
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_time_t ret = new SWIGTYPE_p_time_t(EfficioPINVOKE.Event_Time_get(swigCPtr), true);
-      if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+      SWIGTYPE_p_time_t ret = new SWIGTYPE_p_time_t(EfficioRuntimePINVOKE.Event_Time_get(swigCPtr), true);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public virtual EventType GetEventType() {
-    EventType ret = (EventType)EfficioPINVOKE.Event_GetEventType(swigCPtr);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EventType ret = (EventType)EfficioRuntimePINVOKE.Event_GetEventType(swigCPtr);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 

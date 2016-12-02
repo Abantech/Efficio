@@ -34,7 +34,7 @@ public class FingerCollection : global::System.IDisposable, global::System.Colle
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          EfficioPINVOKE.delete_FingerCollection(swigCPtr);
+          EfficioRuntimePINVOKE.delete_FingerCollection(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -181,57 +181,57 @@ public class FingerCollection : global::System.IDisposable, global::System.Colle
     }
   }
 
-  public FingerCollection() : this(EfficioPINVOKE.new_FingerCollection__SWIG_0(), true) {
+  public FingerCollection() : this(EfficioRuntimePINVOKE.new_FingerCollection__SWIG_0(), true) {
   }
 
-  public FingerCollection(FingerCollection other) : this(EfficioPINVOKE.new_FingerCollection__SWIG_1(FingerCollection.getCPtr(other)), true) {
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+  public FingerCollection(FingerCollection other) : this(EfficioRuntimePINVOKE.new_FingerCollection__SWIG_1(FingerCollection.getCPtr(other)), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private uint size() {
-    uint ret = EfficioPINVOKE.FingerCollection_size(swigCPtr);
+    uint ret = EfficioRuntimePINVOKE.FingerCollection_size(swigCPtr);
     return ret;
   }
 
   private bool empty() {
-    bool ret = EfficioPINVOKE.FingerCollection_empty(swigCPtr);
+    bool ret = EfficioRuntimePINVOKE.FingerCollection_empty(swigCPtr);
     return ret;
   }
 
   public void Fill(Finger val) {
-    EfficioPINVOKE.FingerCollection_Fill(swigCPtr, Finger.getCPtr(val));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.FingerCollection_Fill(swigCPtr, Finger.getCPtr(val));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Swap(FingerCollection other) {
-    EfficioPINVOKE.FingerCollection_Swap(swigCPtr, FingerCollection.getCPtr(other));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.FingerCollection_Swap(swigCPtr, FingerCollection.getCPtr(other));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   private Finger getitemcopy(int index) {
-    Finger ret = new Finger(EfficioPINVOKE.FingerCollection_getitemcopy(swigCPtr, index), true);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    Finger ret = new Finger(EfficioRuntimePINVOKE.FingerCollection_getitemcopy(swigCPtr, index), true);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private Finger getitem(int index) {
-    Finger ret = new Finger(EfficioPINVOKE.FingerCollection_getitem(swigCPtr, index), false);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    Finger ret = new Finger(EfficioRuntimePINVOKE.FingerCollection_getitem(swigCPtr, index), false);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
   private void setitem(int index, Finger val) {
-    EfficioPINVOKE.FingerCollection_setitem(swigCPtr, index, Finger.getCPtr(val));
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.FingerCollection_setitem(swigCPtr, index, Finger.getCPtr(val));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public void Reverse() {
-    EfficioPINVOKE.FingerCollection_Reverse__SWIG_0(swigCPtr);
+    EfficioRuntimePINVOKE.FingerCollection_Reverse__SWIG_0(swigCPtr);
   }
 
   public void Reverse(int index, int count) {
-    EfficioPINVOKE.FingerCollection_Reverse__SWIG_1(swigCPtr, index, count);
-    if (EfficioPINVOKE.SWIGPendingException.Pending) throw EfficioPINVOKE.SWIGPendingException.Retrieve();
+    EfficioRuntimePINVOKE.FingerCollection_Reverse__SWIG_1(swigCPtr, index, count);
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
 }
