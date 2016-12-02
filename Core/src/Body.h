@@ -32,10 +32,10 @@ namespace Efficio
 				Head Head;
 
 				/// The arms of the body
-				std::array<Arm, 2> Arms;
+				std::vector<Arm> Arms;
 
 				/// The legs of the body
-				std::array<Leg, 2> Legs;
+				std::vector<Leg> Legs;
 
 				/// The shoulder joint
 				Joint ShoulderCenter;
@@ -46,19 +46,19 @@ namespace Efficio
 				/// The center hip joint
 				Joint HipCenter;
 
-				Bone Neck();
+				//Bone Neck();
 
-				Bone UpperSpine();
+				//Bone UpperSpine();
 
-				Bone LowerSpine();
+				//Bone LowerSpine();
 
 				/// Gets a joint by jointType
-				Joint GetJoint(JointType jointType);
+				//Joint GetJoint(JointType jointType);
 
 				/// Gets a collection of joints by joint type
-				std::vector<Joint> GetJoints(std::vector<JointType> jointTypes);
+				//std::vector<Joint> GetJoints(std::vector<JointType> jointTypes);
 
-				Bone GetBone( BoneType boneType);
+				//Bone GetBone( BoneType boneType);
 			};
 		}
 	}

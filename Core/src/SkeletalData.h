@@ -17,7 +17,7 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			extern class DLLEXPORT SkeletalData : public Data::Data
+			extern class DLLEXPORT SkeletalData : public Data
 			{
 			public:
 				SkeletalData();

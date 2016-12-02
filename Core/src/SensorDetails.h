@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -9,14 +11,15 @@
 
 namespace Efficio
 {
-	namespace Events
+	namespace Sensors
 	{
-		extern enum class DLLEXPORT EventType
+		extern class DLLEXPORT SensorDetails
 		{
-			EfficioStarted,
-			SensorConnected,
-			SensorDisconnected,
-			Pinch,
+		public:
+			SensorDetails();
+			~SensorDetails();
+
+			std::string Name;
 		};
 	}
 }

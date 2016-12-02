@@ -43,6 +43,9 @@
     <Filter Include="Header Files\Data\Body">
       <UniqueIdentifier>{2a5d5a11-bff5-4652-878b-0174f4d1d96a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sensors\Events">
+      <UniqueIdentifier>{cbd71e25-1201-4b59-b081-dbb41b6219cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Frame.h">
@@ -162,6 +165,15 @@
     <ClInclude Include="src\TrackingType.h">
       <Filter>Header Files\Sensors</Filter>
     </ClInclude>
+    <ClInclude Include="src\Connected.h">
+      <Filter>Header Files\Sensors\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SensorDetails.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Disconnected.h">
+      <Filter>Header Files\Sensors\Events</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\default.doxygen">
@@ -227,6 +239,33 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Location.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Connected.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SensorDetails.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Disconnected.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Body.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Leg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Head.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Arm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Face.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
