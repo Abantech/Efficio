@@ -20,7 +20,7 @@ namespace Efficio
 			extern class DLLEXPORT Arm
 			{
 			public:
-				Arm();
+				Arm(Joint shoulder, Joint elbow, Joint wrist, Joint hand);
 				~Arm();
 
 				BodySide Side;

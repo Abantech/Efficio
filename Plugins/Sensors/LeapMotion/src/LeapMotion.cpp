@@ -28,7 +28,7 @@ namespace Efficio
 
 			Sensors::TrackingType LeapMotion::TrackingTypes()
 			{
-				return Sensors::TrackingType();
+				return Sensors::TrackingType::Hand;
 			}
 
 			void LeapMotion::Connect()
@@ -51,12 +51,12 @@ namespace Efficio
 				// Check if new frame is available. If not, return previously calculated frame
 				if (!HasFrame())
 				{
-					return lastEfficioFrame;
+					return LastEfficioFrame;
 				}
+
 
 				// Poll for latest Leap Motion frame
 				lastLeapFrame = controller.frame();
-
 
 				// Convert Leap hands to Efficio hands
 				auto hands = lastLeapFrame.hands();
@@ -77,6 +77,8 @@ namespace Efficio
 				Efficio::Frame frame;
 
 				frame.AddData(data);
+
+				LastEfficioFrame = frame;
 
 				return frame;
 			}

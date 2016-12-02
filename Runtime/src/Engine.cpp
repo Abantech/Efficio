@@ -25,7 +25,6 @@ namespace Efficio {
 		for (size_t i = 0; i < sensors.size(); i++)
 		{
 			sensors[i]->Connect();
-
 			// TODO add Device Connected event
 		}
 	}
@@ -39,9 +38,12 @@ namespace Efficio {
 		// Query sensors for frames
 		for (size_t i = 0; i < sensors.size(); i++)
 		{
-			if (sensors[i]->HasFrame())
+			if (sensors[i]->Status() == Sensors::Status::Connected)
 			{
-				frame->AddFrame(sensors[i]->GetFrame());
+				if (sensors[i]->HasFrame())
+				{
+					frame->AddFrame(sensors[i]->GetFrame());
+				}
 			}
 		}
 
@@ -49,11 +51,11 @@ namespace Efficio {
 
 		// TODO execute BeforeFrameProcess actions
 
-		 auto detectedEvents = ire.ProcessFrame(frame);
-		 for (size_t i = 0; i < detectedEvents.size(); i++)
-		 {
-			 frame->AddEvent(detectedEvents[i]);
-		 }
+		auto detectedEvents = ire.ProcessFrame(frame);
+		for (size_t i = 0; i < detectedEvents.size(); i++)
+		{
+			frame->AddEvent(detectedEvents[i]);
+		}
 
 		// TODO execute AfterFrameProcess actions
 

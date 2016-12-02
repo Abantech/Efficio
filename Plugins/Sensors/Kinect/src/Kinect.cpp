@@ -37,9 +37,28 @@ namespace Efficio
 				return false;
 			}
 
+			/// <summary>
+			/// Gets the frame.
+			/// </summary>
+			/// <returns></returns>
 			Frame Kinect::GetFrame()
 			{
-				return Frame();
+				Frame efficioFrame;
+
+				// Get Kinect Frame
+
+				// For each body					
+					// Build Efficio Body
+
+					// For each joint
+						//Convert joint to Efficio Joint
+						// Populate
+
+				// Add Body to SkeletonData
+
+				// Add data to EfficioFrame
+
+				return efficioFrame;
 			}
 
 			std::string Kinect::GetSource()

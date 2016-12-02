@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Hand.h"
+#include "Body.h"
+#include "Data.h"
 #include <vector>
 #include <memory>
 
@@ -16,17 +17,13 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			extern class DLLEXPORT SkeletalData
+			extern class DLLEXPORT SkeletalData : public Data::Data
 			{
 			public:
 				SkeletalData();
 				~SkeletalData();
 
-				//Hands vector of shared_pointers
-				std::vector<std::shared_ptr <Models::Body::Hand>> HumanHand;
-				//BVHData GetBVHData()
-				//BVHData bvhData
-
+				std::vector<Models::Body::Body> Bodies;
 			};
 		}
 	}
