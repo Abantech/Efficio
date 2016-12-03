@@ -1,211 +1,186 @@
-#include "Engine.h"
-#include <iostream>
-#include "Enumerations.h"
-#include "Vector3.h"
-#include "PinchDetector.h"
-#include  "Leap.h"
+//Step 1: Identify Output System Module variable naming conventions and structure
+//Step 2: Customize mdimmmapgen structures and names for output system
+//Step 3 If Greg and/or James are interested: Build Analytic Tools and graphing
 
+#pragma once
+//Note the multimaps approach might be fashioned to high-performance tracking and analytics, while the class approach might be best fashioned for functionality, such as advanced gaming
+
+#include <unordered_map>
+#include <string>
+#include <array>
+//#include <vector>
+
+//#include "Engine.h" //utility?
+//#include <iostream> //utility?
+//#include "Enumerations.h"
+#include "Vector3.h"
+//#include "PinchDetector.h"
+//#include  "Leap.h"
+
+#if COMPILING_DLL
+#define DLLEXPORT __declspec(dllexport)
+#else
+#define DLLEXPORT __declspec(dllimport)
+#endif
+
+//note the pluses and minuses of the multidimensional multimap approach
+//activities like pinching aren't as appropriate here at present, as compared to the class system. 
+//The class system facilitates pinching. While classless pinching may appear feasible, note maps are classes unto themselves.
+//Map pinching is possible, provided a tailored pinch class using map keys and containers rather than objects
+
+using namespace std;
 
 namespace Efficio {
-	Engine::Engine() : started(false), frameID(1)
-	{
-	}
 
-	Engine::~Engine()
-	{
-		controller->~Controller();
-	}
 
-	void Engine::Start()
+	//fmap(frameID, handside, finger, joint x, joint y, joint z)
+
+	//declaration
+	unordered_multimap<int, unordered_multimap<string, unordered_multimap<string, unordered_multimap<float, unordered_multimap<float, float>>>>> VRmap;
+
+	for (int index = 0; index < hands.count(); ++index)
 	{
-		if (DeviceConfiguration.LeapConfiguration.Enabled)
+
+		Efficio::EfficioHand EHand = EfficioHand::EfficioHand();
+		vector<shared_ptr<EfficioFinger>> handFingers = vector<shared_ptr<EfficioFinger>>();
+		for (int f = 0; f < hands[i].fingers().count; f++)
 		{
-			controller = new Leap::Controller();
-		}
 
-		started = true;
-	}
+			//To populate: iterate through each part adding keys and container values in the engine
 
-	std::shared_ptr<Efficio::EfficioFrame> Engine::GetFrame()
-	{
-		std::shared_ptr<Efficio::EfficioFrame> efficioFrame(new EfficioFrame(frameID++));
-
-		if (started)
-		{
-			if (controller != 0)
+			//add frame number:
+			//add hand side:
+			if (EHand.isLeft())
 			{
-				auto frame = controller->frame();
+				//use Efficio library or, probably better, input device naming conventions, to determine handedness
+				//value names will be customized to output software	
 
-				if (frame.isValid())
+				//next step is matching values to input/output device conventions
+				//value names depend on the depth and compatbility of the middleware
+				//customized multimaps generator a possibility by device
+
+				//add finger name, add joint positions
+
+				switch (hands[i].fingers()[f].type) {
+				case Leap::Finger::TYPE_PINKY:
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"pip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+
+					break;
+
+				case Leap::Finger::TYPE_RING:
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"pip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+
+					break;
+
+				case Leap::Finger::TYPE_MIDDLE:
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"pip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+
+					break;
+
+				case Leap::Finger::TYPE_INDEX:
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"pip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+
+					break;
+
+				case Leap::Finger::TYPE_THUMB:
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+					VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+
+					break;
+				}
+
+				if (Ehand.isRight())
+					//add finger name, add joint positions
 				{
-					auto hands = frame.hands();
 
-					if (hands.count() > 0)
-					{
-						for (size_t i = 0; i < hands.count(); i++)
-						{
-							Efficio::EfficioHand EHand = EfficioHand::EfficioHand();
-							vector<shared_ptr<EfficioFinger>> handFingers = vector<shared_ptr<EfficioFinger>>();
-							for (int f = 0; f < hands[i].fingers().count; f++)
-							{
-								switch (hands[i].fingers()[f].type) {
-								case Leap::Finger::TYPE_THUMB:
-								
-									EfficioFinger thumb = EfficioFinger(Efficio::Body::FingerType::Thumb);
+					switch (hands[i].fingers()[f].type) {
+					case Leap::Finger::TYPE_PINKY:
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"pip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						break;
 
-									//shared_ptr purpose is to optimize memory use, non-agenda topping
-
-									Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-									FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-									DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
-
-									Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-									FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-									DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
-
-									Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-									FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-									DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
-
-									EHand.HandFingers.push_back(thumb);
-
-									break;
-								
-						case Leap::Finger::TYPE_INDEX:
-					
-							EfficioFinger index = EfficioFinger(Efficio::Body::FingerType::Index);
-												
-						Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-						FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-						DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
-
-						Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-						FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-						DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
-
-						Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-						FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-						DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
-
-						EHand.HandFingers.push_back(index);
+					case Leap::Finger::TYPE_RING:
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"pip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
 
 						break;
-					
-						case Leap::Finger::TYPE_MIDDLE:
-					
-						EfficioFinger middle = EfficioFinger(Efficio::Body::FingerType::Middle);
-											
-						Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-						FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-						DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
 
-						Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-						FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-						DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
-
-						Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-						FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-						DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
-								
-						EHand.HandFingers.push_back(middle);
+					case Leap::Finger::TYPE_MIDDLE:
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"pip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
 
 						break;
-					
-						case Leap::Finger::TYPE_RING:
-					
-						EfficioFinger ring = EfficioFinger(Efficio::Body::FingerType::Ring);
-								
-						Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-						FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-						DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
 
-						Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-						FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-						DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
-
-						Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-						FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-						DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
-
-						EHand.HandFingers.push_back(ring);
+					case Leap::Finger::TYPE_INDEX:
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"pip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
 
 						break;
-					
-						case Leap::Finger::TYPE_PINKY:
-					
-						EfficioFinger pinky = EfficioFinger(Efficio::Body::FingerType::Pinky);
 
-						Leap::Vector LeapDIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_DIP);
-						FingerJoint DIPJoint = FingerJoint(Efficio::Body::FingerJointType::DIP);
-						DIPJoint.Position = Vector3(LeapDIPPositionVector.x, LeapDIPPositionVector.y, LeapDIPPositionVector.z);
-
-						Leap::Vector LeapPIPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_PIP);
-						FingerJoint PIPJoint = FingerJoint(Efficio::Body::FingerJointType::PIP);
-						DIPJoint.Position = Vector3(LeapPIPPositionVector.x, LeapPIPPositionVector.y, LeapPIPPositionVector.z);
-
-						Leap::Vector LeapMCPPositionVector = hands[i].fingers()[f].jointPosition(Leap::Finger::JOINT_MCP);
-						FingerJoint MCPJoint = FingerJoint(Efficio::Body::FingerJointType::MCP);
-						DIPJoint.Position = Vector3(LeapMCPPositionVector.x, LeapMCPPositionVector.y, LeapMCPPositionVector.z);
-
-						EHand.HandFingers.push_back(pinky);
+					case Leap::Finger::TYPE_THUMB:
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"dip", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
+						VRMap.insert(frameID, unordered_multimap<"left", unordered_multimap<"pinky", unordered_multimap<"mcp", unordered_multimap<Vector3.x(), unordered_multimap<Vector3.y(), Vector3.z()>>>>>);
 
 						break;
+					}
+
+					//adjustments may include arrays and potentially vectors for portions of the multimap arrangement
+
+					//Array Organization:
+					//int fsf[10000][10000][10000]; //frame-side-finger
+					//int jc[10000][10000][10000][10000]; //joint-coordinates
+
+					//multidimensional vector design:
+					//vector< vector<int> vector<string> vector<string> vector<string> vector<float> vector<float> vector<float> > vrvec;
+					//use switch to iterate likewise
+
+					//Example extension: design a user function to study hand movements, such as remote surgery or surgical training paths
+					//e.g.,
+
+					//Request user input of study parameters to isolate one or a group of nodes
+					//startframe, endframe, hand side, finger
+					//ofstream to output software
+
+					//void graphPath(startframe, endframe, hand, finger, joint, z) { //all paramaters are optional. excluding parameters defaults to all in the 3d scape
 					
-						//Put each EHand into EfficioFrame:
-						EfficioFrame EFrame(f);
-							}
-						}
-															
-								//To do: add constructor to EfficioFinger that uses FingerType
-									//added - finger types are already specified in enumerations as Finger.
-									//we can rename Finger to FingerType, add Finger Types as derived classes of base class Finger, etc.
-															
-								//find bone to find joint position in leap library or other library
-									//would this resolve overspecification?
-										//strong probably
-								//for Leap, Bone JointPosition gives bone
-								//Note JointPosition does not return a Vector3. I think we need a Vector3 (or an equivalent, such as a multimap 
-								//containing arrays of Vector3 equivalents)
-								/*
+						//void graphPathInWindow() {
+							//Step 1: Identify Output Program and Its Specifications to Customize for
+							//direct to display program OR generate own program
+							//fstream to program read file OR create and print to window
+							//transfer data to program storage
+							//direct output program to graph data
+							//x, y, z axis, allow user click-and-drag rotations and scroll-wheel zoom
+							//display frameID and joint coordinates to user
 
-						//will build generalizeable model for specific collection utilization
-							//mod multimap first, based on class diagram UML
-							//multimap is below as altnernative. can select among/between options to optimize for diversified utilities
-							/*
-							#include <unordered_multimap>
 
-							unordered_multimap ARmap<int, unordered_multimap<string, unordered_multimap<string, <unordered_multimap<float, unordered_multimap<float, float>>>>>(); //constructor/declaration
-							~unordered_multimap ARmap(); //deconstructor
-							//ARmap(frame, hand, finger, joint x, joint y, joint z)
+						//};
 
-							*/
+						//void graphPathIn3dScape() {
+							//Identify Output Program and Its Specifications to Customize for
 
-							Efficio::InputRecognition::Human::Hands::PinchDetector detector;
-							detector.Enabled = true;
-							auto pinches = detector.Detect(hands[i]);
-
-							for (size_t j = 0; j < pinches.size(); j++)
-							{
-								efficioFrame->AddEvent(pinches[j]);
+							//direct to output device
+							//transfer data to output device storage
+							//direct output device to display to user
+							//requires compatible data formatting for high-performance data transition
+							//into specialized wrap or bypass wrap with alternative?
+						//};
+				}
+			}
+		}
+	}
 							}
 						}
 					}
 				}
-			}
-		}
-		historicalFrames.AddFrame(efficioFrame);
-		return efficioFrame;
-	}
-
-	std::shared_ptr<Efficio::EfficioFrame> Engine::GetFrame(int count)
-	{
-		auto tempFrame = historicalFrames.GetFrame(count);
-
-		if (tempFrame)
-		{
-			return historicalFrames.GetFrame(count);
-		}
-
-		return NULL;
-	}
-}

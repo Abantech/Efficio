@@ -1,0 +1,23 @@
+This is the documentation for the multidimensional multimaps approach
+
+This approach is for tracking nodes, most particularly joints, with a more mathematical than language-based organization
+
+This approach doesn't focus on gestures or UX functions, for example
+
+It can, but isn't designed for that
+
+It's designed for high-performance data analysis, for purposes like surgical training
+
+It doesn't have convenient object names and easy ways for developers to pinpoint data, unlike the class systems
+
+It's fast and best understood by developers who are already familiar with it
+
+This is probably best as a "cold" "specific-generic"
+
+Including it as an alternative engine could work, but might bloat the code, and substract from genericism a bit
+
+This will need a wrapper
+
+Note the possibility of extending multidimensional multimaps to body as a whole, while noting the memory required to store entire body data
+
+Note on current errors: most are probably related to the localized presentation of the nested multimaps structure

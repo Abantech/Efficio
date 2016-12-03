@@ -169,10 +169,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="TestCPPProject.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Efficio.vcxproj">
       <Project>{d94a7785-f8ac-4e36-a04c-bd11ce851dc4}</Project>
     </ProjectReference>

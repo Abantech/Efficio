@@ -30,71 +30,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DeviceConfiguration.cpp">
+    <ClCompile Include="Vector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EfficioFrame.cpp">
+    <ClCompile Include="humanosteo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Event.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LeapConfiguration.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MainPage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Frame.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Gesture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DiscreteGesture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ContinuousGesture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SingleHandGesture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Pinch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PinchDetector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HistoricalFrameCollection.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RuntimeCSharp_wrap.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HandJoint.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FingerJoint.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EfficioFrame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Enumerations.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -106,9 +52,6 @@
     </ClInclude>
     <ClInclude Include="Event.h">
       <Filter>Header Files\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="Frame.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Gesture.h">
       <Filter>Header Files\IRP</Filter>
@@ -128,32 +71,8 @@
     <ClInclude Include="SingleHandGestureDetector.h">
       <Filter>Header Files\IRP\Human\Hands</Filter>
     </ClInclude>
-    <ClInclude Include="HistoricalFrameCollection.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EventType.h">
       <Filter>Header Files\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="EfficioHand.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EfficioFinger.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HandJoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FingerJoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SkeletalData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EfficioBody.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Body.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -161,5 +80,8 @@
     <None Include="RuntimeJava.i" />
     <None Include="README.md" />
     <None Include="Efficio.i" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Documentation_mdimmmaps.txt" />
   </ItemGroup>
 </Project>

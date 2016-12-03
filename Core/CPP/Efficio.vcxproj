@@ -186,50 +186,21 @@ EXIT 0</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ContinuousGesture.cpp" />
-    <ClCompile Include="DeviceConfiguration.cpp" />
-    <ClCompile Include="DiscreteGesture.cpp" />
-    <ClCompile Include="EfficioFrame.cpp" />
     <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="Event.cpp" />
-    <ClCompile Include="FingerJoint.cpp" />
-    <ClCompile Include="Frame.cpp" />
-    <ClCompile Include="Gesture.cpp" />
-    <ClCompile Include="HandJoint.cpp" />
-    <ClCompile Include="HistoricalFrameCollection.cpp" />
-    <ClCompile Include="LeapConfiguration.cpp" />
-    <ClCompile Include="MainPage.cpp" />
-    <ClCompile Include="Pinch.cpp" />
-    <ClCompile Include="PinchDetector.cpp" />
-    <ClCompile Include="RuntimeCSharp_wrap.cxx" />
-    <ClCompile Include="SingleHandGesture.cpp" />
+    <ClCompile Include="humanosteo.cpp" />
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Body.h" />
     <ClInclude Include="ContinuousGesture.h" />
     <ClInclude Include="DeviceConfiguration.h" />
     <ClInclude Include="DiscreteGesture.h" />
-    <ClInclude Include="EfficioBody.h" />
-    <ClInclude Include="EfficioFinger.h" />
-    <ClInclude Include="EfficioFrame.h" />
-    <ClInclude Include="EfficioHand.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="Enumerations.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventType.h" />
-    <ClInclude Include="FingerJoint.h" />
-    <ClInclude Include="Frame.h" />
     <ClInclude Include="Gesture.h" />
-    <ClInclude Include="HandJoint.h" />
-    <ClInclude Include="HistoricalFrameCollection.h" />
     <ClInclude Include="LeapConfiguration.h" />
     <ClInclude Include="Pinch.h" />
     <ClInclude Include="PinchDetector.h" />
     <ClInclude Include="SingleHandGestureDetector.h" />
-    <ClInclude Include="SkeletalData.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +208,9 @@ EXIT 0</Command>
     <None Include="README.md" />
     <None Include="RuntimeCSharp.i" />
     <None Include="RuntimeJava.i" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Documentation_mdimmmaps.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
