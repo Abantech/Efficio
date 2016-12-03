@@ -285,6 +285,7 @@ namespace Efficio
 			std::array<Models::Body::Finger, 5> fingersArray{ fingers.at(0), fingers.at(1), fingers.at(2), fingers.at(3), fingers.at(4) };
 			auto efficioHand = Models::Body::Hand(side, fingersArray);
 			efficioHand.Source = GetSource();
+			efficioHand.ID = hand->QueryUniqueId();
 			return efficioHand;
 		}
 
