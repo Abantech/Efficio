@@ -33,6 +33,8 @@ namespace Efficio
 				/// </summary>
 				float Confidence;
 
+				size_t ID;
+
 				std::string Source;
 
 				/// The fingers of the hand

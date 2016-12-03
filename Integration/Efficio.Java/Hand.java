@@ -59,6 +59,14 @@ public class Hand {
     return EfficioJNI.Hand_Confidence_get(swigCPtr, this);
   }
 
+  public void setID(long value) {
+    EfficioJNI.Hand_ID_set(swigCPtr, this, value);
+  }
+
+  public long getID() {
+    return EfficioJNI.Hand_ID_get(swigCPtr, this);
+  }
+
   public void setSource(String value) {
     EfficioJNI.Hand_Source_set(swigCPtr, this, value);
   }

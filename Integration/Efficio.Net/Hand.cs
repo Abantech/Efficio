@@ -68,6 +68,16 @@ public class Hand : global::System.IDisposable {
     } 
   }
 
+  public uint ID {
+    set {
+      EfficioRuntimePINVOKE.Hand_ID_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = EfficioRuntimePINVOKE.Hand_ID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public string Source {
     set {
       EfficioRuntimePINVOKE.Hand_Source_set(swigCPtr, value);

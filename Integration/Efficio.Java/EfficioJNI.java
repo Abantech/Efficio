@@ -60,6 +60,8 @@ public class EfficioJNI {
   public final static native int Hand_Side_get(long jarg1, Hand jarg1_);
   public final static native void Hand_Confidence_set(long jarg1, Hand jarg1_, float jarg2);
   public final static native float Hand_Confidence_get(long jarg1, Hand jarg1_);
+  public final static native void Hand_ID_set(long jarg1, Hand jarg1_, long jarg2);
+  public final static native long Hand_ID_get(long jarg1, Hand jarg1_);
   public final static native void Hand_Source_set(long jarg1, Hand jarg1_, String jarg2);
   public final static native String Hand_Source_get(long jarg1, Hand jarg1_);
   public final static native void Hand_Fingers_set(long jarg1, Hand jarg1_, long jarg2, FingerCollection jarg2_);

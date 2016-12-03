@@ -341,6 +341,12 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_Confidence_get___")]
   public static extern float Hand_Confidence_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_ID_set___")]
+  public static extern void Hand_ID_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_ID_get___")]
+  public static extern uint Hand_ID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_Source_set___")]
   public static extern void Hand_Source_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 

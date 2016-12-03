@@ -1433,6 +1433,28 @@ SWIGEXPORT float SWIGSTDCALL CSharp_EfficiofNet_Hand_Confidence_get___(void * ja
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Hand_ID_set___(void * jarg1, unsigned long jarg2) {
+  Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
+  size_t arg2 ;
+  
+  arg1 = (Efficio::Models::Body::Hand *)jarg1; 
+  arg2 = (size_t)jarg2; 
+  if (arg1) (arg1)->ID = arg2;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_Hand_ID_get___(void * jarg1) {
+  unsigned long jresult ;
+  Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
+  size_t result;
+  
+  arg1 = (Efficio::Models::Body::Hand *)jarg1; 
+  result =  ((arg1)->ID);
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Hand_Source_set___(void * jarg1, char * jarg2) {
   Efficio::Models::Body::Hand *arg1 = (Efficio::Models::Body::Hand *) 0 ;
   std::string *arg2 = 0 ;
