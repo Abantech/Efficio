@@ -23,7 +23,12 @@ namespace Efficio
 
 			time_t Time;
 
+			size_t ID;
+
 			virtual Efficio::Events::EventType GetEventType() = 0;
+
+		protected:
+			static size_t Event::IdIndex;
 		};
 	}
 }

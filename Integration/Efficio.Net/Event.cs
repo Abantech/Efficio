@@ -52,6 +52,18 @@ public class Event : global::System.IDisposable {
     } 
   }
 
+  public uint ID {
+    set {
+      EfficioRuntimePINVOKE.Event_ID_set(swigCPtr, value);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      uint ret = EfficioRuntimePINVOKE.Event_ID_get(swigCPtr);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
   public virtual EventType GetEventType() {
     EventType ret = (EventType)EfficioRuntimePINVOKE.Event_GetEventType(swigCPtr);
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();

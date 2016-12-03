@@ -43,6 +43,14 @@ public class Event {
     return new SWIGTYPE_p_time_t(EfficioJNI.Event_Time_get(swigCPtr, this), true);
   }
 
+  public void setID(long value) {
+    EfficioJNI.Event_ID_set(swigCPtr, this, value);
+  }
+
+  public long getID() {
+    return EfficioJNI.Event_ID_get(swigCPtr, this);
+  }
+
   public EventType GetEventType() {
     return EventType.swigToEnum(EfficioJNI.Event_GetEventType(swigCPtr, this));
   }

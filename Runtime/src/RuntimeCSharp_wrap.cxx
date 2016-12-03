@@ -1527,6 +1527,34 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Event_Time_get___(void * jarg1)
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Event_ID_set___(void * jarg1, unsigned long jarg2) {
+  Efficio::Events::Event *arg1 = (Efficio::Events::Event *) 0 ;
+  size_t arg2 ;
+  std::shared_ptr< Efficio::Events::Event > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Events::Event > *)jarg1;
+  arg1 = (Efficio::Events::Event *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (size_t)jarg2; 
+  if (arg1) (arg1)->ID = arg2;
+}
+
+
+SWIGEXPORT unsigned long SWIGSTDCALL CSharp_EfficiofNet_Event_ID_get___(void * jarg1) {
+  unsigned long jresult ;
+  Efficio::Events::Event *arg1 = (Efficio::Events::Event *) 0 ;
+  std::shared_ptr< Efficio::Events::Event > *smartarg1 = 0 ;
+  size_t result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Events::Event > *)jarg1;
+  arg1 = (Efficio::Events::Event *)(smartarg1 ? smartarg1->get() : 0); 
+  result =  ((arg1)->ID);
+  jresult = (unsigned long)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Event_GetEventType___(void * jarg1) {
   int jresult ;
   Efficio::Events::Event *arg1 = (Efficio::Events::Event *) 0 ;
