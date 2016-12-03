@@ -1,10 +1,4 @@
 ﻿  humanosteo.cpp
-c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\humanosteo.cpp(445): error C2011: 'Efficio::Body::mandible': 'class' type redefinition
-  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\humanosteo.cpp(54): note: see declaration of 'Efficio::Body::mandible'
-c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\humanosteo.cpp(545): error C2011: 'Efficio::Body::vertebra': 'class' type redefinition
-  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\humanosteo.cpp(130): note: see declaration of 'Efficio::Body::vertebra'
-c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\humanosteo.cpp(770): error C2011: 'Efficio::Body::phalange': 'class' type redefinition
-  c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\humanosteo.cpp(620): note: see declaration of 'Efficio::Body::phalange'
   Engine.cpp
 c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(25): warning C4251: 'Efficio::Vector3::vector': class 'vmml::Vector<3,float>' needs to have dll-interface to be used by clients of class 'Efficio::Vector3'
 c:\users\jtregalbuto\desktop\abantech\efficio\core\cpp\vector3.h(26): warning C4091: 'extern ': ignored on left of 'Efficio::Vector3' when no variable is declared

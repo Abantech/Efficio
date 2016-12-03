@@ -442,17 +442,17 @@ namespace Efficio {
 
 		};
 
-		class mandible : private bone
+		class mandibleb : private bone
 		{
 		public:
-			mandible(string bodyside, float centerxcoordinate, float centerycoordinate, float centerzcoordinate)
+			mandibleb(string bodyside, float centerxcoordinate, float centerycoordinate, float centerzcoordinate)
 			{
 				Side = bodyside;
 				x = centerxcoordinate;
 				y = centerycoordinate;
 				z = centerzcoordinate;
 			}
-			~mandible();
+			~mandibleb();
 			void SetHealth(float health)
 			{
 				h = health;
@@ -542,17 +542,17 @@ namespace Efficio {
 			}
 		};
 
-		class vertebra : private bone
+		class vertebrab : private bone
 		{
 		public:
-			vertebra(string bodyside, float centerxcoordinate, float centerycoordinate, float centerzcoordinate)
+			vertebrab(string bodyside, float centerxcoordinate, float centerycoordinate, float centerzcoordinate)
 			{
 				Side = bodyside;
 				x = centerxcoordinate;
 				y = centerycoordinate;
 				z = centerzcoordinate;
 			}
-			~vertebra();
+			~vertebrab();
 			void SetHealth(float health)
 			{
 				h = health;
@@ -767,17 +767,17 @@ namespace Efficio {
 			}
 		};
 
-		class phalange : private bone
+		class phalangeb : private bone
 		{
 		public:
-			phalange(string bodyside, float centerxcoordinate, float centerycoordinate, float centerzcoordinate)
+			phalangeb(string bodyside, float centerxcoordinate, float centerycoordinate, float centerzcoordinate)
 			{
 				Side = bodyside;
 				x = centerxcoordinate;
 				y = centerycoordinate;
 				z = centerzcoordinate;
 			}
-			~phalange();
+			~phalangeb();
 			void SetHealth(float health)
 			{
 				h = health;
