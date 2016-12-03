@@ -1,9 +1,10 @@
 #include "Disconnected.h"
+
 namespace Efficio
 {
 	namespace Sensors
 	{
-		Disonnected::Disonnected(SensorDetails details) : SensorInformation(details)
+		Disonnected::Disonnected(Sensors::SensorInformation details) : SensorInformation(details)
 		{
 		}
 		Disonnected::~Disonnected()

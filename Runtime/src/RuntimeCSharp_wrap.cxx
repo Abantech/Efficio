@@ -1707,11 +1707,15 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Engine___(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Engine_Start___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Engine_Start___(void * jarg1) {
+  void * jresult ;
   Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
+  Efficio::Frame result;
   
   arg1 = (Efficio::Engine *)jarg1; 
-  (arg1)->Start();
+  result = (arg1)->Start();
+  jresult = new std::shared_ptr<  Efficio::Frame >(new Efficio::Frame((Efficio::Frame &)result)); 
+  return jresult;
 }
 
 

@@ -20,9 +20,9 @@ namespace Efficio {
 
 	Frame Engine::Start()
 	{
-		Frame startFrame;
+		std::shared_ptr<Frame> startFrame(new Frame(frameID++));
 
-		startFrame.AddEvent(std::shared_ptr<Events::Event>(new Events::Internal::EfficioStarted()));
+		startFrame->AddEvent(std::shared_ptr<Events::Event>(new Events::Internal::EfficioStarted()));
 
 		// TODO execute OnStart actions
 
@@ -33,9 +33,9 @@ namespace Efficio {
 			// TODO add Device Connected event
 		}
 
-		historicalFrames.AddFrame(std::make_shared<Frame>(startFrame));
+		historicalFrames.AddFrame(startFrame);
 
-		return startFrame;
+		return *startFrame;
 	}
 
 	std::shared_ptr<Efficio::Frame> Engine::GetFrame()
@@ -69,7 +69,7 @@ namespace Efficio {
 		// TODO execute AfterFrameProcess actions
 
 		// Save frame
-		historicalFrames.AddFrame(std::make_shared<Frame>(frame));
+		historicalFrames.AddFrame(frame);
 
 		return frame;
 	}

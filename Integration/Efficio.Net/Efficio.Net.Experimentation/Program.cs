@@ -12,7 +12,7 @@ namespace Efficio.Net.Experimentation
         {
             var engine = new Engine();
 
-            engine.Start();
+            var startFrame = engine.Start();
 
             while (true)
             {

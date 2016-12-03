@@ -11,6 +11,8 @@ namespace Efficio
 
 		RealSense::RealSense(TrackingType trackingType) : status(Status::Uninitialized), trackingType(trackingType)
 		{
+			sensorInformation.Name = "Intel Realsense";
+
 			session = PXCSession::CreateInstance();
 			if (!session)
 			{
@@ -107,7 +109,12 @@ namespace Efficio
 
 		std::string RealSense::GetSource()
 		{
-			return "Intel RealSense";
+			return sensorInformation.Name;
+		}
+
+		SensorInformation RealSense::GetSensorInformation()
+		{
+			return sensorInformation;
 		}
 
 		void RealSense::ReleaseAll()

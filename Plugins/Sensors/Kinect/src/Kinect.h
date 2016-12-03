@@ -32,6 +32,10 @@ namespace Efficio
 				virtual bool HasFrame() override;
 				virtual Frame GetFrame() override;
 				virtual std::string GetSource() override;
+				virtual SensorInformation GetSensorInformation() override;
+
+			private:
+				SensorInformation sensorInformation;
 			};
 		}
 	}

@@ -402,7 +402,7 @@ class EfficioRuntimePINVOKE {
   public static extern void delete_Engine(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Engine_Start___")]
-  public static extern void Engine_Start(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern global::System.IntPtr Engine_Start(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Engine_GetFrame__SWIG_0___")]
   public static extern global::System.IntPtr Engine_GetFrame__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);

@@ -3,7 +3,7 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		Connected::Connected(SensorDetails details) : SensorInformation(details)
+		Connected::Connected(Sensors::SensorInformation details) : SensorInformation(details)
 		{
 		}
 		Connected::~Connected()

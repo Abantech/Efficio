@@ -4,11 +4,11 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		SensorDetails::SensorDetails()
+		SensorInformation::SensorInformation()
 		{
 		}
 
-		SensorDetails::~SensorDetails()
+		SensorInformation::~SensorInformation()
 		{
 		}
 	}

@@ -39,8 +39,8 @@ public class Engine {
     this(EfficioJNI.new_Engine(), true);
   }
 
-  public void Start() {
-    EfficioJNI.Engine_Start(swigCPtr, this);
+  public Frame Start() {
+    return new Frame(EfficioJNI.Engine_Start(swigCPtr, this), true);
   }
 
   public Frame GetFrame() {

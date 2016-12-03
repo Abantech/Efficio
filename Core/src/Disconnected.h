@@ -17,10 +17,10 @@ namespace Efficio
 		extern class DLLEXPORT Disonnected : public Events::Event
 		{
 		public:
-			Disonnected(SensorDetails details);
+			Disonnected(SensorInformation details);
 			~Disonnected();
 
-			SensorDetails SensorInformation;
+			SensorInformation SensorInformation;
 
 			// Inherited via Event
 			virtual Events::EventType GetEventType() override;

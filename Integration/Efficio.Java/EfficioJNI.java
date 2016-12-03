@@ -80,7 +80,7 @@ public class EfficioJNI {
   public final static native int Frame_ID_get(long jarg1, Frame jarg1_);
   public final static native long new_Engine();
   public final static native void delete_Engine(long jarg1);
-  public final static native void Engine_Start(long jarg1, Engine jarg1_);
+  public final static native long Engine_Start(long jarg1, Engine jarg1_);
   public final static native long Engine_GetFrame__SWIG_0(long jarg1, Engine jarg1_);
   public final static native long Engine_GetFrame__SWIG_1(long jarg1, Engine jarg1_, int jarg2);
   public final static native void delete_Gesture(long jarg1);

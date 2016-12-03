@@ -17,10 +17,10 @@ namespace Efficio
 		extern class DLLEXPORT Connected : public Events::Event
 		{
 		public:
-			Connected(SensorDetails details);
+			Connected(SensorInformation details);
 			~Connected();
 
-			SensorDetails SensorInformation;
+			SensorInformation SensorInformation;
 
 			// Inherited via Event
 			virtual Events::EventType GetEventType() override;

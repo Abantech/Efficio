@@ -39,6 +39,8 @@ namespace Efficio
 			virtual Efficio::Frame GetFrame() override;
 
 			virtual std::string GetSource() override;
+
+			virtual SensorInformation GetSensorInformation() override;
 		private:
 			PXCSession* session;
 			PXCSenseManager* senseManager;
@@ -49,6 +51,7 @@ namespace Efficio
 			Sensors::Status status;
 			TrackingType trackingType;
 			void EnableModule();
+			SensorInformation sensorInformation;
 
 			virtual bool HasFrame() override;
 

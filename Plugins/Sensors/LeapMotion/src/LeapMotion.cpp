@@ -15,6 +15,7 @@ namespace Efficio
 			LeapMotion::LeapMotion()
 			{
 				controller.setPaused(true);
+				sensorInformation.Name = "Leap Motion";
 			}
 
 			LeapMotion::~LeapMotion()
@@ -82,12 +83,6 @@ namespace Efficio
 
 				return frame;
 			}
-
-			std::string LeapMotion::GetSource()
-			{
-				return "Leap Motion";
-			}
-
 	
 			Efficio::Models::Body::Hand LeapMotion::convertToEfficioHand(Leap::Hand hand)
 			{
@@ -220,6 +215,16 @@ namespace Efficio
 				auto pipJoint = Efficio::Models::Body::Joint(Vector3(pipPosition.x, pipPosition.y, pipPosition.z), pipType);
 
 				return Efficio::Models::Body::Finger(fingerType, finger.isExtended(), finger.length(), tipJoint, dipJoint, mcpJoint, pipJoint);
+			}
+
+			std::string LeapMotion::GetSource()
+			{
+				return sensorInformation.Name;
+			}
+
+			SensorInformation LeapMotion::GetSensorInformation()
+			{
+				return sensorInformation;
 			}
 		}
 	}

@@ -43,8 +43,9 @@ public class Engine : global::System.IDisposable {
   public Engine() : this(EfficioRuntimePINVOKE.new_Engine(), true) {
   }
 
-  public void Start() {
-    EfficioRuntimePINVOKE.Engine_Start(swigCPtr);
+  public Frame Start() {
+    Frame ret = new Frame(EfficioRuntimePINVOKE.Engine_Start(swigCPtr), true);
+    return ret;
   }
 
   public Frame GetFrame() {

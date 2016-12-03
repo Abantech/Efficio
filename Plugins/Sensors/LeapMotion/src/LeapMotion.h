@@ -34,25 +34,28 @@ namespace Efficio
 				virtual bool HasFrame() override;
 				virtual Frame GetFrame() override;
 				virtual std::string GetSource() override;
+				virtual SensorInformation GetSensorInformation() override;
 
 			private:
 				Leap::Controller controller;
 				Leap::Frame lastLeapFrame;
-				Efficio::Frame lastEfficioFrame;
+				Frame lastEfficioFrame;
+				SensorInformation sensorInformation;
+
 
 				/// <summary>
 				/// Converts Leap Motion hand to Efficio hand
 				/// </summary>
 				/// <param name="hand">The hand to convert</param>
 				/// <returns>The converted hand</returns>
-				Efficio::Models::Body::Hand convertToEfficioHand(Leap::Hand hand);
+				Models::Body::Hand convertToEfficioHand(Leap::Hand hand);
 
 				/// <summary>
 				/// Converts Leap Motion finger to Efficio hand
 				/// </summary>
 				/// <param name="finger">The finger to convert</param>
 				/// <returns>The converted finger</returns>
-				Efficio::Models::Body::Finger convertToEfficioFinger(Leap::Finger finger);
+				Models::Body::Finger convertToEfficioFinger(Leap::Finger finger);
 			};
 		}
 	}

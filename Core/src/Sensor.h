@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SensorStatus.h"
+#include "SensorDetails.h"
 #include "TrackingType.h"
 #include "Vector3.h"
 #include "Frame.h"
@@ -51,6 +52,8 @@ namespace Efficio
 			virtual Efficio::Frame GetFrame() = 0;
 
 			virtual std::string GetSource() = 0;
+
+			virtual SensorInformation GetSensorInformation() = 0;
 
 		protected:
 			Efficio::Frame LastEfficioFrame;

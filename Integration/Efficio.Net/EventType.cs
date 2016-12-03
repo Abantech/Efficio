@@ -11,8 +11,10 @@
 namespace Efficio.Net {
 
 public enum EventType {
-  Pinch,
-  EfficioStarted
+  EfficioStarted,
+  SensorConnected,
+  SensorDisconnected,
+  Pinch
 }
 
 }

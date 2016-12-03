@@ -13,11 +13,11 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		extern class DLLEXPORT SensorDetails
+		extern class DLLEXPORT SensorInformation
 		{
 		public:
-			SensorDetails();
-			~SensorDetails();
+			SensorInformation();
+			~SensorInformation();
 
 			std::string Name;
 		};

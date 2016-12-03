@@ -8,6 +8,7 @@ namespace Efficio
 		{
 			Kinect::Kinect()
 			{
+				sensorInformation.Name = "Microsoft Kinect";
 			}
 
 			Kinect::~Kinect()
@@ -63,7 +64,11 @@ namespace Efficio
 
 			std::string Kinect::GetSource()
 			{
-				return "Microsoft Kinect";
+				return sensorInformation.Name;
+			}
+			SensorInformation Kinect::GetSensorInformation()
+			{
+				return sensorInformation;
 			}
 		}
 	}
