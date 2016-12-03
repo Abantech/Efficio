@@ -17,6 +17,11 @@ namespace Efficio.Net.Experimentation
             while (true)
             {
                 var frame = engine.GetFrame();
+
+                if (frame.GetEvents().Count > 0)
+                {
+                    var ev = frame.GetEvents()[0];
+                }
             }
         }
     }

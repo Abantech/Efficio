@@ -2,6 +2,8 @@
 #include "Finger.h"
 #include "Joint.h"
 #include "HandData.h"
+#include "Connected.h"
+#include "Disconnected.h"
 #include <vector>
 #include <array>
 #include <memory>
@@ -12,19 +14,15 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			LeapMotion::LeapMotion()
+			LeapMotion::LeapMotion() : connectionStateChanged(false)
 			{
+				Status = Sensors::Status::Uninitialized;
 				controller.setPaused(true);
-				sensorInformation.Name = "Leap Motion";
+				SensorInformation.Name = "Leap Motion";
 			}
 
 			LeapMotion::~LeapMotion()
 			{
-			}
-
-			Sensors::Status LeapMotion::Status()
-			{
-				return Sensors::Status();
 			}
 
 			Sensors::TrackingType LeapMotion::TrackingTypes()
@@ -35,11 +33,13 @@ namespace Efficio
 			void LeapMotion::Connect()
 			{
 				controller.setPaused(false);
+				connectionStateChanged = true;
 			}
 
 			void LeapMotion::Disconnect()
 			{
 				controller.setPaused(true);
+				connectionStateChanged = true;
 			}
 
 			bool LeapMotion::HasFrame()
@@ -49,12 +49,30 @@ namespace Efficio
 
 			Efficio::Frame LeapMotion::GetFrame()
 			{
+				Efficio::Frame frame;
+
+				if (connectionStateChanged)
+				{
+					if (controller.isConnected())
+					{
+						connectionStateChanged = false;
+						hasConnected = true;
+						frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Connected(SensorInformation)));
+						Status = Sensors::Status::Connected;
+					}
+					else
+					{
+						connectionStateChanged = false;
+						frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Disonnected(SensorInformation)));
+						Status = Sensors::Status::Disconnected;
+					}
+				}
+
 				// Check if new frame is available. If not, return previously calculated frame
 				if (!HasFrame())
 				{
 					return LastEfficioFrame;
 				}
-
 
 				// Poll for latest Leap Motion frame
 				lastLeapFrame = controller.frame();
@@ -70,12 +88,10 @@ namespace Efficio
 				}
 
 				std::vector<std::shared_ptr<Efficio::Data::Data>> data;
-				
+
 				std::shared_ptr<Efficio::Data::Data> dataSharedPtr(new Efficio::Data::Body::HandData(convertedHands));
 
 				data.push_back(dataSharedPtr);
-
-				Efficio::Frame frame;
 
 				frame.AddData(data);
 
@@ -83,7 +99,7 @@ namespace Efficio
 
 				return frame;
 			}
-	
+
 			Efficio::Models::Body::Hand LeapMotion::convertToEfficioHand(Leap::Hand hand)
 			{
 				auto fingers = hand.fingers();
@@ -215,16 +231,6 @@ namespace Efficio
 				auto pipJoint = Efficio::Models::Body::Joint(Vector3(pipPosition.x, pipPosition.y, pipPosition.z), pipType);
 
 				return Efficio::Models::Body::Finger(fingerType, finger.isExtended(), finger.length(), tipJoint, dipJoint, mcpJoint, pipJoint);
-			}
-
-			std::string LeapMotion::GetSource()
-			{
-				return sensorInformation.Name;
-			}
-
-			SensorInformation LeapMotion::GetSensorInformation()
-			{
-				return sensorInformation;
 			}
 		}
 	}

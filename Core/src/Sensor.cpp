@@ -5,7 +5,19 @@ namespace Efficio
 	{
 		bool Efficio::Sensors::Sensor::Connected()
 		{
-			return Status() == Status::Connected;
+			return GetStatus() == Status::Connected;
+		}
+		Status Sensor::GetStatus()
+		{
+			return Status;
+		}
+		std::string Sensor::GetSource()
+		{
+			return SensorInformation.Name;
+		}
+		SensorInformation Sensor::GetSensorInformation()
+		{
+			return SensorInformation;
 		}
 	}
 }

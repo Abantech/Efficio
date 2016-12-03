@@ -9,21 +9,21 @@ namespace Efficio
 		{
 		}
 
-		RealSense::RealSense(TrackingType trackingType) : status(Status::Uninitialized), trackingType(trackingType)
+		RealSense::RealSense(TrackingType trackingType) : trackingType(trackingType)
 		{
-			sensorInformation.Name = "Intel Realsense";
-
+			SensorInformation.Name = "Intel Realsense";
+			Status = Status::Uninitialized;
 			session = PXCSession::CreateInstance();
 			if (!session)
 			{
-				status = Status::Faulted;
+				Status = Status::Faulted;
 				return;
 			}
 
 			senseManager = session->CreateSenseManager();
 			if (!senseManager)
 			{
-				status = Status::Faulted;
+				Status = Status::Faulted;
 				ReleaseAll();
 				return;
 			}
@@ -35,11 +35,6 @@ namespace Efficio
 		{
 		}
 
-		Status RealSense::Status()
-		{
-			return status;
-		}
-
 		TrackingType RealSense::TrackingTypes()
 		{
 			return trackingType;
@@ -47,16 +42,16 @@ namespace Efficio
 
 		void RealSense::Connect()
 		{
-			if (status != Status::Faulted)
+			if (Status != Status::Faulted)
 			{
 				if (senseManager->Init() != PXC_STATUS_NO_ERROR)
 				{
-					status = Status::Faulted;
+					Status = Status::Faulted;
 					ReleaseAll();
 					return;
 				}
 
-				status = Status::Connected;
+				Status = Status::Connected;
 			}
 		}
 
@@ -67,7 +62,7 @@ namespace Efficio
 
 		bool RealSense::HasFrame()
 		{
-			return status == Status::Connected && senseManager->AcquireFrame() == PXC_STATUS_NO_ERROR;
+			return Status == Status::Connected && senseManager->AcquireFrame() == PXC_STATUS_NO_ERROR;
 		}
 
 		Frame RealSense::GetFrame()
@@ -107,16 +102,6 @@ namespace Efficio
 			return frame;
 		}
 
-		std::string RealSense::GetSource()
-		{
-			return sensorInformation.Name;
-		}
-
-		SensorInformation RealSense::GetSensorInformation()
-		{
-			return sensorInformation;
-		}
-
 		void RealSense::ReleaseAll()
 		{
 			if (handConfiguration)
@@ -154,7 +139,7 @@ namespace Efficio
 			{
 				if (senseManager->EnableHand(0) != PXC_STATUS_NO_ERROR)
 				{
-					status = Status::Faulted;
+					Status = Status::Faulted;
 					ReleaseAll();
 					return;
 				}
@@ -162,7 +147,7 @@ namespace Efficio
 				handModule = senseManager->QueryHand();
 				if (!handModule)
 				{
-					status = Status::Faulted;
+					Status = Status::Faulted;
 					ReleaseAll();
 					return;
 				}
@@ -170,7 +155,7 @@ namespace Efficio
 				handDataOutput = handModule->CreateOutput();
 				if (!handDataOutput)
 				{
-					status = Status::Faulted;
+					Status = Status::Faulted;
 					ReleaseAll();
 					return;
 				}
@@ -178,7 +163,7 @@ namespace Efficio
 				handConfiguration = handModule->CreateActiveConfiguration();
 				if (!handConfiguration)
 				{
-					status = Status::Faulted;
+					Status = Status::Faulted;
 					ReleaseAll();
 					return;
 				}
@@ -192,7 +177,7 @@ namespace Efficio
 			case TrackingType::Face:
 				if (senseManager->EnableFace() != PXC_STATUS_NO_ERROR)
 				{
-					status = Status::Faulted;
+					Status = Status::Faulted;
 					ReleaseAll();
 					return;
 				}

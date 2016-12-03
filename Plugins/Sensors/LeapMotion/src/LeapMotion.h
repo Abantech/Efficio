@@ -27,21 +27,17 @@ namespace Efficio
 				~LeapMotion();
 
 				// Inherited via Sensor
-				virtual Sensors::Status Status() override;
 				virtual Sensors::TrackingType TrackingTypes() override;
 				virtual void Connect() override;
 				virtual void Disconnect() override;
 				virtual bool HasFrame() override;
 				virtual Frame GetFrame() override;
-				virtual std::string GetSource() override;
-				virtual SensorInformation GetSensorInformation() override;
 
 			private:
 				Leap::Controller controller;
 				Leap::Frame lastLeapFrame;
-				Frame lastEfficioFrame;
-				SensorInformation sensorInformation;
-
+				bool connectionStateChanged;
+				bool hasConnected;
 
 				/// <summary>
 				/// Converts Leap Motion hand to Efficio hand

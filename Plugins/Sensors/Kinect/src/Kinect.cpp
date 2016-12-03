@@ -8,16 +8,11 @@ namespace Efficio
 		{
 			Kinect::Kinect()
 			{
-				sensorInformation.Name = "Microsoft Kinect";
+				SensorInformation.Name = "Microsoft Kinect";
 			}
 
 			Kinect::~Kinect()
 			{
-			}
-
-			Sensors::Status Kinect::Status()
-			{
-				return Sensors::Status::Unknown;
 			}
 
 			Sensors::TrackingType Kinect::TrackingTypes()
@@ -60,15 +55,6 @@ namespace Efficio
 				// Add data to EfficioFrame
 
 				return efficioFrame;
-			}
-
-			std::string Kinect::GetSource()
-			{
-				return sensorInformation.Name;
-			}
-			SensorInformation Kinect::GetSensorInformation()
-			{
-				return sensorInformation;
 			}
 		}
 	}

@@ -33,7 +33,13 @@ namespace Efficio
 
 	void Frame::AddFrame(Frame frame)
 	{
-		AddData(frame.GetData());		
+		AddData(frame.GetData());	
+		auto events = frame.GetEvents();
+
+		for (size_t i = 0; i < events.size(); i++)
+		{
+			AddEvent(events[i]);
+		}
 	}
 
 	std::vector<std::shared_ptr<Events::Event>> Frame::GetEvents()

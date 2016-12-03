@@ -34,7 +34,7 @@ namespace Efficio
 			bool Connected();
 
 			/// The status of the device
-			virtual Status Status() = 0;
+			virtual Status GetStatus();
 
 			/// The type of data the device is able to track
 			virtual TrackingType TrackingTypes() = 0;
@@ -51,12 +51,14 @@ namespace Efficio
 			/// Gets the current frame from the device
 			virtual Efficio::Frame GetFrame() = 0;
 
-			virtual std::string GetSource() = 0;
+			virtual std::string GetSource();
 
-			virtual SensorInformation GetSensorInformation() = 0;
+			virtual SensorInformation GetSensorInformation();
 
 		protected:
 			Efficio::Frame LastEfficioFrame;
+			SensorInformation SensorInformation;
+			Sensors::Status Status;
 		};
 	}
 }

@@ -25,17 +25,13 @@ namespace Efficio
 				~Kinect();
 
 				// Inherited via Sensor
-				virtual Sensors::Status Status() override;
 				virtual Sensors::TrackingType TrackingTypes() override;
 				virtual void Connect() override;
 				virtual void Disconnect() override;
 				virtual bool HasFrame() override;
 				virtual Frame GetFrame() override;
-				virtual std::string GetSource() override;
-				virtual SensorInformation GetSensorInformation() override;
 
 			private:
-				SensorInformation sensorInformation;
 			};
 		}
 	}

@@ -62,3 +62,5 @@
 /Plugins/Sensors/LeapMotion/x64/Debug
 /Plugins/Sensors/RealSense/x64/Debug
 /Runtime/x64/Debug
+/ipch
+/Runtime/EfficioRuntime.Experimentation/x64/Debug
