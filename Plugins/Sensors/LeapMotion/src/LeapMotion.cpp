@@ -116,7 +116,7 @@ namespace Efficio
 				auto side = hand.isLeft() ? Efficio::Models::Body::BodySide::Left : Efficio::Models::Body::BodySide::Right;
 
 				Efficio::Models::Body::Hand efficioHand(side, efficioFingers, hand.confidence());
-				efficioHand.ID = hand.id;
+				efficioHand.ID = hand.id();
 
 				return efficioHand;
 			}
