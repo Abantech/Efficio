@@ -41,6 +41,9 @@ namespace Efficio
 			PXCHandModule* handModule;
 			PXCHandData* handDataOutput;
 			PXCHandConfiguration* handConfiguration;
+			PXCFaceModule* faceModule;
+			PXCFaceData* faceDataOutput;
+			PXCFaceConfiguration* faceConfiguration;
 			void ReleaseAll();
 			TrackingType trackingType;
 			void EnableModule();

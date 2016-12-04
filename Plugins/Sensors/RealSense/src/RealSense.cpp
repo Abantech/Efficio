@@ -110,16 +110,30 @@ namespace Efficio
 
 		void RealSense::ReleaseAll()
 		{
+			// Release Configurations
 			if (handConfiguration)
 			{
 				handConfiguration->Release();
 				handConfiguration = NULL;
 			}
 
+			if (faceConfiguration)
+			{
+				faceConfiguration->Release();
+				faceConfiguration = NULL;
+			}
+
+			// Release Outputs
 			if (handDataOutput)
 			{
 				handDataOutput->Release();
 				handDataOutput = NULL;
+			}
+
+			if (faceDataOutput)
+			{
+				faceDataOutput->Release();
+				faceDataOutput = NULL;
 			}
 
 			if (senseManager)
@@ -181,12 +195,40 @@ namespace Efficio
 			case TrackingType::Eye:
 				break;
 			case TrackingType::Face:
-				if (senseManager->EnableFace() != PXC_STATUS_NO_ERROR)
+				if (senseManager->EnableFace(0) != PXC_STATUS_NO_ERROR)
 				{
 					Status = Status::Faulted;
 					ReleaseAll();
 					return;
 				}
+
+				faceModule = senseManager->QueryFace();
+				if (!faceModule)
+				{
+					Status = Status::Faulted;
+					ReleaseAll();
+					return;
+				}
+
+				faceDataOutput = faceModule->CreateOutput();
+				if (!faceDataOutput)
+				{
+					Status = Status::Faulted;
+					ReleaseAll();
+					return;
+				}
+
+				faceConfiguration = faceModule->CreateActiveConfiguration();
+				if (!faceConfiguration)
+				{
+					Status = Status::Faulted;
+					ReleaseAll();
+					return;
+				}
+
+				faceConfiguration->SetTrackingMode(PXCFaceConfiguration::TrackingModeType::FACE_MODE_COLOR_PLUS_DEPTH);
+				faceConfiguration->ApplyChanges();
+
 				break;
 			case TrackingType::Body:
 				break;
