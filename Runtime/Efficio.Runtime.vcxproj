@@ -90,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIORUNTIME_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1; </PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\Kinect\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\Kinect\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -109,8 +109,8 @@ xcopy $(SolutionDir)Core\src\*.h temp
 xcopy src\*.h temp
 xcopy resources\*.i temp
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Efficio.Net" temp/RuntimeCSharp.i
-swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java" temp/RuntimeJava.i
-xcopy temp\RuntimeCSharp_wrap.cxx  src /y
+swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java\Efficio.Java.java\src\Efficio\Java" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
 rmdir /S /Q temp
 EXIT 0</Command>
     </PreBuildEvent>
@@ -123,7 +123,7 @@ EXIT 0</Command>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIORUNTIME_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1; </PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\Kinect\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\Kinect\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -142,8 +142,8 @@ xcopy $(SolutionDir)Core\src\*.h temp
 xcopy src\*.h temp
 xcopy resources\*.i temp
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Efficio.Net" temp/RuntimeCSharp.i
-swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java" temp/RuntimeJava.i
-xcopy temp\RuntimeCSharp_wrap.cxx  src /y
+swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java\Efficio.Java.java\src\Efficio\Java" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
 rmdir /S /Q temp
 EXIT 0</Command>
     </PreBuildEvent>
@@ -158,7 +158,7 @@ EXIT 0</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EFFICIORUNTIME_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1; </PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\Kinect\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\Kinect\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,8 +179,8 @@ xcopy $(SolutionDir)Core\src\*.h temp
 xcopy src\*.h temp
 xcopy resources\*.i temp
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Efficio.Net" temp/RuntimeCSharp.i
-swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java" temp/RuntimeJava.i
-xcopy temp\RuntimeCSharp_wrap.cxx  src /y
+swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java\Efficio.Java.java\src\Efficio\Java" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
 rmdir /S /Q temp
 EXIT 0</Command>
     </PreBuildEvent>
@@ -195,7 +195,7 @@ EXIT 0</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;EFFICIORUNTIME_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1; </PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\Kinect\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\Kinect\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -216,8 +216,8 @@ xcopy $(SolutionDir)Core\src\*.h temp
 xcopy src\*.h temp
 xcopy resources\*.i temp
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Efficio.Net" temp/RuntimeCSharp.i
-swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java" temp/RuntimeJava.i
-xcopy temp\RuntimeCSharp_wrap.cxx  src /y
+swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java\Efficio.Java.java\src\Efficio\Java" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
 rmdir /S /Q temp
 EXIT 0</Command>
     </PreBuildEvent>

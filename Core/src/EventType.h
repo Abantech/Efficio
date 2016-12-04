@@ -14,8 +14,11 @@ namespace Efficio
 		extern enum class DLLEXPORT EventType
 		{
 			EfficioStarted,
+			SensorConnecting,
 			SensorConnected,
+			SensorDisconnecting,
 			SensorDisconnected,
+			SensorFaulted,
 			Pinch,
 		};
 	}

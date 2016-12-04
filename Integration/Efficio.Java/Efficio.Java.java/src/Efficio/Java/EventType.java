@@ -10,8 +10,11 @@ package Efficio.Java;
 
 public final class EventType {
   public final static EventType EfficioStarted = new EventType("EfficioStarted");
+  public final static EventType SensorConnecting = new EventType("SensorConnecting");
   public final static EventType SensorConnected = new EventType("SensorConnected");
+  public final static EventType SensorDisconnecting = new EventType("SensorDisconnecting");
   public final static EventType SensorDisconnected = new EventType("SensorDisconnected");
+  public final static EventType SensorFaulted = new EventType("SensorFaulted");
   public final static EventType Pinch = new EventType("Pinch");
 
   public final int swigValue() {
@@ -48,7 +51,7 @@ public final class EventType {
     swigNext = this.swigValue+1;
   }
 
-  private static EventType[] swigValues = { EfficioStarted, SensorConnected, SensorDisconnected, Pinch };
+  private static EventType[] swigValues = { EfficioStarted, SensorConnecting, SensorConnected, SensorDisconnecting, SensorDisconnected, SensorFaulted, Pinch };
   private static int swigNext = 0;
   private final int swigValue;
   private final String swigName;
