@@ -1,4 +1,4 @@
-%module Efficio
+%module EfficioRuntime
  %{
 	 /* Includes the header in the wrapper code */
  %}
