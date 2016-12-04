@@ -40,24 +40,30 @@ namespace Efficio
 			return trackingType;
 		}
 
-		void RealSense::Connect()
+		Frame RealSense::Connect()
 		{
+			Frame frame;
 			if (Status != Status::Faulted)
 			{
 				if (senseManager->Init() != PXC_STATUS_NO_ERROR)
 				{
 					Status = Status::Faulted;
 					ReleaseAll();
-					return;
+					return frame;
 				}
 
 				Status = Status::Connected;
 			}
+
+			return frame;
 		}
 
-		void RealSense::Disconnect()
+		Frame RealSense::Disconnect()
 		{
+			Frame frame;
 			senseManager->Close();
+
+			return frame;
 		}
 
 		bool RealSense::HasFrame()

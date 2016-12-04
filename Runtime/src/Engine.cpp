@@ -29,8 +29,7 @@ namespace Efficio {
 		// Connect to all sensors
 		for (size_t i = 0; i < sensors.size(); i++)
 		{
-			sensors[i]->Connect();
-			// TODO add Device Connected event
+			startFrame->AddFrame(sensors[i]->Connect());
 		}
 
 		historicalFrames.AddFrame(startFrame);

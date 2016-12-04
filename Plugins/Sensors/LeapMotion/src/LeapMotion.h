@@ -28,8 +28,8 @@ namespace Efficio
 
 				// Inherited via Sensor
 				virtual Sensors::TrackingType TrackingTypes() override;
-				virtual void Connect() override;
-				virtual void Disconnect() override;
+				virtual Frame Connect() override;
+				virtual Frame Disconnect() override;
 				virtual bool HasFrame() override;
 				virtual Frame GetFrame() override;
 

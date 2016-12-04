@@ -20,12 +20,14 @@ namespace Efficio
 				return Sensors::TrackingType::Unknown;
 			}
 
-			void Kinect::Connect()
+			Frame Kinect::Connect()
 			{
+				return Frame();
 			}
 
-			void Kinect::Disconnect()
+			Frame Kinect::Disconnect()
 			{
+				return Frame();
 			}
 
 			bool Kinect::HasFrame()

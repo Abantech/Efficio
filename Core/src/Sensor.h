@@ -3,6 +3,11 @@
 #include "SensorStatus.h"
 #include "SensorDetails.h"
 #include "TrackingType.h"
+#include "Connected.h"
+#include "Connecting.h"
+#include "Disconnected.h"
+#include "Disconnecting.h"
+#include "Faulted.h"
 #include "Vector3.h"
 #include "Frame.h"
 #include <string>
@@ -40,10 +45,10 @@ namespace Efficio
 			virtual TrackingType TrackingTypes() = 0;
 
 			/// Connects the device
-			virtual void Connect() = 0;
+			virtual Frame Connect() = 0;
 
 			/// Disconnects the device
-			virtual void Disconnect() = 0;
+			virtual Frame Disconnect() = 0;
 
 			/// A Boolean indicating whether or not the device has a new frame for Efficio
 			virtual bool HasFrame() = 0;

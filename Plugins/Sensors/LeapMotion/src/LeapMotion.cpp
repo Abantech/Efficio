@@ -2,8 +2,6 @@
 #include "Finger.h"
 #include "Joint.h"
 #include "HandData.h"
-#include "Connected.h"
-#include "Disconnected.h"
 #include <vector>
 #include <array>
 #include <memory>
@@ -30,16 +28,27 @@ namespace Efficio
 				return Sensors::TrackingType::Hand;
 			}
 
-			void LeapMotion::Connect()
+			Frame LeapMotion::Connect()
 			{
+				Frame frame;
 				controller.setPaused(false);
 				connectionStateChanged = true;
+				Status = Sensors::Status::Connecting;
+
+				frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Connecting(SensorInformation)));
+
+				return frame;
 			}
 
-			void LeapMotion::Disconnect()
+			Frame LeapMotion::Disconnect()
 			{
+				Frame frame;
 				controller.setPaused(true);
 				connectionStateChanged = true;
+
+				frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Disonnecting(SensorInformation)));
+
+				return frame;
 			}
 
 			bool LeapMotion::HasFrame()

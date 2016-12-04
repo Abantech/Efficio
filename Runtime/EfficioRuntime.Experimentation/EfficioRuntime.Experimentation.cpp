@@ -7,7 +7,8 @@
 int main()
 {
 	auto engine = new Efficio::Engine();
-	engine->Start();
+	auto f = engine->Start();
+
 	while (true)
 	{
 		auto frame = engine->GetFrame();
