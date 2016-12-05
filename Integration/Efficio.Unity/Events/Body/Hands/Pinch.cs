@@ -1,14 +1,17 @@
 ﻿using Efficio.Unity.MessageBus;
 using Efficio.Unity.MessageBus.Body.Hands;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Collections;
 
 namespace Efficio.Unity.Events.Body.Hands
 {
     public abstract class Pinch : MessageHandler
     {
+        public int DelayAfterPinch;
+
+        DateTime resetTime;
+        bool coroutineStarted = false;
+
         protected virtual MessageType[] messageTypes
         {
             get
@@ -48,9 +51,32 @@ namespace Efficio.Unity.Events.Body.Hands
 
         public abstract void HandlePinch(PinchMessage message);
 
+        public abstract void OnPinchEnd();
+
         public override void HandleMessage(Message message)
         {
             HandlePinch((PinchMessage)message);
+
+            // Set time to declare pinch has ended
+            resetTime = DateTime.Now.AddMilliseconds(DelayAfterPinch);
+
+            // If pinch end timeout coroutine has not yet started
+            if (!coroutineStarted)
+            {
+                coroutineStarted = true;
+                StartCoroutine(PinchEndTimer(OnPinchEnd));
+            }
+        }
+
+        private IEnumerator PinchEndTimer(Action action)
+        {
+            while (DateTime.Now < resetTime)
+            {
+                yield return null;
+            }
+
+            coroutineStarted = false;
+            action();
         }
     }
 }
