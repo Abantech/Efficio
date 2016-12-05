@@ -46,6 +46,9 @@
     <Filter Include="Header Files\Sensors\Events">
       <UniqueIdentifier>{cbd71e25-1201-4b59-b081-dbb41b6219cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Data\Body\Face">
+      <UniqueIdentifier>{fefd5edb-7063-4910-bd2e-edd44724b214}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Frame.h">
@@ -183,6 +186,12 @@
     <ClInclude Include="src\Disconnecting.h">
       <Filter>Header Files\Sensors\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\FaceData.h">
+      <Filter>Header Files\Data\Body\Face</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Expressions.h">
+      <Filter>Header Files\Data\Body\Face</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\default.doxygen">
@@ -284,6 +293,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Disconnecting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FaceData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -15,7 +15,8 @@ namespace Efficio
 		{
 			Altitude,
 			Location,
-			Hand
+			Hand,
+			Face
 		};
 	}
 }

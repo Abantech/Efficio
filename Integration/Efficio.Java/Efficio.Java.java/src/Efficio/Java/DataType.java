@@ -12,6 +12,7 @@ public final class DataType {
   public final static DataType Altitude = new DataType("Altitude");
   public final static DataType Location = new DataType("Location");
   public final static DataType Hand = new DataType("Hand");
+  public final static DataType Face = new DataType("Face");
 
   public final int swigValue() {
     return swigValue;
@@ -47,7 +48,7 @@ public final class DataType {
     swigNext = this.swigValue+1;
   }
 
-  private static DataType[] swigValues = { Altitude, Location, Hand };
+  private static DataType[] swigValues = { Altitude, Location, Hand, Face };
   private static int swigNext = 0;
   private final int swigValue;
   private final String swigName;

@@ -1,5 +1,6 @@
 #include "RealSense.h"
 #include "HandData.h"
+#include "FaceData.h"
 
 namespace Efficio
 {
@@ -80,24 +81,19 @@ namespace Efficio
 			}
 
 			Efficio::Frame frame;
+			std::vector<std::shared_ptr<Data::Data>> data;
 
-			std::vector<Efficio::Models::Body::Hand> convertedHands;
+			std::vector<Models::Body::Hand> convertedHands;
 
-			if (handDataOutput->Update() == PXC_STATUS_NO_ERROR)
+			if (trackingType == TrackingType::Hand)
 			{
-				PXCHandData::IHand* hand;
-				for (int i = 0; i < handDataOutput->QueryNumberOfHands(); ++i)
-				{
-					handDataOutput->QueryHandData(PXCHandData::AccessOrderType::ACCESS_ORDER_BY_ID, i, hand);
-					convertedHands.push_back(convertToEfficioHand(hand));
-				}
+				data.push_back(GetHandData());
 			}
 
-			std::vector<std::shared_ptr<Efficio::Data::Data>> data;
-
-			std::shared_ptr<Efficio::Data::Data> dataSharedPtr(new Efficio::Data::Body::HandData(convertedHands));
-
-			data.push_back(dataSharedPtr);
+			if (trackingType == TrackingType::Face)
+			{
+				data.push_back(GetFaceData());
+			}
 
 			frame.AddData(data);
 
@@ -227,6 +223,8 @@ namespace Efficio
 				}
 
 				faceConfiguration->SetTrackingMode(PXCFaceConfiguration::TrackingModeType::FACE_MODE_COLOR_PLUS_DEPTH);
+				faceConfiguration->QueryExpressions()->Enable();
+				faceConfiguration->QueryExpressions()->EnableAllExpressions();
 				faceConfiguration->ApplyChanges();
 
 				break;
@@ -254,7 +252,7 @@ namespace Efficio
 		Models::Body::Hand RealSense::convertToEfficioHand(PXCHandData::IHand* hand)
 		{
 			Models::Body::BodySide side = hand->QueryBodySide() == PXCHandData::BODY_SIDE_LEFT ? Models::Body::BodySide::Left : Models::Body::BodySide::Right;
-			
+
 			std::vector<Models::Body::Finger> fingers;
 
 			for (size_t i = 0; i < 5; i++)
@@ -326,7 +324,7 @@ namespace Efficio
 				hand->QueryTrackedJoint(pipType, pip);
 				hand->QueryTrackedJoint(mcpType, mcp);
 
-					
+
 				fingers.push_back(convertToEfficioFinger(side, efficioFingerType, finger, tip, dip, pip, mcp));
 			}
 
@@ -337,7 +335,7 @@ namespace Efficio
 			return efficioHand;
 		}
 
-		Models::Body::Finger RealSense::convertToEfficioFinger(Models::Body::BodySide side, Models::Body::FingerType fingerType, PXCHandData::FingerData finger,  PXCHandData::JointData tip, PXCHandData::JointData dip, PXCHandData::JointData pip, PXCHandData::JointData mcp)
+		Models::Body::Finger RealSense::convertToEfficioFinger(Models::Body::BodySide side, Models::Body::FingerType fingerType, PXCHandData::FingerData finger, PXCHandData::JointData tip, PXCHandData::JointData dip, PXCHandData::JointData pip, PXCHandData::JointData mcp)
 		{
 			bool isExtended = finger.foldedness > 70;
 
@@ -402,5 +400,136 @@ namespace Efficio
 			return efficioFinger;
 		}
 
+		std::shared_ptr<Data::Data> RealSense::GetHandData()
+		{
+			std::vector<Models::Body::Hand> hands;
+
+			if (handDataOutput->Update() == PXC_STATUS_NO_ERROR)
+			{
+				PXCHandData::IHand* hand;
+				for (int i = 0; i < handDataOutput->QueryNumberOfHands(); ++i)
+				{
+					handDataOutput->QueryHandData(PXCHandData::AccessOrderType::ACCESS_ORDER_BY_ID, i, hand);
+					hands.push_back(convertToEfficioHand(hand));
+				}
+			}
+
+			return std::shared_ptr<Data::Data>(new Data::Body::HandData(hands));
+		}
+
+		std::shared_ptr<Data::Data> RealSense::GetFaceData()
+		{
+			auto data = new Data::Body::Face::FaceData();
+
+			if (faceDataOutput->Update() == PXC_STATUS_NO_ERROR)
+			{
+				PXCFaceData::ExpressionsData::FaceExpressionResult result;
+				for (size_t i = 0; i < faceDataOutput->QueryNumberOfDetectedFaces(); i++)
+				{
+					for (int expressionInt = 0; expressionInt != 21; expressionInt++)
+					{
+						if (expressionInt < 9 || expressionInt > 14)
+						{
+							auto face = faceDataOutput->QueryFaceByIndex(i);
+							auto expressions = face->QueryExpressions();
+
+							if (expressions->QueryExpression(static_cast<PXCFaceData::ExpressionsData::FaceExpression>(expressionInt), &result))
+							{
+								Data::Body::Face::Expressions expression;
+								switch (expressionInt)
+								{
+								case 0:
+								{
+									expression = Data::Body::Face::Expressions::LeftBrowRaised;
+									break;
+								}
+								case 1:
+								{
+									expression = Data::Body::Face::Expressions::RightBrowRaised;
+									break;
+								}
+								case 2:
+								{
+									expression = Data::Body::Face::Expressions::LeftBrowLowered;
+									break;
+								}
+								case 3:
+								{
+									expression = Data::Body::Face::Expressions::RightBrowLowered;
+									break;
+								}
+								case 4:
+								{
+									expression = Data::Body::Face::Expressions::Smiling;
+									break;
+								}
+								case 5:
+								{
+									expression = Data::Body::Face::Expressions::Kissing;
+									break;
+								}
+								case 6:
+								{
+									expression = Data::Body::Face::Expressions::OpenMouth;
+									break;
+								}
+								case 7:
+								{
+									expression = Data::Body::Face::Expressions::LeftEyeClosed;
+									break;
+								}
+								case 8:
+								{
+									expression = Data::Body::Face::Expressions::RightEyeClosed;
+									break;
+								}
+								case 15:
+								{
+									expression = Data::Body::Face::Expressions::EyesLookingLeft;
+									break;
+								}
+								case 16:
+								{
+									expression = Data::Body::Face::Expressions::EyesLookingRight;
+									break;
+								}
+								case 17:
+								{
+									expression = Data::Body::Face::Expressions::EyesLookingUp;
+									break;
+								}
+								case 18:
+								{
+									expression = Data::Body::Face::Expressions::EyesLookingDown;
+									break;
+								}
+								case 19:
+								{
+									expression = Data::Body::Face::Expressions::TongueOut;
+									break;
+								}
+								case 20:
+								{
+									expression = Data::Body::Face::Expressions::RightCheekPuffed;
+									break;
+								}
+								case 21:
+								{
+									expression = Data::Body::Face::Expressions::LeftCheekPuffed;
+									break;
+								}
+								default:
+									break;
+								}
+
+								data->Expressions.emplace(expression, result.intensity);
+							}
+						}
+					}
+				}
+			}
+
+			return std::shared_ptr<Data::Data>(data);
+		}
 	}
 }

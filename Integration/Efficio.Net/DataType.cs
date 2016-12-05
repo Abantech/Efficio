@@ -13,7 +13,8 @@ namespace Efficio.Net {
 public enum DataType {
   Altitude,
   Location,
-  Hand
+  Hand,
+  Face
 }
 
 }

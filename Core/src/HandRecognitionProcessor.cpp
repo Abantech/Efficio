@@ -31,15 +31,18 @@ namespace Efficio
 						{
 							auto handData = dynamic_cast<Data::Body::HandData*>(datum.get());
 
-							for each (auto hand in handData->Hands)
+							if (handData)
 							{
-								for each (std::shared_ptr<Hands::SingleHandGestureDetector> shgd in singleHandDetectors)
+								for each (auto hand in handData->Hands)
 								{
-									auto detected = shgd->Detect(hand);
-
-									for (size_t i = 0; i < detected.size(); i++)
+									for each (std::shared_ptr<Hands::SingleHandGestureDetector> shgd in singleHandDetectors)
 									{
-										events.push_back(detected[i]);
+										auto detected = shgd->Detect(hand);
+
+										for (size_t i = 0; i < detected.size(); i++)
+										{
+											events.push_back(detected[i]);
+										}
 									}
 								}
 							}

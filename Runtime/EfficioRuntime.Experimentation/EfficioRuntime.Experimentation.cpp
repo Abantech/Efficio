@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "Engine.h"
+#include "FaceData.h"
 
 int main()
 {
@@ -13,6 +14,25 @@ int main()
 	{
 		auto frame = engine->GetFrame();
 		auto events = frame->GetEvents();
+		auto data = frame->GetData();
+
+		for (size_t i = 0; i < data.size(); i++)
+		{
+			if (data[i]->GetDataType() == Efficio::Data::DataType::Face)
+			{
+				auto face = dynamic_cast<Efficio::Data::Body::Face::FaceData*>(data[i].get());
+
+				for (size_t j = 0; j < face->Expressions.size(); j++)
+				{
+					auto exp = face->Expressions.at(Efficio::Data::Body::Face::Expressions::OpenMouth);
+					if (exp > 50)
+					{
+						cout << "Open mouth intensity: " << exp << "\n";
+					}
+
+				}
+			}
+		}
 
 		for (size_t i = 0; i < events.size(); i++)
 		{

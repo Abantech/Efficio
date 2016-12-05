@@ -38,9 +38,13 @@ namespace Efficio
 		private:
 			PXCSession* session;
 			PXCSenseManager* senseManager;
+
+			// Hand parts
 			PXCHandModule* handModule;
 			PXCHandData* handDataOutput;
 			PXCHandConfiguration* handConfiguration;
+
+			// Face parts
 			PXCFaceModule* faceModule;
 			PXCFaceData* faceDataOutput;
 			PXCFaceConfiguration* faceConfiguration;
@@ -64,6 +68,9 @@ namespace Efficio
 			/// <returns>The converted finger</returns>
 			Models::Body::Finger convertToEfficioFinger(Models::Body::BodySide side, Models::Body::FingerType fingerType, PXCHandData::FingerData finger, PXCHandData::JointData tip, PXCHandData::JointData dip, PXCHandData::JointData pip, PXCHandData::JointData mcp);
 
+
+			std::shared_ptr<Data::Data> GetHandData();
+			std::shared_ptr<Data::Data> GetFaceData();
 		};
 	}
 }

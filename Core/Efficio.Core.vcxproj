@@ -207,7 +207,9 @@
     <ClInclude Include="src\Documentation.h" />
     <ClInclude Include="src\Event.h" />
     <ClInclude Include="src\EventType.h" />
+    <ClInclude Include="src\Expressions.h" />
     <ClInclude Include="src\Face.h" />
+    <ClInclude Include="src\FaceData.h" />
     <ClInclude Include="src\Faulted.h" />
     <ClInclude Include="src\Finger.h" />
     <ClInclude Include="src\FingerType.h" />
@@ -252,6 +254,7 @@
     <ClCompile Include="src\DiscreteGesture.cpp" />
     <ClCompile Include="src\Event.cpp" />
     <ClCompile Include="src\Face.cpp" />
+    <ClCompile Include="src\FaceData.cpp" />
     <ClCompile Include="src\Faulted.cpp" />
     <ClCompile Include="src\Finger.cpp" />
     <ClCompile Include="src\Frame.cpp" />

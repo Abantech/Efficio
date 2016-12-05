@@ -9,7 +9,7 @@
 namespace Efficio {
 	Engine::Engine() : started(false), frameID(1)
 	{
-		sensors.push_back(new Sensors::RealSense());
+		sensors.push_back(new Sensors::RealSense(Efficio::Sensors::TrackingType::Face));
 		sensors.push_back(new Sensors::Body::LeapMotion());
 		sensors.push_back(new Sensors::Body::Kinect());
 	}
