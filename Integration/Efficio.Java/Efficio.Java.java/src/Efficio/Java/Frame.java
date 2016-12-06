@@ -35,12 +35,16 @@ public class Frame {
     }
   }
 
-  public Frame(int ID) {
-    this(EfficioRuntimeJNI.new_Frame__SWIG_0(ID), true);
+  public Frame(Frame previousFrame, int ID) {
+    this(EfficioRuntimeJNI.new_Frame__SWIG_0(Frame.getCPtr(previousFrame), previousFrame, ID), true);
+  }
+
+  public Frame(Frame previousFrame) {
+    this(EfficioRuntimeJNI.new_Frame__SWIG_1(Frame.getCPtr(previousFrame), previousFrame), true);
   }
 
   public Frame() {
-    this(EfficioRuntimeJNI.new_Frame__SWIG_1(), true);
+    this(EfficioRuntimeJNI.new_Frame__SWIG_2(), true);
   }
 
   public DataCollection GetData() {
@@ -61,6 +65,22 @@ public class Frame {
 
   public void AddEvent(Event eventPtr) {
     EfficioRuntimeJNI.Frame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
+  }
+
+  public void setTime(SWIGTYPE_p_time_t value) {
+    EfficioRuntimeJNI.Frame_Time_set(swigCPtr, this, SWIGTYPE_p_time_t.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_time_t getTime() {
+    return new SWIGTYPE_p_time_t(EfficioRuntimeJNI.Frame_Time_get(swigCPtr, this), true);
+  }
+
+  public void setDeltaTime(SWIGTYPE_p_time_t value) {
+    EfficioRuntimeJNI.Frame_DeltaTime_set(swigCPtr, this, SWIGTYPE_p_time_t.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_time_t getDeltaTime() {
+    return new SWIGTYPE_p_time_t(EfficioRuntimeJNI.Frame_DeltaTime_get(swigCPtr, this), true);
   }
 
   public void setID(int value) {

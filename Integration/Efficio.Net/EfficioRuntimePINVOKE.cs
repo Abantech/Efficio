@@ -378,10 +378,13 @@ class EfficioRuntimePINVOKE {
   public static extern int Event_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Frame__SWIG_0___")]
-  public static extern global::System.IntPtr new_Frame__SWIG_0(int jarg1);
+  public static extern global::System.IntPtr new_Frame__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Frame__SWIG_1___")]
-  public static extern global::System.IntPtr new_Frame__SWIG_1();
+  public static extern global::System.IntPtr new_Frame__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Frame__SWIG_2___")]
+  public static extern global::System.IntPtr new_Frame__SWIG_2();
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_Frame___")]
   public static extern void delete_Frame(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -400,6 +403,18 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Frame_AddEvent___")]
   public static extern void Frame_AddEvent(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Frame_Time_set___")]
+  public static extern void Frame_Time_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Frame_Time_get___")]
+  public static extern global::System.IntPtr Frame_Time_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Frame_DeltaTime_set___")]
+  public static extern void Frame_DeltaTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Frame_DeltaTime_get___")]
+  public static extern global::System.IntPtr Frame_DeltaTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Frame_ID_set___")]
   public static extern void Frame_ID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);

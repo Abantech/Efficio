@@ -20,7 +20,7 @@ namespace Efficio {
 
 	Frame Engine::Start()
 	{
-		std::shared_ptr<Frame> startFrame(new Frame(frameID++));
+		std::shared_ptr<Frame> startFrame(new Frame(NULL, frameID++));
 
 		startFrame->AddEvent(std::shared_ptr<Events::Event>(new Events::Internal::EfficioStarted()));
 
@@ -39,7 +39,7 @@ namespace Efficio {
 
 	std::shared_ptr<Efficio::Frame> Engine::GetFrame()
 	{
-		std::shared_ptr<Efficio::Frame> frame(new Efficio::Frame(frameID++));
+		std::shared_ptr<Efficio::Frame> frame(new Efficio::Frame(GetFrame(1), frameID++));
 
 		// TODO execute BeforeDeviceQuery actions
 

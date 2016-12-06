@@ -40,10 +40,13 @@ public class Frame : global::System.IDisposable {
     }
   }
 
-  public Frame(int ID) : this(EfficioRuntimePINVOKE.new_Frame__SWIG_0(ID), true) {
+  public Frame(Frame previousFrame, int ID) : this(EfficioRuntimePINVOKE.new_Frame__SWIG_0(Frame.getCPtr(previousFrame), ID), true) {
   }
 
-  public Frame() : this(EfficioRuntimePINVOKE.new_Frame__SWIG_1(), true) {
+  public Frame(Frame previousFrame) : this(EfficioRuntimePINVOKE.new_Frame__SWIG_1(Frame.getCPtr(previousFrame)), true) {
+  }
+
+  public Frame() : this(EfficioRuntimePINVOKE.new_Frame__SWIG_2(), true) {
   }
 
   public DataCollection GetData() {
@@ -71,6 +74,30 @@ public class Frame : global::System.IDisposable {
   public void AddEvent(Event eventPtr) {
     EfficioRuntimePINVOKE.Frame_AddEvent(swigCPtr, Event.getCPtr(eventPtr));
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+  }
+
+  public SWIGTYPE_p_time_t Time {
+    set {
+      EfficioRuntimePINVOKE.Frame_Time_set(swigCPtr, SWIGTYPE_p_time_t.getCPtr(value));
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      SWIGTYPE_p_time_t ret = new SWIGTYPE_p_time_t(EfficioRuntimePINVOKE.Frame_Time_get(swigCPtr), true);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public SWIGTYPE_p_time_t DeltaTime {
+    set {
+      EfficioRuntimePINVOKE.Frame_DeltaTime_set(swigCPtr, SWIGTYPE_p_time_t.getCPtr(value));
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      SWIGTYPE_p_time_t ret = new SWIGTYPE_p_time_t(EfficioRuntimePINVOKE.Frame_DeltaTime_get(swigCPtr), true);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
   }
 
   public int ID {

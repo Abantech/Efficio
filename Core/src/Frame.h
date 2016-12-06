@@ -6,6 +6,7 @@
 #include <memory>
 #include <vector>
 #include <map>
+#include <ctime>
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -18,7 +19,7 @@ namespace Efficio
 	extern class DLLEXPORT Frame
 	{
 	public:
-		Frame(int ID = 0);
+		Frame(std::shared_ptr<Frame> previousFrame = NULL, int ID = 0);
 		~Frame();
 
 		std::vector<std::shared_ptr<Data::Data>> GetData();
@@ -31,6 +32,10 @@ namespace Efficio
 		std::vector<std::shared_ptr<Events::Event>> GetEvents();
 
 		void AddEvent(std::shared_ptr<Events::Event> eventPtr);
+
+		time_t Time;
+
+		time_t DeltaTime;
 
 		int ID;
 

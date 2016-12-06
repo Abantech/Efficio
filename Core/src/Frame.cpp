@@ -5,8 +5,14 @@
 
 namespace Efficio
 {
-	Frame::Frame(int id) : ID(id), dataCollection()
+	Frame::Frame(std::shared_ptr<Frame> previousFrame, int id) : ID(id), dataCollection()
 	{
+		time(&Time);
+
+		if (previousFrame)
+		{
+			DeltaTime = difftime(Time, previousFrame->Time);
+		}
 	}
 
 	Frame::~Frame() {

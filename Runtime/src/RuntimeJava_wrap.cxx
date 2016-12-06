@@ -1389,14 +1389,38 @@ SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Event_1GetEventType(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Frame_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Frame_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
-  int arg1 ;
+  std::shared_ptr< Efficio::Frame > arg1 ;
+  int arg2 ;
+  std::shared_ptr< Efficio::Frame > *argp1 ;
   Efficio::Frame *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  arg1 = (int)jarg1; 
+  (void)jarg1_;
+  argp1 = *(std::shared_ptr< Efficio::Frame > **)&jarg1; 
+  if (argp1) arg1 = *argp1; 
+  arg2 = (int)jarg2; 
+  result = (Efficio::Frame *)new Efficio::Frame(arg1,arg2);
+  
+  *(std::shared_ptr<  Efficio::Frame > **)&jresult = result ? new std::shared_ptr<  Efficio::Frame >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Frame_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  std::shared_ptr< Efficio::Frame > arg1 ;
+  std::shared_ptr< Efficio::Frame > *argp1 ;
+  Efficio::Frame *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  argp1 = *(std::shared_ptr< Efficio::Frame > **)&jarg1; 
+  if (argp1) arg1 = *argp1; 
   result = (Efficio::Frame *)new Efficio::Frame(arg1);
   
   *(std::shared_ptr<  Efficio::Frame > **)&jresult = result ? new std::shared_ptr<  Efficio::Frame >(result SWIG_NO_NULL_DELETER_1) : 0;
@@ -1405,7 +1429,7 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Frame_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Frame_1_1SWIG_11(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Frame_1_1SWIG_12(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Efficio::Frame *result = 0 ;
   
@@ -1531,6 +1555,86 @@ SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1AddEvent(JNIE
   argp2 = *(std::shared_ptr< Efficio::Events::Event > **)&jarg2; 
   if (argp2) arg2 = *argp2; 
   (arg1)->AddEvent(arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1Time_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  time_t arg2 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  time_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  argp2 = *(time_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null time_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->Time = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1Time_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  time_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  result =  ((arg1)->Time);
+  *(time_t **)&jresult = new time_t((const time_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1DeltaTime_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  time_t arg2 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  time_t *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  argp2 = *(time_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null time_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->DeltaTime = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1DeltaTime_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  time_t result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  result =  ((arg1)->DeltaTime);
+  *(time_t **)&jresult = new time_t((const time_t &)result); 
+  return jresult;
 }
 
 

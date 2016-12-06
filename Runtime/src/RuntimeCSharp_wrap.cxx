@@ -1592,12 +1592,28 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Event_GetEventType___(void * jarg1
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Frame__SWIG_0___(int jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Frame__SWIG_0___(void * jarg1, int jarg2) {
   void * jresult ;
-  int arg1 ;
+  std::shared_ptr< Efficio::Frame > arg1 ;
+  int arg2 ;
   Efficio::Frame *result = 0 ;
   
-  arg1 = (int)jarg1; 
+  if (jarg1) arg1 = *(std::shared_ptr< Efficio::Frame > *)jarg1; 
+  arg2 = (int)jarg2; 
+  result = (Efficio::Frame *)new Efficio::Frame(arg1,arg2);
+  
+  jresult = result ? new std::shared_ptr<  Efficio::Frame >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Frame__SWIG_1___(void * jarg1) {
+  void * jresult ;
+  std::shared_ptr< Efficio::Frame > arg1 ;
+  Efficio::Frame *result = 0 ;
+  
+  if (jarg1) arg1 = *(std::shared_ptr< Efficio::Frame > *)jarg1; 
   result = (Efficio::Frame *)new Efficio::Frame(arg1);
   
   jresult = result ? new std::shared_ptr<  Efficio::Frame >(result SWIG_NO_NULL_DELETER_1) : 0;
@@ -1606,7 +1622,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Frame__SWIG_0___(int jarg1)
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Frame__SWIG_1___() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Frame__SWIG_2___() {
   void * jresult ;
   Efficio::Frame *result = 0 ;
   
@@ -1708,6 +1724,74 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_AddEvent___(void * jarg1, v
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
   if (jarg2) arg2 = *(std::shared_ptr< Efficio::Events::Event > *)jarg2; 
   (arg1)->AddEvent(arg2);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_Time_set___(void * jarg1, void * jarg2) {
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  time_t arg2 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  time_t *argp2 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  argp2 = (time_t *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null time_t", 0);
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->Time = arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Frame_Time_get___(void * jarg1) {
+  void * jresult ;
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  time_t result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  result =  ((arg1)->Time);
+  jresult = new time_t((const time_t &)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_DeltaTime_set___(void * jarg1, void * jarg2) {
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  time_t arg2 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  time_t *argp2 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  argp2 = (time_t *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null time_t", 0);
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->DeltaTime = arg2;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Frame_DeltaTime_get___(void * jarg1) {
+  void * jresult ;
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  time_t result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  result =  ((arg1)->DeltaTime);
+  jresult = new time_t((const time_t &)result); 
+  return jresult;
 }
 
 
