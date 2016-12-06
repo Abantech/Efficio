@@ -40,6 +40,7 @@ namespace Efficio {
 	std::shared_ptr<Efficio::Frame> Engine::GetFrame()
 	{
 		std::shared_ptr<Efficio::Frame> frame(new Efficio::Frame(GetFrame(1), frameID++));
+		deltaTimeSum += frame->DeltaTime;
 
 		// TODO execute BeforeDeviceQuery actions
 
@@ -65,6 +66,10 @@ namespace Efficio {
 		// TODO execute AfterFrameProcess actions
 
 		// Save frame
+		if (historicalFrames.historicalFrames.at(59) != NULL)
+		{
+			deltaTimeSum -= GetFrame(60)->DeltaTime;
+		}
 		historicalFrames.AddFrame(frame);
 
 		return frame;
@@ -82,4 +87,10 @@ namespace Efficio {
 
 		return NULL;
 	}
+
+	float Engine::GetFrameRate()
+	{
+		return  60 / (deltaTimeSum / 1000);
+	}
+
 }

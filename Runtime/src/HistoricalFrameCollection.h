@@ -25,6 +25,6 @@ namespace Efficio
 		/// Gets a historical Efficio frame
 		std::shared_ptr<Efficio::Frame> GetFrame(int countBack);
 	
-		std::array<std::shared_ptr<Efficio::Frame>, 59> historicalFrames;
+		std::array<std::shared_ptr<Efficio::Frame>, 120> historicalFrames;
 	};
 }

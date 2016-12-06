@@ -60,6 +60,11 @@ public class Engine : global::System.IDisposable {
     return ret;
   }
 
+  public float GetFrameRate() {
+    float ret = EfficioRuntimePINVOKE.Engine_GetFrameRate(swigCPtr);
+    return ret;
+  }
+
 }
 
 }

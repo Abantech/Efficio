@@ -76,25 +76,25 @@ public class Frame : global::System.IDisposable {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public SWIGTYPE_p_time_t Time {
+  public SWIGTYPE_p_clock_t Time {
     set {
-      EfficioRuntimePINVOKE.Frame_Time_set(swigCPtr, SWIGTYPE_p_time_t.getCPtr(value));
+      EfficioRuntimePINVOKE.Frame_Time_set(swigCPtr, SWIGTYPE_p_clock_t.getCPtr(value));
       if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_time_t ret = new SWIGTYPE_p_time_t(EfficioRuntimePINVOKE.Frame_Time_get(swigCPtr), true);
+      SWIGTYPE_p_clock_t ret = new SWIGTYPE_p_clock_t(EfficioRuntimePINVOKE.Frame_Time_get(swigCPtr), true);
       if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
-  public SWIGTYPE_p_time_t DeltaTime {
+  public SWIGTYPE_p_clock_t DeltaTime {
     set {
-      EfficioRuntimePINVOKE.Frame_DeltaTime_set(swigCPtr, SWIGTYPE_p_time_t.getCPtr(value));
+      EfficioRuntimePINVOKE.Frame_DeltaTime_set(swigCPtr, SWIGTYPE_p_clock_t.getCPtr(value));
       if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      SWIGTYPE_p_time_t ret = new SWIGTYPE_p_time_t(EfficioRuntimePINVOKE.Frame_DeltaTime_get(swigCPtr), true);
+      SWIGTYPE_p_clock_t ret = new SWIGTYPE_p_clock_t(EfficioRuntimePINVOKE.Frame_DeltaTime_get(swigCPtr), true);
       if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

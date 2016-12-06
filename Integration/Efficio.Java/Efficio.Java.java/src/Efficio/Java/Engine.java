@@ -53,4 +53,8 @@ public class Engine {
     return (cPtr == 0) ? null : new Frame(cPtr, true);
   }
 
+  public float GetFrameRate() {
+    return EfficioRuntimeJNI.Engine_GetFrameRate(swigCPtr, this);
+  }
+
 }

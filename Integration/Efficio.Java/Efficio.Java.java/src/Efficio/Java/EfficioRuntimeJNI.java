@@ -92,6 +92,7 @@ public class EfficioRuntimeJNI {
   public final static native long Engine_Start(long jarg1, Engine jarg1_);
   public final static native long Engine_GetFrame__SWIG_0(long jarg1, Engine jarg1_);
   public final static native long Engine_GetFrame__SWIG_1(long jarg1, Engine jarg1_, int jarg2);
+  public final static native float Engine_GetFrameRate(long jarg1, Engine jarg1_);
   public final static native void delete_Gesture(long jarg1);
   public final static native int Gesture_GetType(long jarg1, Gesture jarg1_);
   public final static native int Gesture_GetGestureState(long jarg1, Gesture jarg1_);

@@ -33,9 +33,9 @@ namespace Efficio
 
 		void AddEvent(std::shared_ptr<Events::Event> eventPtr);
 
-		time_t Time;
+		clock_t Time;
 
-		time_t DeltaTime;
+		clock_t DeltaTime;
 
 		int ID;
 

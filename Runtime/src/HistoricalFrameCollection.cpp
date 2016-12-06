@@ -11,6 +11,7 @@ namespace Efficio
 	{
 	}
 
+
 	void HistoricalFrameCollection::AddFrame(std::shared_ptr<Frame> frame)
 	{
 		std::rotate(historicalFrames.rbegin(), historicalFrames.rbegin() + 1, historicalFrames.rend());

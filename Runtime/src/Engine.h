@@ -36,12 +36,16 @@ extern "C"
 			/// @return the current frame.
 			std::shared_ptr<Frame> GetFrame(int count);
 
+			float GetFrameRate();
+
 		private:
 			bool started;
 			std::vector<Sensors::Sensor*> sensors;
 			InputRecognition::InputRecognitionEngine ire;
 			HistoricalFrameCollection historicalFrames;
 			int frameID;
+
+			float deltaTimeSum;
 		};
 	}
 }

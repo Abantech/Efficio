@@ -437,6 +437,9 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Engine_GetFrame__SWIG_1___")]
   public static extern global::System.IntPtr Engine_GetFrame__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Engine_GetFrameRate___")]
+  public static extern float Engine_GetFrameRate(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_Gesture___")]
   public static extern void delete_Gesture(global::System.Runtime.InteropServices.HandleRef jarg1);
 

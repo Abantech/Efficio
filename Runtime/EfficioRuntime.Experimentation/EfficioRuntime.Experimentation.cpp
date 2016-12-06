@@ -60,7 +60,7 @@ int main()
 				break;
 			}
 
-			cout << ev->ID << ": " << evName << "\n";
+			cout << ev->ID << ": " << evName << " : " << +engine->GetFrameRate() << "\n";
 		}
 	}
 }

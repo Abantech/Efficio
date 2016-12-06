@@ -1560,9 +1560,9 @@ SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1AddEvent(JNIE
 
 SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1Time_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
-  time_t arg2 ;
+  clock_t arg2 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
-  time_t *argp2 ;
+  clock_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
@@ -1570,9 +1570,9 @@ SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1Time_1set(JNI
   
   smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
-  argp2 = *(time_t **)&jarg2; 
+  argp2 = *(clock_t **)&jarg2; 
   if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null time_t");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null clock_t");
     return ;
   }
   arg2 = *argp2; 
@@ -1584,7 +1584,7 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1Time_1get(JN
   jlong jresult = 0 ;
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
-  time_t result;
+  clock_t result;
   
   (void)jenv;
   (void)jcls;
@@ -1593,16 +1593,16 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1Time_1get(JN
   smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
   result =  ((arg1)->Time);
-  *(time_t **)&jresult = new time_t((const time_t &)result); 
+  *(clock_t **)&jresult = new clock_t((const clock_t &)result); 
   return jresult;
 }
 
 
 SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1DeltaTime_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
-  time_t arg2 ;
+  clock_t arg2 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
-  time_t *argp2 ;
+  clock_t *argp2 ;
   
   (void)jenv;
   (void)jcls;
@@ -1610,9 +1610,9 @@ SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1DeltaTime_1se
   
   smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
-  argp2 = *(time_t **)&jarg2; 
+  argp2 = *(clock_t **)&jarg2; 
   if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null time_t");
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null clock_t");
     return ;
   }
   arg2 = *argp2; 
@@ -1624,7 +1624,7 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1DeltaTime_1g
   jlong jresult = 0 ;
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
   std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
-  time_t result;
+  clock_t result;
   
   (void)jenv;
   (void)jcls;
@@ -1633,7 +1633,7 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Frame_1DeltaTime_1g
   smartarg1 = *(std::shared_ptr<  Efficio::Frame > **)&jarg1;
   arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
   result =  ((arg1)->DeltaTime);
-  *(time_t **)&jresult = new time_t((const time_t &)result); 
+  *(clock_t **)&jresult = new clock_t((const clock_t &)result); 
   return jresult;
 }
 
@@ -1737,6 +1737,21 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Engine_1GetFrame_1_
   arg2 = (int)jarg2; 
   result = (arg1)->GetFrame(arg2);
   *(std::shared_ptr< Efficio::Frame > **)&jresult = result ? new std::shared_ptr< Efficio::Frame >(result) : 0; 
+  return jresult;
+}
+
+
+SWIGEXPORT jfloat JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Engine_1GetFrameRate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jfloat jresult = 0 ;
+  Efficio::Engine *arg1 = (Efficio::Engine *) 0 ;
+  float result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Efficio::Engine **)&jarg1; 
+  result = (float)(arg1)->GetFrameRate();
+  jresult = (jfloat)result; 
   return jresult;
 }
 
