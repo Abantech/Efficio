@@ -99,8 +99,8 @@
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>xcopy "$(TargetDir)*.dll" $(SolutionDir)dist\bin\$(TargetedSDKArchitecture)\$(Configuration) /y
+xcopy "$(TargetDir)*.lib" $(SolutionDir)dist\bin\$(TargetedSDKArchitecture)\$(Configuration) /y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>doxygen resources/default.doxygen
@@ -132,28 +132,21 @@ EXIT 0</Command>
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>xcopy "$(TargetDir)*.dll" "$(SolutionDir)dist\bin\x64\$(Configuration)" /y
+xcopy "$(TargetDir)*.lib" "$(SolutionDir)dist\bin\x64\$(Configuration)" /y
+xcopy "$(ProjectDir)src\*.h" "$(SolutionDir)dist\includes" /y
+xcopy "$(SolutionDir)core\src\*.h" "$(SolutionDir)dist\includes" /y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>doxygen resources/default.doxygen
-
 mkdir temp
-
 xcopy $(SolutionDir)Core\src\*.h temp
-
 xcopy src\*.h temp
-
 xcopy resources\*.i temp
-
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Efficio.Net" temp/RuntimeCSharp.i
-
 swig -c++ -java -package Efficio.Java -outdir "$(SolutionDir)Integration\Efficio.Java\Efficio.Java.java\src\Efficio\Java" temp/RuntimeJava.i
-
 xcopy temp\*.cxx  src /y
-
 rmdir /S /Q temp
-
 EXIT 0</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
