@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Event.h"
-#include "SensorDetails.h"
+#include "SensorInformation.h"
 
 
 #if COMPILING_DLL

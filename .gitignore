@@ -73,3 +73,5 @@
 /Plugins/Sensors/Kinect/Debug
 /Plugins/Sensors/LeapMotion/Debug
 >>>>>>> origin/master
+/Plugins/Sensors/GearVR/doc/html
+/Plugins/Sensors/GearVR/x64/Debug

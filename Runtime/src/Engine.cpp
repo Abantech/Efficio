@@ -2,6 +2,7 @@
 #include "LeapMotion.h"
 #include "RealSense.h"
 #include "Kinect.h"
+#include "GearVR.h"
 
 // Events
 #include "EfficioStarted.h"
@@ -12,6 +13,7 @@ namespace Efficio {
 		sensors.push_back(new Sensors::RealSense(Efficio::Sensors::TrackingType::Face));
 		sensors.push_back(new Sensors::Body::LeapMotion());
 		sensors.push_back(new Sensors::Body::Kinect());
+		sensors.push_back(new Sensors::GearVR());
 	}
 
 	Engine::~Engine()

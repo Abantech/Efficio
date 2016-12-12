@@ -1,7 +1,7 @@
 #pragma once
 
 #include "SensorStatus.h"
-#include "SensorDetails.h"
+#include "SensorInformation.h"
 #include "TrackingType.h"
 #include "Connected.h"
 #include "Connecting.h"

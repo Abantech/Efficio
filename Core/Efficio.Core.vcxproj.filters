@@ -171,9 +171,6 @@
     <ClInclude Include="src\Connected.h">
       <Filter>Header Files\Sensors\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\SensorDetails.h">
-      <Filter>Header Files\Sensors</Filter>
-    </ClInclude>
     <ClInclude Include="src\Disconnected.h">
       <Filter>Header Files\Sensors\Events</Filter>
     </ClInclude>
@@ -197,6 +194,9 @@
     </ClInclude>
     <ClInclude Include="src\EmptyData.h">
       <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SensorInformation.h">
+      <Filter>Header Files\Sensors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -232,7 +232,7 @@
     <ClInclude Include="src\PinchDetector.h" />
     <ClInclude Include="src\RecognitionProcessor.h" />
     <ClInclude Include="src\Sensor.h" />
-    <ClInclude Include="src\SensorDetails.h" />
+    <ClInclude Include="src\SensorInformation.h" />
     <ClInclude Include="src\SensorStatus.h" />
     <ClInclude Include="src\SingleHandGesture.h" />
     <ClInclude Include="src\SingleHandGestureDetector.h" />

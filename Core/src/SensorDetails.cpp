@@ -1,4 +1,4 @@
-#include "SensorDetails.h"
+#include "SensorInformation.h"
 
 namespace Efficio
 {
