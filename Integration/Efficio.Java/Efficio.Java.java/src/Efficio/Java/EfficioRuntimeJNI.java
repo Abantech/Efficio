@@ -114,6 +114,9 @@ public class EfficioRuntimeJNI {
   public final static native int Pinch_GetEventType(long jarg1, Pinch jarg1_);
   public final static native void Pinch_Side_set(long jarg1, Pinch jarg1_, int jarg2);
   public final static native int Pinch_Side_get(long jarg1, Pinch jarg1_);
+  public final static native long new_EfficioStarted();
+  public final static native void delete_EfficioStarted(long jarg1);
+  public final static native int EfficioStarted_GetEventType(long jarg1, EfficioStarted jarg1_);
   public final static native long new_EventCollection__SWIG_0();
   public final static native long new_EventCollection__SWIG_1(long jarg1);
   public final static native long EventCollection_size(long jarg1, EventCollection jarg1_);
@@ -169,4 +172,5 @@ public class EfficioRuntimeJNI {
   public final static native long Gesture_SWIGSmartPtrUpcast(long jarg1);
   public final static native long DiscreteGesture_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Pinch_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long EfficioStarted_SWIGSmartPtrUpcast(long jarg1);
 }

@@ -14,6 +14,7 @@
 	#include "Pinch.h"
 	#include "Hand.h"
 	#include "DataType.h"
+	#include "EfficioStarted.h"
  %}
 
  %include <windows.i>
@@ -25,6 +26,7 @@
 
  %shared_ptr(Efficio::Frame);
  %shared_ptr(Efficio::Events::Event);
+ %shared_ptr(Efficio::Events::Internal::EfficioStarted);
  %shared_ptr(Efficio::InputRecognition::Gesture);
  %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
  %shared_ptr(Efficio::InputRecognition::Body::Hands::Pinch);
@@ -56,7 +58,7 @@
  %include "Gesture.h"
  %include "DiscreteGesture.h"
  %include "Pinch.h"
-
+ %include "EfficioStarted.h"
  
  %template(EventCollection) std::vector<std::shared_ptr<Efficio::Events::Event>>;
  %template(GestureCollection) std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>>;

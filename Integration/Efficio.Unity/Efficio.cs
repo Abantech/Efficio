@@ -26,16 +26,22 @@ namespace Efficio.Unity
                     switch (ev.GetEventType())
                     {
                         case Net.EventType.Pinch:
-                            if (SWIGHelper.CastTo<Pinch>(ev, false) != null)
+                            var pinch = SWIGHelper.CastTo<Pinch>(ev, false);
+                            if (pinch != null)
                             {
-                                var pinch = SWIGHelper.CastTo<Pinch>(ev, false);
-
                                 PinchMessage pinchMessage = new PinchMessage(pinch);
 
                                 MessageBus.MessageBus.Instance.SendMessage(pinchMessage);
                             }
                             break;
                         case Net.EventType.EfficioStarted:
+                            var started = SWIGHelper.CastTo<EfficioStarted>(ev, false);
+                            if (started != null)
+                            {
+                                //EfficioStartedMessage startedMessage = new EfficioStartedMessage(started);
+
+                               // MessageBus.MessageBus.Instance.SendMessage(startedMessage);
+                            }
                             break;
                         default:
                             break;

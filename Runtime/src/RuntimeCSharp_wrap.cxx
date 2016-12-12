@@ -316,6 +316,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_EfficioRuntime(SWIG_CShar
 	#include "Pinch.h"
 	#include "Hand.h"
 	#include "DataType.h"
+	#include "EfficioStarted.h"
  
 
 #include <string>
@@ -2205,6 +2206,44 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Pinch_Side_get___(void * jarg1) {
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_EfficioStarted___() {
+  void * jresult ;
+  Efficio::Events::Internal::EfficioStarted *result = 0 ;
+  
+  result = (Efficio::Events::Internal::EfficioStarted *)new Efficio::Events::Internal::EfficioStarted();
+  
+  jresult = result ? new std::shared_ptr<  Efficio::Events::Internal::EfficioStarted >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_EfficioStarted___(void * jarg1) {
+  Efficio::Events::Internal::EfficioStarted *arg1 = (Efficio::Events::Internal::EfficioStarted *) 0 ;
+  std::shared_ptr< Efficio::Events::Internal::EfficioStarted > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Events::Internal::EfficioStarted > *)jarg1;
+  arg1 = (Efficio::Events::Internal::EfficioStarted *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_EfficioStarted_GetEventType___(void * jarg1) {
+  int jresult ;
+  Efficio::Events::Internal::EfficioStarted *arg1 = (Efficio::Events::Internal::EfficioStarted *) 0 ;
+  std::shared_ptr< Efficio::Events::Internal::EfficioStarted > *smartarg1 = 0 ;
+  Efficio::Events::EventType result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Events::Internal::EfficioStarted > *)jarg1;
+  arg1 = (Efficio::Events::Internal::EfficioStarted *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Events::EventType)(arg1)->GetEventType();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_Clear___(void * jarg1) {
   std::vector< std::shared_ptr< Efficio::Events::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Events::Event > > *) 0 ;
   
@@ -3881,6 +3920,10 @@ SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::Gesture > * SWIGSTDCALL C
 
 SWIGEXPORT std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > * SWIGSTDCALL CSharp_EfficiofNet_Pinch_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > *jarg1) {
     return jarg1 ? new std::shared_ptr< Efficio::InputRecognition::DiscreteGesture >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< Efficio::Events::Event > * SWIGSTDCALL CSharp_EfficiofNet_EfficioStarted_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::Events::Internal::EfficioStarted > *jarg1) {
+    return jarg1 ? new std::shared_ptr< Efficio::Events::Event >(*jarg1) : 0;
 }
 
 #ifdef __cplusplus

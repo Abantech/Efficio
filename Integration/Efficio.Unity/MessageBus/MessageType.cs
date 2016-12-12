@@ -23,5 +23,6 @@
         LeftHandMiddleRingPinch,
         LeftHandMiddlePinkyPinch,
         LeftHandRingPinkyPinch,
+        EfficioStarted,
     }
 }

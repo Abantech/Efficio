@@ -65,5 +65,11 @@
 /ipch
 /Runtime/EfficioRuntime.Experimentation/x64/Debug
 /Plugins/Sensors/Kinect/doc
+<<<<<<< HEAD
 /Integration/Efficio.Net/obj/Release
 /x64/Release
+=======
+/Integration/Efficio.Net/bin/x64/Debug
+/Plugins/Sensors/Kinect/Debug
+/Plugins/Sensors/LeapMotion/Debug
+>>>>>>> origin/master
