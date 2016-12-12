@@ -5,7 +5,10 @@
 #include "Finger.h"
 #include "pxcsensemanager.h"
 #include "pxchanddata.h"
+#include "pxchandmodule.h"
 #include "pxchandconfiguration.h"
+#include "pxcfacedata.h"
+#include "pxcfacemodule.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)

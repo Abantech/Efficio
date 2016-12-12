@@ -247,6 +247,7 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 	#include "Pinch.h"
 	#include "Hand.h"
 	#include "DataType.h"
+	#include "EfficioStarted.h"
  
 
 #include <string>
@@ -2112,6 +2113,51 @@ SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Pinch_1Side_1get(JNI
 }
 
 
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1EfficioStarted(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  Efficio::Events::Internal::EfficioStarted *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (Efficio::Events::Internal::EfficioStarted *)new Efficio::Events::Internal::EfficioStarted();
+  
+  *(std::shared_ptr<  Efficio::Events::Internal::EfficioStarted > **)&jresult = result ? new std::shared_ptr<  Efficio::Events::Internal::EfficioStarted >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_delete_1EfficioStarted(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  Efficio::Events::Internal::EfficioStarted *arg1 = (Efficio::Events::Internal::EfficioStarted *) 0 ;
+  std::shared_ptr< Efficio::Events::Internal::EfficioStarted > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Events::Internal::EfficioStarted > **)&jarg1;
+  arg1 = (Efficio::Events::Internal::EfficioStarted *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_EfficioStarted_1GetEventType(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Efficio::Events::Internal::EfficioStarted *arg1 = (Efficio::Events::Internal::EfficioStarted *) 0 ;
+  std::shared_ptr< Efficio::Events::Internal::EfficioStarted > *smartarg1 = 0 ;
+  Efficio::Events::EventType result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Events::Internal::EfficioStarted > **)&jarg1;
+  arg1 = (Efficio::Events::Internal::EfficioStarted *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Events::EventType)(arg1)->GetEventType();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1EventCollection_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< std::shared_ptr< Efficio::Events::Event > > *result = 0 ;
@@ -2957,6 +3003,16 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Pinch_1SWIGSmartPtr
     (void)jcls;
     argp1 = *(std::shared_ptr< Efficio::InputRecognition::Body::Hands::Pinch > **)&jarg1;
     *(std::shared_ptr< Efficio::InputRecognition::DiscreteGesture > **)&baseptr = argp1 ? new std::shared_ptr< Efficio::InputRecognition::DiscreteGesture >(*argp1) : 0;
+    return baseptr;
+}
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_EfficioStarted_1SWIGSmartPtrUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+    jlong baseptr = 0;
+    std::shared_ptr< Efficio::Events::Internal::EfficioStarted > *argp1;
+    (void)jenv;
+    (void)jcls;
+    argp1 = *(std::shared_ptr< Efficio::Events::Internal::EfficioStarted > **)&jarg1;
+    *(std::shared_ptr< Efficio::Events::Event > **)&baseptr = argp1 ? new std::shared_ptr< Efficio::Events::Event >(*argp1) : 0;
     return baseptr;
 }
 

@@ -8,6 +8,31 @@
 
             var startFrame = engine.Start();
 
+            foreach (var ev in startFrame.GetEvents())
+            {
+                switch (ev.GetEventType())
+                {
+                    case EventType.EfficioStarted:
+                        var e = SWIGHelper.CastTo<EfficioStarted>(ev, false);
+                        break;
+                    case EventType.SensorConnecting:
+                        break;
+                    case EventType.SensorConnected:
+                        break;
+                    case EventType.SensorDisconnecting:
+                        break;
+                    case EventType.SensorDisconnected:
+                        break;
+                    case EventType.SensorFaulted:
+                        break;
+                    case EventType.Pinch:
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+
             while (true)
             {
                 var frame = engine.GetFrame();

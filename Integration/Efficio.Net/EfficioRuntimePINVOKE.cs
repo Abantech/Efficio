@@ -500,6 +500,15 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Pinch_Side_get___")]
   public static extern int Pinch_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_EfficioStarted___")]
+  public static extern global::System.IntPtr new_EfficioStarted();
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_EfficioStarted___")]
+  public static extern void delete_EfficioStarted(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_EfficioStarted_GetEventType___")]
+  public static extern int EfficioStarted_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_EventCollection_Clear___")]
   public static extern void EventCollection_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -808,6 +817,9 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Pinch_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr Pinch_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_EfficioStarted_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr EfficioStarted_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 }
 
 }

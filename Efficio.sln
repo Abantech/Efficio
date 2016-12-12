@@ -35,6 +35,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Efficio.Unity", "Efficio.Unity", "{F65F8DCE-F5AA-43EA-BF20-A45E4D2AE3F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efficio.Unity", "Integration\Efficio.Unity\Efficio.Unity.csproj", "{59E3B6FE-6B31-4FDA-BE1F-74EBBAC737EF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{373DBE4B-55E5-4319-8A2C-7B296EACC940} = {373DBE4B-55E5-4319-8A2C-7B296EACC940}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
