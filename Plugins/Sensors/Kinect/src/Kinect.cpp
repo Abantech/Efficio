@@ -35,28 +35,37 @@ namespace Efficio
 				return false;
 			}
 
-			/// <summary>
-			/// Gets the frame.
-			/// </summary>
-			/// <returns></returns>
-			Frame Kinect::GetFrame()
+			bool Kinect::IsConnected()
 			{
-				Frame efficioFrame;
+				return false;
+			}
 
+			std::vector<std::shared_ptr<Data::Data>> Kinect::GetData()
+			{
 				// Get Kinect Frame
 
 				// For each body					
-					// Build Efficio Body
+				// Build Efficio Body
 
-					// For each joint
-						//Convert joint to Efficio Joint
-						// Populate
+				// For each joint
+				//Convert joint to Efficio Joint
+				// Populate
 
 				// Add Body to SkeletonData
 
-				// Add data to EfficioFrame
+				// Return data
+				return std::vector<std::shared_ptr<Data::Data>>();
+			}
 
-				return efficioFrame;
+			std::vector<std::shared_ptr<Events::Event>> Kinect::GetEvents()
+			{
+				return std::vector<std::shared_ptr<Events::Event>>();
+			}
+			void Kinect::PreGetFrame()
+			{
+			}
+			void Kinect::PostGetFrame()
+			{
 			}
 		}
 	}

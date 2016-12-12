@@ -32,6 +32,7 @@ namespace Efficio
 		std::vector<std::shared_ptr<Events::Event>> GetEvents();
 
 		void AddEvent(std::shared_ptr<Events::Event> eventPtr);
+		void AddEvents(std::vector<std::shared_ptr<Events::Event>> eventsPtr);
 
 		clock_t Time;
 

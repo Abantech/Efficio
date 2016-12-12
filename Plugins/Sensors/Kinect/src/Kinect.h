@@ -26,12 +26,21 @@ namespace Efficio
 
 				// Inherited via Sensor
 				virtual Sensors::TrackingType TrackingTypes() override;
+
+
+			protected:
+
+				// Inherited via Sensor
+				virtual bool IsConnected() override;
+				virtual std::vector<std::shared_ptr<Data::Data>> GetData() override;
+				virtual std::vector<std::shared_ptr<Events::Event>> GetEvents() override;
+
+				// Inherited via Sensor
 				virtual Frame Connect() override;
 				virtual Frame Disconnect() override;
 				virtual bool HasFrame() override;
-				virtual Frame GetFrame() override;
-
-			private:
+				virtual void PreGetFrame() override;
+				virtual void PostGetFrame() override;
 			};
 		}
 	}

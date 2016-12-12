@@ -1727,6 +1727,25 @@ SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_AddEvent___(void * jarg1, v
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_AddEvents___(void * jarg1, void * jarg2) {
+  Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
+  std::vector< std::shared_ptr< Efficio::Events::Event > > arg2 ;
+  std::shared_ptr< Efficio::Frame > *smartarg1 = 0 ;
+  std::vector< std::shared_ptr< Efficio::Events::Event > > *argp2 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Frame > *)jarg1;
+  arg1 = (Efficio::Frame *)(smartarg1 ? smartarg1->get() : 0); 
+  argp2 = (std::vector< std::shared_ptr< Efficio::Events::Event > > *)jarg2; 
+  if (!argp2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "Attempt to dereference null std::vector< std::shared_ptr< Efficio::Events::Event > >", 0);
+    return ;
+  }
+  arg2 = *argp2; 
+  (arg1)->AddEvents(arg2);
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Frame_Time_set___(void * jarg1, void * jarg2) {
   Efficio::Frame *arg1 = (Efficio::Frame *) 0 ;
   clock_t arg2 ;

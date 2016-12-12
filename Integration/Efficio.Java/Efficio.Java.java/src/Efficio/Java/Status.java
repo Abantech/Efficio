@@ -13,6 +13,7 @@ public final class Status {
   public final static Status Uninitialized = new Status("Uninitialized");
   public final static Status Disabled = new Status("Disabled");
   public final static Status Faulted = new Status("Faulted");
+  public final static Status Disconnecting = new Status("Disconnecting");
   public final static Status Disconnected = new Status("Disconnected");
   public final static Status Connecting = new Status("Connecting");
   public final static Status Connected = new Status("Connected");
@@ -51,7 +52,7 @@ public final class Status {
     swigNext = this.swigValue+1;
   }
 
-  private static Status[] swigValues = { Unknown, Uninitialized, Disabled, Faulted, Disconnected, Connecting, Connected };
+  private static Status[] swigValues = { Unknown, Uninitialized, Disabled, Faulted, Disconnecting, Disconnected, Connecting, Connected };
   private static int swigNext = 0;
   private final int swigValue;
   private final String swigName;

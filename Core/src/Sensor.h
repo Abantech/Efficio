@@ -26,8 +26,18 @@ namespace Efficio
 		extern class DLLEXPORT Sensor
 		{
 		public:
-			Sensor() {};
+			Sensor();
 			~Sensor() {};
+
+			/// The type of data the device is able to track
+			virtual TrackingType TrackingTypes() = 0;
+
+			// Virtual Methods
+			/// Connects the device
+			virtual Frame Connect();
+
+			/// Disconnects the device
+			virtual Frame Disconnect();
 
 			/// The unique ID of the device
 			std::string ID;
@@ -35,26 +45,11 @@ namespace Efficio
 			/// A Boolean indicating whether or not the device is enabled
 			bool Enabled;
 
-			/// A Boolean indicating whether or not the device is connected and ready to feed data into Efficio
-			bool Connected();
-
 			/// The status of the device
-			virtual Status GetStatus();
-
-			/// The type of data the device is able to track
-			virtual TrackingType TrackingTypes() = 0;
-
-			/// Connects the device
-			virtual Frame Connect() = 0;
-
-			/// Disconnects the device
-			virtual Frame Disconnect() = 0;
-
-			/// A Boolean indicating whether or not the device has a new frame for Efficio
-			virtual bool HasFrame() = 0;
+			Status GetStatus();
 
 			/// Gets the current frame from the device
-			virtual Efficio::Frame GetFrame() = 0;
+			Efficio::Frame GetFrame();
 
 			virtual std::string GetSource();
 
@@ -63,7 +58,21 @@ namespace Efficio
 		protected:
 			Efficio::Frame LastEfficioFrame;
 			SensorInformation SensorInformation;
-			Sensors::Status Status;
+			void SetStatus(Sensors::Status status);
+
+			virtual std::vector<std::shared_ptr<Data::Data>> GetData() = 0;
+			virtual std::vector<std::shared_ptr<Events::Event>> GetEvents() = 0;			
+			/// A Boolean indicating whether or not the device is connected and ready to feed data into Efficio
+			virtual bool IsConnected() = 0;
+			/// A Boolean indicating whether or not the device has a new frame for Efficio
+			virtual bool HasFrame() = 0;
+			virtual void PreGetFrame() = 0;
+			virtual void PostGetFrame() = 0;
+
+
+		private:
+			Sensors::Status status;
+			bool connectionStatusChanged;
 		};
 	}
 }

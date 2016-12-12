@@ -205,6 +205,7 @@
     <ClInclude Include="src\Disconnecting.h" />
     <ClInclude Include="src\DiscreteGesture.h" />
     <ClInclude Include="src\Documentation.h" />
+    <ClInclude Include="src\EmptyData.h" />
     <ClInclude Include="src\Event.h" />
     <ClInclude Include="src\EventType.h" />
     <ClInclude Include="src\Expressions.h" />
@@ -221,6 +222,7 @@
     <ClInclude Include="src\HandData.h" />
     <ClInclude Include="src\HandRecognitionProcessor.h" />
     <ClInclude Include="src\Head.h" />
+    <ClInclude Include="src\IHandSensor.h" />
     <ClInclude Include="src\InputRecognitionEngine.h" />
     <ClInclude Include="src\Joint.h" />
     <ClInclude Include="src\JointType.h" />
@@ -252,6 +254,7 @@
     <ClCompile Include="src\Disconnected.cpp" />
     <ClCompile Include="src\Disconnecting.cpp" />
     <ClCompile Include="src\DiscreteGesture.cpp" />
+    <ClCompile Include="src\EmptyData.cpp" />
     <ClCompile Include="src\Event.cpp" />
     <ClCompile Include="src\Face.cpp" />
     <ClCompile Include="src\FaceData.cpp" />

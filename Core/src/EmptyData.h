@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Data.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -11,13 +12,12 @@ namespace Efficio
 {
 	namespace Data
 	{
-		extern enum class DLLEXPORT DataType 
+		extern class DLLEXPORT EmptyData : public Data
 		{
-			None,
-			Altitude,
-			Location,
-			Hand,
-			Face
+		public:
+			EmptyData() {};
+			~EmptyData() {};
+			virtual DataType GetDataType() override;
 		};
 	}
 }

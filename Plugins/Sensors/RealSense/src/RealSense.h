@@ -3,6 +3,8 @@
 #include "Sensor.h"
 #include "Hand.h"
 #include "Finger.h"
+#include "HandData.h"
+#include "FaceData.h"
 #include "pxcsensemanager.h"
 #include "pxchanddata.h"
 #include "pxchandconfiguration.h"
@@ -30,11 +32,16 @@ namespace Efficio
 			// Inherited via Sensor
 			virtual Sensors::TrackingType TrackingTypes() override;
 
+		protected:
+			// Inherited via Sensor
+			virtual std::vector<std::shared_ptr<Data::Data>> GetData() override;
+			virtual std::vector<std::shared_ptr<Events::Event>> GetEvents() override;
+			virtual bool IsConnected() override;
+			virtual void PreGetFrame() override;
+			virtual void PostGetFrame() override;
 			virtual Frame Connect() override;
-
 			virtual Frame Disconnect() override;
 
-			virtual Efficio::Frame GetFrame() override;
 		private:
 			PXCSession* session;
 			PXCSenseManager* senseManager;
@@ -69,8 +76,8 @@ namespace Efficio
 			Models::Body::Finger convertToEfficioFinger(Models::Body::BodySide side, Models::Body::FingerType fingerType, PXCHandData::FingerData finger, PXCHandData::JointData tip, PXCHandData::JointData dip, PXCHandData::JointData pip, PXCHandData::JointData mcp);
 
 
-			std::shared_ptr<Data::Data> GetHandData();
-			std::shared_ptr<Data::Data> GetFaceData();
+			Data::Body::HandData GetHandData();
+			Data::Body::Face::FaceData GetFaceData();
 		};
 	}
 }

@@ -47,10 +47,7 @@ namespace Efficio {
 		// Query sensors for frames
 		for (size_t i = 0; i < sensors.size(); i++)
 		{
-			if (sensors[i]->HasFrame())
-			{
-				frame->AddFrame(sensors[i]->GetFrame());
-			}
+			frame->AddFrame(sensors[i]->GetFrame());
 		}
 
 		// TODO execute AfterDeviceQuery actions

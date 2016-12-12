@@ -76,6 +76,11 @@ public class Frame : global::System.IDisposable {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
+  public void AddEvents(EventCollection eventsPtr) {
+    EfficioRuntimePINVOKE.Frame_AddEvents(swigCPtr, EventCollection.getCPtr(eventsPtr));
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+  }
+
   public SWIGTYPE_p_clock_t Time {
     set {
       EfficioRuntimePINVOKE.Frame_Time_set(swigCPtr, SWIGTYPE_p_clock_t.getCPtr(value));

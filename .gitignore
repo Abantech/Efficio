@@ -65,3 +65,5 @@
 /ipch
 /Runtime/EfficioRuntime.Experimentation/x64/Debug
 /Plugins/Sensors/Kinect/doc
+/Integration/Efficio.Net/obj/Release
+/x64/Release

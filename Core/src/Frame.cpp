@@ -57,4 +57,12 @@ namespace Efficio
 	{
 		events.push_back(std::shared_ptr<Events::Event>(eventPtr));
 	}
+
+	void Frame::AddEvents(std::vector<std::shared_ptr<Events::Event>> eventsPtr)
+	{
+		for (size_t i = 0; i < eventsPtr.size(); i++)
+		{
+			AddEvent(eventsPtr.at(i));
+		}
+	}
 }

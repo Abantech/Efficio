@@ -67,6 +67,10 @@ public class Frame {
     EfficioRuntimeJNI.Frame_AddEvent(swigCPtr, this, Event.getCPtr(eventPtr), eventPtr);
   }
 
+  public void AddEvents(EventCollection eventsPtr) {
+    EfficioRuntimeJNI.Frame_AddEvents(swigCPtr, this, EventCollection.getCPtr(eventsPtr), eventsPtr);
+  }
+
   public void setTime(SWIGTYPE_p_clock_t value) {
     EfficioRuntimeJNI.Frame_Time_set(swigCPtr, this, SWIGTYPE_p_clock_t.getCPtr(value));
   }

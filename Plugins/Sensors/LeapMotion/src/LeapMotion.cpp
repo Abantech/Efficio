@@ -12,9 +12,8 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			LeapMotion::LeapMotion() : connectionStateChanged(false)
+			LeapMotion::LeapMotion()
 			{
-				Status = Sensors::Status::Uninitialized;
 				controller.setPaused(true);
 				SensorInformation.Name = "Leap Motion";
 			}
@@ -30,83 +29,66 @@ namespace Efficio
 
 			Frame LeapMotion::Connect()
 			{
-				Frame frame;
-				controller.setPaused(false);
-				connectionStateChanged = true;
-				Status = Sensors::Status::Connecting;
+				// Call base class disconnect
+				auto frame = Sensor::Connect();
 
-				frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Connecting(SensorInformation)));
+				// Set Leap Motion to unpaused
+				controller.setPaused(false);
+
+				// Add additional frame information here
 
 				return frame;
 			}
 
 			Frame LeapMotion::Disconnect()
 			{
-				Frame frame;
+				// Call base class disconnect
+				auto frame = Sensor::Disconnect();
+				
+				// Set Leap Motion to pause
 				controller.setPaused(true);
-				connectionStateChanged = true;
 
-				frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Disonnecting(SensorInformation)));
+				// Add additional frame information here
 
 				return frame;
+			}
+
+			bool LeapMotion::IsConnected() 
+			{
+				return controller.isConnected();
+			}
+
+			std::vector<std::shared_ptr<Events::Event>> LeapMotion::GetEvents()
+			{
+				return std::vector<std::shared_ptr<Events::Event>>();
 			}
 
 			bool LeapMotion::HasFrame()
 			{
-				return controller.isConnected() && controller.frame().isValid() && controller.frame().id() != lastLeapFrame.id();
+				return controller.isConnected() && controller.frame().isValid() && latestLeapFrame.id() != lastLeapFrameID;
 			}
 
-			Efficio::Frame LeapMotion::GetFrame()
+			void LeapMotion::PreGetFrame()
 			{
-				Efficio::Frame frame;
-
-				if (connectionStateChanged)
-				{
-					if (controller.isConnected())
-					{
-						connectionStateChanged = false;
-						hasConnected = true;
-						frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Connected(SensorInformation)));
-						Status = Sensors::Status::Connected;
-					}
-					else
-					{
-						connectionStateChanged = false;
-						frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Disonnected(SensorInformation)));
-						Status = Sensors::Status::Disconnected;
-					}
-				}
-
-				// Check if new frame is available. If not, return previously calculated frame
-				if (!HasFrame())
-				{
-					return LastEfficioFrame;
-				}
-
 				// Poll for latest Leap Motion frame
-				lastLeapFrame = controller.frame();
+				latestLeapFrame = controller.frame();
+			}
 
-				// Convert Leap hands to Efficio hands
-				auto hands = lastLeapFrame.hands();
+			void LeapMotion::PostGetFrame()
+			{
+				// Set last frame ID to latest frame pulled
+				lastLeapFrameID = latestLeapFrame.id();
+			}
 
-				std::vector<Efficio::Models::Body::Hand> convertedHands;
+			std::vector<std::shared_ptr<Data::Data>> LeapMotion::GetData()
+			{
+				std::vector<std::shared_ptr<Data::Data>> data;
 
-				for (size_t i = 0; i < hands.count(); i++)
-				{
-					convertedHands.push_back(convertToEfficioHand(hands[i]));
-				}
-
-				std::vector<std::shared_ptr<Efficio::Data::Data>> data;
-
-				std::shared_ptr<Efficio::Data::Data> dataSharedPtr(new Efficio::Data::Body::HandData(convertedHands));
+				std::shared_ptr<Efficio::Data::Data> dataSharedPtr(&GetHandData());
 
 				data.push_back(dataSharedPtr);
 
-				frame.AddData(data);
-
-				LastEfficioFrame = frame;
-
-				return frame;
+				return data;
 			}
 
 			Efficio::Models::Body::Hand LeapMotion::convertToEfficioHand(Leap::Hand hand)
@@ -243,6 +225,25 @@ namespace Efficio
 				auto pipJoint = Efficio::Models::Body::Joint(Vector3(pipPosition.x, pipPosition.y, pipPosition.z), pipType);
 
 				return Efficio::Models::Body::Finger(fingerType, finger.isExtended(), finger.length(), tipJoint, dipJoint, mcpJoint, pipJoint);
+			}
+
+			void LeapMotion::EnableHandTracking(bool enable)
+			{
+			}
+
+			Data::Body::HandData LeapMotion::GetHandData()
+			{
+				// Convert Leap hands to Efficio hands
+				auto hands = latestLeapFrame.hands();
+
+				std::vector<Efficio::Models::Body::Hand> convertedHands;
+
+				for (size_t i = 0; i < hands.count(); i++)
+				{
+					convertedHands.push_back(convertToEfficioHand(hands[i]));
+				}
+
+				return Data::Body::HandData(convertedHands);
 			}
 		}
 	}

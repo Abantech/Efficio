@@ -17,6 +17,7 @@ namespace Efficio
 			Uninitialized,
 			Disabled,
 			Faulted,
+			Disconnecting,
 			Disconnected,
 			Connecting,
 			Connected

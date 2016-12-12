@@ -15,6 +15,7 @@ public enum Status {
   Uninitialized,
   Disabled,
   Faulted,
+  Disconnecting,
   Disconnected,
   Connecting,
   Connected

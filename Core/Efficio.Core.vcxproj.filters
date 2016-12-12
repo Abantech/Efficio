@@ -192,6 +192,12 @@
     <ClInclude Include="src\Expressions.h">
       <Filter>Header Files\Data\Body\Face</Filter>
     </ClInclude>
+    <ClInclude Include="src\IHandSensor.h">
+      <Filter>Header Files\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EmptyData.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\default.doxygen">
@@ -296,6 +302,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\FaceData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EmptyData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

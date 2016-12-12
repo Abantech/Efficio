@@ -11,6 +11,7 @@
 namespace Efficio.Net {
 
 public enum DataType {
+  None,
   Altitude,
   Location,
   Hand,

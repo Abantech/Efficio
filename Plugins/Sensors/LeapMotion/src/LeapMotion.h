@@ -3,6 +3,7 @@
 #include "Sensor.h"
 #include "Leap.h"
 #include "Hand.h"
+#include "IHandSensor.h"
 
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
@@ -12,7 +13,7 @@
 
 namespace Efficio
 {
-	namespace Sensors 
+	namespace Sensors
 	{
 		namespace Body
 		{
@@ -20,7 +21,7 @@ namespace Efficio
 			/// Wrapper for the Leap Motion hand sensor.  More information about this device can be found at https://www.leapmotion.com/
 			/// </summary>
 			/// <seealso cref="Sensor" />
-			extern class DLLEXPORT LeapMotion : public Sensor
+			extern class DLLEXPORT LeapMotion : public Sensor, public IHandSensor
 			{
 			public:
 				LeapMotion();
@@ -28,16 +29,27 @@ namespace Efficio
 
 				// Inherited via Sensor
 				virtual Sensors::TrackingType TrackingTypes() override;
+
+			protected:
+				// Inherited via Sensor
+				virtual std::vector<std::shared_ptr<Data::Data>> GetData() override;
+				virtual std::vector<std::shared_ptr<Events::Event>> GetEvents() override;
 				virtual Frame Connect() override;
 				virtual Frame Disconnect() override;
 				virtual bool HasFrame() override;
-				virtual Frame GetFrame() override;
+				virtual void PreGetFrame() override;
+				virtual void PostGetFrame() override;
+				virtual bool IsConnected() override;
 
 			private:
+				// Inherited via IHandSensor
+				virtual void EnableHandTracking(bool enable) override;
+				virtual Data::Body::HandData GetHandData() override;
+				
+				// Leap Motion Specific
 				Leap::Controller controller;
-				Leap::Frame lastLeapFrame;
-				bool connectionStateChanged;
-				bool hasConnected;
+				Leap::Frame latestLeapFrame;
+				long long lastLeapFrameID;
 
 				/// <summary>
 				/// Converts Leap Motion hand to Efficio hand

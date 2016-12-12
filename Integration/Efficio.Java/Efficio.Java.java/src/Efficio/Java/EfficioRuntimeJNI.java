@@ -81,6 +81,7 @@ public class EfficioRuntimeJNI {
   public final static native void Frame_AddFrame(long jarg1, Frame jarg1_, long jarg2, Frame jarg2_);
   public final static native long Frame_GetEvents(long jarg1, Frame jarg1_);
   public final static native void Frame_AddEvent(long jarg1, Frame jarg1_, long jarg2, Event jarg2_);
+  public final static native void Frame_AddEvents(long jarg1, Frame jarg1_, long jarg2, EventCollection jarg2_);
   public final static native void Frame_Time_set(long jarg1, Frame jarg1_, long jarg2);
   public final static native long Frame_Time_get(long jarg1, Frame jarg1_);
   public final static native void Frame_DeltaTime_set(long jarg1, Frame jarg1_, long jarg2);
