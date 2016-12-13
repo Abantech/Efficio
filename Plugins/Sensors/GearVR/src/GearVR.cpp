@@ -1,4 +1,7 @@
 #include "GearVR.h"
+#include "Event.h"
+#include "EventType.h"
+#include "GearVRAction.h"
 
 namespace Efficio
 {
@@ -53,11 +56,13 @@ namespace Efficio
 			std::vector<std::shared_ptr<Events::Event>> events;
 
 			ovrInputState state;
-			ovr_GetInputState(session, ovrControllerType_::ovrControllerType_Touch, &state);
+			ovr_GetInputState(session, ovrControllerType_::ovrControllerType_Active, &state);
 
 			if (state.Buttons & ovrButton_Back)
 			{
-
+				Efficio::Sensors::GearVRAction action(Efficio::Sensors::ButtonType::Back);
+				std::shared_ptr<Events::Event> eventSharedPtr(&action);
+				events.push_back(eventSharedPtr);
 			}
 
 			return events;

@@ -18,9 +18,18 @@
     <ClInclude Include="src\GearVR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\GearVRAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ButtonType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GearVR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GearVRAction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

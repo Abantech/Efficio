@@ -10,15 +10,12 @@
 
 namespace Efficio.Net {
 
-public enum EventType {
-  EfficioStarted,
-  SensorConnecting,
-  SensorConnected,
-  SensorDisconnecting,
-  SensorDisconnected,
-  SensorFaulted,
-  Pinch,
-  ButtonPressed
+public enum ButtonType {
+  Up,
+  Down,
+  Left,
+  Right,
+  Back
 }
 
 }

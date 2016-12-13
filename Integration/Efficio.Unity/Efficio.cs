@@ -40,9 +40,19 @@ namespace Efficio.Unity
                             {
                                 //EfficioStartedMessage startedMessage = new EfficioStartedMessage(started);
 
-                               // MessageBus.MessageBus.Instance.SendMessage(startedMessage);
+                                // MessageBus.MessageBus.Instance.SendMessage(startedMessage);
                             }
                             break;
+                        case Net.EventType.ButtonPressed:
+                            {
+                                var buttonPressed = SWIGHelper.CastTo<GearVRAction>(ev, false);
+                                if (buttonPressed != null)
+                                {
+                                    
+                                }
+
+                                break;
+                            }
                         default:
                             break;
                     }

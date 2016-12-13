@@ -15,6 +15,7 @@
 	#include "Hand.h"
 	#include "DataType.h"
 	#include "EfficioStarted.h"
+	#include "GearVRAction.h"
  %}
 
  %include <windows.i>
@@ -27,6 +28,8 @@
  %shared_ptr(Efficio::Frame);
  %shared_ptr(Efficio::Events::Event);
  %shared_ptr(Efficio::Events::Internal::EfficioStarted);
+ %shared_ptr(Efficio::Sensors::GearVRAction);
+ %shared_ptr(Efficio::Sensors::ButtonPressed);
  %shared_ptr(Efficio::InputRecognition::Gesture);
  %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
  %shared_ptr(Efficio::InputRecognition::Body::Hands::Pinch);
@@ -40,6 +43,7 @@
 	 /* Enumerations */
 		%include "BodySide.h"
 		%include "DataType.h"
+		%include "ButtonType.h"
 		%include "EventType.h"
 		%include "SensorStatus.h"
 		%include "TrackingType.h"
@@ -59,6 +63,8 @@
  %include "DiscreteGesture.h"
  %include "Pinch.h"
  %include "EfficioStarted.h"
+ %include "GearVRAction.h"
+ 
  
  %template(EventCollection) std::vector<std::shared_ptr<Efficio::Events::Event>>;
  %template(GestureCollection) std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>>;

@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BodySide.cs" />
+    <Compile Include="ButtonType.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="DataCollection.cs" />
     <Compile Include="DataType.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="FingerCollection.cs" />
     <Compile Include="FingerType.cs" />
     <Compile Include="Frame.cs" />
+    <Compile Include="GearVRAction.cs" />
     <Compile Include="Gesture.cs" />
     <Compile Include="GestureCollection.cs" />
     <Compile Include="GestureState.cs" />

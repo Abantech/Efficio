@@ -24,5 +24,6 @@
         LeftHandMiddlePinkyPinch,
         LeftHandRingPinkyPinch,
         EfficioStarted,
+        ButtonPressed,
     }
 }

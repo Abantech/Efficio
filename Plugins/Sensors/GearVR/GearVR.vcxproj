@@ -110,7 +110,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;_DEBUG;_WINDOWS;_USRDLL;GEARVR_EXPORTS;COMPILING_DLL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OCCULUS_SDK)\LibOVR\Include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCCULUS_SDK)LibOVR\Include;$(OCCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -167,10 +167,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ButtonType.h" />
     <ClInclude Include="src\GearVR.h" />
+    <ClInclude Include="src\GearVRAction.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GearVR.cpp" />
+    <ClCompile Include="src\GearVRAction.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

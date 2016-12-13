@@ -117,6 +117,11 @@ public class EfficioRuntimeJNI {
   public final static native long new_EfficioStarted();
   public final static native void delete_EfficioStarted(long jarg1);
   public final static native int EfficioStarted_GetEventType(long jarg1, EfficioStarted jarg1_);
+  public final static native long new_GearVRAction(int jarg1);
+  public final static native void delete_GearVRAction(long jarg1);
+  public final static native void GearVRAction_ButtonType_set(long jarg1, GearVRAction jarg1_, int jarg2);
+  public final static native int GearVRAction_ButtonType_get(long jarg1, GearVRAction jarg1_);
+  public final static native int GearVRAction_GetEventType(long jarg1, GearVRAction jarg1_);
   public final static native long new_EventCollection__SWIG_0();
   public final static native long new_EventCollection__SWIG_1(long jarg1);
   public final static native long EventCollection_size(long jarg1, EventCollection jarg1_);
@@ -173,4 +178,5 @@ public class EfficioRuntimeJNI {
   public final static native long DiscreteGesture_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Pinch_SWIGSmartPtrUpcast(long jarg1);
   public final static native long EfficioStarted_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long GearVRAction_SWIGSmartPtrUpcast(long jarg1);
 }

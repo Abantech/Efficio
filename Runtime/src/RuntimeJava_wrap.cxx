@@ -248,6 +248,7 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 	#include "Hand.h"
 	#include "DataType.h"
 	#include "EfficioStarted.h"
+	#include "GearVRAction.h"
  
 
 #include <string>
@@ -2181,6 +2182,87 @@ SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_EfficioStarted_1GetE
 }
 
 
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1GearVRAction(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jlong jresult = 0 ;
+  Efficio::Sensors::ButtonType arg1 ;
+  Efficio::Sensors::GearVRAction *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (Efficio::Sensors::ButtonType)jarg1; 
+  result = (Efficio::Sensors::GearVRAction *)new Efficio::Sensors::GearVRAction(arg1);
+  
+  *(std::shared_ptr<  Efficio::Sensors::GearVRAction > **)&jresult = result ? new std::shared_ptr<  Efficio::Sensors::GearVRAction >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_delete_1GearVRAction(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  Efficio::Sensors::GearVRAction *arg1 = (Efficio::Sensors::GearVRAction *) 0 ;
+  std::shared_ptr< Efficio::Sensors::GearVRAction > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Sensors::GearVRAction > **)&jarg1;
+  arg1 = (Efficio::Sensors::GearVRAction *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_GearVRAction_1ButtonType_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  Efficio::Sensors::GearVRAction *arg1 = (Efficio::Sensors::GearVRAction *) 0 ;
+  Efficio::Sensors::ButtonType arg2 ;
+  std::shared_ptr< Efficio::Sensors::GearVRAction > *smartarg1 = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Sensors::GearVRAction > **)&jarg1;
+  arg1 = (Efficio::Sensors::GearVRAction *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (Efficio::Sensors::ButtonType)jarg2; 
+  if (arg1) (arg1)->ButtonType = arg2;
+}
+
+
+SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_GearVRAction_1ButtonType_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Efficio::Sensors::GearVRAction *arg1 = (Efficio::Sensors::GearVRAction *) 0 ;
+  std::shared_ptr< Efficio::Sensors::GearVRAction > *smartarg1 = 0 ;
+  Efficio::Sensors::ButtonType result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Sensors::GearVRAction > **)&jarg1;
+  arg1 = (Efficio::Sensors::GearVRAction *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Sensors::ButtonType) ((arg1)->ButtonType);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_GearVRAction_1GetEventType(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  Efficio::Sensors::GearVRAction *arg1 = (Efficio::Sensors::GearVRAction *) 0 ;
+  std::shared_ptr< Efficio::Sensors::GearVRAction > *smartarg1 = 0 ;
+  Efficio::Events::EventType result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Sensors::GearVRAction > **)&jarg1;
+  arg1 = (Efficio::Sensors::GearVRAction *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Events::EventType)(arg1)->GetEventType();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1EventCollection_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< std::shared_ptr< Efficio::Events::Event > > *result = 0 ;
@@ -3035,6 +3117,16 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_EfficioStarted_1SWI
     (void)jenv;
     (void)jcls;
     argp1 = *(std::shared_ptr< Efficio::Events::Internal::EfficioStarted > **)&jarg1;
+    *(std::shared_ptr< Efficio::Events::Event > **)&baseptr = argp1 ? new std::shared_ptr< Efficio::Events::Event >(*argp1) : 0;
+    return baseptr;
+}
+
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_GearVRAction_1SWIGSmartPtrUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+    jlong baseptr = 0;
+    std::shared_ptr< Efficio::Sensors::GearVRAction > *argp1;
+    (void)jenv;
+    (void)jcls;
+    argp1 = *(std::shared_ptr< Efficio::Sensors::GearVRAction > **)&jarg1;
     *(std::shared_ptr< Efficio::Events::Event > **)&baseptr = argp1 ? new std::shared_ptr< Efficio::Events::Event >(*argp1) : 0;
     return baseptr;
 }
