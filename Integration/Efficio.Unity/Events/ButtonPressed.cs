@@ -36,4 +36,30 @@ namespace Efficio.Unity.Events
 
         public abstract void BackButtonPressed(ButtonPressedMessage message);
     }
+
+    public abstract class LeftButtonPress : ButtonPressed
+    {
+        public override void HandleButtonPress(ButtonPressedMessage message)
+        {
+            if (message.ButtonType == Net.ButtonType.Left)
+            {
+                this.LeftButtonPressed(message);
+            }
+        }
+
+        public abstract void LeftButtonPressed(ButtonPressedMessage message);
+    }
+
+    public abstract class RightButtonPress : ButtonPressed
+    {
+        public override void HandleButtonPress(ButtonPressedMessage message)
+        {
+            if (message.ButtonType == Net.ButtonType.Right)
+            {
+                this.RightButtonPressed(message);
+            }
+        }
+
+        public abstract void RightButtonPressed(ButtonPressedMessage message);
+    }
 }

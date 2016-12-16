@@ -20,6 +20,7 @@ namespace Efficio
 			SensorDisconnected,
 			SensorFaulted,
 			Pinch,
+			ButtonPressed
 		};
 	}
 }

@@ -65,6 +65,25 @@ namespace Efficio
 				events.push_back(eventSharedPtr);
 			}
 
+			if (state.Buttons & ovrButton_Left)
+			{
+				Efficio::Sensors::GearVRAction action(Efficio::Sensors::ButtonType::Left);
+				std::shared_ptr<Events::Event> eventSharedPtr(&action);
+				events.push_back(eventSharedPtr);
+			}
+
+			if (state.Buttons & ovrButton_Right)
+			{
+				Efficio::Sensors::GearVRAction action(Efficio::Sensors::ButtonType::Right);
+				std::shared_ptr<Events::Event> eventSharedPtr(&action);
+				events.push_back(eventSharedPtr);
+			}
+			{
+				Efficio::Sensors::GearVRAction action(Efficio::Sensors::ButtonType::Left);
+				std::shared_ptr<Events::Event> eventSharedPtr(&action);
+				events.push_back(eventSharedPtr);
+			}
+
 			return events;
 		}
 
