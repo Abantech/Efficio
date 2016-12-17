@@ -2442,11 +2442,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Faulted_GetEventType___(void * jar
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Disonnected___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Disconnected___(void * jarg1) {
   void * jresult ;
   Efficio::Sensors::SensorInformation arg1 ;
   Efficio::Sensors::SensorInformation *argp1 ;
-  Efficio::Sensors::Disonnected *result = 0 ;
+  Efficio::Sensors::Disconnected *result = 0 ;
   
   argp1 = (Efficio::Sensors::SensorInformation *)jarg1; 
   if (!argp1) {
@@ -2454,48 +2454,62 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_Disonnected___(void * jarg1
     return 0;
   }
   arg1 = *argp1; 
-  result = (Efficio::Sensors::Disonnected *)new Efficio::Sensors::Disonnected(arg1);
-  jresult = (void *)result; 
+  result = (Efficio::Sensors::Disconnected *)new Efficio::Sensors::Disconnected(arg1);
+  
+  jresult = result ? new std::shared_ptr<  Efficio::Sensors::Disconnected >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Disonnected___(void * jarg1) {
-  Efficio::Sensors::Disonnected *arg1 = (Efficio::Sensors::Disonnected *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_Disconnected___(void * jarg1) {
+  Efficio::Sensors::Disconnected *arg1 = (Efficio::Sensors::Disconnected *) 0 ;
+  std::shared_ptr< Efficio::Sensors::Disconnected > *smartarg1 = 0 ;
   
-  arg1 = (Efficio::Sensors::Disonnected *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Sensors::Disconnected > *)jarg1;
+  arg1 = (Efficio::Sensors::Disconnected *)(smartarg1 ? smartarg1->get() : 0); 
   (void)arg1; delete smartarg1;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Disonnected_SensorInformation_set___(void * jarg1, void * jarg2) {
-  Efficio::Sensors::Disonnected *arg1 = (Efficio::Sensors::Disonnected *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_Disconnected_SensorInformation_set___(void * jarg1, void * jarg2) {
+  Efficio::Sensors::Disconnected *arg1 = (Efficio::Sensors::Disconnected *) 0 ;
   Efficio::Sensors::SensorInformation *arg2 = (Efficio::Sensors::SensorInformation *) 0 ;
+  std::shared_ptr< Efficio::Sensors::Disconnected > *smartarg1 = 0 ;
   
-  arg1 = (Efficio::Sensors::Disonnected *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Sensors::Disconnected > *)jarg1;
+  arg1 = (Efficio::Sensors::Disconnected *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = (Efficio::Sensors::SensorInformation *)jarg2; 
   if (arg1) (arg1)->SensorInformation = *arg2;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Disonnected_SensorInformation_get___(void * jarg1) {
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_Disconnected_SensorInformation_get___(void * jarg1) {
   void * jresult ;
-  Efficio::Sensors::Disonnected *arg1 = (Efficio::Sensors::Disonnected *) 0 ;
+  Efficio::Sensors::Disconnected *arg1 = (Efficio::Sensors::Disconnected *) 0 ;
+  std::shared_ptr< Efficio::Sensors::Disconnected > *smartarg1 = 0 ;
   Efficio::Sensors::SensorInformation *result = 0 ;
   
-  arg1 = (Efficio::Sensors::Disonnected *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Sensors::Disconnected > *)jarg1;
+  arg1 = (Efficio::Sensors::Disconnected *)(smartarg1 ? smartarg1->get() : 0); 
   result = (Efficio::Sensors::SensorInformation *)& ((arg1)->SensorInformation);
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Disonnected_GetEventType___(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Disconnected_GetEventType___(void * jarg1) {
   int jresult ;
-  Efficio::Sensors::Disonnected *arg1 = (Efficio::Sensors::Disonnected *) 0 ;
+  Efficio::Sensors::Disconnected *arg1 = (Efficio::Sensors::Disconnected *) 0 ;
+  std::shared_ptr< Efficio::Sensors::Disconnected > *smartarg1 = 0 ;
   Efficio::Events::EventType result;
   
-  arg1 = (Efficio::Sensors::Disonnected *)jarg1; 
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Sensors::Disconnected > *)jarg1;
+  arg1 = (Efficio::Sensors::Disconnected *)(smartarg1 ? smartarg1->get() : 0); 
   result = (Efficio::Events::EventType)(arg1)->GetEventType();
   jresult = (int)result; 
   return jresult;
@@ -4260,8 +4274,8 @@ SWIGEXPORT std::shared_ptr< Efficio::Events::Event > * SWIGSTDCALL CSharp_Effici
     return jarg1 ? new std::shared_ptr< Efficio::Events::Event >(*jarg1) : 0;
 }
 
-SWIGEXPORT Efficio::Events::Event * SWIGSTDCALL CSharp_EfficiofNet_Disonnected_SWIGUpcast___(Efficio::Sensors::Disonnected *jarg1) {
-    return (Efficio::Events::Event *)jarg1;
+SWIGEXPORT std::shared_ptr< Efficio::Events::Event > * SWIGSTDCALL CSharp_EfficiofNet_Disconnected_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::Sensors::Disconnected > *jarg1) {
+    return jarg1 ? new std::shared_ptr< Efficio::Events::Event >(*jarg1) : 0;
 }
 
 SWIGEXPORT std::shared_ptr< Efficio::Events::Event > * SWIGSTDCALL CSharp_EfficiofNet_GearVRAction_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::Sensors::GearVRAction > *jarg1) {

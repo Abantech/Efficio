@@ -2422,11 +2422,11 @@ SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Faulted_1GetEventTyp
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Disonnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Disconnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Efficio::Sensors::SensorInformation arg1 ;
   Efficio::Sensors::SensorInformation *argp1 ;
-  Efficio::Sensors::Disonnected *result = 0 ;
+  Efficio::Sensors::Disconnected *result = 0 ;
   
   (void)jenv;
   (void)jcls;
@@ -2437,60 +2437,74 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_new_1Disonnected(JN
     return 0;
   }
   arg1 = *argp1; 
-  result = (Efficio::Sensors::Disonnected *)new Efficio::Sensors::Disonnected(arg1);
-  *(Efficio::Sensors::Disonnected **)&jresult = result; 
+  result = (Efficio::Sensors::Disconnected *)new Efficio::Sensors::Disconnected(arg1);
+  
+  *(std::shared_ptr<  Efficio::Sensors::Disconnected > **)&jresult = result ? new std::shared_ptr<  Efficio::Sensors::Disconnected >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_delete_1Disonnected(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  Efficio::Sensors::Disonnected *arg1 = (Efficio::Sensors::Disonnected *) 0 ;
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_delete_1Disconnected(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  Efficio::Sensors::Disconnected *arg1 = (Efficio::Sensors::Disconnected *) 0 ;
+  std::shared_ptr< Efficio::Sensors::Disconnected > *smartarg1 = 0 ;
   
   (void)jenv;
   (void)jcls;
-  arg1 = *(Efficio::Sensors::Disonnected **)&jarg1; 
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Sensors::Disconnected > **)&jarg1;
+  arg1 = (Efficio::Sensors::Disconnected *)(smartarg1 ? smartarg1->get() : 0); 
   (void)arg1; delete smartarg1;
 }
 
 
-SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Disonnected_1SensorInformation_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
-  Efficio::Sensors::Disonnected *arg1 = (Efficio::Sensors::Disonnected *) 0 ;
+SWIGEXPORT void JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Disconnected_1SensorInformation_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  Efficio::Sensors::Disconnected *arg1 = (Efficio::Sensors::Disconnected *) 0 ;
   Efficio::Sensors::SensorInformation *arg2 = (Efficio::Sensors::SensorInformation *) 0 ;
+  std::shared_ptr< Efficio::Sensors::Disconnected > *smartarg1 = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   (void)jarg2_;
-  arg1 = *(Efficio::Sensors::Disonnected **)&jarg1; 
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Sensors::Disconnected > **)&jarg1;
+  arg1 = (Efficio::Sensors::Disconnected *)(smartarg1 ? smartarg1->get() : 0); 
   arg2 = *(Efficio::Sensors::SensorInformation **)&jarg2; 
   if (arg1) (arg1)->SensorInformation = *arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Disonnected_1SensorInformation_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Disconnected_1SensorInformation_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
-  Efficio::Sensors::Disonnected *arg1 = (Efficio::Sensors::Disonnected *) 0 ;
+  Efficio::Sensors::Disconnected *arg1 = (Efficio::Sensors::Disconnected *) 0 ;
+  std::shared_ptr< Efficio::Sensors::Disconnected > *smartarg1 = 0 ;
   Efficio::Sensors::SensorInformation *result = 0 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(Efficio::Sensors::Disonnected **)&jarg1; 
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Sensors::Disconnected > **)&jarg1;
+  arg1 = (Efficio::Sensors::Disconnected *)(smartarg1 ? smartarg1->get() : 0); 
   result = (Efficio::Sensors::SensorInformation *)& ((arg1)->SensorInformation);
   *(Efficio::Sensors::SensorInformation **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Disonnected_1GetEventType(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Disconnected_1GetEventType(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
-  Efficio::Sensors::Disonnected *arg1 = (Efficio::Sensors::Disonnected *) 0 ;
+  Efficio::Sensors::Disconnected *arg1 = (Efficio::Sensors::Disconnected *) 0 ;
+  std::shared_ptr< Efficio::Sensors::Disconnected > *smartarg1 = 0 ;
   Efficio::Events::EventType result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(Efficio::Sensors::Disonnected **)&jarg1; 
+  
+  smartarg1 = *(std::shared_ptr<  Efficio::Sensors::Disconnected > **)&jarg1;
+  arg1 = (Efficio::Sensors::Disconnected *)(smartarg1 ? smartarg1->get() : 0); 
   result = (Efficio::Events::EventType)(arg1)->GetEventType();
   jresult = (jint)result; 
   return jresult;
@@ -3456,11 +3470,13 @@ SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Faulted_1SWIGSmartP
     return baseptr;
 }
 
-SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Disonnected_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_Efficio_Java_EfficioRuntimeJNI_Disconnected_1SWIGSmartPtrUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
     jlong baseptr = 0;
+    std::shared_ptr< Efficio::Sensors::Disconnected > *argp1;
     (void)jenv;
     (void)jcls;
-    *(Efficio::Events::Event **)&baseptr = *(Efficio::Sensors::Disonnected **)&jarg1;
+    argp1 = *(std::shared_ptr< Efficio::Sensors::Disconnected > **)&jarg1;
+    *(std::shared_ptr< Efficio::Events::Event > **)&baseptr = argp1 ? new std::shared_ptr< Efficio::Events::Event >(*argp1) : 0;
     return baseptr;
 }
 

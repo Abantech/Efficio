@@ -4,13 +4,13 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		Disonnected::Disonnected(Sensors::SensorInformation details) : SensorInformation(details)
+		Disconnected::Disconnected(Sensors::SensorInformation details) : SensorInformation(details)
 		{
 		}
-		Disonnected::~Disonnected()
+		Disconnected::~Disconnected()
 		{
 		}
-		Events::EventType Disonnected::GetEventType()
+		Events::EventType Disconnected::GetEventType()
 		{
 			return Events::EventType::SensorDisconnected;
 		}

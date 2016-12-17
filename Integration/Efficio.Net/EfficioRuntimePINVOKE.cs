@@ -554,20 +554,20 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Faulted_GetEventType___")]
   public static extern int Faulted_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Disonnected___")]
-  public static extern global::System.IntPtr new_Disonnected(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Disconnected___")]
+  public static extern global::System.IntPtr new_Disconnected(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_Disonnected___")]
-  public static extern void delete_Disonnected(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_Disconnected___")]
+  public static extern void delete_Disconnected(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disonnected_SensorInformation_set___")]
-  public static extern void Disonnected_SensorInformation_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disconnected_SensorInformation_set___")]
+  public static extern void Disconnected_SensorInformation_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disonnected_SensorInformation_get___")]
-  public static extern global::System.IntPtr Disonnected_SensorInformation_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disconnected_SensorInformation_get___")]
+  public static extern global::System.IntPtr Disconnected_SensorInformation_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disonnected_GetEventType___")]
-  public static extern int Disonnected_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disconnected_GetEventType___")]
+  public static extern int Disconnected_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_GearVRAction___")]
   public static extern global::System.IntPtr new_GearVRAction(int jarg1);
@@ -902,8 +902,8 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Faulted_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr Faulted_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disonnected_SWIGUpcast___")]
-  public static extern global::System.IntPtr Disonnected_SWIGUpcast(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disconnected_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr Disconnected_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_GearVRAction_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr GearVRAction_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);

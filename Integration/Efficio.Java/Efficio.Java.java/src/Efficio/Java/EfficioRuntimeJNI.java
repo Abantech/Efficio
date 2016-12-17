@@ -131,11 +131,11 @@ public class EfficioRuntimeJNI {
   public final static native void Faulted_SensorInformation_set(long jarg1, Faulted jarg1_, long jarg2, SensorInformation jarg2_);
   public final static native long Faulted_SensorInformation_get(long jarg1, Faulted jarg1_);
   public final static native int Faulted_GetEventType(long jarg1, Faulted jarg1_);
-  public final static native long new_Disonnected(long jarg1, SensorInformation jarg1_);
-  public final static native void delete_Disonnected(long jarg1);
-  public final static native void Disonnected_SensorInformation_set(long jarg1, Disonnected jarg1_, long jarg2, SensorInformation jarg2_);
-  public final static native long Disonnected_SensorInformation_get(long jarg1, Disonnected jarg1_);
-  public final static native int Disonnected_GetEventType(long jarg1, Disonnected jarg1_);
+  public final static native long new_Disconnected(long jarg1, SensorInformation jarg1_);
+  public final static native void delete_Disconnected(long jarg1);
+  public final static native void Disconnected_SensorInformation_set(long jarg1, Disconnected jarg1_, long jarg2, SensorInformation jarg2_);
+  public final static native long Disconnected_SensorInformation_get(long jarg1, Disconnected jarg1_);
+  public final static native int Disconnected_GetEventType(long jarg1, Disconnected jarg1_);
   public final static native long new_GearVRAction(int jarg1);
   public final static native void delete_GearVRAction(long jarg1);
   public final static native void GearVRAction_ButtonType_set(long jarg1, GearVRAction jarg1_, int jarg2);
@@ -199,6 +199,6 @@ public class EfficioRuntimeJNI {
   public final static native long EfficioStarted_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Connected_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Faulted_SWIGSmartPtrUpcast(long jarg1);
-  public final static native long Disonnected_SWIGUpcast(long jarg1);
+  public final static native long Disconnected_SWIGSmartPtrUpcast(long jarg1);
   public final static native long GearVRAction_SWIGSmartPtrUpcast(long jarg1);
 }

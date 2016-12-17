@@ -14,11 +14,11 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		extern class DLLEXPORT Disonnected : public Events::Event
+		extern class DLLEXPORT Disconnected : public Events::Event
 		{
 		public:
-			Disonnected(SensorInformation details);
-			~Disonnected();
+			Disconnected(SensorInformation details);
+			~Disconnected();
 
 			SensorInformation SensorInformation;
 

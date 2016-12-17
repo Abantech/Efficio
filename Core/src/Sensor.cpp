@@ -80,7 +80,7 @@ namespace Efficio
 					frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Connected(SensorInformation)));
 					break;
 				case Efficio::Sensors::Status::Disconnected:
-					frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Disonnected(SensorInformation)));
+					frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Disconnected(SensorInformation)));
 					break;
 				case Efficio::Sensors::Status::Disabled:
 				case Efficio::Sensors::Status::Uninitialized:
