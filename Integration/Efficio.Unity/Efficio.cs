@@ -57,12 +57,32 @@ namespace Efficio.Unity
                             }
                         case Net.EventType.SensorConnected:
                             {
-                                //var sensorConnected = SWIGHelper.CastTo<Sen>
+                                var sensorConnected = SWIGHelper.CastTo<Connected>(ev, false);
+                                if (sensorConnected != null)
+                                {
+                                    SensorConnectedMesssage sensorConnectedMesssage = new SensorConnectedMesssage(sensorConnected);
+                                    MessageBus.MessageBus.Instance.SendMessage(sensorConnectedMesssage);
+                                }
                                 break;
                             }
                         case Net.EventType.SensorFaulted:
                             {
-
+                                var sensorFaulted = SWIGHelper.CastTo<Faulted>(ev, false);
+                                if (sensorFaulted != null)
+                                {
+                                    SensorFaultedMesssage sensorFaultedMesssage = new SensorFaultedMesssage(sensorFaulted);
+                                    MessageBus.MessageBus.Instance.SendMessage(sensorFaultedMesssage);
+                                }
+                                break;
+                            }
+                        case Net.EventType.SensorDisconnected:
+                            {
+                                var sensorDisconnected = SWIGHelper.CastTo<Disconnected>(ev, false);
+                                if (sensorDisconnected != null)
+                                {
+                                    SensorDisconnectedMesssage sensorDisconnectedMesssage = new SensorDisconnectedMesssage(sensorDisconnected);
+                                    MessageBus.MessageBus.Instance.SendMessage(sensorDisconnectedMesssage);
+                                }
                                 break;
                             }
                         default:

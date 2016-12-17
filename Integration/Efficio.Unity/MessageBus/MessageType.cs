@@ -24,6 +24,9 @@
         LeftHandMiddlePinkyPinch,
         LeftHandRingPinkyPinch,
         EfficioStarted,
+        SensorConnected,
+        SensorFaulted,
+        SensorDisconnected,
         ButtonPressed,
     }
 }

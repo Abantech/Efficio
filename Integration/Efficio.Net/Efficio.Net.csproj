@@ -61,9 +61,11 @@
   <ItemGroup>
     <Compile Include="BodySide.cs" />
     <Compile Include="ButtonType.cs" />
+    <Compile Include="Connected.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="DataCollection.cs" />
     <Compile Include="DataType.cs" />
+    <Compile Include="Disconnected.cs" />
     <Compile Include="DiscreteGesture.cs" />
     <Compile Include="Efficio.cs" />
     <Compile Include="EfficioRuntime.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Event.cs" />
     <Compile Include="EventCollection.cs" />
     <Compile Include="EventType.cs" />
+    <Compile Include="Faulted.cs" />
     <Compile Include="Finger.cs" />
     <Compile Include="FingerCollection.cs" />
     <Compile Include="FingerType.cs" />
@@ -88,9 +91,11 @@
     <Compile Include="JointType.cs" />
     <Compile Include="Pinch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SensorInformation.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="SWIGHelper.cs" />
     <Compile Include="SWIGTYPE_p_clock_t.cs" />
+    <Compile Include="SWIGTYPE_p_SensorInformation.cs" />
     <Compile Include="SWIGTYPE_p_std__time_t.cs" />
     <Compile Include="SWIGTYPE_p_time_t.cs" />
     <Compile Include="TrackingType.cs" />

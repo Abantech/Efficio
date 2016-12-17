@@ -58,6 +58,9 @@
     <Compile Include="MessageBus\MessageHandler.cs" />
     <Compile Include="MessageBus\MessageSubscriber.cs" />
     <Compile Include="MessageBus\MessageType.cs" />
+    <Compile Include="MessageBus\SensorConnectedMesssage.cs" />
+    <Compile Include="MessageBus\SensorDisconnectedMessage.cs" />
+    <Compile Include="MessageBus\SensorFaultedMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
