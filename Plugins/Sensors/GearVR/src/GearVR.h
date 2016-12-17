@@ -34,6 +34,8 @@ namespace Efficio
 		private:
 			ovrSession session;
 			ovrGraphicsLuid luid;
+			bool isConnected;
+			std::string hmdProductName;
 		};
 	}
 }
