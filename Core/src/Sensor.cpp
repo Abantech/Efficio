@@ -1,4 +1,10 @@
 #include "Sensor.h"
+#include "Connected.h"
+#include "Connecting.h"
+#include "Disconnected.h"
+#include "Disconnecting.h"
+#include "Faulted.h"
+
 namespace Efficio
 {
 	namespace Sensors 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Efficio.Unity.MessageBus.Body.Hands;
 using Efficio.Net;
+using Efficio.Unity.MessageBus;
 
 namespace Efficio.Unity
 {
@@ -48,8 +49,19 @@ namespace Efficio.Unity
                                 var buttonPressed = SWIGHelper.CastTo<GearVRAction>(ev, false);
                                 if (buttonPressed != null)
                                 {
-                                    
+                                    ButtonPressedMessage buttonPressedMessage = new ButtonPressedMessage(buttonPressed);
+                                    MessageBus.MessageBus.Instance.SendMessage(buttonPressedMessage);
                                 }
+
+                                break;
+                            }
+                        case Net.EventType.SensorConnected:
+                            {
+                                //var sensorConnected = SWIGHelper.CastTo<Sen>
+                                break;
+                            }
+                        case Net.EventType.SensorFaulted:
+                            {
 
                                 break;
                             }

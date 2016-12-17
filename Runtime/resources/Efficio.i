@@ -14,8 +14,12 @@
 	#include "Pinch.h"
 	#include "Hand.h"
 	#include "DataType.h"
+	#include "SensorInformation.h"
 	#include "EfficioStarted.h"
 	#include "GearVRAction.h"
+	#include "Connected.h"
+	#include "Faulted.h"
+	#include "Disconnected.h"
  %}
 
  %include <windows.i>
@@ -28,13 +32,15 @@
  %shared_ptr(Efficio::Frame);
  %shared_ptr(Efficio::Events::Event);
  %shared_ptr(Efficio::Events::Internal::EfficioStarted);
+ %shared_ptr(Efficio::Sensors::Connected);
+ %shared_ptr(Efficio::Sensors::Faulted);
+ %shared_ptr(Efficio::Sensors::Disconnected);
  %shared_ptr(Efficio::Sensors::GearVRAction);
  %shared_ptr(Efficio::Sensors::ButtonPressed);
  %shared_ptr(Efficio::InputRecognition::Gesture);
  %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
  %shared_ptr(Efficio::InputRecognition::Body::Hands::Pinch);
  %shared_ptr(Efficio::Data::Data);
-
 
  /* Parse the header file to generate wrappers */
  
@@ -62,9 +68,12 @@
  %include "Gesture.h"
  %include "DiscreteGesture.h"
  %include "Pinch.h"
+ %include "SensorInformation.h"
  %include "EfficioStarted.h"
+ %include "Connected.h"
+ %include "Faulted.h"
+ %include "Disconnected.h"
  %include "GearVRAction.h"
- 
  
  %template(EventCollection) std::vector<std::shared_ptr<Efficio::Events::Event>>;
  %template(GestureCollection) std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>>;

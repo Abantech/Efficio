@@ -274,7 +274,7 @@
     <ClCompile Include="src\PinchDetector.cpp" />
     <ClCompile Include="src\RecognitionProcessor.cpp" />
     <ClCompile Include="src\Sensor.cpp" />
-    <ClCompile Include="src\SensorDetails.cpp" />
+    <ClCompile Include="src\SensorInformation.cpp" />
     <ClCompile Include="src\SingleHandGesture.cpp" />
     <ClCompile Include="src\SkeletalData.cpp" />
     <ClCompile Include="src\Vector3.cpp" />

@@ -114,9 +114,28 @@ public class EfficioRuntimeJNI {
   public final static native int Pinch_GetEventType(long jarg1, Pinch jarg1_);
   public final static native void Pinch_Side_set(long jarg1, Pinch jarg1_, int jarg2);
   public final static native int Pinch_Side_get(long jarg1, Pinch jarg1_);
+  public final static native long new_SensorInformation();
+  public final static native void delete_SensorInformation(long jarg1);
+  public final static native void SensorInformation_Name_set(long jarg1, SensorInformation jarg1_, String jarg2);
+  public final static native String SensorInformation_Name_get(long jarg1, SensorInformation jarg1_);
   public final static native long new_EfficioStarted();
   public final static native void delete_EfficioStarted(long jarg1);
   public final static native int EfficioStarted_GetEventType(long jarg1, EfficioStarted jarg1_);
+  public final static native long new_Connected(long jarg1, SensorInformation jarg1_);
+  public final static native void delete_Connected(long jarg1);
+  public final static native void Connected_SensorInformation_set(long jarg1, Connected jarg1_, long jarg2, SensorInformation jarg2_);
+  public final static native long Connected_SensorInformation_get(long jarg1, Connected jarg1_);
+  public final static native int Connected_GetEventType(long jarg1, Connected jarg1_);
+  public final static native long new_Faulted(long jarg1, SensorInformation jarg1_);
+  public final static native void delete_Faulted(long jarg1);
+  public final static native void Faulted_SensorInformation_set(long jarg1, Faulted jarg1_, long jarg2, SensorInformation jarg2_);
+  public final static native long Faulted_SensorInformation_get(long jarg1, Faulted jarg1_);
+  public final static native int Faulted_GetEventType(long jarg1, Faulted jarg1_);
+  public final static native long new_Disonnected(long jarg1, SensorInformation jarg1_);
+  public final static native void delete_Disonnected(long jarg1);
+  public final static native void Disonnected_SensorInformation_set(long jarg1, Disonnected jarg1_, long jarg2, SensorInformation jarg2_);
+  public final static native long Disonnected_SensorInformation_get(long jarg1, Disonnected jarg1_);
+  public final static native int Disonnected_GetEventType(long jarg1, Disonnected jarg1_);
   public final static native long new_GearVRAction(int jarg1);
   public final static native void delete_GearVRAction(long jarg1);
   public final static native void GearVRAction_ButtonType_set(long jarg1, GearVRAction jarg1_, int jarg2);
@@ -178,5 +197,8 @@ public class EfficioRuntimeJNI {
   public final static native long DiscreteGesture_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Pinch_SWIGSmartPtrUpcast(long jarg1);
   public final static native long EfficioStarted_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long Connected_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long Faulted_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long Disonnected_SWIGUpcast(long jarg1);
   public final static native long GearVRAction_SWIGSmartPtrUpcast(long jarg1);
 }

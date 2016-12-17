@@ -268,9 +268,6 @@
     <ClCompile Include="src\Connected.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SensorDetails.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Disconnected.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -305,6 +302,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\EmptyData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SensorInformation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

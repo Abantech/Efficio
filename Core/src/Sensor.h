@@ -3,11 +3,6 @@
 #include "SensorStatus.h"
 #include "SensorInformation.h"
 #include "TrackingType.h"
-#include "Connected.h"
-#include "Connecting.h"
-#include "Disconnected.h"
-#include "Disconnecting.h"
-#include "Faulted.h"
 #include "Vector3.h"
 #include "Frame.h"
 #include <string>
