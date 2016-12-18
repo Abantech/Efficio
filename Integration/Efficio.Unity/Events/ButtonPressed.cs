@@ -16,7 +16,7 @@ namespace Efficio.Unity.Events
             }
         }
 
-        public override void HandleMessage(IMessage message)
+        public override void HandleMessage(Message message)
         {
             this.HandleButtonPress((ButtonPressedMessage)message);
         }

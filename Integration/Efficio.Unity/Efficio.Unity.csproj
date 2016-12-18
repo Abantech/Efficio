@@ -52,10 +52,10 @@
     <Compile Include="Events\Body\Hands\RightHandPinch.cs" />
     <Compile Include="Events\ButtonPressed.cs" />
     <Compile Include="Events\SensorStatusUpdated.cs" />
+    <Compile Include="IMessage.cs" />
     <Compile Include="MessageBus\Body\Hands\PinchMessage.cs" />
     <Compile Include="MessageBus\ButtonPressedMessage.cs" />
-    <Compile Include="MessageBus\IMessage.cs" />
-    <Compile Include="MessageBus\ISensorUpdatedMessage.cs" />
+    <Compile Include="MessageBus\SensorUpdatedMessage.cs" />
     <Compile Include="MessageBus\Message.cs" />
     <Compile Include="MessageBus\MessageBus.cs" />
     <Compile Include="MessageBus\MessageHandler.cs" />

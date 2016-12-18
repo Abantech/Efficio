@@ -18,39 +18,52 @@ namespace Efficio.Unity.Events
             }
         }
 
-        public override void HandleMessage(IMessage message)
+        public override void HandleMessage(Message message)
         {
-            this.HandleSensorStatusUpdated((ISensorUpdatedMessage)message);
+            this.HandleSensorStatusUpdated((SensorUpdatedMessage)message);
         }
 
-        public abstract void HandleSensorStatusUpdated(ISensorUpdatedMessage sensorUpdatedMesage);
+        public abstract void HandleSensorStatusUpdated(SensorUpdatedMessage sensorUpdatedMesage);
+    }
+
+    public abstract class SensorConnected : SensorStatusUpdated
+    {
+        public override void HandleSensorStatusUpdated(SensorUpdatedMessage sensorUpdatedMesage)
+        {
+            if (sensorUpdatedMesage.Type == MessageType.SensorConnected)
+            {
+                this.OnSensorConnected(sensorUpdatedMesage);
+            }
+        }
+
+        public abstract void OnSensorConnected(SensorUpdatedMessage sensorConnectededMesage);
     }
 
     public abstract class SensorFaulted : SensorStatusUpdated
     {
-        public override void HandleSensorStatusUpdated(ISensorUpdatedMessage sensorUpdatedMesage)
+        public override void HandleSensorStatusUpdated(SensorUpdatedMessage sensorUpdatedMesage)
         {
-            if (sensorUpdatedMesage.GetMessageType == MessageType.SensorFaulted)
+            if (sensorUpdatedMesage.Type == MessageType.SensorFaulted)
             {
                 this.OnSensorFaulted(sensorUpdatedMesage);
             }
         }
 
-        public abstract void OnSensorFaulted(ISensorUpdatedMessage sensorFaultedMesage);
+        public abstract void OnSensorFaulted(SensorUpdatedMessage sensorFaultedMesage);
     }
 
 
     public abstract class SensorDisconnected : SensorStatusUpdated
     {
-        public override void HandleSensorStatusUpdated(ISensorUpdatedMessage sensorUpdatedMesage)
+        public override void HandleSensorStatusUpdated(SensorUpdatedMessage sensorUpdatedMesage)
         {
-            if (sensorUpdatedMesage.GetMessageType == MessageType.SensorDisconnected)
+            if (sensorUpdatedMesage.Type == MessageType.SensorDisconnected)
             {
                 this.OnSensorDisconnected(sensorUpdatedMesage);
             }
         }
 
-        public abstract void OnSensorDisconnected(ISensorUpdatedMessage sensorDisconnectededMesage);
+        public abstract void OnSensorDisconnected(SensorUpdatedMessage sensorDisconnectededMesage);
     }
 
 }

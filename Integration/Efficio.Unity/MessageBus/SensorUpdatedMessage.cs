@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Efficio.Unity.MessageBus
 {
-    public interface ISensorUpdatedMessage : IMessage
+    public class SensorUpdatedMessage : Message
     {
     }
 }

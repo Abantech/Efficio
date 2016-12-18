@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Efficio.Unity.MessageBus
 {
-    public class SensorDisconnectedMesssage : ISensorUpdatedMessage
+    public class SensorDisconnectedMesssage : SensorUpdatedMessage
     {
         public SensorDisconnectedMesssage(Disconnected disconnectedEvent)
         {

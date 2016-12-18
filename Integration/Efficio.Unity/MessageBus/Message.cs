@@ -1,15 +1,7 @@
 ﻿namespace Efficio.Unity.MessageBus
 {
-    public class Message : IMessage
+    public class Message
     {
-        protected MessageType Type;
-
-        public MessageType GetMessageType
-        {
-            get
-            {
-                return this.Type;
-            }
-        }
+        public MessageType Type;
     }
 }
