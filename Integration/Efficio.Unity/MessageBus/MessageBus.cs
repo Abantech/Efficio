@@ -27,14 +27,14 @@ namespace Efficio.Unity.MessageBus
             subscriberLists[messageType].Add(subscriber);
         }
 
-        public void SendMessage(Message message)
+        public void SendMessage(IMessage message)
         {
-            if (!subscriberLists.ContainsKey(message.Type))
+            if (!subscriberLists.ContainsKey(message.GetMessageType))
             {
                 return;
             }
 
-            var subscriberList = subscriberLists[message.Type];
+            var subscriberList = subscriberLists[message.GetMessageType];
 
             for (int i = 0; i < subscriberList.Count; i++)
             {
@@ -44,7 +44,7 @@ namespace Efficio.Unity.MessageBus
             }
         }
 
-        void SendMessageToSubscriber(Message message, MessageSubscriber subscriber)
+        void SendMessageToSubscriber(IMessage message, MessageSubscriber subscriber)
         {
             subscriber.Handler.HandleMessage(message);
         }

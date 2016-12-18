@@ -5,7 +5,7 @@ namespace Efficio.Unity.MessageBus
     public abstract class MessageHandler : MonoBehaviour
     {
         public abstract MessageType[] MessageTypes { get; }
-        public abstract void HandleMessage(Message message);
+        public abstract void HandleMessage(IMessage message);
 
         void Start()
         {

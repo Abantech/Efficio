@@ -53,7 +53,7 @@ namespace Efficio.Unity.Events.Body.Hands
 
         public abstract void OnPinchEnd();
 
-        public override void HandleMessage(Message message)
+        public override void HandleMessage(IMessage message)
         {
             HandlePinch((PinchMessage)message);
 

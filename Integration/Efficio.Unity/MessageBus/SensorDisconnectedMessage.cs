@@ -6,11 +6,18 @@ using System.Text;
 
 namespace Efficio.Unity.MessageBus
 {
-    public class SensorDisconnectedMesssage : Message
+    public class SensorDisconnectedMesssage : ISensorUpdatedMessage
     {
         public SensorDisconnectedMesssage(Disconnected disconnectedEvent)
         {
-            this.Type = MessageType.SensorDisconnected;
+        }
+
+        public MessageType GetMessageType
+        {
+            get
+            {
+               return MessageType.SensorDisconnected;
+            }
         }
     }
 }
