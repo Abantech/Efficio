@@ -112,7 +112,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIOCORE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIOCORE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;WIN=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerOutput>

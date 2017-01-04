@@ -1,9 +1,13 @@
 #pragma once
 
-#if COMPILING_DLL
-#define DLLEXPORT __declspec(dllexport)
+#if WIN
+	#if COMPILING_DLL
+		#define DLLEXPORT __declspec(dllexport)
+	#else
+		#define DLLEXPORT __declspec(dllimport)
+	#endif
 #else
-#define DLLEXPORT __declspec(dllimport)
+	#define DLLEXPORT
 #endif
 
 namespace Efficio
