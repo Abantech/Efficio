@@ -238,7 +238,7 @@ EXIT 0</Command>
     <ClCompile Include="src\RuntimeJava_wrap.cxx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Efficio.Core.vcxproj">
+    <ProjectReference Include="..\Core1\Efficio.Core.vcxproj">
       <Project>{a450fdca-e9f3-4b2b-985a-ef6f79864240}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Plugins\Sensors\GearVR\GearVR.vcxproj">

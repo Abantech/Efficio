@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Efficio.Core", "Core\Efficio.Core.vcxproj", "{A450FDCA-E9F3-4B2B-985A-EF6F79864240}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Efficio.Core", "Core1\Efficio.Core.vcxproj", "{A450FDCA-E9F3-4B2B-985A-EF6F79864240}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Efficio.LeapMotion", "Plugins\Sensors\LeapMotion\Efficio.LeapMotion.vcxproj", "{4397F877-DF00-43CE-8EBE-AF386F3CEFDD}"
 EndProject
