@@ -9,7 +9,7 @@
 #include <array>
 #include <vector>
 
-#if WIN
+#if _WINDLL
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else

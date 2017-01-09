@@ -128,6 +128,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>$(OCULUS_SDK)LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core\lib\VMML;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <LibraryDependencies>%(LibraryDependencies);GLESv1_CM;EGL;</LibraryDependencies>
@@ -148,6 +149,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>$(OCULUS_SDK)LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core\lib\VMML;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <LibraryDependencies>%(LibraryDependencies);GLESv1_CM;EGL;</LibraryDependencies>
@@ -168,7 +170,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <CompileAs>CompileAsCpp</CompileAs>
-      <AdditionalIncludeDirectories>C:\Dev-Workspace\AbantechProjects\Efficio\Core\lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCULUS_SDK)LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core\lib\VMML;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>Enabled</ExceptionHandling>
       <CppLanguageStandard>c++11</CppLanguageStandard>
     </ClCompile>
@@ -191,6 +193,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>$(OCULUS_SDK)LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core\lib\VMML;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <LibraryDependencies>%(LibraryDependencies);GLESv1_CM;EGL;</LibraryDependencies>

@@ -4,7 +4,7 @@
 
 #include <time.h>
 
-#if WIN
+#if _WINDLL
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
@@ -32,7 +32,7 @@ namespace Efficio
 			virtual Efficio::Events::EventType GetEventType() = 0;
 
 		protected:
-			static size_t Event::IdIndex;
+			static size_t IdIndex;
 		};
 	}
 }

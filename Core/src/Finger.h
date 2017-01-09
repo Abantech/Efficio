@@ -2,7 +2,7 @@
 #include "Joint.h"
 #include "FingerType.h"
 
-#if WIN
+#if _WINDLL
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else

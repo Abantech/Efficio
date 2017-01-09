@@ -2,7 +2,7 @@
 
 #include "vector.hpp"
 
-#if WIN
+#if _WINDLL
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else

@@ -56,6 +56,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
+    <Import Project="..\..\..\Core\Core.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -90,12 +91,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;WIN32;_DEBUG;_WINDOWS;_USRDLL;GEARVR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OCCULUS_SDK)\LibOVR\Include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCULUS_SDK)\LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core1\lib\VMML;$(SolutionDir)Core\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OCCULUS_SDK)\LibOVR\Lib\Windows\$(PlatformName)\Release\VS2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OCULUS_SDK)\LibOVR\Lib\Windows\$(PlatformName)\Release\VS2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>LibOVR.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
@@ -110,12 +111,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;_DEBUG;_WINDOWS;_USRDLL;GEARVR_EXPORTS;COMPILING_DLL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OCCULUS_SDK)LibOVR\Include;$(OCCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCULUS_SDK)\LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core1\lib\VMML;$(SolutionDir)Core\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OCCULUS_SDK)\LibOVR\Lib\Windows\$(PlatformName)\Release\VS2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OCULUS_SDK)\LibOVR\Lib\Windows\$(PlatformName)\Release\VS2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>LibOVR.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
@@ -161,11 +162,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Efficio.Core.vcxproj">
-      <Project>{a450fdca-e9f3-4b2b-985a-ef6f79864240}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ButtonType.h" />
     <ClInclude Include="src\GearVR.h" />

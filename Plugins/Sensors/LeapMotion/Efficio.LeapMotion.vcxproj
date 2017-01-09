@@ -22,11 +22,6 @@
     <ClCompile Include="src\LeapMotion.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Efficio.Core.vcxproj">
-      <Project>{a450fdca-e9f3-4b2b-985a-ef6f79864240}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="default.doxygen" />
     <None Include="README.md" />
   </ItemGroup>
@@ -70,6 +65,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
+    <Import Project="..\..\..\Core\Core.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -104,7 +100,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIOLEAPMOTION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core1\lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -125,7 +121,7 @@ doxygen resources/default.doxygen</Command>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;_DEBUG;_WINDOWS;_USRDLL;EFFICIOLEAPMOTION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core1\lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

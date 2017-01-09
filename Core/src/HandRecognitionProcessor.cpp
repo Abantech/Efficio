@@ -27,21 +27,23 @@ namespace Efficio
 
 					if (data.size() > 0)
 					{
-						for each (std::shared_ptr<Data::Data> datum in data)
+						for (size_t i = 0; i < data.size(); i++)
 						{
-							auto handData = dynamic_cast<Data::Body::HandData*>(datum.get());
+							auto handData = dynamic_cast<Data::Body::HandData*>(data.at(i).get());
 
 							if (handData)
 							{
-								for each (auto hand in handData->Hands)
+								for (size_t j = 0; j < handData->Hands.size(); j++)
 								{
-									for each (std::shared_ptr<Hands::SingleHandGestureDetector> shgd in singleHandDetectors)
-									{
-										auto detected = shgd->Detect(hand);
+									auto hand = handData->Hands.at(j);
 
-										for (size_t i = 0; i < detected.size(); i++)
+									for (size_t k = 0; k < singleHandDetectors.size(); k++)
+									{
+										auto detected = singleHandDetectors.at(k)->Detect(hand);
+
+										for (size_t L = 0; L < detected.size(); L++)
 										{
-											events.push_back(detected[i]);
+											events.push_back(detected[L]);
 										}
 									}
 								}

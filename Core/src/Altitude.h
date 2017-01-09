@@ -3,10 +3,14 @@
 #include <string>
 #include "Data.h"
 
+#if _WINDLL
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
 #define DLLEXPORT __declspec(dllimport)
+#endif
+# else
+#define DLLEXPORT 
 #endif
 
 namespace Efficio
@@ -19,7 +23,7 @@ namespace Efficio
 			/// Class representing elevation.
 			/// </summary>
 			/// <seealso cref="Efficio::Data::Data" />
-			extern class DLLEXPORT Altitude : public Data
+			class DLLEXPORT Altitude : public Data
 			{
 			public:
 				/// <summary>

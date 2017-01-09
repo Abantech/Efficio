@@ -75,3 +75,5 @@
 >>>>>>> origin/master
 /Plugins/Sensors/GearVR/doc/html
 /Plugins/Sensors/GearVR/x64/Debug
+/ARM64/Debug
+/Integration/Efficio.Android/Efficio.Android.vcxproj.user

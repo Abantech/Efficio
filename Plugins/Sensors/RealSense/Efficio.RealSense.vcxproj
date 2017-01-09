@@ -55,6 +55,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
+    <Import Project="..\..\..\Core\Core.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -89,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIOREALSENSE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;;COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(RSSDK_DIR)\include;$(RSSDK_DIR)\sample\common\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core1\lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -110,7 +111,7 @@ xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\lib
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIOREALSENSE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;;COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core1\lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -178,11 +179,6 @@ xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\lib
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RealSense.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Efficio.Core.vcxproj">
-      <Project>{a450fdca-e9f3-4b2b-985a-ef6f79864240}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

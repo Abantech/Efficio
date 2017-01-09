@@ -4,7 +4,7 @@
 #include "BodySide.h"
 #include <array>
 
-#if WIN
+#if _WINDLL
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else

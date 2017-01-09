@@ -3,7 +3,7 @@
 #include "BodySide.h"
 #include "Joint.h"
 
-#if WIN
+#if _WINDLL
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else

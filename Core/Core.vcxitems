@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Altitude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Arm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Body.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\BodySide.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Bone.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\BoneTypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Connected.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Connecting.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\ContinuousGesture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Data.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\DataType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Disconnected.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Disconnecting.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\DiscreteGesture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Documentation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\EfficioStarted.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\EmptyData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Engine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Event.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\EventType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Expressions.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Face.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\FaceData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Faulted.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Finger.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\FingerType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Frame.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Gesture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\GestureState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\GestureType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Hand.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\HandData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\HandRecognitionProcessor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Head.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\HistoricalFrameCollection.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\IHandSensor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Joint.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\JointType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Leg.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Location.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Pinch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\PinchDetector.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\RecognitionProcessor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Sensor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\SensorInformation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\SensorStatus.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\SingleHandGesture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\SingleHandGestureDetector.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\SkeletalData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\TrackingType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Vector3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Arm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Body.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Bone.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Connected.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Connecting.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\ContinuousGesture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Disconnected.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Disconnecting.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\DiscreteGesture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\EfficioStarted.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\EmptyData.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Engine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Event.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Face.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\FaceData.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Faulted.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Finger.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Frame.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Gesture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Hand.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\HandData.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\HandRecognitionProcessor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Head.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\HistoricalFrameCollection.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Joint.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Leg.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Location.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Pinch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\PinchDetector.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\RecognitionProcessor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Sensor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\SensorInformation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\SingleHandGesture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\SkeletalData.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Vector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)src\README.md" />
+  </ItemGroup>
+</Project>
