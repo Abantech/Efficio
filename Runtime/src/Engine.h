@@ -28,7 +28,6 @@ extern "C"
 
 			Frame Start();
 
-
 			/// Gets the current {@link Efficio::EfficioFrame frame} from the runtime.
 			/// @return the current frame.
 			std::shared_ptr<Frame> GetFrame();
