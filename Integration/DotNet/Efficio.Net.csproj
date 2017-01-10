@@ -101,46 +101,6 @@
     <Compile Include="TrackingType.cs" />
     <Compile Include="Vector3.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\..\x64\Debug\Efficio.Core.dll">
-      <Link>Efficio.Core.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Efficio.GearVR.dll">
-      <Link>Efficio.GearVR.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Efficio.Kinect.dll">
-      <Link>Efficio.Kinect.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Efficio.LeapMotion.dll">
-      <Link>Efficio.LeapMotion.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Efficio.RealSense.dll">
-      <Link>Efficio.RealSense.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\EfficioRuntime.dll">
-      <Link>EfficioRuntime.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\..\x64\Debug\Leap.dll">
-      <Link>Leap.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\x64\Debug\libpxcutils_d.lib">
-      <Link>libpxcutils_d.lib</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\x64\Debug\libpxc_d.lib">
-      <Link>libpxc_d.lib</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
