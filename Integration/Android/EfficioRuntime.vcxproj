@@ -37,11 +37,11 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{c2b95d5e-ddaf-4dfe-9391-f24c9c46bd41}</ProjectGuid>
     <Keyword>Android</Keyword>
-    <RootNamespace>Efficio_Android</RootNamespace>
+    <RootNamespace>EfficioRuntime</RootNamespace>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>2.0</ApplicationTypeRevision>
-    <ProjectName>EfficioAndroid</ProjectName>
+    <ProjectName>EfficioRuntime</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">

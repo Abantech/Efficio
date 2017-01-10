@@ -90,7 +90,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIORUNTIME_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1; </PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OCULUS_SDK)\LibOVR\Include;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\GearVR\src;$(SolutionDir)Plugins\Sensors\Kinect\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCULUS_SDK)\LibOVR\Include;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include;$(LEAP_SDK)\include;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Core\src;$(SolutionDir)lib\VMML;$(SolutionDir)Core\lib\VMML;$(SolutionDir)Plugins\Sensors\RealSense\src;$(SolutionDir)Plugins\Sensors\LeapMotion\src;$(SolutionDir)Plugins\Sensors\GearVR\src;$(SolutionDir)Plugins\Sensors\Kinect\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
