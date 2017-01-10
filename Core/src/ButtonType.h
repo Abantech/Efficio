@@ -1,18 +1,26 @@
 #pragma once
 
+#if _WINDLL
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
 #define DLLEXPORT __declspec(dllimport)
 #endif
+#else
+#define DLLEXPORT
+#endif
 
 namespace Efficio
 {
-	namespace InputRecognition
+	namespace Sensors 
 	{
-		extern enum DLLEXPORT GestureType {
-			Discrete,
-			Continuous
+		extern enum class DLLEXPORT ButtonType
+		{
+			Up,
+			Down,
+			Left,
+			Right,
+			Back
 		};
 	}
 }

@@ -31,7 +31,7 @@ namespace Efficio
 
 			virtual Efficio::Events::EventType GetEventType() = 0;
 
-		protected:
+		private:
 			static size_t IdIndex;
 		};
 	}

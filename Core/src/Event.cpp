@@ -8,9 +8,8 @@ namespace Efficio
 
 		Event::Event() : Time(NULL)
 		{
-			ID = Event::IdIndex++;
+			ID = IdIndex++;
 		}
-
 
 		Event::~Event()
 		{

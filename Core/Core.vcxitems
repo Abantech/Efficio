@@ -20,6 +20,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\BodySide.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Bone.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\BoneTypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\ButtonType.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Connected.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Connecting.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\ContinuousGesture.h" />
