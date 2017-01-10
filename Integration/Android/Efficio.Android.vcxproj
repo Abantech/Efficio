@@ -41,6 +41,7 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>2.0</ApplicationTypeRevision>
+    <ProjectName>EfficioAndroid</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
@@ -115,72 +116,210 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core1\lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG=1</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CLanguageStandard>c11</CLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <CLanguageStandard>c11</CLanguageStandard>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core1\lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG=1</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CLanguageStandard>c11</CLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <CLanguageStandard>c11</CLanguageStandard>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core1\lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG=1</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CLanguageStandard>c11</CLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <CLanguageStandard>c11</CLanguageStandard>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core1\lib\VMML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG=1</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CLanguageStandard>c11</CLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <CLanguageStandard>c11</CLanguageStandard>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\default.doxygen" />
+    <None Include="resources\Efficio.i" />
+    <None Include="resources\RuntimeCSharp.i" />
+    <None Include="resources\RuntimeJava.i" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\RuntimeCSharp_wrap.cxx" />
+    <ClCompile Include="src\RuntimeJava_wrap.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
