@@ -77,3 +77,10 @@
 /Plugins/Sensors/GearVR/x64/Debug
 /ARM64/Debug
 /Integration/Efficio.Android/Efficio.Android.vcxproj.user
+/Integration/Unity/obj
+/Integration/Win/doc/html
+/Integration/DotNet/obj
+/Integration/DotNet/bin
+/Integration/Android/doc/html
+/Integration/DotNet/Efficio.Net.Experimentation/obj
+/Integration/DotNet/Efficio.Net.Experimentation/bin

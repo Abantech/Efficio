@@ -15,19 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\GearVR.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GearVRAction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GearVR.cpp">
+    <ClCompile Include="src\RuntimeCSharp_wrap.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GearVRAction.cpp">
+    <ClCompile Include="src\RuntimeJava_wrap.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\default.doxygen">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\Efficio.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\RuntimeCSharp.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\RuntimeJava.i">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{592A1D02-8B91-4940-ACB1-50F11EDE6015}</ProjectGuid>
+    <ProjectGuid>{13DF07F0-38C7-4F22-BF81-7711E9157BFB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>GearVR</RootNamespace>
+    <RootNamespace>EfficioWin</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>Efficio.GearVR</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -56,7 +55,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-    <Import Project="..\..\..\Core\Core.vcxitems" Label="Shared" />
+    <Import Project="..\..\Core\Core.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -89,19 +88,27 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>COMPILING_DLL=1;WIN32;_DEBUG;_WINDOWS;_USRDLL;GEARVR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OCULUS_SDK)\LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core1\lib\VMML;$(SolutionDir)Core\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OCULUS_SDK)\LibOVR\Lib\Windows\$(PlatformName)\Release\VS2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LibOVR.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -109,22 +116,27 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>COMPILING_DLL=1;_DEBUG;_WINDOWS;_USRDLL;GEARVR_EXPORTS;COMPILING_DLL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OCULUS_SDK)\LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core1\lib\VMML;$(SolutionDir)Core\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OCULUS_SDK)\LibOVR\Lib\Windows\$(PlatformName)\Release\VS2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LibOVR.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>doxygen resources/default.doxygen</Command>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
     </PreBuildEvent>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -134,8 +146,9 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GEARVR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -143,6 +156,19 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -152,8 +178,9 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;GEARVR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Core\src;$(JAVA_SDK)\include\win32;$(JAVA_SDK)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -161,14 +188,32 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>doxygen resources/default.doxygen
+mkdir temp
+xcopy src\*.h temp /Y
+xcopy $(SolutionDir)Core\src\*.h temp /Y
+xcopy resources\*.i temp /Y
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
+xcopy temp\*.cxx  src /y
+rmdir /S /Q temp
+EXIT 0
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\GearVR.h" />
-    <ClInclude Include="src\GearVRAction.h" />
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GearVR.cpp" />
-    <ClCompile Include="src\GearVRAction.cpp" />
+    <ClCompile Include="src\RuntimeCSharp_wrap.cxx" />
+    <ClCompile Include="src\RuntimeJava_wrap.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\default.doxygen" />
+    <None Include="resources\Efficio.i" />
+    <None Include="resources\RuntimeCSharp.i" />
+    <None Include="resources\RuntimeJava.i" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
