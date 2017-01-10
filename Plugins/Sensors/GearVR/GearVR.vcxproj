@@ -111,7 +111,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;_DEBUG;_WINDOWS;_USRDLL;GEARVR_EXPORTS;COMPILING_DLL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OCULUS_SDK)\LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)Core1\lib\VMML;$(SolutionDir)Core\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCULUS_SDK)LibOVR\Include;$(OCULUS_MOBILE_SDK)\VrApi\Include;$(SolutionDir)lib\VMML;$(SolutionDir)Core\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

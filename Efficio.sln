@@ -42,8 +42,12 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Core\Core.vcxitems*{13df07f0-38c7-4f22-bf81-7711e9157bfb}*SharedItemsImports = 4
+		Core\Core.vcxitems*{34c7fd5e-08f0-4877-be74-7f789014bfba}*SharedItemsImports = 4
+		Core\Core.vcxitems*{4397f877-df00-43ce-8ebe-af386f3cefdd}*SharedItemsImports = 4
 		Core\Core.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
+		Core\Core.vcxitems*{592a1d02-8b91-4940-acb1-50f11ede6015}*SharedItemsImports = 4
 		Core\Core.vcxitems*{c2b95d5e-ddaf-4dfe-9391-f24c9c46bd41}*SharedItemsImports = 4
+		Core\Core.vcxitems*{f52ba6e1-3468-49ea-b54b-872877c67624}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
