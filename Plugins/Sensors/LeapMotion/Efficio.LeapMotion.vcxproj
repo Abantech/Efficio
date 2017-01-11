@@ -121,7 +121,7 @@ doxygen resources/default.doxygen</Command>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;_DEBUG;_WINDOWS;_USRDLL;EFFICIOLEAPMOTION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core1\lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

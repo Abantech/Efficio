@@ -111,7 +111,7 @@ xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\lib
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIOREALSENSE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;;COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core1\lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
