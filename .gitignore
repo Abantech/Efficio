@@ -85,3 +85,6 @@
 /Integration/DotNet/Efficio.Net.Experimentation/obj
 /Integration/DotNet/Efficio.Net.Experimentation/bin
 /Integration/Unity/bin/Debug
+/Integration/Android/Plugins/Sensors/EfficioGearVRSensor/ARM64/Debug
+/Integration/Android/Runtime/ARM64/Debug
+/Integration/Android/Runtime/doc/html
