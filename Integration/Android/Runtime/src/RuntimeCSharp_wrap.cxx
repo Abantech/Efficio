@@ -318,7 +318,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_EfficioRuntime(SWIG_CShar
 	#include "DataType.h"
 	#include "SensorInformation.h"
 	#include "EfficioStarted.h"
-	//#include "GearVRAction.h"
+	#include "GearVRAction.h"
 	#include "Connected.h"
 	#include "Faulted.h"
 	#include "Disconnected.h"
@@ -2516,6 +2516,74 @@ SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_Disconnected_GetEventType___(void 
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_EfficiofNet_new_GearVRAction___(int jarg1) {
+  void * jresult ;
+  Efficio::Sensors::ButtonType arg1 ;
+  Efficio::Sensors::GearVRAction *result = 0 ;
+  
+  arg1 = (Efficio::Sensors::ButtonType)jarg1; 
+  result = (Efficio::Sensors::GearVRAction *)new Efficio::Sensors::GearVRAction(arg1);
+  
+  jresult = result ? new std::shared_ptr<  Efficio::Sensors::GearVRAction >(result SWIG_NO_NULL_DELETER_1) : 0;
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_delete_GearVRAction___(void * jarg1) {
+  Efficio::Sensors::GearVRAction *arg1 = (Efficio::Sensors::GearVRAction *) 0 ;
+  std::shared_ptr< Efficio::Sensors::GearVRAction > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Sensors::GearVRAction > *)jarg1;
+  arg1 = (Efficio::Sensors::GearVRAction *)(smartarg1 ? smartarg1->get() : 0); 
+  (void)arg1; delete smartarg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_GearVRAction_ButtonType_set___(void * jarg1, int jarg2) {
+  Efficio::Sensors::GearVRAction *arg1 = (Efficio::Sensors::GearVRAction *) 0 ;
+  Efficio::Sensors::ButtonType arg2 ;
+  std::shared_ptr< Efficio::Sensors::GearVRAction > *smartarg1 = 0 ;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Sensors::GearVRAction > *)jarg1;
+  arg1 = (Efficio::Sensors::GearVRAction *)(smartarg1 ? smartarg1->get() : 0); 
+  arg2 = (Efficio::Sensors::ButtonType)jarg2; 
+  if (arg1) (arg1)->ButtonType = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_GearVRAction_ButtonType_get___(void * jarg1) {
+  int jresult ;
+  Efficio::Sensors::GearVRAction *arg1 = (Efficio::Sensors::GearVRAction *) 0 ;
+  std::shared_ptr< Efficio::Sensors::GearVRAction > *smartarg1 = 0 ;
+  Efficio::Sensors::ButtonType result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Sensors::GearVRAction > *)jarg1;
+  arg1 = (Efficio::Sensors::GearVRAction *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Sensors::ButtonType) ((arg1)->ButtonType);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_EfficiofNet_GearVRAction_GetEventType___(void * jarg1) {
+  int jresult ;
+  Efficio::Sensors::GearVRAction *arg1 = (Efficio::Sensors::GearVRAction *) 0 ;
+  std::shared_ptr< Efficio::Sensors::GearVRAction > *smartarg1 = 0 ;
+  Efficio::Events::EventType result;
+  
+  
+  smartarg1 = (std::shared_ptr<  Efficio::Sensors::GearVRAction > *)jarg1;
+  arg1 = (Efficio::Sensors::GearVRAction *)(smartarg1 ? smartarg1->get() : 0); 
+  result = (Efficio::Events::EventType)(arg1)->GetEventType();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_EfficiofNet_EventCollection_Clear___(void * jarg1) {
   std::vector< std::shared_ptr< Efficio::Events::Event > > *arg1 = (std::vector< std::shared_ptr< Efficio::Events::Event > > *) 0 ;
   
@@ -4207,6 +4275,10 @@ SWIGEXPORT std::shared_ptr< Efficio::Events::Event > * SWIGSTDCALL CSharp_Effici
 }
 
 SWIGEXPORT std::shared_ptr< Efficio::Events::Event > * SWIGSTDCALL CSharp_EfficiofNet_Disconnected_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::Sensors::Disconnected > *jarg1) {
+    return jarg1 ? new std::shared_ptr< Efficio::Events::Event >(*jarg1) : 0;
+}
+
+SWIGEXPORT std::shared_ptr< Efficio::Events::Event > * SWIGSTDCALL CSharp_EfficiofNet_GearVRAction_SWIGSmartPtrUpcast___(std::shared_ptr< Efficio::Sensors::GearVRAction > *jarg1) {
     return jarg1 ? new std::shared_ptr< Efficio::Events::Event >(*jarg1) : 0;
 }
 
