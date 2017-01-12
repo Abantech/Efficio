@@ -30,9 +30,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Disconnecting.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\DiscreteGesture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Documentation.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\EfficioStarted.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\EmptyData.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\Engine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Event.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\EventType.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Expressions.h" />
@@ -49,7 +47,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\HandData.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\HandRecognitionProcessor.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Head.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\HistoricalFrameCollection.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\IHandSensor.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Joint.h" />
@@ -78,9 +75,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Disconnected.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Disconnecting.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\DiscreteGesture.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\EfficioStarted.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\EmptyData.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\Engine.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Event.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Face.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\FaceData.cpp" />
@@ -92,7 +87,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\HandData.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\HandRecognitionProcessor.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Head.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\HistoricalFrameCollection.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Joint.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Leg.cpp" />

@@ -56,6 +56,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
+    <Import Project="..\..\..\Shared\Runtime\Runtime.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -92,7 +93,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -107,6 +108,7 @@ xcopy src\*.h temp /Y
 
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
 
+xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
@@ -130,7 +132,7 @@ EXIT 0</Command>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -145,6 +147,7 @@ xcopy src\*.h temp /Y
 
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
 
+xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
@@ -170,7 +173,7 @@ EXIT 0</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -187,6 +190,7 @@ xcopy src\*.h temp /Y
 
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
 
+xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
@@ -212,7 +216,7 @@ EXIT 0</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -229,6 +233,7 @@ xcopy src\*.h temp /Y
 
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
 
+xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y

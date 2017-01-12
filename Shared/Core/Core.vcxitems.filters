@@ -28,13 +28,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\DiscreteGesture.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\EfficioStarted.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\EmptyData.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\Engine.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Event.cpp">
@@ -68,9 +62,6 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Head.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\HistoricalFrameCollection.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.cpp">
@@ -159,13 +150,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Documentation.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\EfficioStarted.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\EmptyData.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\Engine.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\EventType.h">
@@ -214,9 +199,6 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Head.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\HistoricalFrameCollection.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\IHandSensor.h">
