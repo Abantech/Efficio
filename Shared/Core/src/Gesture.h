@@ -27,6 +27,7 @@ namespace Efficio
 			~Gesture();
 
 			/// Gets the type of gesture that is occurring.
+			// TODO: Rename to no longer cover .Net Object.GetType() method
 			virtual GestureType GetType() = 0;
 
 			/// Gets the state of the gesture.
