@@ -88,3 +88,5 @@
 /Integration/Android/Plugins/Sensors/EfficioGearVRSensor/ARM64/Debug
 /Integration/Android/Runtime/ARM64/Debug
 /Integration/Android/Runtime/doc/html
+/Integration/Android/Core/x64/Debug
+/Integration/Android/Plugins/Sensors/GearVR/ARM64/Debug
