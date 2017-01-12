@@ -236,7 +236,8 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OCULUS_SDK)\LibOVR\Lib\Windows\win32\Release\VS2015;%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion)\$(PlatformShortName);$(StlLibraryPath)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LibOVR.lib;</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -251,7 +252,8 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OCULUS_SDK)\LibOVR\Lib\Windows\win32\Release\VS2015;%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion)\$(PlatformShortName);$(StlLibraryPath)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LibOVR.lib;</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
