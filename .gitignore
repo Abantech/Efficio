@@ -92,3 +92,5 @@
 /Integration/Win/Runtime/doc/html
 /Integration/Win/Plugins/Sensors/GearVR/x64/Debug
 .metadata
+/ARM/Debug
+/Integration/Android/Plugins/Sensors/GearVR/ARM/Debug
