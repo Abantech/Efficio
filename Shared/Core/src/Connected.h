@@ -4,7 +4,7 @@
 #include "SensorInformation.h"
 
 
-#if _WINDLL
+#if WINDOWS
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else

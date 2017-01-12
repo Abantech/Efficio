@@ -2,7 +2,7 @@
 #include <stdexcept>
 #include<stdio.h>
 
-#if _WINDLL
+#if WINDOWS
 #define ThrowIfAble(x) throw x
 #else
 #define ThrowIfAble(x)
