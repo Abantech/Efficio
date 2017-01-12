@@ -90,3 +90,6 @@
 /Integration/Android/Runtime/doc/html
 /Integration/Android/Core/x64/Debug
 /Integration/Android/Plugins/Sensors/GearVR/ARM64/Debug
+/Integration/Win/Runtime/x64/Debug
+/Integration/Win/Runtime/doc/html
+/Integration/Win/Plugins/Sensors/GearVR/x64/Debug
