@@ -39,9 +39,9 @@ namespace Efficio.Unity
                             var started = SWIGHelper.CastTo<EfficioStarted>(ev, false);
                             if (started != null)
                             {
-                                //EfficioStartedMessage startedMessage = new EfficioStartedMessage(started);
+                                EfficioStartedMessage startedMessage = new EfficioStartedMessage(started);
 
-                                // MessageBus.MessageBus.Instance.SendMessage(startedMessage);
+                                MessageBus.MessageBus.Instance.SendMessage(startedMessage);
                             }
                             break;
                         case Net.EventType.ButtonPressed:

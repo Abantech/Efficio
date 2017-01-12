@@ -51,6 +51,8 @@
     <Compile Include="Events\Body\Hands\Pinch.cs" />
     <Compile Include="Events\Body\Hands\RightHandPinch.cs" />
     <Compile Include="Events\ButtonPressed.cs" />
+    <Compile Include="Events\EfficioStartedHandler.cs" />
+    <Compile Include="Events\Internal\EfficioStartedMessage.cs" />
     <Compile Include="Events\SensorStatusUpdated.cs" />
     <Compile Include="IMessage.cs" />
     <Compile Include="MessageBus\Body\Hands\PinchMessage.cs" />
@@ -72,9 +74,7 @@
       <Name>Efficio.Net</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\Internal\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /yr "$(LEAP_SDK)\lib\x64\LeapC.dll" "$(TargetDir)"</PostBuildEvent>
