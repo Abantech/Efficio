@@ -121,7 +121,7 @@ EXIT 0
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)Shared\Core\src\;$(SolutionDir)lib\VMML\;$(JAVA_SDK)\include\win32\;$(JAVA_SDK)\include\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)Shared\Core\src\;$(SolutionDir)Shared\Plugins\Sensors\Efficio.GearVR\src\;$(SolutionDir)lib\VMML\;$(JAVA_SDK)\include\win32\;$(JAVA_SDK)\include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -132,8 +132,9 @@ EXIT 0
 mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
+xcopy $(SolutionDir)Shared\Plugins\Sensors\Efficio.GearVR\src\*.h temp /Y
 xcopy resources\*.i temp /Y
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\Net" temp/RuntimeCSharp.i
+swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 xcopy temp\*.cxx  src /y
 rmdir /S /Q temp

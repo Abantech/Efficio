@@ -16,7 +16,7 @@
 	#include "DataType.h"
 	#include "SensorInformation.h"
 	#include "EfficioStarted.h"
-	//#include "GearVRAction.h"
+	#include "GearVRAction.h"
 	#include "Connected.h"
 	#include "Faulted.h"
 	#include "Disconnected.h"
@@ -35,7 +35,7 @@
  %shared_ptr(Efficio::Sensors::Connected);
  %shared_ptr(Efficio::Sensors::Faulted);
  %shared_ptr(Efficio::Sensors::Disconnected);
- //%shared_ptr(Efficio::Sensors::GearVRAction);
+ %shared_ptr(Efficio::Sensors::GearVRAction);
  %shared_ptr(Efficio::Sensors::ButtonPressed);
  %shared_ptr(Efficio::InputRecognition::Gesture);
  %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
@@ -73,7 +73,7 @@
  %include "Connected.h"
  %include "Faulted.h"
  %include "Disconnected.h"
- //%include "GearVRAction.h"
+ %include "GearVRAction.h"
  
  %template(EventCollection) std::vector<std::shared_ptr<Efficio::Events::Event>>;
  %template(GestureCollection) std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>>;

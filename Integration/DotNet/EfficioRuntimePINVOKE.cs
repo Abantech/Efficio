@@ -569,6 +569,21 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disconnected_GetEventType___")]
   public static extern int Disconnected_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_GearVRAction___")]
+  public static extern global::System.IntPtr new_GearVRAction(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_GearVRAction___")]
+  public static extern void delete_GearVRAction(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_GearVRAction_ButtonType_set___")]
+  public static extern void GearVRAction_ButtonType_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_GearVRAction_ButtonType_get___")]
+  public static extern int GearVRAction_ButtonType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_GearVRAction_GetEventType___")]
+  public static extern int GearVRAction_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_EventCollection_Clear___")]
   public static extern void EventCollection_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
 
@@ -889,6 +904,9 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Disconnected_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr Disconnected_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_GearVRAction_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr GearVRAction_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 }
 
 }

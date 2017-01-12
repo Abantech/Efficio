@@ -136,6 +136,11 @@ public class EfficioRuntimeJNI {
   public final static native void Disconnected_SensorInformation_set(long jarg1, Disconnected jarg1_, long jarg2, SensorInformation jarg2_);
   public final static native long Disconnected_SensorInformation_get(long jarg1, Disconnected jarg1_);
   public final static native int Disconnected_GetEventType(long jarg1, Disconnected jarg1_);
+  public final static native long new_GearVRAction(int jarg1);
+  public final static native void delete_GearVRAction(long jarg1);
+  public final static native void GearVRAction_ButtonType_set(long jarg1, GearVRAction jarg1_, int jarg2);
+  public final static native int GearVRAction_ButtonType_get(long jarg1, GearVRAction jarg1_);
+  public final static native int GearVRAction_GetEventType(long jarg1, GearVRAction jarg1_);
   public final static native long new_EventCollection__SWIG_0();
   public final static native long new_EventCollection__SWIG_1(long jarg1);
   public final static native long EventCollection_size(long jarg1, EventCollection jarg1_);
@@ -195,4 +200,5 @@ public class EfficioRuntimeJNI {
   public final static native long Connected_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Faulted_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Disconnected_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long GearVRAction_SWIGSmartPtrUpcast(long jarg1);
 }
