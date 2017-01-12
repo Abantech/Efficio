@@ -15,48 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Engine.h">
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\HistoricalFrameCollection.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\EfficioStarted.h">
+    <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Engine.cpp">
+    <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\HistoricalFrameCollection.cpp">
+    <ClCompile Include="EfficioGearVRWin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\RuntimeCSharp_wrap.cxx">
+    <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\RuntimeJava_wrap.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EfficioStarted.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\default.doxygen">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="resources\Efficio.i">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="resources\RuntimeCSharp.i">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="resources\RuntimeJava.i">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="README.md">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
