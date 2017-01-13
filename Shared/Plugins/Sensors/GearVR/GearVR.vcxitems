@@ -16,10 +16,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\GearVR.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\GearVRAction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\GearVR.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\GearVRAction.h" />
   </ItemGroup>
 </Project>

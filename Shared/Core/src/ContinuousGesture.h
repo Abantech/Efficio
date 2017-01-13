@@ -20,7 +20,7 @@ namespace Efficio
 		class DLLEXPORT ContinuousGesture : public Gesture
 		{
 		public:
-			ContinuousGesture();
+			ContinuousGesture(std::string source);
 			~ContinuousGesture();
 			GestureType GetGestureType() override { return GestureType::Continuous; };
 			virtual GestureState GetGestureState() = 0;

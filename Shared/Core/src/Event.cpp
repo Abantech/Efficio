@@ -6,7 +6,7 @@ namespace Efficio
 	{
 		size_t Event::IdIndex = 0;
 
-		Event::Event() : Time(NULL)
+		Event::Event(std::string source) : Time(NULL), Source(source)
 		{
 			ID = IdIndex++;
 		}

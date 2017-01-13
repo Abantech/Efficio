@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Event.h"
+#include "SensorEvent.h"
 #include "SensorInformation.h"
 
 
@@ -18,13 +18,11 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		class DLLEXPORT Connected : public Events::Event
+		class DLLEXPORT Connected : public Sensors::SensorEvent
 		{
 		public:
-			Connected(SensorInformation details);
+			Connected(Sensors::SensorInformation details);
 			~Connected();
-
-			SensorInformation SensorInformation;
 
 			// Inherited via Event
 			virtual Events::EventType GetEventType() override;

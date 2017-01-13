@@ -23,7 +23,7 @@ namespace Efficio
 		class DLLEXPORT Gesture : public Efficio::Events::Event
 		{
 		public:
-			Gesture();
+			Gesture(std::string source);
 			~Gesture();
 
 			/// Gets the type of gesture that is occurring.

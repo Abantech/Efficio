@@ -19,7 +19,7 @@ namespace Efficio
 		class DLLEXPORT DiscreteGesture : public Gesture
 		{
 		public:
-			DiscreteGesture();
+			DiscreteGesture(std::string source);
 			~DiscreteGesture();
 			GestureType GetGestureType() override { return GestureType::Discrete; };
 			GestureState GetGestureState() override { return GestureState::Completed; };

@@ -37,8 +37,8 @@ public class Pinch extends DiscreteGesture {
     super.delete();
   }
 
-  public Pinch(BodySide side, Finger finger1, Finger finger2) {
-    this(EfficioRuntimeJNI.new_Pinch(side.swigValue(), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2), true);
+  public Pinch(String source, BodySide side, Finger finger1, Finger finger2) {
+    this(EfficioRuntimeJNI.new_Pinch(source, side.swigValue(), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2), true);
   }
 
   public void setPosition(Vector3 value) {

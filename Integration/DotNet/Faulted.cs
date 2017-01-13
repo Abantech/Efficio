@@ -10,7 +10,7 @@
 
 namespace Efficio.Net {
 
-public class Faulted : Event {
+public class Faulted : SensorEvent {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
@@ -43,19 +43,6 @@ public class Faulted : Event {
 
   public Faulted(SensorInformation details) : this(EfficioRuntimePINVOKE.new_Faulted(SensorInformation.getCPtr(details)), true) {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public SensorInformation SensorInformation {
-    set {
-      EfficioRuntimePINVOKE.Faulted_SensorInformation_set(swigCPtr, SensorInformation.getCPtr(value));
-      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
-    } 
-    get {
-      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.Faulted_SensorInformation_get(swigCPtr);
-      SensorInformation ret = (cPtr == global::System.IntPtr.Zero) ? null : new SensorInformation(cPtr, false);
-      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
-      return ret;
-    } 
   }
 
   public override EventType GetEventType() {

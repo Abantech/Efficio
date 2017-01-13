@@ -46,7 +46,7 @@ namespace Efficio.Unity
                             break;
                         case Net.EventType.ButtonPressed:
                             {
-                                var buttonPressed = SWIGHelper.CastTo<GearVRAction>(ev, false);
+                                var buttonPressed = SWIGHelper.CastTo<ButtonPressed>(ev, false);
                                 if (buttonPressed != null)
                                 {
                                     ButtonPressedMessage buttonPressedMessage = new ButtonPressedMessage(buttonPressed);

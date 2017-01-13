@@ -8,7 +8,7 @@
 
 package Efficio;
 
-public class Connected extends Event {
+public class Connected extends SensorEvent {
   private transient long swigCPtr;
   private boolean swigCMemOwnDerived;
 
@@ -39,15 +39,6 @@ public class Connected extends Event {
 
   public Connected(SensorInformation details) {
     this(EfficioRuntimeJNI.new_Connected(SensorInformation.getCPtr(details), details), true);
-  }
-
-  public void setSensorInformation(SensorInformation value) {
-    EfficioRuntimeJNI.Connected_SensorInformation_set(swigCPtr, this, SensorInformation.getCPtr(value), value);
-  }
-
-  public SensorInformation getSensorInformation() {
-    long cPtr = EfficioRuntimeJNI.Connected_SensorInformation_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SensorInformation(cPtr, false);
   }
 
   public EventType GetEventType() {

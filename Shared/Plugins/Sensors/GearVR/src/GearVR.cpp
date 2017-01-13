@@ -1,7 +1,7 @@
 #include "GearVR.h"
 #include "Event.h"
 #include "EventType.h"
-#include "GearVRAction.h"
+#include "ButtonPressed.h"
 
 namespace Efficio
 {
@@ -90,28 +90,28 @@ namespace Efficio
 			// returns true if the Gear VR back button is pressed
 			OVRInput.Get(OVRInput.Button.Two);    
 			*/
-		/*	if (state.Buttons & ovrButton_Back)
+			/*if (state.Buttons & ovrButton_Back)
 			{
-				Efficio::Sensors::GearVRAction action(Efficio::Sensors::ButtonType::Back);
+				Efficio::Sensors::ButtonPressed action(SensorInformation, Efficio::Sensors::ButtonType::Back);
 				std::shared_ptr<Events::Event> eventSharedPtr(&action);
 				events.push_back(eventSharedPtr);
 			}
 
 			if (state.Buttons & ovrButton_Left)
 			{
-				Efficio::Sensors::GearVRAction action(Efficio::Sensors::ButtonType::Left);
+				Efficio::Sensors::ButtonPressed action(SensorInformation, Efficio::Sensors::ButtonType::Left);
 				std::shared_ptr<Events::Event> eventSharedPtr(&action);
 				events.push_back(eventSharedPtr);
 			}
 
 			if (state.Buttons & ovrButton_Right)
 			{
-				Efficio::Sensors::GearVRAction action(Efficio::Sensors::ButtonType::Right);
+				Efficio::Sensors::ButtonPressed action(SensorInformation, Efficio::Sensors::ButtonType::Right);
 				std::shared_ptr<Events::Event> eventSharedPtr(&action);
 				events.push_back(eventSharedPtr);
 			}
 			{
-				Efficio::Sensors::GearVRAction action(Efficio::Sensors::ButtonType::Left);
+				Efficio::Sensors::ButtonPressed action(SensorInformation, Efficio::Sensors::ButtonType::Left);
 				std::shared_ptr<Events::Event> eventSharedPtr(&action);
 				events.push_back(eventSharedPtr);
 			}*/

@@ -1,7 +1,6 @@
 #pragma once
 
-#include "Event.h"
-#include <string>
+#include "SensorEvent.h"
 #include "ButtonType.h"
 
 #if WINDOWS
@@ -18,13 +17,15 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		class DLLEXPORT GearVRAction : public Events::Event
+		class DLLEXPORT ButtonPressed : public Sensors::SensorEvent
 		{
 		public:
-			GearVRAction(Efficio::Sensors::ButtonType buttonType);
-			~GearVRAction();
+			ButtonPressed(Sensors::SensorInformation details, ButtonType buttonType);
+			~ButtonPressed();
+
 			ButtonType ButtonType;
 
+			// Inherited via Event
 			virtual Events::EventType GetEventType() override;
 		};
 	}

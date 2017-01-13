@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Event.h"
+#include "SensorEvent.h"
 #include "SensorInformation.h"
 
 #if WINDOWS
@@ -17,13 +17,11 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		class DLLEXPORT Faulted : public Events::Event
+		class DLLEXPORT Faulted : public Sensors::SensorEvent
 		{
 		public:
-			Faulted(SensorInformation details);
+			Faulted(Sensors::SensorInformation details);
 			~Faulted();
-
-			SensorInformation SensorInformation;
 
 			// Inherited via Event
 			virtual Events::EventType GetEventType() override;

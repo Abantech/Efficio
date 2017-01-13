@@ -1,7 +1,7 @@
 #pragma once
 
 #include "EventType.h"
-
+#include <string>
 #include <time.h>
 
 #if WINDOWS
@@ -22,15 +22,16 @@ namespace Efficio
 		class DLLEXPORT Event
 		{
 		public:
-			Event();
+			Event(std::string source);
 			~Event();
 
 			time_t Time;
 
 			size_t ID;
 
-			virtual Efficio::Events::EventType GetEventType() = 0;
+			std::string Source;
 
+			virtual Efficio::Events::EventType GetEventType() = 0;
 		private:
 			static size_t IdIndex;
 		};

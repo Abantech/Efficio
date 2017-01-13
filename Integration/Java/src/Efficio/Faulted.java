@@ -8,7 +8,7 @@
 
 package Efficio;
 
-public class Faulted extends Event {
+public class Faulted extends SensorEvent {
   private transient long swigCPtr;
   private boolean swigCMemOwnDerived;
 
@@ -39,15 +39,6 @@ public class Faulted extends Event {
 
   public Faulted(SensorInformation details) {
     this(EfficioRuntimeJNI.new_Faulted(SensorInformation.getCPtr(details), details), true);
-  }
-
-  public void setSensorInformation(SensorInformation value) {
-    EfficioRuntimeJNI.Faulted_SensorInformation_set(swigCPtr, this, SensorInformation.getCPtr(value), value);
-  }
-
-  public SensorInformation getSensorInformation() {
-    long cPtr = EfficioRuntimeJNI.Faulted_SensorInformation_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SensorInformation(cPtr, false);
   }
 
   public EventType GetEventType() {

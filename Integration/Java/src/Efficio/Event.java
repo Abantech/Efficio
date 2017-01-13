@@ -51,6 +51,14 @@ public class Event {
     return EfficioRuntimeJNI.Event_ID_get(swigCPtr, this);
   }
 
+  public void setSource(String value) {
+    EfficioRuntimeJNI.Event_Source_set(swigCPtr, this, value);
+  }
+
+  public String getSource() {
+    return EfficioRuntimeJNI.Event_Source_get(swigCPtr, this);
+  }
+
   public EventType GetEventType() {
     return EventType.swigToEnum(EfficioRuntimeJNI.Event_GetEventType(swigCPtr, this));
   }

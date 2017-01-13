@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Event.h"
+#include "SensorEvent.h"
 #include "SensorInformation.h"
 
 #if WINDOWS
@@ -17,13 +17,11 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		class DLLEXPORT Connecting : public Events::Event
+		class DLLEXPORT Connecting : public Sensors::SensorEvent
 		{
 		public:
 			Connecting(Sensors::SensorInformation details);
 			~Connecting();
-
-			SensorInformation SensorInformation;
 
 			// Inherited via Event
 			virtual Events::EventType GetEventType() override;

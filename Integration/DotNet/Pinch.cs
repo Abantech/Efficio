@@ -41,7 +41,7 @@ public class Pinch : DiscreteGesture {
     }
   }
 
-  public Pinch(BodySide side, Finger finger1, Finger finger2) : this(EfficioRuntimePINVOKE.new_Pinch((int)side, Finger.getCPtr(finger1), Finger.getCPtr(finger2)), true) {
+  public Pinch(string source, BodySide side, Finger finger1, Finger finger2) : this(EfficioRuntimePINVOKE.new_Pinch(source, (int)side, Finger.getCPtr(finger1), Finger.getCPtr(finger2)), true) {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 

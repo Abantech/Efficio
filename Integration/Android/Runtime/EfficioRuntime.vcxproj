@@ -131,7 +131,6 @@ mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
@@ -164,7 +163,6 @@ mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
@@ -198,7 +196,6 @@ mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
@@ -231,7 +228,6 @@ mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
@@ -265,7 +261,6 @@ mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
@@ -298,7 +293,6 @@ mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
@@ -332,7 +326,6 @@ mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
@@ -365,7 +358,6 @@ mkdir temp
 xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
 
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 

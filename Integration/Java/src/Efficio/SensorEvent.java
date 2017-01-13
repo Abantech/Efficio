@@ -8,17 +8,17 @@
 
 package Efficio;
 
-public class Disconnected extends SensorEvent {
+public class SensorEvent extends Event {
   private transient long swigCPtr;
   private boolean swigCMemOwnDerived;
 
-  protected Disconnected(long cPtr, boolean cMemoryOwn) {
-    super(EfficioRuntimeJNI.Disconnected_SWIGSmartPtrUpcast(cPtr), true);
+  protected SensorEvent(long cPtr, boolean cMemoryOwn) {
+    super(EfficioRuntimeJNI.SensorEvent_SWIGSmartPtrUpcast(cPtr), true);
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(Disconnected obj) {
+  protected static long getCPtr(SensorEvent obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,19 +30,24 @@ public class Disconnected extends SensorEvent {
     if (swigCPtr != 0) {
       if (swigCMemOwnDerived) {
         swigCMemOwnDerived = false;
-        EfficioRuntimeJNI.delete_Disconnected(swigCPtr);
+        EfficioRuntimeJNI.delete_SensorEvent(swigCPtr);
       }
       swigCPtr = 0;
     }
     super.delete();
   }
 
-  public Disconnected(SensorInformation details) {
-    this(EfficioRuntimeJNI.new_Disconnected(SensorInformation.getCPtr(details), details), true);
+  public void setSensorInformation(SensorInformation value) {
+    EfficioRuntimeJNI.SensorEvent_SensorInformation_set(swigCPtr, this, SensorInformation.getCPtr(value), value);
+  }
+
+  public SensorInformation getSensorInformation() {
+    long cPtr = EfficioRuntimeJNI.SensorEvent_SensorInformation_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new SensorInformation(cPtr, false);
   }
 
   public EventType GetEventType() {
-    return EventType.swigToEnum(EfficioRuntimeJNI.Disconnected_GetEventType(swigCPtr, this));
+    return EventType.swigToEnum(EfficioRuntimeJNI.SensorEvent_GetEventType(swigCPtr, this));
   }
 
 }

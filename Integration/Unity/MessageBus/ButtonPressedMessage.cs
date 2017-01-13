@@ -18,9 +18,9 @@ namespace Efficio.Unity.MessageBus
             }
         }
 
-        public ButtonPressedMessage(GearVRAction gearVRAction)
+        public ButtonPressedMessage(ButtonPressed buttonPressEvent)
         {
-            this.buttonType = gearVRAction.ButtonType;
+            this.buttonType = buttonPressEvent.ButtonType;
         }
     }
 }

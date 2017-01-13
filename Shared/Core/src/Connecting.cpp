@@ -4,7 +4,7 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		Connecting::Connecting(Sensors::SensorInformation details) : SensorInformation(details)
+		Connecting::Connecting(Sensors::SensorInformation details) : SensorEvent(details)
 		{
 		}
 		Connecting::~Connecting()

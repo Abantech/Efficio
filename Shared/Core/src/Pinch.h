@@ -27,7 +27,7 @@ namespace Efficio
 				class DLLEXPORT Pinch : public DiscreteGesture
 				{
 				public:
-					Pinch(Efficio::Models::Body::BodySide side, Efficio::Models::Body::Finger finger1, Efficio::Models::Body::Finger finger2);
+					Pinch(std::string source, Efficio::Models::Body::BodySide side, Efficio::Models::Body::Finger finger1, Efficio::Models::Body::Finger finger2);
 					~Pinch();
 					Vector3 Position;
 					Efficio::Models::Body::Finger Finger1;

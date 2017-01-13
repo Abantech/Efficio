@@ -1,10 +1,10 @@
 #include "ContinuousGesture.h"
 
-namespace Efficio 
+namespace Efficio
 {
 	namespace InputRecognition
 	{
-		ContinuousGesture::ContinuousGesture()
+		ContinuousGesture::ContinuousGesture(std::string source) : Gesture(source)
 		{
 		}
 

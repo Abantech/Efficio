@@ -3,7 +3,7 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		Disonnecting::Disonnecting(Sensors::SensorInformation details) : SensorInformation(details)
+		Disonnecting::Disonnecting(Sensors::SensorInformation details) : SensorEvent(details)
 		{
 		}
 		Disonnecting::~Disonnecting()

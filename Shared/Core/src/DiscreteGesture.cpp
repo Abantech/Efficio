@@ -4,7 +4,7 @@ namespace Efficio
 {
 	namespace InputRecognition 
 	{
-		DiscreteGesture::DiscreteGesture()
+		DiscreteGesture::DiscreteGesture(std::string source) : Gesture(source)
 		{
 		}
 

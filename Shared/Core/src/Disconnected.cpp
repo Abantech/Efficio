@@ -4,7 +4,7 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		Disconnected::Disconnected(Sensors::SensorInformation details) : SensorInformation(details)
+		Disconnected::Disconnected(Sensors::SensorInformation details) :SensorEvent(details)
 		{
 		}
 		Disconnected::~Disconnected()

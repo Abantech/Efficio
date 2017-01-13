@@ -3,7 +3,7 @@
 namespace Efficio {
 
 	namespace InputRecognition {
-		Gesture::Gesture()
+		Gesture::Gesture(std::string source): Event(source)
 		{
 		}
 

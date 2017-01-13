@@ -3,6 +3,7 @@
 	 /* Includes the header in the wrapper code */
 	#include <memory>
 	#include "Event.h"
+	#include "SensorEvent.h"
 	#include "Gesture.h"
 	#include "Vector3.h"
 	#include "Joint.h"
@@ -16,7 +17,7 @@
 	#include "DataType.h"
 	#include "SensorInformation.h"
 	#include "EfficioStarted.h"
-	#include "GearVRAction.h"
+	#include "ButtonPressed.h"
 	#include "Connected.h"
 	#include "Faulted.h"
 	#include "Disconnected.h"
@@ -31,11 +32,11 @@
 
  %shared_ptr(Efficio::Frame);
  %shared_ptr(Efficio::Events::Event);
+ %shared_ptr(Efficio::Sensors::SensorEvent);
  %shared_ptr(Efficio::Events::Internal::EfficioStarted);
  %shared_ptr(Efficio::Sensors::Connected);
  %shared_ptr(Efficio::Sensors::Faulted);
  %shared_ptr(Efficio::Sensors::Disconnected);
- %shared_ptr(Efficio::Sensors::GearVRAction);
  %shared_ptr(Efficio::Sensors::ButtonPressed);
  %shared_ptr(Efficio::InputRecognition::Gesture);
  %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
@@ -63,6 +64,8 @@
  %include "Finger.h"
  %include "Hand.h"
  %include "Event.h" 
+ %include "SensorInformation.h"
+ %include "SensorEvent.h" 
  %include "Frame.h"
  %include "Engine.h"
  %include "Gesture.h"
@@ -73,7 +76,7 @@
  %include "Connected.h"
  %include "Faulted.h"
  %include "Disconnected.h"
- %include "GearVRAction.h"
+ %include "ButtonPressed.h"
  
  %template(EventCollection) std::vector<std::shared_ptr<Efficio::Events::Event>>;
  %template(GestureCollection) std::vector<std::shared_ptr<Efficio::InputRecognition::Gesture>>;

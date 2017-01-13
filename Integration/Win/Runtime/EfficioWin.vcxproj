@@ -111,8 +111,6 @@ xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
 
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
-
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i
@@ -152,8 +150,6 @@ xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
 
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
-
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i
@@ -197,8 +193,6 @@ xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
 
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
-
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i
@@ -242,8 +236,6 @@ xcopy src\*.h temp /Y
 xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
 
 xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
-
 xcopy $(SolutionDir)Integration\resources\*.i temp /Y
 
 swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i

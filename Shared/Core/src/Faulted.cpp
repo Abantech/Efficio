@@ -4,7 +4,7 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		Faulted::Faulted(Sensors::SensorInformation details) : SensorInformation(details)
+		Faulted::Faulted(Sensors::SensorInformation details) : SensorEvent(details)
 		{
 		}
 

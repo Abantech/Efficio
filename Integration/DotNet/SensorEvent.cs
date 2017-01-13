@@ -10,20 +10,20 @@
 
 namespace Efficio.Net {
 
-public class Disconnected : SensorEvent {
+public class SensorEvent : Event {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal Disconnected(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioRuntimePINVOKE.Disconnected_SWIGSmartPtrUpcast(cPtr), true) {
+  internal SensorEvent(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioRuntimePINVOKE.SensorEvent_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Disconnected obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(SensorEvent obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~Disconnected() {
+  ~SensorEvent() {
     Dispose();
   }
 
@@ -32,7 +32,7 @@ public class Disconnected : SensorEvent {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          EfficioRuntimePINVOKE.delete_Disconnected(swigCPtr);
+          EfficioRuntimePINVOKE.delete_SensorEvent(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,12 +41,21 @@ public class Disconnected : SensorEvent {
     }
   }
 
-  public Disconnected(SensorInformation details) : this(EfficioRuntimePINVOKE.new_Disconnected(SensorInformation.getCPtr(details)), true) {
-    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+  public SensorInformation SensorInformation {
+    set {
+      EfficioRuntimePINVOKE.SensorEvent_SensorInformation_set(swigCPtr, SensorInformation.getCPtr(value));
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      global::System.IntPtr cPtr = EfficioRuntimePINVOKE.SensorEvent_SensorInformation_get(swigCPtr);
+      SensorInformation ret = (cPtr == global::System.IntPtr.Zero) ? null : new SensorInformation(cPtr, false);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
   }
 
   public override EventType GetEventType() {
-    EventType ret = (EventType)EfficioRuntimePINVOKE.Disconnected_GetEventType(swigCPtr);
+    EventType ret = (EventType)EfficioRuntimePINVOKE.SensorEvent_GetEventType(swigCPtr);
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

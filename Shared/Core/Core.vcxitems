@@ -20,6 +20,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\BodySide.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Bone.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\BoneTypes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\ButtonPressed.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\ButtonType.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Connected.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Connecting.h" />
@@ -57,6 +58,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\PinchDetector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\RecognitionProcessor.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Sensor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\SensorEvent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\SensorInformation.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\SensorStatus.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\SingleHandGesture.h" />
@@ -69,6 +71,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Arm.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Body.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Bone.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\ButtonPressed.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Connected.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Connecting.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\ContinuousGesture.cpp" />
@@ -95,6 +98,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\PinchDetector.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\RecognitionProcessor.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Sensor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\SensorEvent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\SensorInformation.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\SingleHandGesture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\SkeletalData.cpp" />

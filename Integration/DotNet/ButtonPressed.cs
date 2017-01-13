@@ -10,20 +10,20 @@
 
 namespace Efficio.Net {
 
-public class GearVRAction : Event {
+public class ButtonPressed : SensorEvent {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal GearVRAction(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioRuntimePINVOKE.GearVRAction_SWIGSmartPtrUpcast(cPtr), true) {
+  internal ButtonPressed(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioRuntimePINVOKE.ButtonPressed_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(GearVRAction obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(ButtonPressed obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~GearVRAction() {
+  ~ButtonPressed() {
     Dispose();
   }
 
@@ -32,7 +32,7 @@ public class GearVRAction : Event {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          EfficioRuntimePINVOKE.delete_GearVRAction(swigCPtr);
+          EfficioRuntimePINVOKE.delete_ButtonPressed(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,23 +41,24 @@ public class GearVRAction : Event {
     }
   }
 
-  public GearVRAction(ButtonType buttonType) : this(EfficioRuntimePINVOKE.new_GearVRAction((int)buttonType), true) {
+  public ButtonPressed(SensorInformation details, ButtonType buttonType) : this(EfficioRuntimePINVOKE.new_ButtonPressed(SensorInformation.getCPtr(details), (int)buttonType), true) {
+    if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
   public ButtonType ButtonType {
     set {
-      EfficioRuntimePINVOKE.GearVRAction_ButtonType_set(swigCPtr, (int)value);
+      EfficioRuntimePINVOKE.ButtonPressed_ButtonType_set(swigCPtr, (int)value);
       if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     } 
     get {
-      ButtonType ret = (ButtonType)EfficioRuntimePINVOKE.GearVRAction_ButtonType_get(swigCPtr);
+      ButtonType ret = (ButtonType)EfficioRuntimePINVOKE.ButtonPressed_ButtonType_get(swigCPtr);
       if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 
   }
 
   public override EventType GetEventType() {
-    EventType ret = (EventType)EfficioRuntimePINVOKE.GearVRAction_GetEventType(swigCPtr);
+    EventType ret = (EventType)EfficioRuntimePINVOKE.ButtonPressed_GetEventType(swigCPtr);
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
