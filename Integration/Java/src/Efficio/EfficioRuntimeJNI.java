@@ -74,6 +74,8 @@ public class EfficioRuntimeJNI {
   public final static native void Event_Source_set(long jarg1, Event jarg1_, String jarg2);
   public final static native String Event_Source_get(long jarg1, Event jarg1_);
   public final static native int Event_GetEventType(long jarg1, Event jarg1_);
+  public final static native void delete_InternalEvent(long jarg1);
+  public final static native int InternalEvent_GetEventType(long jarg1, InternalEvent jarg1_);
   public final static native long new_SensorInformation();
   public final static native void delete_SensorInformation(long jarg1);
   public final static native void SensorInformation_Name_set(long jarg1, SensorInformation jarg1_, String jarg2);
@@ -193,6 +195,7 @@ public class EfficioRuntimeJNI {
   public final static native long FingerCollection_get(long jarg1, FingerCollection jarg1_, int jarg2);
   public final static native void FingerCollection_set(long jarg1, FingerCollection jarg1_, int jarg2, long jarg3, Finger jarg3_);
   public final static native void delete_FingerCollection(long jarg1);
+  public final static native long InternalEvent_SWIGSmartPtrUpcast(long jarg1);
   public final static native long SensorEvent_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Gesture_SWIGSmartPtrUpcast(long jarg1);
   public final static native long DiscreteGesture_SWIGSmartPtrUpcast(long jarg1);

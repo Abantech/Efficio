@@ -50,6 +50,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Head.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\IHandSensor.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\InternalEvent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Joint.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\JointType.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Leg.h" />
@@ -91,6 +92,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\HandRecognitionProcessor.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Head.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\InternalEvent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Joint.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Leg.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Location.cpp" />

@@ -8,17 +8,17 @@
 
 package Efficio;
 
-public class EfficioStarted extends InternalEvent {
+public class InternalEvent extends Event {
   private transient long swigCPtr;
   private boolean swigCMemOwnDerived;
 
-  protected EfficioStarted(long cPtr, boolean cMemoryOwn) {
-    super(EfficioRuntimeJNI.EfficioStarted_SWIGSmartPtrUpcast(cPtr), true);
+  protected InternalEvent(long cPtr, boolean cMemoryOwn) {
+    super(EfficioRuntimeJNI.InternalEvent_SWIGSmartPtrUpcast(cPtr), true);
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(EfficioStarted obj) {
+  protected static long getCPtr(InternalEvent obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,19 +30,15 @@ public class EfficioStarted extends InternalEvent {
     if (swigCPtr != 0) {
       if (swigCMemOwnDerived) {
         swigCMemOwnDerived = false;
-        EfficioRuntimeJNI.delete_EfficioStarted(swigCPtr);
+        EfficioRuntimeJNI.delete_InternalEvent(swigCPtr);
       }
       swigCPtr = 0;
     }
     super.delete();
   }
 
-  public EfficioStarted() {
-    this(EfficioRuntimeJNI.new_EfficioStarted(), true);
-  }
-
   public EventType GetEventType() {
-    return EventType.swigToEnum(EfficioRuntimeJNI.EfficioStarted_GetEventType(swigCPtr, this));
+    return EventType.swigToEnum(EfficioRuntimeJNI.InternalEvent_GetEventType(swigCPtr, this));
   }
 
 }

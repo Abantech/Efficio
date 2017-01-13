@@ -10,20 +10,20 @@
 
 namespace Efficio.Net {
 
-public class EfficioStarted : InternalEvent {
+public class InternalEvent : Event {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnDerived;
 
-  internal EfficioStarted(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioRuntimePINVOKE.EfficioStarted_SWIGSmartPtrUpcast(cPtr), true) {
+  internal InternalEvent(global::System.IntPtr cPtr, bool cMemoryOwn) : base(EfficioRuntimePINVOKE.InternalEvent_SWIGSmartPtrUpcast(cPtr), true) {
     swigCMemOwnDerived = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(EfficioStarted obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(InternalEvent obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~EfficioStarted() {
+  ~InternalEvent() {
     Dispose();
   }
 
@@ -32,7 +32,7 @@ public class EfficioStarted : InternalEvent {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwnDerived) {
           swigCMemOwnDerived = false;
-          EfficioRuntimePINVOKE.delete_EfficioStarted(swigCPtr);
+          EfficioRuntimePINVOKE.delete_InternalEvent(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,11 +41,8 @@ public class EfficioStarted : InternalEvent {
     }
   }
 
-  public EfficioStarted() : this(EfficioRuntimePINVOKE.new_EfficioStarted(), true) {
-  }
-
   public override EventType GetEventType() {
-    EventType ret = (EventType)EfficioRuntimePINVOKE.EfficioStarted_GetEventType(swigCPtr);
+    EventType ret = (EventType)EfficioRuntimePINVOKE.InternalEvent_GetEventType(swigCPtr);
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

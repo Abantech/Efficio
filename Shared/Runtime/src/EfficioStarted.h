@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Event.h"
+#include "InternalEvent.h"
 
 #if WINDOWS
 #if COMPILING_DLL
@@ -18,7 +18,7 @@ namespace Efficio
 	{
 		namespace Internal
 		{
-			class DLLEXPORT EfficioStarted : public Events::Event
+			class DLLEXPORT EfficioStarted : public Efficio::InternalEvent
 			{
 			public:
 				EfficioStarted();

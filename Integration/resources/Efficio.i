@@ -4,6 +4,7 @@
 	#include <memory>
 	#include "Event.h"
 	#include "SensorEvent.h"
+	#include "InternalEvent.h"
 	#include "Gesture.h"
 	#include "Vector3.h"
 	#include "Joint.h"
@@ -33,6 +34,7 @@
  %shared_ptr(Efficio::Frame);
  %shared_ptr(Efficio::Events::Event);
  %shared_ptr(Efficio::Sensors::SensorEvent);
+ %shared_ptr(Efficio::InternalEvent);
  %shared_ptr(Efficio::Events::Internal::EfficioStarted);
  %shared_ptr(Efficio::Sensors::Connected);
  %shared_ptr(Efficio::Sensors::Faulted);
@@ -64,6 +66,7 @@
  %include "Finger.h"
  %include "Hand.h"
  %include "Event.h" 
+ %include "InternalEvent.h" 
  %include "SensorInformation.h"
  %include "SensorEvent.h" 
  %include "Frame.h"

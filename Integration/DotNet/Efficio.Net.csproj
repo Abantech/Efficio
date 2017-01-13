@@ -86,6 +86,7 @@
     <Compile Include="GestureState.cs" />
     <Compile Include="GestureType.cs" />
     <Compile Include="Hand.cs" />
+    <Compile Include="InternalEvent.cs" />
     <Compile Include="Joint.cs" />
     <Compile Include="JointCollection.cs" />
     <Compile Include="JointType.cs" />

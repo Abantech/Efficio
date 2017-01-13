@@ -5,7 +5,7 @@ namespace Efficio
 	{
 		namespace Internal
 		{
-			EfficioStarted::EfficioStarted(): Event("EfficioInternal")
+			EfficioStarted::EfficioStarted(): InternalEvent()
 			{
 			}
 			EfficioStarted::~EfficioStarted()

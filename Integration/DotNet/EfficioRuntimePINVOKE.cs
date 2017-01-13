@@ -383,6 +383,12 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Event_GetEventType___")]
   public static extern int Event_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_InternalEvent___")]
+  public static extern void delete_InternalEvent(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_InternalEvent_GetEventType___")]
+  public static extern int InternalEvent_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_SensorInformation___")]
   public static extern global::System.IntPtr new_SensorInformation();
 
@@ -883,6 +889,9 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_FingerCollection___")]
   public static extern void delete_FingerCollection(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_InternalEvent_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr InternalEvent_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_SensorEvent_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr SensorEvent_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
