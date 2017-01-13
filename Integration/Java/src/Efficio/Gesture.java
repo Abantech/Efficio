@@ -37,8 +37,8 @@ public class Gesture extends Event {
     super.delete();
   }
 
-  public GestureType GetType() {
-    return GestureType.swigToEnum(EfficioRuntimeJNI.Gesture_GetType(swigCPtr, this));
+  public GestureType GetGestureType() {
+    return GestureType.swigToEnum(EfficioRuntimeJNI.Gesture_GetGestureType(swigCPtr, this));
   }
 
   public GestureState GetGestureState() {

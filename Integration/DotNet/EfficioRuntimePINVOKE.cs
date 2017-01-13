@@ -446,8 +446,8 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_Gesture___")]
   public static extern void delete_Gesture(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Gesture_GetType___")]
-  public static extern int Gesture_GetType(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Gesture_GetGestureType___")]
+  public static extern int Gesture_GetGestureType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Gesture_GetGestureState___")]
   public static extern int Gesture_GetGestureState(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -464,8 +464,8 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_DiscreteGesture___")]
   public static extern void delete_DiscreteGesture(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_DiscreteGesture_GetType___")]
-  public static extern int DiscreteGesture_GetType(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_DiscreteGesture_GetGestureType___")]
+  public static extern int DiscreteGesture_GetGestureType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_DiscreteGesture_GetGestureState___")]
   public static extern int DiscreteGesture_GetGestureState(global::System.Runtime.InteropServices.HandleRef jarg1);

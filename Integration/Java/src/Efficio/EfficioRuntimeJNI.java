@@ -95,13 +95,13 @@ public class EfficioRuntimeJNI {
   public final static native long Engine_GetFrame__SWIG_1(long jarg1, Engine jarg1_, int jarg2);
   public final static native float Engine_GetFrameRate(long jarg1, Engine jarg1_);
   public final static native void delete_Gesture(long jarg1);
-  public final static native int Gesture_GetType(long jarg1, Gesture jarg1_);
+  public final static native int Gesture_GetGestureType(long jarg1, Gesture jarg1_);
   public final static native int Gesture_GetGestureState(long jarg1, Gesture jarg1_);
   public final static native long Gesture_GetStartTime(long jarg1, Gesture jarg1_);
   public final static native long Gesture_GetGestureDuration(long jarg1, Gesture jarg1_);
   public final static native int Gesture_GetEventType(long jarg1, Gesture jarg1_);
   public final static native void delete_DiscreteGesture(long jarg1);
-  public final static native int DiscreteGesture_GetType(long jarg1, DiscreteGesture jarg1_);
+  public final static native int DiscreteGesture_GetGestureType(long jarg1, DiscreteGesture jarg1_);
   public final static native int DiscreteGesture_GetGestureState(long jarg1, DiscreteGesture jarg1_);
   public final static native long new_Pinch(int jarg1, long jarg2, Finger jarg2_, long jarg3, Finger jarg3_);
   public final static native void delete_Pinch(long jarg1);

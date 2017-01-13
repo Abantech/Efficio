@@ -21,8 +21,8 @@ namespace Efficio
 		public:
 			DiscreteGesture();
 			~DiscreteGesture();
-			GestureType GetType() { return GestureType::Discrete; };
-			GestureState GetGestureState() { return GestureState::Completed; };
+			GestureType GetGestureType() override { return GestureType::Discrete; };
+			GestureState GetGestureState() override { return GestureState::Completed; };
 		};
 	}
 }

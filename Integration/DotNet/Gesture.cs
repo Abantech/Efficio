@@ -41,8 +41,8 @@ public class Gesture : Event {
     }
   }
 
-  public virtual GestureType GetType() {
-    GestureType ret = (GestureType)EfficioRuntimePINVOKE.Gesture_GetType(swigCPtr);
+  public virtual GestureType GetGestureType() {
+    GestureType ret = (GestureType)EfficioRuntimePINVOKE.Gesture_GetGestureType(swigCPtr);
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

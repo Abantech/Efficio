@@ -41,8 +41,8 @@ public class DiscreteGesture : Gesture {
     }
   }
 
-  public override GestureType GetType() {
-    GestureType ret = (GestureType)EfficioRuntimePINVOKE.DiscreteGesture_GetType(swigCPtr);
+  public override GestureType GetGestureType() {
+    GestureType ret = (GestureType)EfficioRuntimePINVOKE.DiscreteGesture_GetGestureType(swigCPtr);
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }

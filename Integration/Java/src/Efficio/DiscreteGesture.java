@@ -37,8 +37,8 @@ public class DiscreteGesture extends Gesture {
     super.delete();
   }
 
-  public GestureType GetType() {
-    return GestureType.swigToEnum(EfficioRuntimeJNI.DiscreteGesture_GetType(swigCPtr, this));
+  public GestureType GetGestureType() {
+    return GestureType.swigToEnum(EfficioRuntimeJNI.DiscreteGesture_GetGestureType(swigCPtr, this));
   }
 
   public GestureState GetGestureState() {

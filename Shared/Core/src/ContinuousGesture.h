@@ -22,7 +22,7 @@ namespace Efficio
 		public:
 			ContinuousGesture();
 			~ContinuousGesture();
-			GestureType GetType() { return GestureType::Continuous; };
+			GestureType GetGestureType() override { return GestureType::Continuous; };
 			virtual GestureState GetGestureState() = 0;
 		};
 	}
