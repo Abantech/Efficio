@@ -46,5 +46,6 @@
 %include "Engine.h"
 %include "Sensor.h"
 %include "Asset.h"
- 
+
+/* Change vectors and arrays into language-native collections */
 %include <templates.i> 
