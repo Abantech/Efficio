@@ -1,0 +1,11 @@
+/* Enumerations */
+%include "BodySide.h"
+%include "DataType.h"
+%include "ButtonType.h"
+%include "EventType.h"
+%include "SensorStatus.h"
+%include "TrackingType.h"
+%include "JointType.h"
+%include "FingerType.h"
+%include "GestureType.h"
+%include "GestureState.h"
