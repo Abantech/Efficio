@@ -57,3 +57,7 @@
 /Integration/Win/Runtime/src/RuntimeCSharp_wrap.cxx
 /Integration/Android/Runtime/src/RuntimeJava_wrap.cxx
 /Integration/Android/Runtime/src/RuntimeCSharp_wrap.cxx
+/Integration/Android/Plugins/Sensors/LeapMotion/ARM/Debug
+/Integration/Win/Plugins/Sensors/LeapMotion/Debug
+/Integration/Win/Plugins/Sensors/LeapMotion/x64/Debug
+/x64/Debug
