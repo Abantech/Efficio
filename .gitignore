@@ -53,3 +53,5 @@
 /Integration/Win/Runtime/doc/html
 /Integration/Win/Runtime/x64/Debug
 /ipch
+/Integration/Win/Runtime/src/RuntimeJava_wrap.cxx
+/Integration/Win/Runtime/src/RuntimeCSharp_wrap.cxx
