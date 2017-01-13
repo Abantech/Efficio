@@ -109,6 +109,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\InternalEvent.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Asset.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Altitude.h">
@@ -268,6 +269,9 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\InternalEvent.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Asset.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

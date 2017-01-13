@@ -45,7 +45,7 @@ namespace Efficio
 			status = Sensors::Status::Disconnecting;
 
 			// Add message that the sensor is disconnecting
-			frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Disonnecting(SensorInformation)));
+			frame.AddEvent(std::shared_ptr<Events::Event>(new Sensors::Disconnecting(SensorInformation)));
 
 			return frame;
 		}

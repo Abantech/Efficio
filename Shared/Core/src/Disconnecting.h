@@ -17,11 +17,11 @@ namespace Efficio
 {
 	namespace Sensors
 	{
-		class DLLEXPORT Disonnecting : public Sensors::SensorEvent
+		class DLLEXPORT Disconnecting : public Sensors::SensorEvent
 		{
 		public:
-			Disonnecting(Sensors::SensorInformation details);
-			~Disonnecting();
+			Disconnecting(Sensors::SensorInformation details);
+			~Disconnecting();
 
 			// Inherited via Event
 			virtual Events::EventType GetEventType() override;

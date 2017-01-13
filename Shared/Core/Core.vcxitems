@@ -16,6 +16,7 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Altitude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Arm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Asset.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Body.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\BodySide.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Bone.h" />
@@ -70,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Arm.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Asset.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Body.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Bone.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\ButtonPressed.cpp" />

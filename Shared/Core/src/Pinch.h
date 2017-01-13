@@ -29,7 +29,7 @@ namespace Efficio
 				public:
 					Pinch(std::string source, Efficio::Models::Body::BodySide side, Efficio::Models::Body::Finger finger1, Efficio::Models::Body::Finger finger2);
 					~Pinch();
-					Vector3 Position;
+					Efficio::Vector3 Position;
 					Efficio::Models::Body::Finger Finger1;
 					Efficio::Models::Body::Finger Finger2;
 					Efficio::Events::EventType GetEventType();
