@@ -64,3 +64,4 @@
 /Integration/Android/Plugins/Sensors/LeapMotion/EfficioLeapMotionSensorAndroid.vcxproj.user
 /Integration/Win/Runtime/Debug
 /x86/Debug
+/Integration/Win/Plugins/Sensors/GearVR/Debug
