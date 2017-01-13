@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{13DF07F0-38C7-4F22-BF81-7711E9157BFB}</ProjectGuid>
+    <ProjectGuid>{7B55BBF6-E65C-4D40-A7C6-5554693AC360}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>EfficioWin</RootNamespace>
+    <RootNamespace>EfficioLeapMotionWin</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>EfficioRuntimeWin</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -56,7 +55,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-    <Import Project="..\..\..\Shared\Runtime\Runtime.vcxitems" Label="Shared" />
+    <Import Project="..\..\..\..\..\Shared\Plugins\Sensors\LeapMotion\LeapMotion.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -73,11 +72,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>EfficioRuntime</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>EfficioRuntime</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -91,9 +88,9 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINDOWS=1;COMPILING_DLL=1;WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIOLEAPMOTIONWIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shared\Core\src;$(SolutionDir)lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -101,30 +98,7 @@
       <AdditionalDependencies>Leap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen
-
-mkdir temp
-
-xcopy src\*.h temp /Y
-
-xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-
-xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
-
-xcopy $(SolutionDir)Integration\resources\*.i temp /Y
-
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i
-
-swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
-
-xcopy temp\*.cxx  src /y
-
-rmdir /S /Q temp
-
-EXIT 0</Command>
-    </PreBuildEvent>
+    <ProjectReference />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -132,9 +106,9 @@ EXIT 0</Command>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINDOWS=1;COMPILING_DLL=1;_DEBUG;_WINDOWS;_USRDLL;EFFICIOLEAPMOTIONWIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shared\Core\src;$(SolutionDir)lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -142,30 +116,7 @@ EXIT 0</Command>
       <AdditionalDependencies>Leap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen
-
-mkdir temp
-
-xcopy src\*.h temp /Y
-
-xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-
-xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
-
-xcopy $(SolutionDir)Integration\resources\*.i temp /Y
-
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i
-
-swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
-
-xcopy temp\*.cxx  src /y
-
-rmdir /S /Q temp
-
-EXIT 0</Command>
-    </PreBuildEvent>
+    <ProjectReference />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -175,9 +126,9 @@ EXIT 0</Command>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINDOWS=1;COMPILING_DLL=1;WIN32;NDEBUG;_WINDOWS;_USRDLL;EFFICIOLEAPMOTIONWIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shared\Core\src;$(SolutionDir)lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -187,30 +138,7 @@ EXIT 0</Command>
       <AdditionalDependencies>Leap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen
-
-mkdir temp
-
-xcopy src\*.h temp /Y
-
-xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-
-xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
-
-xcopy $(SolutionDir)Integration\resources\*.i temp /Y
-
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i
-
-swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
-
-xcopy temp\*.cxx  src /y
-
-rmdir /S /Q temp
-
-EXIT 0</Command>
-    </PreBuildEvent>
+    <ProjectReference />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -220,9 +148,9 @@ EXIT 0</Command>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINDOWS=1;COMPILING_DLL=1;NDEBUG;_WINDOWS;_USRDLL;EFFICIOLEAPMOTIONWIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Shared\Core\src;$(SolutionDir)lib\VMML;$(LEAP_SDK)\include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -232,53 +160,14 @@ EXIT 0</Command>
       <AdditionalDependencies>Leap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);</AdditionalLibraryDirectories>
     </Link>
-    <PreBuildEvent>
-      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen
-
-mkdir temp
-
-xcopy src\*.h temp /Y
-
-xcopy $(SolutionDir)Shared\Core\src\*.h temp /Y
-
-xcopy $(SolutionDir)Shared\Runtime\src\*.h temp /Y
-xcopy $(SolutionDir)Shared\Plugins\Sensors\GearVR\src\*.h temp /Y
-
-xcopy $(SolutionDir)Integration\resources\*.i temp /Y
-
-swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotNet" temp/RuntimeCSharp.i
-
-swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
-
-xcopy temp\*.cxx  src /y
-
-rmdir /S /Q temp
-
-EXIT 0</Command>
-    </PreBuildEvent>
+    <ProjectReference />
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\RuntimeCSharp_wrap.cxx" />
-    <ClCompile Include="src\RuntimeJava_wrap.cxx" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\default.doxygen" />
-    <None Include="resources\Efficio.i" />
-    <None Include="resources\RuntimeCSharp.i" />
-    <None Include="resources\RuntimeJava.i" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Core\EfficioCoreWin.vcxproj">
+    <ProjectReference Include="..\..\..\Core\EfficioCoreWin.vcxproj">
       <Project>{6c025e68-2e86-462a-a077-930003e137b0}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Plugins\Sensors\GearVR\EfficioGearVRWin.vcxproj">
-      <Project>{c47a98ee-4b8c-4e71-8388-7b780f806a9a}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Plugins\Sensors\LeapMotion\EfficioLeapMotionWin.vcxproj">
-      <Project>{7b55bbf6-e65c-4d40-a7c6-5554693ac360}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

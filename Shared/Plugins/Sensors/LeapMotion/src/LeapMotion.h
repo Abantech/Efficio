@@ -5,10 +5,14 @@
 #include "Hand.h"
 #include "IHandSensor.h"
 
+#if WINDOWS
 #if COMPILING_DLL
 #define DLLEXPORT __declspec(dllexport)
 #else
 #define DLLEXPORT __declspec(dllimport)
+#endif
+#else
+#define DLLEXPORT
 #endif
 
 namespace Efficio
@@ -21,7 +25,7 @@ namespace Efficio
 			/// Wrapper for the Leap Motion hand sensor.  More information about this device can be found at https://www.leapmotion.com/
 			/// </summary>
 			/// <seealso cref="Sensor" />
-			extern class DLLEXPORT LeapMotion : public Sensor, public IHandSensor
+			class DLLEXPORT LeapMotion : public Sensor, public IHandSensor
 			{
 			public:
 				LeapMotion();

@@ -83,8 +83,9 @@ namespace Efficio
 			std::vector<std::shared_ptr<Data::Data>> LeapMotion::GetData()
 			{
 				std::vector<std::shared_ptr<Data::Data>> data;
-
-				std::shared_ptr<Efficio::Data::Data> dataSharedPtr(&GetHandData());
+				
+				auto handData = GetHandData();
+				std::shared_ptr<Efficio::Data::Data> dataSharedPtr(&handData);
 
 				data.push_back(dataSharedPtr);
 
