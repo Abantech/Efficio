@@ -145,6 +145,10 @@ EXIT 0
     <PostBuildEvent>
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
+    <Link>
+      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -178,6 +182,10 @@ EXIT 0
     <PostBuildEvent>
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
+    <Link>
+      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
@@ -212,6 +220,10 @@ EXIT 0
     <PostBuildEvent>
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
+    <Link>
+      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
@@ -245,6 +257,10 @@ EXIT 0
     <PostBuildEvent>
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
+    <Link>
+      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
@@ -279,6 +295,10 @@ EXIT 0
     <PostBuildEvent>
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
+    <Link>
+      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
@@ -312,6 +332,10 @@ EXIT 0
     <PostBuildEvent>
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
+    <Link>
+      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -348,8 +372,11 @@ EXIT 0
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
     <Link />
+    <Link />
     <Link>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -385,6 +412,12 @@ EXIT 0
     <PostBuildEvent>
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="resources\default.doxygen" />
