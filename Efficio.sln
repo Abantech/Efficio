@@ -68,6 +68,7 @@ Global
 		Shared\Plugins\Sensors\LeapMotion\LeapMotion.vcxitems*{5c8c81b1-5457-48a1-9b93-c9465a4dd93e}*SharedItemsImports = 9
 		Shared\Core\Core.vcxitems*{6c025e68-2e86-462a-a077-930003e137b0}*SharedItemsImports = 4
 		Shared\Plugins\Sensors\LeapMotion\LeapMotion.vcxitems*{7b55bbf6-e65c-4d40-a7c6-5554693ac360}*SharedItemsImports = 4
+		Shared\Plugins\Sensors\LeapMotion\LeapMotion.vcxitems*{9411f70e-bb07-48c0-912e-7c89606f83be}*SharedItemsImports = 4
 		Shared\Runtime\Runtime.vcxitems*{c2b95d5e-ddaf-4dfe-9391-f24c9c46bd41}*SharedItemsImports = 4
 		Shared\Plugins\Sensors\GearVR\GearVR.vcxitems*{c47a98ee-4b8c-4e71-8388-7b780f806a9a}*SharedItemsImports = 4
 	EndGlobalSection

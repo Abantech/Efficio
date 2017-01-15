@@ -337,7 +337,7 @@ swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotN
 
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 
-xcopy temp\*.cxx  src /y
+xcopy temp\*.cxx  src\ /y
 
 rmdir /S /Q temp
 EXIT 0
