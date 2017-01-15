@@ -19,37 +19,34 @@
 
 using namespace std;
 
-extern "C" 
+namespace Efficio
 {
-	namespace Efficio
+	/// Efficio engine for retrieving processed frames.
+	class DLLEXPORT Engine
 	{
-		/// Efficio engine for retrieving processed frames.
-		class DLLEXPORT Engine
-		{
-		public:
-			Engine();
-			~Engine();
+	public:
+		Engine();
+		~Engine();
 
-			Frame Start();
+		Frame Start();
 
-			/// Gets the current {@link Efficio::EfficioFrame frame} from the runtime.
-			/// @return the current frame.
-			std::shared_ptr<Frame> GetFrame();
+		/// Gets the current {@link Efficio::EfficioFrame frame} from the runtime.
+		/// @return the current frame.
+		std::shared_ptr<Frame> GetFrame();
 
-			/// Gets the historical {@link Efficio::EfficioFrame frame} from the runtime.
-			/// @return the current frame.
-			std::shared_ptr<Frame> GetFrame(int count);
+		/// Gets the historical {@link Efficio::EfficioFrame frame} from the runtime.
+		/// @return the current frame.
+		std::shared_ptr<Frame> GetFrame(int count);
 
-			float GetFrameRate();
+		float GetFrameRate();
 
-		private:
-			bool started;
-			std::vector<Sensors::Sensor*> sensors;
-			InputRecognition::InputRecognitionEngine ire;
-			HistoricalFrameCollection historicalFrames;
-			int frameID;
+	private:
+		bool started;
+		std::vector<Sensors::Sensor*> sensors;
+		InputRecognition::InputRecognitionEngine ire;
+		HistoricalFrameCollection historicalFrames;
+		int frameID;
 
-			float deltaTimeSum;
-		};
-	}
+		float deltaTimeSum;
+	};
 }

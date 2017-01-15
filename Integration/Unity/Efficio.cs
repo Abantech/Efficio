@@ -11,15 +11,18 @@ namespace Efficio.Unity
 
         void Start()
         {
-            engine = new Engine();
 
-            engine.Start();
+            engine = new Engine();
+            ProcessFrame(engine.Start());
         }
 
         void Update()
         {
-            var frame = engine.GetFrame();
+            ProcessFrame(engine.GetFrame());
+        }
 
+        void ProcessFrame(Frame frame)
+        {
             if (frame.GetEvents().Count > 0)
             {
                 foreach (var ev in frame.GetEvents())
@@ -40,7 +43,6 @@ namespace Efficio.Unity
                             if (started != null)
                             {
                                 EfficioStartedMessage startedMessage = new EfficioStartedMessage(started);
-
                                 MessageBus.MessageBus.Instance.SendMessage(startedMessage);
                             }
                             break;

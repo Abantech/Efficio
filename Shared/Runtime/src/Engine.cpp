@@ -14,10 +14,10 @@ namespace Efficio {
 	{
 		//sensors.push_back(new Sensors::RealSense(Efficio::Sensors::TrackingType::Face));
 #if WINDOWS
-		sensors.push_back(new Sensors::Body::LeapMotion());
+		//sensors.push_back(new Sensors::Body::LeapMotion());
 #endif
 		//sensors.push_back(new Sensors::Body::Kinect());
-		sensors.push_back(new Sensors::GearVR());
+		//sensors.push_back(new Sensors::GearVR());
 	}
 
 	Engine::~Engine()

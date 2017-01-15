@@ -35,11 +35,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\EfficioCoreAndroid.vcxproj">
-      <Project>{1c588661-e774-420f-b3c7-c1f6057f3678}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="EfficioGearVRSensor.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +225,8 @@
       <AdditionalLibraryDirectories>$(OCULUS_SDK)\LibOVR\Lib\Windows\win32\Release\VS2015;%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainVersion)\$(PlatformShortName);$(StlLibraryPath)</AdditionalLibraryDirectories>
       <AdditionalDependencies>
       </AdditionalDependencies>
+      <UnresolvedSymbolReferences>false</UnresolvedSymbolReferences>
+      <AdditionalOptions>-rpath libEfficioCore.so %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">

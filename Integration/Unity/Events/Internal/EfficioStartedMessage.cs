@@ -8,9 +8,12 @@ namespace Efficio.Unity.MessageBus
 {
     public class EfficioStartedMessage : Message
     {
+        EfficioStarted startedEvent;
+
         public EfficioStartedMessage(EfficioStarted startedEvent)
         {
             this.Type = MessageType.EfficioStarted;
+            this.startedEvent = startedEvent;
         }
     }
 }
