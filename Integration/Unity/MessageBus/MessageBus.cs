@@ -31,6 +31,7 @@ namespace Efficio.Unity.MessageBus
         {
             if (!subscriberLists.ContainsKey(message.Type))
             {
+                Debug.Log("MESSAGE BUS: Message of type " + message.Type + " received but no message handlers registered.");
                 return;
             }
 
@@ -38,6 +39,7 @@ namespace Efficio.Unity.MessageBus
 
             for (int i = 0; i < subscriberList.Count; i++)
             {
+                Debug.Log(string.Format("MESSAGE BUS: Message of type {0} received. This message type has {1} handlers registered.", message.Type, subscriberList.Count));
                 SendMessageToSubscriber(message, subscriberList[i]);
                 //Action<Message, MessageSubscriber> sendMessage = SendMessageToSubscriber;
                 //sendMessage.BeginInvoke(message, subscriberList[i], null, null);
