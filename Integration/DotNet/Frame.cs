@@ -10,6 +10,7 @@
 
 namespace Efficio.Net {
 
+[System.Runtime.Serialization.DataContract]
 public class Frame : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnBase;
@@ -39,6 +40,11 @@ public class Frame : global::System.IDisposable {
       global::System.GC.SuppressFinalize(this);
     }
   }
+
+	[System.Runtime.Serialization.DataMember]
+	public DataCollection Data {
+		get { return this.GetData(); }
+	}
 
   public Frame(Frame previousFrame, int ID) : this(EfficioRuntimePINVOKE.new_Frame__SWIG_0(Frame.getCPtr(previousFrame), ID), true) {
   }
