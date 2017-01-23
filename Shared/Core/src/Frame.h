@@ -27,14 +27,11 @@ namespace Efficio
 		~Frame();
 
 		std::vector<std::shared_ptr<Data::Data>> GetData();
-
-		// TODO make this friendly 
 		void AddData(std::vector<std::shared_ptr<Data::Data>> data);
 
 		void AddFrame(Frame frame);
 
 		std::vector<std::shared_ptr<Events::Event>> GetEvents();
-
 		void AddEvent(std::shared_ptr<Events::Event> eventPtr);
 		void AddEvents(std::vector<std::shared_ptr<Events::Event>> eventsPtr);
 
