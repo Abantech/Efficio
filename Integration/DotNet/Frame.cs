@@ -41,9 +41,16 @@ public class Frame : global::System.IDisposable {
     }
   }
 
+    [System.Runtime.Serialization.DataMember]
+    public DataCollection Data
+    {
+        get { return this.GetData(); }
+	}
+	
 	[System.Runtime.Serialization.DataMember]
-	public DataCollection Data {
-		get { return this.GetData(); }
+    public EventCollection Events
+    {
+        get { return this.GetEvents(); }
 	}
 
   public Frame(Frame previousFrame, int ID) : this(EfficioRuntimePINVOKE.new_Frame__SWIG_0(Frame.getCPtr(previousFrame), ID), true) {
@@ -99,6 +106,7 @@ public class Frame : global::System.IDisposable {
     } 
   }
 
+  [System.Runtime.Serialization.DataMember]
   public SWIGTYPE_p_clock_t DeltaTime {
     set {
       EfficioRuntimePINVOKE.Frame_DeltaTime_set(swigCPtr, SWIGTYPE_p_clock_t.getCPtr(value));
@@ -111,6 +119,7 @@ public class Frame : global::System.IDisposable {
     } 
   }
 
+  [System.Runtime.Serialization.DataMember]
   public int ID {
     set {
       EfficioRuntimePINVOKE.Frame_ID_set(swigCPtr, value);

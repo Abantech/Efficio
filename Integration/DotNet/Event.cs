@@ -10,6 +10,7 @@
 
 namespace Efficio.Net {
 
+[System.Runtime.Serialization.DataContract]
 public class Event : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   private bool swigCMemOwnBase;
@@ -40,6 +41,13 @@ public class Event : global::System.IDisposable {
     }
   }
 
+    [System.Runtime.Serialization.DataMember]
+    public EventType EventType
+    {
+        get { return this.GetEventType(); }
+        set { }
+    }
+
   public SWIGTYPE_p_time_t Time {
     set {
       EfficioRuntimePINVOKE.Event_Time_set(swigCPtr, SWIGTYPE_p_time_t.getCPtr(value));
@@ -52,6 +60,7 @@ public class Event : global::System.IDisposable {
     } 
   }
 
+  [System.Runtime.Serialization.DataMember]
   public uint ID {
     set {
       EfficioRuntimePINVOKE.Event_ID_set(swigCPtr, value);
@@ -64,6 +73,7 @@ public class Event : global::System.IDisposable {
     } 
   }
 
+  [System.Runtime.Serialization.DataMember]
   public string Source {
     set {
       EfficioRuntimePINVOKE.Event_Source_set(swigCPtr, value);
