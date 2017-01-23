@@ -19,7 +19,7 @@ namespace Efficio
 		public:
 			Data() {};
 			~Data() {};
-			virtual DataType GetDataType() = 0;
+			virtual Efficio::Data::DataType GetDataType() = 0;
 		};
 	}
 }
