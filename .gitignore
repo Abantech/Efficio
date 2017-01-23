@@ -67,3 +67,10 @@
 /Integration/Win/Plugins/Sensors/GearVR/Debug
 /Integration/Unity/obj/Release
 /ARM/Release
+/.vs/config
+/Integration/DotNet/obj/x64/Debug
+/Integration/Efficio.Net.Web/bin
+/Integration/Efficio.Net.Web/obj
+/Integration/Win/Runtime/doc
+/packages
+/Integration/DotNet/bin/x64/Debug
