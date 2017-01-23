@@ -26,26 +26,16 @@ namespace Efficio
 
 	void Frame::AddData(std::vector<std::shared_ptr<Data::Data>> data)
 	{
-		if (data.size() < 1)
-		{
-			return;
-		}
-
 		for (size_t i = 0; i < data.size(); i++)
 		{
-			dataCollection.push_back(data[i]);
+			dataCollection.push_back(std::shared_ptr<Data::Data>(data[i]));
 		}
 	}
 
 	void Frame::AddFrame(Frame frame)
 	{
 		AddData(frame.GetData());	
-		auto events = frame.GetEvents();
-
-		for (size_t i = 0; i < events.size(); i++)
-		{
-			AddEvent(events[i]);
-		}
+		AddEvents(frame.GetEvents());
 	}
 
 	std::vector<std::shared_ptr<Events::Event>> Frame::GetEvents()
