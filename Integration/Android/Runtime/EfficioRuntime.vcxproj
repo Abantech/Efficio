@@ -116,7 +116,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(OCULUS_SDK)\LibOVR\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG=1</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -136,7 +136,7 @@ swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotN
 
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 
-xcopy temp\*.cxx  src /y
+xcopy temp\*.cxx  src\ /y
 
 rmdir /S /Q temp
 EXIT 0
@@ -146,15 +146,15 @@ EXIT 0
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
     <Link>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>vrapi;EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OCULUS_MOBILE_SDK)\VrApi\Libs\Android\armeabi-v7a\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(OCULUS_SDK)\LibOVR\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <ExceptionHandling>Enabled</ExceptionHandling>
@@ -173,7 +173,7 @@ swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotN
 
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 
-xcopy temp\*.cxx  src /y
+xcopy temp\*.cxx  src\ /y
 
 rmdir /S /Q temp
 EXIT 0
@@ -183,15 +183,15 @@ EXIT 0
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
     <Link>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>vrapi;EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OCULUS_MOBILE_SDK)\VrApi\Libs\Android\armeabi-v7a\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(OCULUS_SDK)\LibOVR\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG=1</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -211,7 +211,7 @@ swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotN
 
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 
-xcopy temp\*.cxx  src /y
+xcopy temp\*.cxx  src\ /y
 
 rmdir /S /Q temp
 EXIT 0
@@ -221,15 +221,15 @@ EXIT 0
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
     <Link>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>vrapi;EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OCULUS_MOBILE_SDK)\VrApi\Libs\Android\armeabi-v7a\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(OCULUS_SDK)\LibOVR\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <ExceptionHandling>Enabled</ExceptionHandling>
@@ -248,7 +248,7 @@ swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotN
 
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 
-xcopy temp\*.cxx  src /y
+xcopy temp\*.cxx  src\ /y
 
 rmdir /S /Q temp
 EXIT 0
@@ -258,15 +258,15 @@ EXIT 0
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
     <Link>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>vrapi;EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OCULUS_MOBILE_SDK)\VrApi\Libs\Android\armeabi-v7a\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(OCULUS_SDK)\LibOVR\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG=1</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -286,7 +286,7 @@ swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotN
 
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 
-xcopy temp\*.cxx  src /y
+xcopy temp\*.cxx  src\ /y
 
 rmdir /S /Q temp
 EXIT 0
@@ -296,15 +296,15 @@ EXIT 0
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
     <Link>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>vrapi;EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OCULUS_MOBILE_SDK)\VrApi\Libs\Android\armeabi-v7a\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(OCULUS_SDK)\LibOVR\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <ExceptionHandling>Enabled</ExceptionHandling>
@@ -323,7 +323,7 @@ swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotN
 
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 
-xcopy temp\*.cxx  src /y
+xcopy temp\*.cxx  src\ /y
 
 rmdir /S /Q temp
 EXIT 0
@@ -333,15 +333,15 @@ EXIT 0
       <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
     </PostBuildEvent>
     <Link>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>vrapi;EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OCULUS_MOBILE_SDK)\VrApi\Libs\Android\armeabi-v7a\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(OCULUS_SDK)\LibOVR\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG=1</PreprocessorDefinitions>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -376,15 +376,15 @@ EXIT 0
     <Link>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>vrapi;EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OCULUS_MOBILE_SDK)\VrApi\Libs\Android\armeabi-v7a\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(OCULUS_SDK)\LibOVR\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <ExceptionHandling>Enabled</ExceptionHandling>
@@ -403,7 +403,7 @@ swig -c++ -csharp -namespace Efficio.Net -outdir "$(SolutionDir)Integration\DotN
 
 swig -c++ -java -package Efficio -outdir "$(SolutionDir)Integration\Java\src\Efficio" temp/RuntimeJava.i
 
-xcopy temp\*.cxx  src /y
+xcopy temp\*.cxx  src\ /y
 
 rmdir /S /Q temp
 EXIT 0
@@ -415,16 +415,10 @@ EXIT 0
     <Link>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <LibraryDependencies>EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>vrapi;EfficioCore;EfficioGearVRSensor;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(OCULUS_MOBILE_SDK)\VrApi\Libs\Android\armeabi-v7a\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <None Include="resources\default.doxygen" />
-    <None Include="resources\Efficio.i" />
-    <None Include="resources\RuntimeCSharp.i" />
-    <None Include="resources\RuntimeJava.i" />
-  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="src\RuntimeJava_wrap.cxx" />

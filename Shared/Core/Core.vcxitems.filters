@@ -110,6 +110,8 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Asset.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\SupineDetector.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\HandSupine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Altitude.h">
@@ -272,6 +274,12 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Asset.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\SupineDetector.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\HandSupine.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

@@ -93,7 +93,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -102,7 +102,7 @@
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen
+      <Command>
 
 mkdir temp
 
@@ -123,6 +123,9 @@ rmdir /S /Q temp
 
 EXIT 0</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -132,7 +135,7 @@ EXIT 0</Command>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -141,7 +144,7 @@ EXIT 0</Command>
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen
+      <Command>
 
 mkdir temp
 
@@ -162,6 +165,9 @@ rmdir /S /Q temp
 
 EXIT 0</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -173,7 +179,7 @@ EXIT 0</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -184,7 +190,7 @@ EXIT 0</Command>
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen
+      <Command>
 
 mkdir temp
 
@@ -205,6 +211,9 @@ rmdir /S /Q temp
 
 EXIT 0</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -216,7 +225,7 @@ EXIT 0</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -227,7 +236,7 @@ EXIT 0</Command>
       <AdditionalLibraryDirectories>$(LEAP_SDK)\lib\$(PlatformTarget);</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen
+      <Command>
 
 mkdir temp
 
@@ -248,6 +257,9 @@ rmdir /S /Q temp
 
 EXIT 0</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>doxygen $(SolutionDir)Integration\resources\default.doxygen</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -255,12 +267,6 @@ EXIT 0</Command>
   <ItemGroup>
     <ClCompile Include="src\RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="src\RuntimeJava_wrap.cxx" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\default.doxygen" />
-    <None Include="resources\Efficio.i" />
-    <None Include="resources\RuntimeCSharp.i" />
-    <None Include="resources\RuntimeJava.i" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\EfficioCoreWin.vcxproj">
@@ -272,6 +278,17 @@ EXIT 0</Command>
     <ProjectReference Include="..\Plugins\Sensors\LeapMotion\EfficioLeapMotionWin.vcxproj">
       <Project>{7b55bbf6-e65c-4d40-a7c6-5554693ac360}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\resources\default.doxygen" />
+    <None Include="..\..\resources\Efficio.i" />
+    <None Include="..\..\resources\Enumerations.i" />
+    <None Include="..\..\resources\Events.i" />
+    <None Include="..\..\resources\ExternalDependencies.i" />
+    <None Include="..\..\resources\RuntimeCSharp.i" />
+    <None Include="..\..\resources\RuntimeJava.i" />
+    <None Include="..\..\resources\SharedPointers.i" />
+    <None Include="..\..\resources\Templates.i" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -48,6 +48,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Hand.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\HandData.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\HandRecognitionProcessor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\HandSupine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Head.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\IHandSensor.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.h" />
@@ -66,6 +67,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\SingleHandGesture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\SingleHandGestureDetector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\SkeletalData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\SupineDetector.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\TrackingType.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Vector3.h" />
   </ItemGroup>
@@ -92,6 +94,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Hand.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\HandData.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\HandRecognitionProcessor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\HandSupine.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Head.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\InputRecognitionEngine.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\InternalEvent.cpp" />
@@ -106,6 +109,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\SensorInformation.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\SingleHandGesture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\SkeletalData.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\SupineDetector.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>

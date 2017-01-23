@@ -4,10 +4,4 @@
     <ClCompile Include="src\RuntimeCSharp_wrap.cxx" />
     <ClCompile Include="src\RuntimeJava_wrap.cxx" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\default.doxygen" />
-    <None Include="resources\Efficio.i" />
-    <None Include="resources\RuntimeCSharp.i" />
-    <None Include="resources\RuntimeJava.i" />
-  </ItemGroup>
 </Project>

@@ -26,16 +26,31 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\default.doxygen">
+    <None Include="..\..\resources\default.doxygen">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="resources\Efficio.i">
+    <None Include="..\..\resources\Efficio.i">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="resources\RuntimeCSharp.i">
+    <None Include="..\..\resources\Enumerations.i">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="resources\RuntimeJava.i">
+    <None Include="..\..\resources\Events.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\resources\ExternalDependencies.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\resources\RuntimeCSharp.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\resources\RuntimeJava.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\resources\SharedPointers.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\resources\Templates.i">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
