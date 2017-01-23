@@ -24,7 +24,8 @@ namespace Efficio
 			SensorDisconnected,
 			SensorFaulted,
 			Pinch,
-			ButtonPressed
+			ButtonPressed,
+			HandSupine
 		};
 	}
 }
