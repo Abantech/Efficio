@@ -3,6 +3,8 @@
     public enum MessageType
     {
         Unknown,
+
+        // Pinch
         RightHandThumbIndexPinch,
         RightHandThumbMiddlePinch,
         RightHandThumbRingPinch,
@@ -23,6 +25,12 @@
         LeftHandMiddleRingPinch,
         LeftHandMiddlePinkyPinch,
         LeftHandRingPinkyPinch,
+
+        // Wrist Rotation
+        RightHandSupine,
+        LeftHandSupine,
+
+        // Internal
         EfficioStarted,
         SensorConnected,
         SensorFaulted,

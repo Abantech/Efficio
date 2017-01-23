@@ -9,6 +9,7 @@
 	%include "Gesture.h"
 	%include "DiscreteGesture.h"
 	%include "Pinch.h"
+	%include "HandSupine.h"
 	
 	/* Internal Events */
 	%include "EfficioStarted.h"

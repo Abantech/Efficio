@@ -40,11 +40,14 @@ public class Hand : global::System.IDisposable {
     }
   }
 
-  public Hand(BodySide side, FingerCollection fingers, float confidence) : this(EfficioRuntimePINVOKE.new_Hand__SWIG_0((int)side, FingerCollection.getCPtr(fingers), confidence), true) {
+  public Hand() : this(EfficioRuntimePINVOKE.new_Hand__SWIG_0(), true) {
+  }
+
+  public Hand(BodySide side, FingerCollection fingers, float confidence) : this(EfficioRuntimePINVOKE.new_Hand__SWIG_1((int)side, FingerCollection.getCPtr(fingers), confidence), true) {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public Hand(BodySide side, FingerCollection fingers) : this(EfficioRuntimePINVOKE.new_Hand__SWIG_1((int)side, FingerCollection.getCPtr(fingers)), true) {
+  public Hand(BodySide side, FingerCollection fingers) : this(EfficioRuntimePINVOKE.new_Hand__SWIG_2((int)side, FingerCollection.getCPtr(fingers)), true) {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -64,6 +67,21 @@ public class Hand : global::System.IDisposable {
     } 
     get {
       float ret = EfficioRuntimePINVOKE.Hand_Confidence_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public bool IsSupine() {
+    bool ret = EfficioRuntimePINVOKE.Hand_IsSupine(swigCPtr);
+    return ret;
+  }
+
+  public float SupinationAngle {
+    set {
+      EfficioRuntimePINVOKE.Hand_SupinationAngle_set(swigCPtr, value);
+    } 
+    get {
+      float ret = EfficioRuntimePINVOKE.Hand_SupinationAngle_get(swigCPtr);
       return ret;
     } 
   }

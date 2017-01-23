@@ -8,7 +8,7 @@ namespace Efficio
 		InputRecognitionEngine::InputRecognitionEngine()
 		{
 			// TODO check if hand processing is happening
-			processors.push_back(std::shared_ptr<RecognitionProcessor>(new Body::Hands::HandRecognitionProcessor()));
+			//processors.push_back(std::shared_ptr<RecognitionProcessor>(new Body::Hands::HandRecognitionProcessor()));
 		}
 
 		InputRecognitionEngine::~InputRecognitionEngine()

@@ -18,7 +18,8 @@ public enum EventType {
   SensorDisconnected,
   SensorFaulted,
   Pinch,
-  ButtonPressed
+  ButtonPressed,
+  HandSupine
 }
 
 }

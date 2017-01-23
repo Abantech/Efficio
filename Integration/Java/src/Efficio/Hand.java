@@ -35,12 +35,16 @@ public class Hand {
     }
   }
 
+  public Hand() {
+    this(EfficioRuntimeJNI.new_Hand__SWIG_0(), true);
+  }
+
   public Hand(BodySide side, FingerCollection fingers, float confidence) {
-    this(EfficioRuntimeJNI.new_Hand__SWIG_0(side.swigValue(), FingerCollection.getCPtr(fingers), fingers, confidence), true);
+    this(EfficioRuntimeJNI.new_Hand__SWIG_1(side.swigValue(), FingerCollection.getCPtr(fingers), fingers, confidence), true);
   }
 
   public Hand(BodySide side, FingerCollection fingers) {
-    this(EfficioRuntimeJNI.new_Hand__SWIG_1(side.swigValue(), FingerCollection.getCPtr(fingers), fingers), true);
+    this(EfficioRuntimeJNI.new_Hand__SWIG_2(side.swigValue(), FingerCollection.getCPtr(fingers), fingers), true);
   }
 
   public void setSide(BodySide value) {
@@ -57,6 +61,18 @@ public class Hand {
 
   public float getConfidence() {
     return EfficioRuntimeJNI.Hand_Confidence_get(swigCPtr, this);
+  }
+
+  public boolean IsSupine() {
+    return EfficioRuntimeJNI.Hand_IsSupine(swigCPtr, this);
+  }
+
+  public void setSupinationAngle(float value) {
+    EfficioRuntimeJNI.Hand_SupinationAngle_set(swigCPtr, this, value);
+  }
+
+  public float getSupinationAngle() {
+    return EfficioRuntimeJNI.Hand_SupinationAngle_get(swigCPtr, this);
   }
 
   public void setID(long value) {

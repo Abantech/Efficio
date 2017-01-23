@@ -14,6 +14,7 @@
 	#include "Engine.h"
 	#include "DiscreteGesture.h"
 	#include "Pinch.h"
+	#include "HandSupine.h"
 	#include "Hand.h"
 	#include "DataType.h"
 	#include "SensorInformation.h"

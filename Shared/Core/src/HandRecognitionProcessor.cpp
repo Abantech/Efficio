@@ -2,6 +2,7 @@
 #include "HandData.h"
 
 #include "PinchDetector.h"
+#include "SupineDetector.h"
 
 namespace Efficio
 {
@@ -14,6 +15,7 @@ namespace Efficio
 				HandRecognitionProcessor::HandRecognitionProcessor() : singleHandDetectors()
 				{
 					singleHandDetectors.push_back(std::shared_ptr<Hands::SingleHandGestureDetector>(new Hands::PinchDetector()));
+					singleHandDetectors.push_back(std::shared_ptr<Hands::SingleHandGestureDetector>(new Hands::SupineDetector()));
 				}
 				HandRecognitionProcessor::~HandRecognitionProcessor()
 				{

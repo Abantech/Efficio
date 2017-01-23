@@ -25,6 +25,7 @@ namespace Efficio
 			{
 
 			public:
+				Hand();
 				Hand(BodySide side, std::array<Finger, 5> fingers, float confidence = -1);
 				~Hand();
 
@@ -37,12 +38,18 @@ namespace Efficio
 				/// </summary>
 				float Confidence;
 
+				bool IsSupine();
+				float SupinationAngle;
+
 				size_t ID;
 
 				std::string Source;
 
 				/// The fingers of the hand
 				std::array<Finger, 5> Fingers;
+
+			private:
+				float supineAngle = 145;
 			};
 		}
 	}

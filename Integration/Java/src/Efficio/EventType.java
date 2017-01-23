@@ -17,6 +17,7 @@ public final class EventType {
   public final static EventType SensorFaulted = new EventType("SensorFaulted");
   public final static EventType Pinch = new EventType("Pinch");
   public final static EventType ButtonPressed = new EventType("ButtonPressed");
+  public final static EventType HandSupine = new EventType("HandSupine");
 
   public final int swigValue() {
     return swigValue;
@@ -52,7 +53,7 @@ public final class EventType {
     swigNext = this.swigValue+1;
   }
 
-  private static EventType[] swigValues = { EfficioStarted, SensorConnecting, SensorConnected, SensorDisconnecting, SensorDisconnected, SensorFaulted, Pinch, ButtonPressed };
+  private static EventType[] swigValues = { EfficioStarted, SensorConnecting, SensorConnected, SensorDisconnecting, SensorDisconnected, SensorFaulted, Pinch, ButtonPressed, HandSupine };
   private static int swigNext = 0;
   private final int swigValue;
   private final String swigName;

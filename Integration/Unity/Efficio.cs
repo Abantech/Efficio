@@ -11,7 +11,6 @@ namespace Efficio.Unity
 
         void Start()
         {
-
             engine = new Engine();
             ProcessFrame(engine.Start());
         }
@@ -34,6 +33,15 @@ namespace Efficio.Unity
                             if (pinch != null)
                             {
                                 PinchMessage pinchMessage = new PinchMessage(pinch);
+
+                                MessageBus.MessageBus.Instance.SendMessage(pinchMessage);
+                            }
+                            break;
+                        case Net.EventType.HandSupine:
+                            var supine = SWIGHelper.CastTo<HandSupine>(ev, false);
+                            if (supine != null)
+                            {
+                                HandSupineMessage pinchMessage = new HandSupineMessage(supine);
 
                                 MessageBus.MessageBus.Instance.SendMessage(pinchMessage);
                             }

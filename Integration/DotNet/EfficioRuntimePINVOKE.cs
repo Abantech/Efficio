@@ -290,6 +290,21 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Pinch_Side_get___")]
   public static extern int Pinch_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_HandSupine___")]
+  public static extern global::System.IntPtr new_HandSupine(string jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_HandSupine___")]
+  public static extern void delete_HandSupine(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandSupine_GetEventType___")]
+  public static extern int HandSupine_GetEventType(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandSupine_Side_set___")]
+  public static extern void HandSupine_Side_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandSupine_Side_get___")]
+  public static extern int HandSupine_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_EfficioStarted___")]
   public static extern global::System.IntPtr new_EfficioStarted();
 
@@ -492,10 +507,13 @@ class EfficioRuntimePINVOKE {
   public static extern float Finger_Length_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Hand__SWIG_0___")]
-  public static extern global::System.IntPtr new_Hand__SWIG_0(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, float jarg3);
+  public static extern global::System.IntPtr new_Hand__SWIG_0();
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Hand__SWIG_1___")]
-  public static extern global::System.IntPtr new_Hand__SWIG_1(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern global::System.IntPtr new_Hand__SWIG_1(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, float jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Hand__SWIG_2___")]
+  public static extern global::System.IntPtr new_Hand__SWIG_2(int jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_Hand___")]
   public static extern void delete_Hand(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -511,6 +529,15 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_Confidence_get___")]
   public static extern float Hand_Confidence_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_IsSupine___")]
+  public static extern bool Hand_IsSupine(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_SupinationAngle_set___")]
+  public static extern void Hand_SupinationAngle_set(global::System.Runtime.InteropServices.HandleRef jarg1, float jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_SupinationAngle_get___")]
+  public static extern float Hand_SupinationAngle_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Hand_ID_set___")]
   public static extern void Hand_ID_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
@@ -1105,6 +1132,9 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Pinch_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr Pinch_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandSupine_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr HandSupine_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_EfficioStarted_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr EfficioStarted_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);

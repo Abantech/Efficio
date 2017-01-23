@@ -12,6 +12,7 @@
 %shared_ptr(Efficio::InputRecognition::Gesture);
 %shared_ptr(Efficio::InputRecognition::DiscreteGesture);
 %shared_ptr(Efficio::InputRecognition::Body::Hands::Pinch);
+%shared_ptr(Efficio::InputRecognition::Body::Hands::HandSupine);
 %shared_ptr(Efficio::Data::Data);
 %shared_ptr(Efficio::Sensors::Sensor);
 %shared_ptr(Efficio::Asset);

@@ -1,3 +1,5 @@
+# define M_PI           3.14159265358979323846  /* pi */
+
 #include "LeapMotion.h"
 #include "Finger.h"
 #include "Joint.h"
@@ -5,6 +7,7 @@
 #include <vector>
 #include <array>
 #include <memory>
+
 
 namespace Efficio
 {
@@ -109,6 +112,10 @@ namespace Efficio
 
 				Efficio::Models::Body::Hand efficioHand(side, efficioFingers, hand.confidence());
 				efficioHand.ID = hand.id();
+
+				// Calculate Supine Angle
+				auto inverter = hand.isLeft() ? 1 : -1;
+				efficioHand.SupinationAngle = hand.palmNormal().roll() * (180 / M_PI) * inverter;
 
 				return efficioHand;
 			}
