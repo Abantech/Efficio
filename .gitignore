@@ -74,3 +74,5 @@
 /Integration/Win/Runtime/doc
 /packages
 /Integration/DotNet/bin/x64/Debug
+/Integration/Win/Core
+/Integration/Unity/Efficio.Unity.Tools/obj/Debug
