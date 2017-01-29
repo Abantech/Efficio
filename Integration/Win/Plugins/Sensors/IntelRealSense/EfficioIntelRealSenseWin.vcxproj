@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F52BA6E1-3468-49EA-B54B-872877C67624}</ProjectGuid>
+    <ProjectGuid>{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>EfficioRealSense</RootNamespace>
+    <RootNamespace>EfficioIntelRealSenseWin</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -55,7 +55,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-    <Import Project="..\..\..\Core\Core.vcxitems" Label="Shared" />
+    <Import Project="..\..\..\..\..\Shared\Plugins\Sensors\IntelRealSense\IntelRealSense.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -88,20 +88,16 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIOREALSENSE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;;COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EFFICIOINTELREALSENSEWIN_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core1\lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Shared\Core\src;$(SolutionDir)lib\VMML</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\libpxc_d.lib" "$(TargetDir)"
-xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\libpxcutils_d.lib" "$(TargetDir)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -109,20 +105,16 @@ xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\lib
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIOREALSENSE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;;COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;EFFICIOINTELREALSENSEWIN_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Shared\Core\src;$(SolutionDir)lib\VMML</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\libpxc_d.lib" "$(TargetDir)"
-xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\libpxcutils_d.lib" "$(TargetDir)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -132,22 +124,18 @@ xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\lib
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EFFICIOREALSENSE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;;COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EFFICIOINTELREALSENSEWIN_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Shared\Core\src;$(SolutionDir)lib\VMML</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\libpxc_d.lib" "$(TargetDir)"
-xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\libpxcutils_d.lib" "$(TargetDir)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -157,32 +145,26 @@ xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\lib
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;EFFICIOREALSENSE_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;;COMPILING_DLL=1</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;EFFICIOINTELREALSENSEWIN_EXPORTS;%(PreprocessorDefinitions);COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Core\src;$(SolutionDir)Core\lib\VMML;$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(RSSDK_DIR)\sample\common\include;$(RSSDK_DIR)\include;$(SolutionDir)Shared\Core\src;$(SolutionDir)lib\VMML</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(RSSDK_DIR)\lib\$(PlatformName);$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpxc_d.lib;libpxcutils_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /yr "$(RSSDK_DIR)\lib\$(PlatformName)\libpxc_d.lib" "$(TargetDir)"
-xcopy /yr "$(RSSDK_DIR)\sample\common\lib\$(PlatformName)\$(PlatformToolset)\libpxcutils_d.lib" "$(TargetDir)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\RealSense.h" />
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\RealSense.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md" />
-    <None Include="resources\default.doxygen" />
+    <ProjectReference Include="..\..\..\Core\EfficioCoreWin.vcxproj">
+      <Project>{6c025e68-2e86-462a-a077-930003e137b0}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

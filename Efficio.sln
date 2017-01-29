@@ -61,11 +61,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{6007A2C7-D3E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Efficio.Net.Web", "Integration\Efficio.Net.Web\Efficio.Net.Web.csproj", "{7079C508-F6EC-45EA-9C02-4E71E63BC5B0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntelRealSense", "Shared\Plugins\Sensors\IntelRealSense\IntelRealSense.vcxitems", "{251CEEF0-8454-477C-B05A-9D03F4A13ED7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EfficioIntelRealSenseWin", "Integration\Win\Plugins\Sensors\IntelRealSense\EfficioIntelRealSenseWin.vcxproj", "{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared\Runtime\Runtime.vcxitems*{01bd2102-2e5b-48fb-b5f8-87a93bf29f5c}*SharedItemsImports = 9
 		Shared\Runtime\Runtime.vcxitems*{13df07f0-38c7-4f22-bf81-7711e9157bfb}*SharedItemsImports = 4
 		Shared\Core\Core.vcxitems*{1c588661-e774-420f-b3c7-c1f6057f3678}*SharedItemsImports = 4
+		Shared\Plugins\Sensors\IntelRealSense\IntelRealSense.vcxitems*{251ceef0-8454-477c-b05a-9d03f4a13ed7}*SharedItemsImports = 9
 		Shared\Core\Core.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
 		Shared\Plugins\Sensors\GearVR\GearVR.vcxitems*{4791823f-cd33-44fe-b1af-656bfe8262c5}*SharedItemsImports = 4
 		Shared\Plugins\Sensors\GearVR\GearVR.vcxitems*{4a0e3b95-fd74-47a9-b963-eea9587ced51}*SharedItemsImports = 9
@@ -74,6 +79,7 @@ Global
 		Shared\Plugins\Sensors\LeapMotion\LeapMotion.vcxitems*{7b55bbf6-e65c-4d40-a7c6-5554693ac360}*SharedItemsImports = 4
 		Shared\Runtime\Runtime.vcxitems*{c2b95d5e-ddaf-4dfe-9391-f24c9c46bd41}*SharedItemsImports = 4
 		Shared\Plugins\Sensors\GearVR\GearVR.vcxitems*{c47a98ee-4b8c-4e71-8388-7b780f806a9a}*SharedItemsImports = 4
+		Shared\Plugins\Sensors\IntelRealSense\IntelRealSense.vcxitems*{e2e312bb-abfd-43aa-9171-b3a3306ad1e2}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -270,6 +276,20 @@ Global
 		{7079C508-F6EC-45EA-9C02-4E71E63BC5B0}.Release|x64.Build.0 = Release|Any CPU
 		{7079C508-F6EC-45EA-9C02-4E71E63BC5B0}.Release|x86.ActiveCfg = Release|Any CPU
 		{7079C508-F6EC-45EA-9C02-4E71E63BC5B0}.Release|x86.Build.0 = Release|Any CPU
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Debug|ARM.ActiveCfg = Debug|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Debug|x64.ActiveCfg = Debug|x64
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Debug|x64.Build.0 = Debug|x64
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Debug|x86.ActiveCfg = Debug|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Debug|x86.Build.0 = Debug|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Release|Any CPU.ActiveCfg = Release|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Release|ARM.ActiveCfg = Release|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Release|ARM64.ActiveCfg = Release|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Release|x64.ActiveCfg = Release|x64
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Release|x64.Build.0 = Release|x64
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Release|x86.ActiveCfg = Release|Win32
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -302,5 +322,7 @@ Global
 		{7B55BBF6-E65C-4D40-A7C6-5554693AC360} = {6A603CEB-06E2-4C22-8A61-738248F2EE1B}
 		{6007A2C7-D3E8-4675-8EC3-27F58E6B5051} = {E79AD21A-D02F-46BE-8BA3-CB201E7161C5}
 		{7079C508-F6EC-45EA-9C02-4E71E63BC5B0} = {6007A2C7-D3E8-4675-8EC3-27F58E6B5051}
+		{251CEEF0-8454-477C-B05A-9D03F4A13ED7} = {F2B21519-969F-4617-945E-E844D388EA39}
+		{E2E312BB-ABFD-43AA-9171-B3A3306AD1E2} = {6A603CEB-06E2-4C22-8A61-738248F2EE1B}
 	EndGlobalSection
 EndGlobal

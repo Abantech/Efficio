@@ -74,3 +74,4 @@
 /Integration/Win/Runtime/doc
 /packages
 /Integration/DotNet/bin/x64/Debug
+/Integration/Win/Plugins/Sensors/IntelRealSense/x64/Debug
