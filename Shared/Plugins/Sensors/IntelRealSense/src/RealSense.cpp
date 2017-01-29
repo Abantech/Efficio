@@ -368,6 +368,10 @@ namespace Efficio
 			auto efficioHand = Models::Body::Hand(side, fingersArray);
 			efficioHand.Source = GetSource();
 			efficioHand.ID = hand->QueryUniqueId();
+
+			// TODO measure this
+			efficioHand.SupinationAngle = 0;
+
 			return efficioHand;
 		}
 
