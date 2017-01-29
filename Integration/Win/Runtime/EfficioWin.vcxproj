@@ -275,6 +275,9 @@ EXIT 0</Command>
     <ProjectReference Include="..\Plugins\Sensors\GearVR\EfficioGearVRWin.vcxproj">
       <Project>{c47a98ee-4b8c-4e71-8388-7b780f806a9a}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Plugins\Sensors\IntelRealSense\EfficioIntelRealSenseWin.vcxproj">
+      <Project>{e2e312bb-abfd-43aa-9171-b3a3306ad1e2}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Plugins\Sensors\LeapMotion\EfficioLeapMotionWin.vcxproj">
       <Project>{7b55bbf6-e65c-4d40-a7c6-5554693ac360}</Project>
     </ProjectReference>
