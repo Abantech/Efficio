@@ -28,7 +28,7 @@ namespace Efficio
 	{
 		for (size_t i = 0; i < data.size(); i++)
 		{
-			dataCollection.push_back(std::shared_ptr<Data::Data>(data[i]));
+			dataCollection.push_back(std::move(data[i]));
 		}
 	}
 
@@ -45,7 +45,7 @@ namespace Efficio
 
 	void Frame::AddEvent(std::shared_ptr<Events::Event> eventPtr)
 	{
-		events.push_back(std::shared_ptr<Events::Event>(eventPtr));
+		events.push_back(std::move(eventPtr));
 	}
 
 	void Frame::AddEvents(std::vector<std::shared_ptr<Events::Event>> eventsPtr)

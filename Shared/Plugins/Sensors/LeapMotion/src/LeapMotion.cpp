@@ -87,8 +87,7 @@ namespace Efficio
 			{
 				std::vector<std::shared_ptr<Data::Data>> data;
 				
-				auto handData = GetHandData();
-				std::shared_ptr<Efficio::Data::Data> dataSharedPtr(&handData);
+				auto dataSharedPtr = std::make_shared<Efficio::Data::Body::HandData>(GetHandData());
 
 				data.push_back(dataSharedPtr);
 
