@@ -26,10 +26,11 @@ namespace Efficio
 				class DLLEXPORT HandSupine : public DiscreteGesture
 				{
 				public:
-					HandSupine(std::string source, Models::Body::BodySide side);
+					HandSupine(std::string source, Models::Body::BodySide side, int handID);
 					~HandSupine();
 					Events::EventType GetEventType();
 					Models::Body::BodySide Side;
+					int HandID;
 				};
 			}
 		}

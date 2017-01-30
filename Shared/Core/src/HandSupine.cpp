@@ -7,7 +7,7 @@ namespace Efficio
 		{
 			namespace Hands
 			{
-				HandSupine::HandSupine(std::string source, Efficio::Models::Body::BodySide side) : Side(side), DiscreteGesture(source)
+				HandSupine::HandSupine(std::string source, Efficio::Models::Body::BodySide side, int handID) : Side(side), DiscreteGesture(source), HandID(handID)
 				{
 				}
 				HandSupine::~HandSupine()

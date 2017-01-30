@@ -21,7 +21,7 @@ namespace Efficio
 
 					if (hand.IsSupine())
 					{
-						gestures.push_back(std::shared_ptr<Gesture>(new HandSupine("EfficioSupineDetector", hand.Side)));
+						gestures.push_back(std::shared_ptr<Gesture>(new HandSupine("EfficioSupineDetector", hand.Side, hand.ID)));
 					}
 
 					return gestures;

@@ -54,6 +54,8 @@ namespace Efficio
 		{
 			Efficio::Frame frame;
 
+			PreGetFrame();
+
 			if (IsConnected())
 			{
 				if (status != Sensors::Status::Connected)
@@ -111,6 +113,8 @@ namespace Efficio
 
 				frame.AddFrame(tempFrame);
 			}
+
+			PostGetFrame();
 
 			return frame;
 		}

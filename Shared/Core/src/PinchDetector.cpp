@@ -27,7 +27,7 @@ namespace Efficio
 						{
 							if (hand.Fingers[i].Tip.DistanceTo(hand.Fingers[j].Tip) < 25)
 							{
-								pinches.push_back(std::shared_ptr<Gesture>(new Pinch("EfficioPinchDetector", hand.Side, hand.Fingers[i], hand.Fingers[j])));
+								pinches.push_back(std::shared_ptr<Gesture>(new Pinch("EfficioPinchDetector", hand.Side, hand.Fingers[i], hand.Fingers[j], hand.ID)));
 							}
 						}
 					}
