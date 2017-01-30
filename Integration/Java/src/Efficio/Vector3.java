@@ -59,6 +59,18 @@ public class Vector3 {
     return EfficioRuntimeJNI.Vector3_Z(swigCPtr, this);
   }
 
+  public float Yaw() {
+    return EfficioRuntimeJNI.Vector3_Yaw(swigCPtr, this);
+  }
+
+  public float Pitch() {
+    return EfficioRuntimeJNI.Vector3_Pitch(swigCPtr, this);
+  }
+
+  public float Roll() {
+    return EfficioRuntimeJNI.Vector3_Roll(swigCPtr, this);
+  }
+
   public static Vector3 Midpoint(Vector3 v1, Vector3 v2) {
     return new Vector3(EfficioRuntimeJNI.Vector3_Midpoint(Vector3.getCPtr(v1), v1, Vector3.getCPtr(v2), v2), true);
   }

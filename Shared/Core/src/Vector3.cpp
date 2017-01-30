@@ -30,6 +30,23 @@ namespace Efficio {
 		return vector.z();
 	}
 
+	float Vector3::Yaw() {
+		// TODO
+		return 0;
+	}
+
+	float Vector3::Pitch() {
+		// TODO
+		return 0;
+	}
+
+
+	float Vector3::Roll() {
+		// TODO
+		return 0;
+	}
+
+
 	Vector3 Vector3::Midpoint(Vector3 v1, Vector3 v2)
 	{
 		return Vector3((v1.X() + v2.X()) / 2, (v1.Y() + v2.Y()) / 2, (v1.Z() + v2.Z()) / 2);

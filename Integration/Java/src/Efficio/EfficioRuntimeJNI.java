@@ -82,6 +82,9 @@ public class EfficioRuntimeJNI {
   public final static native float Vector3_X(long jarg1, Vector3 jarg1_);
   public final static native float Vector3_Y(long jarg1, Vector3 jarg1_);
   public final static native float Vector3_Z(long jarg1, Vector3 jarg1_);
+  public final static native float Vector3_Yaw(long jarg1, Vector3 jarg1_);
+  public final static native float Vector3_Pitch(long jarg1, Vector3 jarg1_);
+  public final static native float Vector3_Roll(long jarg1, Vector3 jarg1_);
   public final static native long Vector3_Midpoint(long jarg1, Vector3 jarg1_, long jarg2, Vector3 jarg2_);
   public final static native void delete_Data(long jarg1);
   public final static native int Data_GetDataType(long jarg1, Data jarg1_);

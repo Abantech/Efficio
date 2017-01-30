@@ -24,6 +24,9 @@ namespace Efficio
 		float X();
 		float Y();
 		float Z();
+		float Yaw();
+		float Pitch();
+		float Roll();
 		static Vector3 Midpoint(Vector3 v1, Vector3 v2);
 	private:
 		vmml::Vector3f vector;

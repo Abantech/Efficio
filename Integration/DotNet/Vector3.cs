@@ -67,6 +67,21 @@ public class Vector3 : global::System.IDisposable {
     return ret;
   }
 
+  public float Yaw() {
+    float ret = EfficioRuntimePINVOKE.Vector3_Yaw(swigCPtr);
+    return ret;
+  }
+
+  public float Pitch() {
+    float ret = EfficioRuntimePINVOKE.Vector3_Pitch(swigCPtr);
+    return ret;
+  }
+
+  public float Roll() {
+    float ret = EfficioRuntimePINVOKE.Vector3_Roll(swigCPtr);
+    return ret;
+  }
+
   public static Vector3 Midpoint(Vector3 v1, Vector3 v2) {
     Vector3 ret = new Vector3(EfficioRuntimePINVOKE.Vector3_Midpoint(Vector3.getCPtr(v1), Vector3.getCPtr(v2)), true);
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
