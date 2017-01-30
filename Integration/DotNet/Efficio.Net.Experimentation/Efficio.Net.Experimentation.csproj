@@ -75,6 +75,28 @@
       <Name>Efficio.Net</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\x64\Debug\EfficioCore.dll">
+      <Link>EfficioCore.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\x64\Debug\EfficioGearVRWin.dll">
+      <Link>EfficioGearVRWin.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\x64\Debug\EfficioIntelRealSenseWin.dll">
+      <Link>EfficioIntelRealSenseWin.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\x64\Debug\EfficioLeapMotionWin.dll">
+      <Link>EfficioLeapMotionWin.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\x64\Debug\EfficioRuntime.dll">
+      <Link>EfficioRuntime.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
