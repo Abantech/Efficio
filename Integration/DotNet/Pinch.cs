@@ -41,7 +41,7 @@ public class Pinch : DiscreteGesture {
     }
   }
 
-  public Pinch(string source, BodySide side, Finger finger1, Finger finger2) : this(EfficioRuntimePINVOKE.new_Pinch(source, (int)side, Finger.getCPtr(finger1), Finger.getCPtr(finger2)), true) {
+  public Pinch(string source, BodySide side, Finger finger1, Finger finger2, int handID) : this(EfficioRuntimePINVOKE.new_Pinch(source, (int)side, Finger.getCPtr(finger1), Finger.getCPtr(finger2), handID), true) {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -97,6 +97,18 @@ public class Pinch : DiscreteGesture {
     } 
     get {
       BodySide ret = (BodySide)EfficioRuntimePINVOKE.Pinch_Side_get(swigCPtr);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public int HandID {
+    set {
+      EfficioRuntimePINVOKE.Pinch_HandID_set(swigCPtr, value);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      int ret = EfficioRuntimePINVOKE.Pinch_HandID_get(swigCPtr);
       if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

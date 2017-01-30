@@ -32,7 +32,7 @@ public class EfficioRuntimeJNI {
   public final static native void delete_DiscreteGesture(long jarg1);
   public final static native int DiscreteGesture_GetGestureType(long jarg1, DiscreteGesture jarg1_);
   public final static native int DiscreteGesture_GetGestureState(long jarg1, DiscreteGesture jarg1_);
-  public final static native long new_Pinch(String jarg1, int jarg2, long jarg3, Finger jarg3_, long jarg4, Finger jarg4_);
+  public final static native long new_Pinch(String jarg1, int jarg2, long jarg3, Finger jarg3_, long jarg4, Finger jarg4_, int jarg5);
   public final static native void delete_Pinch(long jarg1);
   public final static native void Pinch_Position_set(long jarg1, Pinch jarg1_, long jarg2, Vector3 jarg2_);
   public final static native long Pinch_Position_get(long jarg1, Pinch jarg1_);
@@ -43,11 +43,15 @@ public class EfficioRuntimeJNI {
   public final static native int Pinch_GetEventType(long jarg1, Pinch jarg1_);
   public final static native void Pinch_Side_set(long jarg1, Pinch jarg1_, int jarg2);
   public final static native int Pinch_Side_get(long jarg1, Pinch jarg1_);
-  public final static native long new_HandSupine(String jarg1, int jarg2);
+  public final static native void Pinch_HandID_set(long jarg1, Pinch jarg1_, int jarg2);
+  public final static native int Pinch_HandID_get(long jarg1, Pinch jarg1_);
+  public final static native long new_HandSupine(String jarg1, int jarg2, int jarg3);
   public final static native void delete_HandSupine(long jarg1);
   public final static native int HandSupine_GetEventType(long jarg1, HandSupine jarg1_);
   public final static native void HandSupine_Side_set(long jarg1, HandSupine jarg1_, int jarg2);
   public final static native int HandSupine_Side_get(long jarg1, HandSupine jarg1_);
+  public final static native void HandSupine_HandID_set(long jarg1, HandSupine jarg1_, int jarg2);
+  public final static native int HandSupine_HandID_get(long jarg1, HandSupine jarg1_);
   public final static native long new_EfficioStarted();
   public final static native void delete_EfficioStarted(long jarg1);
   public final static native int EfficioStarted_GetEventType(long jarg1, EfficioStarted jarg1_);
@@ -81,6 +85,15 @@ public class EfficioRuntimeJNI {
   public final static native long Vector3_Midpoint(long jarg1, Vector3 jarg1_, long jarg2, Vector3 jarg2_);
   public final static native void delete_Data(long jarg1);
   public final static native int Data_GetDataType(long jarg1, Data jarg1_);
+  public final static native long new_HandData__SWIG_0();
+  public final static native long new_HandData__SWIG_1(long jarg1, HandCollection jarg1_);
+  public final static native void delete_HandData(long jarg1);
+  public final static native void HandData_Hands_set(long jarg1, HandData jarg1_, long jarg2, HandCollection jarg2_);
+  public final static native long HandData_Hands_get(long jarg1, HandData jarg1_);
+  public final static native int HandData_GetDataType(long jarg1, HandData jarg1_);
+  public final static native long new_FaceData();
+  public final static native void delete_FaceData(long jarg1);
+  public final static native int FaceData_GetDataType(long jarg1, FaceData jarg1_);
   public final static native long new_Joint__SWIG_0();
   public final static native long new_Joint__SWIG_1(long jarg1, Vector3 jarg1_, int jarg2);
   public final static native long new_Joint__SWIG_2(long jarg1, Vector3 jarg1_, int jarg2, float jarg3);
@@ -249,6 +262,17 @@ public class EfficioRuntimeJNI {
   public final static native long AssetCollection_get(long jarg1, AssetCollection jarg1_, int jarg2);
   public final static native void AssetCollection_set(long jarg1, AssetCollection jarg1_, int jarg2, long jarg3, Asset jarg3_);
   public final static native void delete_AssetCollection(long jarg1);
+  public final static native long new_HandCollection__SWIG_0();
+  public final static native long new_HandCollection__SWIG_1(long jarg1);
+  public final static native long HandCollection_size(long jarg1, HandCollection jarg1_);
+  public final static native long HandCollection_capacity(long jarg1, HandCollection jarg1_);
+  public final static native void HandCollection_reserve(long jarg1, HandCollection jarg1_, long jarg2);
+  public final static native boolean HandCollection_isEmpty(long jarg1, HandCollection jarg1_);
+  public final static native void HandCollection_clear(long jarg1, HandCollection jarg1_);
+  public final static native void HandCollection_add(long jarg1, HandCollection jarg1_, long jarg2, Hand jarg2_);
+  public final static native long HandCollection_get(long jarg1, HandCollection jarg1_, int jarg2);
+  public final static native void HandCollection_set(long jarg1, HandCollection jarg1_, int jarg2, long jarg3, Hand jarg3_);
+  public final static native void delete_HandCollection(long jarg1);
   public final static native long InternalEvent_SWIGSmartPtrUpcast(long jarg1);
   public final static native long SensorEvent_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Gesture_SWIGSmartPtrUpcast(long jarg1);
@@ -262,4 +286,6 @@ public class EfficioRuntimeJNI {
   public final static native long Disconnecting_SWIGSmartPtrUpcast(long jarg1);
   public final static native long Disconnected_SWIGSmartPtrUpcast(long jarg1);
   public final static native long ButtonPressed_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long HandData_SWIGSmartPtrUpcast(long jarg1);
+  public final static native long FaceData_SWIGSmartPtrUpcast(long jarg1);
 }

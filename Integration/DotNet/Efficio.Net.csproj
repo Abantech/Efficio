@@ -79,6 +79,7 @@
     <Compile Include="Event.cs" />
     <Compile Include="EventCollection.cs" />
     <Compile Include="EventType.cs" />
+    <Compile Include="FaceData.cs" />
     <Compile Include="Faulted.cs" />
     <Compile Include="Finger.cs" />
     <Compile Include="FingerCollection.cs" />
@@ -89,6 +90,8 @@
     <Compile Include="GestureState.cs" />
     <Compile Include="GestureType.cs" />
     <Compile Include="Hand.cs" />
+    <Compile Include="HandCollection.cs" />
+    <Compile Include="HandData.cs" />
     <Compile Include="HandSupine.cs" />
     <Compile Include="InternalEvent.cs" />
     <Compile Include="Joint.cs" />

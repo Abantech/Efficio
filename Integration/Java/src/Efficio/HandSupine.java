@@ -37,8 +37,8 @@ public class HandSupine extends DiscreteGesture {
     super.delete();
   }
 
-  public HandSupine(String source, BodySide side) {
-    this(EfficioRuntimeJNI.new_HandSupine(source, side.swigValue()), true);
+  public HandSupine(String source, BodySide side, int handID) {
+    this(EfficioRuntimeJNI.new_HandSupine(source, side.swigValue(), handID), true);
   }
 
   public EventType GetEventType() {
@@ -51,6 +51,14 @@ public class HandSupine extends DiscreteGesture {
 
   public BodySide getSide() {
     return BodySide.swigToEnum(EfficioRuntimeJNI.HandSupine_Side_get(swigCPtr, this));
+  }
+
+  public void setHandID(int value) {
+    EfficioRuntimeJNI.HandSupine_HandID_set(swigCPtr, this, value);
+  }
+
+  public int getHandID() {
+    return EfficioRuntimeJNI.HandSupine_HandID_get(swigCPtr, this);
   }
 
 }

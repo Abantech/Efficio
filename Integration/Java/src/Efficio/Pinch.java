@@ -37,8 +37,8 @@ public class Pinch extends DiscreteGesture {
     super.delete();
   }
 
-  public Pinch(String source, BodySide side, Finger finger1, Finger finger2) {
-    this(EfficioRuntimeJNI.new_Pinch(source, side.swigValue(), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2), true);
+  public Pinch(String source, BodySide side, Finger finger1, Finger finger2, int handID) {
+    this(EfficioRuntimeJNI.new_Pinch(source, side.swigValue(), Finger.getCPtr(finger1), finger1, Finger.getCPtr(finger2), finger2, handID), true);
   }
 
   public void setPosition(Vector3 value) {
@@ -78,6 +78,14 @@ public class Pinch extends DiscreteGesture {
 
   public BodySide getSide() {
     return BodySide.swigToEnum(EfficioRuntimeJNI.Pinch_Side_get(swigCPtr, this));
+  }
+
+  public void setHandID(int value) {
+    EfficioRuntimeJNI.Pinch_HandID_set(swigCPtr, this, value);
+  }
+
+  public int getHandID() {
+    return EfficioRuntimeJNI.Pinch_HandID_get(swigCPtr, this);
   }
 
 }

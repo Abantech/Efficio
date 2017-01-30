@@ -41,7 +41,7 @@ public class HandSupine : DiscreteGesture {
     }
   }
 
-  public HandSupine(string source, BodySide side) : this(EfficioRuntimePINVOKE.new_HandSupine(source, (int)side), true) {
+  public HandSupine(string source, BodySide side, int handID) : this(EfficioRuntimePINVOKE.new_HandSupine(source, (int)side, handID), true) {
     if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -58,6 +58,18 @@ public class HandSupine : DiscreteGesture {
     } 
     get {
       BodySide ret = (BodySide)EfficioRuntimePINVOKE.HandSupine_Side_get(swigCPtr);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+      return ret;
+    } 
+  }
+
+  public int HandID {
+    set {
+      EfficioRuntimePINVOKE.HandSupine_HandID_set(swigCPtr, value);
+      if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
+    } 
+    get {
+      int ret = EfficioRuntimePINVOKE.HandSupine_HandID_get(swigCPtr);
       if (EfficioRuntimePINVOKE.SWIGPendingException.Pending) throw EfficioRuntimePINVOKE.SWIGPendingException.Retrieve();
       return ret;
     } 

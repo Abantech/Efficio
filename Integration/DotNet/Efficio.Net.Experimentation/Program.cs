@@ -1,4 +1,6 @@
-﻿namespace Efficio.Net.Experimentation
+﻿using System.Linq;
+
+namespace Efficio.Net.Experimentation
 {
     class Program
     {
@@ -40,6 +42,19 @@
                 if (frame.GetEvents().Count > 0)
                 {
                     var ev = frame.GetEvents()[0];
+
+                    if (ev.GetEventType() == EventType.Pinch)
+                    {
+                        var pinch = SWIGHelper.CastTo<Pinch>(ev);
+                        var finger = pinch.Finger1;
+
+                        var handData = frame.GetDataOfType<HandData>();
+
+                        if (handData.Count() > 0)
+                        {
+                            var hand = handData.ElementAt(0).Hands.First(x => x.ID == pinch.HandID);
+                        }
+                    }
                 }
             }
         }

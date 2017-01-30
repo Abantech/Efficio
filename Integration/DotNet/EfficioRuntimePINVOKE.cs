@@ -258,7 +258,7 @@ class EfficioRuntimePINVOKE {
   public static extern int DiscreteGesture_GetGestureState(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Pinch___")]
-  public static extern global::System.IntPtr new_Pinch(string jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+  public static extern global::System.IntPtr new_Pinch(string jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, int jarg5);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_Pinch___")]
   public static extern void delete_Pinch(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -290,8 +290,14 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Pinch_Side_get___")]
   public static extern int Pinch_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Pinch_HandID_set___")]
+  public static extern void Pinch_HandID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Pinch_HandID_get___")]
+  public static extern int Pinch_HandID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_HandSupine___")]
-  public static extern global::System.IntPtr new_HandSupine(string jarg1, int jarg2);
+  public static extern global::System.IntPtr new_HandSupine(string jarg1, int jarg2, int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_HandSupine___")]
   public static extern void delete_HandSupine(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -304,6 +310,12 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandSupine_Side_get___")]
   public static extern int HandSupine_Side_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandSupine_HandID_set___")]
+  public static extern void HandSupine_HandID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandSupine_HandID_get___")]
+  public static extern int HandSupine_HandID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_EfficioStarted___")]
   public static extern global::System.IntPtr new_EfficioStarted();
@@ -403,6 +415,33 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_Data_GetDataType___")]
   public static extern int Data_GetDataType(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_HandData__SWIG_0___")]
+  public static extern global::System.IntPtr new_HandData__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_HandData__SWIG_1___")]
+  public static extern global::System.IntPtr new_HandData__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_HandData___")]
+  public static extern void delete_HandData(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandData_Hands_set___")]
+  public static extern void HandData_Hands_set(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandData_Hands_get___")]
+  public static extern global::System.IntPtr HandData_Hands_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandData_GetDataType___")]
+  public static extern int HandData_GetDataType(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_FaceData___")]
+  public static extern global::System.IntPtr new_FaceData();
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_FaceData___")]
+  public static extern void delete_FaceData(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_FaceData_GetDataType___")]
+  public static extern int FaceData_GetDataType(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_Joint__SWIG_0___")]
   public static extern global::System.IntPtr new_Joint__SWIG_0();
@@ -1118,6 +1157,72 @@ class EfficioRuntimePINVOKE {
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_AssetCollection___")]
   public static extern void delete_AssetCollection(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_Clear___")]
+  public static extern void HandCollection_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_Add___")]
+  public static extern void HandCollection_Add(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_size___")]
+  public static extern uint HandCollection_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_capacity___")]
+  public static extern uint HandCollection_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_reserve___")]
+  public static extern void HandCollection_reserve(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_HandCollection__SWIG_0___")]
+  public static extern global::System.IntPtr new_HandCollection__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_HandCollection__SWIG_1___")]
+  public static extern global::System.IntPtr new_HandCollection__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_new_HandCollection__SWIG_2___")]
+  public static extern global::System.IntPtr new_HandCollection__SWIG_2(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_getitemcopy___")]
+  public static extern global::System.IntPtr HandCollection_getitemcopy(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_getitem___")]
+  public static extern global::System.IntPtr HandCollection_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_setitem___")]
+  public static extern void HandCollection_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_AddRange___")]
+  public static extern void HandCollection_AddRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_GetRange___")]
+  public static extern global::System.IntPtr HandCollection_GetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_Insert___")]
+  public static extern void HandCollection_Insert(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_InsertRange___")]
+  public static extern void HandCollection_InsertRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_RemoveAt___")]
+  public static extern void HandCollection_RemoveAt(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_RemoveRange___")]
+  public static extern void HandCollection_RemoveRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_Repeat___")]
+  public static extern global::System.IntPtr HandCollection_Repeat(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_Reverse__SWIG_0___")]
+  public static extern void HandCollection_Reverse__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_Reverse__SWIG_1___")]
+  public static extern void HandCollection_Reverse__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandCollection_SetRange___")]
+  public static extern void HandCollection_SetRange(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_delete_HandCollection___")]
+  public static extern void delete_HandCollection(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_InternalEvent_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr InternalEvent_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 
@@ -1156,6 +1261,12 @@ class EfficioRuntimePINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_ButtonPressed_SWIGSmartPtrUpcast___")]
   public static extern global::System.IntPtr ButtonPressed_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_HandData_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr HandData_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("EfficioRuntime", EntryPoint="CSharp_EfficiofNet_FaceData_SWIGSmartPtrUpcast___")]
+  public static extern global::System.IntPtr FaceData_SWIGSmartPtrUpcast(global::System.IntPtr jarg1);
 }
 
 }
