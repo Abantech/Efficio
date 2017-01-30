@@ -66,21 +66,19 @@ namespace Efficio
 
 		bool RealSense::HasFrame()
 		{
-			return GetStatus() == Status::Connected && senseManager->AcquireFrame() == PXC_STATUS_NO_ERROR;
+			return IsConnected() && senseManager->AcquireFrame() == PXC_STATUS_NO_ERROR;
 		}
 
 		std::vector<std::shared_ptr<Data::Data>> RealSense::GetData()
 		{
 			std::vector<std::shared_ptr<Data::Data>> dataCollection;
 
-			Data::Data* data = new Data::EmptyData();
+			std::shared_ptr<Data::Data> data (new Data::EmptyData());
 
 			switch (trackingType)
 			{
-				data = &GetHandData();
-				break;
 			case Efficio::Sensors::TrackingType::Face:
-				data = &GetFaceData();
+				data = std::make_shared<Data::Body::Face::FaceData>(GetFaceData());
 				break;
 			case Efficio::Sensors::TrackingType::Eye:
 			case Efficio::Sensors::TrackingType::Body:
@@ -93,11 +91,13 @@ namespace Efficio
 			case Efficio::Sensors::TrackingType::Analogue:
 			case Efficio::Sensors::TrackingType::Unknown:
 			case Efficio::Sensors::TrackingType::Hand:
+				data = std::make_shared<Data::Body::HandData>(GetHandData());
+				break;
 			default:
 				break;
 			}
 
-			dataCollection.push_back(std::shared_ptr<Data::Data>(data));
+			dataCollection.push_back(std::move(data));
 
 			return dataCollection;
 
@@ -108,37 +108,15 @@ namespace Efficio
 		}
 		bool RealSense::IsConnected()
 		{
-			return false;
+			return senseManager->IsConnected();
 		}
 		void RealSense::PreGetFrame()
 		{
 		}
 		void RealSense::PostGetFrame()
 		{
+			senseManager->ReleaseFrame();
 		}
-
-			//Efficio::Frame frame;
-			//std::vector<std::shared_ptr<Data::Data>> data;
-
-			//std::vector<Models::Body::Hand> convertedHands;
-
-			//if (trackingType == TrackingType::Hand)
-			//{
-			//	data.push_back(GetHandData());
-			//}
-
-			//if (trackingType == TrackingType::Face)
-			//{
-			//	data.push_back(GetFaceData());
-			//}
-
-			//frame.AddData(data);
-
-			//LastEfficioFrame = frame;
-
-			//senseManager->ReleaseFrame();
-
-			//return frame;
 
 		void RealSense::ReleaseAll()
 		{
