@@ -110,8 +110,12 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Asset.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\SupineDetector.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\HandSupine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\HandSupine.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\SupineDetector.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Altitude.h">
