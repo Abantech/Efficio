@@ -52,6 +52,41 @@ public class Frame : global::System.IDisposable {
     {
         get { return this.GetEvents(); }
 	}
+	
+	public System.Collections.Generic.IEnumerable<T> GetDataOfType<T>()
+        {
+            System.Collections.Generic.List<T> collection = new System.Collections.Generic.List<T>();
+            DataType dataType = GetDataTypeForType<T>();
+
+            foreach (var datum in this.Data)
+            {
+                if (datum.GetDataType() == dataType)
+                {
+                    collection.Add(SWIGHelper.CastTo<T>(datum));
+                }
+            }
+
+            return collection;
+        }
+
+        public DataType GetDataTypeForType<T>()
+        {
+            DataType dataType = DataType.None;
+
+            System.Type typeParameterType = typeof(T);
+
+            if (typeParameterType == typeof(HandData))
+            {
+                dataType = DataType.Hand;
+            }
+
+            if (typeParameterType == typeof(FaceData))
+            {
+                dataType = DataType.Face;
+            }
+
+            return dataType;
+        }
 
   public Frame(Frame previousFrame, int ID) : this(EfficioRuntimePINVOKE.new_Frame__SWIG_0(Frame.getCPtr(previousFrame), ID), true) {
   }

@@ -16,6 +16,41 @@
     {
         get { return this.GetEvents(); }
 	}
+	
+	public System.Collections.Generic.IEnumerable<T> GetDataOfType<T>()
+        {
+            System.Collections.Generic.List<T> collection = new System.Collections.Generic.List<T>();
+            DataType dataType = GetDataTypeForType<T>();
+
+            foreach (var datum in this.Data)
+            {
+                if (datum.GetDataType() == dataType)
+                {
+                    collection.Add(SWIGHelper.CastTo<T>(datum));
+                }
+            }
+
+            return collection;
+        }
+
+        public DataType GetDataTypeForType<T>()
+        {
+            DataType dataType = DataType.None;
+
+            System.Type typeParameterType = typeof(T);
+
+            if (typeParameterType == typeof(HandData))
+            {
+                dataType = DataType.Hand;
+            }
+
+            if (typeParameterType == typeof(FaceData))
+            {
+                dataType = DataType.Face;
+            }
+
+            return dataType;
+        }
 %}
 %csattributes Efficio::Frame::ID "[System.Runtime.Serialization.DataMember]"
 %csattributes Efficio::Frame::DeltaTime "[System.Runtime.Serialization.DataMember]"
