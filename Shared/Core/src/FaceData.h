@@ -29,7 +29,8 @@ namespace Efficio
 					FaceData();
 					~FaceData();
 
-					std::map<Expressions, int> Expressions;
+					// TODO add back in
+					//std::map<Expressions, int> Expressions;
 
 					/// <summary>
 					/// Gets the type of the data.

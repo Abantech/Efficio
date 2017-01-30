@@ -562,7 +562,7 @@ namespace Efficio
 									break;
 								}
 
-								data.Expressions.emplace(expression, result.intensity);
+								//data.Expressions.emplace(expression, result.intensity);
 							}
 						}
 					}
