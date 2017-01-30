@@ -14,5 +14,7 @@
 %shared_ptr(Efficio::InputRecognition::Body::Hands::Pinch);
 %shared_ptr(Efficio::InputRecognition::Body::Hands::HandSupine);
 %shared_ptr(Efficio::Data::Data);
+%shared_ptr(Efficio::Data::Body::HandData);
+%shared_ptr(Efficio::Data::Body::Face::FaceData);
 %shared_ptr(Efficio::Sensors::Sensor);
 %shared_ptr(Efficio::Asset);

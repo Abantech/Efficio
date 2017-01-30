@@ -17,6 +17,8 @@
 	#include "HandSupine.h"
 	#include "Hand.h"
 	#include "DataType.h"
+	#include "HandData.h"
+	#include "FaceData.h"
 	#include "SensorInformation.h"
 	#include "EfficioStarted.h"
 	#include "ButtonPressed.h"
@@ -39,6 +41,8 @@
 %include <Events.i>
 %include "Vector3.h"
 %include "Data.h"
+%include "HandData.h"
+%include "FaceData.h"
 %include "Joint.h"
 %include "Finger.h"
 %include "Hand.h"

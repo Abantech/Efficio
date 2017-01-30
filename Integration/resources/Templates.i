@@ -5,3 +5,4 @@
 %template(JointCollection) std::vector<Efficio::Models::Body::Joint>;
 %template(FingerCollection) std::array<Efficio::Models::Body::Finger,5>;
 %template(AssetCollection) std::vector<std::shared_ptr<Efficio::Asset>>;
+%template(HandCollection) std::vector<Efficio::Models::Body::Hand>;
