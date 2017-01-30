@@ -1,8 +1,8 @@
 #include "Engine.h"
 #if WINDOWS
 #include "LeapMotion.h"
+#include "RealSense.h"
 #endif
-//#include "RealSense.h"
 //#include "Kinect.h"
 #include "GearVR.h"
 
@@ -12,8 +12,8 @@
 namespace Efficio {
 	Engine::Engine() : started(false), frameID(1)
 	{
-		//sensors.push_back(new Sensors::RealSense(Efficio::Sensors::TrackingType::Face));
 #if WINDOWS
+		sensors.push_back(new Sensors::RealSense(Efficio::Sensors::TrackingType::Hand));
 		sensors.push_back(new Sensors::Body::LeapMotion());
 #endif
 		//sensors.push_back(new Sensors::Body::Kinect());
