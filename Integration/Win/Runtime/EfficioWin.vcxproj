@@ -93,7 +93,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\IntelRealSense\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include;$(RSSDK_DIR)\include;$(RSSDK_DIR)\sample\common\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -135,7 +135,7 @@ EXIT 0</Command>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\IntelRealSense\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include;$(RSSDK_DIR)\include;$(RSSDK_DIR)\sample\common\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,7 +179,7 @@ EXIT 0</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\IntelRealSense\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include;$(RSSDK_DIR)\include;$(RSSDK_DIR)\sample\common\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -225,7 +225,7 @@ EXIT 0</Command>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>COMPILING_DLL=1;WINDOWS=1;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory);$(SolutionDir)lib\VMML;$(SolutionDir)Shared\Core\src;$(SolutionDir)Shared\Plugins\Sensors\LeapMotion\src;$(SolutionDir)Shared\Plugins\Sensors\IntelRealSense\src;$(SolutionDir)Shared\Plugins\Sensors\GearVR\src;$(SolutionDir)Shared\Runtime\src;$(JAVA_SDK)\include;$(JAVA_SDK)\include\win32;$(LEAP_SDK)\include;$(OCULUS_SDK)\LibOVR\Include;$(RSSDK_DIR)\include;$(RSSDK_DIR)\sample\common\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
