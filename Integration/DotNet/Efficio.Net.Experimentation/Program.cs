@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Efficio.Net.Experimentation
 {
@@ -9,42 +10,45 @@ namespace Efficio.Net.Experimentation
             var engine = new Engine();
 
             var startFrame = engine.Start();
-
-            foreach (var ev in startFrame.GetEvents())
-            {
-                switch (ev.GetEventType())
-                {
-                    case EventType.EfficioStarted:
-                        var e = SWIGHelper.CastTo<EfficioStarted>(ev, false);
-                        break;
-                    case EventType.SensorConnecting:
-                        break;
-                    case EventType.SensorConnected:
-                        break;
-                    case EventType.SensorDisconnecting:
-                        break;
-                    case EventType.SensorDisconnected:
-                        break;
-                    case EventType.SensorFaulted:
-                        break;
-                    case EventType.Pinch:
-                        break;
-                    default:
-                        break;
-                }
-
-            }
+            HandleEvents(startFrame);
 
             while (true)
             {
                 var frame = engine.GetFrame();
+                HandleEvents(frame);
+            }
+        }
 
-                if (frame.GetEvents().Count > 0)
+        private static void HandleEvents(Frame frame)
+        {
+            foreach (var ev in frame.GetEvents())
+            {
+                switch (ev.GetEventType())
                 {
-                    var ev = frame.GetEvents()[0];
-
-                    if (ev.GetEventType() == EventType.Pinch)
-                    {
+                    case EventType.EfficioStarted:
+                        Console.WriteLine("Efficio Started");
+                        break;
+                    case EventType.SensorConnecting:
+                        var connecting = SWIGHelper.CastTo<Connecting>(ev);
+                        Console.WriteLine(connecting.SensorInformation.Name + " Connecting");
+                        break;
+                    case EventType.SensorConnected:
+                        var connected = SWIGHelper.CastTo<Connected>(ev);
+                        Console.WriteLine(connected.SensorInformation.Name + " Connected");
+                        break;
+                    case EventType.SensorDisconnecting:
+                        var disconnecting = SWIGHelper.CastTo<Disconnecting>(ev);
+                        Console.WriteLine(disconnecting.SensorInformation.Name + " Disconnecting");
+                        break;
+                    case EventType.SensorDisconnected:
+                        var disconnected = SWIGHelper.CastTo<Disconnected>(ev);
+                        Console.WriteLine(disconnected.SensorInformation.Name + " Disconnected");
+                        break;
+                    case EventType.SensorFaulted:
+                        var faulted = SWIGHelper.CastTo<Faulted>(ev);
+                        Console.WriteLine(faulted.SensorInformation.Name + " Faulted");
+                        break;
+                    case EventType.Pinch:
                         var pinch = SWIGHelper.CastTo<Pinch>(ev);
                         var finger = pinch.Finger1;
 
@@ -52,9 +56,12 @@ namespace Efficio.Net.Experimentation
 
                         if (handData.Count() > 0)
                         {
-                            var hand = handData.ElementAt(0).Hands.First(x => x.ID == pinch.HandID);
+                            var hand = handData.SelectMany(x => x.Hands).First(x => x.ID == (pinch.HandID));
+                            Console.WriteLine("Pinch detected by " + hand.Source + " at frame " + frame.ID);
                         }
-                    }
+                        break;
+                    default:
+                        break;
                 }
             }
         }
