@@ -68,7 +68,7 @@ namespace Efficio
 
 			bool LeapMotion::HasFrame()
 			{
-				return controller.isConnected() && controller.frame().isValid() && latestLeapFrame.id() != lastLeapFrameID;
+				return IsConnected() && controller.frame().isValid() && latestLeapFrame.id() != lastLeapFrameID;
 			}
 
 			void LeapMotion::PreGetFrame()
@@ -115,6 +115,8 @@ namespace Efficio
 				// Calculate Supine Angle
 				auto inverter = hand.isLeft() ? 1 : -1;
 				efficioHand.SupinationAngle = hand.palmNormal().roll() * (180 / M_PI) * inverter;
+
+				efficioHand.Source = GetSource();
 
 				return efficioHand;
 			}
