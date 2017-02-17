@@ -1,0 +1,40 @@
+Debugging notes:
+
+Understanding errors and warnings:
+(Including the warnings here because solving them may solve other errors)
+
+First and most recent, there are some Engine errors. They look like easy solutions.
+
+Second, I don't see Efficio::Body. Apparently it doesn't have a finger member.
+I guess the body is somewhere, or it hasn't been created. I am able to create a body or finger member.
+
+Then there is a slew of warnings that extern was ignored as no variable was declared. I think the extern term may be more for C#.
+Either way, I can see if I can just remove some, or adapt it by writing C++ syntax, or add the variable.
+
+Interspersed are some missing dll-interface warnings. For some reason I was under the impression C++ doesn't need a dll-interface.
+Maybe there's just another way that's just popular right now. I'm pretty sure I didn't remove any though. 
+That just looks like a repeated syntactical error to me. Shouldn't be too tough.
+
+Extern variable and dll-interface can probably be solved with a simple fix I can do for all of them, probably
+getting rid of 200-300 warnings, and hopefully some errors along the way.
+
+
+Okay, back to just Errors "proper":
+
+Okay, the first bunch are that fingers aren't body members. So again, I have to find Body and include member fingers.
+
+Then there's a note that C++ doesn't do default-int, so I'll find alternative syntax. Probably just int, auto, or something similar
+
+The specific errors are pretty similar to the ones above. In fact, it seems like almost all of them are the same.
+Maybe both will be solved in one go.
+
+Next, there are a bunch of problems that Finger isn't in Body. I'll add finger. I remember Greg mentioned I need to put the joints in
+finger, fingers in hand, and hand in body. Not sure if body is equivalent to frame. It also seems pointless that there are fingers in
+hand and body, but I guess that makes it easier to get to them?
+
+Then unexpected tokens.
+
+We should be able to solve the errors easily. Even if I do this on my own, it should be easy.
+
+For things like the wrap and parts that might be more geared to C#, I think we can make a C++-centric version, or hang onto them
+for functions C# is really good at, like moving Windows modules around.

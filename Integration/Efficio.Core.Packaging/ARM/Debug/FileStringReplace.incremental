@@ -1,0 +1,1 @@
+$(AntDependencies)=;$(ApplicationId)=applicationId = "";$(ConfigurationType)=application;$(AarDependencies)=;$(AarDependenciesSettings)=;$(ApplicationName)=Efficio_Core;$(AndroidAppLibName)=Efficio_Core;$(AndroidBuildToolsVersion)=19.1.0;$(AndroidAPILevelNumber)=19;$(androidapilevel)=android-19;$(projectname)=Efficio.Core.Packaging;

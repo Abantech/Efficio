@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="android_native_app_glue.h" />
+    <ClInclude Include="..\..\Core\src\Altitude.h" />
+    <ClInclude Include="..\..\Core\src\Arm.h" />
+    <ClInclude Include="..\..\Core\src\Body.h" />
+    <ClInclude Include="..\..\Core\src\BodySide.h" />
+    <ClInclude Include="..\..\Core\src\Bone.h" />
+    <ClInclude Include="..\..\Core\src\BoneTypes.h" />
+    <ClInclude Include="..\..\Core\src\Connected.h" />
+    <ClInclude Include="..\..\Core\src\Connecting.h" />
+    <ClInclude Include="..\..\Core\src\ContinuousGesture.h" />
+    <ClInclude Include="..\..\Core\src\Data.h" />
+    <ClInclude Include="..\..\Core\src\DataType.h" />
+    <ClInclude Include="..\..\Core\src\Disconnected.h" />
+    <ClInclude Include="..\..\Core\src\Disconnecting.h" />
+    <ClInclude Include="..\..\Core\src\DiscreteGesture.h" />
+    <ClInclude Include="..\..\Core\src\Documentation.h" />
+    <ClInclude Include="..\..\Core\src\EmptyData.h" />
+    <ClInclude Include="..\..\Core\src\Event.h" />
+    <ClInclude Include="..\..\Core\src\EventType.h" />
+    <ClInclude Include="..\..\Core\src\Expressions.h" />
+    <ClInclude Include="..\..\Core\src\Face.h" />
+    <ClInclude Include="..\..\Core\src\FaceData.h" />
+    <ClInclude Include="..\..\Core\src\Faulted.h" />
+    <ClInclude Include="..\..\Core\src\Finger.h" />
+    <ClInclude Include="..\..\Core\src\FingerType.h" />
+    <ClInclude Include="..\..\Core\src\Frame.h" />
+    <ClInclude Include="..\..\Core\src\Gesture.h" />
+    <ClInclude Include="..\..\Core\src\GestureState.h" />
+    <ClInclude Include="..\..\Core\src\GestureType.h" />
+    <ClInclude Include="..\..\Core\src\Hand.h" />
+    <ClInclude Include="..\..\Core\src\HandData.h" />
+    <ClInclude Include="..\..\Core\src\HandRecognitionProcessor.h" />
+    <ClInclude Include="..\..\Core\src\Head.h" />
+    <ClInclude Include="..\..\Core\src\IHandSensor.h" />
+    <ClInclude Include="..\..\Core\src\InputRecognitionEngine.h" />
+    <ClInclude Include="..\..\Core\src\Joint.h" />
+    <ClInclude Include="..\..\Core\src\JointType.h" />
+    <ClInclude Include="..\..\Core\src\Leg.h" />
+    <ClInclude Include="..\..\Core\src\Location.h" />
+    <ClInclude Include="..\..\Core\src\Pinch.h" />
+    <ClInclude Include="..\..\Core\src\PinchDetector.h" />
+    <ClInclude Include="..\..\Core\src\RecognitionProcessor.h" />
+    <ClInclude Include="..\..\Core\src\Sensor.h" />
+    <ClInclude Include="..\..\Core\src\SensorInformation.h" />
+    <ClInclude Include="..\..\Core\src\SensorStatus.h" />
+    <ClInclude Include="..\..\Core\src\SingleHandGesture.h" />
+    <ClInclude Include="..\..\Core\src\SingleHandGestureDetector.h" />
+    <ClInclude Include="..\..\Core\src\SkeletalData.h" />
+    <ClInclude Include="..\..\Core\src\TrackingType.h" />
+    <ClInclude Include="..\..\Core\src\Vector3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="android_native_app_glue.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\..\Core\src\Arm.cpp" />
+    <ClCompile Include="..\..\Core\src\Body.cpp" />
+    <ClCompile Include="..\..\Core\src\Bone.cpp" />
+    <ClCompile Include="..\..\Core\src\Connected.cpp" />
+    <ClCompile Include="..\..\Core\src\Connecting.cpp" />
+    <ClCompile Include="..\..\Core\src\ContinuousGesture.cpp" />
+    <ClCompile Include="..\..\Core\src\Disconnected.cpp" />
+    <ClCompile Include="..\..\Core\src\Disconnecting.cpp" />
+    <ClCompile Include="..\..\Core\src\DiscreteGesture.cpp" />
+    <ClCompile Include="..\..\Core\src\EmptyData.cpp" />
+    <ClCompile Include="..\..\Core\src\Event.cpp" />
+    <ClCompile Include="..\..\Core\src\Face.cpp" />
+    <ClCompile Include="..\..\Core\src\FaceData.cpp" />
+    <ClCompile Include="..\..\Core\src\Faulted.cpp" />
+    <ClCompile Include="..\..\Core\src\Finger.cpp" />
+    <ClCompile Include="..\..\Core\src\Frame.cpp" />
+    <ClCompile Include="..\..\Core\src\Gesture.cpp" />
+    <ClCompile Include="..\..\Core\src\Hand.cpp" />
+    <ClCompile Include="..\..\Core\src\HandData.cpp" />
+    <ClCompile Include="..\..\Core\src\HandRecognitionProcessor.cpp" />
+    <ClCompile Include="..\..\Core\src\Head.cpp" />
+    <ClCompile Include="..\..\Core\src\InputRecognitionEngine.cpp" />
+    <ClCompile Include="..\..\Core\src\Joint.cpp" />
+    <ClCompile Include="..\..\Core\src\Leg.cpp" />
+    <ClCompile Include="..\..\Core\src\Location.cpp" />
+    <ClCompile Include="..\..\Core\src\Pinch.cpp" />
+    <ClCompile Include="..\..\Core\src\PinchDetector.cpp" />
+    <ClCompile Include="..\..\Core\src\RecognitionProcessor.cpp" />
+    <ClCompile Include="..\..\Core\src\Sensor.cpp" />
+    <ClCompile Include="..\..\Core\src\SensorInformation.cpp" />
+    <ClCompile Include="..\..\Core\src\SingleHandGesture.cpp" />
+    <ClCompile Include="..\..\Core\src\SkeletalData.cpp" />
+    <ClCompile Include="..\..\Core\src\Vector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Core\src\README.md" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['gesture',['Gesture',['../class_efficio_1_1_input_recognition_1_1_gesture.html',1,'Efficio::InputRecognition']]],
+  ['getdatatype',['GetDataType',['../class_efficio_1_1_data_1_1_positional_1_1_altitude.html#aa4a7a091ebca10a068b85fc361eddd02',1,'Efficio::Data::Positional::Altitude::GetDataType()'],['../class_efficio_1_1_data_1_1_body_1_1_face_1_1_face_data.html#a670a0b23e59699855ee3e7b8029f038a',1,'Efficio::Data::Body::Face::FaceData::GetDataType()'],['../class_efficio_1_1_data_1_1_body_1_1_hand_data.html#ad2782e19893ca2e55870d4caac6ade08',1,'Efficio::Data::Body::HandData::GetDataType()']]],
+  ['getframe',['GetFrame',['../class_efficio_1_1_sensors_1_1_sensor.html#a2cccc227778cc0e6a21af53a7b423a45',1,'Efficio::Sensors::Sensor']]],
+  ['getgestureduration',['GetGestureDuration',['../class_efficio_1_1_input_recognition_1_1_gesture.html#a69cec1d944ea4d433deca8a95f0d5f06',1,'Efficio::InputRecognition::Gesture']]],
+  ['getgesturestate',['GetGestureState',['../class_efficio_1_1_input_recognition_1_1_continuous_gesture.html#a29e6beed9d0f1745200412815974db7e',1,'Efficio::InputRecognition::ContinuousGesture::GetGestureState()'],['../class_efficio_1_1_input_recognition_1_1_discrete_gesture.html#a18ff1c5231925c581ac3a6add9edfd67',1,'Efficio::InputRecognition::DiscreteGesture::GetGestureState()'],['../class_efficio_1_1_input_recognition_1_1_gesture.html#a0c607385ed5f969075f2e7a1eb11a85a',1,'Efficio::InputRecognition::Gesture::GetGestureState()']]],
+  ['getstarttime',['GetStartTime',['../class_efficio_1_1_input_recognition_1_1_gesture.html#a244d560ab19caeeb09abc4e122c8f0cc',1,'Efficio::InputRecognition::Gesture']]],
+  ['getstatus',['GetStatus',['../class_efficio_1_1_sensors_1_1_sensor.html#a31d014f6ceaef8bda0a2c1f0c27801bd',1,'Efficio::Sensors::Sensor']]],
+  ['gettype',['GetType',['../class_efficio_1_1_input_recognition_1_1_continuous_gesture.html#aee0a3469492e3faed4dca28179645449',1,'Efficio::InputRecognition::ContinuousGesture::GetType()'],['../class_efficio_1_1_input_recognition_1_1_discrete_gesture.html#aa41d3e90b680094da94183a1a1ed3b2a',1,'Efficio::InputRecognition::DiscreteGesture::GetType()'],['../class_efficio_1_1_input_recognition_1_1_gesture.html#a751d03fe2bc9d025da065cec22936cd0',1,'Efficio::InputRecognition::Gesture::GetType()']]]
+];

@@ -1,0 +1,9 @@
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\Efficio_Core.apk.recipe
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\Efficio_Core.apk.recipe.merged
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\FileStringReplace.incremental
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\Efficio_Core.apk
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\Efficio_Core.lastsuccessfuldeploy
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\Package\res\values\strings.xml
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\Package\AndroidManifest.xml
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\Package\project.properties
+C:\Users\jtregalbuto\Desktop\Abantech\Efficio\Integration\Efficio.Core.Packaging\x64\Release\Package\build.xml

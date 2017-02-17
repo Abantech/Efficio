@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HistoricalFrameCollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EfficioStarted.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\AJDBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\CPP\humanosteo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\EfficioFinger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\EfficioFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\EfficioHand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\Enumerations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\FingerJoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\HandJoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Altitude.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Arm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Body.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\BodySide.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Bone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\BoneTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Connected.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Connecting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\ContinuousGesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\DataType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Disconnected.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Disconnecting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\DiscreteGesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Documentation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\EfficioStarted.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\EmptyData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\EventType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Expressions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Face.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\FaceData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Faulted.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Finger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\FingerType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Gesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\GestureState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\GestureType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Hand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\HandData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\HandRecognitionProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Head.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\HistoricalFrameCollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\IHandSensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\InputRecognitionEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Joint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\JointType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Leg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Location.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Pinch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\PinchDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\RecognitionProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Sensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\SensorInformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\SensorStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\SingleHandGesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\SingleHandGestureDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\SkeletalData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\TrackingType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Core\src\Vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HistoricalFrameCollection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RuntimeCSharp_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RuntimeJava_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EfficioStarted.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\AJDEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\AJDFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\CPP\DownstreamConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\CPP\mdimmmapgen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\CPP\Multimaps_MovetoOwnBranch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\CPP\UpstreamConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\EfficioFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\FingerJoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Arm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Body.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Bone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Connected.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Connecting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\ContinuousGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Disconnected.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Disconnecting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\DiscreteGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\EfficioStarted.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\EmptyData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Face.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\FaceData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Faulted.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Finger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Gesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Hand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\HandData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\HandRecognitionProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Head.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\HistoricalFrameCollection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\InputRecognitionEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Joint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Leg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Location.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Pinch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\PinchDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\RecognitionProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\RuntimeCSharp_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\RuntimeJava_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Sensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\SensorInformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\SingleHandGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\SkeletalData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core\src\Vector3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\default.doxygen">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\Efficio.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\RuntimeCSharp.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="resources\RuntimeJava.i">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Core\CPP\doc\html\class_efficio_1_1_efficio_body-members.html" />
+    <None Include="..\Core\CPP\doc\html\class_efficio_1_1_efficio_body.html" />
+    <None Include="..\Core\CPP\doc\html\class_efficio_1_1_efficio_body_1_1_efficio_frame-members.html" />
+    <None Include="..\Core\CPP\doc\html\class_efficio_1_1_efficio_body_1_1_efficio_frame.html" />
+    <None Include="..\Core\CPP\doc\html\class_efficio_1_1_efficio_body_1_1_efficio_hand-members.html" />
+    <None Include="..\Core\CPP\doc\html\class_efficio_1_1_efficio_body_1_1_efficio_hand.html" />
+    <None Include="..\Core\CPP\doc\html\class_efficio_1_1_efficio_body_1_1_finger_joint-members.html" />
+    <None Include="..\Core\CPP\doc\html\class_efficio_1_1_efficio_body_1_1_finger_joint.html" />
+    <None Include="..\Core\CPP\doc\html\md__r_e_a_d_m_e.html" />
+    <None Include="..\Core\CPP\doc\html\_efficio_body_8h_source.html" />
+    <None Include="..\Core\doc\html\annotated.html" />
+    <None Include="..\Core\doc\html\classes.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_body_1_1_face_1_1_face_data-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_body_1_1_face_1_1_face_data.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_body_1_1_hand_data-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_body_1_1_hand_data.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_body_1_1_skeletal_data-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_body_1_1_skeletal_data.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_data-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_data.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_empty_data-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_empty_data.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_positional_1_1_altitude-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_positional_1_1_altitude.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_positional_1_1_location-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_data_1_1_positional_1_1_location.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_events_1_1_event-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_events_1_1_event.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_frame-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_frame.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_hand_recognition_processor-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_hand_recognition_processor.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_pinch-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_pinch.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_pinch_detector-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_pinch_detector.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_single_hand_gesture-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_single_hand_gesture.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_single_hand_gesture_detector-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_body_1_1_hands_1_1_single_hand_gesture_detector.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_continuous_gesture-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_continuous_gesture.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_discrete_gesture-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_discrete_gesture.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_gesture-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_gesture.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_input_recognition_engine-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_input_recognition_engine.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_recognition_processor-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_input_recognition_1_1_recognition_processor.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_arm-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_arm.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_body-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_body.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_bone-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_bone.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_face-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_face.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_finger-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_finger.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_hand-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_hand.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_head-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_head.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_joint-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_joint.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_leg-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_models_1_1_body_1_1_leg.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_connected-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_connected.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_connecting-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_connecting.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_disonnected-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_disonnected.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_disonnecting-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_disonnecting.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_faulted-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_faulted.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_i_hand_sensor-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_i_hand_sensor.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_sensor-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_sensor.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_sensor_information-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_sensors_1_1_sensor_information.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_vector3-members.html" />
+    <None Include="..\Core\doc\html\class_efficio_1_1_vector3.html" />
+    <None Include="..\Core\doc\html\dir_68267d1309a1af8e8297ef4c3efbcdba.html" />
+    <None Include="..\Core\doc\html\files.html" />
+    <None Include="..\Core\doc\html\functions.html" />
+    <None Include="..\Core\doc\html\functions_func.html" />
+    <None Include="..\Core\doc\html\functions_vars.html" />
+    <None Include="..\Core\doc\html\hierarchy.html" />
+    <None Include="..\Core\doc\html\index.html" />
+    <None Include="..\Core\doc\html\md_src__r_e_a_d_m_e.html" />
+    <None Include="..\Core\doc\html\namespaces.html" />
+    <None Include="..\Core\doc\html\namespace_efficio.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_configuration.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_data.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_data_1_1_positional.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_events.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_events_1_1_internal.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_input_recognition.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_input_recognition_1_1_human.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_input_recognition_1_1_human_1_1_hands.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_models.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_models_1_1_body.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_sensors.html" />
+    <None Include="..\Core\doc\html\namespace_efficio_1_1_sensors_1_1_body.html" />
+    <None Include="..\Core\doc\html\pages.html" />
+    <None Include="..\Core\doc\html\search\all_0.html" />
+    <None Include="..\Core\doc\html\search\all_1.html" />
+    <None Include="..\Core\doc\html\search\all_10.html" />
+    <None Include="..\Core\doc\html\search\all_11.html" />
+    <None Include="..\Core\doc\html\search\all_12.html" />
+    <None Include="..\Core\doc\html\search\all_13.html" />
+    <None Include="..\Core\doc\html\search\all_2.html" />
+    <None Include="..\Core\doc\html\search\all_3.html" />
+    <None Include="..\Core\doc\html\search\all_4.html" />
+    <None Include="..\Core\doc\html\search\all_5.html" />
+    <None Include="..\Core\doc\html\search\all_6.html" />
+    <None Include="..\Core\doc\html\search\all_7.html" />
+    <None Include="..\Core\doc\html\search\all_8.html" />
+    <None Include="..\Core\doc\html\search\all_9.html" />
+    <None Include="..\Core\doc\html\search\all_a.html" />
+    <None Include="..\Core\doc\html\search\all_b.html" />
+    <None Include="..\Core\doc\html\search\all_c.html" />
+    <None Include="..\Core\doc\html\search\all_d.html" />
+    <None Include="..\Core\doc\html\search\all_e.html" />
+    <None Include="..\Core\doc\html\search\all_f.html" />
+    <None Include="..\Core\doc\html\search\classes_0.html" />
+    <None Include="..\Core\doc\html\search\classes_1.html" />
+    <None Include="..\Core\doc\html\search\classes_2.html" />
+    <None Include="..\Core\doc\html\search\classes_3.html" />
+    <None Include="..\Core\doc\html\search\classes_4.html" />
+    <None Include="..\Core\doc\html\search\classes_5.html" />
+    <None Include="..\Core\doc\html\search\classes_6.html" />
+    <None Include="..\Core\doc\html\search\classes_7.html" />
+    <None Include="..\Core\doc\html\search\classes_8.html" />
+    <None Include="..\Core\doc\html\search\classes_9.html" />
+    <None Include="..\Core\doc\html\search\classes_a.html" />
+    <None Include="..\Core\doc\html\search\classes_b.html" />
+    <None Include="..\Core\doc\html\search\classes_c.html" />
+    <None Include="..\Core\doc\html\search\classes_d.html" />
+    <None Include="..\Core\doc\html\search\classes_e.html" />
+    <None Include="..\Core\doc\html\search\functions_0.html" />
+    <None Include="..\Core\doc\html\search\functions_1.html" />
+    <None Include="..\Core\doc\html\search\functions_2.html" />
+    <None Include="..\Core\doc\html\search\functions_3.html" />
+    <None Include="..\Core\doc\html\search\functions_4.html" />
+    <None Include="..\Core\doc\html\search\functions_5.html" />
+    <None Include="..\Core\doc\html\search\functions_6.html" />
+    <None Include="..\Core\doc\html\search\functions_7.html" />
+    <None Include="..\Core\doc\html\search\functions_8.html" />
+    <None Include="..\Core\doc\html\search\functions_9.html" />
+    <None Include="..\Core\doc\html\search\functions_a.html" />
+    <None Include="..\Core\doc\html\search\functions_b.html" />
+    <None Include="..\Core\doc\html\search\functions_c.html" />
+    <None Include="..\Core\doc\html\search\namespaces_0.html" />
+    <None Include="..\Core\doc\html\search\nomatches.html" />
+    <None Include="..\Core\doc\html\search\pages_0.html" />
+    <None Include="..\Core\doc\html\search\variables_0.html" />
+    <None Include="..\Core\doc\html\search\variables_1.html" />
+    <None Include="..\Core\doc\html\search\variables_2.html" />
+    <None Include="..\Core\doc\html\search\variables_3.html" />
+    <None Include="..\Core\doc\html\search\variables_4.html" />
+    <None Include="..\Core\doc\html\search\variables_5.html" />
+    <None Include="..\Core\doc\html\search\variables_6.html" />
+    <None Include="..\Core\doc\html\search\variables_7.html" />
+    <None Include="..\Core\doc\html\search\variables_8.html" />
+    <None Include="..\Core\doc\html\search\variables_9.html" />
+    <None Include="..\Core\doc\html\search\variables_a.html" />
+    <None Include="..\Core\doc\html\search\variables_b.html" />
+    <None Include="..\Core\doc\html\search\variables_c.html" />
+    <None Include="..\Core\doc\html\_altitude_8h_source.html" />
+    <None Include="..\Core\doc\html\_arm_8h_source.html" />
+    <None Include="..\Core\doc\html\_body_8h_source.html" />
+    <None Include="..\Core\doc\html\_body_side_8h_source.html" />
+    <None Include="..\Core\doc\html\_bone_8h_source.html" />
+    <None Include="..\Core\doc\html\_bone_types_8h_source.html" />
+    <None Include="..\Core\doc\html\_connected_8h_source.html" />
+    <None Include="..\Core\doc\html\_connecting_8h_source.html" />
+    <None Include="..\Core\doc\html\_continuous_gesture_8h_source.html" />
+    <None Include="..\Core\doc\html\_data_8h_source.html" />
+    <None Include="..\Core\doc\html\_data_type_8h_source.html" />
+    <None Include="..\Core\doc\html\_disconnected_8h_source.html" />
+    <None Include="..\Core\doc\html\_disconnecting_8h_source.html" />
+    <None Include="..\Core\doc\html\_discrete_gesture_8h_source.html" />
+    <None Include="..\Core\doc\html\_documentation_8h_source.html" />
+    <None Include="..\Core\doc\html\_empty_data_8h_source.html" />
+    <None Include="..\Core\doc\html\_event_8h_source.html" />
+    <None Include="..\Core\doc\html\_event_type_8h_source.html" />
+    <None Include="..\Core\doc\html\_expressions_8h_source.html" />
+    <None Include="..\Core\doc\html\_face_8h_source.html" />
+    <None Include="..\Core\doc\html\_face_data_8h_source.html" />
+    <None Include="..\Core\doc\html\_faulted_8h_source.html" />
+    <None Include="..\Core\doc\html\_finger_8h_source.html" />
+    <None Include="..\Core\doc\html\_finger_type_8h_source.html" />
+    <None Include="..\Core\doc\html\_frame_8h_source.html" />
+    <None Include="..\Core\doc\html\_gesture_8h_source.html" />
+    <None Include="..\Core\doc\html\_gesture_state_8h_source.html" />
+    <None Include="..\Core\doc\html\_gesture_type_8h_source.html" />
+    <None Include="..\Core\doc\html\_hand_8h_source.html" />
+    <None Include="..\Core\doc\html\_hand_data_8h_source.html" />
+    <None Include="..\Core\doc\html\_hand_recognition_processor_8h_source.html" />
+    <None Include="..\Core\doc\html\_head_8h_source.html" />
+    <None Include="..\Core\doc\html\_input_recognition_engine_8h_source.html" />
+    <None Include="..\Core\doc\html\_i_hand_sensor_8h_source.html" />
+    <None Include="..\Core\doc\html\_joint_8h_source.html" />
+    <None Include="..\Core\doc\html\_joint_type_8h_source.html" />
+    <None Include="..\Core\doc\html\_leg_8h_source.html" />
+    <None Include="..\Core\doc\html\_location_8h_source.html" />
+    <None Include="..\Core\doc\html\_pinch_8h_source.html" />
+    <None Include="..\Core\doc\html\_pinch_detector_8h_source.html" />
+    <None Include="..\Core\doc\html\_recognition_processor_8h_source.html" />
+    <None Include="..\Core\doc\html\_sensor_8h_source.html" />
+    <None Include="..\Core\doc\html\_sensor_information_8h_source.html" />
+    <None Include="..\Core\doc\html\_sensor_status_8h_source.html" />
+    <None Include="..\Core\doc\html\_single_hand_gesture_8h_source.html" />
+    <None Include="..\Core\doc\html\_single_hand_gesture_detector_8h_source.html" />
+    <None Include="..\Core\doc\html\_skeletal_data_8h_source.html" />
+    <None Include="..\Core\doc\html\_tracking_type_8h_source.html" />
+    <None Include="..\Core\doc\html\_vector3_8h_source.html" />
+  </ItemGroup>
+</Project>
