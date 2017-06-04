@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Efficio.Net.Web.EfficioService" CodeBehind="EfficioService.svc.cs" %>
