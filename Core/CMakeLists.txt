@@ -2,8 +2,15 @@ cmake_minimum_required(VERSION 3.7)
 set(PROJECT_SOURCE_DIR  src)
 
 add_library(Efficio.Core SHARED 
-	src/Sensor.cpp
+	src/Connected.cpp
+	src/Connecting.cpp
+	src/Disconnected.cpp
+	src/Disconnecting.cpp
+	src/Event.cpp
+	src/Faulted.cpp
 	src/Frame.cpp
-	src/Event.cpp)
+	src/Sensor.cpp
+	src/SensorEvent.cpp
+	src/SensorInformation.cpp)
 
 target_include_directories (Efficio.Core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
