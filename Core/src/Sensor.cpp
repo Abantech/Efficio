@@ -1,9 +1,9 @@
-#include "..\include\Sensor.h"
-#include "..\include\Connected.h"
-#include "..\include\Connecting.h"
-#include "..\include\Disconnected.h"
-#include "..\include\Disconnecting.h"
-#include "..\include\Faulted.h"
+#include "Sensor.h"
+#include "Connected.h"
+#include "Connecting.h"
+#include "Disconnected.h"
+#include "Disconnecting.h"
+#include "Faulted.h"
 
 namespace Efficio
 {
