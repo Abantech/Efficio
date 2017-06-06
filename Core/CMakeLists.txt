@@ -3,6 +3,7 @@ set(PROJECT_SOURCE_DIR  src)
 
 add_library(Efficio.Core SHARED 
 	src/Sensor.cpp
+	src/Frame.cpp
 	src/Event.cpp)
 
 target_include_directories (Efficio.Core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
