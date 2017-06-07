@@ -1,12 +1,12 @@
 #pragma once
 
 #include <string>
-#include "Event.h"
+#include "DiscreteEvent.h"
 #include "SensorInformation.h"
 
 namespace Efficio
 {
-	class SensorEvent : public Event
+	class SensorEvent : public DiscreteEvent
 	{
 	public:
 		SensorEvent(SensorInformation details);

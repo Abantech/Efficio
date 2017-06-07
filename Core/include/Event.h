@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <time.h>
 
 namespace Efficio
 {
@@ -11,8 +10,6 @@ namespace Efficio
 	public:
 		Event(std::string source);
 		~Event();
-
-		time_t Time;
 
 		size_t ID;
 

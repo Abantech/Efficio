@@ -9,6 +9,7 @@ add_library(Efficio.Core SHARED
 	src/Connecting.cpp
 	src/Disconnected.cpp
 	src/Disconnecting.cpp
+	src/DiscreteEvent.cpp
 	src/Event.cpp
 	src/Faulted.cpp
 	src/Frame.cpp
