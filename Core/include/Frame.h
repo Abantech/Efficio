@@ -9,6 +9,7 @@
 
 namespace Efficio
 {
+	/// Container for all data and events that occurred within the context of the device queried
 	class Frame
 	{
 	public:

@@ -6,9 +6,13 @@
 
 namespace Efficio
 {
+	/// An event that takes place only once in an instance
 	class DiscreteEvent : public Event
 	{
 	public:
+		/**
+		* @param name The name of the event.
+		*/
 		DiscreteEvent(std::string name);
 		~DiscreteEvent();
 

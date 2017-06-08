@@ -5,6 +5,7 @@
 
 namespace Efficio
 {
+	/// An event that occurs when a sensor faults
 	class Faulted : public SensorEvent
 	{
 	public:

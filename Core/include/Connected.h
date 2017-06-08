@@ -5,6 +5,7 @@
 
 namespace Efficio
 {
+	/// An event that occurs when a sensor connects
 	class Connected : public SensorEvent
 	{
 	public:

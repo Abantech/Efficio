@@ -5,6 +5,7 @@
 
 namespace Efficio
 {
+	/// An event that occurs when a sensor begins to disconnect
 	class Disconnecting : public SensorEvent
 	{
 	public:
