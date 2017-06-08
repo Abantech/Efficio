@@ -9,6 +9,8 @@ namespace Efficio
 	public:
 		Data() {};
 		~Data() {};
+
+		/// The type of the data
 		virtual std::string GetDataType() = 0;
 	};
 }

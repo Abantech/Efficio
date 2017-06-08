@@ -14,9 +14,11 @@ namespace Efficio
 		SensorEvent(SensorInformation details);
 		~SensorEvent();
 
-		/// INform
+		/// Details about the sensor raising the sensor event
 		SensorInformation SensorInformation;
-		virtual std::string GetEventType() = 0;
+
+		/// Gets the type of event
+		virtual std::string GetEventType();
 	private:
 	};
 }

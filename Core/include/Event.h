@@ -8,11 +8,14 @@ namespace Efficio
 	class Event
 	{
 	public:
+		/// @param source The source of the event
 		Event(std::string source);
 		~Event();
 
+		/// The unique ID of the event
 		size_t ID;
 
+		/// The source of the event
 		std::string Source;
 
 	private:

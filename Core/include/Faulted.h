@@ -9,6 +9,7 @@ namespace Efficio
 	class Faulted : public SensorEvent
 	{
 	public:
+		/// @param details The details about sensor raising the event
 		Faulted(Efficio::SensorInformation details);
 		~Faulted();
 

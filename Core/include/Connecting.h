@@ -9,10 +9,11 @@ namespace Efficio
 	class Connecting : public SensorEvent
 	{
 	public:
+		/// @param details The details about sensor raising the event
 		Connecting(Efficio::SensorInformation details);
 		~Connecting();
 
-		// Inherited via Event
+		/// Inherited via Event
 		virtual std::string GetEventType() override;
 	};
 }

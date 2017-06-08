@@ -5,6 +5,7 @@ execute_process(COMMAND doxygen docs/default.doxygen
 				WORKING_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(Efficio.Core SHARED 
+	src/Asset.cpp
 	src/Connected.cpp
 	src/Connecting.cpp
 	src/Disconnected.cpp

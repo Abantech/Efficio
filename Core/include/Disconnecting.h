@@ -9,6 +9,7 @@ namespace Efficio
 	class Disconnecting : public SensorEvent
 	{
 	public:
+		/// @param details The details about sensor raising the event
 		Disconnecting(Efficio::SensorInformation details);
 		~Disconnecting();
 

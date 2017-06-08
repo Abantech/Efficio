@@ -117,11 +117,6 @@ namespace Efficio
 		return frame;
 	}
 
-	std::string Sensor::GetSource()
-	{
-		return SensorInformation.Name;
-	}
-
 	SensorInformation Sensor::GetSensorInformation()
 	{
 		return SensorInformation;

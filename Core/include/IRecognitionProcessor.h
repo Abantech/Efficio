@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Event.h"
-#include "Frame.h"
+#include "Data.h"
 
 #include <vector>
 #include <memory>
@@ -15,8 +15,10 @@ namespace Efficio
 		IRecognitionProcessor();
 		~IRecognitionProcessor();
 
-		virtual std::vector<std::shared_ptr<Event>> DetectEvents(Efficio::Frame frame) = 0;
+		/// Detects events within the data
+		virtual std::vector<std::shared_ptr<Event>> DetectEvents(Efficio::Data data) = 0;
 
+		/// Gets the data type for which the processor works
 		virtual std::string GetDataType() = 0;
 	};
 }
