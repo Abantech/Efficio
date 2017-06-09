@@ -19,5 +19,3 @@ add_library(Efficio.Core
 	src/SensorInformation.cpp)
 
 target_include_directories (Efficio.Core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
-install (TARGETS Efficio.Core DESTINATION bin)
