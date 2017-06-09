@@ -21,6 +21,9 @@ namespace Efficio
 		/// Gets the data from the frame
 		std::vector<std::shared_ptr<Data>> GetData();
 
+		/// Gets the data of a certain type
+		std::vector<std::shared_ptr<Data>> GetDataOfType(std::string dataType);
+
 		/// Adds data to the frame 
 		void AddData(std::vector<std::shared_ptr<Data>> data);
 
