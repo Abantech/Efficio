@@ -16,7 +16,7 @@ namespace Efficio
 		~IRecognitionProcessor();
 
 		/// Detects events within the data
-		virtual std::vector<std::shared_ptr<Event>> DetectEvents(Efficio::Data data) = 0;
+		virtual std::vector<std::shared_ptr<Event>> DetectEvents(std::shared_ptr<Data> data) = 0;
 
 		/// Gets the data type for which the processor works
 		virtual std::string GetDataType() = 0;
