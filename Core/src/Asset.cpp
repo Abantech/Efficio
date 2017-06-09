@@ -10,7 +10,7 @@ namespace Efficio
 	{
 	}
 	
-	std::vector<Sensor> Asset::GetSensors()
+	std::vector<Sensor*> Asset::GetSensors()
 	{
 		return sensors;
 	}
