@@ -22,6 +22,22 @@ namespace Efficio
 		return dataCollection;
 	}
 
+	std::vector<std::shared_ptr<Data>> Frame::GetDataOfType(std::string type)
+	{
+		// TODO keep map of types and indicies for fast return
+		std::vector<std::shared_ptr<Data>> data;
+
+		for (size_t i = 0; i < dataCollection.size(); i++)
+		{
+			if (dataCollection[i]->GetDataType() == type)
+			{
+				data.push_back(dataCollection[i]);
+			}
+		}
+
+		return data;
+	}
+
 	void Frame::AddData(std::vector<std::shared_ptr<Data>> data)
 	{
 		for (size_t i = 0; i < data.size(); i++)
