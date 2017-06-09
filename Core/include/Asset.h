@@ -13,9 +13,9 @@ namespace Efficio
 		~Asset();
 
 		/// Gets the sensors attached to asset
-		std::vector<Sensor> GetSensors();
+		std::vector<Sensor*> GetSensors();
 
 	private:
-		std::vector<Sensor> sensors;
+		std::vector<Sensor*> sensors;
 	};
 }
