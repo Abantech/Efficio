@@ -18,7 +18,7 @@ namespace Efficio
 		time_t Time;
 
 		/// Gets the type of event
-		virtual std::string GetEventType();
+		virtual std::string GetEventType() = 0;
 	private:
 	};
 }
