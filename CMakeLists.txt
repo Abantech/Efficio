@@ -3,8 +3,10 @@ project (Efficio)
 
 include_directories(lib/VMML/include/vmmlib)
 add_subdirectory (Core)
-add_subdirectory (Runtime)
 add_subdirectory (Plugins/Models/Spatial)
+add_subdirectory (Plugins/Models/Body)
+add_subdirectory (Plugins/Assets/Leap)
+add_subdirectory (Runtime)
 
 add_executable (Test Console.cpp)
 target_link_libraries (Test LINK_PUBLIC Efficio.Runtime)
