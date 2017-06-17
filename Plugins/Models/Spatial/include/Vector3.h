@@ -21,6 +21,10 @@ namespace Efficio
 
 				float DistanceTo(Vector3 v);
 
+				float Dot(Vector3 v);
+
+				float Length();
+
 			private:
 				vmml::vector<3> vector;
 			};

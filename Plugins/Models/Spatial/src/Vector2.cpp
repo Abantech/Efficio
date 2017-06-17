@@ -38,6 +38,11 @@ namespace Efficio
 			{
 				return vector.distance(v.vector);
 			}
+
+			float Vector2::Length()
+			{
+				return vector.length();
+			}
 		}
 	}
 }
