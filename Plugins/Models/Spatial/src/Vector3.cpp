@@ -10,12 +10,32 @@ namespace Efficio
 			{
 			}
 
-			Vector3::Vector3(float x, float y, float z) : x(x), y(y), z(z)
+			Vector3::Vector3(float x, float y, float z) : vector(x, y, z)
 			{
 			}
 
 			Vector3::~Vector3()
 			{
+			}
+
+			float Vector3::x()
+			{
+				return vector.x();
+			}
+
+			float Vector3::y()
+			{
+				return vector.y();
+			}
+
+			float Vector3::z() {
+				return vector.z();
+			}
+
+			std::array<float, 3> Vector3::ToArray()
+			{
+				std::array<float, 3> ar = { vector.x(), vector.y(), vector.z() };
+				return ar;
 			}
 		}
 	}
