@@ -6,15 +6,9 @@ namespace Efficio
 	{
 		namespace Spatial
 		{
-			Spatial2DData::Spatial2DData()
-			{
+			Spatial2DData::Spatial2DData() { }
 
-			}
-
-			Spatial2DData::~Spatial2DData()
-			{
-
-			}
+			Spatial2DData::~Spatial2DData() { }
 
 			std::string Spatial2DData::GetDataType()
 			{

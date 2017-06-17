@@ -6,13 +6,9 @@ namespace Efficio
 	{
 		namespace Spatial
 		{
-			GPSData::GPSData() : Efficio::Data()
-			{
-			}
+			GPSData::GPSData() : Efficio::Data() { }
 
-			GPSData::~GPSData()
-			{
-			}
+			GPSData::~GPSData() { }
 
 			float GPSData::GetAccuracy()
 			{
@@ -28,7 +24,6 @@ namespace Efficio
 			{
 				return 0;
 			}
-
 
 			float GPSData::GetAltitudeAccuracy()
 			{
@@ -55,7 +50,6 @@ namespace Efficio
 			{
 				return 0;
 			}
-
 
 			float GPSData::GetBearingAccuracy()
 			{
