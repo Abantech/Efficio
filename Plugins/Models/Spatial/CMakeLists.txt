@@ -4,7 +4,10 @@ execute_process(COMMAND doxygen docs/default.doxygen WORKING_DIRECTORY  ${CMAKE_
 
 add_library(Efficio.Models.Spatial
 			src/GPSData.cpp
-			src/Spatial3DData.cpp)
+			src/Spatial3DData.cpp
+			src/Spatial2DData.cpp
+			src/Vector2.cpp
+			src/Vector3.cpp)
 
 target_link_libraries (Efficio.Models.Spatial LINK_PUBLIC Efficio.Core)
 
