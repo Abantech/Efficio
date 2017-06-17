@@ -19,6 +19,8 @@ namespace Efficio
 
 				std::array<float, 3> ToArray();
 
+				float DistanceTo(Vector3 v);
+
 			private:
 				vmml::vector<3> vector;
 			};

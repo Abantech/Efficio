@@ -33,6 +33,11 @@ namespace Efficio
 				std::array<float, 2> ar = { vector.x(), vector.y()};
 				return ar;
 			}
+
+			float Vector2::DistanceTo(Vector2 v)
+			{
+				return vector.distance(v.vector);
+			}
 		}
 	}
 }
