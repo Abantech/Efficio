@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project (Efficio)
 
+include_directories(lib/VMML/include/vmmlib)
 add_subdirectory (Core)
 add_subdirectory (Runtime)
 add_subdirectory (Plugins/Models/Spatial)
