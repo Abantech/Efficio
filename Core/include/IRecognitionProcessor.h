@@ -20,5 +20,7 @@ namespace Efficio
 
 		/// Gets the data type for which the processor works
 		virtual std::string GetDataType() = 0;
+
+		virtual std::string GetName() = 0;
 	};
 }
