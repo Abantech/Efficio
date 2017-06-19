@@ -15,7 +15,7 @@ namespace Efficio
 		/// Gets the sensors attached to asset
 		std::vector<std::shared_ptr<Sensor>> GetSensors();
 
-	private:
+	protected:
 		std::vector<std::shared_ptr<Sensor>> sensors;
 	};
 }
