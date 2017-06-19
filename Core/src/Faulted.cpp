@@ -12,6 +12,8 @@ namespace Efficio
 
 	std::string Faulted::GetEventType()
 	{
-		return "SensorFaulted";
+		return Faulted::EventType;
 	}
+
+	const std::string Faulted::EventType = "SensorFaulted";
 }

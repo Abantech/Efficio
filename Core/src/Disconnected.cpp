@@ -10,6 +10,8 @@ namespace Efficio
 		}
 		std::string Disconnected::GetEventType()
 		{
-			return "SensorDisconnected";
+			return Disconnected::EventType;
 		}
+
+		const std::string Disconnected::EventType = "SensorDisconnected";
 }

@@ -15,5 +15,7 @@ namespace Efficio
 
 		// Inherited via Event
 		virtual std::string GetEventType() override;
+
+		static const std::string EventType;
 	};
 }

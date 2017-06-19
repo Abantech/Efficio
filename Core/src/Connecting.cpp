@@ -10,6 +10,8 @@ namespace Efficio
 	}
 	std::string Connecting::GetEventType()
 	{
-		return "SensorConnecting";
+		return Connecting::EventType;
 	}
+
+	const std::string Connecting::EventType = "SensorConnecting";
 }
