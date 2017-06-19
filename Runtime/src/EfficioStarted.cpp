@@ -2,13 +2,15 @@
 
 namespace Efficio
 {
-	EfficioStarted::EfficioStarted() : DiscreteEvent("EfficioStarted")
+	EfficioStarted::EfficioStarted() : DiscreteEvent("Efficio Engine")
 	{
 	}
 	EfficioStarted::~EfficioStarted()
 	{
 	}
 	std::string EfficioStarted::GetEventType() {
-		return "EfficioStarted";
+		return EfficioStarted::EventType;
 	}
+
+	const std::string EfficioStarted::EventType = "EfficioStarted";
 }

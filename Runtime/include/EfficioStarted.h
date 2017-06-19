@@ -13,5 +13,7 @@ namespace Efficio
 
 		/// Gets the event type
 		virtual std::string GetEventType();
+
+		static const std::string EventType;
 	};
 }
