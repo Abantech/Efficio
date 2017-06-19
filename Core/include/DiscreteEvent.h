@@ -11,14 +11,11 @@ namespace Efficio
 	{
 	public:
 		///@param name The name of the event.
-		DiscreteEvent(std::string name);
+		DiscreteEvent(std::string source);
 		~DiscreteEvent();
 
 		/// The time the event was detected
 		time_t Time;
-
-		/// Gets the type of event
-		virtual std::string GetEventType() = 0;
 	private:
 	};
 }
