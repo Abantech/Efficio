@@ -19,16 +19,6 @@ namespace Efficio
 			{
 			}
 
-			std::vector<Joint> Joint::ProximalJoints(Joint joint)
-			{
-				return std::vector<Joint>();
-			}
-
-			std::vector<Joint> Joint::DistalJoints(Joint joint)
-			{
-				return std::vector<Joint>();
-			}
-
 			float Joint::DistanceTo(Joint joint)
 			{
 				return Position.DistanceTo(joint.Position);

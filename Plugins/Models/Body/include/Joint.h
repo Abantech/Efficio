@@ -3,6 +3,7 @@
 #include "JointType.h"
 #include "Vector3.h"
 #include <vector>
+#include <memory>
 
 namespace Efficio
 {
@@ -32,10 +33,10 @@ namespace Efficio
 				float Confidence;
 
 				/// Gets the proximal joints of a joint, treating spine as origin. If joint is spine, spine is returned;
-				std::vector<Joint> ProximalJoints(Joint joint);
+				std::vector<std::shared_ptr<Joint>> ProximalJoints;
 
 				/// Gets the distal joints of a joint, treating spine as origin. If joint is most distal, joint is returned;
-				std::vector<Joint> DistalJoints(Joint joint);
+				std::vector<std::shared_ptr<Joint>> DistalJoints;
 
 				/// The distance between two joints
 				float DistanceTo(Joint joint);
