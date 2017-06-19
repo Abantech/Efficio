@@ -4,8 +4,10 @@ add_library(Efficio.Runtime
 	src/EfficioStarted.cpp
 	src/Engine
 	src/HistoricalFrameCollection.cpp
-	src/InputRecognitionEngine)
+	src/InputRecognitionEngine
+	src/Message
+	src/MessageBus)
 
-target_link_libraries (Efficio.Runtime LINK_PUBLIC Efficio.Core Efficio.Models.Spatial Efficio.Models.Body)
+target_link_libraries (Efficio.Runtime LINK_PUBLIC Efficio.Core Efficio.Models.Body Efficio.Assets.LeapMotion Efficio.Recognition.Body)
 
 target_include_directories (Efficio.Runtime PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

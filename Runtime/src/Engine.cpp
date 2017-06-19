@@ -1,15 +1,14 @@
 #include "Engine.h"
 #include "EfficioStarted.h"
+#include "LeapMotion.h"
 
 namespace Efficio {
-	Engine::Engine() : started(false), frameID(1)
+	Engine::Engine() : started(false), frameID(1), MessageBus(MessageBus::Current())
 	{
-#if WINDOWS
-		sensors.push_back(new Sensors::RealSense(Efficio::Sensors::TrackingType::Hand));
-		sensors.push_back(new Sensors::Body::LeapMotion());
-#endif
-		//sensors.push_back(new Sensors::Body::Kinect());
-		//sensors.push_back(new Sensors::GearVR());
+			//assets.push_back(new Sensors::RealSense(Efficio::Sensors::TrackingType::Hand));
+			assets.push_back(new Assets::LeapMotion());
+			//assets.push_back(new Sensors::Body::Kinect());
+			//assets.push_back(new Sensors::GearVR());
 	}
 
 	Engine::~Engine()
@@ -41,6 +40,9 @@ namespace Efficio {
 
 	std::shared_ptr<Frame> Engine::GetFrame()
 	{
+		// Clean out leftover messages
+		MessageBus->ClearMessages();
+
 		std::shared_ptr<Frame> frame(new Frame(GetFrame(1), frameID++));
 		deltaTimeSum += frame->DeltaTime;
 
@@ -74,6 +76,15 @@ namespace Efficio {
 		}
 		historicalFrames.AddFrame(frame);
 
+		auto events = frame->GetEvents();
+		for (size_t i = 0; i < events.size(); i++)
+		{
+			auto ev = events[i];
+			MessageBus->SendMessage(Efficio::Message(ev->GetEventType(), ev));
+		}
+
+		MessageBus->Notify();
+
 		return frame;
 	}
 
@@ -88,6 +99,11 @@ namespace Efficio {
 		}
 
 		return NULL;
+	}
+
+	void Engine::ReleaseFrame()
+	{
+		MessageBus->Notify();
 	}
 
 	float Engine::GetFrameRate()

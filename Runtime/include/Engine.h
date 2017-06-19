@@ -1,10 +1,12 @@
 #pragma once
+
 #include "Frame.h"
 #include "Asset.h"
 #include <memory>
 #include "Event.h"
 #include "HistoricalFrameCollection.h"
 #include "InputRecognitionEngine.h"
+#include "MessageBus.h"
 
 using namespace std;
 
@@ -30,6 +32,10 @@ namespace Efficio
 
 		/// Gets the frame rate at which Efficio is running
 		float GetFrameRate();
+		
+		std::shared_ptr<Efficio::MessageBus> MessageBus;
+
+		void ReleaseFrame();
 
 	private:
 		bool started;
