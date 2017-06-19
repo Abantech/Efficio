@@ -1,9 +1,11 @@
 #include "InputRecognitionEngine.h"
+#include "HandRecognitionProcessor.h"
 
 namespace Efficio
 {
 	InputRecognitionEngine::InputRecognitionEngine()
 	{
+		processors.push_back(std::shared_ptr<IRecognitionProcessor>(new Recognition::Body::HandRecognitionProcessor()));
 	}
 
 	InputRecognitionEngine::~InputRecognitionEngine()
