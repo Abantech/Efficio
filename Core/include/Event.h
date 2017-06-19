@@ -18,6 +18,9 @@ namespace Efficio
 		/// The source of the event
 		std::string Source;
 
+		/// Gets the type of event
+		virtual std::string GetEventType() = 0;
+
 	private:
 		static size_t IdIndex;
 	};
