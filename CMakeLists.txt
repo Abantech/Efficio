@@ -6,6 +6,7 @@ add_subdirectory (Core)
 add_subdirectory (Plugins/Models/Spatial)
 add_subdirectory (Plugins/Models/Body)
 add_subdirectory (Plugins/Assets/Leap)
+add_subdirectory (Plugins/RecognitionProcessors/Body)
 add_subdirectory (Runtime)
 
 add_executable (Test Console.cpp)
