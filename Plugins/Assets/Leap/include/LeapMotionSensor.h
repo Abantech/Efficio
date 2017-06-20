@@ -1,6 +1,8 @@
 #pragma once
 
 #include "IHandSensor.h"
+#include "IImageSensor.h"
+#include "Sensor.h"
 #include "Leap.h"
 
 namespace Efficio
@@ -10,9 +12,10 @@ namespace Efficio
 		/// <summary>
 		/// Wrapper for the Leap Motion hand sensor.  More information about this device can be found at https://www.leapmotion.com/
 		/// </summary>
-		/// <seealso cref="Asset" />
-		class LeapMotionSensor : public Efficio::Models::Body::IHandSensor
+		/// <seealso cref="Sensor" />
+		class LeapMotionSensor : public Models::Body::IHandSensor, public Models::AudioVisual::IImageSensor, public Sensor
 		{
+			friend class LeapMotion;
 		public:
 			LeapMotionSensor();
 			~LeapMotionSensor();
@@ -31,15 +34,20 @@ namespace Efficio
 			virtual void PostGetFrame() override;
 			virtual bool IsConnected() override;
 
-		private:
 			// Inherited via IHandSensor
 			virtual void EnableHandTracking(bool enable) override;
-			virtual Efficio::Models::Body::HandData GetHandData() override;
+			virtual void EnableImageTracking(bool enable) override;
+
+		private:
+			virtual Models::Body::HandData GetHandData() override;
+			virtual Models::AudioVisual::ImageData GetImageData() override;
 
 			// Leap Motion Specific
 			Leap::Controller controller;
 			Leap::Frame latestLeapFrame;
 			long long lastLeapFrameID;
+			bool trackingHands;
+			bool trackingImages;
 
 			/// <summary>
 			/// Converts Leap Motion hand to Efficio hand

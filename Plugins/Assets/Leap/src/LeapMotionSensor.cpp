@@ -83,9 +83,18 @@ namespace Efficio
 		{
 			std::vector<std::shared_ptr<Data>> data;
 
-			auto dataSharedPtr = std::make_shared<Models::Body::HandData>(GetHandData());
+			if (trackingHands)
+			{
+				auto dataSharedPtr = std::make_shared<Models::Body::HandData>(GetHandData());
+				data.push_back(dataSharedPtr);
+			}
 
-			data.push_back(dataSharedPtr);
+			if (trackingImages)
+			{
+				controller.setPolicy(Leap::Controller::POLICY_IMAGES);
+				auto dataSharedPtr = std::make_shared<Models::AudioVisual::ImageData>(GetImageData());
+				data.push_back(dataSharedPtr);
+			}
 
 			return data;
 		}
@@ -230,6 +239,12 @@ namespace Efficio
 
 		void LeapMotionSensor::EnableHandTracking(bool enable)
 		{
+			trackingHands = enable;
+		}
+
+		void LeapMotionSensor::EnableImageTracking(bool enable)
+		{
+			trackingImages = enable;
 		}
 
 		Models::Body::HandData LeapMotionSensor::GetHandData()
@@ -245,6 +260,21 @@ namespace Efficio
 			}
 
 			return Models::Body::HandData(convertedHands);
+		}
+
+		Models::AudioVisual::ImageData LeapMotionSensor::GetImageData()
+		{
+			Models::AudioVisual::ImageData data;
+
+			Leap::ImageList images = latestLeapFrame.images();
+			for (int i = 0; i < 2; i++) {
+				Leap::Image image = images[i];
+
+				const unsigned char* image_buffer = image.data();
+				data.Images.push_back(Models::AudioVisual::Image(image.height(), image.width(), image.bytesPerPixel(), image_buffer));
+			}
+
+			return data;
 		}
 	}
 }

@@ -22,6 +22,6 @@ configure_file($ENV{LEAP_SDK}\\lib\\${ENVIRONMENT}\\Leap.dll
                     ${CMAKE_BINARY_DIR}/Debug/Leap.dll
                     COPYONLY)
 
-target_link_libraries (Efficio.Assets.LeapMotion LINK_PUBLIC Efficio.Core Efficio.Models.Body ${LEAP_LIBRARY})
+target_link_libraries (Efficio.Assets.LeapMotion LINK_PUBLIC Efficio.Core Efficio.Models.Body Efficio.Models.AudioVisual ${LEAP_LIBRARY})
 
 target_include_directories (Efficio.Assets.LeapMotion  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
