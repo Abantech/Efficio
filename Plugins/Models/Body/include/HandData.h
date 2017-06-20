@@ -10,14 +10,14 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			class HandData : public Efficio::Data
+			class HandData : public Data
 			{
 			public:
 				HandData();
-				HandData(std::vector<Models::Body::Hand> hands);
+				HandData(std::vector<Hand> hands);
 				~HandData();
 
-				std::vector<Models::Body::Hand> Hands;
+				std::vector<Hand> Hands;
 
 				/// <summary>
 				/// Gets the type of the data.

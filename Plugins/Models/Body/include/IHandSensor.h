@@ -1,7 +1,6 @@
 #pragma once
 
 #include "HandData.h"
-#include "Sensor.h"
 
 namespace Efficio
 {
@@ -10,7 +9,7 @@ namespace Efficio
 		namespace Body
 		{
 			/// Any sensor which can feed data into Efficio
-			class IHandSensor : public Efficio::Sensor
+			class IHandSensor
 			{
 			public:
 				IHandSensor() {};
@@ -18,7 +17,7 @@ namespace Efficio
 
 				virtual void EnableHandTracking(bool enable) = 0;
 			protected:
-				virtual Efficio::Models::Body::HandData GetHandData() = 0;
+				virtual HandData GetHandData() = 0;
 			};
 		}
 	}
