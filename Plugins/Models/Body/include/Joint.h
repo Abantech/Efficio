@@ -17,8 +17,7 @@ namespace Efficio
 			public:
 				Joint();
 				/// Constructor for when confidence values are not available. Sets the confidence property to -1.
-				Joint(Efficio::Vector3 position, JointType type);
-				Joint(Efficio::Vector3 position, JointType type, float confidence);
+				Joint(Efficio::Vector3 position, JointType type, float confidence = -1);
 				~Joint();
 
 				bool Valid;
