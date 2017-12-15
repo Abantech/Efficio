@@ -8,6 +8,6 @@ add_library(Efficio.Runtime
 	src/Message
 	src/MessageBus)
 
-target_link_libraries (Efficio.Runtime LINK_PUBLIC Efficio.Core Efficio.Models.Body Efficio.Assets.LeapMotion Efficio.Recognition.Body)
+target_link_libraries (Efficio.Runtime LINK_PUBLIC Efficio.Core Efficio.Models.Body Efficio.Assets.LeapMotion Efficio.Assets.IntelRealSense Efficio.Recognition.Body)
 
 target_include_directories (Efficio.Runtime PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

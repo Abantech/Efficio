@@ -7,10 +7,11 @@ add_subdirectory (Plugins/Models/Spatial)
 add_subdirectory (Plugins/Models/Body)
 add_subdirectory (Plugins/Models/AudioVisual)
 add_subdirectory (Plugins/Assets/Leap)
+add_subdirectory (Plugins/Assets/Intel)
 add_subdirectory (Plugins/RecognitionProcessors/Body)
 add_subdirectory (Runtime)
 
 add_executable (Test Console.cpp)
 target_link_libraries (Test LINK_PUBLIC Efficio.Runtime)
 
-install (TARGETS Test DESTINATION bin)
+install (TARGETS Test DESTINATION bin) 
