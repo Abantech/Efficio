@@ -14,8 +14,9 @@ namespace Efficio
 
 			bool Spatial3DData::HasPosition() 
 			{
-				if (position)
+				if (position) {
 					return true;
+				}
 				
 				return false;
 			}
