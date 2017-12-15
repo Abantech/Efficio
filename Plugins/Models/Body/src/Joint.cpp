@@ -9,9 +9,6 @@ namespace Efficio
 			Joint::Joint() : Valid(false), Type(JointType::None), Confidence(-1)
 			{
 			}
-			Joint::Joint(Efficio::Vector3 position, JointType type) : Joint(position, type, -1)
-			{
-			}
 			Joint::Joint(Efficio::Vector3 position, JointType type, float confidence) : Position(position), Type(type), Confidence(confidence), Valid(true)
 			{
 			}
