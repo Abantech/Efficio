@@ -36,6 +36,8 @@ namespace Efficio
 
 			// Inherited via IHandSensor
 			virtual void EnableHandTracking(bool enable) override;
+
+			// Inherited via IImageSensor
 			virtual void EnableImageTracking(bool enable) override;
 
 		private:
