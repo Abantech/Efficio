@@ -142,7 +142,7 @@ namespace Efficio
 				case Leap::Finger::Type::TYPE_THUMB: {
 					//TOD Correct this mapping
 					tipType = Models::Body::JointType::LeftHandThumbTIP;
-					dipType = Models::Body::JointType::LeftHandThumbIP;
+					dipType = Models::Body::JointType::LeftHandThumbDIP;
 					mcpType = Models::Body::JointType::LeftHandThumbMCP;
 					pipType = Models::Body::JointType::LeftHandThumbCMP;
 					fingerType = Models::Body::FingerType::Thumb;
@@ -188,7 +188,7 @@ namespace Efficio
 				{
 				case Leap::Finger::Type::TYPE_THUMB: {
 					tipType = Models::Body::JointType::RightHandThumbTIP;
-					dipType = Models::Body::JointType::RightHandThumbIP;
+					dipType = Models::Body::JointType::RightHandThumbDIP;
 					mcpType = Models::Body::JointType::RightHandThumbMCP;
 					pipType = Models::Body::JointType::RightHandThumbCMP;
 					fingerType = Models::Body::FingerType::Thumb;
