@@ -70,5 +70,6 @@ namespace Efficio
 	private:
 		SensorStatus status;
 		bool connectionStatusChanged;
+		void HandleConnectionStatus(Efficio::Frame* frame);
 	};
 }

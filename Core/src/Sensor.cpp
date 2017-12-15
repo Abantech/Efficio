@@ -7,9 +7,7 @@
 
 namespace Efficio
 {
-	Sensor::Sensor() : status(SensorStatus::Uninitialized)
-	{
-	}
+	Sensor::Sensor() : status(SensorStatus::Uninitialized) { }
 
 	SensorStatus Sensor::GetStatus()
 	{
@@ -48,12 +46,8 @@ namespace Efficio
 		return frame;
 	}
 
-	Frame Sensor::GetFrame()
+	void Sensor::HandleConnectionStatus(Efficio::Frame* frame)
 	{
-		Efficio::Frame frame;
-
-		PreGetFrame();
-
 		if (IsConnected())
 		{
 			if (status != SensorStatus::Connected)
@@ -74,13 +68,13 @@ namespace Efficio
 			switch (status)
 			{
 			case SensorStatus::Faulted:
-				frame.AddEvent(std::shared_ptr<Event>(new Faulted(SensorInformation)));
+				frame->AddEvent(std::shared_ptr<Event>(new Faulted(SensorInformation)));
 				break;
 			case SensorStatus::Connected:
-				frame.AddEvent(std::shared_ptr<Event>(new Connected(SensorInformation)));
+				frame->AddEvent(std::shared_ptr<Event>(new Connected(SensorInformation)));
 				break;
 			case SensorStatus::Disconnected:
-				frame.AddEvent(std::shared_ptr<Event>(new Disconnected(SensorInformation)));
+				frame->AddEvent(std::shared_ptr<Event>(new Disconnected(SensorInformation)));
 				break;
 			case SensorStatus::Disabled:
 			case SensorStatus::Uninitialized:
@@ -93,6 +87,15 @@ namespace Efficio
 
 			connectionStatusChanged = false;
 		}
+	}
+
+	Frame Sensor::GetFrame()
+	{
+		Efficio::Frame frame;
+
+		PreGetFrame();
+
+		HandleConnectionStatus(&frame);
 
 		// Check if new frame is available. If not, merge previously calculated frame with base frame
 		if (!HasFrame())
