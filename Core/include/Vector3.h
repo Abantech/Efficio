@@ -1,3 +1,6 @@
+#ifndef Vector3_H
+#define Vector3_H
+
 #include "vector.hpp"
 #include <array>
 
@@ -22,7 +25,10 @@ namespace Efficio
 
 		float Length();
 
+		Vector3 operator-(Vector3 v);
+
 	private:
 		vmml::vector<3> vector;
 	};
 }
+#endif 

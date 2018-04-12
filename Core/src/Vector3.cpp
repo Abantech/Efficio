@@ -42,4 +42,10 @@ namespace Efficio
 	{
 		return vector.length();
 	}
+
+	Vector3 Vector3::operator-(Vector3 v)
+	{
+		auto temp = this->vector - vmml::vector<3>(v.x(), v.y(), v.z());
+		return Vector3(temp.x(), temp.y(), temp.z());
+	}
 }
