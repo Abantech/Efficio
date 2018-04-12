@@ -15,15 +15,11 @@ endif ()
 include_directories($ENV{RSSDK_DIR}\\include $ENV{RSSDK_DIR}\\include\\RealSense)
 # Search for library
 FIND_LIBRARY(RS_LIBRARY
-			NAMES libpxc libpxcmd 
+			NAMES realsense2
 			PATHS $ENV{RSSDK_DIR}\\lib\\${ENVIRONMENT})
 
-configure_file($ENV{RSSDK_DIR}\\lib\\${ENVIRONMENT}\\libpxc.lib
-                    ${CMAKE_BINARY_DIR}/Debug/ibpxc.lib
-                    COPYONLY)
-
-configure_file($ENV{RSSDK_DIR}\\lib\\${ENVIRONMENT}\\libpxcmd.lib
-                    ${CMAKE_BINARY_DIR}/Debug/ibpxcmd.lib
+configure_file($ENV{RSSDK_DIR}\\lib\\${ENVIRONMENT}\\realsense2.lib
+                    ${CMAKE_BINARY_DIR}/Debug/realsense2.lib
                     COPYONLY)
 
 target_link_libraries (Efficio.Assets.IntelRealSense LINK_PUBLIC Efficio.Core Efficio.Models.Body Efficio.Models.AudioVisual ${RS_LIBRARY})

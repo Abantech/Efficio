@@ -7,7 +7,7 @@ add_library(Efficio.Assets.LeapMotion
 			src/LeapMotionSensor.cpp)
 
 if (CMAKE_SYSTEM_PROCESSOR MATCHES "(x86)|(X86)|(amd64)|(AMD64)")
-    set (ENVIRONMENT "x64")
+    set (ENVIRONMENT "x86")
 else ()
     set (ENVIRONMENT "x64")
 endif ()
@@ -19,7 +19,7 @@ FIND_LIBRARY(LEAP_LIBRARY
 			PATHS $ENV{LEAP_SDK}\\lib\\${ENVIRONMENT})
 
 configure_file($ENV{LEAP_SDK}\\lib\\${ENVIRONMENT}\\Leap.dll
-                    ${CMAKE_BINARY_DIR}/Debug/Leap.dll
+                    ${CMAKE_BINARY_DIR}/Leap.dll
                     COPYONLY)
 
 target_link_libraries (Efficio.Assets.LeapMotion LINK_PUBLIC Efficio.Core Efficio.Models.Body Efficio.Models.AudioVisual ${LEAP_LIBRARY})

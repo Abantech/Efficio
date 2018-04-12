@@ -1,12 +1,12 @@
 #include "Engine.h"
 #include "EfficioStarted.h"
 #include "LeapMotion.h"
-#include "RealSense.h"
+//#include "RealSense.h"
 
 namespace Efficio {
 	Engine::Engine() : started(false), frameID(1), MessageBus(MessageBus::Current())
 	{
-			assets.push_back(new Assets::RealSense());
+			//assets.push_back(new Assets::RealSense());
 			assets.push_back(new Assets::LeapMotion());
 			//assets.push_back(new Sensors::Body::Kinect());
 			//assets.push_back(new Sensors::GearVR());
