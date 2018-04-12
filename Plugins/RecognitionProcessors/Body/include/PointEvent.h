@@ -3,6 +3,7 @@
 #include "DiscreteEvent.h"
 #include "Finger.h"
 #include "BodySide.h"
+#include "Vector3.h"
 
 namespace Efficio
 {
@@ -19,7 +20,7 @@ namespace Efficio
 				Models::Body::Finger Finger;
 				Models::Body::BodySide Side;
 
-				// TODO point direction vecto;
+				Efficio::Vector3 PointDirection;
 
 				std::string GetEventType() override;
 

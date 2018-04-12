@@ -26,6 +26,7 @@ void PrintOnPoint(Efficio::Message message)
 {
 	auto point = dynamic_cast<Efficio::Recognition::Body::PointEvent*>(message.GetEvent().get());
 	cout << (point->Side == Efficio::Models::Body::BodySide::Right ? "Right" : "Left") << " Point Detected. Tip at (" << point->Finger.Tip.Position.x() << ", " << point->Finger.Tip.Position.y() << ", " << point->Finger.Tip.Position.z() << ")\n";
+	cout << "Point Direction: (" << point->PointDirection.x() << ", " << point->PointDirection.y() << ", " << point->PointDirection.z() << ")\n";
 }
 
 int main(int argc, char** argv) {

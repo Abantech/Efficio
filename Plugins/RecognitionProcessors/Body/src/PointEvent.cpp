@@ -7,7 +7,7 @@ namespace Efficio
 		namespace Body
 		{
 			PointEvent::PointEvent(std::string source, Models::Body::Finger finger, Models::Body::BodySide side)
-				: DiscreteEvent(source), Finger(finger), Side(side) { }
+				: DiscreteEvent(source), Finger(finger), Side(side), PointDirection(finger.Tip.Position - finger.MCP.Position) { }
 
 			PointEvent::~PointEvent() {}
 
