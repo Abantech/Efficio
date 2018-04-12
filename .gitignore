@@ -12,3 +12,7 @@
 /Plugins/Models/AudioVisual/docs/html
 /Core/docs/doxygen_objdb_440.tmp
 /Plugins/Assets/Intel/docs/html
+/Integration/DotNet/obj/Debug
+/Integration/Efficio.Net.Web/obj/Debug
+/Integration/Unity/Efficio.Unity.Tools/obj/Debug
+/Integration/Unity/obj/Debug
