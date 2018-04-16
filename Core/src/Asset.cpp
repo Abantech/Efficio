@@ -1,6 +1,6 @@
 #include "Asset.h"
 
-namespace Efficio 
+namespace Efficio
 {
 	Asset::Asset()
 	{
@@ -9,7 +9,7 @@ namespace Efficio
 	Asset::~Asset()
 	{
 	}
-	
+
 	std::vector<std::shared_ptr<Sensor>>  Asset::GetSensors()
 	{
 		return sensors;
