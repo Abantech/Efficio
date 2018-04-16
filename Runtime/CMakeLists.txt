@@ -6,7 +6,10 @@ add_library(Efficio.Runtime
 	src/HistoricalFrameCollection.cpp
 	src/InputRecognitionEngine
 	src/Message
-	src/MessageBus)
+	src/MessageBus
+	src/PerformanceManager
+	src/AssetManager
+	)
 
 target_link_libraries (Efficio.Runtime LINK_PUBLIC 
 	Efficio.Core 

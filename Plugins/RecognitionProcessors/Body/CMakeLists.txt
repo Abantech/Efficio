@@ -4,7 +4,8 @@ execute_process(COMMAND doxygen docs/default.doxygen WORKING_DIRECTORY  ${CMAKE_
 add_library(Efficio.Recognition.Body
 			src/HandRecognitionProcessor
 			src/PinchEvent
-			src/PointEvent)
+			src/PointEvent
+			src/FistEvent)
 
 target_link_libraries (Efficio.Recognition.Body LINK_PUBLIC Efficio.Models.Body)
 

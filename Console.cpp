@@ -46,6 +46,7 @@ int main(int argc, char** argv) {
 		auto frame = engine.GetFrame();
 
 		// Magic happens here
+		cout << engine.PerformanceManager->GetFrameRate() << "\n";
 
 		// Release the frame into the wild
 		engine.ReleaseFrame();

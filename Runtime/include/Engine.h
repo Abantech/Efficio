@@ -7,6 +7,8 @@
 #include "HistoricalFrameCollection.h"
 #include "InputRecognitionEngine.h"
 #include "MessageBus.h"
+#include "PerformanceManager.h"
+#include "AssetManager.h"
 
 using namespace std;
 
@@ -29,21 +31,18 @@ namespace Efficio
 		/// Gets the historical {@link Efficio::Frame frame} from the runtime.
 		/// @return the historical frame.
 		std::shared_ptr<Frame> GetFrame(int count);
-
-		/// Gets the frame rate at which Efficio is running
-		float GetFrameRate();
 		
 		std::shared_ptr<Efficio::MessageBus> MessageBus;
 
 		void ReleaseFrame();
 
+		std::shared_ptr<Efficio::PerformanceManager> PerformanceManager;
+		std::shared_ptr<Efficio::AssetManager> AssetManager;
+
 	private:
 		bool started;
-		std::vector<Asset*> assets;
 		InputRecognitionEngine ire;
 		HistoricalFrameCollection historicalFrames;
 		int frameID;
-
-		float deltaTimeSum;
 	};
 }

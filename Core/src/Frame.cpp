@@ -11,6 +11,10 @@ namespace Efficio
 		{
 			DeltaTime = ((Time - previousFrame->Time) / ((float)CLOCKS_PER_SEC)) * 1000;
 		}
+		else
+		{
+			DeltaTime = 0;
+		}
 	}
 
 	Frame::~Frame() {

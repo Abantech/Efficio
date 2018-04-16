@@ -4,12 +4,12 @@
 //#include "RealSense.h"
 
 namespace Efficio {
-	Engine::Engine() : started(false), frameID(1), MessageBus(MessageBus::Current())
+	Engine::Engine() : started(false), frameID(1), MessageBus(MessageBus::Current()), PerformanceManager(PerformanceManager::Current()), AssetManager(AssetManager::Current())
 	{
-			//assets.push_back(new Assets::RealSense());
-			assets.push_back(new Assets::LeapMotion());
-			//assets.push_back(new Sensors::Body::Kinect());
-			//assets.push_back(new Sensors::GearVR());
+		// assets.push_back(new Assets::RealSense());
+		this->AssetManager->AddAsset(std::shared_ptr<Efficio::Asset>(new Assets::LeapMotion()));
+		// assets.push_back(new Sensors::Body::Kinect());
+		// assets.push_back(new Sensors::GearVR());
 	}
 
 	Engine::~Engine()
@@ -25,6 +25,7 @@ namespace Efficio {
 		// TODO execute OnStart actions
 
 		// Connect to all sensors
+		auto assets = this->AssetManager->GetAssets();
 		for (size_t i = 0; i < assets.size(); i++)
 		{
 			auto sensors = assets[i]->GetSensors();
@@ -45,11 +46,12 @@ namespace Efficio {
 		MessageBus->ClearMessages();
 
 		std::shared_ptr<Frame> frame(new Frame(GetFrame(1), frameID++));
-		deltaTimeSum += frame->DeltaTime;
+		PerformanceManager->deltaTimeSum += frame->DeltaTime;
 
 		// TODO execute BeforeDeviceQuery actions
 
 		// Query sensors for frames
+		auto assets = this->AssetManager->GetAssets();
 		for (size_t i = 0; i < assets.size(); i++)
 		{
 			auto sensors = assets[i]->GetSensors();
@@ -71,9 +73,9 @@ namespace Efficio {
 		// TODO execute AfterFrameProcess actions
 
 		// Save frame
-		if (historicalFrames.historicalFrames.at(59) != NULL)
+		if (historicalFrames.historicalFrames.at(59))
 		{
-			deltaTimeSum -= GetFrame(60)->DeltaTime;
+			PerformanceManager->deltaTimeSum -= GetFrame(60)->DeltaTime;
 		}
 		historicalFrames.AddFrame(frame);
 
@@ -106,10 +108,4 @@ namespace Efficio {
 	{
 		MessageBus->Notify();
 	}
-
-	float Engine::GetFrameRate()
-	{
-		return  60 / (deltaTimeSum / 1000);
-	}
-
 }

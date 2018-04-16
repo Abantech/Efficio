@@ -119,6 +119,17 @@ namespace Efficio
 
 			efficioHand.Source = GetSensorInformation().Name;
 
+			efficioHand.numberOfExtendedFingers = 0;
+
+			for (size_t i = 0; i < efficioFingers.size(); i++)
+			{
+				if (efficioFingers[i].IsExtended)
+				{
+					efficioHand.numberOfExtendedFingers++;
+					efficioHand.extendedFingerIndicies.push_back(i);
+				}
+			}
+
 			return efficioHand;
 		}
 

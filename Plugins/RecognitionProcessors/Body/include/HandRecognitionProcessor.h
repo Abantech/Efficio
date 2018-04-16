@@ -20,6 +20,7 @@ namespace Efficio
 			private:
 				std::vector<std::shared_ptr<Event>> DetectPinch(Models::Body::HandData data);
 				std::vector<std::shared_ptr<Event>> DetectPointing(Models::Body::HandData data);
+				std::vector<std::shared_ptr<Event>> DetectFist(Models::Body::HandData data);
 			};
 		}
 	}

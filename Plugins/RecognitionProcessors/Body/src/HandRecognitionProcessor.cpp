@@ -1,6 +1,7 @@
 #include "HandRecognitionProcessor.h"
 #include "PinchEvent.h"
 #include "PointEvent.h"
+#include "FistEvent.h"
 
 namespace Efficio
 {
@@ -75,10 +76,26 @@ namespace Efficio
 				{
 					auto hand = data.Hands[i];
 
-
-					if (!hand.Fingers[0].IsExtended && hand.Fingers[1].IsExtended && !hand.Fingers[2].IsExtended && !hand.Fingers[3].IsExtended && !hand.Fingers[4].IsExtended)
+					if (hand.numberOfExtendedFingers == 1 && hand.extendedFingerIndicies[0] == 1)
 					{
 						events.push_back(std::shared_ptr<Event>(new PointEvent(GetName(), hand.Fingers[1], hand.Side)));
+					}
+				}
+
+				return events;
+			}
+
+			std::vector<std::shared_ptr<Event>> HandRecognitionProcessor::DetectFist(Models::Body::HandData data)
+			{
+				std::vector<std::shared_ptr<Event>> events;
+
+				for (size_t i = 0; i < data.Hands.size(); i++)
+				{
+					auto hand = data.Hands[i];
+
+					if (hand.numberOfExtendedFingers == 0)
+					{
+						events.push_back(std::shared_ptr<Event>(new FistEvent(GetName(), hand.Side)));
 					}
 				}
 

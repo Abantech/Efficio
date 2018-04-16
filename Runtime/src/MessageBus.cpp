@@ -34,6 +34,7 @@ namespace Efficio
 
 	std::shared_ptr<MessageBus> MessageBus::Current()
 	{
-		return std::shared_ptr<MessageBus>(new MessageBus());
+		static std::shared_ptr<MessageBus> instance = std::shared_ptr<MessageBus>(new MessageBus()); 
+		return instance;
 	}
 }
