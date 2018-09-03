@@ -35,8 +35,8 @@ namespace Efficio
 				/// The fingers of the hand
 				std::array<Finger, 5> Fingers;
 
-				int numberOfExtendedFingers = -1;
-				std::vector<int> extendedFingerIndicies;
+				int NumberOfExtendedFingers();
+				std::vector<int> ExtendedFingerIndicies();
 			};
 		}
 	}
