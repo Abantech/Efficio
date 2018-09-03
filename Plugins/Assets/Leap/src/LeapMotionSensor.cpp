@@ -116,19 +116,7 @@ namespace Efficio
 
 			Models::Body::Hand efficioHand(side, efficioFingers, hand.confidence());
 			efficioHand.ID = hand.id();
-
 			efficioHand.Source = GetSensorInformation().Name;
-
-			efficioHand.numberOfExtendedFingers = 0;
-
-			for (size_t i = 0; i < efficioFingers.size(); i++)
-			{
-				if (efficioFingers[i].IsExtended)
-				{
-					efficioHand.numberOfExtendedFingers++;
-					efficioHand.extendedFingerIndicies.push_back(i);
-				}
-			}
 
 			return efficioHand;
 		}
@@ -265,7 +253,7 @@ namespace Efficio
 
 			std::vector<Models::Body::Hand> convertedHands;
 
-			for (size_t i = 0; i < hands.count(); i++)
+			for (int i = 0; i < hands.count(); i++)
 			{
 				convertedHands.push_back(convertToEfficioHand(hands[i]));
 			}
