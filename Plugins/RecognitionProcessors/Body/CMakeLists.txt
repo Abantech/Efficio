@@ -5,7 +5,10 @@ add_library(Efficio.Recognition.Body
 			src/HandRecognitionProcessor
 			src/PinchEvent
 			src/PointEvent
-			src/FistEvent)
+			src/FistEvent
+            src/PinchDetector
+			src/PointDetector
+			src/FistDetector)
 
 target_link_libraries (Efficio.Recognition.Body LINK_PUBLIC Efficio.Models.Body)
 
