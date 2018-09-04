@@ -21,15 +21,9 @@ namespace Efficio
 			
 			HandRecognitionProcessor::~HandRecognitionProcessor() {}
 
-			std::string HandRecognitionProcessor::GetDataType()
-			{
-				return "Hand";
-			}
+			std::string HandRecognitionProcessor::GetDataType() { return "Hand"; }
 
-			std::string HandRecognitionProcessor::GetName()
-			{
-				return "Efficio Hand Recognition Processor";
-			}
+			std::string HandRecognitionProcessor::GetName() { return "Efficio Hand Recognition Processor"; }
 
 			std::vector<std::shared_ptr<Event>> HandRecognitionProcessor::DetectEvents(std::shared_ptr<Data> data)
 			{

@@ -3,13 +3,9 @@
 
 namespace Efficio
 {
-	HistoricalFrameCollection::HistoricalFrameCollection()
-	{
-	}
+	HistoricalFrameCollection::HistoricalFrameCollection() { }
 
-	HistoricalFrameCollection::~HistoricalFrameCollection()
-	{
-	}
+	HistoricalFrameCollection::~HistoricalFrameCollection() { }
 
 
 	void HistoricalFrameCollection::AddFrame(std::shared_ptr<Frame> frame)

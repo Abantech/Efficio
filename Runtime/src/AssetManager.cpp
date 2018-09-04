@@ -8,13 +8,6 @@ namespace Efficio
 		return instance;
 	}
 
-	void AssetManager::AddAsset(std::shared_ptr<Efficio::Asset> asset)
-	{
-		this->assets.push_back(asset);
-	}
-
-	std::vector<std::shared_ptr<Efficio::Asset>> AssetManager::GetAssets()
-	{
-		return this->assets;
-	}
+	void AssetManager::AddAsset(std::shared_ptr<Efficio::Asset> asset) { this->assets.push_back(asset); }
+	std::vector<std::shared_ptr<Efficio::Asset>> AssetManager::GetAssets() { return this->assets; }
 }

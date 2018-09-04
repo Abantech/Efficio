@@ -12,9 +12,7 @@ namespace Efficio {
 		// assets.push_back(new Sensors::GearVR());
 	}
 
-	Engine::~Engine()
-	{
-	}
+	Engine::~Engine() { }
 
 	Frame Engine::Start()
 	{
@@ -92,20 +90,7 @@ namespace Efficio {
 	}
 
 
-	std::shared_ptr<Efficio::Frame> Engine::GetFrame(int count)
-	{
-		auto tempFrame = historicalFrames.GetFrame(count);
+	std::shared_ptr<Efficio::Frame> Engine::GetFrame(int count) { return historicalFrames.GetFrame(count); }
 
-		if (tempFrame)
-		{
-			return historicalFrames.GetFrame(count);
-		}
-
-		return NULL;
-	}
-
-	void Engine::ReleaseFrame()
-	{
-		MessageBus->Notify();
-	}
+	void Engine::ReleaseFrame() { MessageBus->Notify(); }
 }

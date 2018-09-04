@@ -11,10 +11,7 @@ namespace Efficio
 
 			HandInformation::~HandInformation() {}
 
-			std::string HandInformation::GetEventType()
-			{
-				return HandInformation::EventType;
-			}
+			std::string HandInformation::GetEventType() { return HandInformation::EventType; }
 
 			const std::string HandInformation::EventType = "HandInformation";
 		}

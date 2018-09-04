@@ -11,10 +11,7 @@ namespace Efficio
 
 			PointEvent::~PointEvent() {}
 
-			std::string PointEvent::GetEventType()
-			{
-				return PointEvent::EventType;
-			}
+			std::string PointEvent::GetEventType() { return PointEvent::EventType; }
 
 			const std::string PointEvent::EventType = "Point";
 		}

@@ -8,9 +8,7 @@ namespace Efficio
 		processors.push_back(std::shared_ptr<IRecognitionProcessor>(new Recognition::Body::HandRecognitionProcessor()));
 	}
 
-	InputRecognitionEngine::~InputRecognitionEngine()
-	{
-	}
+	InputRecognitionEngine::~InputRecognitionEngine() { }
 
 	std::vector<std::shared_ptr<Event>> InputRecognitionEngine::ProcessFrame(std::shared_ptr<Frame> frame)
 	{

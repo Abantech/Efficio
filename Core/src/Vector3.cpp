@@ -22,9 +22,19 @@ namespace Efficio
 
 	float Vector3::Length() { return vector.length(); }
 
+	static Vector3 Midpoint(Vector3 point1, Vector3 point2) { return (point1 + point2) / 2; }
+
 	Vector3 Vector3::operator-(Vector3 v)
 	{
 		auto temp = this->vector - v.vector;
 		return Vector3(temp.x(), temp.y(), temp.z());
 	}
+
+	Vector3 Vector3::operator+(Vector3 v)
+	{
+		auto temp = this->vector + v.vector;
+		return Vector3(temp.x(), temp.y(), temp.z());
+	}
+
+	Vector3 Vector3::operator/(float divisor) { return Vector3(vector.x() / divisor, vector.y() /divisor, vector.z() /divisor); }
 }

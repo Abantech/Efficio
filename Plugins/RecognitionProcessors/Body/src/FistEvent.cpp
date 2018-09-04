@@ -6,18 +6,10 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			FistEvent::FistEvent(std::string source, Models::Body::BodySide side) : DiscreteEvent(source), Side(side)
-			{
-			}
+			FistEvent::FistEvent(std::string source, Models::Body::BodySide side) : DiscreteEvent(source), Side(side) { }
+			FistEvent::~FistEvent() { }
 
-			FistEvent::~FistEvent()
-			{
-			}
-
-			std::string FistEvent::GetEventType()
-			{
-				return FistEvent::EventType;
-			}
+			std::string FistEvent::GetEventType() { return FistEvent::EventType; }
 
 			const std::string FistEvent::EventType = "Fist";
 		}

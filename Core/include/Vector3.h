@@ -24,8 +24,11 @@ namespace Efficio
 		float Dot(Vector3 v);
 
 		float Length();
+		static Vector3 Midpoint(Vector3 point1, Vector3 point2);
 
 		Vector3 operator-(Vector3 v);
+		Vector3 operator+(Vector3 v);
+		Vector3 operator/(float divisor);
 
 	private:
 		vmml::vector<3> vector;

@@ -11,24 +11,11 @@ namespace Efficio
 
 			PinchEvent::~PinchEvent() {}
 
-			Vector3 PinchEvent::Midpoint() 
-			{
-				auto midX = (Finger1.Tip.Position.x() + Finger2.Tip.Position.x()) / 2;
-				auto midY = (Finger1.Tip.Position.y() + Finger2.Tip.Position.y()) / 2;
-				auto midZ = (Finger1.Tip.Position.z() + Finger2.Tip.Position.z()) / 2;
+			Vector3 PinchEvent::Midpoint() { return Vector3::Midpoint(Finger1.Tip.Position, Finger2.Tip.Position); }
 
-				return Vector3(midX, midY, midZ);
-			}
+			float PinchEvent::Distance() { return Finger1.Tip.DistanceTo(Finger2.Tip); }
 
-			float PinchEvent::Distance() 
-			{
-				return Finger1.Tip.DistanceTo(Finger2.Tip);
-			}
-
-			std::string PinchEvent::GetEventType()
-			{
-				return PinchEvent::EventType;
-			}
+			std::string PinchEvent::GetEventType() { return PinchEvent::EventType; }
 
 			const std::string PinchEvent::EventType = "Pinch";
 		}

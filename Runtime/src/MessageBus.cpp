@@ -7,10 +7,7 @@ namespace Efficio
 		receivers[messageType].push_back(messageReceiver);
 	}
 
-	void MessageBus::SendMessage(Message message)
-	{
-		messages.push(message);
-	}
+	void MessageBus::SendMessage(Message message) { messages.push(message); }
 
 	void MessageBus::Notify()
 	{
@@ -29,7 +26,8 @@ namespace Efficio
 
 	void MessageBus::ClearMessages()
 	{
-		while (!messages.empty()) messages.pop();
+		while (!messages.empty()) 
+			messages.pop();
 	}
 
 	std::shared_ptr<MessageBus> MessageBus::Current()

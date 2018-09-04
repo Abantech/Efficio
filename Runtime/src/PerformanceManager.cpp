@@ -8,8 +8,5 @@ namespace Efficio
 		return instance;
 	}
 
-	float PerformanceManager::GetFrameRate()
-	{
-		return 1000 / (deltaTimeSum / 60);
-	}
+	float PerformanceManager::GetFrameRate() { return 1000 / (deltaTimeSum / 60); }
 }
