@@ -18,14 +18,9 @@ namespace Efficio
 			SensorInformation.Name = "Leap Motion";
 		}
 
-		LeapMotionSensor::~LeapMotionSensor()
-		{
-		}
+		LeapMotionSensor::~LeapMotionSensor() { }
 
-		std::string LeapMotionSensor::TrackingType()
-		{
-			return "Hand";
-		}
+		std::vector<std::string> LeapMotionSensor::TrackingTypes() { return { "Hand" }; }
 
 		Frame LeapMotionSensor::Connect()
 		{
@@ -52,20 +47,11 @@ namespace Efficio
 			return frame;
 		}
 
-		bool LeapMotionSensor::IsConnected()
-		{
-			return controller.isConnected();
-		}
+		bool LeapMotionSensor::IsConnected() { return controller.isConnected(); }
 
-		std::vector<std::shared_ptr<Event>> LeapMotionSensor::GetEvents()
-		{
-			return std::vector<std::shared_ptr<Event>>();
-		}
+		std::vector<std::shared_ptr<Event>> LeapMotionSensor::GetEvents() { return std::vector<std::shared_ptr<Event>>(); }
 
-		bool LeapMotionSensor::HasFrame()
-		{
-			return IsConnected() && controller.frame().isValid() && latestLeapFrame.id() != lastLeapFrameID;
-		}
+		bool LeapMotionSensor::HasFrame() { return IsConnected() && controller.frame().isValid() && latestLeapFrame.id() != lastLeapFrameID; }
 
 		void LeapMotionSensor::PreGetFrame()
 		{
@@ -236,15 +222,9 @@ namespace Efficio
 			return Models::Body::Finger(fingerType, finger.isExtended(), finger.length(), tipJoint, dipJoint, mcpJoint, pipJoint);
 		}
 
-		void LeapMotionSensor::EnableHandTracking(bool enable)
-		{
-			trackingHands = enable;
-		}
+		void LeapMotionSensor::EnableHandTracking(bool enable) { trackingHands = enable; }
 
-		void LeapMotionSensor::EnableImageTracking(bool enable)
-		{
-			trackingImages = enable;
-		}
+		void LeapMotionSensor::EnableImageTracking(bool enable) { trackingImages = enable; }
 
 		Models::Body::HandData LeapMotionSensor::GetHandData()
 		{

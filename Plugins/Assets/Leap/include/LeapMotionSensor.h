@@ -21,7 +21,7 @@ namespace Efficio
 			~LeapMotionSensor();
 
 			// Inherited via Sensor
-			virtual std::string TrackingType() override;
+			virtual std::vector<std::string> TrackingTypes() override;
 
 		protected:
 			// Inherited via Sensor

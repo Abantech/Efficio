@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 #include "Frame.h"
 #include "SensorStatus.h"
 #include "SensorInformation.h"
@@ -15,7 +16,7 @@ namespace Efficio
 		~Sensor() {};
 
 		/// The type of data the device is able to track
-		virtual std::string TrackingType() = 0;
+		virtual std::vector<std::string> TrackingTypes() = 0;
 
 		// Virtual Methods
 		/// Connects the device
