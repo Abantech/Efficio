@@ -12,15 +12,9 @@ namespace Efficio
 
 			Spatial3DData::~Spatial3DData() { }
 
-			Vector3 Spatial3DData::Position()
-			{
-				return this->position;
-			}
+			Vector3 Spatial3DData::Position() { return this->position; }
 
-			std::string Spatial3DData::GetDataType()
-			{
-				return "Spatial3D";
-			}
+			std::string Spatial3DData::GetDataType() { return "Spatial3D"; }
 		}
 	}
 }

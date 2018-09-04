@@ -2,16 +2,8 @@
 
 namespace Efficio
 {
-	Asset::Asset()
-	{
-	}
+	Asset::Asset() { }
+	Asset::~Asset() { }
 
-	Asset::~Asset()
-	{
-	}
-
-	std::vector<std::shared_ptr<Sensor>>  Asset::GetSensors()
-	{
-		return sensors;
-	}
+	std::vector<std::shared_ptr<Sensor>>  Asset::GetSensors() { return sensors; }
 }

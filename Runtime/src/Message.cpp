@@ -6,5 +6,6 @@ namespace Efficio
 	Message::~Message() {}
 
 	std::shared_ptr<Event> Message::GetEvent() { return messageEvent; }
+
 	std::string Message::GetEventType() { return evType; }
 }

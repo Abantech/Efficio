@@ -12,15 +12,9 @@ namespace Efficio
 
 			Spatial2DData::~Spatial2DData() { }
 
-			Vector2 Spatial2DData::Position() 
-			{
-				return this->position;
-			}
+			Vector2 Spatial2DData::Position() { return this->position; }
 
-			std::string Spatial2DData::GetDataType()
-			{
-				return "Spatial2D";
-			}
+			std::string Spatial2DData::GetDataType() { return "Spatial2D"; }
 		}
 	}
 }
