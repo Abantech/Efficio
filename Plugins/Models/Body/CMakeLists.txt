@@ -3,10 +3,11 @@ cmake_minimum_required(VERSION 3.7)
 execute_process(COMMAND doxygen docs/default.doxygen WORKING_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(Efficio.Models.Body
-			src/Finger.cpp
-			src/Joint.cpp
-			src/Hand.cpp
-			src/HandData.cpp)
+            src/Face
+			src/Finger
+			src/Joint
+			src/Hand
+			src/HandData)
 
 target_link_libraries (Efficio.Models.Body LINK_PUBLIC Efficio.Core)
 

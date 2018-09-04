@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.7)
 execute_process(COMMAND doxygen docs/default.doxygen WORKING_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(Efficio.Assets.LeapMotion
-			src/LeapMotion.cpp
-			src/LeapMotionSensor.cpp)
+			src/LeapMotion
+			src/LeapMotionSensor)
 
 if (CMAKE_SYSTEM_PROCESSOR MATCHES "(x86)|(X86)|(amd64)|(AMD64)")
     set (ENVIRONMENT "x86")

@@ -1,9 +1,9 @@
 execute_process(COMMAND doxygen docs/default.doxygen WORKING_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(Efficio.Runtime 
-	src/EfficioStarted.cpp
+	src/EfficioStarted
 	src/Engine
-	src/HistoricalFrameCollection.cpp
+	src/HistoricalFrameCollection
 	src/InputRecognitionEngine
 	src/Message
 	src/MessageBus
