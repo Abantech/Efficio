@@ -6,24 +6,15 @@ namespace Efficio
 	{
 		namespace Spatial
 		{
-			Spatial3DData::Spatial3DData() { }
-
-			Spatial3DData::Spatial3DData(Vector3 v) : position(&v) { }
+			Spatial3DData::Spatial3DData() : position() { }
+			Spatial3DData::Spatial3DData(float x, float y, float z) : position(x, y, z) { }
+			Spatial3DData::Spatial3DData(Vector3 v) : position(v) { }
 
 			Spatial3DData::~Spatial3DData() { }
 
-			bool Spatial3DData::HasPosition() 
+			Vector3 Spatial3DData::Position()
 			{
-				if (position) {
-					return true;
-				}
-				
-				return false;
-			}
-
-			Vector3 Spatial3DData::GetPosition()
-			{
-				return *position;
+				return this->position;
 			}
 
 			std::string Spatial3DData::GetDataType()

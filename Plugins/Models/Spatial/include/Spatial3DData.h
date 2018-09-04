@@ -12,15 +12,15 @@ namespace Efficio
 			{
 			public:
 				Spatial3DData();
+				Spatial3DData(float x, float y, float z);
 				Spatial3DData(Vector3 position);
 				~Spatial3DData();
 
-				bool HasPosition();
-				Vector3 GetPosition();
+				Vector3 Position();
 
 				virtual std::string GetDataType() override;
 			private:
-				std::shared_ptr<Vector3> position;
+				Vector3 position;
 			};
 		}
 	}
