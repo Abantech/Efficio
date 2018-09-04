@@ -2,11 +2,6 @@
 
 namespace Efficio
 {
-	SensorInformation::SensorInformation()
-	{
-	}
-
-	SensorInformation::~SensorInformation()
-	{
-	}
+	SensorInformation::SensorInformation() { }
+	SensorInformation::~SensorInformation() { }
 }

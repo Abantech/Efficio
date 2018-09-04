@@ -13,7 +13,6 @@ add_library(Efficio.Core
 			src/Event.cpp
 			src/Faulted.cpp
 			src/Frame.cpp
-			src/IRecognitionProcessor
 			src/Sensor.cpp
 			src/SensorEvent.cpp
 			src/SensorInformation.cpp

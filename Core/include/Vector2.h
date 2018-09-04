@@ -18,6 +18,8 @@ namespace Efficio
 		float DistanceTo(Vector2 v);
 
 		float Length();
+
+		Vector2 operator-(Vector2 v);
 	private:
 		vmml::vector<2> vector;
 	};

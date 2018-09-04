@@ -12,8 +12,8 @@ namespace Efficio
 	class IRecognitionProcessor
 	{
 	public:
-		IRecognitionProcessor();
-		~IRecognitionProcessor();
+		IRecognitionProcessor() { };
+		~IRecognitionProcessor() { };
 
 		/// Detects events within the data
 		virtual std::vector<std::shared_ptr<Event>> DetectEvents(std::shared_ptr<Data> data) = 0;

@@ -9,10 +9,7 @@ namespace Efficio
 {
 	Sensor::Sensor() : status(SensorStatus::Uninitialized) { }
 
-	SensorStatus Sensor::GetStatus()
-	{
-		return status;
-	}
+	SensorStatus Sensor::GetStatus() { return status; }
 
 	Frame Sensor::Connect()
 	{
@@ -120,10 +117,7 @@ namespace Efficio
 		return frame;
 	}
 
-	SensorInformation Sensor::GetSensorInformation()
-	{
-		return SensorInformation;
-	}
+	SensorInformation Sensor::GetSensorInformation() { return SensorInformation; }
 
 	void Sensor::SetStatus(SensorStatus status)
 	{

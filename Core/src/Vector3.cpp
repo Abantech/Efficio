@@ -8,44 +8,23 @@ namespace Efficio
 
 	Vector3::~Vector3() { }
 
-	float Vector3::x()
-	{
-		return vector.x();
-	}
+	float Vector3::x() { return vector.x(); }
 
-	float Vector3::y()
-	{
-		return vector.y();
-	}
+	float Vector3::y() { return vector.y(); }
 
-	float Vector3::z() {
-		return vector.z();
-	}
+	float Vector3::z() { return vector.z(); }
 
-	std::array<float, 3> Vector3::ToArray()
-	{
-		std::array<float, 3> ar = { vector.x(), vector.y(), vector.z() };
-		return ar;
-	}
+	std::array<float, 3> Vector3::ToArray() { return { vector.x(), vector.y(), vector.z() }; }
 
-	float Vector3::DistanceTo(Vector3 v)
-	{
-		return vector.distance(v.vector);
-	}
+	float Vector3::DistanceTo(Vector3 v) { return vector.distance(v.vector); }
 
-	float Vector3::Dot(Vector3 v)
-	{
-		return vector.dot(v.vector);
-	}
+	float Vector3::Dot(Vector3 v) { return vector.dot(v.vector); }
 
-	float Vector3::Length()
-	{
-		return vector.length();
-	}
+	float Vector3::Length() { return vector.length(); }
 
 	Vector3 Vector3::operator-(Vector3 v)
 	{
-		auto temp = this->vector - vmml::vector<3>(v.x(), v.y(), v.z());
+		auto temp = this->vector - v.vector;
 		return Vector3(temp.x(), temp.y(), temp.z());
 	}
 }

@@ -6,25 +6,12 @@ namespace Efficio
 	Frame::Frame(std::shared_ptr<Frame> previousFrame, int id) : ID(id), dataCollection()
 	{
 		Time = clock();
-
-		if (previousFrame)
-		{
-			DeltaTime = ((Time - previousFrame->Time) / ((float)CLOCKS_PER_SEC)) * 1000;
-		}
-		else
-		{
-			DeltaTime = 0;
-		}
+		DeltaTime = previousFrame ? ((Time - previousFrame->Time) / ((float)CLOCKS_PER_SEC)) * 1000 : 0;
 	}
 
-	Frame::~Frame() {
+	Frame::~Frame() { }
 
-	}
-
-	std::vector<std::shared_ptr<Data>> Frame::GetData()
-	{
-		return dataCollection;
-	}
+	std::vector<std::shared_ptr<Data>> Frame::GetData() { return dataCollection; }
 
 	std::vector<std::shared_ptr<Data>> Frame::GetDataOfType(std::string type)
 	{
@@ -56,15 +43,9 @@ namespace Efficio
 		AddEvents(frame.GetEvents());
 	}
 
-	std::vector<std::shared_ptr<Event>> Frame::GetEvents()
-	{
-		return events;
-	}
+	std::vector<std::shared_ptr<Event>> Frame::GetEvents() { return events; }
 
-	void Frame::AddEvent(std::shared_ptr<Event> eventPtr)
-	{
-		events.push_back(std::move(eventPtr));
-	}
+	void Frame::AddEvent(std::shared_ptr<Event> eventPtr) { events.push_back(std::move(eventPtr)); }
 
 	void Frame::AddEvents(std::vector<std::shared_ptr<Event>> eventsPtr)
 	{
