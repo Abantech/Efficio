@@ -22,7 +22,7 @@ namespace Efficio
 
 	float Vector3::Length() { return vector.length(); }
 
-	static Vector3 Midpoint(Vector3 point1, Vector3 point2) { return (point1 + point2) / 2; }
+	Vector3 Vector3::Midpoint(Vector3 point1, Vector3 point2) { return (point1 + point2) / 2; }
 
 	Vector3 Vector3::operator-(Vector3 v)
 	{

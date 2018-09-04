@@ -17,6 +17,7 @@ add_library(Efficio.Core
 			src/SensorEvent.cpp
 			src/SensorInformation.cpp
 			src/Vector2.cpp
-			src/Vector3.cpp)
+			src/Vector3.cpp
+			src/Vector4.cpp)
 
 target_include_directories (Efficio.Core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
