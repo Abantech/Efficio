@@ -8,7 +8,7 @@ namespace Efficio
 	{
 		namespace Body
 		{
-			/// Any sensor which can feed data into Efficio
+			/// Any sensor which can feed hand data into Efficio
 			class IHandSensor
 			{
 			public:

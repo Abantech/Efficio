@@ -8,7 +8,7 @@ namespace Efficio
 	{
 		namespace AudioVisual
 		{
-			/// Any sensor which can feed data into Efficio
+			/// Any sensor which can feed image data into Efficio
 			class IImageSensor
 			{
 			public:
